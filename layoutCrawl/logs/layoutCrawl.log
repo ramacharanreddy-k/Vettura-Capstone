@@ -1,0 +1,484 @@
+2025-02-20 17:55:25,351 - INFO - Starting the scraper
+2025-02-20 17:55:25,351 - INFO - ====== WebDriver manager ======
+2025-02-20 17:55:25,550 - INFO - Get LATEST chromedriver version for google-chrome
+2025-02-20 17:55:25,649 - INFO - Get LATEST chromedriver version for google-chrome
+2025-02-20 17:55:25,744 - INFO - Driver [/Users/ramfeuji/.wdm/drivers/chromedriver/mac64/133.0.6943.126/chromedriver-mac-arm64/chromedriver] found in cache
+2025-02-20 17:55:26,984 - INFO - WebDriver setup successful
+2025-02-20 17:55:26,984 - INFO - Navigating to https://en-support.renesas.com/knowledgeBase
+2025-02-20 17:55:44,787 - INFO - Found 32 category sections
+2025-02-20 17:55:44,806 - INFO - Processing category 1: RA Family
+2025-02-20 17:55:44,835 - INFO -   Processed subcategory 1: RA and FSP Quick Start Curriculum
+2025-02-20 17:55:44,851 - INFO -   Processed subcategory 2: RA and FSP Technical articles
+2025-02-20 17:55:44,870 - INFO -   Processed subcategory 3: RA Hardware
+2025-02-20 17:55:44,886 - INFO -   Processed subcategory 4: RA/FSP Software
+2025-02-20 17:55:44,903 - INFO -   Processed subcategory 5: RA/FSP Knowledge Base
+2025-02-20 17:55:54,945 - INFO -   Processed subcategory 6: RA/FSP GitHub
+2025-02-20 17:55:54,978 - INFO -   Processed subcategory 7: RA8 Series with Cortex-M85 core
+2025-02-20 17:55:55,000 - INFO -   Processed subcategory 8: RA4 & RA6 Series with Cortex-M33 core
+2025-02-20 17:55:55,019 - INFO -   Processed subcategory 9: RA2 Series with Cortex-M23 core
+2025-02-20 17:55:55,035 - INFO -   Processed subcategory 10: RA0 Series with Cortex-M23 core
+2025-02-20 17:55:55,051 - INFO -   Processed subcategory 11: RA-T Series (RA6T1 group, RA6T2 group, RA4T1 group, RA6T3 group)
+2025-02-20 17:56:05,118 - INFO -   Processed subcategory 12: RA4W1
+2025-02-20 17:56:05,152 - INFO -   Processed subcategory 13: A/D Converter
+2025-02-20 17:56:15,202 - INFO -   Processed subcategory 14: Azure RTOS FileX
+2025-02-20 17:56:25,261 - INFO -   Processed subcategory 15: Azure RTOS USBX
+2025-02-20 17:56:35,311 - INFO -   Processed subcategory 16: BLE
+2025-02-20 17:56:45,371 - INFO -   Processed subcategory 17: Capacitive Touch
+2025-02-20 17:56:55,452 - INFO -   Processed subcategory 18: Data Transfer (DMAC, DTC, Others)
+2025-02-20 17:56:55,482 - INFO -   Processed subcategory 19: Ethernet
+2025-02-20 17:56:55,503 - INFO -   Processed subcategory 20: External Bus
+2025-02-20 17:56:55,520 - INFO -   Processed subcategory 21: Flash Memory
+2025-02-20 17:56:55,537 - INFO -   Processed subcategory 22: I/O Port
+2025-02-20 17:57:05,591 - INFO -   Processed subcategory 23: I2C-bus Interface (IIC)
+2025-02-20 17:57:15,635 - INFO -   Processed subcategory 24: Interrupt
+2025-02-20 17:57:15,670 - INFO -   Processed subcategory 25: Low Power Consumption
+2025-02-20 17:57:25,708 - INFO -   Processed subcategory 26: Octa Serial Peripheral Interface (OSPI)
+2025-02-20 17:57:35,752 - INFO -   Processed subcategory 27: RAM
+2025-02-20 17:57:35,784 - INFO -   Processed subcategory 28: Real Time Clock (RTC)
+2025-02-20 17:57:45,826 - INFO -   Processed subcategory 29: Reset
+2025-02-20 17:57:45,860 - INFO -   Processed subcategory 30: Serial Communications Interface (SCI)
+2025-02-20 17:57:45,883 - INFO -   Processed subcategory 31: Serial Peripheral Interface (SPI)
+2025-02-20 17:57:45,901 - INFO -   Processed subcategory 32: Timer
+2025-02-20 17:57:55,938 - INFO -   Processed subcategory 33: USB
+2025-02-20 17:57:55,972 - INFO -   Processed subcategory 34: AI Kit with RA Family
+2025-02-20 17:57:55,993 - INFO -   Processed subcategory 35: Voice Kit with RA Family
+2025-02-20 17:58:06,028 - INFO -   Processed subcategory 36: Watchdog Timer (WDT, IWDT)
+2025-02-20 17:58:16,090 - INFO -   Processed subcategory 37: Renesas Ready Partner Network
+2025-02-20 17:58:16,120 - INFO - Processing category 2: RZ Family
+2025-02-20 17:58:16,150 - INFO -   Processed subcategory 1: RZ/A
+2025-02-20 17:58:16,167 - INFO -   Processed subcategory 2: RZ/G
+2025-02-20 17:58:16,182 - INFO -   Processed subcategory 3: RZ/N2L
+2025-02-20 17:58:16,197 - INFO -   Processed subcategory 4: RZ/T1
+2025-02-20 17:58:16,211 - INFO -   Processed subcategory 5: RZ/T2H, RZ/N2H
+2025-02-20 17:58:26,256 - INFO -   Processed subcategory 6: RZ/T2L
+2025-02-20 17:58:26,287 - INFO -   Processed subcategory 7: RZ/T2M
+2025-02-20 17:58:26,309 - INFO -   Processed subcategory 8: RZ/V
+2025-02-20 17:58:36,363 - INFO -   Processed subcategory 9: RZ/Five-RISC-V
+2025-02-20 17:58:46,397 - INFO -   Processed subcategory 10: RZ/T2, RZ/N2 FSP
+2025-02-20 17:58:46,418 - INFO - Processing category 3: RL78 Family
+2025-02-20 17:58:46,449 - INFO -   Processed subcategory 1: RL78/G24
+2025-02-20 17:58:46,467 - INFO -   Processed subcategory 2: RL78/G23
+2025-02-20 17:58:56,520 - INFO -   Processed subcategory 3: RL78/G22
+2025-02-20 17:59:06,602 - INFO -   Processed subcategory 4: RL78/G16
+2025-02-20 17:59:06,634 - INFO -   Processed subcategory 5: RL78/G15
+2025-02-20 17:59:06,656 - INFO -   Processed subcategory 6: RL78/G14 Fast Prototyping Board
+2025-02-20 17:59:06,674 - INFO -   Processed subcategory 7: RL78/G1P Fast Prototyping Board
+2025-02-20 17:59:06,690 - INFO -   Processed subcategory 8: RL78/F23, RL78/F24
+2025-02-20 17:59:06,704 - INFO -   Processed subcategory 9: RL78/F1x
+2025-02-20 17:59:16,728 - INFO -   Processed subcategory 10: Solution
+2025-02-20 17:59:26,756 - INFO -   Processed subcategory 11: Product Migration
+2025-02-20 17:59:26,789 - INFO -   Processed subcategory 12: A/D Converter
+2025-02-20 17:59:26,811 - INFO -   Processed subcategory 13: Capacitive Touch
+2025-02-20 17:59:36,884 - INFO -   Processed subcategory 14: Clock
+2025-02-20 17:59:36,918 - INFO -   Processed subcategory 15: Communication Function
+2025-02-20 17:59:46,971 - INFO -   Processed subcategory 16: Data Transfer
+2025-02-20 17:59:57,048 - INFO -   Processed subcategory 17: Electrical Characteristics
+2025-02-20 17:59:57,080 - INFO -   Processed subcategory 18: I/O Port
+2025-02-20 17:59:57,101 - INFO -   Processed subcategory 19: Interrupt/Exception
+2025-02-20 18:00:07,121 - INFO -   Processed subcategory 20: Low Voltage Detection
+2025-02-20 18:00:07,153 - INFO -   Processed subcategory 21: Memory
+2025-02-20 18:00:17,186 - INFO -   Processed subcategory 22: Real Time Clock (RTC)
+2025-02-20 18:00:27,262 - INFO -   Processed subcategory 23: Register
+2025-02-20 18:00:37,320 - INFO -   Processed subcategory 24: Reset
+2025-02-20 18:00:37,339 - INFO -   Processed subcategory 25: Timer/Pulse Function
+2025-02-20 18:00:37,357 - INFO -   Processed subcategory 26: Others
+2025-02-20 18:00:47,421 - INFO -   Processed subcategory 27: Renesas Ready Partner Network
+2025-02-20 18:00:47,433 - INFO - Processing category 4: RX Family
+2025-02-20 18:00:47,478 - INFO -   Processed subcategory 1: RX72M, RX72N, RX66N
+2025-02-20 18:00:57,541 - INFO -   Processed subcategory 2: RX671
+2025-02-20 18:01:07,621 - INFO -   Processed subcategory 3: RX660
+2025-02-20 18:01:07,652 - INFO -   Processed subcategory 4: RX65N/RX651
+2025-02-20 18:01:17,697 - INFO -   Processed subcategory 5: RX261/RX260
+2025-02-20 18:01:17,729 - INFO -   Processed subcategory 6: RX23E-A
+2025-02-20 18:01:27,791 - INFO -   Processed subcategory 7: RX23E-B
+2025-02-20 18:01:27,823 - INFO -   Processed subcategory 8: RX23W
+2025-02-20 18:01:37,849 - INFO -   Processed subcategory 9: RX140
+2025-02-20 18:01:47,916 - INFO -   Processed subcategory 10: RX130
+2025-02-20 18:01:47,938 - INFO -   Processed subcategory 11: RX26T
+2025-02-20 18:01:47,957 - INFO -   Processed subcategory 12: RX-T
+2025-02-20 18:01:47,975 - INFO -   Processed subcategory 13: A/D Converter
+2025-02-20 18:01:58,031 - INFO -   Processed subcategory 14: Battery backup function
+2025-02-20 18:02:08,104 - INFO -   Processed subcategory 15: Boundary Scan
+2025-02-20 18:02:08,137 - INFO -   Processed subcategory 16: Capacitive Touch
+2025-02-20 18:02:08,160 - INFO -   Processed subcategory 17: Clock Generation Circuit
+2025-02-20 18:02:08,180 - INFO -   Processed subcategory 18: CPU
+2025-02-20 18:02:08,198 - INFO -   Processed subcategory 19: Data Transfer (DMAC, DTC, Others)
+2025-02-20 18:02:18,256 - INFO -   Processed subcategory 20: Electrical Characteristics
+2025-02-20 18:02:18,289 - INFO -   Processed subcategory 21: Ethernet
+2025-02-20 18:02:18,311 - INFO -   Processed subcategory 22: Exception Handling
+2025-02-20 18:02:18,328 - INFO -   Processed subcategory 23: External Bus
+2025-02-20 18:02:18,344 - INFO -   Processed subcategory 24: Flash Memory
+2025-02-20 18:02:28,372 - INFO -   Processed subcategory 25: Frequency Measurement Circuit
+2025-02-20 18:02:38,432 - INFO -   Processed subcategory 26: RX Hardware
+2025-02-20 18:02:38,455 - INFO -   Processed subcategory 27: I/O Port
+2025-02-20 18:02:38,476 - INFO -   Processed subcategory 28: I/O Register
+2025-02-20 18:02:48,511 - INFO -   Processed subcategory 29: I2C-bus Interface (RIIC)
+2025-02-20 18:02:48,540 - INFO -   Processed subcategory 30: Interrupt controller
+2025-02-20 18:02:48,561 - INFO -   Processed subcategory 31: Low Power Consumption
+2025-02-20 18:02:58,626 - INFO -   Processed subcategory 32: Operating Modes
+2025-02-20 18:03:08,705 - INFO -   Processed subcategory 33: Port Output Enable (POE)
+2025-02-20 18:03:18,776 - INFO -   Processed subcategory 34: RAM
+2025-02-20 18:03:18,811 - INFO -   Processed subcategory 35: Real Time Clock (RTC)
+2025-02-20 18:03:28,864 - INFO -   Processed subcategory 36: Reset
+2025-02-20 18:03:38,908 - INFO -   Processed subcategory 37: Security
+2025-02-20 18:03:38,941 - INFO -   Processed subcategory 38: Serial Communications Interface (SCI)
+2025-02-20 18:03:38,963 - INFO -   Processed subcategory 39: Serial Peripheral Interface (RSPI)
+2025-02-20 18:03:38,981 - INFO -   Processed subcategory 40: Timer (MTU, TPU, CMT, Others)
+2025-02-20 18:03:49,000 - INFO -   Processed subcategory 41: USB
+2025-02-20 18:03:59,074 - INFO -   Processed subcategory 42: Voltage Detection Circuit
+2025-02-20 18:04:09,121 - INFO -   Processed subcategory 43: Watchdog Timer (WDT, IWDT)
+2025-02-20 18:04:19,148 - INFO -   Processed subcategory 44: Hardware Manual
+2025-02-20 18:04:29,234 - INFO -   Processed subcategory 45: Renesas Ready Partner Network
+2025-02-20 18:04:29,267 - INFO -   Processed subcategory 46: Others
+2025-02-20 18:04:29,288 - INFO - Processing category 5: RISC-V
+2025-02-20 18:04:39,366 - INFO -   Processed subcategory 1: Device
+2025-02-20 18:04:49,403 - INFO -   Processed subcategory 2: Kit
+2025-02-20 18:04:59,478 - INFO -   Processed subcategory 3: Solution and tools
+2025-02-20 18:05:09,511 - INFO -   Processed subcategory 4: Documentation
+2025-02-20 18:05:09,547 - INFO -   Processed subcategory 5: RISC-V Voice ASSP
+2025-02-20 18:05:09,563 - INFO - Processing category 6: RH850 Family
+2025-02-20 18:05:09,587 - INFO -   Processed subcategory 1: RH850/F1x
+2025-02-20 18:05:19,653 - INFO -   Processed subcategory 2: RH850/F1K
+2025-02-20 18:05:19,710 - INFO -   Processed subcategory 3: RH850/F1Kx
+2025-02-20 18:05:19,740 - INFO -   Processed subcategory 4: RH850/C1x
+2025-02-20 18:05:29,787 - INFO -   Processed subcategory 5: RH850/U2A
+2025-02-20 18:05:29,819 - INFO -   Processed subcategory 6: RH850 General
+2025-02-20 18:05:29,833 - INFO - Processing category 7: Renesas Synergy
+2025-02-20 18:05:29,856 - INFO -   Processed subcategory 1: Synergy Software
+2025-02-20 18:05:29,872 - INFO -   Processed subcategory 2: Synergy Hardware
+2025-02-20 18:05:29,887 - INFO -   Processed subcategory 3: Synergy Solutions Gallery
+2025-02-20 18:05:29,902 - INFO -   Processed subcategory 4: Synergy Knowledge Base
+2025-02-20 18:05:39,933 - INFO -   Processed subcategory 5: IIC
+2025-02-20 18:05:49,973 - INFO -   Processed subcategory 6: Azure RTOS FileX
+2025-02-20 18:06:00,005 - INFO -   Processed subcategory 7: Azure RTOS NetX
+2025-02-20 18:06:00,042 - INFO -   Processed subcategory 8: Azure RTOS USBX
+2025-02-20 18:06:00,053 - INFO - Processing category 8: Reality AI Software
+2025-02-20 18:06:10,123 - INFO -   Processed subcategory 1: General Questions
+2025-02-20 18:06:10,140 - INFO -   Processed subcategory 2: Reality AI Tools® software
+2025-02-20 18:06:10,158 - INFO -   Processed subcategory 3: RealityCheck AD
+2025-02-20 18:06:10,175 - INFO -   Processed subcategory 4: Automotive SWS
+2025-02-20 18:06:10,185 - INFO - Processing category 9: Other MCUs & MPUs
+2025-02-20 18:06:10,207 - INFO -   Processed subcategory 1: SH Family
+2025-02-20 18:06:10,224 - INFO -   Processed subcategory 2: V850 Family
+2025-02-20 18:06:10,243 - INFO -   Processed subcategory 3: 78K Family
+2025-02-20 18:06:10,258 - INFO -   Processed subcategory 4: R8C Family
+2025-02-20 18:06:10,278 - INFO -   Processed subcategory 5: M16C Family
+2025-02-20 18:06:10,294 - INFO -   Processed subcategory 6: M32R Family
+2025-02-20 18:06:10,310 - INFO -   Processed subcategory 7: H8S H8SX Family
+2025-02-20 18:06:10,326 - INFO -   Processed subcategory 8: H8/300H Family
+2025-02-20 18:06:10,341 - INFO -   Processed subcategory 9: H8/TINY Family
+2025-02-20 18:06:10,355 - INFO -   Processed subcategory 10: H8 Family
+2025-02-20 18:06:10,370 - INFO -   Processed subcategory 11: 740 Family
+2025-02-20 18:06:10,384 - INFO -   Processed subcategory 12: 720 Family
+2025-02-20 18:06:10,399 - INFO -   Processed subcategory 13: Common
+2025-02-20 18:06:10,414 - INFO -   Processed subcategory 14: Others
+2025-02-20 18:06:10,423 - INFO - Processing category 10: Software and Tools
+2025-02-20 18:06:10,442 - INFO -   Processed subcategory 1: IDE (CS+)
+2025-02-20 18:06:10,457 - INFO -   Processed subcategory 2: IDE (e² studio)
+2025-02-20 18:06:10,473 - INFO -   Processed subcategory 3: IDE (High-performance Embedded Workshop)
+2025-02-20 18:06:20,505 - INFO -   Processed subcategory 4: Other IDE
+2025-02-20 18:06:20,543 - INFO -   Processed subcategory 5: Compiler Common
+2025-02-20 18:06:20,565 - INFO -   Processed subcategory 6: C Compiler Package for RH850 Family (CC-RH)
+2025-02-20 18:06:20,583 - INFO -   Processed subcategory 7: C/C++ Compiler Package for RX Family (CC-RX)
+2025-02-20 18:06:20,598 - INFO -   Processed subcategory 8: C Compiler Package for RL78 Family (CC-RL)
+2025-02-20 18:06:20,612 - INFO -   Processed subcategory 9: C Compiler Package for RL78 and 78K Families(CA78K0R, CA78K0)
+2025-02-20 18:06:20,627 - INFO -   Processed subcategory 10: C Compiler Package for V850 Family (CA850)
+2025-02-20 18:06:20,641 - INFO -   Processed subcategory 11: Other Compiler Package
+2025-02-20 18:06:20,657 - INFO -   Processed subcategory 12: Code Generator Plug-in, Smart Configurator
+2025-02-20 18:06:20,671 - INFO -   Processed subcategory 13: Other Code Generator
+2025-02-20 18:06:20,687 - INFO -   Processed subcategory 14: Firmware Integration Technology (FIT)
+2025-02-20 18:06:20,703 - INFO -   Processed subcategory 15: Middleware
+2025-02-20 18:06:20,717 - INFO -   Processed subcategory 16: E2, E2 Lite, E1, E20
+2025-02-20 18:06:20,732 - INFO -   Processed subcategory 17: E10A-USB, E10A
+2025-02-20 18:06:20,746 - INFO -   Processed subcategory 18: E8, E8a
+2025-02-20 18:06:20,761 - INFO -   Processed subcategory 19: Other Emulator
+2025-02-20 18:06:20,775 - INFO -   Processed subcategory 20: Renesas Starter Kit
+2025-02-20 18:06:30,844 - INFO -   Processed subcategory 21: Other Board
+2025-02-20 18:06:30,864 - INFO -   Processed subcategory 22: Programmer (Unit/SW)
+2025-02-20 18:06:30,880 - INFO -   Processed subcategory 23: Self Programming (Driver/Library)
+2025-02-20 18:06:30,897 - INFO -   Processed subcategory 24: Real-time OS
+2025-02-20 18:06:30,913 - INFO -   Processed subcategory 25: Development tools for applications (QE, Others)
+2025-02-20 18:06:40,944 - INFO -   Processed subcategory 26: Registration and Email
+2025-02-20 18:06:40,963 - INFO -   Processed subcategory 27: Others
+2025-02-20 18:06:40,974 - INFO - Processing category 11: R-Car S4 Gateway
+2025-02-20 18:06:40,998 - INFO -   Processed subcategory 1: “R-Car S4 Whitebox SDK” for S4 Spider / S4 Starter Kit
+2025-02-20 18:06:51,052 - INFO -   Processed subcategory 2: “R-Car S4 Whitebox SDK Demonstration” for S4 Spider / S4 Starter Kit
+2025-02-20 18:06:51,078 - INFO -   Processed subcategory 3: “Board Specification” for R-Car S4 Starter Kit
+2025-02-20 18:06:51,099 - INFO -   Processed subcategory 4: “Yocto(linux)” for R-Car S4 Starter Kit
+2025-02-20 18:07:01,153 - INFO -   Processed subcategory 5: “Hypervisor(Xen)” for R-Car S4 Starter Kit
+2025-02-20 18:07:11,218 - INFO -   Processed subcategory 6: “Documentation” for R-Car S4 Starter Kit
+2025-02-20 18:07:11,243 - INFO - Processing category 12: R-Car H3/M3 Cockpit
+2025-02-20 18:07:11,275 - INFO -   Processed subcategory 1: “Board Specification” for Starter Kit / Kingfisher
+2025-02-20 18:07:11,293 - INFO -   Processed subcategory 2: “Yocto(linux)” for Starter Kit / Kingfisher
+2025-02-20 18:07:11,311 - INFO -   Processed subcategory 3: “Android” for Starter Kit /Kingfisher
+2025-02-20 18:07:11,327 - INFO -   Processed subcategory 4: “Documentation” for R-Car Starter Kit / Kingfisher
+2025-02-20 18:07:11,344 - INFO -   Processed subcategory 5: R-Car Consortium
+2025-02-20 18:07:11,359 - INFO -   Processed subcategory 6: AGL
+2025-02-20 18:07:11,368 - INFO - Processing category 13: SoC / System LSI
+2025-02-20 18:07:11,388 - INFO -   Processed subcategory 1: USB ASSP
+2025-02-20 18:07:11,402 - INFO -   Processed subcategory 2: Dedicated IC
+2025-02-20 18:07:11,417 - INFO -   Processed subcategory 3: Others
+2025-02-20 18:07:11,426 - INFO - Processing category 14: Analog Products
+2025-02-20 18:07:11,444 - INFO -   Processed subcategory 1: All Amplifiers
+2025-02-20 18:07:11,458 - INFO -   Processed subcategory 2: Comparators
+2025-02-20 18:07:11,472 - INFO -   Processed subcategory 3: Operational Amplifiers
+2025-02-20 18:07:21,496 - INFO -   Processed subcategory 4: Diff Amps
+2025-02-20 18:07:31,533 - INFO -   Processed subcategory 5: Gain Blocks
+2025-02-20 18:07:41,563 - INFO -   Processed subcategory 6: Transistor Arrays
+2025-02-20 18:07:51,657 - INFO -   Processed subcategory 7: Instrumentation Amplifiers
+2025-02-20 18:08:01,703 - INFO -   Processed subcategory 8: Digital Sound Processors
+2025-02-20 18:08:11,791 - INFO -   Processed subcategory 9: Display ICs
+2025-02-20 18:08:21,875 - INFO -   Processed subcategory 10: Security Surveillance
+2025-02-20 18:08:31,941 - INFO -   Processed subcategory 11: Video Decoders/Encoders
+2025-02-20 18:08:42,019 - INFO -   Processed subcategory 12: Video ICs
+2025-02-20 18:08:52,045 - INFO -   Processed subcategory 13: Video Switching
+2025-02-20 18:09:02,073 - INFO -   Processed subcategory 14: AFEs
+2025-02-20 18:09:02,107 - INFO -   Processed subcategory 15: High Speed A/D Converters
+2025-02-20 18:09:02,129 - INFO -   Processed subcategory 16: Precision A/D Converters
+2025-02-20 18:09:02,147 - INFO -   Processed subcategory 17: Digital Potentiometers (DCPs)
+2025-02-20 18:09:02,162 - INFO -   Processed subcategory 18: Voltage References
+2025-02-20 18:09:12,213 - INFO -   Processed subcategory 19: Power Line Communication (PLC)
+2025-02-20 18:09:12,235 - INFO -   Processed subcategory 20: Analog Switches
+2025-02-20 18:09:22,253 - INFO -   Processed subcategory 21: USB Switches
+2025-02-20 18:09:22,272 - INFO - Processing category 15: Clocks & Timing
+2025-02-20 18:09:22,304 - INFO -   Processed subcategory 1: Clock Buffers & Drivers
+2025-02-20 18:09:32,367 - INFO -   Processed subcategory 2: Clock Distribution
+2025-02-20 18:09:42,445 - INFO -   Processed subcategory 3: Clock Generation
+2025-02-20 18:09:52,504 - INFO -   Processed subcategory 4: Clocks - General Purpose
+2025-02-20 18:09:52,538 - INFO -   Processed subcategory 5: Clocks & Timing
+2025-02-20 18:10:02,598 - INFO -   Processed subcategory 6: Counters/Time Base ICs
+2025-02-20 18:10:12,652 - INFO -   Processed subcategory 7: Crystal Oscillators
+2025-02-20 18:10:22,673 - INFO -   Processed subcategory 8: FemtoClock® Low Phase-Noise Frequency Synthesizers
+2025-02-20 18:10:22,694 - INFO -   Processed subcategory 9: Jitter Attenuators with Frequency Translation
+2025-02-20 18:10:32,764 - INFO -   Processed subcategory 10: PCI Express® Clocks
+2025-02-20 18:10:42,796 - INFO -   Processed subcategory 11: Processor Clock Buffers
+2025-02-20 18:10:52,889 - INFO -   Processed subcategory 12: Processor Clock Generators
+2025-02-20 18:11:02,972 - INFO -   Processed subcategory 13: Processor Clocks
+2025-02-20 18:11:02,991 - INFO -   Processed subcategory 14: RTCs
+2025-02-20 18:11:13,037 - INFO -   Processed subcategory 15: Universal Frequency Translators (UFT)
+2025-02-20 18:11:23,106 - INFO -   Processed subcategory 16: VersaClock® Programmable Clocks
+2025-02-20 18:11:33,142 - INFO -   Processed subcategory 17: Zero Delay Buffers (ZDB)
+2025-02-20 18:11:43,225 - INFO -   Processed subcategory 18: Application-Specific Clocks
+2025-02-20 18:11:43,257 - INFO - Processing category 16: Interface
+2025-02-20 18:11:43,287 - INFO -   Processed subcategory 1: RS-485, RS-422 & RS-232
+2025-02-20 18:11:53,365 - INFO -   Processed subcategory 2: Signal Integrity Products
+2025-02-20 18:12:03,491 - INFO -   Processed subcategory 3: USB
+2025-02-20 18:12:13,525 - INFO -   Processed subcategory 4: USB Battery Charging Identifier
+2025-02-20 18:12:23,588 - INFO -   Processed subcategory 5: DSP
+2025-02-20 18:12:23,623 - INFO -   Processed subcategory 6: Photocouplers
+2025-02-20 18:12:23,642 - INFO -   Processed subcategory 7: R-IN32M3 (Multiprotocol Communication)
+2025-02-20 18:12:23,661 - INFO -   Processed subcategory 8: TPS-1 (PROFINET)
+2025-02-20 18:12:33,708 - INFO -   Processed subcategory 9: ASI4U-V5 (AS-Interface Products)
+2025-02-20 18:12:43,750 - INFO -   Processed subcategory 10: R-IN32M4 (Industrial Ethernet Communication)
+2025-02-20 18:12:53,805 - INFO -   Processed subcategory 11: CCE4511
+2025-02-20 18:12:53,828 - INFO - Processing category 17: Connectivity
+2025-02-20 18:12:53,860 - INFO -   Processed subcategory 1: Cellular IoT Modules
+2025-02-20 18:12:53,879 - INFO -   Processed subcategory 2: NFC
+2025-02-20 18:13:03,893 - INFO -   Processed subcategory 3: Wi-SUN FAN
+2025-02-20 18:13:03,908 - INFO - Processing category 18: Bluetooth Low Energy
+2025-02-20 18:13:03,938 - INFO -   Processed subcategory 1: DA14585/531 - Software
+2025-02-20 18:13:03,960 - INFO -   Processed subcategory 2: DA14585/531 - Hardware
+2025-02-20 18:13:03,978 - INFO -   Processed subcategory 3: DA14585/531 - RF
+2025-02-20 18:13:03,994 - INFO -   Processed subcategory 4: DA14592
+2025-02-20 18:13:04,012 - INFO -   Processed subcategory 5: DA1469x - Software
+2025-02-20 18:13:14,065 - INFO -   Processed subcategory 6: DA1469x - Hardware
+2025-02-20 18:13:24,144 - INFO -   Processed subcategory 7: DA1469x - RF
+2025-02-20 18:13:34,204 - INFO -   Processed subcategory 8: DA14592/DA14592MOD tutorials and training material
+2025-02-20 18:13:34,237 - INFO -   Processed subcategory 9: RL78/G1D
+2025-02-20 18:13:44,303 - INFO -   Processed subcategory 10: RL78/G1D Module
+2025-02-20 18:13:44,339 - INFO -   Processed subcategory 11: Protocol Stack for RL78 Family
+2025-02-20 18:13:54,411 - INFO -   Processed subcategory 12: Development Environments for RL78 Family
+2025-02-20 18:13:54,429 - INFO -   Processed subcategory 13: RX23W
+2025-02-20 18:13:54,444 - INFO -   Processed subcategory 14: Protocol Stack for RX Family
+2025-02-20 18:14:04,469 - INFO -   Processed subcategory 15: Development Environments for RX Family
+2025-02-20 18:14:14,492 - INFO -   Processed subcategory 16: Specification
+2025-02-20 18:14:14,514 - INFO -   Processed subcategory 17: Certification
+2025-02-20 18:14:24,582 - INFO -   Processed subcategory 18: Others
+2025-02-20 18:14:24,600 - INFO - Processing category 19: IoT Wi-Fi
+2025-02-20 18:14:34,645 - INFO -   Processed subcategory 1: DA16200/600 - Software
+2025-02-20 18:14:44,732 - INFO -   Processed subcategory 2: DA16200/600 - Hardware
+2025-02-20 18:14:54,816 - INFO -   Processed subcategory 3: DA16200/600 - RF
+2025-02-20 18:14:54,849 - INFO -   Processed subcategory 4: MATTER
+2025-02-20 18:14:54,863 - INFO - Processing category 20: Functional Safety
+2025-02-20 18:14:54,886 - INFO -   Processed subcategory 1: IEC61508 Solution for Industrial Automation
+2025-02-20 18:14:54,896 - INFO - Processing category 21: Memory & Logic
+2025-02-20 18:14:54,914 - INFO -   Processed subcategory 1: FIFO Products
+2025-02-20 18:14:54,929 - INFO -   Processed subcategory 2: Multi-Port Memory
+2025-02-20 18:14:54,944 - INFO -   Processed subcategory 3: SRAM
+2025-02-20 18:15:04,956 - INFO -   Processed subcategory 4: SRAMs (ex-IDT products)
+2025-02-20 18:15:15,001 - INFO -   Processed subcategory 5: Memory
+2025-02-20 18:15:15,034 - INFO -   Processed subcategory 6: SPI NOR Flash
+2025-02-20 18:15:15,047 - INFO - Processing category 22: Power Discretes
+2025-02-20 18:15:25,072 - INFO -   Processed subcategory 1: Gallium Nitride (GaN)
+2025-02-20 18:15:25,104 - INFO -   Processed subcategory 2: Power Diodes
+2025-02-20 18:15:25,127 - INFO -   Processed subcategory 3: Power MOSFETs
+2025-02-20 18:15:25,145 - INFO -   Processed subcategory 4: MOSFET
+2025-02-20 18:15:25,161 - INFO -   Processed subcategory 5: MOSFET Drivers
+2025-02-20 18:15:25,176 - INFO -   Processed subcategory 6: Thyristors and Triacs
+2025-02-20 18:15:25,190 - INFO -   Processed subcategory 7: Discretes - General
+2025-02-20 18:15:25,198 - INFO - Processing category 23: Power & Power Management
+2025-02-20 18:15:25,217 - INFO -   Processed subcategory 1: Battery Management Solutions (BMS)
+2025-02-20 18:15:25,231 - INFO -   Processed subcategory 2: Computing Power VRM/IMVP
+2025-02-20 18:15:25,246 - INFO -   Processed subcategory 3: Converters
+2025-02-20 18:15:25,260 - INFO -   Processed subcategory 4: Digital Power
+2025-02-20 18:15:35,333 - INFO -   Processed subcategory 5: Display Power and Backlighting
+2025-02-20 18:15:45,363 - INFO -   Processed subcategory 6: General-purpose Linear - Others
+2025-02-20 18:15:55,397 - INFO -   Processed subcategory 7: Hot Plug and ORing
+2025-02-20 18:16:05,424 - INFO -   Processed subcategory 8: Isolated Power
+2025-02-20 18:16:05,456 - INFO -   Processed subcategory 9: Linear Regulation
+2025-02-20 18:16:15,506 - INFO -   Processed subcategory 10: LNB Regulators
+2025-02-20 18:16:25,582 - INFO -   Processed subcategory 11: Load Switches
+2025-02-20 18:16:35,643 - INFO -   Processed subcategory 12: Motor Control ICs
+2025-02-20 18:16:45,728 - INFO -   Processed subcategory 13: PMIC
+2025-02-20 18:16:45,760 - INFO -   Processed subcategory 14: PowerCompass
+2025-02-20 18:16:55,820 - INFO -   Processed subcategory 15: Power Modules
+2025-02-20 18:17:05,862 - INFO -   Processed subcategory 16: Power Supply Support
+2025-02-20 18:17:05,890 - INFO -   Processed subcategory 17: Switching Controller and PWM Controller ICs
+2025-02-20 18:17:05,909 - INFO -   Processed subcategory 18: Switching Regulators
+2025-02-20 18:17:05,928 - INFO -   Processed subcategory 19: Transistor
+2025-02-20 18:17:05,944 - INFO -   Processed subcategory 20: Wireless Power
+2025-02-20 18:17:05,961 - INFO -   Processed subcategory 21: Common
+2025-02-20 18:17:05,969 - INFO - Processing category 24: Programmable Mixed-signal, ASIC, & IP
+2025-02-20 18:17:05,988 - INFO -   Processed subcategory 1: GreenPAK™ Programmable Mixed-signal
+2025-02-20 18:17:16,017 - INFO -   Processed subcategory 2: Mixed signal
+2025-02-20 18:17:26,033 - ERROR - Error processing subcategory 3: Message: no such element: Unable to locate element: {"method":"css selector","selector":"h2.h5.CategoryName a"}
+  (Session info: chrome=133.0.6943.126); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104756b58 cxxbridge1$str$ptr + 2724820
+1   chromedriver                        0x000000010474f1b8 cxxbridge1$str$ptr + 2693684
+2   chromedriver                        0x00000001042b5afc cxxbridge1$string$len + 93348
+3   chromedriver                        0x00000001042fc8f8 cxxbridge1$string$len + 383648
+4   chromedriver                        0x00000001042f20bc cxxbridge1$string$len + 340580
+5   chromedriver                        0x000000010433db94 cxxbridge1$string$len + 650556
+6   chromedriver                        0x00000001042f0ba0 cxxbridge1$string$len + 335176
+7   chromedriver                        0x000000010471f610 cxxbridge1$str$ptr + 2498188
+8   chromedriver                        0x0000000104722924 cxxbridge1$str$ptr + 2511264
+9   chromedriver                        0x0000000104704cb0 cxxbridge1$str$ptr + 2389292
+10  chromedriver                        0x00000001047231cc cxxbridge1$str$ptr + 2513480
+11  chromedriver                        0x00000001046f5c98 cxxbridge1$str$ptr + 2327828
+12  chromedriver                        0x000000010473f880 cxxbridge1$str$ptr + 2629884
+13  chromedriver                        0x000000010473fa08 cxxbridge1$str$ptr + 2630276
+14  chromedriver                        0x000000010474ee2c cxxbridge1$str$ptr + 2692776
+15  libsystem_pthread.dylib             0x00000001865ec2e4 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001865e70fc thread_start + 8
+
+2025-02-20 18:17:26,054 - INFO - Processing category 25: RF Products
+2025-02-20 18:17:36,118 - INFO -   Processed subcategory 1: RF & JESD204B Timing
+2025-02-20 18:17:46,205 - INFO -   Processed subcategory 2: RF Converter Clocks
+2025-02-20 18:17:56,284 - INFO -   Processed subcategory 3: RF Synthesizers & PLLs
+2025-02-20 18:17:56,310 - INFO - Processing category 26: Environmental Sensors
+2025-02-20 18:17:56,344 - INFO -   Processed subcategory 1: Gas Sensors
+2025-02-20 18:17:56,363 - INFO -   Processed subcategory 2: Humidity & Temperature Sensors
+2025-02-20 18:17:56,379 - INFO -   Processed subcategory 3: Intelligent Sensors Modules
+2025-02-20 18:17:56,388 - INFO - Processing category 27: Sensor Products
+2025-02-20 18:17:56,407 - INFO -   Processed subcategory 1: Flow Sensors
+2025-02-20 18:18:06,471 - INFO -   Processed subcategory 2: Ambient Light Sensors
+2025-02-20 18:18:16,534 - INFO -   Processed subcategory 3: Proximity Sensors
+2025-02-20 18:18:26,617 - INFO -   Processed subcategory 4: Laser Diode Drivers
+2025-02-20 18:18:36,686 - INFO -   Processed subcategory 5: Optical Sensors
+2025-02-20 18:18:36,721 - INFO -   Processed subcategory 6: SSC
+2025-02-20 18:18:36,735 - INFO - Processing category 28: Space and Harsh Environment
+2025-02-20 18:18:46,771 - INFO -   Processed subcategory 1: /883
+2025-02-20 18:18:56,844 - INFO -   Processed subcategory 2: Harsh Environment
+2025-02-20 18:18:56,885 - INFO -   Processed subcategory 3: Rad Hard Analog
+2025-02-20 18:19:06,918 - INFO -   Processed subcategory 4: Rad Hard Digital
+2025-02-20 18:19:06,943 - INFO -   Processed subcategory 5: Rad Hard Power
+2025-02-20 18:19:06,974 - INFO -   Processed subcategory 6: Rad Tolerant Analog
+2025-02-20 18:19:17,040 - INFO -   Processed subcategory 7: Rad Tolerant Digital
+2025-02-20 18:19:27,092 - INFO -   Processed subcategory 8: Rad Tolerant Power
+2025-02-20 18:19:27,124 - INFO -   Processed subcategory 9: General Product Issues
+2025-02-20 18:19:37,182 - ERROR - Error processing subcategory 10: Message: no such element: Unable to locate element: {"method":"css selector","selector":"h2.h5.CategoryName a"}
+  (Session info: chrome=133.0.6943.126); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104756b58 cxxbridge1$str$ptr + 2724820
+1   chromedriver                        0x000000010474f1b8 cxxbridge1$str$ptr + 2693684
+2   chromedriver                        0x00000001042b5afc cxxbridge1$string$len + 93348
+3   chromedriver                        0x00000001042fc8f8 cxxbridge1$string$len + 383648
+4   chromedriver                        0x00000001042f20bc cxxbridge1$string$len + 340580
+5   chromedriver                        0x000000010433db94 cxxbridge1$string$len + 650556
+6   chromedriver                        0x00000001042f0ba0 cxxbridge1$string$len + 335176
+7   chromedriver                        0x000000010471f610 cxxbridge1$str$ptr + 2498188
+8   chromedriver                        0x0000000104722924 cxxbridge1$str$ptr + 2511264
+9   chromedriver                        0x0000000104704cb0 cxxbridge1$str$ptr + 2389292
+10  chromedriver                        0x00000001047231cc cxxbridge1$str$ptr + 2513480
+11  chromedriver                        0x00000001046f5c98 cxxbridge1$str$ptr + 2327828
+12  chromedriver                        0x000000010473f880 cxxbridge1$str$ptr + 2629884
+13  chromedriver                        0x000000010473fa08 cxxbridge1$str$ptr + 2630276
+14  chromedriver                        0x000000010474ee2c cxxbridge1$str$ptr + 2692776
+15  libsystem_pthread.dylib             0x00000001865ec2e4 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001865e70fc thread_start + 8
+
+2025-02-20 18:19:37,200 - INFO - Processing category 29: End Market Specific
+2025-02-20 18:19:37,228 - INFO -   Processed subcategory 1: Electric Vehicle (EV) Charging
+2025-02-20 18:19:37,247 - INFO -   Processed subcategory 2: Automotive ICs
+2025-02-20 18:19:47,289 - INFO -   Processed subcategory 3: Communications ICs
+2025-02-20 18:19:47,310 - INFO - Processing category 30: Quality & Packaging
+2025-02-20 18:19:47,341 - INFO -   Processed subcategory 1: Manufacturing & Packaging
+2025-02-20 18:19:57,377 - INFO -   Processed subcategory 2: Product Verification
+2025-02-20 18:20:07,453 - INFO -   Processed subcategory 3: Quality & Reliability
+2025-02-20 18:20:07,486 - INFO -   Processed subcategory 4: Precaution
+2025-02-20 18:20:17,553 - INFO -   Processed subcategory 5: Thermal resistance
+2025-02-20 18:20:27,592 - INFO -   Processed subcategory 6: Quality & Packaging (ex-IDT products)
+2025-02-20 18:20:37,641 - ERROR - Error processing subcategory 7: Message: no such element: Unable to locate element: {"method":"css selector","selector":"h2.h5.CategoryName a"}
+  (Session info: chrome=133.0.6943.126); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104756b58 cxxbridge1$str$ptr + 2724820
+1   chromedriver                        0x000000010474f1b8 cxxbridge1$str$ptr + 2693684
+2   chromedriver                        0x00000001042b5afc cxxbridge1$string$len + 93348
+3   chromedriver                        0x00000001042fc8f8 cxxbridge1$string$len + 383648
+4   chromedriver                        0x00000001042f20bc cxxbridge1$string$len + 340580
+5   chromedriver                        0x000000010433db94 cxxbridge1$string$len + 650556
+6   chromedriver                        0x00000001042f0ba0 cxxbridge1$string$len + 335176
+7   chromedriver                        0x000000010471f610 cxxbridge1$str$ptr + 2498188
+8   chromedriver                        0x0000000104722924 cxxbridge1$str$ptr + 2511264
+9   chromedriver                        0x0000000104704cb0 cxxbridge1$str$ptr + 2389292
+10  chromedriver                        0x00000001047231cc cxxbridge1$str$ptr + 2513480
+11  chromedriver                        0x00000001046f5c98 cxxbridge1$str$ptr + 2327828
+12  chromedriver                        0x000000010473f880 cxxbridge1$str$ptr + 2629884
+13  chromedriver                        0x000000010473fa08 cxxbridge1$str$ptr + 2630276
+14  chromedriver                        0x000000010474ee2c cxxbridge1$str$ptr + 2692776
+15  libsystem_pthread.dylib             0x00000001865ec2e4 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001865e70fc thread_start + 8
+
+2025-02-20 18:20:37,659 - INFO - Processing category 31: Others
+2025-02-20 18:20:47,707 - INFO -   Processed subcategory 1: IDT General Parts
+2025-02-20 18:20:57,754 - INFO -   Processed subcategory 2: General knowledge of Semiconductors
+2025-02-20 18:21:07,806 - INFO -   Processed subcategory 3: Product Longevity Program (PLP)
+2025-02-20 18:21:17,847 - INFO -   Processed subcategory 4: Renesas Orderable Part Number
+2025-02-20 18:21:27,882 - INFO -   Processed subcategory 5: Availability
+2025-02-20 18:21:37,971 - INFO -   Processed subcategory 6: Simulation Models
+2025-02-20 18:21:48,050 - INFO -   Processed subcategory 7: Old Products
+2025-02-20 18:21:58,114 - INFO -   Processed subcategory 8: Common
+2025-02-20 18:22:08,196 - INFO -   Processed subcategory 9: Others
+2025-02-20 18:22:18,254 - INFO -   Processed subcategory 10: Internal only1
+2025-02-20 18:22:28,298 - INFO -   Processed subcategory 11: Internal only11
+2025-02-20 18:22:38,373 - INFO -   Processed subcategory 12: Internal only2
+2025-02-20 18:22:48,441 - INFO -   Processed subcategory 13: Internal only21
+2025-02-20 18:22:58,483 - INFO -   Processed subcategory 14: Internal only3
+2025-02-20 18:23:08,549 - INFO -   Processed subcategory 15: Internal only4
+2025-02-20 18:23:18,630 - INFO -   Processed subcategory 16: Internal only9
+2025-02-20 18:23:28,696 - ERROR - Error processing subcategory 17: Message: no such element: Unable to locate element: {"method":"css selector","selector":"h2.h5.CategoryName a"}
+  (Session info: chrome=133.0.6943.126); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104756b58 cxxbridge1$str$ptr + 2724820
+1   chromedriver                        0x000000010474f1b8 cxxbridge1$str$ptr + 2693684
+2   chromedriver                        0x00000001042b5afc cxxbridge1$string$len + 93348
+3   chromedriver                        0x00000001042fc8f8 cxxbridge1$string$len + 383648
+4   chromedriver                        0x00000001042f20bc cxxbridge1$string$len + 340580
+5   chromedriver                        0x000000010433db94 cxxbridge1$string$len + 650556
+6   chromedriver                        0x00000001042f0ba0 cxxbridge1$string$len + 335176
+7   chromedriver                        0x000000010471f610 cxxbridge1$str$ptr + 2498188
+8   chromedriver                        0x0000000104722924 cxxbridge1$str$ptr + 2511264
+9   chromedriver                        0x0000000104704cb0 cxxbridge1$str$ptr + 2389292
+10  chromedriver                        0x00000001047231cc cxxbridge1$str$ptr + 2513480
+11  chromedriver                        0x00000001046f5c98 cxxbridge1$str$ptr + 2327828
+12  chromedriver                        0x000000010473f880 cxxbridge1$str$ptr + 2629884
+13  chromedriver                        0x000000010473fa08 cxxbridge1$str$ptr + 2630276
+14  chromedriver                        0x000000010474ee2c cxxbridge1$str$ptr + 2692776
+15  libsystem_pthread.dylib             0x00000001865ec2e4 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001865e70fc thread_start + 8
+
+2025-02-20 18:23:28,717 - WARNING - Empty category title found in section 32
+2025-02-20 18:23:28,722 - INFO - Successfully saved data to /Users/ramfeuji/Documents/Vettura AI/Vettura-Capstone/layoutCrawl/Data/categories_data.csv
+2025-02-20 18:23:28,722 - INFO - Scraping completed successfully
+2025-02-20 18:23:28,896 - INFO - WebDriver closed

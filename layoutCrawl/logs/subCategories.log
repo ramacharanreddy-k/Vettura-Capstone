@@ -1,0 +1,1080 @@
+2025-02-20 18:44:25,519 - INFO - Starting topic URL extraction
+2025-02-20 18:44:25,519 - INFO - ====== WebDriver manager ======
+2025-02-20 18:44:25,721 - INFO - Get LATEST chromedriver version for google-chrome
+2025-02-20 18:44:25,823 - INFO - Get LATEST chromedriver version for google-chrome
+2025-02-20 18:44:25,892 - INFO - Driver [/Users/ramfeuji/.wdm/drivers/chromedriver/mac64/133.0.6943.126/chromedriver-mac-arm64/chromedriver] found in cache
+2025-02-20 18:44:27,187 - INFO - WebDriver setup successful
+2025-02-20 18:44:27,189 - INFO - Processing row 1 of 357
+2025-02-20 18:44:27,189 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31655
+2025-02-20 18:44:30,270 - INFO - Found 13 article URLs
+2025-02-20 18:44:30,270 - INFO - Processing row 2 of 357
+2025-02-20 18:44:30,270 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31656
+2025-02-20 18:44:32,704 - INFO - Found 31 article URLs
+2025-02-20 18:44:32,704 - INFO - Processing row 3 of 357
+2025-02-20 18:44:32,704 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31089
+2025-02-20 18:44:35,057 - INFO - Found 24 article URLs
+2025-02-20 18:44:35,057 - INFO - Processing row 4 of 357
+2025-02-20 18:44:35,057 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31088
+2025-02-20 18:44:37,512 - INFO - Found 90 article URLs
+2025-02-20 18:44:37,512 - INFO - Processing row 5 of 357
+2025-02-20 18:44:37,512 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31090
+2025-02-20 18:44:40,405 - INFO - Found 254 article URLs
+2025-02-20 18:44:40,405 - INFO - Processing row 6 of 357
+2025-02-20 18:44:40,405 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31091
+2025-02-20 18:44:42,734 - INFO - Found 3 article URLs
+2025-02-20 18:44:42,735 - INFO - Processing row 7 of 357
+2025-02-20 18:44:42,735 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/32169
+2025-02-20 18:44:45,123 - INFO - Found 24 article URLs
+2025-02-20 18:44:45,124 - INFO - Processing row 8 of 357
+2025-02-20 18:44:45,124 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31269
+2025-02-20 18:44:47,571 - INFO - Found 30 article URLs
+2025-02-20 18:44:47,571 - INFO - Processing row 9 of 357
+2025-02-20 18:44:47,571 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31297
+2025-02-20 18:44:50,111 - INFO - Found 19 article URLs
+2025-02-20 18:44:50,112 - INFO - Processing row 10 of 357
+2025-02-20 18:44:50,112 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/32659
+2025-02-20 18:44:52,628 - INFO - Found 10 article URLs
+2025-02-20 18:44:52,628 - INFO - Processing row 11 of 357
+2025-02-20 18:44:52,628 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31293
+2025-02-20 18:44:55,049 - INFO - Found 18 article URLs
+2025-02-20 18:44:55,049 - INFO - Processing row 12 of 357
+2025-02-20 18:44:55,049 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31225
+2025-02-20 18:44:57,346 - INFO - Found 5 article URLs
+2025-02-20 18:44:57,346 - INFO - Processing row 13 of 357
+2025-02-20 18:44:57,346 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31404
+2025-02-20 18:44:59,693 - INFO - Found 9 article URLs
+2025-02-20 18:44:59,693 - INFO - Processing row 14 of 357
+2025-02-20 18:44:59,693 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31547
+2025-02-20 18:45:02,087 - INFO - Found 1 article URLs
+2025-02-20 18:45:02,087 - INFO - Processing row 15 of 357
+2025-02-20 18:45:02,087 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31546
+2025-02-20 18:45:04,419 - INFO - Found 2 article URLs
+2025-02-20 18:45:04,419 - INFO - Processing row 16 of 357
+2025-02-20 18:45:04,419 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31455
+2025-02-20 18:45:16,743 - INFO - Found 0 article URLs
+2025-02-20 18:45:16,743 - INFO - Processing row 17 of 357
+2025-02-20 18:45:16,743 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/33682
+2025-02-20 18:45:19,111 - INFO - Found 2 article URLs
+2025-02-20 18:45:19,111 - INFO - Processing row 18 of 357
+2025-02-20 18:45:19,111 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31444
+2025-02-20 18:45:21,476 - INFO - Found 2 article URLs
+2025-02-20 18:45:21,477 - INFO - Processing row 19 of 357
+2025-02-20 18:45:21,477 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31398
+2025-02-20 18:45:23,826 - INFO - Found 8 article URLs
+2025-02-20 18:45:23,826 - INFO - Processing row 20 of 357
+2025-02-20 18:45:23,826 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31431
+2025-02-20 18:45:26,195 - INFO - Found 7 article URLs
+2025-02-20 18:45:26,195 - INFO - Processing row 21 of 357
+2025-02-20 18:45:26,195 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31435
+2025-02-20 18:45:28,556 - INFO - Found 6 article URLs
+2025-02-20 18:45:28,556 - INFO - Processing row 22 of 357
+2025-02-20 18:45:28,556 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31394
+2025-02-20 18:45:30,941 - INFO - Found 10 article URLs
+2025-02-20 18:45:30,941 - INFO - Processing row 23 of 357
+2025-02-20 18:45:30,941 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31542
+2025-02-20 18:45:33,304 - INFO - Found 4 article URLs
+2025-02-20 18:45:33,304 - INFO - Processing row 24 of 357
+2025-02-20 18:45:33,304 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31428
+2025-02-20 18:45:35,641 - INFO - Found 1 article URLs
+2025-02-20 18:45:35,641 - INFO - Processing row 25 of 357
+2025-02-20 18:45:35,641 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31416
+2025-02-20 18:45:38,096 - INFO - Found 9 article URLs
+2025-02-20 18:45:38,096 - INFO - Processing row 26 of 357
+2025-02-20 18:45:38,096 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31873
+2025-02-20 18:45:40,435 - INFO - Found 4 article URLs
+2025-02-20 18:45:40,435 - INFO - Processing row 27 of 357
+2025-02-20 18:45:40,435 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31396
+2025-02-20 18:45:42,781 - INFO - Found 3 article URLs
+2025-02-20 18:45:42,781 - INFO - Processing row 28 of 357
+2025-02-20 18:45:42,781 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31425
+2025-02-20 18:45:45,117 - INFO - Found 7 article URLs
+2025-02-20 18:45:45,117 - INFO - Processing row 29 of 357
+2025-02-20 18:45:45,117 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31432
+2025-02-20 18:45:47,462 - INFO - Found 1 article URLs
+2025-02-20 18:45:47,462 - INFO - Processing row 30 of 357
+2025-02-20 18:45:47,463 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31418
+2025-02-20 18:45:49,924 - INFO - Found 25 article URLs
+2025-02-20 18:45:49,924 - INFO - Processing row 31 of 357
+2025-02-20 18:45:49,924 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31450
+2025-02-20 18:45:52,259 - INFO - Found 11 article URLs
+2025-02-20 18:45:52,259 - INFO - Processing row 32 of 357
+2025-02-20 18:45:52,259 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31429
+2025-02-20 18:45:54,662 - INFO - Found 6 article URLs
+2025-02-20 18:45:54,662 - INFO - Processing row 33 of 357
+2025-02-20 18:45:54,662 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31446
+2025-02-20 18:45:57,047 - INFO - Found 4 article URLs
+2025-02-20 18:45:57,047 - INFO - Processing row 34 of 357
+2025-02-20 18:45:57,047 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/32593
+2025-02-20 18:45:59,454 - INFO - Found 11 article URLs
+2025-02-20 18:45:59,454 - INFO - Processing row 35 of 357
+2025-02-20 18:45:59,454 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31615
+2025-02-20 18:46:01,993 - INFO - Found 17 article URLs
+2025-02-20 18:46:01,993 - INFO - Processing row 36 of 357
+2025-02-20 18:46:01,993 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31422
+2025-02-20 18:46:04,385 - INFO - Found 3 article URLs
+2025-02-20 18:46:04,385 - INFO - Processing row 37 of 357
+2025-02-20 18:46:04,385 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31698
+2025-02-20 18:46:06,741 - INFO - Found 5 article URLs
+2025-02-20 18:46:06,741 - INFO - Processing row 38 of 357
+2025-02-20 18:46:06,741 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31243/subcategory/31244
+2025-02-20 18:46:09,170 - INFO - Found 43 article URLs
+2025-02-20 18:46:09,170 - INFO - Processing row 39 of 357
+2025-02-20 18:46:09,170 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31243/subcategory/31245
+2025-02-20 18:46:11,602 - INFO - Found 70 article URLs
+2025-02-20 18:46:11,602 - INFO - Processing row 40 of 357
+2025-02-20 18:46:11,602 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31243/subcategory/31657
+2025-02-20 18:46:13,912 - INFO - Found 6 article URLs
+2025-02-20 18:46:13,912 - INFO - Processing row 41 of 357
+2025-02-20 18:46:13,912 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31243/subcategory/31246
+2025-02-20 18:46:16,410 - INFO - Found 58 article URLs
+2025-02-20 18:46:16,410 - INFO - Processing row 42 of 357
+2025-02-20 18:46:16,410 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31243/subcategory/33192
+2025-02-20 18:46:18,752 - INFO - Found 10 article URLs
+2025-02-20 18:46:18,752 - INFO - Processing row 43 of 357
+2025-02-20 18:46:18,752 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31243/subcategory/31738
+2025-02-20 18:46:21,073 - INFO - Found 5 article URLs
+2025-02-20 18:46:21,074 - INFO - Processing row 44 of 357
+2025-02-20 18:46:21,074 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31243/subcategory/31597
+2025-02-20 18:46:23,426 - INFO - Found 8 article URLs
+2025-02-20 18:46:23,426 - INFO - Processing row 45 of 357
+2025-02-20 18:46:23,426 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31243/subcategory/31562
+2025-02-20 18:46:25,883 - INFO - Found 43 article URLs
+2025-02-20 18:46:25,883 - INFO - Processing row 46 of 357
+2025-02-20 18:46:25,883 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31243/subcategory/31660
+2025-02-20 18:46:38,248 - INFO - Found 0 article URLs
+2025-02-20 18:46:38,248 - INFO - Processing row 47 of 357
+2025-02-20 18:46:38,249 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31243/subcategory/33559
+2025-02-20 18:46:40,572 - INFO - Found 5 article URLs
+2025-02-20 18:46:40,572 - INFO - Processing row 48 of 357
+2025-02-20 18:46:40,573 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/32090
+2025-02-20 18:46:42,921 - INFO - Found 8 article URLs
+2025-02-20 18:46:42,922 - INFO - Processing row 49 of 357
+2025-02-20 18:46:42,922 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31369
+2025-02-20 18:46:45,388 - INFO - Found 11 article URLs
+2025-02-20 18:46:45,388 - INFO - Processing row 50 of 357
+2025-02-20 18:46:45,388 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31718
+2025-02-20 18:46:47,705 - INFO - Found 3 article URLs
+2025-02-20 18:46:47,705 - INFO - Processing row 51 of 357
+2025-02-20 18:46:47,705 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31838
+2025-02-20 18:46:50,083 - INFO - Found 2 article URLs
+2025-02-20 18:46:50,083 - INFO - Processing row 52 of 357
+2025-02-20 18:46:50,083 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31712
+2025-02-20 18:46:52,424 - INFO - Found 6 article URLs
+2025-02-20 18:46:52,424 - INFO - Processing row 53 of 357
+2025-02-20 18:46:52,424 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31146
+2025-02-20 18:46:54,871 - INFO - Found 6 article URLs
+2025-02-20 18:46:54,871 - INFO - Processing row 54 of 357
+2025-02-20 18:46:54,871 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31231
+2025-02-20 18:46:57,198 - INFO - Found 7 article URLs
+2025-02-20 18:46:57,198 - INFO - Processing row 55 of 357
+2025-02-20 18:46:57,198 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/32373
+2025-02-20 18:46:59,577 - INFO - Found 6 article URLs
+2025-02-20 18:46:59,577 - INFO - Processing row 56 of 357
+2025-02-20 18:46:59,577 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31406
+2025-02-20 18:47:06,328 - INFO - Found 6 article URLs
+2025-02-20 18:47:06,328 - INFO - Processing row 57 of 357
+2025-02-20 18:47:06,328 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31026
+2025-02-20 18:47:08,686 - INFO - Found 5 article URLs
+2025-02-20 18:47:08,686 - INFO - Processing row 58 of 357
+2025-02-20 18:47:08,686 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31027
+2025-02-20 18:47:11,048 - INFO - Found 3 article URLs
+2025-02-20 18:47:11,048 - INFO - Processing row 59 of 357
+2025-02-20 18:47:11,048 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31028
+2025-02-20 18:47:13,388 - INFO - Found 12 article URLs
+2025-02-20 18:47:13,388 - INFO - Processing row 60 of 357
+2025-02-20 18:47:13,388 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31744
+2025-02-20 18:47:15,728 - INFO - Found 8 article URLs
+2025-02-20 18:47:15,728 - INFO - Processing row 61 of 357
+2025-02-20 18:47:15,728 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31029
+2025-02-20 18:47:18,083 - INFO - Found 4 article URLs
+2025-02-20 18:47:18,083 - INFO - Processing row 62 of 357
+2025-02-20 18:47:18,083 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31031
+2025-02-20 18:47:20,501 - INFO - Found 18 article URLs
+2025-02-20 18:47:20,502 - INFO - Processing row 63 of 357
+2025-02-20 18:47:20,502 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31032
+2025-02-20 18:47:22,799 - INFO - Found 5 article URLs
+2025-02-20 18:47:22,799 - INFO - Processing row 64 of 357
+2025-02-20 18:47:22,799 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31033
+2025-02-20 18:47:25,168 - INFO - Found 3 article URLs
+2025-02-20 18:47:25,168 - INFO - Processing row 65 of 357
+2025-02-20 18:47:25,168 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31034
+2025-02-20 18:47:27,542 - INFO - Found 13 article URLs
+2025-02-20 18:47:27,542 - INFO - Processing row 66 of 357
+2025-02-20 18:47:27,542 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31035
+2025-02-20 18:47:34,663 - INFO - Found 6 article URLs
+2025-02-20 18:47:34,663 - INFO - Processing row 67 of 357
+2025-02-20 18:47:34,663 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31036
+2025-02-20 18:47:36,993 - INFO - Found 1 article URLs
+2025-02-20 18:47:36,993 - INFO - Processing row 68 of 357
+2025-02-20 18:47:36,993 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31037
+2025-02-20 18:47:39,349 - INFO - Found 9 article URLs
+2025-02-20 18:47:39,349 - INFO - Processing row 69 of 357
+2025-02-20 18:47:39,349 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31038
+2025-02-20 18:47:51,658 - INFO - Found 0 article URLs
+2025-02-20 18:47:51,659 - INFO - Processing row 70 of 357
+2025-02-20 18:47:51,659 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31039
+2025-02-20 18:47:54,110 - INFO - Found 5 article URLs
+2025-02-20 18:47:54,110 - INFO - Processing row 71 of 357
+2025-02-20 18:47:54,110 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31040
+2025-02-20 18:47:56,452 - INFO - Found 5 article URLs
+2025-02-20 18:47:56,452 - INFO - Processing row 72 of 357
+2025-02-20 18:47:56,452 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31041
+2025-02-20 18:47:58,813 - INFO - Found 9 article URLs
+2025-02-20 18:47:58,813 - INFO - Processing row 73 of 357
+2025-02-20 18:47:58,813 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31042
+2025-02-20 18:48:01,338 - INFO - Found 15 article URLs
+2025-02-20 18:48:01,338 - INFO - Processing row 74 of 357
+2025-02-20 18:48:01,338 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31025/subcategory/31699
+2025-02-20 18:48:03,649 - INFO - Found 5 article URLs
+2025-02-20 18:48:03,649 - INFO - Processing row 75 of 357
+2025-02-20 18:48:03,650 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/31187
+2025-02-20 18:48:06,030 - INFO - Found 6 article URLs
+2025-02-20 18:48:06,031 - INFO - Processing row 76 of 357
+2025-02-20 18:48:06,031 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/31477
+2025-02-20 18:48:08,368 - INFO - Found 5 article URLs
+2025-02-20 18:48:08,368 - INFO - Processing row 77 of 357
+2025-02-20 18:48:08,368 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/31651
+2025-02-20 18:48:10,695 - INFO - Found 5 article URLs
+2025-02-20 18:48:10,695 - INFO - Processing row 78 of 357
+2025-02-20 18:48:10,695 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30944
+2025-02-20 18:48:13,064 - INFO - Found 18 article URLs
+2025-02-20 18:48:13,065 - INFO - Processing row 79 of 357
+2025-02-20 18:48:13,065 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/33179
+2025-02-20 18:48:15,400 - INFO - Found 5 article URLs
+2025-02-20 18:48:15,400 - INFO - Processing row 80 of 357
+2025-02-20 18:48:15,401 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/31181
+2025-02-20 18:48:17,738 - INFO - Found 6 article URLs
+2025-02-20 18:48:17,738 - INFO - Processing row 81 of 357
+2025-02-20 18:48:17,738 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/32235
+2025-02-20 18:48:20,026 - INFO - Found 5 article URLs
+2025-02-20 18:48:20,027 - INFO - Processing row 82 of 357
+2025-02-20 18:48:20,027 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/31141
+2025-02-20 18:48:22,597 - INFO - Found 10 article URLs
+2025-02-20 18:48:22,597 - INFO - Processing row 83 of 357
+2025-02-20 18:48:22,597 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/31496
+2025-02-20 18:48:24,928 - INFO - Found 5 article URLs
+2025-02-20 18:48:24,928 - INFO - Processing row 84 of 357
+2025-02-20 18:48:24,928 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30943
+2025-02-20 18:48:27,296 - INFO - Found 4 article URLs
+2025-02-20 18:48:27,296 - INFO - Processing row 85 of 357
+2025-02-20 18:48:27,296 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/31824
+2025-02-20 18:48:29,820 - INFO - Found 6 article URLs
+2025-02-20 18:48:29,820 - INFO - Processing row 86 of 357
+2025-02-20 18:48:29,820 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/31184
+2025-02-20 18:48:32,180 - INFO - Found 6 article URLs
+2025-02-20 18:48:32,181 - INFO - Processing row 87 of 357
+2025-02-20 18:48:32,181 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30945
+2025-02-20 18:48:34,523 - INFO - Found 8 article URLs
+2025-02-20 18:48:34,523 - INFO - Processing row 88 of 357
+2025-02-20 18:48:34,523 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/33204
+2025-02-20 18:48:36,929 - INFO - Found 1 article URLs
+2025-02-20 18:48:36,929 - INFO - Processing row 89 of 357
+2025-02-20 18:48:36,929 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30946
+2025-02-20 18:48:39,298 - INFO - Found 2 article URLs
+2025-02-20 18:48:39,298 - INFO - Processing row 90 of 357
+2025-02-20 18:48:39,298 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30929
+2025-02-20 18:48:42,033 - INFO - Found 78 article URLs
+2025-02-20 18:48:42,034 - INFO - Processing row 91 of 357
+2025-02-20 18:48:42,034 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30947
+2025-02-20 18:48:44,391 - INFO - Found 22 article URLs
+2025-02-20 18:48:44,391 - INFO - Processing row 92 of 357
+2025-02-20 18:48:44,391 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30948
+2025-02-20 18:48:46,937 - INFO - Found 24 article URLs
+2025-02-20 18:48:46,937 - INFO - Processing row 93 of 357
+2025-02-20 18:48:46,937 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30949
+2025-02-20 18:48:49,428 - INFO - Found 16 article URLs
+2025-02-20 18:48:49,429 - INFO - Processing row 94 of 357
+2025-02-20 18:48:49,429 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/33203
+2025-02-20 18:48:51,730 - INFO - Found 2 article URLs
+2025-02-20 18:48:51,730 - INFO - Processing row 95 of 357
+2025-02-20 18:48:51,731 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30950
+2025-02-20 18:48:54,138 - INFO - Found 6 article URLs
+2025-02-20 18:48:54,138 - INFO - Processing row 96 of 357
+2025-02-20 18:48:54,138 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30951
+2025-02-20 18:48:56,494 - INFO - Found 6 article URLs
+2025-02-20 18:48:56,495 - INFO - Processing row 97 of 357
+2025-02-20 18:48:56,495 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30952
+2025-02-20 18:48:58,902 - INFO - Found 12 article URLs
+2025-02-20 18:48:58,902 - INFO - Processing row 98 of 357
+2025-02-20 18:48:58,902 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30953
+2025-02-20 18:49:01,438 - INFO - Found 48 article URLs
+2025-02-20 18:49:01,438 - INFO - Processing row 99 of 357
+2025-02-20 18:49:01,438 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30954
+2025-02-20 18:49:03,943 - INFO - Found 1 article URLs
+2025-02-20 18:49:03,944 - INFO - Processing row 100 of 357
+2025-02-20 18:49:03,945 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/32769
+2025-02-20 18:49:06,291 - INFO - Found 2 article URLs
+2025-02-20 18:49:06,292 - INFO - Processing row 101 of 357
+2025-02-20 18:49:06,292 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30955
+2025-02-20 18:49:08,806 - INFO - Found 15 article URLs
+2025-02-20 18:49:08,807 - INFO - Processing row 102 of 357
+2025-02-20 18:49:08,807 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30956
+2025-02-20 18:49:11,186 - INFO - Found 6 article URLs
+2025-02-20 18:49:11,186 - INFO - Processing row 103 of 357
+2025-02-20 18:49:11,186 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30957
+2025-02-20 18:49:16,552 - INFO - Found 1 article URLs
+2025-02-20 18:49:16,552 - INFO - Processing row 104 of 357
+2025-02-20 18:49:16,552 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30958
+2025-02-20 18:49:18,912 - INFO - Found 13 article URLs
+2025-02-20 18:49:18,913 - INFO - Processing row 105 of 357
+2025-02-20 18:49:18,913 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30959
+2025-02-20 18:49:21,313 - INFO - Found 24 article URLs
+2025-02-20 18:49:21,313 - INFO - Processing row 106 of 357
+2025-02-20 18:49:21,313 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30960
+2025-02-20 18:49:23,646 - INFO - Found 1 article URLs
+2025-02-20 18:49:23,646 - INFO - Processing row 107 of 357
+2025-02-20 18:49:23,646 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30961
+2025-02-20 18:49:25,981 - INFO - Found 1 article URLs
+2025-02-20 18:49:25,982 - INFO - Processing row 108 of 357
+2025-02-20 18:49:25,982 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30962
+2025-02-20 18:49:28,531 - INFO - Found 5 article URLs
+2025-02-20 18:49:28,531 - INFO - Processing row 109 of 357
+2025-02-20 18:49:28,532 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30963
+2025-02-20 18:49:30,875 - INFO - Found 9 article URLs
+2025-02-20 18:49:30,875 - INFO - Processing row 110 of 357
+2025-02-20 18:49:30,875 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30964
+2025-02-20 18:49:33,188 - INFO - Found 2 article URLs
+2025-02-20 18:49:33,188 - INFO - Processing row 111 of 357
+2025-02-20 18:49:33,188 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/33565
+2025-02-20 18:49:35,544 - INFO - Found 1 article URLs
+2025-02-20 18:49:35,544 - INFO - Processing row 112 of 357
+2025-02-20 18:49:35,544 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30965
+2025-02-20 18:49:37,957 - INFO - Found 28 article URLs
+2025-02-20 18:49:37,957 - INFO - Processing row 113 of 357
+2025-02-20 18:49:37,957 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30966
+2025-02-20 18:49:40,310 - INFO - Found 8 article URLs
+2025-02-20 18:49:40,311 - INFO - Processing row 114 of 357
+2025-02-20 18:49:40,311 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30967
+2025-02-20 18:49:42,629 - INFO - Found 8 article URLs
+2025-02-20 18:49:42,630 - INFO - Processing row 115 of 357
+2025-02-20 18:49:42,630 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30968
+2025-02-20 18:49:44,977 - INFO - Found 2 article URLs
+2025-02-20 18:49:44,977 - INFO - Processing row 116 of 357
+2025-02-20 18:49:44,977 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30969
+2025-02-20 18:49:47,364 - INFO - Found 3 article URLs
+2025-02-20 18:49:47,365 - INFO - Processing row 117 of 357
+2025-02-20 18:49:47,365 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30970
+2025-02-20 18:49:49,713 - INFO - Found 4 article URLs
+2025-02-20 18:49:49,713 - INFO - Processing row 118 of 357
+2025-02-20 18:49:49,713 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/31716
+2025-02-20 18:50:02,066 - INFO - Found 0 article URLs
+2025-02-20 18:50:02,067 - INFO - Processing row 119 of 357
+2025-02-20 18:50:02,067 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/31700
+2025-02-20 18:50:04,455 - INFO - Found 5 article URLs
+2025-02-20 18:50:04,455 - INFO - Processing row 120 of 357
+2025-02-20 18:50:04,455 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30942/subcategory/30971
+2025-02-20 18:50:06,902 - INFO - Found 39 article URLs
+2025-02-20 18:50:06,903 - INFO - Processing row 121 of 357
+2025-02-20 18:50:06,903 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31663/subcategory/31664
+2025-02-20 18:50:09,231 - INFO - Found 4 article URLs
+2025-02-20 18:50:09,231 - INFO - Processing row 122 of 357
+2025-02-20 18:50:09,232 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31663/subcategory/31665
+2025-02-20 18:50:11,603 - INFO - Found 4 article URLs
+2025-02-20 18:50:11,604 - INFO - Processing row 123 of 357
+2025-02-20 18:50:11,604 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31663/subcategory/31666
+2025-02-20 18:50:13,932 - INFO - Found 4 article URLs
+2025-02-20 18:50:13,932 - INFO - Processing row 124 of 357
+2025-02-20 18:50:13,932 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31663/subcategory/31667
+2025-02-20 18:50:16,409 - INFO - Found 1 article URLs
+2025-02-20 18:50:16,409 - INFO - Processing row 125 of 357
+2025-02-20 18:50:16,409 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31663/subcategory/31748
+2025-02-20 18:50:18,818 - INFO - Found 19 article URLs
+2025-02-20 18:50:18,818 - INFO - Processing row 126 of 357
+2025-02-20 18:50:18,818 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31407/subcategory/31408
+2025-02-20 18:50:21,181 - INFO - Found 9 article URLs
+2025-02-20 18:50:21,181 - INFO - Processing row 127 of 357
+2025-02-20 18:50:21,181 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31407/subcategory/33625
+2025-02-20 18:50:23,534 - INFO - Found 2 article URLs
+2025-02-20 18:50:23,534 - INFO - Processing row 128 of 357
+2025-02-20 18:50:23,534 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31407/subcategory/31913
+2025-02-20 18:50:25,881 - INFO - Found 11 article URLs
+2025-02-20 18:50:25,881 - INFO - Processing row 129 of 357
+2025-02-20 18:50:25,881 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31407/subcategory/31493
+2025-02-20 18:50:28,306 - INFO - Found 11 article URLs
+2025-02-20 18:50:28,306 - INFO - Processing row 130 of 357
+2025-02-20 18:50:28,306 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31407/subcategory/33626
+2025-02-20 18:50:30,632 - INFO - Found 1 article URLs
+2025-02-20 18:50:30,633 - INFO - Processing row 131 of 357
+2025-02-20 18:50:30,633 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31407/subcategory/33624
+2025-02-20 18:50:33,072 - INFO - Found 25 article URLs
+2025-02-20 18:50:33,072 - INFO - Processing row 132 of 357
+2025-02-20 18:50:33,072 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30520/subcategory/30527
+2025-02-20 18:50:35,959 - INFO - Found 273 article URLs
+2025-02-20 18:50:35,959 - INFO - Processing row 133 of 357
+2025-02-20 18:50:35,959 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30520/subcategory/30524
+2025-02-20 18:50:38,485 - INFO - Found 76 article URLs
+2025-02-20 18:50:38,486 - INFO - Processing row 134 of 357
+2025-02-20 18:50:38,486 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30520/subcategory/30521
+2025-02-20 18:50:40,915 - INFO - Found 7 article URLs
+2025-02-20 18:50:40,915 - INFO - Processing row 135 of 357
+2025-02-20 18:50:40,915 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30520/subcategory/30523
+2025-02-20 18:50:44,089 - INFO - Found 449 article URLs
+2025-02-20 18:50:44,089 - INFO - Processing row 136 of 357
+2025-02-20 18:50:44,089 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30520/subcategory/31543
+2025-02-20 18:50:56,486 - INFO - Found 0 article URLs
+2025-02-20 18:50:56,488 - INFO - Processing row 137 of 357
+2025-02-20 18:50:56,488 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30520/subcategory/31544
+2025-02-20 18:50:58,827 - INFO - Found 1 article URLs
+2025-02-20 18:50:58,827 - INFO - Processing row 138 of 357
+2025-02-20 18:50:58,827 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30520/subcategory/31916
+2025-02-20 18:51:01,114 - INFO - Found 1 article URLs
+2025-02-20 18:51:01,114 - INFO - Processing row 139 of 357
+2025-02-20 18:51:01,114 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30520/subcategory/31545
+2025-02-20 18:51:03,452 - INFO - Found 6 article URLs
+2025-02-20 18:51:03,452 - INFO - Processing row 140 of 357
+2025-02-20 18:51:03,452 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31692/subcategory/31693
+2025-02-20 18:51:05,761 - INFO - Found 4 article URLs
+2025-02-20 18:51:05,761 - INFO - Processing row 141 of 357
+2025-02-20 18:51:05,761 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31692/subcategory/31694
+2025-02-20 18:51:08,112 - INFO - Found 9 article URLs
+2025-02-20 18:51:08,113 - INFO - Processing row 142 of 357
+2025-02-20 18:51:08,113 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31692/subcategory/31695
+2025-02-20 18:51:11,219 - INFO - Found 8 article URLs
+2025-02-20 18:51:11,219 - INFO - Processing row 143 of 357
+2025-02-20 18:51:11,219 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31692/subcategory/31696
+2025-02-20 18:51:13,575 - INFO - Found 8 article URLs
+2025-02-20 18:51:13,575 - INFO - Processing row 144 of 357
+2025-02-20 18:51:13,575 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30498/subcategory/30502
+2025-02-20 18:51:16,624 - INFO - Found 299 article URLs
+2025-02-20 18:51:16,624 - INFO - Processing row 145 of 357
+2025-02-20 18:51:16,624 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30498/subcategory/30503
+2025-02-20 18:51:19,117 - INFO - Found 69 article URLs
+2025-02-20 18:51:19,118 - INFO - Processing row 146 of 357
+2025-02-20 18:51:19,118 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30498/subcategory/30512
+2025-02-20 18:51:21,630 - INFO - Found 64 article URLs
+2025-02-20 18:51:21,630 - INFO - Processing row 147 of 357
+2025-02-20 18:51:21,630 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30498/subcategory/30505
+2025-02-20 18:51:24,136 - INFO - Found 100 article URLs
+2025-02-20 18:51:24,136 - INFO - Processing row 148 of 357
+2025-02-20 18:51:24,136 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30498/subcategory/30506
+2025-02-20 18:51:30,626 - INFO - Found 212 article URLs
+2025-02-20 18:51:30,627 - INFO - Processing row 149 of 357
+2025-02-20 18:51:30,627 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30498/subcategory/30518
+2025-02-20 18:51:34,237 - INFO - Found 24 article URLs
+2025-02-20 18:51:34,237 - INFO - Processing row 150 of 357
+2025-02-20 18:51:34,237 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30498/subcategory/30507
+2025-02-20 18:51:36,868 - INFO - Found 133 article URLs
+2025-02-20 18:51:36,869 - INFO - Processing row 151 of 357
+2025-02-20 18:51:36,869 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30498/subcategory/30509
+2025-02-20 18:51:39,284 - INFO - Found 32 article URLs
+2025-02-20 18:51:39,284 - INFO - Processing row 152 of 357
+2025-02-20 18:51:39,284 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30498/subcategory/30510
+2025-02-20 18:51:41,777 - INFO - Found 84 article URLs
+2025-02-20 18:51:41,777 - INFO - Processing row 153 of 357
+2025-02-20 18:51:41,777 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30498/subcategory/30511
+2025-02-20 18:51:44,203 - INFO - Found 29 article URLs
+2025-02-20 18:51:44,203 - INFO - Processing row 154 of 357
+2025-02-20 18:51:44,203 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30498/subcategory/30514
+2025-02-20 18:51:47,099 - INFO - Found 199 article URLs
+2025-02-20 18:51:47,099 - INFO - Processing row 155 of 357
+2025-02-20 18:51:47,099 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30498/subcategory/30513
+2025-02-20 18:51:49,689 - INFO - Found 65 article URLs
+2025-02-20 18:51:49,689 - INFO - Processing row 156 of 357
+2025-02-20 18:51:49,689 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30498/subcategory/30516
+2025-02-20 18:51:52,392 - INFO - Found 62 article URLs
+2025-02-20 18:51:52,392 - INFO - Processing row 157 of 357
+2025-02-20 18:51:52,392 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30498/subcategory/30517
+2025-02-20 18:51:54,815 - INFO - Found 35 article URLs
+2025-02-20 18:51:54,815 - INFO - Processing row 158 of 357
+2025-02-20 18:51:54,815 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/30538
+2025-02-20 18:51:57,361 - INFO - Found 98 article URLs
+2025-02-20 18:51:57,361 - INFO - Processing row 159 of 357
+2025-02-20 18:51:57,361 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/30539
+2025-02-20 18:52:00,037 - INFO - Found 175 article URLs
+2025-02-20 18:52:00,038 - INFO - Processing row 160 of 357
+2025-02-20 18:52:00,038 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/30540
+2025-02-20 18:52:02,547 - INFO - Found 80 article URLs
+2025-02-20 18:52:02,547 - INFO - Processing row 161 of 357
+2025-02-20 18:52:02,547 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/31682
+2025-02-20 18:52:04,873 - INFO - Found 1 article URLs
+2025-02-20 18:52:04,873 - INFO - Processing row 162 of 357
+2025-02-20 18:52:04,873 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/30533
+2025-02-20 18:52:07,422 - INFO - Found 83 article URLs
+2025-02-20 18:52:07,423 - INFO - Processing row 163 of 357
+2025-02-20 18:52:07,423 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/30547
+2025-02-20 18:52:09,834 - INFO - Found 27 article URLs
+2025-02-20 18:52:09,835 - INFO - Processing row 164 of 357
+2025-02-20 18:52:09,835 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/30531
+2025-02-20 18:52:12,468 - INFO - Found 81 article URLs
+2025-02-20 18:52:12,469 - INFO - Processing row 165 of 357
+2025-02-20 18:52:12,469 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/30529
+2025-02-20 18:52:15,131 - INFO - Found 162 article URLs
+2025-02-20 18:52:15,131 - INFO - Processing row 166 of 357
+2025-02-20 18:52:15,131 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/30530
+2025-02-20 18:52:17,630 - INFO - Found 42 article URLs
+2025-02-20 18:52:17,631 - INFO - Processing row 167 of 357
+2025-02-20 18:52:17,631 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/31628
+2025-02-20 18:52:20,029 - INFO - Found 6 article URLs
+2025-02-20 18:52:20,030 - INFO - Processing row 168 of 357
+2025-02-20 18:52:20,030 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/30542
+2025-02-20 18:52:22,725 - INFO - Found 119 article URLs
+2025-02-20 18:52:22,725 - INFO - Processing row 169 of 357
+2025-02-20 18:52:22,725 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/30532
+2025-02-20 18:52:25,293 - INFO - Found 40 article URLs
+2025-02-20 18:52:25,293 - INFO - Processing row 170 of 357
+2025-02-20 18:52:25,293 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/31683
+2025-02-20 18:52:27,814 - INFO - Found 19 article URLs
+2025-02-20 18:52:27,814 - INFO - Processing row 171 of 357
+2025-02-20 18:52:27,814 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/32759
+2025-02-20 18:52:30,376 - INFO - Found 14 article URLs
+2025-02-20 18:52:30,376 - INFO - Processing row 172 of 357
+2025-02-20 18:52:30,376 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/31684
+2025-02-20 18:52:32,807 - INFO - Found 8 article URLs
+2025-02-20 18:52:32,807 - INFO - Processing row 173 of 357
+2025-02-20 18:52:32,807 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/30534
+2025-02-20 18:52:35,502 - INFO - Found 134 article URLs
+2025-02-20 18:52:35,503 - INFO - Processing row 174 of 357
+2025-02-20 18:52:35,503 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/30535
+2025-02-20 18:52:38,109 - INFO - Found 100 article URLs
+2025-02-20 18:52:38,110 - INFO - Processing row 175 of 357
+2025-02-20 18:52:38,110 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/30536
+2025-02-20 18:52:40,697 - INFO - Found 65 article URLs
+2025-02-20 18:52:40,697 - INFO - Processing row 176 of 357
+2025-02-20 18:52:40,697 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/30543
+2025-02-20 18:52:43,252 - INFO - Found 18 article URLs
+2025-02-20 18:52:43,252 - INFO - Processing row 177 of 357
+2025-02-20 18:52:43,252 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/30546
+2025-02-20 18:52:45,798 - INFO - Found 21 article URLs
+2025-02-20 18:52:45,799 - INFO - Processing row 178 of 357
+2025-02-20 18:52:45,799 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/31170
+2025-02-20 18:52:48,180 - INFO - Found 3 article URLs
+2025-02-20 18:52:48,181 - INFO - Processing row 179 of 357
+2025-02-20 18:52:48,181 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/30537
+2025-02-20 18:52:51,001 - INFO - Found 199 article URLs
+2025-02-20 18:52:51,002 - INFO - Processing row 180 of 357
+2025-02-20 18:52:51,002 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/33188
+2025-02-20 18:52:53,469 - INFO - Found 47 article URLs
+2025-02-20 18:52:53,470 - INFO - Processing row 181 of 357
+2025-02-20 18:52:53,470 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/30545
+2025-02-20 18:52:55,985 - INFO - Found 61 article URLs
+2025-02-20 18:52:55,985 - INFO - Processing row 182 of 357
+2025-02-20 18:52:55,985 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/30936
+2025-02-20 18:52:58,432 - INFO - Found 12 article URLs
+2025-02-20 18:52:58,432 - INFO - Processing row 183 of 357
+2025-02-20 18:52:58,432 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/31685
+2025-02-20 18:53:00,889 - INFO - Found 2 article URLs
+2025-02-20 18:53:00,889 - INFO - Processing row 184 of 357
+2025-02-20 18:53:00,889 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30528/subcategory/30544
+2025-02-20 18:53:03,184 - INFO - Found 8 article URLs
+2025-02-20 18:53:03,184 - INFO - Processing row 185 of 357
+2025-02-20 18:53:03,184 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31891/subcategory/31856
+2025-02-20 18:53:05,807 - INFO - Found 47 article URLs
+2025-02-20 18:53:05,807 - INFO - Processing row 186 of 357
+2025-02-20 18:53:05,807 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31891/subcategory/32295
+2025-02-20 18:53:08,155 - INFO - Found 4 article URLs
+2025-02-20 18:53:08,156 - INFO - Processing row 187 of 357
+2025-02-20 18:53:08,156 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31891/subcategory/32251
+2025-02-20 18:53:10,505 - INFO - Found 15 article URLs
+2025-02-20 18:53:10,505 - INFO - Processing row 188 of 357
+2025-02-20 18:53:10,505 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31891/subcategory/32252
+2025-02-20 18:53:12,844 - INFO - Found 12 article URLs
+2025-02-20 18:53:12,844 - INFO - Processing row 189 of 357
+2025-02-20 18:53:12,845 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31891/subcategory/32253
+2025-02-20 18:53:15,173 - INFO - Found 5 article URLs
+2025-02-20 18:53:15,173 - INFO - Processing row 190 of 357
+2025-02-20 18:53:15,173 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31891/subcategory/32254
+2025-02-20 18:53:17,672 - INFO - Found 4 article URLs
+2025-02-20 18:53:17,672 - INFO - Processing row 191 of 357
+2025-02-20 18:53:17,673 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31363/subcategory/31364
+2025-02-20 18:53:20,060 - INFO - Found 20 article URLs
+2025-02-20 18:53:20,060 - INFO - Processing row 192 of 357
+2025-02-20 18:53:20,060 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31363/subcategory/31365
+2025-02-20 18:53:22,605 - INFO - Found 93 article URLs
+2025-02-20 18:53:22,606 - INFO - Processing row 193 of 357
+2025-02-20 18:53:22,606 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31363/subcategory/31366
+2025-02-20 18:53:24,991 - INFO - Found 20 article URLs
+2025-02-20 18:53:24,991 - INFO - Processing row 194 of 357
+2025-02-20 18:53:24,991 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31363/subcategory/31367
+2025-02-20 18:53:27,384 - INFO - Found 6 article URLs
+2025-02-20 18:53:27,384 - INFO - Processing row 195 of 357
+2025-02-20 18:53:27,384 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31363/subcategory/31368
+2025-02-20 18:53:29,789 - INFO - Found 11 article URLs
+2025-02-20 18:53:29,790 - INFO - Processing row 196 of 357
+2025-02-20 18:53:29,790 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31363/subcategory/31620
+2025-02-20 18:53:32,156 - INFO - Found 7 article URLs
+2025-02-20 18:53:32,156 - INFO - Processing row 197 of 357
+2025-02-20 18:53:32,157 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30553/subcategory/30557
+2025-02-20 18:53:34,561 - INFO - Found 12 article URLs
+2025-02-20 18:53:34,561 - INFO - Processing row 198 of 357
+2025-02-20 18:53:34,561 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30553/subcategory/30558
+2025-02-20 18:53:36,911 - INFO - Found 7 article URLs
+2025-02-20 18:53:36,912 - INFO - Processing row 199 of 357
+2025-02-20 18:53:36,912 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30553/subcategory/30556
+2025-02-20 18:53:39,290 - INFO - Found 21 article URLs
+2025-02-20 18:53:39,290 - INFO - Processing row 200 of 357
+2025-02-20 18:53:39,290 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31630/subcategory/12895
+2025-02-20 18:53:41,612 - INFO - Found 17 article URLs
+2025-02-20 18:53:41,612 - INFO - Processing row 201 of 357
+2025-02-20 18:53:41,612 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31630/subcategory/30564
+2025-02-20 18:53:43,954 - INFO - Found 15 article URLs
+2025-02-20 18:53:43,954 - INFO - Processing row 202 of 357
+2025-02-20 18:53:43,954 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31630/subcategory/30565
+2025-02-20 18:53:46,410 - INFO - Found 67 article URLs
+2025-02-20 18:53:46,411 - INFO - Processing row 203 of 357
+2025-02-20 18:53:46,411 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31630/subcategory/12899
+2025-02-20 18:53:58,766 - INFO - Found 0 article URLs
+2025-02-20 18:53:58,767 - INFO - Processing row 204 of 357
+2025-02-20 18:53:58,767 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31630/subcategory/12901
+2025-02-20 18:54:01,137 - INFO - Found 1 article URLs
+2025-02-20 18:54:01,137 - INFO - Processing row 205 of 357
+2025-02-20 18:54:01,137 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31630/subcategory/12907
+2025-02-20 18:54:03,457 - INFO - Found 1 article URLs
+2025-02-20 18:54:03,457 - INFO - Processing row 206 of 357
+2025-02-20 18:54:03,457 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31630/subcategory/12903
+2025-02-20 18:54:15,831 - INFO - Found 0 article URLs
+2025-02-20 18:54:15,833 - INFO - Processing row 207 of 357
+2025-02-20 18:54:15,833 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31630/subcategory/31742
+2025-02-20 18:54:18,204 - INFO - Found 1 article URLs
+2025-02-20 18:54:18,204 - INFO - Processing row 208 of 357
+2025-02-20 18:54:18,204 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31630/subcategory/12912
+2025-02-20 18:54:20,543 - INFO - Found 1 article URLs
+2025-02-20 18:54:20,543 - INFO - Processing row 209 of 357
+2025-02-20 18:54:20,543 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31630/subcategory/12914
+2025-02-20 18:54:32,910 - INFO - Found 0 article URLs
+2025-02-20 18:54:32,912 - INFO - Processing row 210 of 357
+2025-02-20 18:54:32,912 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31630/subcategory/12915
+2025-02-20 18:54:45,304 - INFO - Found 0 article URLs
+2025-02-20 18:54:45,305 - INFO - Processing row 211 of 357
+2025-02-20 18:54:45,305 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31630/subcategory/12916
+2025-02-20 18:54:47,727 - INFO - Found 1 article URLs
+2025-02-20 18:54:47,727 - INFO - Processing row 212 of 357
+2025-02-20 18:54:47,727 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31630/subcategory/12918
+2025-02-20 18:54:50,129 - INFO - Found 3 article URLs
+2025-02-20 18:54:50,130 - INFO - Processing row 213 of 357
+2025-02-20 18:54:50,130 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31630/subcategory/12908
+2025-02-20 18:55:02,551 - INFO - Found 0 article URLs
+2025-02-20 18:55:02,552 - INFO - Processing row 214 of 357
+2025-02-20 18:55:02,552 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31630/subcategory/12919
+2025-02-20 18:55:05,068 - INFO - Found 31 article URLs
+2025-02-20 18:55:05,068 - INFO - Processing row 215 of 357
+2025-02-20 18:55:05,068 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31630/subcategory/12920
+2025-02-20 18:55:07,404 - INFO - Found 7 article URLs
+2025-02-20 18:55:07,404 - INFO - Processing row 216 of 357
+2025-02-20 18:55:07,404 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31630/subcategory/12923
+2025-02-20 18:55:09,821 - INFO - Found 26 article URLs
+2025-02-20 18:55:09,822 - INFO - Processing row 217 of 357
+2025-02-20 18:55:09,822 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31630/subcategory/12925
+2025-02-20 18:55:12,237 - INFO - Found 7 article URLs
+2025-02-20 18:55:12,237 - INFO - Processing row 218 of 357
+2025-02-20 18:55:12,237 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31630/subcategory/31513
+2025-02-20 18:55:14,790 - INFO - Found 4 article URLs
+2025-02-20 18:55:14,790 - INFO - Processing row 219 of 357
+2025-02-20 18:55:14,790 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31630/subcategory/12943
+2025-02-20 18:55:17,306 - INFO - Found 11 article URLs
+2025-02-20 18:55:17,307 - INFO - Processing row 220 of 357
+2025-02-20 18:55:17,307 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31630/subcategory/12947
+2025-02-20 18:55:29,662 - INFO - Found 0 article URLs
+2025-02-20 18:55:29,663 - INFO - Processing row 221 of 357
+2025-02-20 18:55:29,663 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31058/subcategory/31092
+2025-02-20 18:55:32,061 - INFO - Found 12 article URLs
+2025-02-20 18:55:32,061 - INFO - Processing row 222 of 357
+2025-02-20 18:55:32,061 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31058/subcategory/31093
+2025-02-20 18:55:34,404 - INFO - Found 2 article URLs
+2025-02-20 18:55:34,404 - INFO - Processing row 223 of 357
+2025-02-20 18:55:34,404 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31058/subcategory/31094
+2025-02-20 18:55:36,725 - INFO - Found 5 article URLs
+2025-02-20 18:55:36,726 - INFO - Processing row 224 of 357
+2025-02-20 18:55:36,726 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31058/subcategory/31095
+2025-02-20 18:55:39,087 - INFO - Found 4 article URLs
+2025-02-20 18:55:39,087 - INFO - Processing row 225 of 357
+2025-02-20 18:55:39,087 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31058/subcategory/31096
+2025-02-20 18:55:41,528 - INFO - Found 53 article URLs
+2025-02-20 18:55:41,528 - INFO - Processing row 226 of 357
+2025-02-20 18:55:41,528 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31058/subcategory/31646
+2025-02-20 18:55:53,848 - INFO - Found 0 article URLs
+2025-02-20 18:55:53,849 - INFO - Processing row 227 of 357
+2025-02-20 18:55:53,849 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31058/subcategory/31097
+2025-02-20 18:55:56,240 - INFO - Found 2 article URLs
+2025-02-20 18:55:56,240 - INFO - Processing row 228 of 357
+2025-02-20 18:55:56,240 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31058/subcategory/31098
+2025-02-20 18:56:08,620 - INFO - Found 0 article URLs
+2025-02-20 18:56:08,620 - INFO - Processing row 229 of 357
+2025-02-20 18:56:08,620 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31058/subcategory/31099
+2025-02-20 18:56:11,013 - INFO - Found 9 article URLs
+2025-02-20 18:56:11,013 - INFO - Processing row 230 of 357
+2025-02-20 18:56:11,013 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31058/subcategory/31101
+2025-02-20 18:56:13,352 - INFO - Found 2 article URLs
+2025-02-20 18:56:13,352 - INFO - Processing row 231 of 357
+2025-02-20 18:56:13,352 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31058/subcategory/31102
+2025-02-20 18:56:25,679 - INFO - Found 0 article URLs
+2025-02-20 18:56:25,680 - INFO - Processing row 232 of 357
+2025-02-20 18:56:25,680 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31058/subcategory/31103
+2025-02-20 18:56:28,040 - INFO - Found 1 article URLs
+2025-02-20 18:56:28,040 - INFO - Processing row 233 of 357
+2025-02-20 18:56:28,040 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31058/subcategory/31104
+2025-02-20 18:56:40,447 - INFO - Found 0 article URLs
+2025-02-20 18:56:40,448 - INFO - Processing row 234 of 357
+2025-02-20 18:56:40,448 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31058/subcategory/12954
+2025-02-20 18:56:42,921 - INFO - Found 6 article URLs
+2025-02-20 18:56:42,921 - INFO - Processing row 235 of 357
+2025-02-20 18:56:42,921 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31058/subcategory/31105
+2025-02-20 18:56:45,262 - INFO - Found 2 article URLs
+2025-02-20 18:56:45,262 - INFO - Processing row 236 of 357
+2025-02-20 18:56:45,262 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31058/subcategory/31106
+2025-02-20 18:56:47,613 - INFO - Found 4 article URLs
+2025-02-20 18:56:47,613 - INFO - Processing row 237 of 357
+2025-02-20 18:56:47,614 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31058/subcategory/31107
+2025-02-20 18:56:49,947 - INFO - Found 1 article URLs
+2025-02-20 18:56:49,947 - INFO - Processing row 238 of 357
+2025-02-20 18:56:49,947 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31058/subcategory/31648
+2025-02-20 18:56:52,369 - INFO - Found 1 article URLs
+2025-02-20 18:56:52,369 - INFO - Processing row 239 of 357
+2025-02-20 18:56:52,369 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12888/subcategory/15164
+2025-02-20 18:56:54,921 - INFO - Found 57 article URLs
+2025-02-20 18:56:54,922 - INFO - Processing row 240 of 357
+2025-02-20 18:56:54,922 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12888/subcategory/12928
+2025-02-20 18:56:57,248 - INFO - Found 1 article URLs
+2025-02-20 18:56:57,248 - INFO - Processing row 241 of 357
+2025-02-20 18:56:57,248 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12888/subcategory/30638
+2025-02-20 18:56:59,722 - INFO - Found 2 article URLs
+2025-02-20 18:56:59,722 - INFO - Processing row 242 of 357
+2025-02-20 18:56:59,722 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12888/subcategory/31577
+2025-02-20 18:57:02,171 - INFO - Found 4 article URLs
+2025-02-20 18:57:02,171 - INFO - Processing row 243 of 357
+2025-02-20 18:57:02,171 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12888/subcategory/15162
+2025-02-20 18:57:04,537 - INFO - Found 1 article URLs
+2025-02-20 18:57:04,537 - INFO - Processing row 244 of 357
+2025-02-20 18:57:04,537 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12888/subcategory/30897
+2025-02-20 18:57:07,148 - INFO - Found 32 article URLs
+2025-02-20 18:57:07,148 - INFO - Processing row 245 of 357
+2025-02-20 18:57:07,148 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12888/subcategory/31636
+2025-02-20 18:57:09,522 - INFO - Found 7 article URLs
+2025-02-20 18:57:09,522 - INFO - Processing row 246 of 357
+2025-02-20 18:57:09,522 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12888/subcategory/31634
+2025-02-20 18:57:12,071 - INFO - Found 51 article URLs
+2025-02-20 18:57:12,071 - INFO - Processing row 247 of 357
+2025-02-20 18:57:12,071 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12888/subcategory/31637
+2025-02-20 18:57:14,415 - INFO - Found 3 article URLs
+2025-02-20 18:57:14,415 - INFO - Processing row 248 of 357
+2025-02-20 18:57:14,415 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12888/subcategory/31638
+2025-02-20 18:57:26,786 - INFO - Found 0 article URLs
+2025-02-20 18:57:26,787 - INFO - Processing row 249 of 357
+2025-02-20 18:57:26,787 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12888/subcategory/33217
+2025-02-20 18:57:29,255 - INFO - Found 3 article URLs
+2025-02-20 18:57:29,255 - INFO - Processing row 250 of 357
+2025-02-20 18:57:29,255 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31752/subcategory/31388
+2025-02-20 18:57:31,655 - INFO - Found 19 article URLs
+2025-02-20 18:57:31,655 - INFO - Processing row 251 of 357
+2025-02-20 18:57:31,655 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31752/subcategory/32188
+2025-02-20 18:57:34,174 - INFO - Found 18 article URLs
+2025-02-20 18:57:34,174 - INFO - Processing row 252 of 357
+2025-02-20 18:57:34,174 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31752/subcategory/31735
+2025-02-20 18:57:36,599 - INFO - Found 5 article URLs
+2025-02-20 18:57:36,599 - INFO - Processing row 253 of 357
+2025-02-20 18:57:36,599 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31069/subcategory/31722
+2025-02-20 18:57:39,193 - INFO - Found 52 article URLs
+2025-02-20 18:57:39,193 - INFO - Processing row 254 of 357
+2025-02-20 18:57:39,193 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31069/subcategory/31723
+2025-02-20 18:57:41,566 - INFO - Found 21 article URLs
+2025-02-20 18:57:41,566 - INFO - Processing row 255 of 357
+2025-02-20 18:57:41,566 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31069/subcategory/31724
+2025-02-20 18:57:43,932 - INFO - Found 10 article URLs
+2025-02-20 18:57:43,933 - INFO - Processing row 256 of 357
+2025-02-20 18:57:43,933 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31069/subcategory/32424
+2025-02-20 18:57:46,299 - INFO - Found 22 article URLs
+2025-02-20 18:57:46,300 - INFO - Processing row 257 of 357
+2025-02-20 18:57:46,300 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31069/subcategory/31725
+2025-02-20 18:57:48,650 - INFO - Found 9 article URLs
+2025-02-20 18:57:48,650 - INFO - Processing row 258 of 357
+2025-02-20 18:57:48,650 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31069/subcategory/31726
+2025-02-20 18:57:50,999 - INFO - Found 2 article URLs
+2025-02-20 18:57:50,999 - INFO - Processing row 259 of 357
+2025-02-20 18:57:50,999 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31069/subcategory/31727
+2025-02-20 18:58:03,359 - INFO - Found 0 article URLs
+2025-02-20 18:58:03,360 - INFO - Processing row 260 of 357
+2025-02-20 18:58:03,360 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31069/subcategory/33321
+2025-02-20 18:58:05,819 - INFO - Found 5 article URLs
+2025-02-20 18:58:05,819 - INFO - Processing row 261 of 357
+2025-02-20 18:58:05,819 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31069/subcategory/31071
+2025-02-20 18:58:08,176 - INFO - Found 9 article URLs
+2025-02-20 18:58:08,176 - INFO - Processing row 262 of 357
+2025-02-20 18:58:08,176 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31069/subcategory/31072
+2025-02-20 18:58:10,607 - INFO - Found 5 article URLs
+2025-02-20 18:58:10,608 - INFO - Processing row 263 of 357
+2025-02-20 18:58:10,608 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31069/subcategory/31074
+2025-02-20 18:58:12,993 - INFO - Found 21 article URLs
+2025-02-20 18:58:12,994 - INFO - Processing row 264 of 357
+2025-02-20 18:58:12,994 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31069/subcategory/31076
+2025-02-20 18:58:15,270 - INFO - Found 4 article URLs
+2025-02-20 18:58:15,270 - INFO - Processing row 265 of 357
+2025-02-20 18:58:15,270 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31069/subcategory/31177
+2025-02-20 18:58:17,643 - INFO - Found 7 article URLs
+2025-02-20 18:58:17,645 - INFO - Processing row 266 of 357
+2025-02-20 18:58:17,645 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31069/subcategory/31179
+2025-02-20 18:58:20,051 - INFO - Found 13 article URLs
+2025-02-20 18:58:20,051 - INFO - Processing row 267 of 357
+2025-02-20 18:58:20,051 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31069/subcategory/31180
+2025-02-20 18:58:22,456 - INFO - Found 1 article URLs
+2025-02-20 18:58:22,456 - INFO - Processing row 268 of 357
+2025-02-20 18:58:22,468 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31069/subcategory/31073
+2025-02-20 18:58:24,812 - INFO - Found 1 article URLs
+2025-02-20 18:58:24,813 - INFO - Processing row 269 of 357
+2025-02-20 18:58:24,813 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31069/subcategory/31075
+2025-02-20 18:58:27,238 - INFO - Found 13 article URLs
+2025-02-20 18:58:27,238 - INFO - Processing row 270 of 357
+2025-02-20 18:58:27,238 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31069/subcategory/31077
+2025-02-20 18:58:39,539 - INFO - Found 0 article URLs
+2025-02-20 18:58:39,539 - INFO - Processing row 271 of 357
+2025-02-20 18:58:39,539 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31728/subcategory/31729
+2025-02-20 18:58:41,888 - INFO - Found 2 article URLs
+2025-02-20 18:58:41,888 - INFO - Processing row 272 of 357
+2025-02-20 18:58:41,888 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31728/subcategory/31730
+2025-02-20 18:58:54,290 - INFO - Found 0 article URLs
+2025-02-20 18:58:54,290 - INFO - Processing row 273 of 357
+2025-02-20 18:58:54,290 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31728/subcategory/31731
+2025-02-20 18:59:06,875 - INFO - Found 0 article URLs
+2025-02-20 18:59:06,876 - INFO - Processing row 274 of 357
+2025-02-20 18:59:06,876 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31728/subcategory/31732
+2025-02-20 18:59:09,608 - INFO - Found 10 article URLs
+2025-02-20 18:59:09,608 - INFO - Processing row 275 of 357
+2025-02-20 18:59:09,608 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31556/subcategory/31557
+2025-02-20 18:59:11,961 - INFO - Found 8 article URLs
+2025-02-20 18:59:11,961 - INFO - Processing row 276 of 357
+2025-02-20 18:59:11,961 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30567/subcategory/31109
+2025-02-20 18:59:14,374 - INFO - Found 6 article URLs
+2025-02-20 18:59:14,375 - INFO - Processing row 277 of 357
+2025-02-20 18:59:14,375 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30567/subcategory/31110
+2025-02-20 18:59:16,952 - INFO - Found 8 article URLs
+2025-02-20 18:59:16,952 - INFO - Processing row 278 of 357
+2025-02-20 18:59:16,952 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30567/subcategory/30568
+2025-02-20 18:59:19,366 - INFO - Found 37 article URLs
+2025-02-20 18:59:19,366 - INFO - Processing row 279 of 357
+2025-02-20 18:59:19,366 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30567/subcategory/31111
+2025-02-20 18:59:21,676 - INFO - Found 4 article URLs
+2025-02-20 18:59:21,676 - INFO - Processing row 280 of 357
+2025-02-20 18:59:21,676 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30567/subcategory/12952
+2025-02-20 18:59:24,102 - INFO - Found 2 article URLs
+2025-02-20 18:59:24,102 - INFO - Processing row 281 of 357
+2025-02-20 18:59:24,102 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30567/subcategory/31595
+2025-02-20 18:59:26,699 - INFO - Found 33 article URLs
+2025-02-20 18:59:26,699 - INFO - Processing row 282 of 357
+2025-02-20 18:59:26,699 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/32962/subcategory/33189
+2025-02-20 18:59:29,201 - INFO - Found 5 article URLs
+2025-02-20 18:59:29,201 - INFO - Processing row 283 of 357
+2025-02-20 18:59:29,201 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/32962/subcategory/30580
+2025-02-20 18:59:31,749 - INFO - Found 21 article URLs
+2025-02-20 18:59:31,749 - INFO - Processing row 284 of 357
+2025-02-20 18:59:31,749 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/32962/subcategory/30552
+2025-02-20 18:59:34,200 - INFO - Found 38 article URLs
+2025-02-20 18:59:34,201 - INFO - Processing row 285 of 357
+2025-02-20 18:59:34,201 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/32962/subcategory/30551
+2025-02-20 18:59:36,587 - INFO - Found 20 article URLs
+2025-02-20 18:59:36,588 - INFO - Processing row 286 of 357
+2025-02-20 18:59:36,588 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/32962/subcategory/12060
+2025-02-20 18:59:39,015 - INFO - Found 42 article URLs
+2025-02-20 18:59:39,015 - INFO - Processing row 287 of 357
+2025-02-20 18:59:39,015 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/32962/subcategory/30582
+2025-02-20 18:59:41,385 - INFO - Found 16 article URLs
+2025-02-20 18:59:41,385 - INFO - Processing row 288 of 357
+2025-02-20 18:59:41,385 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/32962/subcategory/31645
+2025-02-20 18:59:43,720 - INFO - Found 7 article URLs
+2025-02-20 18:59:43,720 - INFO - Processing row 289 of 357
+2025-02-20 18:59:43,720 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12046/subcategory/12048
+2025-02-20 18:59:46,152 - INFO - Found 41 article URLs
+2025-02-20 18:59:46,152 - INFO - Processing row 290 of 357
+2025-02-20 18:59:46,152 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12046/subcategory/12049
+2025-02-20 18:59:48,669 - INFO - Found 94 article URLs
+2025-02-20 18:59:48,669 - INFO - Processing row 291 of 357
+2025-02-20 18:59:48,669 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12046/subcategory/30563
+2025-02-20 18:59:51,186 - INFO - Found 7 article URLs
+2025-02-20 18:59:51,186 - INFO - Processing row 292 of 357
+2025-02-20 18:59:51,186 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12046/subcategory/12067
+2025-02-20 18:59:53,628 - INFO - Found 12 article URLs
+2025-02-20 18:59:53,628 - INFO - Processing row 293 of 357
+2025-02-20 18:59:53,628 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12046/subcategory/12051
+2025-02-20 19:00:05,981 - INFO - Found 0 article URLs
+2025-02-20 19:00:05,982 - INFO - Processing row 294 of 357
+2025-02-20 19:00:05,982 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12046/subcategory/30566
+2025-02-20 19:00:08,405 - INFO - Found 3 article URLs
+2025-02-20 19:00:08,405 - INFO - Processing row 295 of 357
+2025-02-20 19:00:08,405 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12046/subcategory/12052
+2025-02-20 19:00:10,767 - INFO - Found 5 article URLs
+2025-02-20 19:00:10,767 - INFO - Processing row 296 of 357
+2025-02-20 19:00:10,767 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12046/subcategory/12054
+2025-02-20 19:00:13,111 - INFO - Found 2 article URLs
+2025-02-20 19:00:13,112 - INFO - Processing row 297 of 357
+2025-02-20 19:00:13,112 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12046/subcategory/12057
+2025-02-20 19:00:15,482 - INFO - Found 7 article URLs
+2025-02-20 19:00:15,482 - INFO - Processing row 298 of 357
+2025-02-20 19:00:15,482 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12046/subcategory/12059
+2025-02-20 19:00:27,856 - INFO - Found 0 article URLs
+2025-02-20 19:00:27,857 - INFO - Processing row 299 of 357
+2025-02-20 19:00:27,857 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12046/subcategory/31589
+2025-02-20 19:00:30,195 - INFO - Found 4 article URLs
+2025-02-20 19:00:30,195 - INFO - Processing row 300 of 357
+2025-02-20 19:00:30,195 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12046/subcategory/31393
+2025-02-20 19:00:32,582 - INFO - Found 5 article URLs
+2025-02-20 19:00:32,582 - INFO - Processing row 301 of 357
+2025-02-20 19:00:32,583 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12046/subcategory/12061
+2025-02-20 19:00:35,000 - INFO - Found 1 article URLs
+2025-02-20 19:00:35,000 - INFO - Processing row 302 of 357
+2025-02-20 19:00:35,000 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12046/subcategory/28567
+2025-02-20 19:00:37,386 - INFO - Found 14 article URLs
+2025-02-20 19:00:37,386 - INFO - Processing row 303 of 357
+2025-02-20 19:00:37,386 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12046/subcategory/12062
+2025-02-20 19:00:39,751 - INFO - Found 3 article URLs
+2025-02-20 19:00:39,751 - INFO - Processing row 304 of 357
+2025-02-20 19:00:39,751 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12046/subcategory/12064
+2025-02-20 19:00:42,123 - INFO - Found 5 article URLs
+2025-02-20 19:00:42,123 - INFO - Processing row 305 of 357
+2025-02-20 19:00:42,123 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12046/subcategory/12065
+2025-02-20 19:00:44,530 - INFO - Found 13 article URLs
+2025-02-20 19:00:44,530 - INFO - Processing row 306 of 357
+2025-02-20 19:00:44,530 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12046/subcategory/12066
+2025-02-20 19:00:47,160 - INFO - Found 62 article URLs
+2025-02-20 19:00:47,160 - INFO - Processing row 307 of 357
+2025-02-20 19:00:47,160 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12046/subcategory/30576
+2025-02-20 19:00:49,544 - INFO - Found 13 article URLs
+2025-02-20 19:00:49,544 - INFO - Processing row 308 of 357
+2025-02-20 19:00:49,544 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12046/subcategory/31115
+2025-02-20 19:00:52,002 - INFO - Found 24 article URLs
+2025-02-20 19:00:52,002 - INFO - Processing row 309 of 357
+2025-02-20 19:00:52,002 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12046/subcategory/30896
+2025-02-20 19:00:54,372 - INFO - Found 24 article URLs
+2025-02-20 19:00:54,372 - INFO - Processing row 310 of 357
+2025-02-20 19:00:54,372 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31590/subcategory/31591
+2025-02-20 19:00:56,880 - INFO - Found 91 article URLs
+2025-02-20 19:00:56,880 - INFO - Processing row 311 of 357
+2025-02-20 19:00:56,880 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31590/subcategory/31647
+2025-02-20 19:00:59,243 - INFO - Found 3 article URLs
+2025-02-20 19:00:59,244 - INFO - Processing row 312 of 357
+2025-02-20 19:00:59,244 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31061/subcategory/31112
+2025-02-20 19:01:11,555 - INFO - Found 0 article URLs
+2025-02-20 19:01:11,556 - INFO - Processing row 313 of 357
+2025-02-20 19:01:11,556 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31061/subcategory/31113
+2025-02-20 19:01:24,066 - INFO - Found 0 article URLs
+2025-02-20 19:01:24,068 - INFO - Processing row 314 of 357
+2025-02-20 19:01:24,068 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31061/subcategory/31114
+2025-02-20 19:01:26,530 - INFO - Found 1 article URLs
+2025-02-20 19:01:26,530 - INFO - Processing row 315 of 357
+2025-02-20 19:01:26,530 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31607/subcategory/31608
+2025-02-20 19:01:29,106 - INFO - Found 101 article URLs
+2025-02-20 19:01:29,106 - INFO - Processing row 316 of 357
+2025-02-20 19:01:29,106 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31607/subcategory/32791
+2025-02-20 19:01:31,452 - INFO - Found 17 article URLs
+2025-02-20 19:01:31,452 - INFO - Processing row 317 of 357
+2025-02-20 19:01:31,452 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31607/subcategory/33552
+2025-02-20 19:01:33,768 - INFO - Found 10 article URLs
+2025-02-20 19:01:33,769 - INFO - Processing row 318 of 357
+2025-02-20 19:01:33,769 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31622/subcategory/31623
+2025-02-20 19:01:36,176 - INFO - Found 30 article URLs
+2025-02-20 19:01:36,176 - INFO - Processing row 319 of 357
+2025-02-20 19:01:36,176 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31622/subcategory/12930
+2025-02-20 19:01:38,485 - INFO - Found 1 article URLs
+2025-02-20 19:01:38,485 - INFO - Processing row 320 of 357
+2025-02-20 19:01:38,485 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31622/subcategory/12934
+2025-02-20 19:01:40,861 - INFO - Found 4 article URLs
+2025-02-20 19:01:40,862 - INFO - Processing row 321 of 357
+2025-02-20 19:01:40,862 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31622/subcategory/31644
+2025-02-20 19:01:43,243 - INFO - Found 2 article URLs
+2025-02-20 19:01:43,244 - INFO - Processing row 322 of 357
+2025-02-20 19:01:43,244 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31622/subcategory/32426
+2025-02-20 19:01:55,680 - INFO - Found 0 article URLs
+2025-02-20 19:01:55,681 - INFO - Processing row 323 of 357
+2025-02-20 19:01:55,681 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31622/subcategory/33218
+2025-02-20 19:01:58,142 - INFO - Found 7 article URLs
+2025-02-20 19:01:58,142 - INFO - Processing row 324 of 357
+2025-02-20 19:01:58,142 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12890/subcategory/12935
+2025-02-20 19:02:00,496 - INFO - Found 3 article URLs
+2025-02-20 19:02:00,496 - INFO - Processing row 325 of 357
+2025-02-20 19:02:00,496 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12890/subcategory/12936
+2025-02-20 19:02:02,867 - INFO - Found 5 article URLs
+2025-02-20 19:02:02,868 - INFO - Processing row 326 of 357
+2025-02-20 19:02:02,868 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12890/subcategory/12937
+2025-02-20 19:02:05,530 - INFO - Found 115 article URLs
+2025-02-20 19:02:05,530 - INFO - Processing row 327 of 357
+2025-02-20 19:02:05,530 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12890/subcategory/12938
+2025-02-20 19:02:07,858 - INFO - Found 5 article URLs
+2025-02-20 19:02:07,858 - INFO - Processing row 328 of 357
+2025-02-20 19:02:07,858 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12890/subcategory/12939
+2025-02-20 19:02:10,532 - INFO - Found 72 article URLs
+2025-02-20 19:02:10,533 - INFO - Processing row 329 of 357
+2025-02-20 19:02:10,533 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12890/subcategory/30117
+2025-02-20 19:02:12,870 - INFO - Found 11 article URLs
+2025-02-20 19:02:12,870 - INFO - Processing row 330 of 357
+2025-02-20 19:02:12,870 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12890/subcategory/30937
+2025-02-20 19:02:15,240 - INFO - Found 4 article URLs
+2025-02-20 19:02:15,240 - INFO - Processing row 331 of 357
+2025-02-20 19:02:15,240 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12890/subcategory/30118
+2025-02-20 19:02:17,572 - INFO - Found 5 article URLs
+2025-02-20 19:02:17,572 - INFO - Processing row 332 of 357
+2025-02-20 19:02:17,572 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/12890/subcategory/31045
+2025-02-20 19:02:19,962 - INFO - Found 19 article URLs
+2025-02-20 19:02:19,963 - INFO - Processing row 333 of 357
+2025-02-20 19:02:19,963 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/15171/subcategory/31979
+2025-02-20 19:02:22,264 - INFO - Found 6 article URLs
+2025-02-20 19:02:22,265 - INFO - Processing row 334 of 357
+2025-02-20 19:02:22,265 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/15171/subcategory/15587
+2025-02-20 19:02:24,870 - INFO - Found 129 article URLs
+2025-02-20 19:02:24,870 - INFO - Processing row 335 of 357
+2025-02-20 19:02:24,870 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/15171/subcategory/15172
+2025-02-20 19:02:37,157 - INFO - Found 0 article URLs
+2025-02-20 19:02:37,157 - INFO - Processing row 336 of 357
+2025-02-20 19:02:37,157 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31631/subcategory/15166
+2025-02-20 19:02:39,562 - INFO - Found 19 article URLs
+2025-02-20 19:02:39,563 - INFO - Processing row 337 of 357
+2025-02-20 19:02:39,563 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31631/subcategory/15601
+2025-02-20 19:02:41,873 - INFO - Found 2 article URLs
+2025-02-20 19:02:41,873 - INFO - Processing row 338 of 357
+2025-02-20 19:02:41,873 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31631/subcategory/15200
+2025-02-20 19:02:44,228 - INFO - Found 5 article URLs
+2025-02-20 19:02:44,228 - INFO - Processing row 339 of 357
+2025-02-20 19:02:44,228 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31631/subcategory/30596
+2025-02-20 19:02:46,621 - INFO - Found 6 article URLs
+2025-02-20 19:02:46,622 - INFO - Processing row 340 of 357
+2025-02-20 19:02:46,622 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31631/subcategory/30599
+2025-02-20 19:02:48,947 - INFO - Found 1 article URLs
+2025-02-20 19:02:48,948 - INFO - Processing row 341 of 357
+2025-02-20 19:02:48,948 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/31631/subcategory/31697
+2025-02-20 19:02:51,295 - INFO - Found 2 article URLs
+2025-02-20 19:02:51,295 - INFO - Processing row 342 of 357
+2025-02-20 19:02:51,295 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30583/subcategory/31108
+2025-02-20 19:02:53,622 - INFO - Found 2 article URLs
+2025-02-20 19:02:53,622 - INFO - Processing row 343 of 357
+2025-02-20 19:02:53,622 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30583/subcategory/30586
+2025-02-20 19:02:56,009 - INFO - Found 1 article URLs
+2025-02-20 19:02:56,009 - INFO - Processing row 344 of 357
+2025-02-20 19:02:56,010 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30583/subcategory/30597
+2025-02-20 19:03:08,402 - INFO - Found 0 article URLs
+2025-02-20 19:03:08,403 - INFO - Processing row 345 of 357
+2025-02-20 19:03:08,403 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30583/subcategory/30598
+2025-02-20 19:03:20,813 - INFO - Found 0 article URLs
+2025-02-20 19:03:20,813 - INFO - Processing row 346 of 357
+2025-02-20 19:03:20,813 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30583/subcategory/15176
+2025-02-20 19:03:23,176 - INFO - Found 1 article URLs
+2025-02-20 19:03:23,176 - INFO - Processing row 347 of 357
+2025-02-20 19:03:23,176 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30583/subcategory/15602
+2025-02-20 19:03:35,572 - INFO - Found 0 article URLs
+2025-02-20 19:03:35,574 - INFO - Processing row 348 of 357
+2025-02-20 19:03:35,574 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30583/subcategory/31691
+2025-02-20 19:03:48,111 - INFO - Found 0 article URLs
+2025-02-20 19:03:48,112 - INFO - Processing row 349 of 357
+2025-02-20 19:03:48,112 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30583/subcategory/30585
+2025-02-20 19:04:00,732 - INFO - Found 0 article URLs
+2025-02-20 19:04:00,734 - INFO - Processing row 350 of 357
+2025-02-20 19:04:00,734 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30583/subcategory/30584
+2025-02-20 19:04:03,120 - INFO - Found 4 article URLs
+2025-02-20 19:04:03,120 - INFO - Processing row 351 of 357
+2025-02-20 19:04:03,120 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30583/subcategory/30588
+2025-02-20 19:04:15,669 - INFO - Found 0 article URLs
+2025-02-20 19:04:15,671 - INFO - Processing row 352 of 357
+2025-02-20 19:04:15,671 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30583/subcategory/30590
+2025-02-20 19:04:28,192 - INFO - Found 0 article URLs
+2025-02-20 19:04:28,192 - INFO - Processing row 353 of 357
+2025-02-20 19:04:28,192 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30583/subcategory/30591
+2025-02-20 19:04:40,580 - INFO - Found 0 article URLs
+2025-02-20 19:04:40,581 - INFO - Processing row 354 of 357
+2025-02-20 19:04:40,582 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30583/subcategory/30592
+2025-02-20 19:04:53,021 - INFO - Found 0 article URLs
+2025-02-20 19:04:53,023 - INFO - Processing row 355 of 357
+2025-02-20 19:04:53,023 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30583/subcategory/30593
+2025-02-20 19:05:05,411 - INFO - Found 0 article URLs
+2025-02-20 19:05:05,411 - INFO - Processing row 356 of 357
+2025-02-20 19:05:05,411 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30583/subcategory/30594
+2025-02-20 19:05:18,070 - INFO - Found 0 article URLs
+2025-02-20 19:05:18,071 - INFO - Processing row 357 of 357
+2025-02-20 19:05:18,071 - INFO - Visiting subcategory URL: https://en-support.renesas.com/knowledgeBase/category/30583/subcategory/30595
+2025-02-20 19:05:30,515 - INFO - Found 0 article URLs
+2025-02-20 19:05:30,533 - INFO - Successfully created new CSV: /Users/ramfeuji/Documents/Vettura AI/Vettura-Capstone/layoutCrawl/Data/categories_with_topics.csv
+2025-02-20 19:05:30,940 - INFO - WebDriver closed
+2025-02-20 19:05:30,940 - INFO - Topic URL extraction completed successfully
