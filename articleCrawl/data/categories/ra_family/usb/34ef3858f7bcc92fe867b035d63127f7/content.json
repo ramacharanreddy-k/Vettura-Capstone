@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21727834",
+    "title": "RA Family: How do I Get a USB Vendor ID (VID)?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:40:16.059277"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow do I get a USB Vendor ID (VID) ?\nAnswer:\nWhat is a USB VID ?\n\nA USB Vendor ID (VID) is a unique 16-bit identifier assigned by the USB Implementers Forum (USB-IF) to organizations manufacturing USB devices. It is used in conjunction with a Product ID (PID) to uniquely identify USB devices.\n\nSteps to Obtain a USB VID:\n\n2.1 Determine If You Need a Unique VID.\n\nDo you manufacture USB devices?\nIf you are developing and selling USB hardware, you need a unique VID to identify your devices.\nDo you use third-party hardware?\nIf you're using hardware from another vendor, they may provide a PID under their VID. Contact them to confirm if they allow this.\n\n2.2 Become a USB-IF Member.\n\nUSB VIDs are issued by the USB-IF, the organization that governs USB standards. To get a VID, you need to become a member.\nMembership fee: Currently $5,000 annually (subject to change; check the USB-IF website for updates).\n\n2.3 Apply for a VID.\n\nAfter becoming a USB-IF member, submit an application for a VID through the member portal.\nA VID will be assigned to you, which you can use for your USB devices.\n\n2.4 Use Sub-Licensing (If Applicable).\n\nIf becoming a USB-IF member is too costly, consider sub-licensing:\nSome companies or organizations with a VID offer sublicensing of their VID with unique PIDs.\nExample services include organizations like pid.codes for open-source projects. Note that sub-licensing may have limitations on commercial use.\n\n2.5 Test and Certify Your Devices (Optional but Recommended).\n\nUSB-IF offers certification programs to ensure your devices meet USB specifications. While not mandatory for VID issuance, certification improves compatibility and reliability.\n\nCan I Use a Random VID for Development ?\n\nFor testing and development, you can use the following reserved VID:\n0xFFFF – Reserved for prototyping and testing. Do not use this in production devices.\n\nAlternatives for Small-Scale Developers :\n\nIf you cannot afford USB-IF membership:\nPartner with a hardware vendor who can assign you a PID under their VID.\nUse community-assigned PIDs through platforms like pid.codes.\n\nAdditional Tips :\n\nPDon’t Hardcode a VID/PID You Don’t Own: Using someone else's VID without permission violates USB-IF policies and can lead to legal and technical issues.\nLabel Your Devices Properly: Ensure your VID/PID is registered in the USB descriptor fields during device firmware development.\n  Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "How do I get a USB Vendor ID (VID) ?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nWhat is a USB VID ?\n\nA USB Vendor ID (VID) is a unique 16-bit identifier assigned by the USB Implementers Forum (USB-IF) to organizations manufacturing USB devices. It is used in conjunction with a Product ID (PID) to uniquely identify USB devices.\n\nSteps to Obtain a USB VID:\n\n2.1 Determine If You Need a Unique VID.\n\nDo you manufacture USB devices?\nIf you are developing and selling USB hardware, you need a unique VID to identify your devices.\nDo you use third-party hardware?\nIf you're using hardware from another vendor, they may provide a PID under their VID. Contact them to confirm if they allow this.\n\n2.2 Become a USB-IF Member.\n\nUSB VIDs are issued by the USB-IF, the organization that governs USB standards. To get a VID, you need to become a member.\nMembership fee: Currently $5,000 annually (subject to change; check the USB-IF website for updates).\n\n2.3 Apply for a VID.\n\nAfter becoming a USB-IF member, submit an application for a VID through the member portal.\nA VID will be assigned to you, which you can use for your USB devices.\n\n2.4 Use Sub-Licensing (If Applicable).\n\nIf becoming a USB-IF member is too costly, consider sub-licensing:\nSome companies or organizations with a VID offer sublicensing of their VID with unique PIDs.\nExample services include organizations like pid.codes for open-source projects. Note that sub-licensing may have limitations on commercial use.\n\n2.5 Test and Certify Your Devices (Optional but Recommended).\n\nUSB-IF offers certification programs to ensure your devices meet USB specifications. While not mandatory for VID issuance, certification improves compatibility and reliability.\n\nCan I Use a Random VID for Development ?\n\nFor testing and development, you can use the following reserved VID:\n0xFFFF – Reserved for prototyping and testing. Do not use this in production devices.\n\nAlternatives for Small-Scale Developers :\n\nIf you cannot afford USB-IF membership:\nPartner with a hardware vendor who can assign you a PID under their VID.\nUse community-assigned PIDs through platforms like pid.codes.\n\nAdditional Tips :\n\nPDon’t Hardcode a VID/PID You Don’t Own: Using someone else's VID without permission violates USB-IF policies and can lead to legal and technical issues.\nLabel Your Devices Properly: Ensure your VID/PID is registered in the USB descriptor fields during device firmware development.\n  Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "USB-IF website",
+        "url": "https://www.usb.org/"
+      },
+      {
+        "text": "pid.codes",
+        "url": "https://pid.codes/"
+      }
+    ]
+  }
+}

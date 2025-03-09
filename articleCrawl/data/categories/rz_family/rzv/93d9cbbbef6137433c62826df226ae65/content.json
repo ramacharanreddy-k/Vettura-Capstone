@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20352692",
+    "title": "RZ/V: Can multiple AI models be executed by the DRP-AI?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:50:52.331206"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan multiple AI models be executed?\nAnswer:\nMultiple AI models cannot be executed at the same time, but an AI model that has been stored in DRAM beforehand can be switched to quickly and then processed exclusively.\nSuitable Products\nRZ/V2L, RZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "Can multiple AI models be executed?"
+      },
+      {
+        "type": "text",
+        "content": "Can multiple AI models be executed?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nMultiple AI models cannot be executed at the same time, but an AI model that has been stored in DRAM beforehand can be switched to quickly and then processed exclusively.\nSuitable Products\nRZ/V2L, RZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "Multiple AI models cannot be executed at the same time, but an AI model that has been stored in DRAM beforehand can be switched to quickly and then processed exclusively."
+      },
+      {
+        "type": "text",
+        "content": "Multiple AI models cannot be executed at the same time, but an AI model that has been stored in DRAM beforehand can be switched to quickly and then processed exclusively."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V2L, RZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V2L, RZ/V2M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V2L, RZ/V2M"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20352681"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20352702"
+      }
+    ]
+  }
+}

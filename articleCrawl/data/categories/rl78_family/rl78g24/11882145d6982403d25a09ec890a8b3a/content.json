@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21062257",
+    "title": "Timers",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:53:00.501660"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat are the features of the RL78/G24 timer?\nAnswer:\nThe RL78/G24 includes both a timer for motors and a timer for lighting, allowing the use of the most appropriate timer for each application.\nSuitable Products\nRL78/G24"
+      },
+      {
+        "type": "text",
+        "content": "What are the features of the RL78/G24 timer?"
+      },
+      {
+        "type": "text",
+        "content": "What are the features of the RL78/G24 timer?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RL78/G24 includes both a timer for motors and a timer for lighting, allowing the use of the most appropriate timer for each application.\nSuitable Products\nRL78/G24"
+      },
+      {
+        "type": "text",
+        "content": "The RL78/G24 includes both a timer for motors and a timer for lighting, allowing the use of the most appropriate timer for each application."
+      },
+      {
+        "type": "text",
+        "content": "The RL78/G24 includes both a timer for motors and a timer for lighting, allowing the use of the most appropriate timer for each application."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/G24"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G24"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G24"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21062265"
+      }
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18286151",
+    "title": "When Does the Current Offset Processing Occurs?",
+    "last_updated": "2023-02-03",
+    "extracted_at": "2025-03-09T00:08:18.686971"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhen the current offset process (initial offset tuning) is executed?\nAnswer:\nCurrent offset process is executed at MCU reset.\nAdjust the offset current according to the current parasitic capacitance value so that the count value becomes the target reference value.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "When the current offset process (initial offset tuning) is executed?"
+      },
+      {
+        "type": "text",
+        "content": "When the current offset process (initial offset tuning) is executed?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nCurrent offset process is executed at MCU reset.\nAdjust the offset current according to the current parasitic capacitance value so that the count value becomes the target reference value.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Current offset process is executed at MCU reset.\nAdjust the offset current according to the current parasitic capacitance value so that the count value becomes the target reference value."
+      },
+      {
+        "type": "text",
+        "content": "Current offset process is executed at MCU reset.\nAdjust the offset current according to the current parasitic capacitance value so that the count value becomes the target reference value."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792818"
+      }
+    ]
+  }
+}

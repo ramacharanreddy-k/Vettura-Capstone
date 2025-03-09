@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20765777",
+    "title": "RL78 Family product in which the frequency accuracy of the high-speed on-chip oscillator is high at high temperatures",
+    "last_updated": "2023-12-01",
+    "extracted_at": "2025-03-08T23:54:21.120630"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there an RL78 Family product, in which the frequency accuracy of the high-speed on-chip oscillator is high at high temperatures as well? \nThere are many conventional products with a frequency accuracy of ±5% or more at 105°C, but those products fail to establish UART communication at high temperatures.\nAnswer:\nThe M-version of RL78/G15 and RL78/I1A has a frequency accuracy of ±2% at temperatures ranging between -40 to +125°C with a voltage ranging between 2.4 to 5.5 V. \nMoreover, a frequency accuracy of ±1% is achieved at temperatures ranging between -20 to +85°C with a voltage ranging between 2.4 to 5.5 V.\nRL78/G15 is the general purpose product. RL78/I1A is ASSP for lighting and power source.\nSuitable Products\nRL78/G15"
+      },
+      {
+        "type": "text",
+        "content": "Is there an RL78 Family product, in which the frequency accuracy of the high-speed on-chip oscillator is high at high temperatures as well? \nThere are many conventional products with a frequency accuracy of ±5% or more at 105°C, but those products fail to establish UART communication at high temperatures."
+      },
+      {
+        "type": "text",
+        "content": "Is there an RL78 Family product, in which the frequency accuracy of the high-speed on-chip oscillator is high at high temperatures as well? \nThere are many conventional products with a frequency accuracy of ±5% or more at 105°C, but those products fail to establish UART communication at high temperatures."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe M-version of RL78/G15 and RL78/I1A has a frequency accuracy of ±2% at temperatures ranging between -40 to +125°C with a voltage ranging between 2.4 to 5.5 V. \nMoreover, a frequency accuracy of ±1% is achieved at temperatures ranging between -20 to +85°C with a voltage ranging between 2.4 to 5.5 V.\nRL78/G15 is the general purpose product. RL78/I1A is ASSP for lighting and power source.\nSuitable Products\nRL78/G15"
+      },
+      {
+        "type": "text",
+        "content": "The M-version of RL78/G15 and RL78/I1A has a frequency accuracy of ±2% at temperatures ranging between -40 to +125°C with a voltage ranging between 2.4 to 5.5 V. \nMoreover, a frequency accuracy of ±1% is achieved at temperatures ranging between -20 to +85°C with a voltage ranging between 2.4 to 5.5 V.\nRL78/G15 is the general purpose product. RL78/I1A is ASSP for lighting and power source."
+      },
+      {
+        "type": "text",
+        "content": "The M-version of RL78/G15 and RL78/I1A has a frequency accuracy of ±2% at temperatures ranging between -40 to +125°C with a voltage ranging between 2.4 to 5.5 V. \nMoreover, a frequency accuracy of ±1% is achieved at temperatures ranging between -20 to +85°C with a voltage ranging between 2.4 to 5.5 V.\nRL78/G15 is the general purpose product. RL78/I1A is ASSP for lighting and power source."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/G15"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G15"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G15"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20765771"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20765783"
+      }
+    ]
+  }
+}

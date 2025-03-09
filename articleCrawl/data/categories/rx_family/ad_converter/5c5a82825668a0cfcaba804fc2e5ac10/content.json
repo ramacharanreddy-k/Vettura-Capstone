@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20939013",
+    "title": "Pins that cannot be used as output pins when using A/D converters",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:06:43.954459"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nFor Pins that cannot be used as output pins when using A/D converters, can they be used as output pins when the output voltage of the corresponding pin is fixed at High level or Low level?\nAnswer:\nThis pin can be used as an output pin only when the output voltage is fixed. (including handling of unused pins)\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "For Pins that cannot be used as output pins when using A/D converters, can they be used as output pins when the output voltage of the corresponding pin is fixed at High level or Low level?"
+      },
+      {
+        "type": "text",
+        "content": "For Pins that cannot be used as output pins when using A/D converters, can they be used as output pins when the output voltage of the corresponding pin is fixed at High level or Low level?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThis pin can be used as an output pin only when the output voltage is fixed. (including handling of unused pins)\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "This pin can be used as an output pin only when the output voltage is fixed. (including handling of unused pins)"
+      },
+      {
+        "type": "text",
+        "content": "This pin can be used as an output pin only when the output voltage is fixed. (including handling of unused pins)"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20939018"
+      }
+    ]
+  }
+}

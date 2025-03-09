@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20977302",
+    "title": "RH850/F1Kx: MCAL package",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:27:11.182908"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI am using RH850/F1KM-S4 with MCAL package provided by Renesas. Do I need to get a different MCAL package for F1KM-S2?\nAnswer:\nNo, All RH850/F1KM devices share the same MCAL package. It supports Autosar Release R4.2.2. Compiler used is GHS V6.1.6 v2015.1.7. MCAL developed as SEooC compliant to ISO26262 standard.\nSuitable Products\nRH850/F1Kx"
+      },
+      {
+        "type": "text",
+        "content": "I am using RH850/F1KM-S4 with MCAL package provided by Renesas. Do I need to get a different MCAL package for F1KM-S2?"
+      },
+      {
+        "type": "text",
+        "content": "I am using RH850/F1KM-S4 with MCAL package provided by Renesas. Do I need to get a different MCAL package for F1KM-S2?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nNo, All RH850/F1KM devices share the same MCAL package. It supports Autosar Release R4.2.2. Compiler used is GHS V6.1.6 v2015.1.7. MCAL developed as SEooC compliant to ISO26262 standard.\nSuitable Products\nRH850/F1Kx"
+      },
+      {
+        "type": "text",
+        "content": "No, All RH850/F1KM devices share the same MCAL package. It supports Autosar Release R4.2.2. Compiler used is GHS V6.1.6 v2015.1.7. MCAL developed as SEooC compliant to ISO26262 standard."
+      },
+      {
+        "type": "text",
+        "content": "No, All RH850/F1KM devices share the same MCAL package. It supports Autosar Release R4.2.2. Compiler used is GHS V6.1.6 v2015.1.7. MCAL developed as SEooC compliant to ISO26262 standard."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850/F1Kx"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850/F1Kx"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850/F1Kx"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20977307"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20977311"
+      }
+    ]
+  }
+}

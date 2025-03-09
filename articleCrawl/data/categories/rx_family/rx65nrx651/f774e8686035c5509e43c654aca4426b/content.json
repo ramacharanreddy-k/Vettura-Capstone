@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20537030",
+    "title": "RX Family: What can I do with the CK-RA6M5 or CK-RX65N IoT evaluation kit?",
+    "last_updated": "2022-09-06",
+    "extracted_at": "2025-03-09T00:03:22.784364"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat can I do with the CK-RA6M5 or CK-RX65N IoT evaluation kit?\nAnswer:\nThe CK-RA6M5 or CK-RX65N offers the RYZ014A, a Renesas CAT M1 module, as connectivity. In addition, it has a number of environmental sensors for indoor, outdoor, temperature, and humidity, as well as inertial, barometric, SpO2, and Mems microphones ideal for evaluating IoT devices. The provided software enables end-to-end secure connection to Amazon's AWS Cloud and Microsoft's Azure Cloud. This makes it ideal for prototype development and evaluation of IoT devices with sensor functions. These software products consist of RA's FSP and RX's FIT platform. By leveraging these ecosystems, development of IoT devices can be done easily.\nSuitable Products\nRA6M5,\nRX65N/RX651"
+      },
+      {
+        "type": "text",
+        "content": "What can I do with the CK-RA6M5 or CK-RX65N IoT evaluation kit?"
+      },
+      {
+        "type": "text",
+        "content": "What can I do with the CK-RA6M5 or CK-RX65N IoT evaluation kit?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe CK-RA6M5 or CK-RX65N offers the RYZ014A, a Renesas CAT M1 module, as connectivity. In addition, it has a number of environmental sensors for indoor, outdoor, temperature, and humidity, as well as inertial, barometric, SpO2, and Mems microphones ideal for evaluating IoT devices. The provided software enables end-to-end secure connection to Amazon's AWS Cloud and Microsoft's Azure Cloud. This makes it ideal for prototype development and evaluation of IoT devices with sensor functions. These software products consist of RA's FSP and RX's FIT platform. By leveraging these ecosystems, development of IoT devices can be done easily.\nSuitable Products\nRA6M5,\nRX65N/RX651"
+      },
+      {
+        "type": "text",
+        "content": "The CK-RA6M5 or CK-RX65N offers the RYZ014A, a Renesas CAT M1 module, as connectivity. In addition, it has a number of environmental sensors for indoor, outdoor, temperature, and humidity, as well as inertial, barometric, SpO2, and Mems microphones ideal for evaluating IoT devices. The provided software enables end-to-end secure connection to Amazon's AWS Cloud and Microsoft's Azure Cloud. This makes it ideal for prototype development and evaluation of IoT devices with sensor functions. These software products consist of RA's FSP and RX's FIT platform. By leveraging these ecosystems, development of IoT devices can be done easily."
+      },
+      {
+        "type": "text",
+        "content": "The CK-RA6M5 or CK-RX65N offers the RYZ014A, a Renesas CAT M1 module, as connectivity. In addition, it has a number of environmental sensors for indoor, outdoor, temperature, and humidity, as well as inertial, barometric, SpO2, and Mems microphones ideal for evaluating IoT devices. The provided software enables end-to-end secure connection to Amazon's AWS Cloud and Microsoft's Azure Cloud. This makes it ideal for prototype development and evaluation of IoT devices with sensor functions. These software products consist of RA's FSP and RX's FIT platform. By leveraging these ecosystems, development of IoT devices can be done easily."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA6M5,\nRX65N/RX651"
+      },
+      {
+        "type": "text",
+        "content": "RA6M5,"
+      },
+      {
+        "type": "text",
+        "content": "RX65N/RX651"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA6M5,\nRX65N/RX651"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA6M5,\nRX65N/RX651"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20537034"
+      }
+    ]
+  }
+}

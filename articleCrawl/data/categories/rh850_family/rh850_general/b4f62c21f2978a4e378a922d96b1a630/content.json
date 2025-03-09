@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21671334",
+    "title": "RH850 using double map mode in GHS",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:28:47.428793"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI got some device file(dr7f702301.dvf) from renesas which was working well for GHS multi debug connection until I change the controller flash map from single map to double map.\nIn double map mode, if I use this device file, I get the below error during connection.\n<Server Output> RSU info write error 0x576: param err (no match specified map mode).\nShould I get a different device file for doublemap mode? If yes, please provide the same.\nAnswer:\nin case of double map mode, please add below option in the connection string:\n -dwmap\nUse Double Map Mode.\n    If \"-dwmap\" is omitted, 850eserv2 connects Single Map Mode.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nI got some device file(dr7f702301.dvf) from renesas which was working well for GHS multi debug connection until I change the controller flash map from single map to double map.\nIn double map mode, if I use this device file, I get the below error during connection.\n<Server Output> RSU info write error 0x576: param err (no match specified map mode).\nShould I get a different device file for doublemap mode? If yes, please provide the same.\nAnswer:\nin case of double map mode, please add below option in the connection string:\n -dwmap\nUse Double Map Mode.\n    If \"-dwmap\" is omitted, 850eserv2 connects Single Map Mode.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "I got some device file(dr7f702301.dvf) from renesas which was working well for GHS multi debug connection until I change the controller flash map from single map to double map.\nIn double map mode, if I use this device file, I get the below error during connection.\n<Server Output> RSU info write error 0x576: param err (no match specified map mode).\nShould I get a different device file for doublemap mode? If yes, please provide the same."
+      },
+      {
+        "type": "text",
+        "content": "I got some device file(dr7f702301.dvf) from renesas which was working well for GHS multi debug connection until I change the controller flash map from single map to double map."
+      },
+      {
+        "type": "text",
+        "content": "I got some device file(dr7f702301.dvf) from renesas which was working well for GHS multi debug connection until I change the controller flash map from single map to double map."
+      },
+      {
+        "type": "text",
+        "content": "In double map mode, if I use this device file, I get the below error during connection."
+      },
+      {
+        "type": "text",
+        "content": "In double map mode, if I use this device file, I get the below error during connection."
+      },
+      {
+        "type": "text",
+        "content": "<Server Output> RSU info write error 0x576: param err (no match specified map mode)."
+      },
+      {
+        "type": "text",
+        "content": "<Server Output> RSU info write error 0x576: param err (no match specified map mode)."
+      },
+      {
+        "type": "text",
+        "content": "Should I get a different device file for doublemap mode? If yes, please provide the same."
+      },
+      {
+        "type": "text",
+        "content": "Should I get a different device file for doublemap mode? If yes, please provide the same."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nin case of double map mode, please add below option in the connection string:\n -dwmap\nUse Double Map Mode.\n    If \"-dwmap\" is omitted, 850eserv2 connects Single Map Mode.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "in case of double map mode, please add below option in the connection string:\n -dwmap\nUse Double Map Mode.\n    If \"-dwmap\" is omitted, 850eserv2 connects Single Map Mode."
+      },
+      {
+        "type": "text",
+        "content": "in case of double map mode, please add below option in the connection string:"
+      },
+      {
+        "type": "text",
+        "content": "in case of double map mode, please add below option in the connection string:"
+      },
+      {
+        "type": "text",
+        "content": "-dwmap"
+      },
+      {
+        "type": "text",
+        "content": "-dwmap"
+      },
+      {
+        "type": "text",
+        "content": "Use Double Map Mode."
+      },
+      {
+        "type": "text",
+        "content": "Use Double Map Mode."
+      },
+      {
+        "type": "text",
+        "content": "If \"-dwmap\" is omitted, 850eserv2 connects Single Map Mode."
+      },
+      {
+        "type": "text",
+        "content": "If \"-dwmap\" is omitted, 850eserv2 connects Single Map Mode."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850"
+    ],
+    "links": []
+  }
+}

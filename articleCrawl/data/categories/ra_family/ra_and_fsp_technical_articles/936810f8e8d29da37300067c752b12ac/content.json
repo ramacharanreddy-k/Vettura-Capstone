@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20197204",
+    "title": "RA Family: Disable J-Link Caching When Debugging Flash Issues in FSP",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:12:28.211890"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "It is probably best to disable the JLink from caching the dataflash when trying to work with flash debugging. With the debug session terminated, in the .jlink file in the top level directory of the e2studio project change:"
+      },
+      {
+        "type": "text",
+        "content": "CacheExcludeSize = 0\nCacheExcludeAddr = 0"
+      },
+      {
+        "type": "text",
+        "content": "to"
+      },
+      {
+        "type": "text",
+        "content": "CacheExcludeSize = 0x2000\nCacheExcludeAddr = 0x40100000"
+      },
+      {
+        "type": "text",
+        "content": "then save the file, and then start the debug session."
+      },
+      {
+        "type": "text",
+        "content": "As an example, for the RA2L1 the data flash on the RA2L1 is not enabled at power on of the device, and isn't enabled until this line of code:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://community.renesas.com/cfs-file/__key/communityserver-discussions-components-files/256/pastedimage1632908267103v1.png",
+          "alt_text": "",
+          "width": "1564",
+          "height": "1729",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/936810f8e8d29da37300067c752b12ac/images/b28435b1d599d3a90c6d61a7e3a2ff01.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Before it is enabled, a read to the dataflash region will return 0 (as can be seen in the image above), after the dataflash is enabled, the actual contents will be visible:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://community.renesas.com/cfs-file/__key/communityserver-discussions-components-files/256/pastedimage1632908360359v2.png",
+          "alt_text": "",
+          "width": "1781",
+          "height": "1236",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/936810f8e8d29da37300067c752b12ac/images/a4c210d2d1eda2a5d6505df5593cf115.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nFSP"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nFSP"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nFSP"
+      },
+      {
+        "type": "text",
+        "content": "Source:   (19) Trouble reading values from data flash, reads all 0s - Forum - RA MCU - Renesas Community"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://community.renesas.com/cfs-file/__key/communityserver-discussions-components-files/256/pastedimage1632908267103v1.png",
+        "alt_text": "",
+        "width": "1564",
+        "height": "1729",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/936810f8e8d29da37300067c752b12ac/images/b28435b1d599d3a90c6d61a7e3a2ff01.png"
+      },
+      {
+        "original_url": "https://community.renesas.com/cfs-file/__key/communityserver-discussions-components-files/256/pastedimage1632908360359v2.png",
+        "alt_text": "",
+        "width": "1781",
+        "height": "1236",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/936810f8e8d29da37300067c752b12ac/images/a4c210d2d1eda2a5d6505df5593cf115.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "FSP"
+    ],
+    "links": [
+      {
+        "text": "(19) Trouble reading values from data flash, reads all 0s - Forum - RA MCU - Renesas Community",
+        "url": "https://community.renesas.com/mcu-mpu/ra/f/forum/18581/trouble-reading-values-from-data-flash-reads-all-0s/61589#61589"
+      }
+    ]
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21095654",
+    "title": "Is there a recommended way of producing many synchronized PWM waveforms on a RA MCU?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:40:08.482425"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\n   Is there a recommended way of producing many synchronized PWM waveforms on a RA MCU?\n  Answer:\nYes, by writing 0xFF to GTCLR register the waveform outputs will start immediatetely from zero.\n    For example, for channel 0 of GPT0 timer the necessary code will be R_GPT0->GTCLR = 0xFFFFFFFF.\n  Also, there is a second way, using the R_GPT_Reset() API.\n    Suitable Products\nRA FAMILY"
+      },
+      {
+        "type": "text",
+        "content": "Is there a recommended way of producing many synchronized PWM waveforms on a RA MCU?"
+      },
+      {
+        "type": "text",
+        "content": "Is there a recommended way of producing many synchronized PWM waveforms on a RA MCU?"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/e0b16c28-817d-4c8f-bb78-ea286e60d08e",
+          "alt_text": "",
+          "width": "634",
+          "height": "817",
+          "local_path": "data/categories/ra_family/timer/e4fe5104cb37e3b6e337a10b84dbd4ea/images/5b49a7fc4db0fde5bfdc3a87e72e1a12.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes, by writing 0xFF to GTCLR register the waveform outputs will start immediatetely from zero.\n    For example, for channel 0 of GPT0 timer the necessary code will be R_GPT0->GTCLR = 0xFFFFFFFF.\n  Also, there is a second way, using the R_GPT_Reset() API.\n    Suitable Products\nRA FAMILY"
+      },
+      {
+        "type": "text",
+        "content": "Yes, by writing 0xFF to GTCLR register the waveform outputs will start immediatetely from zero.\n    For example, for channel 0 of GPT0 timer the necessary code will be R_GPT0->GTCLR = 0xFFFFFFFF.\n  Also, there is a second way, using the R_GPT_Reset() API."
+      },
+      {
+        "type": "text",
+        "content": "Yes, by writing 0xFF to GTCLR register the waveform outputs will start immediatetely from zero."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/290b0535-a2be-43c2-af9f-f6723a9727d6",
+          "alt_text": "",
+          "width": "524",
+          "height": "223",
+          "local_path": "data/categories/ra_family/timer/e4fe5104cb37e3b6e337a10b84dbd4ea/images/7b448d286912028ab03ce94455162442.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "For example, for channel 0 of GPT0 timer the necessary code will be R_GPT0->GTCLR = 0xFFFFFFFF."
+      },
+      {
+        "type": "text",
+        "content": "Also, there is a second way, using the R_GPT_Reset() API."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/8d823fe2-6985-4231-a7f8-3c1856f3dd7c",
+          "alt_text": "",
+          "width": "1615",
+          "height": "351",
+          "local_path": "data/categories/ra_family/timer/e4fe5104cb37e3b6e337a10b84dbd4ea/images/50abb2634a01c2e47b401e3c8eb847ff.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA FAMILY"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/e0b16c28-817d-4c8f-bb78-ea286e60d08e",
+        "alt_text": "",
+        "width": "634",
+        "height": "817",
+        "local_path": "data/categories/ra_family/timer/e4fe5104cb37e3b6e337a10b84dbd4ea/images/5b49a7fc4db0fde5bfdc3a87e72e1a12.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/290b0535-a2be-43c2-af9f-f6723a9727d6",
+        "alt_text": "",
+        "width": "524",
+        "height": "223",
+        "local_path": "data/categories/ra_family/timer/e4fe5104cb37e3b6e337a10b84dbd4ea/images/7b448d286912028ab03ce94455162442.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/8d823fe2-6985-4231-a7f8-3c1856f3dd7c",
+        "alt_text": "",
+        "width": "1615",
+        "height": "351",
+        "local_path": "data/categories/ra_family/timer/e4fe5104cb37e3b6e337a10b84dbd4ea/images/50abb2634a01c2e47b401e3c8eb847ff.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA FAMILY"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA FAMILY"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/YYYYYYYY"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/ZZZZZZZZ"
+      }
+    ]
+  }
+}

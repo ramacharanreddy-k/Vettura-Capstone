@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20282330",
+    "title": "About power supply voltage rising slope",
+    "last_updated": "2023-11-05",
+    "extracted_at": "2025-03-08T23:58:36.166277"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there any characteristics about power supply voltage rising slope?"
+      },
+      {
+        "type": "text",
+        "content": "Is there any characteristics about power supply voltage rising slope?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nPlease refer to the \"Power supply voltage rising slope characteristics\" section in the \"ELECTRICAL SPECIFICATIONS\" section of the RL78 User's Manual Hardware of each product.\nThe RL78 family has a built-in regulator for operating the device with a constant voltage. To obtain a stable regulator output voltage, power supply voltage rising slope spec of MAX. 54 V/ms is specified.\nIf the spec of power supply voltage rising slope is satisfied, there will be no negative effect on the device even if the supply voltage rises slowly. However, please maintain the reset state by using a voltage detector or external reset until VDD reaches within the operating voltage range shown in the \"AC Characteristics\" chapter of the \"ELECTRICAL SPECIFICATIONS\" section.\nIf the spec of power supply voltage rising slope is not satisfied, it may cause device malfunction or degradation. However, the slope until the VDD becomes the specified regulator output voltage at power-on does not matter. If the supply voltage meets the spec of power supply voltage rising slope when above the specified regulator output voltage, there will be no negative effect on the device.\nNote: The regulator output voltage varies depending on the RL78 microcontroller and flash operation mode.\n           For the regulator output voltage, please refer to the \"Regulator\" section of the RL78 User's Manual Hardware of each product.\nExample of regulator output voltage:\nRL78/G13\nLS (Low-speed main) mode, LV (Low-voltage main) mode: 1.8V\nHS (high speed main) mode: 2.1V\nRL78/G23\n1.5V\nSuitable Products\nRL78 Family"
+      },
+      {
+        "type": "text",
+        "content": "Please refer to the \"Power supply voltage rising slope characteristics\" section in the \"ELECTRICAL SPECIFICATIONS\" section of the RL78 User's Manual Hardware of each product.\nThe RL78 family has a built-in regulator for operating the device with a constant voltage. To obtain a stable regulator output voltage, power supply voltage rising slope spec of MAX. 54 V/ms is specified.\nIf the spec of power supply voltage rising slope is satisfied, there will be no negative effect on the device even if the supply voltage rises slowly. However, please maintain the reset state by using a voltage detector or external reset until VDD reaches within the operating voltage range shown in the \"AC Characteristics\" chapter of the \"ELECTRICAL SPECIFICATIONS\" section.\nIf the spec of power supply voltage rising slope is not satisfied, it may cause device malfunction or degradation. However, the slope until the VDD becomes the specified regulator output voltage at power-on does not matter. If the supply voltage meets the spec of power supply voltage rising slope when above the specified regulator output voltage, there will be no negative effect on the device.\nNote: The regulator output voltage varies depending on the RL78 microcontroller and flash operation mode.\n           For the regulator output voltage, please refer to the \"Regulator\" section of the RL78 User's Manual Hardware of each product.\nExample of regulator output voltage:\nRL78/G13\nLS (Low-speed main) mode, LV (Low-voltage main) mode: 1.8V\nHS (high speed main) mode: 2.1V\nRL78/G23\n1.5V"
+      },
+      {
+        "type": "text",
+        "content": "Please refer to the \"Power supply voltage rising slope characteristics\" section in the \"ELECTRICAL SPECIFICATIONS\" section of the RL78 User's Manual Hardware of each product."
+      },
+      {
+        "type": "text",
+        "content": "The RL78 family has a built-in regulator for operating the device with a constant voltage. To obtain a stable regulator output voltage, power supply voltage rising slope spec of MAX. 54 V/ms is specified."
+      },
+      {
+        "type": "text",
+        "content": "If the spec of power supply voltage rising slope is satisfied, there will be no negative effect on the device even if the supply voltage rises slowly. However, please maintain the reset state by using a voltage detector or external reset until VDD reaches within the operating voltage range shown in the \"AC Characteristics\" chapter of the \"ELECTRICAL SPECIFICATIONS\" section."
+      },
+      {
+        "type": "text",
+        "content": "If the spec of power supply voltage rising slope is not satisfied, it may cause device malfunction or degradation. However, the slope until the VDD becomes the specified regulator output voltage at power-on does not matter. If the supply voltage meets the spec of power supply voltage rising slope when above the specified regulator output voltage, there will be no negative effect on the device."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/a72c743d-14e0-4b71-8146-8358099be097.png",
+          "alt_text": "",
+          "width": "513",
+          "height": "338",
+          "local_path": "data/categories/rl78_family/electrical_characteristics/99247d54bf98c2ad7d8d7c4620385a29/images/621e0782d187d26c9ad1abfd5f0b406d.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Note: The regulator output voltage varies depending on the RL78 microcontroller and flash operation mode.\n           For the regulator output voltage, please refer to the \"Regulator\" section of the RL78 User's Manual Hardware of each product."
+      },
+      {
+        "type": "text",
+        "content": "Example of regulator output voltage:"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78 Family"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/a72c743d-14e0-4b71-8146-8358099be097.png",
+        "alt_text": "",
+        "width": "513",
+        "height": "338",
+        "local_path": "data/categories/rl78_family/electrical_characteristics/99247d54bf98c2ad7d8d7c4620385a29/images/621e0782d187d26c9ad1abfd5f0b406d.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78 Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78 Family"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17793905"
+      }
+    ]
+  }
+}

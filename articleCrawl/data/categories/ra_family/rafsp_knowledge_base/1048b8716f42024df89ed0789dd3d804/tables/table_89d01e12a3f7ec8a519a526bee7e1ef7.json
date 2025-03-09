@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "Max DRW Operations\nSpecifies the maximum number of DRW operations before flushing the display list. Reducing this value may reduce the peak heap used by the application but may reduce performance."
+    ]
+  ]
+}

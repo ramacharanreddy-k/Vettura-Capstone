@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21180418",
+    "title": "RZ/V: Is it possible to change Data Type with DRP-AI Translator.",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:51:57.942771"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs it possible to change Data Type with DRP-AI Translator.\nAnswer:\nDRP-AI Translator change automatically the data type into their own proper one.\nIn RZ/V2L, V2M, V2MA, data type will be changed into FP16 after translation.  In next generation of RZ/V familly, it will be INT8.\nSuitable Products\nRZ/V"
+      },
+      {
+        "type": "text",
+        "content": "Is it possible to change Data Type with DRP-AI Translator."
+      },
+      {
+        "type": "text",
+        "content": "Is it possible to change Data Type with DRP-AI Translator."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nDRP-AI Translator change automatically the data type into their own proper one.\nIn RZ/V2L, V2M, V2MA, data type will be changed into FP16 after translation.  In next generation of RZ/V familly, it will be INT8.\nSuitable Products\nRZ/V"
+      },
+      {
+        "type": "text",
+        "content": "DRP-AI Translator change automatically the data type into their own proper one.\nIn RZ/V2L, V2M, V2MA, data type will be changed into FP16 after translation.  In next generation of RZ/V familly, it will be INT8."
+      },
+      {
+        "type": "text",
+        "content": "DRP-AI Translator change automatically the data type into their own proper one.\nIn RZ/V2L, V2M, V2MA, data type will be changed into FP16 after translation.  In next generation of RZ/V familly, it will be INT8."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21180423"
+      }
+    ]
+  }
+}

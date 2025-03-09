@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21698319",
+    "title": "RA Family: What does it mean when I see the message \"Pin with no drivers\" related to Smart Configurator?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:22:45.585503"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIn the Problems tab of e2 studio, you might see the message \"Pin with no drivers\" related to the RA Family Smart Configurator. What does this mean? Also, is there a way to get rid of this display?\nAnswer:\n\"Pin with no drivers\" means that there are no drivers associated with the pins to which peripheral functions are assigned in the pin configuration of the configurator. You can find out if there are any unwanted pin settings by checking the pin settings to which this indication applies.\nTo change the display conditions of Pin Driver Warnings, set them in Configure Pin Driver Warnings.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "In the Problems tab of e2 studio, you might see the message \"Pin with no drivers\" related to the RA Family Smart Configurator. What does this mean? Also, is there a way to get rid of this display?"
+      },
+      {
+        "type": "text",
+        "content": "In the Problems tab of e2 studio, you might see the message \"Pin with no drivers\" related to the RA Family Smart Configurator. What does this mean? Also, is there a way to get rid of this display?"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/395867-1.png",
+          "alt_text": "",
+          "width": "642",
+          "height": "174",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/21dd805601c92b592dd87633f353b9a8/images/41673741faaf59dfe0f3076cf4fd51a3.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Answer:\n\"Pin with no drivers\" means that there are no drivers associated with the pins to which peripheral functions are assigned in the pin configuration of the configurator. You can find out if there are any unwanted pin settings by checking the pin settings to which this indication applies.\nTo change the display conditions of Pin Driver Warnings, set them in Configure Pin Driver Warnings.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "\"Pin with no drivers\" means that there are no drivers associated with the pins to which peripheral functions are assigned in the pin configuration of the configurator. You can find out if there are any unwanted pin settings by checking the pin settings to which this indication applies.\nTo change the display conditions of Pin Driver Warnings, set them in Configure Pin Driver Warnings.\nSuitable Products"
+      },
+      {
+        "type": "text",
+        "content": "\"Pin with no drivers\" means that there are no drivers associated with the pins to which peripheral functions are assigned in the pin configuration of the configurator. You can find out if there are any unwanted pin settings by checking the pin settings to which this indication applies."
+      },
+      {
+        "type": "text",
+        "content": "To change the display conditions of Pin Driver Warnings, set them in Configure Pin Driver Warnings."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/395867-2.png",
+          "alt_text": "",
+          "width": "642",
+          "height": "97",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/21dd805601c92b592dd87633f353b9a8/images/6c012154347ef0129ea5503782ff0f87.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/395867-1.png",
+        "alt_text": "",
+        "width": "642",
+        "height": "174",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/21dd805601c92b592dd87633f353b9a8/images/41673741faaf59dfe0f3076cf4fd51a3.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/395867-2.png",
+        "alt_text": "",
+        "width": "642",
+        "height": "97",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/21dd805601c92b592dd87633f353b9a8/images/6c012154347ef0129ea5503782ff0f87.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21698339"
+      }
+    ]
+  }
+}

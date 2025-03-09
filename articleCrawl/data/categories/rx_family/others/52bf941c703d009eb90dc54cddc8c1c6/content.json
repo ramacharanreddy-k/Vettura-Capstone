@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20940274",
+    "title": "Is there a way to lower RAM consumption in emWin or GLCDC?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:24:05.044056"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there a way to lower RAM consumption in emWin or GLCDC?\nAnswer:\nFor the RX72N or RX65N equipped with GLCDC, there are no areas available for only frame buffers. Therefore, you must secure such areas from the internal RAM.\nRAM is separated into two areas, Internal RAM and Extended Internal RAM, and the addresses in these areas are not consecutive.\nTherefore, it is very important to manage RAM usage and section allocation.\nIf all RAM is consumed, you need to tune the RAM usage settings, such as reallocating sections to available areas. The following shows examples of measures you can take:\n• Tune the stack size, heap size, and emWin work size.\nYou can lower RAM consumption by tuning these settings, although the optimal values to be set depend on the user application.\nWe do not recommend that you set too small values, as doing so will result in abnormal system behavior when a relatively large amount of RAM is consumed.\nSee also the guideline values for memory usage in the emWin user's manual.\nStack size and heap size settings:\n  emWin work size setting:\n  • Use a smaller data format (such as an 8-bit format).\nFor example, changing the format from 16-bit to 8-bit will half the frame buffer size. Note, however, that this will narrow the range of colors representable on the LCD. Therefore, use this method only when the design allows.\nIf RAM is still insufficient even after tuning the preceding settings, consider reducing the number of windows designed using AppWizard or GUI Builder. Alternatively, instead of using an RX65N, use an RX72N, RX66N, or RX72M in which more RAM is available (512 KB Internal RAM + 512 KB Extended Internal RAM).\nSuitable Products\nRX Family\n  日本語"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nIs there a way to lower RAM consumption in emWin or GLCDC?\nAnswer:\nFor the RX72N or RX65N equipped with GLCDC, there are no areas available for only frame buffers. Therefore, you must secure such areas from the internal RAM.\nRAM is separated into two areas, Internal RAM and Extended Internal RAM, and the addresses in these areas are not consecutive.\nTherefore, it is very important to manage RAM usage and section allocation.\nIf all RAM is consumed, you need to tune the RAM usage settings, such as reallocating sections to available areas. The following shows examples of measures you can take:\n• Tune the stack size, heap size, and emWin work size.\nYou can lower RAM consumption by tuning these settings, although the optimal values to be set depend on the user application.\nWe do not recommend that you set too small values, as doing so will result in abnormal system behavior when a relatively large amount of RAM is consumed.\nSee also the guideline values for memory usage in the emWin user's manual.\nStack size and heap size settings:\n  emWin work size setting:\n  • Use a smaller data format (such as an 8-bit format).\nFor example, changing the format from 16-bit to 8-bit will half the frame buffer size. Note, however, that this will narrow the range of colors representable on the LCD. Therefore, use this method only when the design allows.\nIf RAM is still insufficient even after tuning the preceding settings, consider reducing the number of windows designed using AppWizard or GUI Builder. Alternatively, instead of using an RX65N, use an RX72N, RX66N, or RX72M in which more RAM is available (512 KB Internal RAM + 512 KB Extended Internal RAM).\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Is there a way to lower RAM consumption in emWin or GLCDC?"
+      },
+      {
+        "type": "text",
+        "content": "Is there a way to lower RAM consumption in emWin or GLCDC?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nFor the RX72N or RX65N equipped with GLCDC, there are no areas available for only frame buffers. Therefore, you must secure such areas from the internal RAM.\nRAM is separated into two areas, Internal RAM and Extended Internal RAM, and the addresses in these areas are not consecutive.\nTherefore, it is very important to manage RAM usage and section allocation.\nIf all RAM is consumed, you need to tune the RAM usage settings, such as reallocating sections to available areas. The following shows examples of measures you can take:\n• Tune the stack size, heap size, and emWin work size.\nYou can lower RAM consumption by tuning these settings, although the optimal values to be set depend on the user application.\nWe do not recommend that you set too small values, as doing so will result in abnormal system behavior when a relatively large amount of RAM is consumed.\nSee also the guideline values for memory usage in the emWin user's manual.\nStack size and heap size settings:\n  emWin work size setting:\n  • Use a smaller data format (such as an 8-bit format).\nFor example, changing the format from 16-bit to 8-bit will half the frame buffer size. Note, however, that this will narrow the range of colors representable on the LCD. Therefore, use this method only when the design allows.\nIf RAM is still insufficient even after tuning the preceding settings, consider reducing the number of windows designed using AppWizard or GUI Builder. Alternatively, instead of using an RX65N, use an RX72N, RX66N, or RX72M in which more RAM is available (512 KB Internal RAM + 512 KB Extended Internal RAM).\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "For the RX72N or RX65N equipped with GLCDC, there are no areas available for only frame buffers. Therefore, you must secure such areas from the internal RAM.\nRAM is separated into two areas, Internal RAM and Extended Internal RAM, and the addresses in these areas are not consecutive.\nTherefore, it is very important to manage RAM usage and section allocation.\nIf all RAM is consumed, you need to tune the RAM usage settings, such as reallocating sections to available areas. The following shows examples of measures you can take:\n• Tune the stack size, heap size, and emWin work size.\nYou can lower RAM consumption by tuning these settings, although the optimal values to be set depend on the user application.\nWe do not recommend that you set too small values, as doing so will result in abnormal system behavior when a relatively large amount of RAM is consumed.\nSee also the guideline values for memory usage in the emWin user's manual.\nStack size and heap size settings:\n  emWin work size setting:\n  • Use a smaller data format (such as an 8-bit format).\nFor example, changing the format from 16-bit to 8-bit will half the frame buffer size. Note, however, that this will narrow the range of colors representable on the LCD. Therefore, use this method only when the design allows.\nIf RAM is still insufficient even after tuning the preceding settings, consider reducing the number of windows designed using AppWizard or GUI Builder. Alternatively, instead of using an RX65N, use an RX72N, RX66N, or RX72M in which more RAM is available (512 KB Internal RAM + 512 KB Extended Internal RAM)."
+      },
+      {
+        "type": "text",
+        "content": "For the RX72N or RX65N equipped with GLCDC, there are no areas available for only frame buffers. Therefore, you must secure such areas from the internal RAM.\nRAM is separated into two areas, Internal RAM and Extended Internal RAM, and the addresses in these areas are not consecutive.\nTherefore, it is very important to manage RAM usage and section allocation."
+      },
+      {
+        "type": "text",
+        "content": "If all RAM is consumed, you need to tune the RAM usage settings, such as reallocating sections to available areas. The following shows examples of measures you can take:"
+      },
+      {
+        "type": "text",
+        "content": "• Tune the stack size, heap size, and emWin work size.\nYou can lower RAM consumption by tuning these settings, although the optimal values to be set depend on the user application.\nWe do not recommend that you set too small values, as doing so will result in abnormal system behavior when a relatively large amount of RAM is consumed.\nSee also the guideline values for memory usage in the emWin user's manual."
+      },
+      {
+        "type": "text",
+        "content": "Stack size and heap size settings:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370043.png",
+          "alt_text": "",
+          "width": "843",
+          "height": "239",
+          "local_path": "data/categories/rx_family/others/52bf941c703d009eb90dc54cddc8c1c6/images/cf6deae293a960ae4fbbc29ef011b7cc.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "emWin work size setting:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370043-2.png",
+          "alt_text": "",
+          "width": "461",
+          "height": "675",
+          "local_path": "data/categories/rx_family/others/52bf941c703d009eb90dc54cddc8c1c6/images/f950f2012d8ba8fc1e8a365b5f386d1c.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "• Use a smaller data format (such as an 8-bit format).\nFor example, changing the format from 16-bit to 8-bit will half the frame buffer size. Note, however, that this will narrow the range of colors representable on the LCD. Therefore, use this method only when the design allows."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370043-3.png",
+          "alt_text": "",
+          "width": "458",
+          "height": "680",
+          "local_path": "data/categories/rx_family/others/52bf941c703d009eb90dc54cddc8c1c6/images/594f012f40b3c5e173e4b67f445f3b37.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "If RAM is still insufficient even after tuning the preceding settings, consider reducing the number of windows designed using AppWizard or GUI Builder. Alternatively, instead of using an RX65N, use an RX72N, RX66N, or RX72M in which more RAM is available (512 KB Internal RAM + 512 KB Extended Internal RAM)."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370043.png",
+        "alt_text": "",
+        "width": "843",
+        "height": "239",
+        "local_path": "data/categories/rx_family/others/52bf941c703d009eb90dc54cddc8c1c6/images/cf6deae293a960ae4fbbc29ef011b7cc.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370043-2.png",
+        "alt_text": "",
+        "width": "461",
+        "height": "675",
+        "local_path": "data/categories/rx_family/others/52bf941c703d009eb90dc54cddc8c1c6/images/f950f2012d8ba8fc1e8a365b5f386d1c.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370043-3.png",
+        "alt_text": "",
+        "width": "458",
+        "height": "680",
+        "local_path": "data/categories/rx_family/others/52bf941c703d009eb90dc54cddc8c1c6/images/594f012f40b3c5e173e4b67f445f3b37.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20684884"
+      }
+    ]
+  }
+}

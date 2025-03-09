@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18286160",
+    "title": "Why Does the Count Value Decrease Despite Touching?",
+    "last_updated": "2023-02-03",
+    "extracted_at": "2025-03-09T00:08:11.687736"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhen measuring the count value after setting a threshold value that does not make the sensor turn ON even when touching the electrode, the count value still decreases even when the sensor is continually touched. What are the possible causes?\nAnswer:\nThe reason why the count value decreases while being touched is that the electrode capacitance is changing due to physical changes in the electrodes and the surroundings of the electrodes. For example, a change in capacitance to an electrode due to expansion and contraction due to temperature change.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "When measuring the count value after setting a threshold value that does not make the sensor turn ON even when touching the electrode, the count value still decreases even when the sensor is continually touched. What are the possible causes?"
+      },
+      {
+        "type": "text",
+        "content": "When measuring the count value after setting a threshold value that does not make the sensor turn ON even when touching the electrode, the count value still decreases even when the sensor is continually touched. What are the possible causes?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe reason why the count value decreases while being touched is that the electrode capacitance is changing due to physical changes in the electrodes and the surroundings of the electrodes. For example, a change in capacitance to an electrode due to expansion and contraction due to temperature change.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "The reason why the count value decreases while being touched is that the electrode capacitance is changing due to physical changes in the electrodes and the surroundings of the electrodes. For example, a change in capacitance to an electrode due to expansion and contraction due to temperature change."
+      },
+      {
+        "type": "text",
+        "content": "The reason why the count value decreases while being touched is that the electrode capacitance is changing due to physical changes in the electrodes and the surroundings of the electrodes. For example, a change in capacitance to an electrode due to expansion and contraction due to temperature change."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792815"
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20797518",
+    "title": "RA Family: How to set Startup Area Select Flag (BTFLG) using FSP",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:25:11.753480"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to set Startup Area Select Flag (BTFLG) using FSP\nAnswer:\nThe Startup Area Select Flag (BTFLG) can be set by R_FLASH_HP_StartUpAreaSelect API of the Flash Driver. Let’s say to change the startup area from BLOCK0 to BLOCK1, there are two usage cases as shown below.\n1. When switching the startup area immediately:\nR_FLASH_HP_StartUpAreaSelect(&g_flash0_ctrl, FLASH_STARTUP_AREA_BLOCK1, false);\n2. When switching the startup area by reset:\nR_FLASH_HP_StartUpAreaSelect(&g_flash0_ctrl, FLASH_STARTUP_AREA_BLOCK0, true);\nR_FLASH_HP_StartUpAreaSelect(&g_flash0_ctrl, FLASH_STARTUP_AREA_BLOCK1, false);\nIn this case, set the 3rd argument of the first API call as true. As a result, the startup area is retained as the current startup area (BLOCK0), using the startup area temporary switching function of the flash controller. This temporary switching function is canceled by reset, and the startup area switches to BLOCK1 according to the BTFLG setting.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "How to set Startup Area Select Flag (BTFLG) using FSP"
+      },
+      {
+        "type": "text",
+        "content": "How to set Startup Area Select Flag (BTFLG) using FSP"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe Startup Area Select Flag (BTFLG) can be set by R_FLASH_HP_StartUpAreaSelect API of the Flash Driver. Let’s say to change the startup area from BLOCK0 to BLOCK1, there are two usage cases as shown below.\n1. When switching the startup area immediately:\nR_FLASH_HP_StartUpAreaSelect(&g_flash0_ctrl, FLASH_STARTUP_AREA_BLOCK1, false);\n2. When switching the startup area by reset:\nR_FLASH_HP_StartUpAreaSelect(&g_flash0_ctrl, FLASH_STARTUP_AREA_BLOCK0, true);\nR_FLASH_HP_StartUpAreaSelect(&g_flash0_ctrl, FLASH_STARTUP_AREA_BLOCK1, false);\nIn this case, set the 3rd argument of the first API call as true. As a result, the startup area is retained as the current startup area (BLOCK0), using the startup area temporary switching function of the flash controller. This temporary switching function is canceled by reset, and the startup area switches to BLOCK1 according to the BTFLG setting.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "The Startup Area Select Flag (BTFLG) can be set by R_FLASH_HP_StartUpAreaSelect API of the Flash Driver. Let’s say to change the startup area from BLOCK0 to BLOCK1, there are two usage cases as shown below.\n1. When switching the startup area immediately:\nR_FLASH_HP_StartUpAreaSelect(&g_flash0_ctrl, FLASH_STARTUP_AREA_BLOCK1, false);\n2. When switching the startup area by reset:\nR_FLASH_HP_StartUpAreaSelect(&g_flash0_ctrl, FLASH_STARTUP_AREA_BLOCK0, true);\nR_FLASH_HP_StartUpAreaSelect(&g_flash0_ctrl, FLASH_STARTUP_AREA_BLOCK1, false);\nIn this case, set the 3rd argument of the first API call as true. As a result, the startup area is retained as the current startup area (BLOCK0), using the startup area temporary switching function of the flash controller. This temporary switching function is canceled by reset, and the startup area switches to BLOCK1 according to the BTFLG setting.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "The Startup Area Select Flag (BTFLG) can be set by R_FLASH_HP_StartUpAreaSelect API of the Flash Driver. Let’s say to change the startup area from BLOCK0 to BLOCK1, there are two usage cases as shown below."
+      },
+      {
+        "type": "text",
+        "content": "1. When switching the startup area immediately:"
+      },
+      {
+        "type": "text",
+        "content": "2. When switching the startup area by reset:"
+      },
+      {
+        "type": "text",
+        "content": "In this case, set the 3rd argument of the first API call as true. As a result, the startup area is retained as the current startup area (BLOCK0), using the startup area temporary switching function of the flash controller. This temporary switching function is canceled by reset, and the startup area switches to BLOCK1 according to the BTFLG setting."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20793397"
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21079941",
+    "title": "RA Family: Quick FSP 4.6.0 Labs: Using Visual Expressions",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:12:08.375218"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Using the standard Blinky project as a starting point this lab adds Visual Expressions- graphic monitor and control icons- to illustrate how to simplify debugging and test-bench creation."
+      },
+      {
+        "type": "text",
+        "content": "."
+      },
+      {
+        "type": "text",
+        "content": "This Quick FSP Lab is best done after completing the Introduction Quick FSP Lab, but if you are even somewhat experienced with e2 studio and FSP you should be able to complete this lab without doing the Introduction lab first."
+      },
+      {
+        "type": "text",
+        "content": "Just follow along with the step by step guide, for your target kit, to complete the lab."
+      },
+      {
+        "type": "text",
+        "content": "The complete list of all Quick FSP 4.6.0 Labs is available here."
+      }
+    ],
+    "images": [],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": [
+      {
+        "text": "here.",
+        "url": "https://en-support.renesas.com/knowledgeBase/21079941"
+      }
+    ]
+  }
+}

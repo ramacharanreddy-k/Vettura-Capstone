@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20655743",
+    "title": "RZ/A3UL memory configuration",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:42:38.907616"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nOctal-RAM and DDR3L/DDR4 can be used as external RAM.\nOn what basis should I use Octal-RAM and DDR3L/DDR4 properly?\nAnswer:\nOctal-RAM can be connected to RZ/A3UL with fewer pins and a lower frequency than DDR memory.\nAs a result, the printed circuit board can be made smaller, and the number of passive components required to ensure high-speed signal quality is reduced, which is effective in reducing the cost of the entire system.\nOn the other hand, DDR3L/DDR4-DRAM memory has several times the bus bandwidth of Octal-RAM, allowing faster Read/Write, and it is possible to choose a memory with a larger capacity than Octal-RAM. We recommend using DDR memory if performance is a priority.\nSuitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Octal-RAM and DDR3L/DDR4 can be used as external RAM.\nOn what basis should I use Octal-RAM and DDR3L/DDR4 properly?"
+      },
+      {
+        "type": "text",
+        "content": "Octal-RAM and DDR3L/DDR4 can be used as external RAM.\nOn what basis should I use Octal-RAM and DDR3L/DDR4 properly?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nOctal-RAM can be connected to RZ/A3UL with fewer pins and a lower frequency than DDR memory.\nAs a result, the printed circuit board can be made smaller, and the number of passive components required to ensure high-speed signal quality is reduced, which is effective in reducing the cost of the entire system.\nOn the other hand, DDR3L/DDR4-DRAM memory has several times the bus bandwidth of Octal-RAM, allowing faster Read/Write, and it is possible to choose a memory with a larger capacity than Octal-RAM. We recommend using DDR memory if performance is a priority.\nSuitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Octal-RAM can be connected to RZ/A3UL with fewer pins and a lower frequency than DDR memory.\nAs a result, the printed circuit board can be made smaller, and the number of passive components required to ensure high-speed signal quality is reduced, which is effective in reducing the cost of the entire system.\nOn the other hand, DDR3L/DDR4-DRAM memory has several times the bus bandwidth of Octal-RAM, allowing faster Read/Write, and it is possible to choose a memory with a larger capacity than Octal-RAM. We recommend using DDR memory if performance is a priority."
+      },
+      {
+        "type": "text",
+        "content": "Octal-RAM can be connected to RZ/A3UL with fewer pins and a lower frequency than DDR memory."
+      },
+      {
+        "type": "text",
+        "content": "As a result, the printed circuit board can be made smaller, and the number of passive components required to ensure high-speed signal quality is reduced, which is effective in reducing the cost of the entire system."
+      },
+      {
+        "type": "text",
+        "content": "On the other hand, DDR3L/DDR4-DRAM memory has several times the bus bandwidth of Octal-RAM, allowing faster Read/Write, and it is possible to choose a memory with a larger capacity than Octal-RAM. We recommend using DDR memory if performance is a priority."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A3UL"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A3UL"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20655729"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20655751"
+      }
+    ]
+  }
+}

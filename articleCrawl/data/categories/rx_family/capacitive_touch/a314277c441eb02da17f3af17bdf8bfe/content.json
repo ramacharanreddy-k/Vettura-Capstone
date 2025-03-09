@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18286074",
+    "title": "What Is the ROM/RAM Capacity Required for Touch?",
+    "last_updated": "2023-03-03",
+    "extracted_at": "2025-03-09T00:07:41.090589"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI assume required ROM/RAM capacity depends on the level of the function realized in the system, but what is the basic ROM / RAM capacity required for the touch function?\nAnswer:\nThe ROM/RAM capacity required for touch functionality depends on the device and compiler.\nPlease refer to the APN below for the required size\nRX Family FIT\nCTSU module: https://www.renesas.com/us/en/document/apn/rx-family-qe-ctsu-module-using-firmware-integration-technology?language=en\nTOUCH module: https://www.renesas.com/us/en/document/apn/rx-family-qe-touch-module-using-firmware-integration-technology?language=en\nRL78 family SIS\nCTSU module: https://www.renesas.com/us/en/document/apn/rl78-family-ctsu-module-software-integration-system?language=en\nTOUCH module: https://www.renesas.com/us/en/document/apn/rl78-family-touch-module-software-integration-system?language=en\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "I assume required ROM/RAM capacity depends on the level of the function realized in the system, but what is the basic ROM / RAM capacity required for the touch function?"
+      },
+      {
+        "type": "text",
+        "content": "I assume required ROM/RAM capacity depends on the level of the function realized in the system, but what is the basic ROM / RAM capacity required for the touch function?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe ROM/RAM capacity required for touch functionality depends on the device and compiler.\nPlease refer to the APN below for the required size\nRX Family FIT\nCTSU module: https://www.renesas.com/us/en/document/apn/rx-family-qe-ctsu-module-using-firmware-integration-technology?language=en\nTOUCH module: https://www.renesas.com/us/en/document/apn/rx-family-qe-touch-module-using-firmware-integration-technology?language=en\nRL78 family SIS\nCTSU module: https://www.renesas.com/us/en/document/apn/rl78-family-ctsu-module-software-integration-system?language=en\nTOUCH module: https://www.renesas.com/us/en/document/apn/rl78-family-touch-module-software-integration-system?language=en\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "The ROM/RAM capacity required for touch functionality depends on the device and compiler.\nPlease refer to the APN below for the required size\nRX Family FIT\nCTSU module: https://www.renesas.com/us/en/document/apn/rx-family-qe-ctsu-module-using-firmware-integration-technology?language=en\nTOUCH module: https://www.renesas.com/us/en/document/apn/rx-family-qe-touch-module-using-firmware-integration-technology?language=en\nRL78 family SIS\nCTSU module: https://www.renesas.com/us/en/document/apn/rl78-family-ctsu-module-software-integration-system?language=en\nTOUCH module: https://www.renesas.com/us/en/document/apn/rl78-family-touch-module-software-integration-system?language=en"
+      },
+      {
+        "type": "text",
+        "content": "The ROM/RAM capacity required for touch functionality depends on the device and compiler.\nPlease refer to the APN below for the required size"
+      },
+      {
+        "type": "text",
+        "content": "RX Family FIT\nCTSU module: https://www.renesas.com/us/en/document/apn/rx-family-qe-ctsu-module-using-firmware-integration-technology?language=en\nTOUCH module: https://www.renesas.com/us/en/document/apn/rx-family-qe-touch-module-using-firmware-integration-technology?language=en"
+      },
+      {
+        "type": "text",
+        "content": "RL78 family SIS\nCTSU module: https://www.renesas.com/us/en/document/apn/rl78-family-ctsu-module-software-integration-system?language=en\nTOUCH module: https://www.renesas.com/us/en/document/apn/rl78-family-touch-module-software-integration-system?language=en"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/us/en/document/apn/rx-family-qe-ctsu-module-using-firmware-integration-technology?language=en",
+        "url": "https://www.renesas.com/us/en/document/apn/rx-family-qe-ctsu-module-using-firmware-integration-technology?language=en"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/document/apn/rx-family-qe-touch-module-using-firmware-integration-technology?language=en",
+        "url": "https://www.renesas.com/us/en/document/apn/rx-family-qe-touch-module-using-firmware-integration-technology?language=en"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/document/apn/rl78-family-ctsu-module-software-integration-system?language=en",
+        "url": "https://www.renesas.com/us/en/document/apn/rl78-family-ctsu-module-software-integration-system?language=en"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/document/apn/rl78-family-touch-module-software-integration-system?language=en",
+        "url": "https://www.renesas.com/us/en/document/apn/rl78-family-touch-module-software-integration-system?language=en"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792843"
+      }
+    ]
+  }
+}

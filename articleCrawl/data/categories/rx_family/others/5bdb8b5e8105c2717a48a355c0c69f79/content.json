@@ -1,0 +1,159 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20940277",
+    "title": "How can I change the color format when emWin and QE for Display are used?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:24:12.691023"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow can I change the color format when emWin and QE for Display are used?\nAnswer:\nChange the following settings.\nThe following is an example of changing the color format to CLUT8.\nemWin Settings:\n(1) Specify a color format that will be used for color depth per pixel (e.g., 8bit).\n(2) For DRW2D, specify “Do not use” because it is unavailable with CLUT8 or lower.\n(3) For Graphic Layer 2 Output Data Format, specify the color format that you want to use (for example, CLUT8).\n(4) If an AppWizard project has not been generated yet, the project is generated according to the “Color Depth per Pixel” settings in “emWin Settings”.\nIf an AppWizard project has already been generated, specify the color format that you want to use (for example, “8 Bit, GUICC_8666”) for “Color format” in the “Edit project properties” dialog box shown below.\n  Suitable Products\nRX Family\n  日本語"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nHow can I change the color format when emWin and QE for Display are used?\nAnswer:\nChange the following settings.\nThe following is an example of changing the color format to CLUT8.\nemWin Settings:\n(1) Specify a color format that will be used for color depth per pixel (e.g., 8bit).\n(2) For DRW2D, specify “Do not use” because it is unavailable with CLUT8 or lower.\n(3) For Graphic Layer 2 Output Data Format, specify the color format that you want to use (for example, CLUT8).\n(4) If an AppWizard project has not been generated yet, the project is generated according to the “Color Depth per Pixel” settings in “emWin Settings”.\nIf an AppWizard project has already been generated, specify the color format that you want to use (for example, “8 Bit, GUICC_8666”) for “Color format” in the “Edit project properties” dialog box shown below.\n  Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "How can I change the color format when emWin and QE for Display are used?"
+      },
+      {
+        "type": "text",
+        "content": "How can I change the color format when emWin and QE for Display are used?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nChange the following settings.\nThe following is an example of changing the color format to CLUT8.\nemWin Settings:\n(1) Specify a color format that will be used for color depth per pixel (e.g., 8bit).\n(2) For DRW2D, specify “Do not use” because it is unavailable with CLUT8 or lower.\n(3) For Graphic Layer 2 Output Data Format, specify the color format that you want to use (for example, CLUT8).\n(4) If an AppWizard project has not been generated yet, the project is generated according to the “Color Depth per Pixel” settings in “emWin Settings”.\nIf an AppWizard project has already been generated, specify the color format that you want to use (for example, “8 Bit, GUICC_8666”) for “Color format” in the “Edit project properties” dialog box shown below.\n  Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Change the following settings.\nThe following is an example of changing the color format to CLUT8.\nemWin Settings:\n(1) Specify a color format that will be used for color depth per pixel (e.g., 8bit).\n(2) For DRW2D, specify “Do not use” because it is unavailable with CLUT8 or lower.\n(3) For Graphic Layer 2 Output Data Format, specify the color format that you want to use (for example, CLUT8).\n(4) If an AppWizard project has not been generated yet, the project is generated according to the “Color Depth per Pixel” settings in “emWin Settings”.\nIf an AppWizard project has already been generated, specify the color format that you want to use (for example, “8 Bit, GUICC_8666”) for “Color format” in the “Edit project properties” dialog box shown below."
+      },
+      {
+        "type": "text",
+        "content": "Change the following settings.\nThe following is an example of changing the color format to CLUT8."
+      },
+      {
+        "type": "text",
+        "content": "emWin Settings:\n(1) Specify a color format that will be used for color depth per pixel (e.g., 8bit).\n(2) For DRW2D, specify “Do not use” because it is unavailable with CLUT8 or lower."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370046.png",
+          "alt_text": "",
+          "width": "593",
+          "height": "518",
+          "local_path": "data/categories/rx_family/others/5bdb8b5e8105c2717a48a355c0c69f79/images/5d2b4e96d697a8ab483bd22eea7e11f6.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "(3) For Graphic Layer 2 Output Data Format, specify the color format that you want to use (for example, CLUT8)."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370046-2.png",
+          "alt_text": "",
+          "width": "535",
+          "height": "666",
+          "local_path": "data/categories/rx_family/others/5bdb8b5e8105c2717a48a355c0c69f79/images/37ab2ddf7584e6559fd96290d29f67dc.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "(4) If an AppWizard project has not been generated yet, the project is generated according to the “Color Depth per Pixel” settings in “emWin Settings”."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370046-3.png",
+          "alt_text": "",
+          "width": "391",
+          "height": "149",
+          "local_path": "data/categories/rx_family/others/5bdb8b5e8105c2717a48a355c0c69f79/images/8718f3ed4aced4f9637ddac4eda60cb1.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "If an AppWizard project has already been generated, specify the color format that you want to use (for example, “8 Bit, GUICC_8666”) for “Color format” in the “Edit project properties” dialog box shown below."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370046-4.png",
+          "alt_text": "",
+          "width": "831",
+          "height": "660",
+          "local_path": "data/categories/rx_family/others/5bdb8b5e8105c2717a48a355c0c69f79/images/f83b095b6d567f82483c5462fc408f5c.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370046.png",
+        "alt_text": "",
+        "width": "593",
+        "height": "518",
+        "local_path": "data/categories/rx_family/others/5bdb8b5e8105c2717a48a355c0c69f79/images/5d2b4e96d697a8ab483bd22eea7e11f6.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370046-2.png",
+        "alt_text": "",
+        "width": "535",
+        "height": "666",
+        "local_path": "data/categories/rx_family/others/5bdb8b5e8105c2717a48a355c0c69f79/images/37ab2ddf7584e6559fd96290d29f67dc.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370046-3.png",
+        "alt_text": "",
+        "width": "391",
+        "height": "149",
+        "local_path": "data/categories/rx_family/others/5bdb8b5e8105c2717a48a355c0c69f79/images/8718f3ed4aced4f9637ddac4eda60cb1.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370046-4.png",
+        "alt_text": "",
+        "width": "831",
+        "height": "660",
+        "local_path": "data/categories/rx_family/others/5bdb8b5e8105c2717a48a355c0c69f79/images/f83b095b6d567f82483c5462fc408f5c.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20857261"
+      }
+    ]
+  }
+}

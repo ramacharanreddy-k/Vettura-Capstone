@@ -1,0 +1,45 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "",
+      "Off",
+      "Error",
+      "Warning",
+      "Info",
+      "Debug"
+    ],
+    [
+      "MCUBOOT_LOG_ERR",
+      "-",
+      "✓",
+      "✓",
+      "✓",
+      "✓"
+    ],
+    [
+      "MCUBOOT_LOG_WRN",
+      "-",
+      "-",
+      "✓",
+      "✓",
+      "✓"
+    ],
+    [
+      "MCUBOOT_LOG_INF",
+      "-",
+      "-",
+      "-",
+      "✓",
+      "✓"
+    ],
+    [
+      "MCUBOOT_LOG_DBG",
+      "-",
+      "-",
+      "-",
+      "-",
+      "✓"
+    ]
+  ]
+}

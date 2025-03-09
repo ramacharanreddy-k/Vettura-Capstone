@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21116869",
+    "title": "RA Family: SPI vs I2C reliability",
+    "last_updated": "2023-02-11",
+    "extracted_at": "2025-03-08T23:39:27.316316"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs SPI more reliable than I2C?\nAnswer:\nSPI is better for high speed, low power applications. I2C is better suited for communication with a large number of peripherals. Both SPI and I2C are robust, stable communication protocols for embedded applications that are well suited for the embedded world.\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "Is SPI more reliable than I2C?"
+      },
+      {
+        "type": "text",
+        "content": "Is SPI more reliable than I2C?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nSPI is better for high speed, low power applications. I2C is better suited for communication with a large number of peripherals. Both SPI and I2C are robust, stable communication protocols for embedded applications that are well suited for the embedded world.\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "SPI is better for high speed, low power applications. I2C is better suited for communication with a large number of peripherals. Both SPI and I2C are robust, stable communication protocols for embedded applications that are well suited for the embedded world."
+      },
+      {
+        "type": "text",
+        "content": "SPI is better for high speed, low power applications. I2C is better suited for communication with a large number of peripherals. Both SPI and I2C are robust, stable communication protocols for embedded applications that are well suited for the embedded world."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": []
+  }
+}

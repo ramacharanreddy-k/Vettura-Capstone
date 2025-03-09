@@ -1,0 +1,56 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "Group",
+      "A/D converter resolution",
+      "A/D conversion time before and after resolution change"
+    ],
+    [
+      "24-bit",
+      "12-bit",
+      "10-bit",
+      "8-bit"
+    ],
+    [
+      "A",
+      "✓ (Note)",
+      "",
+      "✓",
+      "✓",
+      "Different"
+    ],
+    [
+      "B",
+      "",
+      "✓",
+      "✓",
+      "✓",
+      "Same"
+    ],
+    [
+      "C",
+      "",
+      "✓",
+      "",
+      "✓",
+      "Different"
+    ],
+    [
+      "D",
+      "",
+      "✓",
+      "",
+      "",
+      "N/E"
+    ],
+    [
+      "E",
+      "",
+      "",
+      "✓",
+      "✓",
+      "Different"
+    ]
+  ]
+}

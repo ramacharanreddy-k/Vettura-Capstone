@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21606617",
+    "title": "Using external memory with RA8E1 and RA8E2 MCUs",
+    "last_updated": "2024-05-11",
+    "extracted_at": "2025-03-08T23:29:33.200077"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow can I use external memory with the RA8E1 and RA8E2 devices, if the application code exceeds the 1MB available on-chip?\nAnswer:\nRA8E1/E2 MCUs support xSPI compliant Octal SPI interface with support for Execute-In-Place (XIP). Should the code size exceed the size of on-chip memory, users have the option of using external flash connected to the Octal SPI interafce, and executing the code directly from external flash. They also have the option of bringing the code into internal flash or SRAM and executing from internal memory.\nSuitable Products\nRA8E1, RA8E2"
+      },
+      {
+        "type": "text",
+        "content": "How can I use external memory with the RA8E1 and RA8E2 devices, if the application code exceeds the 1MB available on-chip?"
+      },
+      {
+        "type": "text",
+        "content": "How can I use external memory with the RA8E1 and RA8E2 devices, if the application code exceeds the 1MB available on-chip?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRA8E1/E2 MCUs support xSPI compliant Octal SPI interface with support for Execute-In-Place (XIP). Should the code size exceed the size of on-chip memory, users have the option of using external flash connected to the Octal SPI interafce, and executing the code directly from external flash. They also have the option of bringing the code into internal flash or SRAM and executing from internal memory.\nSuitable Products\nRA8E1, RA8E2"
+      },
+      {
+        "type": "text",
+        "content": "RA8E1/E2 MCUs support xSPI compliant Octal SPI interface with support for Execute-In-Place (XIP). Should the code size exceed the size of on-chip memory, users have the option of using external flash connected to the Octal SPI interafce, and executing the code directly from external flash. They also have the option of bringing the code into internal flash or SRAM and executing from internal memory."
+      },
+      {
+        "type": "text",
+        "content": "RA8E1/E2 MCUs support xSPI compliant Octal SPI interface with support for Execute-In-Place (XIP). Should the code size exceed the size of on-chip memory, users have the option of using external flash connected to the Octal SPI interafce, and executing the code directly from external flash. They also have the option of bringing the code into internal flash or SRAM and executing from internal memory."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA8E1, RA8E2"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA8E1, RA8E2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA8E1, RA8E2"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21606627"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21606637"
+      }
+    ]
+  }
+}

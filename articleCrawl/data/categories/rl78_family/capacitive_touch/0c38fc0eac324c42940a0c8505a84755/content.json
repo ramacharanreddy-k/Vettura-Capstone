@@ -1,0 +1,217 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20977342",
+    "title": "How to Download and Use a SIS Modules",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:56:50.034556"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow can I download a SIS module from the Renesas website (not from e² studio or CS+) and use it?\nAnswer:\nSee the List of SIS Modules and download the module you need from Renesas Web site.\nUnzip the downloaded file (*.zip), and then copy the contents (*.xml, *.zip, and *.mdf, if any) to the SIS module download folder.\nThe following are the default download folders.\ne² studio :  %USERPROFILE%\\.eclipse\\com.renesas.platform_download\\RL78_Modules\\GenericModules\nCS+  :  %USERPROFILE%\\.eclipse\\com.renesas.smc.rcp.product_download\\RL78_Modules\\GenericModules\nCopying and pasting the strings to the Windows File Explorer address bar will open the folder.\n  If the folder cannot be found or has been moved, find the folder as follows.\ne² studio :\n    Select [Window], [Preferences], [Renesas], and then check [Module Download].\nCS+ :\n    Start Smart Configurator, select [Window], [Preferences], and then check [Module Download].\n\nNote: The [GenericModules] folder is created when the first Smart Configurator project is made. If the [GenericModules] folder does not exist, create the folder, and then copy the files to it.\nE.g., e² studio [Preferences]:\n\nExample: e² studio [GenericModules] folder with copied files. (There might be no [Downloaded] folder, but this is not a problem. The contents are very similar in CS+.)\n\nAfter placing the files in the destination folder, start Smart Configurator, and then click the [Add component] button as shown below.\n\n\nMake sure that the added SIS module is available in the dialog box below.\n\n  Suitable Products\nRL78/G23, RL78/G22, RL78/G16"
+      },
+      {
+        "type": "text",
+        "content": "How can I download a SIS module from the Renesas website (not from e² studio or CS+) and use it?"
+      },
+      {
+        "type": "text",
+        "content": "How can I download a SIS module from the Renesas website (not from e² studio or CS+) and use it?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nSee the List of SIS Modules and download the module you need from Renesas Web site.\nUnzip the downloaded file (*.zip), and then copy the contents (*.xml, *.zip, and *.mdf, if any) to the SIS module download folder.\nThe following are the default download folders.\ne² studio :  %USERPROFILE%\\.eclipse\\com.renesas.platform_download\\RL78_Modules\\GenericModules\nCS+  :  %USERPROFILE%\\.eclipse\\com.renesas.smc.rcp.product_download\\RL78_Modules\\GenericModules\nCopying and pasting the strings to the Windows File Explorer address bar will open the folder.\n  If the folder cannot be found or has been moved, find the folder as follows.\ne² studio :\n    Select [Window], [Preferences], [Renesas], and then check [Module Download].\nCS+ :\n    Start Smart Configurator, select [Window], [Preferences], and then check [Module Download].\n\nNote: The [GenericModules] folder is created when the first Smart Configurator project is made. If the [GenericModules] folder does not exist, create the folder, and then copy the files to it.\nE.g., e² studio [Preferences]:\n\nExample: e² studio [GenericModules] folder with copied files. (There might be no [Downloaded] folder, but this is not a problem. The contents are very similar in CS+.)\n\nAfter placing the files in the destination folder, start Smart Configurator, and then click the [Add component] button as shown below.\n\n\nMake sure that the added SIS module is available in the dialog box below.\n\n  Suitable Products\nRL78/G23, RL78/G22, RL78/G16"
+      },
+      {
+        "type": "text",
+        "content": "See the List of SIS Modules and download the module you need from Renesas Web site.\nUnzip the downloaded file (*.zip), and then copy the contents (*.xml, *.zip, and *.mdf, if any) to the SIS module download folder.\nThe following are the default download folders.\ne² studio :  %USERPROFILE%\\.eclipse\\com.renesas.platform_download\\RL78_Modules\\GenericModules\nCS+  :  %USERPROFILE%\\.eclipse\\com.renesas.smc.rcp.product_download\\RL78_Modules\\GenericModules\nCopying and pasting the strings to the Windows File Explorer address bar will open the folder.\n  If the folder cannot be found or has been moved, find the folder as follows.\ne² studio :\n    Select [Window], [Preferences], [Renesas], and then check [Module Download].\nCS+ :\n    Start Smart Configurator, select [Window], [Preferences], and then check [Module Download].\n\nNote: The [GenericModules] folder is created when the first Smart Configurator project is made. If the [GenericModules] folder does not exist, create the folder, and then copy the files to it.\nE.g., e² studio [Preferences]:\n\nExample: e² studio [GenericModules] folder with copied files. (There might be no [Downloaded] folder, but this is not a problem. The contents are very similar in CS+.)\n\nAfter placing the files in the destination folder, start Smart Configurator, and then click the [Add component] button as shown below.\n\n\nMake sure that the added SIS module is available in the dialog box below."
+      },
+      {
+        "type": "text",
+        "content": "See the List of SIS Modules and download the module you need from Renesas Web site.\nUnzip the downloaded file (*.zip), and then copy the contents (*.xml, *.zip, and *.mdf, if any) to the SIS module download folder."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372029.png",
+          "alt_text": "",
+          "width": "668",
+          "height": "214",
+          "local_path": "data/categories/rl78_family/capacitive_touch/0c38fc0eac324c42940a0c8505a84755/images/5657ae0054503aae3352121bd6b666bd.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The following are the default download folders."
+      },
+      {
+        "type": "text",
+        "content": "e² studio :  %USERPROFILE%\\.eclipse\\com.renesas.platform_download\\RL78_Modules\\GenericModules"
+      },
+      {
+        "type": "text",
+        "content": "CS+  :  %USERPROFILE%\\.eclipse\\com.renesas.smc.rcp.product_download\\RL78_Modules\\GenericModules"
+      },
+      {
+        "type": "text",
+        "content": "Copying and pasting the strings to the Windows File Explorer address bar will open the folder."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372029-2.png",
+          "alt_text": "",
+          "width": "801",
+          "height": "37",
+          "local_path": "data/categories/rl78_family/capacitive_touch/0c38fc0eac324c42940a0c8505a84755/images/0ae2664d95b166195254ef5b709124f2.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "If the folder cannot be found or has been moved, find the folder as follows.\ne² studio :\n    Select [Window], [Preferences], [Renesas], and then check [Module Download].\nCS+ :\n    Start Smart Configurator, select [Window], [Preferences], and then check [Module Download].\n\nNote: The [GenericModules] folder is created when the first Smart Configurator project is made. If the [GenericModules] folder does not exist, create the folder, and then copy the files to it."
+      },
+      {
+        "type": "text",
+        "content": "E.g., e² studio [Preferences]:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372029-3.png",
+          "alt_text": "",
+          "width": "782",
+          "height": "377",
+          "local_path": "data/categories/rl78_family/capacitive_touch/0c38fc0eac324c42940a0c8505a84755/images/75786d68092a2d551305023268937fc9.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Example: e² studio [GenericModules] folder with copied files. (There might be no [Downloaded] folder, but this is not a problem. The contents are very similar in CS+.)"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372029-4.png",
+          "alt_text": "",
+          "width": "772",
+          "height": "168",
+          "local_path": "data/categories/rl78_family/capacitive_touch/0c38fc0eac324c42940a0c8505a84755/images/830cc14e0f626c3ca818209cd6ae8455.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "After placing the files in the destination folder, start Smart Configurator, and then click the [Add component] button as shown below."
+      },
+      {
+        "type": "text",
+        "content": "Make sure that the added SIS module is available in the dialog box below."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372029-5.png",
+          "alt_text": "",
+          "width": "437",
+          "height": "381",
+          "local_path": "data/categories/rl78_family/capacitive_touch/0c38fc0eac324c42940a0c8505a84755/images/d8decd5ad5818eda4000213005fdbe70.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372029-6.png",
+          "alt_text": "",
+          "width": "587",
+          "height": "716",
+          "local_path": "data/categories/rl78_family/capacitive_touch/0c38fc0eac324c42940a0c8505a84755/images/f93c5286147373bc2c5cae866054994a.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/G23, RL78/G22, RL78/G16"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372029.png",
+        "alt_text": "",
+        "width": "668",
+        "height": "214",
+        "local_path": "data/categories/rl78_family/capacitive_touch/0c38fc0eac324c42940a0c8505a84755/images/5657ae0054503aae3352121bd6b666bd.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372029-2.png",
+        "alt_text": "",
+        "width": "801",
+        "height": "37",
+        "local_path": "data/categories/rl78_family/capacitive_touch/0c38fc0eac324c42940a0c8505a84755/images/0ae2664d95b166195254ef5b709124f2.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372029-3.png",
+        "alt_text": "",
+        "width": "782",
+        "height": "377",
+        "local_path": "data/categories/rl78_family/capacitive_touch/0c38fc0eac324c42940a0c8505a84755/images/75786d68092a2d551305023268937fc9.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372029-4.png",
+        "alt_text": "",
+        "width": "772",
+        "height": "168",
+        "local_path": "data/categories/rl78_family/capacitive_touch/0c38fc0eac324c42940a0c8505a84755/images/830cc14e0f626c3ca818209cd6ae8455.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372029-5.png",
+        "alt_text": "",
+        "width": "437",
+        "height": "381",
+        "local_path": "data/categories/rl78_family/capacitive_touch/0c38fc0eac324c42940a0c8505a84755/images/d8decd5ad5818eda4000213005fdbe70.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372029-6.png",
+        "alt_text": "",
+        "width": "587",
+        "height": "716",
+        "local_path": "data/categories/rl78_family/capacitive_touch/0c38fc0eac324c42940a0c8505a84755/images/f93c5286147373bc2c5cae866054994a.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G23, RL78/G22, RL78/G16"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G23, RL78/G22, RL78/G16"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20977348"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20977355"
+      }
+    ]
+  }
+}

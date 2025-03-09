@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20626305",
+    "title": "I want to evaluate a different motor of larger power and/or higher voltage. Is that possible?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:25:17.321201"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI want to evaluate a different motor of larger power and/or higher voltage. Is that possible?\nAnswer:\nYes. The kit has an expansion connector (not populated) which allows expanding it with either a higher power interface board, or high voltage interface board, available from our partner. Please contact our development partner for more information.\nSuitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "I want to evaluate a different motor of larger power and/or higher voltage. Is that possible?"
+      },
+      {
+        "type": "text",
+        "content": "I want to evaluate a different motor of larger power and/or higher voltage. Is that possible?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes. The kit has an expansion connector (not populated) which allows expanding it with either a higher power interface board, or high voltage interface board, available from our partner. Please contact our development partner for more information.\nSuitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "Yes. The kit has an expansion connector (not populated) which allows expanding it with either a higher power interface board, or high voltage interface board, available from our partner. Please contact our development partner for more information."
+      },
+      {
+        "type": "text",
+        "content": "Yes. The kit has an expansion connector (not populated) which allows expanding it with either a higher power interface board, or high voltage interface board, available from our partner. Please contact our development partner for more information."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RISC-V ASSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RISC-V ASSP"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20626325"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20628066"
+      }
+    ]
+  }
+}

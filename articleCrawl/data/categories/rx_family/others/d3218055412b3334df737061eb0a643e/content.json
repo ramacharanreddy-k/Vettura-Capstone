@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21246432",
+    "title": "Advantage of using VBUSEN with a dedicated port",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:23:34.209728"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there an advantage in using VBUSEN with a dedicated port? (Is there a disadvantage in using a general-purpose port for output?) \nAnswer:\nBecause a general-purpose port can substitute for VBUSEN, there is no disadvantage even when a general-purpose port is used. \nSuitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "Is there an advantage in using VBUSEN with a dedicated port? (Is there a disadvantage in using a general-purpose port for output?)"
+      },
+      {
+        "type": "text",
+        "content": "Is there an advantage in using VBUSEN with a dedicated port? (Is there a disadvantage in using a general-purpose port for output?)"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nBecause a general-purpose port can substitute for VBUSEN, there is no disadvantage even when a general-purpose port is used. \nSuitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "Because a general-purpose port can substitute for VBUSEN, there is no disadvantage even when a general-purpose port is used."
+      },
+      {
+        "type": "text",
+        "content": "Because a general-purpose port can substitute for VBUSEN, there is no disadvantage even when a general-purpose port is used."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20016995"
+      }
+    ]
+  }
+}

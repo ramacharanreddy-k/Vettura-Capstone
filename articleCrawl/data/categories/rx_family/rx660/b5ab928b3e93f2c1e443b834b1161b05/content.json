@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20590533",
+    "title": "Recommended evaluation boards",
+    "last_updated": "2022-02-08",
+    "extracted_at": "2025-03-09T00:03:08.486368"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat boards are recommended for evaluating the RX660?\nAnswer:\nThe following two boards are recommended for evaluating the RX660.\nTarget Board for RX660:\nThis evaluation board can be obtained inexpensively to initially consider deployment with a 100-pin package (without JTAG and SubOSC function support) mounted. Just connecting with a PC for debugging by USB cable allows you to start application development because this product is equipped with an emulator circuit.\nRenesas Starter Kit for RX660:\nThis has a 144-pin package (with JTAG and SubOSC function support) mounted, and allows all functions of the RX660 to be evaluated. Since the board has various communication connectors and other components mounted, and is also equipped with a Pmod connector, you can connect a Wi-Fi module, sensor module, and other modules easily and speedily implement the evaluation of cloud connections and the PoC of IoT devices. \nSuitable Products\nRX660"
+      },
+      {
+        "type": "text",
+        "content": "What boards are recommended for evaluating the RX660?"
+      },
+      {
+        "type": "text",
+        "content": "What boards are recommended for evaluating the RX660?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe following two boards are recommended for evaluating the RX660.\nTarget Board for RX660:\nThis evaluation board can be obtained inexpensively to initially consider deployment with a 100-pin package (without JTAG and SubOSC function support) mounted. Just connecting with a PC for debugging by USB cable allows you to start application development because this product is equipped with an emulator circuit.\nRenesas Starter Kit for RX660:\nThis has a 144-pin package (with JTAG and SubOSC function support) mounted, and allows all functions of the RX660 to be evaluated. Since the board has various communication connectors and other components mounted, and is also equipped with a Pmod connector, you can connect a Wi-Fi module, sensor module, and other modules easily and speedily implement the evaluation of cloud connections and the PoC of IoT devices. \nSuitable Products\nRX660"
+      },
+      {
+        "type": "text",
+        "content": "The following two boards are recommended for evaluating the RX660.\nTarget Board for RX660:\nThis evaluation board can be obtained inexpensively to initially consider deployment with a 100-pin package (without JTAG and SubOSC function support) mounted. Just connecting with a PC for debugging by USB cable allows you to start application development because this product is equipped with an emulator circuit.\nRenesas Starter Kit for RX660:\nThis has a 144-pin package (with JTAG and SubOSC function support) mounted, and allows all functions of the RX660 to be evaluated. Since the board has various communication connectors and other components mounted, and is also equipped with a Pmod connector, you can connect a Wi-Fi module, sensor module, and other modules easily and speedily implement the evaluation of cloud connections and the PoC of IoT devices."
+      },
+      {
+        "type": "text",
+        "content": "The following two boards are recommended for evaluating the RX660."
+      },
+      {
+        "type": "text",
+        "content": "Target Board for RX660:\nThis evaluation board can be obtained inexpensively to initially consider deployment with a 100-pin package (without JTAG and SubOSC function support) mounted. Just connecting with a PC for debugging by USB cable allows you to start application development because this product is equipped with an emulator circuit."
+      },
+      {
+        "type": "text",
+        "content": "Renesas Starter Kit for RX660:\nThis has a 144-pin package (with JTAG and SubOSC function support) mounted, and allows all functions of the RX660 to be evaluated. Since the board has various communication connectors and other components mounted, and is also equipped with a Pmod connector, you can connect a Wi-Fi module, sensor module, and other modules easily and speedily implement the evaluation of cloud connections and the PoC of IoT devices."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX660"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX660"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX660"
+    ],
+    "links": [
+      {
+        "text": "Target Board for RX660",
+        "url": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rtk5rx6600c00000bj-target-board-rx660#overview"
+      },
+      {
+        "text": "Renesas Starter Kit for RX660",
+        "url": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/renesas-starter-kit-rx660"
+      },
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20590538"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20590544"
+      }
+    ]
+  }
+}

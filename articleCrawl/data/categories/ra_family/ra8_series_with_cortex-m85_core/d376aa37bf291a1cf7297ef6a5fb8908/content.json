@@ -1,0 +1,106 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21088669",
+    "title": "Advanced security with RA8 Series MCUs",
+    "last_updated": "2024-09-10",
+    "extracted_at": "2025-03-08T23:29:54.406447"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat security features are supported on the RA8 Series MCUs for highly secure IoT applications?\nAnswer:\nRA8M1:\nIn addition to leading performance, RA8 Series MCUs offer advanced, leading-edge security. With the new Cortex-M85 core, Arm brings TrustZone to their highest performance cores, that enables isolation and secure/non-secure partitioning of memory, peripherals and code. The RA8 Series MCUs introduce the most advanced Renesas Security IP (RSIP-E51A) that provides leading edge cryptographic accelerators and supports a true secure boot. Other advanced security features include immutable storage for a strong hardware Root-of-Trust, Octal SPI with Decryption-on-the-fly (DOTF), secure authenticated debug, secure factory programming and tamper protection. In concert with Arm TrustZone, this enables comprehensive and fully integrated secure element functionality. The Arm v8.1-M architecture introduces Pointer Authentication and Branch Target Identification (PACBTI) security extension that provides mitigation for software attacks. The RA8 Series targets PSA Level 2+SE, NIST CAVP and FIPS 140-3 certifications.\nRA8D1:\nIn addition to leading performance, RA8 Series MCUs offer advanced, leading-edge security. With the new Cortex-M85 core, Arm brings TrustZone to their highest performance cores, that enables isolation and secure/non-secure partitioning of memory and peripherals. The RA8D1 MCUs introduce the most advanced Renesas Security IP (RSIP-E51A) that provides leading edge cryptographic accelerators and supports a true secure boot. Other advanced security features include immutable storage for a strong hardware Root-of-Trust, Octal SPI with Decryption-on-the-fly (DOTF), secure authenticated debug, secure factory programming, DPA/SPA side-channel attack protection and tamper detection. In concert with Arm TrustZone, this enables comprehensive and fully integrated secure element functionality. The Arm v8.1-M architecture introduces Pointer Authentication and Branch Target Identification (PACBTI) security extension that provides mitigation for software attacks. The RA8 Series targets PSA Level 2+SE, NIST CAVP and FIPS 140-3 certifications.\nRA8T1:\nIn addition to leading performance, RA8T1 MCUs offer advanced, leading-edge security. With the new Cortex-M85 core, Arm brings TrustZone to their highest performance cores, that enables isolation and secure/non-secure partitioning of memory and peripherals. The RA8T1 MCUs introduce the most advanced Renesas Security IP (RSIP-E51A) that provides leading edge cryptographic accelerators and supports a true secure boot. Other advanced security features include immutable storage for a strong hardware Root-of-Trust, secure authenticated debug, secure factory programming, DPA/SPA side-channel attack protection and tamper detection. In concert with Arm TrustZone, this enables comprehensive and fully integrated secure element functionality. The Arm v8.1-M architecture introduces Pointer Authentication and Branch Target Identification (PACBTI) security extension that provides mitigation for software attacks. The RA8 Series targets PSA Level 2+SE, NIST CAVP and FIPS 140-3 certifications.\nSuitable Products\nRA8M1, RA8D1, RA8T1"
+      },
+      {
+        "type": "text",
+        "content": "What security features are supported on the RA8 Series MCUs for highly secure IoT applications?"
+      },
+      {
+        "type": "text",
+        "content": "What security features are supported on the RA8 Series MCUs for highly secure IoT applications?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRA8M1:\nIn addition to leading performance, RA8 Series MCUs offer advanced, leading-edge security. With the new Cortex-M85 core, Arm brings TrustZone to their highest performance cores, that enables isolation and secure/non-secure partitioning of memory, peripherals and code. The RA8 Series MCUs introduce the most advanced Renesas Security IP (RSIP-E51A) that provides leading edge cryptographic accelerators and supports a true secure boot. Other advanced security features include immutable storage for a strong hardware Root-of-Trust, Octal SPI with Decryption-on-the-fly (DOTF), secure authenticated debug, secure factory programming and tamper protection. In concert with Arm TrustZone, this enables comprehensive and fully integrated secure element functionality. The Arm v8.1-M architecture introduces Pointer Authentication and Branch Target Identification (PACBTI) security extension that provides mitigation for software attacks. The RA8 Series targets PSA Level 2+SE, NIST CAVP and FIPS 140-3 certifications.\nRA8D1:\nIn addition to leading performance, RA8 Series MCUs offer advanced, leading-edge security. With the new Cortex-M85 core, Arm brings TrustZone to their highest performance cores, that enables isolation and secure/non-secure partitioning of memory and peripherals. The RA8D1 MCUs introduce the most advanced Renesas Security IP (RSIP-E51A) that provides leading edge cryptographic accelerators and supports a true secure boot. Other advanced security features include immutable storage for a strong hardware Root-of-Trust, Octal SPI with Decryption-on-the-fly (DOTF), secure authenticated debug, secure factory programming, DPA/SPA side-channel attack protection and tamper detection. In concert with Arm TrustZone, this enables comprehensive and fully integrated secure element functionality. The Arm v8.1-M architecture introduces Pointer Authentication and Branch Target Identification (PACBTI) security extension that provides mitigation for software attacks. The RA8 Series targets PSA Level 2+SE, NIST CAVP and FIPS 140-3 certifications.\nRA8T1:\nIn addition to leading performance, RA8T1 MCUs offer advanced, leading-edge security. With the new Cortex-M85 core, Arm brings TrustZone to their highest performance cores, that enables isolation and secure/non-secure partitioning of memory and peripherals. The RA8T1 MCUs introduce the most advanced Renesas Security IP (RSIP-E51A) that provides leading edge cryptographic accelerators and supports a true secure boot. Other advanced security features include immutable storage for a strong hardware Root-of-Trust, secure authenticated debug, secure factory programming, DPA/SPA side-channel attack protection and tamper detection. In concert with Arm TrustZone, this enables comprehensive and fully integrated secure element functionality. The Arm v8.1-M architecture introduces Pointer Authentication and Branch Target Identification (PACBTI) security extension that provides mitigation for software attacks. The RA8 Series targets PSA Level 2+SE, NIST CAVP and FIPS 140-3 certifications.\nSuitable Products\nRA8M1, RA8D1, RA8T1"
+      },
+      {
+        "type": "text",
+        "content": "RA8M1:\nIn addition to leading performance, RA8 Series MCUs offer advanced, leading-edge security. With the new Cortex-M85 core, Arm brings TrustZone to their highest performance cores, that enables isolation and secure/non-secure partitioning of memory, peripherals and code. The RA8 Series MCUs introduce the most advanced Renesas Security IP (RSIP-E51A) that provides leading edge cryptographic accelerators and supports a true secure boot. Other advanced security features include immutable storage for a strong hardware Root-of-Trust, Octal SPI with Decryption-on-the-fly (DOTF), secure authenticated debug, secure factory programming and tamper protection. In concert with Arm TrustZone, this enables comprehensive and fully integrated secure element functionality. The Arm v8.1-M architecture introduces Pointer Authentication and Branch Target Identification (PACBTI) security extension that provides mitigation for software attacks. The RA8 Series targets PSA Level 2+SE, NIST CAVP and FIPS 140-3 certifications.\nRA8D1:\nIn addition to leading performance, RA8 Series MCUs offer advanced, leading-edge security. With the new Cortex-M85 core, Arm brings TrustZone to their highest performance cores, that enables isolation and secure/non-secure partitioning of memory and peripherals. The RA8D1 MCUs introduce the most advanced Renesas Security IP (RSIP-E51A) that provides leading edge cryptographic accelerators and supports a true secure boot. Other advanced security features include immutable storage for a strong hardware Root-of-Trust, Octal SPI with Decryption-on-the-fly (DOTF), secure authenticated debug, secure factory programming, DPA/SPA side-channel attack protection and tamper detection. In concert with Arm TrustZone, this enables comprehensive and fully integrated secure element functionality. The Arm v8.1-M architecture introduces Pointer Authentication and Branch Target Identification (PACBTI) security extension that provides mitigation for software attacks. The RA8 Series targets PSA Level 2+SE, NIST CAVP and FIPS 140-3 certifications.\nRA8T1:\nIn addition to leading performance, RA8T1 MCUs offer advanced, leading-edge security. With the new Cortex-M85 core, Arm brings TrustZone to their highest performance cores, that enables isolation and secure/non-secure partitioning of memory and peripherals. The RA8T1 MCUs introduce the most advanced Renesas Security IP (RSIP-E51A) that provides leading edge cryptographic accelerators and supports a true secure boot. Other advanced security features include immutable storage for a strong hardware Root-of-Trust, secure authenticated debug, secure factory programming, DPA/SPA side-channel attack protection and tamper detection. In concert with Arm TrustZone, this enables comprehensive and fully integrated secure element functionality. The Arm v8.1-M architecture introduces Pointer Authentication and Branch Target Identification (PACBTI) security extension that provides mitigation for software attacks. The RA8 Series targets PSA Level 2+SE, NIST CAVP and FIPS 140-3 certifications."
+      },
+      {
+        "type": "text",
+        "content": "RA8M1:"
+      },
+      {
+        "type": "text",
+        "content": "In addition to leading performance, RA8 Series MCUs offer advanced, leading-edge security. With the new Cortex-M85 core, Arm brings TrustZone to their highest performance cores, that enables isolation and secure/non-secure partitioning of memory, peripherals and code. The RA8 Series MCUs introduce the most advanced Renesas Security IP (RSIP-E51A) that provides leading edge cryptographic accelerators and supports a true secure boot. Other advanced security features include immutable storage for a strong hardware Root-of-Trust, Octal SPI with Decryption-on-the-fly (DOTF), secure authenticated debug, secure factory programming and tamper protection. In concert with Arm TrustZone, this enables comprehensive and fully integrated secure element functionality. The Arm v8.1-M architecture introduces Pointer Authentication and Branch Target Identification (PACBTI) security extension that provides mitigation for software attacks. The RA8 Series targets PSA Level 2+SE, NIST CAVP and FIPS 140-3 certifications."
+      },
+      {
+        "type": "text",
+        "content": "RA8D1:"
+      },
+      {
+        "type": "text",
+        "content": "In addition to leading performance, RA8 Series MCUs offer advanced, leading-edge security. With the new Cortex-M85 core, Arm brings TrustZone to their highest performance cores, that enables isolation and secure/non-secure partitioning of memory and peripherals. The RA8D1 MCUs introduce the most advanced Renesas Security IP (RSIP-E51A) that provides leading edge cryptographic accelerators and supports a true secure boot. Other advanced security features include immutable storage for a strong hardware Root-of-Trust, Octal SPI with Decryption-on-the-fly (DOTF), secure authenticated debug, secure factory programming, DPA/SPA side-channel attack protection and tamper detection. In concert with Arm TrustZone, this enables comprehensive and fully integrated secure element functionality. The Arm v8.1-M architecture introduces Pointer Authentication and Branch Target Identification (PACBTI) security extension that provides mitigation for software attacks. The RA8 Series targets PSA Level 2+SE, NIST CAVP and FIPS 140-3 certifications."
+      },
+      {
+        "type": "text",
+        "content": "In addition to leading performance, RA8 Series MCUs offer advanced, leading-edge security. With the new Cortex-M85 core, Arm brings TrustZone to their highest performance cores, that enables isolation and secure/non-secure partitioning of memory and peripherals. The RA8D1 MCUs introduce the most advanced Renesas Security IP (RSIP-E51A) that provides leading edge cryptographic accelerators and supports a true secure boot. Other advanced security features include immutable storage for a strong hardware Root-of-Trust, Octal SPI with Decryption-on-the-fly (DOTF), secure authenticated debug, secure factory programming, DPA/SPA side-channel attack protection and tamper detection. In concert with Arm TrustZone, this enables comprehensive and fully integrated secure element functionality. The Arm v8.1-M architecture introduces Pointer Authentication and Branch Target Identification (PACBTI) security extension that provides mitigation for software attacks. The RA8 Series targets PSA Level 2+SE, NIST CAVP and FIPS 140-3 certifications."
+      },
+      {
+        "type": "text",
+        "content": "RA8T1:"
+      },
+      {
+        "type": "text",
+        "content": "In addition to leading performance, RA8T1 MCUs offer advanced, leading-edge security. With the new Cortex-M85 core, Arm brings TrustZone to their highest performance cores, that enables isolation and secure/non-secure partitioning of memory and peripherals. The RA8T1 MCUs introduce the most advanced Renesas Security IP (RSIP-E51A) that provides leading edge cryptographic accelerators and supports a true secure boot. Other advanced security features include immutable storage for a strong hardware Root-of-Trust, secure authenticated debug, secure factory programming, DPA/SPA side-channel attack protection and tamper detection. In concert with Arm TrustZone, this enables comprehensive and fully integrated secure element functionality. The Arm v8.1-M architecture introduces Pointer Authentication and Branch Target Identification (PACBTI) security extension that provides mitigation for software attacks. The RA8 Series targets PSA Level 2+SE, NIST CAVP and FIPS 140-3 certifications."
+      },
+      {
+        "type": "text",
+        "content": "In addition to leading performance, RA8T1 MCUs offer advanced, leading-edge security. With the new Cortex-M85 core, Arm brings TrustZone to their highest performance cores, that enables isolation and secure/non-secure partitioning of memory and peripherals. The RA8T1 MCUs introduce the most advanced Renesas Security IP (RSIP-E51A) that provides leading edge cryptographic accelerators and supports a true secure boot. Other advanced security features include immutable storage for a strong hardware Root-of-Trust, secure authenticated debug, secure factory programming, DPA/SPA side-channel attack protection and tamper detection. In concert with Arm TrustZone, this enables comprehensive and fully integrated secure element functionality. The Arm v8.1-M architecture introduces Pointer Authentication and Branch Target Identification (PACBTI) security extension that provides mitigation for software attacks. The RA8 Series targets PSA Level 2+SE, NIST CAVP and FIPS 140-3 certifications."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA8M1, RA8D1, RA8T1"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA8M1, RA8D1, RA8T1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA8M1, RA8D1, RA8T1"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21088730"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21088741"
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21180419",
+    "title": "RZ/V: Cannot execute AI Applications Demo SD image v2.00 on the EVK board",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:52:00.295457"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI tried demos in AI applications Demo SD image v2.00 on the board, but EVK board didn't boot up.\nAnswer:\nAI SDK v2.00 or abobe is introduces eSD boot ; you need not write a flash writer and boot loader compared to eMMC boot.\nAI Applications Demo SD image v2.00 or abobe is set up with eSD boot. Therefore, it doesn't work on environment based on AI SDK v1.00 ; it is eMMC boot. Please check Renesas AI SDK Website.\nhttps://renesas-rz.github.io/rzv_ai_sdk/2.10/getting_started.html#step7-3\nWe are going to update AI SDK sequentially. Please consider your AI SDK environment updates into latest one.\nSuitable Products\nRZ/V"
+      },
+      {
+        "type": "text",
+        "content": "I tried demos in AI applications Demo SD image v2.00 on the board, but EVK board didn't boot up."
+      },
+      {
+        "type": "text",
+        "content": "I tried demos in AI applications Demo SD image v2.00 on the board, but EVK board didn't boot up."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nAI SDK v2.00 or abobe is introduces eSD boot ; you need not write a flash writer and boot loader compared to eMMC boot.\nAI Applications Demo SD image v2.00 or abobe is set up with eSD boot. Therefore, it doesn't work on environment based on AI SDK v1.00 ; it is eMMC boot. Please check Renesas AI SDK Website.\nhttps://renesas-rz.github.io/rzv_ai_sdk/2.10/getting_started.html#step7-3\nWe are going to update AI SDK sequentially. Please consider your AI SDK environment updates into latest one.\nSuitable Products\nRZ/V"
+      },
+      {
+        "type": "text",
+        "content": "AI SDK v2.00 or abobe is introduces eSD boot ; you need not write a flash writer and boot loader compared to eMMC boot.\nAI Applications Demo SD image v2.00 or abobe is set up with eSD boot. Therefore, it doesn't work on environment based on AI SDK v1.00 ; it is eMMC boot. Please check Renesas AI SDK Website.\nhttps://renesas-rz.github.io/rzv_ai_sdk/2.10/getting_started.html#step7-3\nWe are going to update AI SDK sequentially. Please consider your AI SDK environment updates into latest one."
+      },
+      {
+        "type": "text",
+        "content": "AI SDK v2.00 or abobe is introduces eSD boot ; you need not write a flash writer and boot loader compared to eMMC boot."
+      },
+      {
+        "type": "text",
+        "content": "AI Applications Demo SD image v2.00 or abobe is set up with eSD boot. Therefore, it doesn't work on environment based on AI SDK v1.00 ; it is eMMC boot. Please check Renesas AI SDK Website.\nhttps://renesas-rz.github.io/rzv_ai_sdk/2.10/getting_started.html#step7-3"
+      },
+      {
+        "type": "text",
+        "content": "We are going to update AI SDK sequentially. Please consider your AI SDK environment updates into latest one."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V"
+    ],
+    "links": [
+      {
+        "text": "https://renesas-rz.github.io/rzv_ai_sdk/2.10/getting_started.html#step7-3",
+        "url": "https://renesas-rz.github.io/rzv_ai_sdk/2.10/getting_started.html#step7-3"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21180424"
+      }
+    ]
+  }
+}

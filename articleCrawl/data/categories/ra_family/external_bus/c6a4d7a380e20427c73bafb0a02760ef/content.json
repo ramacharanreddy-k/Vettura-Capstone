@@ -1,0 +1,349 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21810949",
+    "title": "RA Family: How to connect external SDRAM",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:35:32.172218"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI plan to connect a 16-bit wide SDRAM by using the SDRAM area controller (SDRAMC) of the RA MCU.\nI am considering the following four types of Micron memory as target memory. Is it possible to use any one of these SDRAMs?\nMT48LC4M16A2   –  64Mb ( 8MB)\nMT48LC8M16A2   – 128Mb (16MB)\nMT48LC16M16A2 – 256Mb (32MB)\nMT48LC32M16A2 – 512Mb (64MB)\nAnswer:\nYes, it is possible to connect these SDRAM types.\nIf the user wants to connect the largest memory MT48LC32M16A2, Figure 1 shows the general connection method. On the other hand, as shown in Figure 2, all four types of memory can be used on the same PCB which is designed by replacing some of the wiring of the address line and bank address line.\nIn addition, the address pins of the RA MCU use byte addressing, and the address pins of the SDRAM use word addressing. For this reason, the address lines of the two devices are connected using an offset.\nFigure 1.  General Connection\n  Figure 2. Proposed Connection\n  【Explanation】\nComparing the addressing specifications of the four types of SDRAM, they can be classified as shown in Table 1.\nTable 1. The address specifications of each SDRAM\nPart Numbers Density Bank address Row address Column address\nMT48LC4M16A2 64Mb (8MB) BA[1:0] (2bit)\nA[11:0] (12bits)\nA[7:0] (8bits)\nMT48LC8M16A2 128Mb (16MB) A[8:0] (9bits)\nMT48LC16M16A2 256Mb (32MB) A[12:0] (13bits)\nMT48LC32M16A2 512Mb (64MB) A[9:0] (10bits)\nThe difference in column address can be managed by setting the register of the RA MCU. By changing the address multiplexing selection bits of the SDRAM address register (SDADR. MXC[1:0]) , the amount of shift in the row address is set and it does not directly affect the routing on the board.\n\nTable 2. The setting of address multiplexing for each SDRAM\nPart Numbers Density Column address SDADR.MXC[1:0]\nMT48LC4M16A2 64Mb (8MB) A[7:0] (8bits) 0 0 : 8-bit shift\nMT48LC8M16A2 128Mb (16MB) A[8:0] (9bits) 0 1 : 9-bit shift\nMT48LC16M16A2 256Mb (32MB)\nMT48LC32M16A2 512Mb (64MB) A[9:0] (10bits) 1 0 : 10-bit shift\n  On the other hand, the difference in Row address needs to be managed by H/W.\nFirst, check the address specifications of the RA MCU. Table 3. shows the relationship between the RA MCU internal address and the RA MCU external pins for SDRAM address. As shown in this table, MT48LC16M16A2 (32 MB) and MT48LC32M16A2 (64 MB) require one more external pin A15.\n\nTable 3. Relationship between RA MCU internal address and External address pins\na[31:0] : RA MCU Internal address\nA[15:0] : RA MCU External pins for SDRAMC address signals\n  Similarly, the specifications on the SDRAM are also compared. Figure 3 and Figure 4 are pinout diagrams corresponding to each memory model number. In the case of MT48LC16M16A2 and MT48LC32M16A2, one more address pin (A12) is enabled at pin36. In the case of MT48LC4M16A2 and MT48LC8M16A2, pin36 is NC.\nBy connecting that pin36 (A12) to the A15 pin of the RA MCU and shifting the bank address, it is possible to realize a board which has the required specifications.\nFigure 3. Pin assignment (MT48LC4M16A2 and MT48LC8M16A2)\n    Figure 4. Pin assignment (MT48LC16M16A2 and MT48LC32M16A2)\n    【Reference】\nThe relationship between each connection and their memory allocation when the MT48LC32M16A2 is selected as follows.\nIn the case of the proposed connection, the access in SDRAM is interleaved. As a result, data is stored in a different location in SDRAM compared to general connection, but there is no particular effect on the operation of the RA MCU.\nFigure 5. Memory allocation (general connection)\n  Figure 6. Memory allocation (proposed connection)\n  Suitable Products\nRA8M1, RA8D1, RA8T1, RA8E2, RA6M3, RA6M2"
+      },
+      {
+        "type": "text",
+        "content": "I plan to connect a 16-bit wide SDRAM by using the SDRAM area controller (SDRAMC) of the RA MCU.\nI am considering the following four types of Micron memory as target memory. Is it possible to use any one of these SDRAMs?\nMT48LC4M16A2   –  64Mb ( 8MB)\nMT48LC8M16A2   – 128Mb (16MB)\nMT48LC16M16A2 – 256Mb (32MB)\nMT48LC32M16A2 – 512Mb (64MB)"
+      },
+      {
+        "type": "text",
+        "content": "I plan to connect a 16-bit wide SDRAM by using the SDRAM area controller (SDRAMC) of the RA MCU."
+      },
+      {
+        "type": "text",
+        "content": "I am considering the following four types of Micron memory as target memory. Is it possible to use any one of these SDRAMs?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes, it is possible to connect these SDRAM types.\nIf the user wants to connect the largest memory MT48LC32M16A2, Figure 1 shows the general connection method. On the other hand, as shown in Figure 2, all four types of memory can be used on the same PCB which is designed by replacing some of the wiring of the address line and bank address line.\nIn addition, the address pins of the RA MCU use byte addressing, and the address pins of the SDRAM use word addressing. For this reason, the address lines of the two devices are connected using an offset.\nFigure 1.  General Connection\n  Figure 2. Proposed Connection\n  【Explanation】\nComparing the addressing specifications of the four types of SDRAM, they can be classified as shown in Table 1.\nTable 1. The address specifications of each SDRAM\nPart Numbers Density Bank address Row address Column address\nMT48LC4M16A2 64Mb (8MB) BA[1:0] (2bit)\nA[11:0] (12bits)\nA[7:0] (8bits)\nMT48LC8M16A2 128Mb (16MB) A[8:0] (9bits)\nMT48LC16M16A2 256Mb (32MB) A[12:0] (13bits)\nMT48LC32M16A2 512Mb (64MB) A[9:0] (10bits)\nThe difference in column address can be managed by setting the register of the RA MCU. By changing the address multiplexing selection bits of the SDRAM address register (SDADR. MXC[1:0]) , the amount of shift in the row address is set and it does not directly affect the routing on the board.\n\nTable 2. The setting of address multiplexing for each SDRAM\nPart Numbers Density Column address SDADR.MXC[1:0]\nMT48LC4M16A2 64Mb (8MB) A[7:0] (8bits) 0 0 : 8-bit shift\nMT48LC8M16A2 128Mb (16MB) A[8:0] (9bits) 0 1 : 9-bit shift\nMT48LC16M16A2 256Mb (32MB)\nMT48LC32M16A2 512Mb (64MB) A[9:0] (10bits) 1 0 : 10-bit shift\n  On the other hand, the difference in Row address needs to be managed by H/W.\nFirst, check the address specifications of the RA MCU. Table 3. shows the relationship between the RA MCU internal address and the RA MCU external pins for SDRAM address. As shown in this table, MT48LC16M16A2 (32 MB) and MT48LC32M16A2 (64 MB) require one more external pin A15.\n\nTable 3. Relationship between RA MCU internal address and External address pins\na[31:0] : RA MCU Internal address\nA[15:0] : RA MCU External pins for SDRAMC address signals\n  Similarly, the specifications on the SDRAM are also compared. Figure 3 and Figure 4 are pinout diagrams corresponding to each memory model number. In the case of MT48LC16M16A2 and MT48LC32M16A2, one more address pin (A12) is enabled at pin36. In the case of MT48LC4M16A2 and MT48LC8M16A2, pin36 is NC.\nBy connecting that pin36 (A12) to the A15 pin of the RA MCU and shifting the bank address, it is possible to realize a board which has the required specifications.\nFigure 3. Pin assignment (MT48LC4M16A2 and MT48LC8M16A2)\n    Figure 4. Pin assignment (MT48LC16M16A2 and MT48LC32M16A2)\n    【Reference】\nThe relationship between each connection and their memory allocation when the MT48LC32M16A2 is selected as follows.\nIn the case of the proposed connection, the access in SDRAM is interleaved. As a result, data is stored in a different location in SDRAM compared to general connection, but there is no particular effect on the operation of the RA MCU.\nFigure 5. Memory allocation (general connection)\n  Figure 6. Memory allocation (proposed connection)\n  Suitable Products\nRA8M1, RA8D1, RA8T1, RA8E2, RA6M3, RA6M2"
+      },
+      {
+        "type": "text",
+        "content": "Yes, it is possible to connect these SDRAM types.\nIf the user wants to connect the largest memory MT48LC32M16A2, Figure 1 shows the general connection method. On the other hand, as shown in Figure 2, all four types of memory can be used on the same PCB which is designed by replacing some of the wiring of the address line and bank address line.\nIn addition, the address pins of the RA MCU use byte addressing, and the address pins of the SDRAM use word addressing. For this reason, the address lines of the two devices are connected using an offset.\nFigure 1.  General Connection\n  Figure 2. Proposed Connection\n  【Explanation】\nComparing the addressing specifications of the four types of SDRAM, they can be classified as shown in Table 1.\nTable 1. The address specifications of each SDRAM\nPart Numbers Density Bank address Row address Column address\nMT48LC4M16A2 64Mb (8MB) BA[1:0] (2bit)\nA[11:0] (12bits)\nA[7:0] (8bits)\nMT48LC8M16A2 128Mb (16MB) A[8:0] (9bits)\nMT48LC16M16A2 256Mb (32MB) A[12:0] (13bits)\nMT48LC32M16A2 512Mb (64MB) A[9:0] (10bits)\nThe difference in column address can be managed by setting the register of the RA MCU. By changing the address multiplexing selection bits of the SDRAM address register (SDADR. MXC[1:0]) , the amount of shift in the row address is set and it does not directly affect the routing on the board.\n\nTable 2. The setting of address multiplexing for each SDRAM\nPart Numbers Density Column address SDADR.MXC[1:0]\nMT48LC4M16A2 64Mb (8MB) A[7:0] (8bits) 0 0 : 8-bit shift\nMT48LC8M16A2 128Mb (16MB) A[8:0] (9bits) 0 1 : 9-bit shift\nMT48LC16M16A2 256Mb (32MB)\nMT48LC32M16A2 512Mb (64MB) A[9:0] (10bits) 1 0 : 10-bit shift\n  On the other hand, the difference in Row address needs to be managed by H/W.\nFirst, check the address specifications of the RA MCU. Table 3. shows the relationship between the RA MCU internal address and the RA MCU external pins for SDRAM address. As shown in this table, MT48LC16M16A2 (32 MB) and MT48LC32M16A2 (64 MB) require one more external pin A15.\n\nTable 3. Relationship between RA MCU internal address and External address pins\na[31:0] : RA MCU Internal address\nA[15:0] : RA MCU External pins for SDRAMC address signals\n  Similarly, the specifications on the SDRAM are also compared. Figure 3 and Figure 4 are pinout diagrams corresponding to each memory model number. In the case of MT48LC16M16A2 and MT48LC32M16A2, one more address pin (A12) is enabled at pin36. In the case of MT48LC4M16A2 and MT48LC8M16A2, pin36 is NC.\nBy connecting that pin36 (A12) to the A15 pin of the RA MCU and shifting the bank address, it is possible to realize a board which has the required specifications.\nFigure 3. Pin assignment (MT48LC4M16A2 and MT48LC8M16A2)\n    Figure 4. Pin assignment (MT48LC16M16A2 and MT48LC32M16A2)\n    【Reference】\nThe relationship between each connection and their memory allocation when the MT48LC32M16A2 is selected as follows.\nIn the case of the proposed connection, the access in SDRAM is interleaved. As a result, data is stored in a different location in SDRAM compared to general connection, but there is no particular effect on the operation of the RA MCU.\nFigure 5. Memory allocation (general connection)\n  Figure 6. Memory allocation (proposed connection)\n  Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "Yes, it is possible to connect these SDRAM types."
+      },
+      {
+        "type": "text",
+        "content": "If the user wants to connect the largest memory MT48LC32M16A2, Figure 1 shows the general connection method. On the other hand, as shown in Figure 2, all four types of memory can be used on the same PCB which is designed by replacing some of the wiring of the address line and bank address line.\nIn addition, the address pins of the RA MCU use byte addressing, and the address pins of the SDRAM use word addressing. For this reason, the address lines of the two devices are connected using an offset."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399858-f1.png",
+          "alt_text": "",
+          "width": "837",
+          "height": "562",
+          "local_path": "data/categories/ra_family/external_bus/c6a4d7a380e20427c73bafb0a02760ef/images/4c303e20af5c11ada331a29cc1d9e024.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 1.  General Connection"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399858-f2.png",
+          "alt_text": "",
+          "width": "831",
+          "height": "555",
+          "local_path": "data/categories/ra_family/external_bus/c6a4d7a380e20427c73bafb0a02760ef/images/80af3029d7bc0032a1bf868e2c832ee3.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 2. Proposed Connection"
+      },
+      {
+        "type": "text",
+        "content": "【Explanation】"
+      },
+      {
+        "type": "text",
+        "content": "Comparing the addressing specifications of the four types of SDRAM, they can be classified as shown in Table 1."
+      },
+      {
+        "type": "text",
+        "content": "Table 1. The address specifications of each SDRAM"
+      },
+      {
+        "type": "text",
+        "content": "A[11:0] (12bits)"
+      },
+      {
+        "type": "text",
+        "content": "The difference in column address can be managed by setting the register of the RA MCU. By changing the address multiplexing selection bits of the SDRAM address register (SDADR. MXC[1:0]) , the amount of shift in the row address is set and it does not directly affect the routing on the board."
+      },
+      {
+        "type": "text",
+        "content": "Table 2. The setting of address multiplexing for each SDRAM"
+      },
+      {
+        "type": "text",
+        "content": "On the other hand, the difference in Row address needs to be managed by H/W."
+      },
+      {
+        "type": "text",
+        "content": "First, check the address specifications of the RA MCU. Table 3. shows the relationship between the RA MCU internal address and the RA MCU external pins for SDRAM address. As shown in this table, MT48LC16M16A2 (32 MB) and MT48LC32M16A2 (64 MB) require one more external pin A15."
+      },
+      {
+        "type": "text",
+        "content": "Table 3. Relationship between RA MCU internal address and External address pins"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399858-t3.png",
+          "alt_text": "",
+          "width": "1200",
+          "height": "234",
+          "local_path": "data/categories/ra_family/external_bus/c6a4d7a380e20427c73bafb0a02760ef/images/78abf77ad0677d25f5cfeecc0f956bcb.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "a[31:0] : RA MCU Internal address\nA[15:0] : RA MCU External pins for SDRAMC address signals"
+      },
+      {
+        "type": "text",
+        "content": "Similarly, the specifications on the SDRAM are also compared. Figure 3 and Figure 4 are pinout diagrams corresponding to each memory model number. In the case of MT48LC16M16A2 and MT48LC32M16A2, one more address pin (A12) is enabled at pin36. In the case of MT48LC4M16A2 and MT48LC8M16A2, pin36 is NC."
+      },
+      {
+        "type": "text",
+        "content": "By connecting that pin36 (A12) to the A15 pin of the RA MCU and shifting the bank address, it is possible to realize a board which has the required specifications."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399858-f3_2.png",
+          "alt_text": "",
+          "width": "456",
+          "height": "751",
+          "local_path": "data/categories/ra_family/external_bus/c6a4d7a380e20427c73bafb0a02760ef/images/1d6ce4771fc1258e2b76554974a614ce.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 3. Pin assignment (MT48LC4M16A2 and MT48LC8M16A2)"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399858-f4.png",
+          "alt_text": "",
+          "width": "453",
+          "height": "751",
+          "local_path": "data/categories/ra_family/external_bus/c6a4d7a380e20427c73bafb0a02760ef/images/073bbfafdf13ff0625cd5775759cb475.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 4. Pin assignment (MT48LC16M16A2 and MT48LC32M16A2)"
+      },
+      {
+        "type": "text",
+        "content": "【Reference】"
+      },
+      {
+        "type": "text",
+        "content": "The relationship between each connection and their memory allocation when the MT48LC32M16A2 is selected as follows.\nIn the case of the proposed connection, the access in SDRAM is interleaved. As a result, data is stored in a different location in SDRAM compared to general connection, but there is no particular effect on the operation of the RA MCU."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399858-f5.png",
+          "alt_text": "",
+          "width": "1200",
+          "height": "648",
+          "local_path": "data/categories/ra_family/external_bus/c6a4d7a380e20427c73bafb0a02760ef/images/72da270b198e18f9fdda958a980cd1bb.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 5. Memory allocation (general connection)"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399858-f6.png",
+          "alt_text": "",
+          "width": "1200",
+          "height": "653",
+          "local_path": "data/categories/ra_family/external_bus/c6a4d7a380e20427c73bafb0a02760ef/images/992a3ae603af962032c66bed8d6df848.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 6. Memory allocation (proposed connection)"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA8M1, RA8D1, RA8T1, RA8E2, RA6M3, RA6M2"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399858-f1.png",
+        "alt_text": "",
+        "width": "837",
+        "height": "562",
+        "local_path": "data/categories/ra_family/external_bus/c6a4d7a380e20427c73bafb0a02760ef/images/4c303e20af5c11ada331a29cc1d9e024.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399858-f2.png",
+        "alt_text": "",
+        "width": "831",
+        "height": "555",
+        "local_path": "data/categories/ra_family/external_bus/c6a4d7a380e20427c73bafb0a02760ef/images/80af3029d7bc0032a1bf868e2c832ee3.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399858-t3.png",
+        "alt_text": "",
+        "width": "1200",
+        "height": "234",
+        "local_path": "data/categories/ra_family/external_bus/c6a4d7a380e20427c73bafb0a02760ef/images/78abf77ad0677d25f5cfeecc0f956bcb.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399858-f3_2.png",
+        "alt_text": "",
+        "width": "456",
+        "height": "751",
+        "local_path": "data/categories/ra_family/external_bus/c6a4d7a380e20427c73bafb0a02760ef/images/1d6ce4771fc1258e2b76554974a614ce.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399858-f4.png",
+        "alt_text": "",
+        "width": "453",
+        "height": "751",
+        "local_path": "data/categories/ra_family/external_bus/c6a4d7a380e20427c73bafb0a02760ef/images/073bbfafdf13ff0625cd5775759cb475.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399858-f5.png",
+        "alt_text": "",
+        "width": "1200",
+        "height": "648",
+        "local_path": "data/categories/ra_family/external_bus/c6a4d7a380e20427c73bafb0a02760ef/images/72da270b198e18f9fdda958a980cd1bb.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399858-f6.png",
+        "alt_text": "",
+        "width": "1200",
+        "height": "653",
+        "local_path": "data/categories/ra_family/external_bus/c6a4d7a380e20427c73bafb0a02760ef/images/992a3ae603af962032c66bed8d6df848.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "Part Numbers",
+            "Density",
+            "Bank address",
+            "Row address",
+            "Column address"
+          ],
+          [
+            "MT48LC4M16A2",
+            "64Mb (8MB)",
+            "BA[1:0] (2bit)",
+            "A[11:0] (12bits)",
+            "A[7:0] (8bits)"
+          ],
+          [
+            "MT48LC8M16A2",
+            "128Mb (16MB)",
+            "A[8:0] (9bits)"
+          ],
+          [
+            "MT48LC16M16A2",
+            "256Mb (32MB)",
+            "A[12:0] (13bits)"
+          ],
+          [
+            "MT48LC32M16A2",
+            "512Mb (64MB)",
+            "A[9:0] (10bits)"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "Part Numbers",
+            "Density",
+            "Column address",
+            "SDADR.MXC[1:0]"
+          ],
+          [
+            "MT48LC4M16A2",
+            "64Mb (8MB)",
+            "A[7:0] (8bits)",
+            "0 0 : 8-bit shift"
+          ],
+          [
+            "MT48LC8M16A2",
+            "128Mb (16MB)",
+            "A[8:0] (9bits)",
+            "0 1 : 9-bit shift"
+          ],
+          [
+            "MT48LC16M16A2",
+            "256Mb (32MB)"
+          ],
+          [
+            "MT48LC32M16A2",
+            "512Mb (64MB)",
+            "A[9:0] (10bits)",
+            "1 0 : 10-bit shift"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA8M1, RA8D1, RA8T1, RA8E2, RA6M3, RA6M2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA8M1, RA8D1, RA8T1, RA8E2, RA6M3, RA6M2"
+    ],
+    "links": [
+      {
+        "text": "Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21810953"
+      }
+    ]
+  }
+}

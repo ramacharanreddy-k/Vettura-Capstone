@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21130250",
+    "title": "RH850: Is Security Settings reversible?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:29:17.612966"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWe are disabling Serial programming by using the serial programming connection disabled option which is part of Security Settings of RH850KMS1. Not sure why it is not possible to revert this setting.\nAnswer:\nThe security function area can be used to configure different security functions of the device. See Figure 1 to understand the options available.\nFigure 1: List of security settings data\n\n\nIn the above Settings list, 'Serial Programming Disable' and the 'Block Erase Disable' cannot be reversed. The other settings, like 'Read Disable' can be reversed via the serial programming interface. There is a dedicated command called configuration clear which allows this. This command will be executed by the RFP if the 'Erase Chip' option is selected. The two mentioned protection cannot be removed, as the configuration clear requires the serial programming interface and a successful erase to be executable.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nWe are disabling Serial programming by using the serial programming connection disabled option which is part of Security Settings of RH850KMS1. Not sure why it is not possible to revert this setting.\nAnswer:\nThe security function area can be used to configure different security functions of the device. See Figure 1 to understand the options available.\nFigure 1: List of security settings data\n\n\nIn the above Settings list, 'Serial Programming Disable' and the 'Block Erase Disable' cannot be reversed. The other settings, like 'Read Disable' can be reversed via the serial programming interface. There is a dedicated command called configuration clear which allows this. This command will be executed by the RFP if the 'Erase Chip' option is selected. The two mentioned protection cannot be removed, as the configuration clear requires the serial programming interface and a successful erase to be executable.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "We are disabling Serial programming by using the serial programming connection disabled option which is part of Security Settings of RH850KMS1. Not sure why it is not possible to revert this setting."
+      },
+      {
+        "type": "text",
+        "content": "We are disabling Serial programming by using the serial programming connection disabled option which is part of Security Settings of RH850KMS1. Not sure why it is not possible to revert this setting."
+      },
+      {
+        "type": "text",
+        "content": "We are disabling Serial programming by using the serial programming connection disabled option which is part of Security Settings of RH850KMS1. Not sure why it is not possible to revert this setting."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe security function area can be used to configure different security functions of the device. See Figure 1 to understand the options available.\nFigure 1: List of security settings data\n\n\nIn the above Settings list, 'Serial Programming Disable' and the 'Block Erase Disable' cannot be reversed. The other settings, like 'Read Disable' can be reversed via the serial programming interface. There is a dedicated command called configuration clear which allows this. This command will be executed by the RFP if the 'Erase Chip' option is selected. The two mentioned protection cannot be removed, as the configuration clear requires the serial programming interface and a successful erase to be executable.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "The security function area can be used to configure different security functions of the device. See Figure 1 to understand the options available.\nFigure 1: List of security settings data\n\n\nIn the above Settings list, 'Serial Programming Disable' and the 'Block Erase Disable' cannot be reversed. The other settings, like 'Read Disable' can be reversed via the serial programming interface. There is a dedicated command called configuration clear which allows this. This command will be executed by the RFP if the 'Erase Chip' option is selected. The two mentioned protection cannot be removed, as the configuration clear requires the serial programming interface and a successful erase to be executable."
+      },
+      {
+        "type": "text",
+        "content": "The security function area can be used to configure different security functions of the device. See Figure 1 to understand the options available."
+      },
+      {
+        "type": "text",
+        "content": "The security function area can be used to configure different security functions of the device. See Figure 1 to understand the options available."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/5462b709-3dbb-4bff-bbd7-a594979f4037",
+          "alt_text": "",
+          "width": "601",
+          "height": "139",
+          "local_path": "data/categories/rh850_family/rh850_general/cd824a26233e5724b09e9622882ed837/images/5ea00ef8458b56aeed4d2a5dd6a66433.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 1: List of security settings data"
+      },
+      {
+        "type": "text",
+        "content": "In the above Settings list, 'Serial Programming Disable' and the 'Block Erase Disable' cannot be reversed. The other settings, like 'Read Disable' can be reversed via the serial programming interface. There is a dedicated command called configuration clear which allows this. This command will be executed by the RFP if the 'Erase Chip' option is selected. The two mentioned protection cannot be removed, as the configuration clear requires the serial programming interface and a successful erase to be executable."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/5462b709-3dbb-4bff-bbd7-a594979f4037",
+        "alt_text": "",
+        "width": "601",
+        "height": "139",
+        "local_path": "data/categories/rh850_family/rh850_general/cd824a26233e5724b09e9622882ed837/images/5ea00ef8458b56aeed4d2a5dd6a66433.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850"
+    ],
+    "links": []
+  }
+}

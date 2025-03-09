@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20483526",
+    "title": "RZ/T2M: How should I handle unused pins?",
+    "last_updated": "2022-07-06",
+    "extracted_at": "2025-03-08T23:50:07.115956"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow should I handle unused pins?\nAnswer:\nBe careful because the handling differs depending on the pin. \nHandle the unused pins in reference to the following table.\n16.5 Handling of Unused Pins\nSuitable Products\nRZ/T2M"
+      },
+      {
+        "type": "text",
+        "content": "How should I handle unused pins?"
+      },
+      {
+        "type": "text",
+        "content": "How should I handle unused pins?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nBe careful because the handling differs depending on the pin. \nHandle the unused pins in reference to the following table.\n16.5 Handling of Unused Pins\nSuitable Products\nRZ/T2M"
+      },
+      {
+        "type": "text",
+        "content": "Be careful because the handling differs depending on the pin. \nHandle the unused pins in reference to the following table.\n16.5 Handling of Unused Pins"
+      },
+      {
+        "type": "text",
+        "content": "Be careful because the handling differs depending on the pin. \nHandle the unused pins in reference to the following table."
+      },
+      {
+        "type": "text",
+        "content": "16.5 Handling of Unused Pins"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/3f9eed88-94cf-480b-8867-bead43aa75ff.png",
+          "alt_text": "",
+          "width": "664",
+          "height": "460",
+          "local_path": "data/categories/rz_family/rzt2m/521cb8e6ba2a9fb702fbedc441c0ab26/images/cd54bce4709dfd7821d675d5ca7cb0ae.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/T2M"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/3f9eed88-94cf-480b-8867-bead43aa75ff.png",
+        "alt_text": "",
+        "width": "664",
+        "height": "460",
+        "local_path": "data/categories/rz_family/rzt2m/521cb8e6ba2a9fb702fbedc441c0ab26/images/cd54bce4709dfd7821d675d5ca7cb0ae.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/T2M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/T2M"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20483532"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20483538"
+      }
+    ]
+  }
+}

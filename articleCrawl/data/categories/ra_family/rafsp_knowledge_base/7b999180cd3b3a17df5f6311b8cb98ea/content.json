@@ -1,0 +1,187 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20465583",
+    "title": "RA Family: How to use the MCUboot logging function on FSP",
+    "last_updated": "2022-08-04",
+    "extracted_at": "2025-03-08T23:20:29.842257"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to use the MCUboot logging function on FSP\nAnswer:\nThe MCUboot provides a logging function that allows you to output the running status and error information during image booting. This feature can be used to check the execution status of the bootloader.\nThe MCUboot logging function has trhe following four log levels.\nMCUBOOT_LOG_ERR (Error)\nMCUBOOT_LOG_WRN (Warning)\nMCUBOOT_LOG_INF (Info)\nMCUBOOT_LOG_DBG (Debug)\nThe below example shows how to use the MCUboot’s logging function on FSP.\nUse of semi-hosting\n\nBy default, FSP implements the MCUboot logging feature using the printf() function defined in the standard I/O header (stdio.h). For use of semi-hosting as the output interface, the developer can use this implementation as is. It can be enabled by changing the Log Level to a level other than Off, in the MCUboot logging block properties on the Stack tab of the FSP configurator\n\n\n\nThe log levels available by the property settings of the MCUboot logging block are shown in the table below.\n  Off Error Warning Info Debug\nMCUBOOT_LOG_ERR - ✓ ✓ ✓ ✓\nMCUBOOT_LOG_WRN - - ✓ ✓ ✓\nMCUBOOT_LOG_INF - - - ✓ ✓\nMCUBOOT_LOG_DBG\n- - - - ✓\n“✓”: Available, “-”: Not available\n\nThe developer should also apply the following changes required for semi-hosting to the project:\nAdd the initialization code for semi-hosting at the beginning of the program.\nResize the heap size to the appropriate size in the properties of the BSP tab.\nSet the linker option \"--specs=rdimon.specs\" from C/C++ Build > Settings > Tool Settings > Cross ARM C Linker > Miscellaneous in the project properties.\n\nUse of an output interface other than semi-hosting\n\nTo use an output interface other than semi-hosting, such as SEGGER J-Link RTT Viewer, the developer can apply any user-defined execution function by redefining the macro MCUBOOT_LOG_xxx with a new header file. The link of the created header file can be applied from the Common > General > Custom mcuboot_config.h in the MCUboot block properties on the Stacks tab.\n\n\n\nFor example, to output the information for MCUBOOT_LOG_ERR and MCUBOOT_LOG_INF to SEGGER J-Link RTT View, the developer will create a header file with references to the following and apply it to the MCUboot block properties. In this case, the log level selected in the MCUboot logging block on the FSP configurator is ignored.\n\nmcuboot_config_custom.h\n#include \"SEGGER_RTT/SEGGER_RTT.h\"\n#define MCUBOOT_LOG_ERR(_fmt, ...)  SEGGER_RTT_printf(0, \"[ERR] \" _fmt \"\\n\", ## __VA_ARGS__)\n#define MCUBOOT_LOG_WRN(...)  IGNORE(__VA_ARGS__)\n#define MCUBOOT_LOG_INF(_fmt, ...)  SEGGER_RTT_printf(0, \"[INF] \" _fmt \"\\n\", ## __VA_ARGS__)\n#define MCUBOOT_LOG_DBG(...)  IGNORE(__VA_ARGS__)\nNote: The MCUboot's logging feature may affect the performance of the MCUboot image boot process.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "How to use the MCUboot logging function on FSP"
+      },
+      {
+        "type": "text",
+        "content": "How to use the MCUboot logging function on FSP"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe MCUboot provides a logging function that allows you to output the running status and error information during image booting. This feature can be used to check the execution status of the bootloader.\nThe MCUboot logging function has trhe following four log levels.\nMCUBOOT_LOG_ERR (Error)\nMCUBOOT_LOG_WRN (Warning)\nMCUBOOT_LOG_INF (Info)\nMCUBOOT_LOG_DBG (Debug)\nThe below example shows how to use the MCUboot’s logging function on FSP.\nUse of semi-hosting\n\nBy default, FSP implements the MCUboot logging feature using the printf() function defined in the standard I/O header (stdio.h). For use of semi-hosting as the output interface, the developer can use this implementation as is. It can be enabled by changing the Log Level to a level other than Off, in the MCUboot logging block properties on the Stack tab of the FSP configurator\n\n\n\nThe log levels available by the property settings of the MCUboot logging block are shown in the table below.\n  Off Error Warning Info Debug\nMCUBOOT_LOG_ERR - ✓ ✓ ✓ ✓\nMCUBOOT_LOG_WRN - - ✓ ✓ ✓\nMCUBOOT_LOG_INF - - - ✓ ✓\nMCUBOOT_LOG_DBG\n- - - - ✓\n“✓”: Available, “-”: Not available\n\nThe developer should also apply the following changes required for semi-hosting to the project:\nAdd the initialization code for semi-hosting at the beginning of the program.\nResize the heap size to the appropriate size in the properties of the BSP tab.\nSet the linker option \"--specs=rdimon.specs\" from C/C++ Build > Settings > Tool Settings > Cross ARM C Linker > Miscellaneous in the project properties.\n\nUse of an output interface other than semi-hosting\n\nTo use an output interface other than semi-hosting, such as SEGGER J-Link RTT Viewer, the developer can apply any user-defined execution function by redefining the macro MCUBOOT_LOG_xxx with a new header file. The link of the created header file can be applied from the Common > General > Custom mcuboot_config.h in the MCUboot block properties on the Stacks tab.\n\n\n\nFor example, to output the information for MCUBOOT_LOG_ERR and MCUBOOT_LOG_INF to SEGGER J-Link RTT View, the developer will create a header file with references to the following and apply it to the MCUboot block properties. In this case, the log level selected in the MCUboot logging block on the FSP configurator is ignored.\n\nmcuboot_config_custom.h\n#include \"SEGGER_RTT/SEGGER_RTT.h\"\n#define MCUBOOT_LOG_ERR(_fmt, ...)  SEGGER_RTT_printf(0, \"[ERR] \" _fmt \"\\n\", ## __VA_ARGS__)\n#define MCUBOOT_LOG_WRN(...)  IGNORE(__VA_ARGS__)\n#define MCUBOOT_LOG_INF(_fmt, ...)  SEGGER_RTT_printf(0, \"[INF] \" _fmt \"\\n\", ## __VA_ARGS__)\n#define MCUBOOT_LOG_DBG(...)  IGNORE(__VA_ARGS__)\nNote: The MCUboot's logging feature may affect the performance of the MCUboot image boot process.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "The MCUboot provides a logging function that allows you to output the running status and error information during image booting. This feature can be used to check the execution status of the bootloader.\nThe MCUboot logging function has trhe following four log levels.\nMCUBOOT_LOG_ERR (Error)\nMCUBOOT_LOG_WRN (Warning)\nMCUBOOT_LOG_INF (Info)\nMCUBOOT_LOG_DBG (Debug)\nThe below example shows how to use the MCUboot’s logging function on FSP.\nUse of semi-hosting\n\nBy default, FSP implements the MCUboot logging feature using the printf() function defined in the standard I/O header (stdio.h). For use of semi-hosting as the output interface, the developer can use this implementation as is. It can be enabled by changing the Log Level to a level other than Off, in the MCUboot logging block properties on the Stack tab of the FSP configurator\n\n\n\nThe log levels available by the property settings of the MCUboot logging block are shown in the table below.\n  Off Error Warning Info Debug\nMCUBOOT_LOG_ERR - ✓ ✓ ✓ ✓\nMCUBOOT_LOG_WRN - - ✓ ✓ ✓\nMCUBOOT_LOG_INF - - - ✓ ✓\nMCUBOOT_LOG_DBG\n- - - - ✓\n“✓”: Available, “-”: Not available\n\nThe developer should also apply the following changes required for semi-hosting to the project:\nAdd the initialization code for semi-hosting at the beginning of the program.\nResize the heap size to the appropriate size in the properties of the BSP tab.\nSet the linker option \"--specs=rdimon.specs\" from C/C++ Build > Settings > Tool Settings > Cross ARM C Linker > Miscellaneous in the project properties.\n\nUse of an output interface other than semi-hosting\n\nTo use an output interface other than semi-hosting, such as SEGGER J-Link RTT Viewer, the developer can apply any user-defined execution function by redefining the macro MCUBOOT_LOG_xxx with a new header file. The link of the created header file can be applied from the Common > General > Custom mcuboot_config.h in the MCUboot block properties on the Stacks tab.\n\n\n\nFor example, to output the information for MCUBOOT_LOG_ERR and MCUBOOT_LOG_INF to SEGGER J-Link RTT View, the developer will create a header file with references to the following and apply it to the MCUboot block properties. In this case, the log level selected in the MCUboot logging block on the FSP configurator is ignored.\n\nmcuboot_config_custom.h\n#include \"SEGGER_RTT/SEGGER_RTT.h\"\n#define MCUBOOT_LOG_ERR(_fmt, ...)  SEGGER_RTT_printf(0, \"[ERR] \" _fmt \"\\n\", ## __VA_ARGS__)\n#define MCUBOOT_LOG_WRN(...)  IGNORE(__VA_ARGS__)\n#define MCUBOOT_LOG_INF(_fmt, ...)  SEGGER_RTT_printf(0, \"[INF] \" _fmt \"\\n\", ## __VA_ARGS__)\n#define MCUBOOT_LOG_DBG(...)  IGNORE(__VA_ARGS__)\nNote: The MCUboot's logging feature may affect the performance of the MCUboot image boot process."
+      },
+      {
+        "type": "text",
+        "content": "The MCUboot provides a logging function that allows you to output the running status and error information during image booting. This feature can be used to check the execution status of the bootloader."
+      },
+      {
+        "type": "text",
+        "content": "The MCUboot logging function has trhe following four log levels."
+      },
+      {
+        "type": "text",
+        "content": "The below example shows how to use the MCUboot’s logging function on FSP."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/69fcafa0-78fd-475a-850f-5a5af5bd9ba6.png",
+          "alt_text": "",
+          "width": "476",
+          "height": "152",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/7b999180cd3b3a17df5f6311b8cb98ea/images/a7bb6ffd472152fefff6a630494d8701.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "MCUBOOT_LOG_DBG"
+      },
+      {
+        "type": "text",
+        "content": "“✓”: Available, “-”: Not available\n\nThe developer should also apply the following changes required for semi-hosting to the project:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/0b215ff0-0544-467a-8f71-81adaa08d9f2.png",
+          "alt_text": "",
+          "width": "526",
+          "height": "157",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/7b999180cd3b3a17df5f6311b8cb98ea/images/6fd16807f3b6ca0e8fd76db470da62c6.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/9558e570-1c15-43e6-b5d9-ed71c4ecc40b.png",
+          "alt_text": "",
+          "width": "530",
+          "height": "245",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/7b999180cd3b3a17df5f6311b8cb98ea/images/9ae95bc7101afe5dc0b7fa6a3ab5ba7a.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Note: The MCUboot's logging feature may affect the performance of the MCUboot image boot process."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/69fcafa0-78fd-475a-850f-5a5af5bd9ba6.png",
+        "alt_text": "",
+        "width": "476",
+        "height": "152",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/7b999180cd3b3a17df5f6311b8cb98ea/images/a7bb6ffd472152fefff6a630494d8701.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/0b215ff0-0544-467a-8f71-81adaa08d9f2.png",
+        "alt_text": "",
+        "width": "526",
+        "height": "157",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/7b999180cd3b3a17df5f6311b8cb98ea/images/6fd16807f3b6ca0e8fd76db470da62c6.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/9558e570-1c15-43e6-b5d9-ed71c4ecc40b.png",
+        "alt_text": "",
+        "width": "530",
+        "height": "245",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/7b999180cd3b3a17df5f6311b8cb98ea/images/9ae95bc7101afe5dc0b7fa6a3ab5ba7a.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "",
+            "Off",
+            "Error",
+            "Warning",
+            "Info",
+            "Debug"
+          ],
+          [
+            "MCUBOOT_LOG_ERR",
+            "-",
+            "✓",
+            "✓",
+            "✓",
+            "✓"
+          ],
+          [
+            "MCUBOOT_LOG_WRN",
+            "-",
+            "-",
+            "✓",
+            "✓",
+            "✓"
+          ],
+          [
+            "MCUBOOT_LOG_INF",
+            "-",
+            "-",
+            "-",
+            "✓",
+            "✓"
+          ],
+          [
+            "MCUBOOT_LOG_DBG",
+            "-",
+            "-",
+            "-",
+            "-",
+            "✓"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20465573"
+      }
+    ]
+  }
+}

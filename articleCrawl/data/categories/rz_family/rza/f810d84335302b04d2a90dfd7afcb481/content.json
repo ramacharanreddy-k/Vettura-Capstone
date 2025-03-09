@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20655749",
+    "title": "RZ/A3UL: Self refresh mode for DDR",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:42:43.518293"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDoes RZ/A3UL support the self refresh mode for DDR interface?\nAnswer:\nRZ/A3UL dose not support the self refresh mode for DDR interface.\nSuitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Does RZ/A3UL support the self refresh mode for DDR interface?"
+      },
+      {
+        "type": "text",
+        "content": "Does RZ/A3UL support the self refresh mode for DDR interface?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRZ/A3UL dose not support the self refresh mode for DDR interface.\nSuitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "RZ/A3UL dose not support the self refresh mode for DDR interface."
+      },
+      {
+        "type": "text",
+        "content": "RZ/A3UL dose not support the self refresh mode for DDR interface."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A3UL"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A3UL"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20655736"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20655753"
+      }
+    ]
+  }
+}

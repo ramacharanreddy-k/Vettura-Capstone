@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20522751",
+    "title": "RA and FSP Curriculum: I-004 Introduction to FSP Azure RTOS ThreadX Lab",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:11:45.765036"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "This introductory curriculum course is a hands-on lab that introduces you to the basics of using FSP for Azure RTOS ThreadX based development. It covers the key features and their uses giving you the needed background to begin Azure RTOS based projects for your specific application.\nI-004 Introduction to FSP Azure RTOS ThreadX- an overview presentation covering the key features of Azure RTOS ThreadX and a hands-on lab using FSP 4.5.0 and the EK-RA4M2 kit. The lab illustrates the FSP implementation of key RTOS elements such as: threads, priorities, thread handles, thread properties, message queues, interrupts and semaphores, event chaining, mutexes, priority inversion, and inheritance, event flags and thread synchronization. \n  The hands-on lab materials include an introductory presentation, the PDF lab guide, the lab projects (one for each section of the lab) and the associated JLink driver. You will need to have the EK-RA4M2 or EK-RA6M4 kit as well as FSP 4.5.0 installed prior to starting the lab. Click on the links below to find the relevant information.\n  EK-RA4M2 Kit\nEK-RA6M4 Kit\nFSP 4.5.0\nFSP 4.5.0 (with EK-RA6M4)\nAll the course materials are available in a single zip file located here.\n  FSP 4.3.0 (with EK-RA6M4)\nAll the course materials are available in a single zip file located here.\n  FSP 4.3.0 (with EK-RA4M2)\nAll the course materials are available in a single zip file located here.\n  FSP 4.0.0\nA version of the course for FSP 4.0.0 is available in a single zip file located here.\n  FSP 3.6.0\nA version of the course for FSP 3.6.0 is available in a single zip file located here.\n  All Introductory RA and FSP courses are listed here.\n  Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "This introductory curriculum course is a hands-on lab that introduces you to the basics of using FSP for Azure RTOS ThreadX based development. It covers the key features and their uses giving you the needed background to begin Azure RTOS based projects for your specific application.\nI-004 Introduction to FSP Azure RTOS ThreadX- an overview presentation covering the key features of Azure RTOS ThreadX and a hands-on lab using FSP 4.5.0 and the EK-RA4M2 kit. The lab illustrates the FSP implementation of key RTOS elements such as: threads, priorities, thread handles, thread properties, message queues, interrupts and semaphores, event chaining, mutexes, priority inversion, and inheritance, event flags and thread synchronization. \n  The hands-on lab materials include an introductory presentation, the PDF lab guide, the lab projects (one for each section of the lab) and the associated JLink driver. You will need to have the EK-RA4M2 or EK-RA6M4 kit as well as FSP 4.5.0 installed prior to starting the lab. Click on the links below to find the relevant information.\n  EK-RA4M2 Kit\nEK-RA6M4 Kit\nFSP 4.5.0\nFSP 4.5.0 (with EK-RA6M4)\nAll the course materials are available in a single zip file located here.\n  FSP 4.3.0 (with EK-RA6M4)\nAll the course materials are available in a single zip file located here.\n  FSP 4.3.0 (with EK-RA4M2)\nAll the course materials are available in a single zip file located here.\n  FSP 4.0.0\nA version of the course for FSP 4.0.0 is available in a single zip file located here.\n  FSP 3.6.0\nA version of the course for FSP 3.6.0 is available in a single zip file located here.\n  All Introductory RA and FSP courses are listed here.\n  Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "This introductory curriculum course is a hands-on lab that introduces you to the basics of using FSP for Azure RTOS ThreadX based development. It covers the key features and their uses giving you the needed background to begin Azure RTOS based projects for your specific application."
+      },
+      {
+        "type": "text",
+        "content": "I-004 Introduction to FSP Azure RTOS ThreadX- an overview presentation covering the key features of Azure RTOS ThreadX and a hands-on lab using FSP 4.5.0 and the EK-RA4M2 kit. The lab illustrates the FSP implementation of key RTOS elements such as: threads, priorities, thread handles, thread properties, message queues, interrupts and semaphores, event chaining, mutexes, priority inversion, and inheritance, event flags and thread synchronization."
+      },
+      {
+        "type": "text",
+        "content": "I-004 Introduction to FSP Azure RTOS ThreadX- an overview presentation covering the key features of Azure RTOS ThreadX and a hands-on lab using FSP 4.5.0 and the EK-RA4M2 kit. The lab illustrates the FSP implementation of key RTOS elements such as: threads, priorities, thread handles, thread properties, message queues, interrupts and semaphores, event chaining, mutexes, priority inversion, and inheritance, event flags and thread synchronization."
+      },
+      {
+        "type": "text",
+        "content": "I-004 Introduction to FSP Azure RTOS ThreadX-"
+      },
+      {
+        "type": "text",
+        "content": "an overview presentation covering the key features of Azure RTOS ThreadX and a hands-on lab using FSP 4.5.0 and the EK-RA4M2 kit. The lab illustrates the FSP implementation of key RTOS elements such as: threads, priorities, thread handles, thread properties, message queues, interrupts and semaphores, event chaining, mutexes, priority inversion, and inheritance, event flags and thread synchronization."
+      },
+      {
+        "type": "text",
+        "content": "The hands-on lab materials include an introductory presentation, the PDF lab guide, the lab projects (one for each section of the lab) and the associated JLink driver. You will need to have the EK-RA4M2 or EK-RA6M4 kit as well as FSP 4.5.0 installed prior to starting the lab. Click on the links below to find the relevant information."
+      },
+      {
+        "type": "text",
+        "content": "FSP 4.5.0 (with EK-RA6M4)"
+      },
+      {
+        "type": "text",
+        "content": "All the course materials are available in a single zip file located here."
+      },
+      {
+        "type": "text",
+        "content": "FSP 4.3.0 (with EK-RA6M4)"
+      },
+      {
+        "type": "text",
+        "content": "All the course materials are available in a single zip file located here."
+      },
+      {
+        "type": "text",
+        "content": "FSP 4.3.0 (with EK-RA4M2)"
+      },
+      {
+        "type": "text",
+        "content": "All the course materials are available in a single zip file located here."
+      },
+      {
+        "type": "text",
+        "content": "FSP 4.0.0"
+      },
+      {
+        "type": "text",
+        "content": "A version of the course for FSP 4.0.0 is available in a single zip file located here."
+      },
+      {
+        "type": "text",
+        "content": "FSP 3.6.0"
+      },
+      {
+        "type": "text",
+        "content": "A version of the course for FSP 3.6.0 is available in a single zip file located here."
+      },
+      {
+        "type": "text",
+        "content": "All Introductory RA and FSP courses are listed here."
+      },
+      {
+        "type": "text",
+        "content": "Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA MCU"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA MCU"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA MCU"
+      },
+      {
+        "type": "text",
+        "content": "Source:    NA"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA MCU"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA MCU"
+    ],
+    "links": [
+      {
+        "text": "EK-RA4M2 Kit",
+        "url": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/ra-cortex-m-mcus/ek-ra4m2-evaluation-kit-ra4m2-mcu-group"
+      },
+      {
+        "text": "EK-RA6M4 Kit",
+        "url": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/ra-cortex-m-mcus/ek-ra6m4-evaluation-kit-ra6m4-mcu-group"
+      },
+      {
+        "text": "FSP 4.5.0",
+        "url": "https://github.com/renesas/fsp/releases/tag/v4.5.0"
+      },
+      {
+        "text": "here",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3505"
+      },
+      {
+        "text": "here",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3500"
+      },
+      {
+        "text": "here",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3498"
+      },
+      {
+        "text": "here",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3488"
+      },
+      {
+        "text": "here",
+        "url": "https://renesasrulz.com/mcu-mpu/ra/m/files/3481"
+      },
+      {
+        "text": "here",
+        "url": "https://en-support.renesas.com/knowledgeBase/20522329"
+      }
+    ]
+  }
+}

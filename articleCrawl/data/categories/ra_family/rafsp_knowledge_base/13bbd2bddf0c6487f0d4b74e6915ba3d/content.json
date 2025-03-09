@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20797533",
+    "title": "RA Family: rand function of the C runtime library does not work",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:24:48.168732"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nrand function of the C runtime library does not work \nAnswer:\nTo use the rand() function of the C runtime library with newlib and the GCC toolchain, you need to specify some heap memory in the BSP tab of the configurator. At least 32 bytes of heap memory is required (in case of GCC v10.3.1).\n  Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "rand function of the C runtime library does not work"
+      },
+      {
+        "type": "text",
+        "content": "rand function of the C runtime library does not work"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nTo use the rand() function of the C runtime library with newlib and the GCC toolchain, you need to specify some heap memory in the BSP tab of the configurator. At least 32 bytes of heap memory is required (in case of GCC v10.3.1).\n  Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "To use the rand() function of the C runtime library with newlib and the GCC toolchain, you need to specify some heap memory in the BSP tab of the configurator. At least 32 bytes of heap memory is required (in case of GCC v10.3.1).\n  Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "To use the rand() function of the C runtime library with newlib and the GCC toolchain, you need to specify some heap memory in the BSP tab of the configurator. At least 32 bytes of heap memory is required (in case of GCC v10.3.1)."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/362850.png",
+          "alt_text": "",
+          "width": "616",
+          "height": "241",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/13bbd2bddf0c6487f0d4b74e6915ba3d/images/6e2bade922c0494e97ecffd3d021648f.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/362850.png",
+        "alt_text": "",
+        "width": "616",
+        "height": "241",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/13bbd2bddf0c6487f0d4b74e6915ba3d/images/6e2bade922c0494e97ecffd3d021648f.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20793544"
+      }
+    ]
+  }
+}

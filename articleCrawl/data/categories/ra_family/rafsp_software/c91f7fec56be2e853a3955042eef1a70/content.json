@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21116859",
+    "title": "RA Family: Using Segger RTT with e2 lite / e2 emulator",
+    "last_updated": "2023-02-11",
+    "extracted_at": "2025-03-08T23:15:19.490469"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan I use Segger RTT with e2 lite / e2 emulator?\nAnswer:\nSegger RTT only works with Segger JLink.\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "Can I use Segger RTT with e2 lite / e2 emulator?"
+      },
+      {
+        "type": "text",
+        "content": "Can I use Segger RTT with e2 lite / e2 emulator?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nSegger RTT only works with Segger JLink.\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "Segger RTT only works with Segger JLink."
+      },
+      {
+        "type": "text",
+        "content": "Segger RTT only works with Segger JLink."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": []
+  }
+}

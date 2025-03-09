@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20939012",
+    "title": "Combined use of A/D converter and D/A converter",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:06:41.568854"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhen using the A/D converter, is there any problem to change the analog output of D/A converter?\nAnswer:\nIf A/D converter and D/A converter do not have the same analog power supply inside the MCU, changing the analog outputwill not matter.\nHowever, when the analogue power supply is shared, do not perform D/A conversion because the rush current at D/A conversion may affect A/D conversion accuracy.\nIn addition, for D/A converters that have countermeasures against interference with analog modules, if this function is enabled, D/A conversion is not performed during A/D conversion. This reduces A/D conversion accuracy degradation due to interference.\nTo check whether the analogue power supply is the same or not, and also to check if the interference-prevention measures are taken for the analogmodule, refer to A/D Converter section, D/A Converter section, and Pin Functions of Overview section in the User’s Manual: Hardware.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "When using the A/D converter, is there any problem to change the analog output of D/A converter?"
+      },
+      {
+        "type": "text",
+        "content": "When using the A/D converter, is there any problem to change the analog output of D/A converter?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIf A/D converter and D/A converter do not have the same analog power supply inside the MCU, changing the analog outputwill not matter.\nHowever, when the analogue power supply is shared, do not perform D/A conversion because the rush current at D/A conversion may affect A/D conversion accuracy.\nIn addition, for D/A converters that have countermeasures against interference with analog modules, if this function is enabled, D/A conversion is not performed during A/D conversion. This reduces A/D conversion accuracy degradation due to interference.\nTo check whether the analogue power supply is the same or not, and also to check if the interference-prevention measures are taken for the analogmodule, refer to A/D Converter section, D/A Converter section, and Pin Functions of Overview section in the User’s Manual: Hardware.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "If A/D converter and D/A converter do not have the same analog power supply inside the MCU, changing the analog outputwill not matter.\nHowever, when the analogue power supply is shared, do not perform D/A conversion because the rush current at D/A conversion may affect A/D conversion accuracy.\nIn addition, for D/A converters that have countermeasures against interference with analog modules, if this function is enabled, D/A conversion is not performed during A/D conversion. This reduces A/D conversion accuracy degradation due to interference.\nTo check whether the analogue power supply is the same or not, and also to check if the interference-prevention measures are taken for the analogmodule, refer to A/D Converter section, D/A Converter section, and Pin Functions of Overview section in the User’s Manual: Hardware."
+      },
+      {
+        "type": "text",
+        "content": "If A/D converter and D/A converter do not have the same analog power supply inside the MCU, changing the analog outputwill not matter.\nHowever, when the analogue power supply is shared, do not perform D/A conversion because the rush current at D/A conversion may affect A/D conversion accuracy.\nIn addition, for D/A converters that have countermeasures against interference with analog modules, if this function is enabled, D/A conversion is not performed during A/D conversion. This reduces A/D conversion accuracy degradation due to interference.\nTo check whether the analogue power supply is the same or not, and also to check if the interference-prevention measures are taken for the analogmodule, refer to A/D Converter section, D/A Converter section, and Pin Functions of Overview section in the User’s Manual: Hardware."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20939016"
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21687977",
+    "title": "RZ/G: Information to refer to when starting an evaluation",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:45:11.136009"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there any information other than the RZ/G page (https://www.renesas.com/en/products/microcontrollers-microprocessors/rz-mpus/rzg-series) to refer to when starting an evaluation?\nAnswer:\nPlease use this website (https://jira-gasg.renesas.eu/confluence/display/REN/Renesas+Wiki) in addition to the RZ/G page.\nIt contains information necessary for customers to evaluate the board, including startup procedures, build instructions, and S/W usage.\nSuitable Products\nRZ/G2H, RZ/G2M, RZ/G2N, RZ/G2E\nRZ/G2L, RZ/G2LC, RZ/G2UL, RZ/Five\nRZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "Is there any information other than the RZ/G page (https://www.renesas.com/en/products/microcontrollers-microprocessors/rz-mpus/rzg-series) to refer to when starting an evaluation?"
+      },
+      {
+        "type": "text",
+        "content": "Is there any information other than the RZ/G page (https://www.renesas.com/en/products/microcontrollers-microprocessors/rz-mpus/rzg-series) to refer to when starting an evaluation?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nPlease use this website (https://jira-gasg.renesas.eu/confluence/display/REN/Renesas+Wiki) in addition to the RZ/G page.\nIt contains information necessary for customers to evaluate the board, including startup procedures, build instructions, and S/W usage.\nSuitable Products\nRZ/G2H, RZ/G2M, RZ/G2N, RZ/G2E\nRZ/G2L, RZ/G2LC, RZ/G2UL, RZ/Five\nRZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "Please use this website (https://jira-gasg.renesas.eu/confluence/display/REN/Renesas+Wiki) in addition to the RZ/G page.\nIt contains information necessary for customers to evaluate the board, including startup procedures, build instructions, and S/W usage."
+      },
+      {
+        "type": "text",
+        "content": "Please use this website (https://jira-gasg.renesas.eu/confluence/display/REN/Renesas+Wiki) in addition to the RZ/G page.\nIt contains information necessary for customers to evaluate the board, including startup procedures, build instructions, and S/W usage."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/G2H, RZ/G2M, RZ/G2N, RZ/G2E\nRZ/G2L, RZ/G2LC, RZ/G2UL, RZ/Five\nRZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/G2H, RZ/G2M, RZ/G2N, RZ/G2E\nRZ/G2L, RZ/G2LC, RZ/G2UL, RZ/Five\nRZ/G3S"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/G2H, RZ/G2M, RZ/G2N, RZ/G2E\nRZ/G2L, RZ/G2LC, RZ/G2UL, RZ/Five\nRZ/G3S"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/en/products/microcontrollers-microprocessors/rz-mpus/rzg-series",
+        "url": "https://www.renesas.com/en/products/microcontrollers-microprocessors/rz-mpus/rzg-series"
+      },
+      {
+        "text": "https://jira-gasg.renesas.eu/confluence/display/REN/Renesas+Wiki",
+        "url": "https://jira-gasg.renesas.eu/confluence/display/REN/Renesas+Wiki"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21687980"
+      }
+    ]
+  }
+}

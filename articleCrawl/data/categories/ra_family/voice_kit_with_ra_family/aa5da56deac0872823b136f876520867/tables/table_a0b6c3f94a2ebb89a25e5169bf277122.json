@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "MCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+    ]
+  ]
+}

@@ -1,0 +1,1430 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20775903",
+    "title": "RA Family : Custom user code integration in AppWizard emWin project",
+    "last_updated": "2022-06-12",
+    "extracted_at": "2025-03-08T23:12:56.643610"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Issue:\nAppWizard is the Segger emWin provided PC software that makes GUI building and embedded software programming easier for developers. Sometimes, what you want to achieve cannot be all done by AppWizard, so changes need to be made at the source code level with emWin API.\nDescription:\nThere are two types of emWin APIs, one is AppWizard APIs and the other is conventional emWin APIs. AppWizard APIs and conventional emWin APIs generally work the same but AppWizard APIs are a more general form that can be used all across the objects. Since some AppWizard APIs are still undocumented, we will use conventional emWin API in this document.\nAppWizard APIs are listed in “AppWizard.h”\nCore emWin APIs are listed in “GUI.h” and “WM.h”\nWidget’s emWin APIs are listed in each widget header files like “TEXT.h”, “BUTTON.h”, “ROTARY.h”, and so on.\nAnswers:\nChange TEXT when button is pressed (TEXT moves along when screen swipe)\nIf you have a TEXT widget that does not know what to print out at build time but make up a word or sentence at runtime when BUTTON is pressed, then the text in TEXT widget can be changed dynamically with the following code. The figures below show that the text of TEXT changes when the button is pressed, and the position of TEXT also changes when the screen is swiped.\n           If you have TEXT widget made by AppWizard.\nvoid cbID_SCREEN_00(WM_MESSAGE * pMsg) {\n  WM_HWIN  hWin;\n  int      Id, NCode;\n    switch (pMsg->MsgId) {\n      case WM_NOTIFY_PARENT:\n      Id = WM_GetId(pMsg->hWinSrc);\n      NCode = pMsg->Data.v;\n        switch(Id) {\n        case ID_BUTTON_00:\n            switch(NCode){\n              case WM_NOTIFICATION_CLICKED:\n                hWin = WM_GetDialogItem(pMsg->hWin, ID_TEXT_00);\n                TEXT_SetText(hWin, \"Success\");\n              break;\n            }\n            break;\n      }\n      break;\ndefault:\n      //WM_DefaultProc(); --> ”Screen” callback MUST not have default function handler\n      break;  }\n}\n  If you don’t have TEXT widget made by AppWizard.\nvoid cbID_SCREEN_00(WM_MESSAGE * pMsg) {\n  WM_HWIN  hWin;\n  int      Id, NCode;\n    switch (pMsg->MsgId) {\n    case WM_INIT_DIALOG:\n        hWin = TEXT_CreateEx(5, 5, 100, 100, pMsg->hWin, WM_CF_SHOW, 0, GUI_ID_TEXT0, \"HI\");\n      break;\n      case WM_NOTIFY_PARENT:\n      Id = WM_GetId(pMsg->hWinSrc);\n      NCode = pMsg->Data.v;\n        switch(Id) {\n        case ID_BUTTON_00:\n            switch(NCode){\n              case WM_NOTIFICATION_CLICKED:\n                hWin = WM_GetDialogItem(pMsg->hWin, GUI_ID_TEXT0);\n                TEXT_SetText(hWin, \"Success\");\n              break;\n            }\n            break;\n      }\n      break;\n    default:\n      //WM_DefaultProc(); --> ”Screen” callback MUST not have default function handler\n      break;\n  }\n}\n  GUI user interface\nThere is no direct user interface APIs, for example, for a BUTTON widget to change from unpressed to pressed state. The only way to change the BUTTON to the pressed state is to deliver a keyboard or PID message to the BUTTON, and the message to be processed in a callback function. Keyboard input is delivered in GUI_StoreKeyMsg(), and PID input is delivered in GUI_PID_StoreState(). The example below shows how to make a push button IRQ interrupt act like the “Enter” key was pressed on BUTTON. Please note that BUTTON widget reacts to keyboard input differently than PID input. For example, keyboard “Enter” press on BUTTON widget generates both press and release messages in turn at once.\nvoid external_irq_callback (void)\n{\nWM_HWIN hWin;\nWM_HWIN hItem;\n    hWin = WM_GetActiveWindow();\n  hItem = WM_GetDialogItem(hWin, ID_BUTTON_00);\n  WIDGET_SetFocusable(hItem,1);\n  WM_SetFocus(hItem);\n  GUI_StoreKeyMsg(GUI_KEY_ENTER, 1); /* Pressed */\n  GUI_StoreKeyMsg(GUI_KEY_ENTER, 0); /* Release */\n}\n      It would be also possible to make a button press act like touch/mouse swipe.\nGUI_PID_STATE swipe_state;\nvoid external_irq_callback (void)\n{\nswipe_state.x = x_position;\nswipe_state.y = y_position;\nswipe_state.Pressed = 1;\n  GUI_PID_StoreState(&swipe_state);\n  x_position += x_position_increment;\n  if(x_position >= x_position_max){\n    swipe_state.Pressed = 0;\n    GUI_PID_StoreState(&swipe_state);\n}\n}\n  Custom drawing on top\nIf you need to do some custom drawing on top and stay on top, you can make a child window of WM_HBKWIN and set the StayOnTop flag. A window is created with the given x, y coordinate and size, and a custom user callback function pointer. In the callback function, WM_PAINT is where the user is allowed to do some custom drawing. MEMDEV is a temporary drawing place used for anti-flicker, image decompression, scaling & rotating, animation, and so on. For more details on MEMDEV, please refer to the emWin manual. The example below draws one line from (0,0) to (100,100) and stays on top during/after screen swiping.\nstatic void _cbTopWin(WM_MESSAGE * pMsg) {\nGUI_MEMDEV_Handle hMem;\n    switch (pMsg->MsgId) {\n    case WM_PAINT:\n      hMem  = GUI_MEMDEV_CreateFixed(0, 0, 100, 100, GUI_MEMDEV_HASTRANS, GUI_MEMDEV_APILIST_32, GUI_COLOR_CONV_888);\n      GUI_MEMDEV_Select(hMem);\n      GUI_SetColor(GUI_BLACK);\n      for(uint32_t i=0; i<100; i++){\n        GUI_DrawPixel(i, i);\n      }\n      GUI_MEMDEV_CopyToLCD(hMem);\n      GUI_MEMDEV_Delete(hMem);\n      GUI_MEMDEV_Select(0);\n      break;\n    default:\n      WM_DefaultProc(pMsg);\n      break;\n  }\n}\n  void cbID_SCREEN_00(WM_MESSAGE * pMsg) {\n  WM_HWIN  hWin;\n    switch (pMsg->MsgId) {\n    case WM_INIT_DIALOG:\n      hWin = WM_CreateWindowAsChild(0, 0, 100, 100, WM_HBKWIN, (WM_CF_HASTRANS|WM_CF_SHOW), _cbTopWin, 0);\n      WM_SetStayOnTop(hWin, 1);\n      break;\n}\n}\n  To learn more about emWin and AppWizard, please find the links below.\nhttps://www.youtube.com/@SeggerMicro/videos\nhttps://www.segger.com/downloads/emwin/UM03001\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "AppWizard is the Segger emWin provided PC software that makes GUI building and embedded software programming easier for developers. Sometimes, what you want to achieve cannot be all done by AppWizard, so changes need to be made at the source code level with emWin API."
+      },
+      {
+        "type": "text",
+        "content": "AppWizard is the Segger emWin provided PC software that makes GUI building and embedded software programming easier for developers. Sometimes, what you want to achieve cannot be all done by AppWizard, so changes need to be made at the source code level with emWin API."
+      },
+      {
+        "type": "text",
+        "content": "There are two types of emWin APIs, one is AppWizard APIs and the other is conventional emWin APIs. AppWizard APIs and conventional emWin APIs generally work the same but AppWizard APIs are a more general form that can be used all across the objects. Since some AppWizard APIs are still undocumented, we will use conventional emWin API in this document.\nAppWizard APIs are listed in “AppWizard.h”\nCore emWin APIs are listed in “GUI.h” and “WM.h”\nWidget’s emWin APIs are listed in each widget header files like “TEXT.h”, “BUTTON.h”, “ROTARY.h”, and so on."
+      },
+      {
+        "type": "text",
+        "content": "There are two types of emWin APIs, one is AppWizard APIs and the other is conventional emWin APIs. AppWizard APIs and conventional emWin APIs generally work the same but AppWizard APIs are a more general form that can be used all across the objects. Since some AppWizard APIs are still undocumented, we will use conventional emWin API in this document."
+      },
+      {
+        "type": "text",
+        "content": "Answers:\nChange TEXT when button is pressed (TEXT moves along when screen swipe)\nIf you have a TEXT widget that does not know what to print out at build time but make up a word or sentence at runtime when BUTTON is pressed, then the text in TEXT widget can be changed dynamically with the following code. The figures below show that the text of TEXT changes when the button is pressed, and the position of TEXT also changes when the screen is swiped.\n           If you have TEXT widget made by AppWizard.\nvoid cbID_SCREEN_00(WM_MESSAGE * pMsg) {\n  WM_HWIN  hWin;\n  int      Id, NCode;\n    switch (pMsg->MsgId) {\n      case WM_NOTIFY_PARENT:\n      Id = WM_GetId(pMsg->hWinSrc);\n      NCode = pMsg->Data.v;\n        switch(Id) {\n        case ID_BUTTON_00:\n            switch(NCode){\n              case WM_NOTIFICATION_CLICKED:\n                hWin = WM_GetDialogItem(pMsg->hWin, ID_TEXT_00);\n                TEXT_SetText(hWin, \"Success\");\n              break;\n            }\n            break;\n      }\n      break;\ndefault:\n      //WM_DefaultProc(); --> ”Screen” callback MUST not have default function handler\n      break;  }\n}\n  If you don’t have TEXT widget made by AppWizard.\nvoid cbID_SCREEN_00(WM_MESSAGE * pMsg) {\n  WM_HWIN  hWin;\n  int      Id, NCode;\n    switch (pMsg->MsgId) {\n    case WM_INIT_DIALOG:\n        hWin = TEXT_CreateEx(5, 5, 100, 100, pMsg->hWin, WM_CF_SHOW, 0, GUI_ID_TEXT0, \"HI\");\n      break;\n      case WM_NOTIFY_PARENT:\n      Id = WM_GetId(pMsg->hWinSrc);\n      NCode = pMsg->Data.v;\n        switch(Id) {\n        case ID_BUTTON_00:\n            switch(NCode){\n              case WM_NOTIFICATION_CLICKED:\n                hWin = WM_GetDialogItem(pMsg->hWin, GUI_ID_TEXT0);\n                TEXT_SetText(hWin, \"Success\");\n              break;\n            }\n            break;\n      }\n      break;\n    default:\n      //WM_DefaultProc(); --> ”Screen” callback MUST not have default function handler\n      break;\n  }\n}\n  GUI user interface\nThere is no direct user interface APIs, for example, for a BUTTON widget to change from unpressed to pressed state. The only way to change the BUTTON to the pressed state is to deliver a keyboard or PID message to the BUTTON, and the message to be processed in a callback function. Keyboard input is delivered in GUI_StoreKeyMsg(), and PID input is delivered in GUI_PID_StoreState(). The example below shows how to make a push button IRQ interrupt act like the “Enter” key was pressed on BUTTON. Please note that BUTTON widget reacts to keyboard input differently than PID input. For example, keyboard “Enter” press on BUTTON widget generates both press and release messages in turn at once.\nvoid external_irq_callback (void)\n{\nWM_HWIN hWin;\nWM_HWIN hItem;\n    hWin = WM_GetActiveWindow();\n  hItem = WM_GetDialogItem(hWin, ID_BUTTON_00);\n  WIDGET_SetFocusable(hItem,1);\n  WM_SetFocus(hItem);\n  GUI_StoreKeyMsg(GUI_KEY_ENTER, 1); /* Pressed */\n  GUI_StoreKeyMsg(GUI_KEY_ENTER, 0); /* Release */\n}\n      It would be also possible to make a button press act like touch/mouse swipe.\nGUI_PID_STATE swipe_state;\nvoid external_irq_callback (void)\n{\nswipe_state.x = x_position;\nswipe_state.y = y_position;\nswipe_state.Pressed = 1;\n  GUI_PID_StoreState(&swipe_state);\n  x_position += x_position_increment;\n  if(x_position >= x_position_max){\n    swipe_state.Pressed = 0;\n    GUI_PID_StoreState(&swipe_state);\n}\n}\n  Custom drawing on top\nIf you need to do some custom drawing on top and stay on top, you can make a child window of WM_HBKWIN and set the StayOnTop flag. A window is created with the given x, y coordinate and size, and a custom user callback function pointer. In the callback function, WM_PAINT is where the user is allowed to do some custom drawing. MEMDEV is a temporary drawing place used for anti-flicker, image decompression, scaling & rotating, animation, and so on. For more details on MEMDEV, please refer to the emWin manual. The example below draws one line from (0,0) to (100,100) and stays on top during/after screen swiping.\nstatic void _cbTopWin(WM_MESSAGE * pMsg) {\nGUI_MEMDEV_Handle hMem;\n    switch (pMsg->MsgId) {\n    case WM_PAINT:\n      hMem  = GUI_MEMDEV_CreateFixed(0, 0, 100, 100, GUI_MEMDEV_HASTRANS, GUI_MEMDEV_APILIST_32, GUI_COLOR_CONV_888);\n      GUI_MEMDEV_Select(hMem);\n      GUI_SetColor(GUI_BLACK);\n      for(uint32_t i=0; i<100; i++){\n        GUI_DrawPixel(i, i);\n      }\n      GUI_MEMDEV_CopyToLCD(hMem);\n      GUI_MEMDEV_Delete(hMem);\n      GUI_MEMDEV_Select(0);\n      break;\n    default:\n      WM_DefaultProc(pMsg);\n      break;\n  }\n}\n  void cbID_SCREEN_00(WM_MESSAGE * pMsg) {\n  WM_HWIN  hWin;\n    switch (pMsg->MsgId) {\n    case WM_INIT_DIALOG:\n      hWin = WM_CreateWindowAsChild(0, 0, 100, 100, WM_HBKWIN, (WM_CF_HASTRANS|WM_CF_SHOW), _cbTopWin, 0);\n      WM_SetStayOnTop(hWin, 1);\n      break;\n}\n}\n  To learn more about emWin and AppWizard, please find the links below.\nhttps://www.youtube.com/@SeggerMicro/videos\nhttps://www.segger.com/downloads/emwin/UM03001\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "Change TEXT when button is pressed (TEXT moves along when screen swipe)\nIf you have a TEXT widget that does not know what to print out at build time but make up a word or sentence at runtime when BUTTON is pressed, then the text in TEXT widget can be changed dynamically with the following code. The figures below show that the text of TEXT changes when the button is pressed, and the position of TEXT also changes when the screen is swiped.\n           If you have TEXT widget made by AppWizard.\nvoid cbID_SCREEN_00(WM_MESSAGE * pMsg) {\n  WM_HWIN  hWin;\n  int      Id, NCode;\n    switch (pMsg->MsgId) {\n      case WM_NOTIFY_PARENT:\n      Id = WM_GetId(pMsg->hWinSrc);\n      NCode = pMsg->Data.v;\n        switch(Id) {\n        case ID_BUTTON_00:\n            switch(NCode){\n              case WM_NOTIFICATION_CLICKED:\n                hWin = WM_GetDialogItem(pMsg->hWin, ID_TEXT_00);\n                TEXT_SetText(hWin, \"Success\");\n              break;\n            }\n            break;\n      }\n      break;\ndefault:\n      //WM_DefaultProc(); --> ”Screen” callback MUST not have default function handler\n      break;  }\n}\n  If you don’t have TEXT widget made by AppWizard.\nvoid cbID_SCREEN_00(WM_MESSAGE * pMsg) {\n  WM_HWIN  hWin;\n  int      Id, NCode;\n    switch (pMsg->MsgId) {\n    case WM_INIT_DIALOG:\n        hWin = TEXT_CreateEx(5, 5, 100, 100, pMsg->hWin, WM_CF_SHOW, 0, GUI_ID_TEXT0, \"HI\");\n      break;\n      case WM_NOTIFY_PARENT:\n      Id = WM_GetId(pMsg->hWinSrc);\n      NCode = pMsg->Data.v;\n        switch(Id) {\n        case ID_BUTTON_00:\n            switch(NCode){\n              case WM_NOTIFICATION_CLICKED:\n                hWin = WM_GetDialogItem(pMsg->hWin, GUI_ID_TEXT0);\n                TEXT_SetText(hWin, \"Success\");\n              break;\n            }\n            break;\n      }\n      break;\n    default:\n      //WM_DefaultProc(); --> ”Screen” callback MUST not have default function handler\n      break;\n  }\n}\n  GUI user interface\nThere is no direct user interface APIs, for example, for a BUTTON widget to change from unpressed to pressed state. The only way to change the BUTTON to the pressed state is to deliver a keyboard or PID message to the BUTTON, and the message to be processed in a callback function. Keyboard input is delivered in GUI_StoreKeyMsg(), and PID input is delivered in GUI_PID_StoreState(). The example below shows how to make a push button IRQ interrupt act like the “Enter” key was pressed on BUTTON. Please note that BUTTON widget reacts to keyboard input differently than PID input. For example, keyboard “Enter” press on BUTTON widget generates both press and release messages in turn at once.\nvoid external_irq_callback (void)\n{\nWM_HWIN hWin;\nWM_HWIN hItem;\n    hWin = WM_GetActiveWindow();\n  hItem = WM_GetDialogItem(hWin, ID_BUTTON_00);\n  WIDGET_SetFocusable(hItem,1);\n  WM_SetFocus(hItem);\n  GUI_StoreKeyMsg(GUI_KEY_ENTER, 1); /* Pressed */\n  GUI_StoreKeyMsg(GUI_KEY_ENTER, 0); /* Release */\n}\n      It would be also possible to make a button press act like touch/mouse swipe.\nGUI_PID_STATE swipe_state;\nvoid external_irq_callback (void)\n{\nswipe_state.x = x_position;\nswipe_state.y = y_position;\nswipe_state.Pressed = 1;\n  GUI_PID_StoreState(&swipe_state);\n  x_position += x_position_increment;\n  if(x_position >= x_position_max){\n    swipe_state.Pressed = 0;\n    GUI_PID_StoreState(&swipe_state);\n}\n}\n  Custom drawing on top\nIf you need to do some custom drawing on top and stay on top, you can make a child window of WM_HBKWIN and set the StayOnTop flag. A window is created with the given x, y coordinate and size, and a custom user callback function pointer. In the callback function, WM_PAINT is where the user is allowed to do some custom drawing. MEMDEV is a temporary drawing place used for anti-flicker, image decompression, scaling & rotating, animation, and so on. For more details on MEMDEV, please refer to the emWin manual. The example below draws one line from (0,0) to (100,100) and stays on top during/after screen swiping.\nstatic void _cbTopWin(WM_MESSAGE * pMsg) {\nGUI_MEMDEV_Handle hMem;\n    switch (pMsg->MsgId) {\n    case WM_PAINT:\n      hMem  = GUI_MEMDEV_CreateFixed(0, 0, 100, 100, GUI_MEMDEV_HASTRANS, GUI_MEMDEV_APILIST_32, GUI_COLOR_CONV_888);\n      GUI_MEMDEV_Select(hMem);\n      GUI_SetColor(GUI_BLACK);\n      for(uint32_t i=0; i<100; i++){\n        GUI_DrawPixel(i, i);\n      }\n      GUI_MEMDEV_CopyToLCD(hMem);\n      GUI_MEMDEV_Delete(hMem);\n      GUI_MEMDEV_Select(0);\n      break;\n    default:\n      WM_DefaultProc(pMsg);\n      break;\n  }\n}\n  void cbID_SCREEN_00(WM_MESSAGE * pMsg) {\n  WM_HWIN  hWin;\n    switch (pMsg->MsgId) {\n    case WM_INIT_DIALOG:\n      hWin = WM_CreateWindowAsChild(0, 0, 100, 100, WM_HBKWIN, (WM_CF_HASTRANS|WM_CF_SHOW), _cbTopWin, 0);\n      WM_SetStayOnTop(hWin, 1);\n      break;\n}\n}\n  To learn more about emWin and AppWizard, please find the links below.\nhttps://www.youtube.com/@SeggerMicro/videos\nhttps://www.segger.com/downloads/emwin/UM03001"
+      },
+      {
+        "type": "text",
+        "content": "Change TEXT when button is pressed (TEXT moves along when screen swipe)"
+      },
+      {
+        "type": "text",
+        "content": "If you have a TEXT widget that does not know what to print out at build time but make up a word or sentence at runtime when BUTTON is pressed, then the text in TEXT widget can be changed dynamically with the following code. The figures below show that the text of TEXT changes when the button is pressed, and the position of TEXT also changes when the screen is swiped."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/362951.png",
+          "alt_text": "",
+          "width": "869",
+          "height": "156",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/d5835ab1490b2c4dd0539f7090b90aff/images/6c24640ee16991f913ed6e286d29d184.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "If you have TEXT widget made by AppWizard."
+      },
+      {
+        "type": "text",
+        "content": "void cbID_SCREEN_00(WM_MESSAGE * pMsg) {"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "cbID_SCREEN_00("
+      },
+      {
+        "type": "text",
+        "content": "WM_MESSAGE"
+      },
+      {
+        "type": "text",
+        "content": "* pMsg) {"
+      },
+      {
+        "type": "text",
+        "content": "WM_HWIN  hWin;"
+      },
+      {
+        "type": "text",
+        "content": "WM_HWIN  hWin;"
+      },
+      {
+        "type": "text",
+        "content": "int      Id, NCode;"
+      },
+      {
+        "type": "text",
+        "content": "int"
+      },
+      {
+        "type": "text",
+        "content": "Id, NCode;"
+      },
+      {
+        "type": "text",
+        "content": "switch (pMsg->MsgId) {"
+      },
+      {
+        "type": "text",
+        "content": "switch"
+      },
+      {
+        "type": "text",
+        "content": "(pMsg->"
+      },
+      {
+        "type": "text",
+        "content": "MsgId"
+      },
+      {
+        "type": "text",
+        "content": ") {"
+      },
+      {
+        "type": "text",
+        "content": "case WM_NOTIFY_PARENT:"
+      },
+      {
+        "type": "text",
+        "content": "case"
+      },
+      {
+        "type": "text",
+        "content": "WM_NOTIFY_PARENT:"
+      },
+      {
+        "type": "text",
+        "content": "Id = WM_GetId(pMsg->hWinSrc);"
+      },
+      {
+        "type": "text",
+        "content": "Id = WM_GetId(pMsg->"
+      },
+      {
+        "type": "text",
+        "content": "hWinSrc"
+      },
+      {
+        "type": "text",
+        "content": ");"
+      },
+      {
+        "type": "text",
+        "content": "NCode = pMsg->Data.v;"
+      },
+      {
+        "type": "text",
+        "content": "NCode = pMsg->"
+      },
+      {
+        "type": "text",
+        "content": "Data"
+      },
+      {
+        "type": "text",
+        "content": "."
+      },
+      {
+        "type": "text",
+        "content": "v"
+      },
+      {
+        "type": "text",
+        "content": ";"
+      },
+      {
+        "type": "text",
+        "content": "switch(Id) {"
+      },
+      {
+        "type": "text",
+        "content": "switch"
+      },
+      {
+        "type": "text",
+        "content": "(Id) {"
+      },
+      {
+        "type": "text",
+        "content": "case ID_BUTTON_00:"
+      },
+      {
+        "type": "text",
+        "content": "case"
+      },
+      {
+        "type": "text",
+        "content": "ID_BUTTON_00:"
+      },
+      {
+        "type": "text",
+        "content": "switch(NCode){"
+      },
+      {
+        "type": "text",
+        "content": "switch"
+      },
+      {
+        "type": "text",
+        "content": "(NCode){"
+      },
+      {
+        "type": "text",
+        "content": "case WM_NOTIFICATION_CLICKED:"
+      },
+      {
+        "type": "text",
+        "content": "case"
+      },
+      {
+        "type": "text",
+        "content": "WM_NOTIFICATION_CLICKED:"
+      },
+      {
+        "type": "text",
+        "content": "hWin = WM_GetDialogItem(pMsg->hWin, ID_TEXT_00);"
+      },
+      {
+        "type": "text",
+        "content": "hWin = WM_GetDialogItem(pMsg->"
+      },
+      {
+        "type": "text",
+        "content": "hWin"
+      },
+      {
+        "type": "text",
+        "content": ", ID_TEXT_00);"
+      },
+      {
+        "type": "text",
+        "content": "TEXT_SetText(hWin, \"Success\");"
+      },
+      {
+        "type": "text",
+        "content": "TEXT_SetText(hWin,"
+      },
+      {
+        "type": "text",
+        "content": "\"Success\""
+      },
+      {
+        "type": "text",
+        "content": ");"
+      },
+      {
+        "type": "text",
+        "content": "break;"
+      },
+      {
+        "type": "text",
+        "content": "break"
+      },
+      {
+        "type": "text",
+        "content": ";"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "break;"
+      },
+      {
+        "type": "text",
+        "content": "break"
+      },
+      {
+        "type": "text",
+        "content": ";"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "break;"
+      },
+      {
+        "type": "text",
+        "content": "break"
+      },
+      {
+        "type": "text",
+        "content": ";"
+      },
+      {
+        "type": "text",
+        "content": "default:"
+      },
+      {
+        "type": "text",
+        "content": "default"
+      },
+      {
+        "type": "text",
+        "content": ":"
+      },
+      {
+        "type": "text",
+        "content": "//WM_DefaultProc(); --> ”Screen” callback MUST not have default function handler"
+      },
+      {
+        "type": "text",
+        "content": "//WM_DefaultProc(); -->"
+      },
+      {
+        "type": "text",
+        "content": "”Screen” callback MUST not have default function handler"
+      },
+      {
+        "type": "text",
+        "content": "break;  }"
+      },
+      {
+        "type": "text",
+        "content": "break"
+      },
+      {
+        "type": "text",
+        "content": ";  }"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "If you don’t have TEXT widget made by AppWizard."
+      },
+      {
+        "type": "text",
+        "content": "void cbID_SCREEN_00(WM_MESSAGE * pMsg) {"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "cbID_SCREEN_00("
+      },
+      {
+        "type": "text",
+        "content": "WM_MESSAGE"
+      },
+      {
+        "type": "text",
+        "content": "* pMsg) {"
+      },
+      {
+        "type": "text",
+        "content": "WM_HWIN  hWin;"
+      },
+      {
+        "type": "text",
+        "content": "WM_HWIN  hWin;"
+      },
+      {
+        "type": "text",
+        "content": "int      Id, NCode;"
+      },
+      {
+        "type": "text",
+        "content": "int"
+      },
+      {
+        "type": "text",
+        "content": "Id, NCode;"
+      },
+      {
+        "type": "text",
+        "content": "switch (pMsg->MsgId) {"
+      },
+      {
+        "type": "text",
+        "content": "switch"
+      },
+      {
+        "type": "text",
+        "content": "(pMsg->"
+      },
+      {
+        "type": "text",
+        "content": "MsgId"
+      },
+      {
+        "type": "text",
+        "content": ") {"
+      },
+      {
+        "type": "text",
+        "content": "case WM_INIT_DIALOG:"
+      },
+      {
+        "type": "text",
+        "content": "case"
+      },
+      {
+        "type": "text",
+        "content": "WM_INIT_DIALOG:"
+      },
+      {
+        "type": "text",
+        "content": "hWin = TEXT_CreateEx(5, 5, 100, 100, pMsg->hWin, WM_CF_SHOW, 0, GUI_ID_TEXT0, \"HI\");"
+      },
+      {
+        "type": "text",
+        "content": "hWin = TEXT_CreateEx(5, 5, 100, 100, pMsg->"
+      },
+      {
+        "type": "text",
+        "content": "hWin"
+      },
+      {
+        "type": "text",
+        "content": ", WM_CF_SHOW, 0, GUI_ID_TEXT0,"
+      },
+      {
+        "type": "text",
+        "content": "\"HI\""
+      },
+      {
+        "type": "text",
+        "content": ");"
+      },
+      {
+        "type": "text",
+        "content": "break;"
+      },
+      {
+        "type": "text",
+        "content": "break"
+      },
+      {
+        "type": "text",
+        "content": ";"
+      },
+      {
+        "type": "text",
+        "content": "case WM_NOTIFY_PARENT:"
+      },
+      {
+        "type": "text",
+        "content": "case"
+      },
+      {
+        "type": "text",
+        "content": "WM_NOTIFY_PARENT:"
+      },
+      {
+        "type": "text",
+        "content": "Id = WM_GetId(pMsg->hWinSrc);"
+      },
+      {
+        "type": "text",
+        "content": "Id = WM_GetId(pMsg->"
+      },
+      {
+        "type": "text",
+        "content": "hWinSrc"
+      },
+      {
+        "type": "text",
+        "content": ");"
+      },
+      {
+        "type": "text",
+        "content": "NCode = pMsg->Data.v;"
+      },
+      {
+        "type": "text",
+        "content": "NCode = pMsg->"
+      },
+      {
+        "type": "text",
+        "content": "Data"
+      },
+      {
+        "type": "text",
+        "content": "."
+      },
+      {
+        "type": "text",
+        "content": "v"
+      },
+      {
+        "type": "text",
+        "content": ";"
+      },
+      {
+        "type": "text",
+        "content": "switch(Id) {"
+      },
+      {
+        "type": "text",
+        "content": "switch"
+      },
+      {
+        "type": "text",
+        "content": "(Id) {"
+      },
+      {
+        "type": "text",
+        "content": "case ID_BUTTON_00:"
+      },
+      {
+        "type": "text",
+        "content": "case"
+      },
+      {
+        "type": "text",
+        "content": "ID_BUTTON_00:"
+      },
+      {
+        "type": "text",
+        "content": "switch(NCode){"
+      },
+      {
+        "type": "text",
+        "content": "switch"
+      },
+      {
+        "type": "text",
+        "content": "(NCode){"
+      },
+      {
+        "type": "text",
+        "content": "case WM_NOTIFICATION_CLICKED:"
+      },
+      {
+        "type": "text",
+        "content": "case"
+      },
+      {
+        "type": "text",
+        "content": "WM_NOTIFICATION_CLICKED:"
+      },
+      {
+        "type": "text",
+        "content": "hWin = WM_GetDialogItem(pMsg->hWin, GUI_ID_TEXT0);"
+      },
+      {
+        "type": "text",
+        "content": "hWin = WM_GetDialogItem(pMsg->"
+      },
+      {
+        "type": "text",
+        "content": "hWin"
+      },
+      {
+        "type": "text",
+        "content": ", GUI_ID_TEXT0);"
+      },
+      {
+        "type": "text",
+        "content": "TEXT_SetText(hWin, \"Success\");"
+      },
+      {
+        "type": "text",
+        "content": "TEXT_SetText(hWin,"
+      },
+      {
+        "type": "text",
+        "content": "\"Success\""
+      },
+      {
+        "type": "text",
+        "content": ");"
+      },
+      {
+        "type": "text",
+        "content": "break;"
+      },
+      {
+        "type": "text",
+        "content": "break"
+      },
+      {
+        "type": "text",
+        "content": ";"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "break;"
+      },
+      {
+        "type": "text",
+        "content": "break"
+      },
+      {
+        "type": "text",
+        "content": ";"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "break;"
+      },
+      {
+        "type": "text",
+        "content": "break"
+      },
+      {
+        "type": "text",
+        "content": ";"
+      },
+      {
+        "type": "text",
+        "content": "default:"
+      },
+      {
+        "type": "text",
+        "content": "default"
+      },
+      {
+        "type": "text",
+        "content": ":"
+      },
+      {
+        "type": "text",
+        "content": "//WM_DefaultProc(); --> ”Screen” callback MUST not have default function handler"
+      },
+      {
+        "type": "text",
+        "content": "//WM_DefaultProc(); -->"
+      },
+      {
+        "type": "text",
+        "content": "”Screen” callback MUST not have default function handler"
+      },
+      {
+        "type": "text",
+        "content": "break;"
+      },
+      {
+        "type": "text",
+        "content": "break"
+      },
+      {
+        "type": "text",
+        "content": ";"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "GUI user interface"
+      },
+      {
+        "type": "text",
+        "content": "There is no direct user interface APIs, for example, for a BUTTON widget to change from unpressed to pressed state. The only way to change the BUTTON to the pressed state is to deliver a keyboard or PID message to the BUTTON, and the message to be processed in a callback function. Keyboard input is delivered in GUI_StoreKeyMsg(), and PID input is delivered in GUI_PID_StoreState(). The example below shows how to make a push button IRQ interrupt act like the “Enter” key was pressed on BUTTON. Please note that BUTTON widget reacts to keyboard input differently than PID input. For example, keyboard “Enter” press on BUTTON widget generates both press and release messages in turn at once."
+      },
+      {
+        "type": "text",
+        "content": "void external_irq_callback (void)"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "external_irq_callback ("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ")"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "WM_HWIN hWin;"
+      },
+      {
+        "type": "text",
+        "content": "WM_HWIN hWin;"
+      },
+      {
+        "type": "text",
+        "content": "WM_HWIN hItem;"
+      },
+      {
+        "type": "text",
+        "content": "WM_HWIN hItem;"
+      },
+      {
+        "type": "text",
+        "content": "hWin = WM_GetActiveWindow();"
+      },
+      {
+        "type": "text",
+        "content": "hWin = WM_GetActiveWindow();"
+      },
+      {
+        "type": "text",
+        "content": "hItem = WM_GetDialogItem(hWin, ID_BUTTON_00);"
+      },
+      {
+        "type": "text",
+        "content": "hItem = WM_GetDialogItem(hWin, ID_BUTTON_00);"
+      },
+      {
+        "type": "text",
+        "content": "WIDGET_SetFocusable(hItem,1);"
+      },
+      {
+        "type": "text",
+        "content": "WIDGET_SetFocusable(hItem,1);"
+      },
+      {
+        "type": "text",
+        "content": "WM_SetFocus(hItem);"
+      },
+      {
+        "type": "text",
+        "content": "WM_SetFocus(hItem);"
+      },
+      {
+        "type": "text",
+        "content": "GUI_StoreKeyMsg(GUI_KEY_ENTER, 1); /* Pressed */"
+      },
+      {
+        "type": "text",
+        "content": "GUI_StoreKeyMsg(GUI_KEY_ENTER, 1);"
+      },
+      {
+        "type": "text",
+        "content": "/* Pressed */"
+      },
+      {
+        "type": "text",
+        "content": "GUI_StoreKeyMsg(GUI_KEY_ENTER, 0); /* Release */"
+      },
+      {
+        "type": "text",
+        "content": "GUI_StoreKeyMsg(GUI_KEY_ENTER, 0);"
+      },
+      {
+        "type": "text",
+        "content": "/* Release */"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/9a605b20-7973-426c-a4e4-c07ee77a6ace.png",
+          "alt_text": "",
+          "width": "743",
+          "height": "202",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/d5835ab1490b2c4dd0539f7090b90aff/images/81cda652f39c36b27687d99fc0800879.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/19400027",
+          "alt_text": "",
+          "width": "0",
+          "height": "0",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/d5835ab1490b2c4dd0539f7090b90aff/images/a5f61e62dd68924d032f0d24306e41e6.jpg"
+        }
+      },
+      {
+        "type": "text",
+        "content": "It would be also possible to make a button press act like touch/mouse swipe."
+      },
+      {
+        "type": "text",
+        "content": "GUI_PID_STATE swipe_state;"
+      },
+      {
+        "type": "text",
+        "content": "GUI_PID_STATE"
+      },
+      {
+        "type": "text",
+        "content": "swipe_state;"
+      },
+      {
+        "type": "text",
+        "content": "void external_irq_callback (void)"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "external_irq_callback ("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ")"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "swipe_state.x = x_position;"
+      },
+      {
+        "type": "text",
+        "content": "swipe_state."
+      },
+      {
+        "type": "text",
+        "content": "x"
+      },
+      {
+        "type": "text",
+        "content": "= x_position;"
+      },
+      {
+        "type": "text",
+        "content": "swipe_state.y = y_position;"
+      },
+      {
+        "type": "text",
+        "content": "swipe_state."
+      },
+      {
+        "type": "text",
+        "content": "y"
+      },
+      {
+        "type": "text",
+        "content": "= y_position;"
+      },
+      {
+        "type": "text",
+        "content": "swipe_state.Pressed = 1;"
+      },
+      {
+        "type": "text",
+        "content": "swipe_state."
+      },
+      {
+        "type": "text",
+        "content": "Pressed"
+      },
+      {
+        "type": "text",
+        "content": "= 1;"
+      },
+      {
+        "type": "text",
+        "content": "GUI_PID_StoreState(&swipe_state);"
+      },
+      {
+        "type": "text",
+        "content": "GUI_PID_StoreState(&swipe_state);"
+      },
+      {
+        "type": "text",
+        "content": "x_position += x_position_increment;"
+      },
+      {
+        "type": "text",
+        "content": "x_position += x_position_increment;"
+      },
+      {
+        "type": "text",
+        "content": "if(x_position >= x_position_max){"
+      },
+      {
+        "type": "text",
+        "content": "if"
+      },
+      {
+        "type": "text",
+        "content": "(x_position >= x_position_max){"
+      },
+      {
+        "type": "text",
+        "content": "swipe_state.Pressed = 0;"
+      },
+      {
+        "type": "text",
+        "content": "swipe_state."
+      },
+      {
+        "type": "text",
+        "content": "Pressed"
+      },
+      {
+        "type": "text",
+        "content": "= 0;"
+      },
+      {
+        "type": "text",
+        "content": "GUI_PID_StoreState(&swipe_state);"
+      },
+      {
+        "type": "text",
+        "content": "GUI_PID_StoreState(&swipe_state);"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "Custom drawing on top"
+      },
+      {
+        "type": "text",
+        "content": "If you need to do some custom drawing on top and stay on top, you can make a child window of WM_HBKWIN and set the StayOnTop flag. A window is created with the given x, y coordinate and size, and a custom user callback function pointer. In the callback function, WM_PAINT is where the user is allowed to do some custom drawing. MEMDEV is a temporary drawing place used for anti-flicker, image decompression, scaling & rotating, animation, and so on. For more details on MEMDEV, please refer to the emWin manual. The example below draws one line from (0,0) to (100,100) and stays on top during/after screen swiping."
+      },
+      {
+        "type": "text",
+        "content": "static void _cbTopWin(WM_MESSAGE * pMsg) {"
+      },
+      {
+        "type": "text",
+        "content": "static"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "_cbTopWin("
+      },
+      {
+        "type": "text",
+        "content": "WM_MESSAGE"
+      },
+      {
+        "type": "text",
+        "content": "* pMsg) {"
+      },
+      {
+        "type": "text",
+        "content": "GUI_MEMDEV_Handle hMem;"
+      },
+      {
+        "type": "text",
+        "content": "GUI_MEMDEV_Handle"
+      },
+      {
+        "type": "text",
+        "content": "hMem;"
+      },
+      {
+        "type": "text",
+        "content": "switch (pMsg->MsgId) {"
+      },
+      {
+        "type": "text",
+        "content": "switch"
+      },
+      {
+        "type": "text",
+        "content": "(pMsg->"
+      },
+      {
+        "type": "text",
+        "content": "MsgId"
+      },
+      {
+        "type": "text",
+        "content": ") {"
+      },
+      {
+        "type": "text",
+        "content": "case WM_PAINT:"
+      },
+      {
+        "type": "text",
+        "content": "case"
+      },
+      {
+        "type": "text",
+        "content": "WM_PAINT:"
+      },
+      {
+        "type": "text",
+        "content": "hMem  = GUI_MEMDEV_CreateFixed(0, 0, 100, 100, GUI_MEMDEV_HASTRANS, GUI_MEMDEV_APILIST_32, GUI_COLOR_CONV_888);"
+      },
+      {
+        "type": "text",
+        "content": "hMem  = GUI_MEMDEV_CreateFixed(0, 0, 100, 100, GUI_MEMDEV_HASTRANS, GUI_MEMDEV_APILIST_32, GUI_COLOR_CONV_888);"
+      },
+      {
+        "type": "text",
+        "content": "GUI_MEMDEV_Select(hMem);"
+      },
+      {
+        "type": "text",
+        "content": "GUI_MEMDEV_Select(hMem);"
+      },
+      {
+        "type": "text",
+        "content": "GUI_SetColor(GUI_BLACK);"
+      },
+      {
+        "type": "text",
+        "content": "GUI_SetColor(GUI_BLACK);"
+      },
+      {
+        "type": "text",
+        "content": "for(uint32_t i=0; i<100; i++){"
+      },
+      {
+        "type": "text",
+        "content": "for"
+      },
+      {
+        "type": "text",
+        "content": "("
+      },
+      {
+        "type": "text",
+        "content": "uint32_t"
+      },
+      {
+        "type": "text",
+        "content": "i=0; i<100; i++){"
+      },
+      {
+        "type": "text",
+        "content": "GUI_DrawPixel(i, i);"
+      },
+      {
+        "type": "text",
+        "content": "GUI_DrawPixel(i, i);"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "GUI_MEMDEV_CopyToLCD(hMem);"
+      },
+      {
+        "type": "text",
+        "content": "GUI_MEMDEV_CopyToLCD(hMem);"
+      },
+      {
+        "type": "text",
+        "content": "GUI_MEMDEV_Delete(hMem);"
+      },
+      {
+        "type": "text",
+        "content": "GUI_MEMDEV_Delete(hMem);"
+      },
+      {
+        "type": "text",
+        "content": "GUI_MEMDEV_Select(0);"
+      },
+      {
+        "type": "text",
+        "content": "GUI_MEMDEV_Select(0);"
+      },
+      {
+        "type": "text",
+        "content": "break;"
+      },
+      {
+        "type": "text",
+        "content": "break"
+      },
+      {
+        "type": "text",
+        "content": ";"
+      },
+      {
+        "type": "text",
+        "content": "default:"
+      },
+      {
+        "type": "text",
+        "content": "default"
+      },
+      {
+        "type": "text",
+        "content": ":"
+      },
+      {
+        "type": "text",
+        "content": "WM_DefaultProc(pMsg);"
+      },
+      {
+        "type": "text",
+        "content": "WM_DefaultProc(pMsg);"
+      },
+      {
+        "type": "text",
+        "content": "break;"
+      },
+      {
+        "type": "text",
+        "content": "break"
+      },
+      {
+        "type": "text",
+        "content": ";"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "void cbID_SCREEN_00(WM_MESSAGE * pMsg) {"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "cbID_SCREEN_00("
+      },
+      {
+        "type": "text",
+        "content": "WM_MESSAGE"
+      },
+      {
+        "type": "text",
+        "content": "* pMsg) {"
+      },
+      {
+        "type": "text",
+        "content": "WM_HWIN  hWin;"
+      },
+      {
+        "type": "text",
+        "content": "WM_HWIN  hWin;"
+      },
+      {
+        "type": "text",
+        "content": "switch (pMsg->MsgId) {"
+      },
+      {
+        "type": "text",
+        "content": "switch"
+      },
+      {
+        "type": "text",
+        "content": "(pMsg->"
+      },
+      {
+        "type": "text",
+        "content": "MsgId"
+      },
+      {
+        "type": "text",
+        "content": ") {"
+      },
+      {
+        "type": "text",
+        "content": "case WM_INIT_DIALOG:"
+      },
+      {
+        "type": "text",
+        "content": "case"
+      },
+      {
+        "type": "text",
+        "content": "WM_INIT_DIALOG:"
+      },
+      {
+        "type": "text",
+        "content": "hWin = WM_CreateWindowAsChild(0, 0, 100, 100, WM_HBKWIN, (WM_CF_HASTRANS|WM_CF_SHOW), _cbTopWin, 0);"
+      },
+      {
+        "type": "text",
+        "content": "hWin = WM_CreateWindowAsChild(0, 0, 100, 100, WM_HBKWIN, (WM_CF_HASTRANS|WM_CF_SHOW), _cbTopWin, 0);"
+      },
+      {
+        "type": "text",
+        "content": "WM_SetStayOnTop(hWin, 1);"
+      },
+      {
+        "type": "text",
+        "content": "WM_SetStayOnTop(hWin, 1);"
+      },
+      {
+        "type": "text",
+        "content": "break;"
+      },
+      {
+        "type": "text",
+        "content": "break"
+      },
+      {
+        "type": "text",
+        "content": ";"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "To learn more about emWin and AppWizard, please find the links below."
+      },
+      {
+        "type": "text",
+        "content": "https://www.youtube.com/@SeggerMicro/videos\nhttps://www.segger.com/downloads/emwin/UM03001"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/362951.png",
+        "alt_text": "",
+        "width": "869",
+        "height": "156",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/d5835ab1490b2c4dd0539f7090b90aff/images/6c24640ee16991f913ed6e286d29d184.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/9a605b20-7973-426c-a4e4-c07ee77a6ace.png",
+        "alt_text": "",
+        "width": "743",
+        "height": "202",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/d5835ab1490b2c4dd0539f7090b90aff/images/81cda652f39c36b27687d99fc0800879.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/19400027",
+        "alt_text": "",
+        "width": "0",
+        "height": "0",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/d5835ab1490b2c4dd0539f7090b90aff/images/a5f61e62dd68924d032f0d24306e41e6.jpg"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "void cbID_SCREEN_00(WM_MESSAGE * pMsg) {\n  WM_HWIN  hWin;\n  int      Id, NCode;\n    switch (pMsg->MsgId) {\n      case WM_NOTIFY_PARENT:\n      Id = WM_GetId(pMsg->hWinSrc);\n      NCode = pMsg->Data.v;\n        switch(Id) {\n        case ID_BUTTON_00:\n            switch(NCode){\n              case WM_NOTIFICATION_CLICKED:\n                hWin = WM_GetDialogItem(pMsg->hWin, ID_TEXT_00);\n                TEXT_SetText(hWin, \"Success\");\n              break;\n            }\n            break;\n      }\n      break;\ndefault:\n      //WM_DefaultProc(); --> ”Screen” callback MUST not have default function handler\n      break;  }\n}"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "void cbID_SCREEN_00(WM_MESSAGE * pMsg) {\n  WM_HWIN  hWin;\n  int      Id, NCode;\n    switch (pMsg->MsgId) {\n    case WM_INIT_DIALOG:\n        hWin = TEXT_CreateEx(5, 5, 100, 100, pMsg->hWin, WM_CF_SHOW, 0, GUI_ID_TEXT0, \"HI\");\n      break;\n      case WM_NOTIFY_PARENT:\n      Id = WM_GetId(pMsg->hWinSrc);\n      NCode = pMsg->Data.v;\n        switch(Id) {\n        case ID_BUTTON_00:\n            switch(NCode){\n              case WM_NOTIFICATION_CLICKED:\n                hWin = WM_GetDialogItem(pMsg->hWin, GUI_ID_TEXT0);\n                TEXT_SetText(hWin, \"Success\");\n              break;\n            }\n            break;\n      }\n      break;\n    default:\n      //WM_DefaultProc(); --> ”Screen” callback MUST not have default function handler\n      break;\n  }\n}"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "void external_irq_callback (void)\n{\nWM_HWIN hWin;\nWM_HWIN hItem;\n    hWin = WM_GetActiveWindow();\n  hItem = WM_GetDialogItem(hWin, ID_BUTTON_00);\n  WIDGET_SetFocusable(hItem,1);\n  WM_SetFocus(hItem);\n  GUI_StoreKeyMsg(GUI_KEY_ENTER, 1); /* Pressed */\n  GUI_StoreKeyMsg(GUI_KEY_ENTER, 0); /* Release */\n}"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "GUI_PID_STATE swipe_state;\nvoid external_irq_callback (void)\n{\nswipe_state.x = x_position;\nswipe_state.y = y_position;\nswipe_state.Pressed = 1;\n  GUI_PID_StoreState(&swipe_state);\n  x_position += x_position_increment;\n  if(x_position >= x_position_max){\n    swipe_state.Pressed = 0;\n    GUI_PID_StoreState(&swipe_state);\n}\n}"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "static void _cbTopWin(WM_MESSAGE * pMsg) {\nGUI_MEMDEV_Handle hMem;\n    switch (pMsg->MsgId) {\n    case WM_PAINT:\n      hMem  = GUI_MEMDEV_CreateFixed(0, 0, 100, 100, GUI_MEMDEV_HASTRANS, GUI_MEMDEV_APILIST_32, GUI_COLOR_CONV_888);\n      GUI_MEMDEV_Select(hMem);\n      GUI_SetColor(GUI_BLACK);\n      for(uint32_t i=0; i<100; i++){\n        GUI_DrawPixel(i, i);\n      }\n      GUI_MEMDEV_CopyToLCD(hMem);\n      GUI_MEMDEV_Delete(hMem);\n      GUI_MEMDEV_Select(0);\n      break;\n    default:\n      WM_DefaultProc(pMsg);\n      break;\n  }\n}\n  void cbID_SCREEN_00(WM_MESSAGE * pMsg) {\n  WM_HWIN  hWin;\n    switch (pMsg->MsgId) {\n    case WM_INIT_DIALOG:\n      hWin = WM_CreateWindowAsChild(0, 0, 100, 100, WM_HBKWIN, (WM_CF_HASTRANS|WM_CF_SHOW), _cbTopWin, 0);\n      WM_SetStayOnTop(hWin, 1);\n      break;\n}\n}"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "https://www.youtube.com/@SeggerMicro/videos",
+        "url": "https://www.youtube.com/@SeggerMicro/videos"
+      },
+      {
+        "text": "https://www.segger.com/downloads/emwin/UM03001",
+        "url": "https://www.segger.com/downloads/emwin/UM03001"
+      },
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20798655"
+      }
+    ]
+  }
+}

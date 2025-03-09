@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21287506",
+    "title": "RA Family: Why are UART channel 1 pins P212 and P213 not working ?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:38:24.206366"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Last updated: 22/03/2024"
+      },
+      {
+        "type": "text",
+        "content": "Why are UART channel 1 pins P212 and P213 not working ?"
+      },
+      {
+        "type": "text",
+        "content": "The pins P212 and P213 are used as external clock oscillator pins (XTAL/EXTAL pins) so they cannot be used from SCI UART channel 1 in the same time. If you want to use them as SCI channel 1 pins, you need to have a clock source different than XTAL. Please change accordingly on Clocks tab (you can change PLL source or clock source itself):"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/74d8968a-d702-4fc5-8e93-14051488bdb7",
+          "alt_text": "",
+          "width": "1007",
+          "height": "647",
+          "local_path": "data/categories/ra_family/serial_communications_interface_(sci)/40375ca0f5a008a568e9fa5b7f1bccbd/images/4394c1e6fb557a06c886fa6c3937a557.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "A new blank project by default is using XTAL as clock source which is already on the EK-RA6M2."
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/74d8968a-d702-4fc5-8e93-14051488bdb7",
+        "alt_text": "",
+        "width": "1007",
+        "height": "647",
+        "local_path": "data/categories/ra_family/serial_communications_interface_(sci)/40375ca0f5a008a568e9fa5b7f1bccbd/images/4394c1e6fb557a06c886fa6c3937a557.png"
+      }
+    ],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": []
+  }
+}

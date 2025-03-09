@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20352686",
+    "title": "RZ/V2L: Communication between OS",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:51:24.912257"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs it possible the intercommunication between the Cortex-A55 (Linux) and Cortex-M33 (FreeRTOS) on the RZ/V2L?\nAnswer:\nThe RZ/V2L CM33 Multi-OS Package enables the use of OpenAMP, a standardized API for inter-processor communication frameworks, is available.\nThis package support FreeRTOS on the Cortex-M33, making it possible to create applications that integrate Linux and RTOS with OpenAMP.\nSuitable Products\nRZ/V2L"
+      },
+      {
+        "type": "text",
+        "content": "Is it possible the intercommunication between the Cortex-A55 (Linux) and Cortex-M33 (FreeRTOS) on the RZ/V2L?"
+      },
+      {
+        "type": "text",
+        "content": "Is it possible the intercommunication between the Cortex-A55 (Linux) and Cortex-M33 (FreeRTOS) on the RZ/V2L?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RZ/V2L CM33 Multi-OS Package enables the use of OpenAMP, a standardized API for inter-processor communication frameworks, is available.\nThis package support FreeRTOS on the Cortex-M33, making it possible to create applications that integrate Linux and RTOS with OpenAMP.\nSuitable Products\nRZ/V2L"
+      },
+      {
+        "type": "text",
+        "content": "The RZ/V2L CM33 Multi-OS Package enables the use of OpenAMP, a standardized API for inter-processor communication frameworks, is available.\nThis package support FreeRTOS on the Cortex-M33, making it possible to create applications that integrate Linux and RTOS with OpenAMP."
+      },
+      {
+        "type": "text",
+        "content": "The RZ/V2L CM33 Multi-OS Package enables the use of OpenAMP, a standardized API for inter-processor communication frameworks, is available.\nThis package support FreeRTOS on the Cortex-M33, making it possible to create applications that integrate Linux and RTOS with OpenAMP."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V2L"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V2L"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V2L"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20352672"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20352696"
+      }
+    ]
+  }
+}

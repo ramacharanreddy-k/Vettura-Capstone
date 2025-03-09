@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20364060",
+    "title": "Does RH850 have a different instruction set than v850?",
+    "last_updated": "2022-01-02",
+    "extracted_at": "2025-03-09T00:28:52.000173"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDoes RH850 have a different instruction set than v850?\nAnswer:\nIn V850 there are different CPU cores with differences in the instruction set.\nSuitable Products\nRH850/F1x"
+      },
+      {
+        "type": "text",
+        "content": "Does RH850 have a different instruction set than v850?"
+      },
+      {
+        "type": "text",
+        "content": "Does RH850 have a different instruction set than v850?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIn V850 there are different CPU cores with differences in the instruction set.\nSuitable Products\nRH850/F1x"
+      },
+      {
+        "type": "text",
+        "content": "In V850 there are different CPU cores with differences in the instruction set."
+      },
+      {
+        "type": "text",
+        "content": "In V850 there are different CPU cores with differences in the instruction set."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850/F1x"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850/F1x"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850/F1x"
+    ],
+    "links": []
+  }
+}

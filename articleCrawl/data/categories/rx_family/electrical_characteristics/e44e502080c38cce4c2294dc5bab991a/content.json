@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21588886",
+    "title": "RX Family: How long can the maximum permissible output current flow?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:12:53.732982"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nThe permissible output current has a maximum value and an average value. How long can the maximum permissible output current flow?\nAnswer:\nThere is no provision for the output time of the permissible output current, which is specified by observing the average and maximum values.\nWhen considering a 50% duty cycle current waveform, the maximum value represents the maximum current value (e.g. 4mA) for the ON time, and the average value represents the average current value (e.g. 2mA) for the ON + OFF time.\nSuitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "The permissible output current has a maximum value and an average value. How long can the maximum permissible output current flow?"
+      },
+      {
+        "type": "text",
+        "content": "The permissible output current has a maximum value and an average value. How long can the maximum permissible output current flow?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThere is no provision for the output time of the permissible output current, which is specified by observing the average and maximum values.\nWhen considering a 50% duty cycle current waveform, the maximum value represents the maximum current value (e.g. 4mA) for the ON time, and the average value represents the average current value (e.g. 2mA) for the ON + OFF time.\nSuitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "There is no provision for the output time of the permissible output current, which is specified by observing the average and maximum values.\nWhen considering a 50% duty cycle current waveform, the maximum value represents the maximum current value (e.g. 4mA) for the ON time, and the average value represents the average current value (e.g. 2mA) for the ON + OFF time."
+      },
+      {
+        "type": "text",
+        "content": "There is no provision for the output time of the permissible output current, which is specified by observing the average and maximum values.\nWhen considering a 50% duty cycle current waveform, the maximum value represents the maximum current value (e.g. 4mA) for the ON time, and the average value represents the average current value (e.g. 2mA) for the ON + OFF time."
+      },
+      {
+        "type": "text",
+        "content": "There is no provision for the output time of the permissible output current, which is specified by observing the average and maximum values."
+      },
+      {
+        "type": "text",
+        "content": "When considering a 50% duty cycle current waveform, the maximum value represents the maximum current value (e.g. 4mA) for the ON time, and the average value represents the average current value (e.g. 2mA) for the ON + OFF time."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21588899"
+      }
+    ]
+  }
+}

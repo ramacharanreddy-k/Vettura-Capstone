@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21566494",
+    "title": "Evaluation boards for RX261 and RX260",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:04:05.743847"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat types of evaluation boards are available?\nAnswer:\nRenesas provides three types of RX261 evaluation boards. Customers who are considering the RX260 should use the following boards, as the RX261 includes the functions of the RX260. See the product page of each board for details.\nFPB-RX261: The most inexpensive board that can be easily evaluated without the need for a debugger.\nEK-RX261: Allows all functions of the MCU to be evaluated. \nCapacitive Touch Evaluation System for RX261: Optimized for evaluating touch key solutions.\nSuitable Products\nRX261, RX260"
+      },
+      {
+        "type": "text",
+        "content": "What types of evaluation boards are available?"
+      },
+      {
+        "type": "text",
+        "content": "What types of evaluation boards are available?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRenesas provides three types of RX261 evaluation boards. Customers who are considering the RX260 should use the following boards, as the RX261 includes the functions of the RX260. See the product page of each board for details.\nFPB-RX261: The most inexpensive board that can be easily evaluated without the need for a debugger.\nEK-RX261: Allows all functions of the MCU to be evaluated. \nCapacitive Touch Evaluation System for RX261: Optimized for evaluating touch key solutions.\nSuitable Products\nRX261, RX260"
+      },
+      {
+        "type": "text",
+        "content": "Renesas provides three types of RX261 evaluation boards. Customers who are considering the RX260 should use the following boards, as the RX261 includes the functions of the RX260. See the product page of each board for details.\nFPB-RX261: The most inexpensive board that can be easily evaluated without the need for a debugger.\nEK-RX261: Allows all functions of the MCU to be evaluated. \nCapacitive Touch Evaluation System for RX261: Optimized for evaluating touch key solutions."
+      },
+      {
+        "type": "text",
+        "content": "Renesas provides three types of RX261 evaluation boards. Customers who are considering the RX260 should use the following boards, as the RX261 includes the functions of the RX260. See the product page of each board for details."
+      },
+      {
+        "type": "text",
+        "content": "FPB-RX261: The most inexpensive board that can be easily evaluated without the need for a debugger.\nEK-RX261: Allows all functions of the MCU to be evaluated. \nCapacitive Touch Evaluation System for RX261: Optimized for evaluating touch key solutions."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX261, RX260"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX261, RX260"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX261, RX260"
+    ],
+    "links": [
+      {
+        "text": "FPB-RX261",
+        "url": "https://www.renesas.com/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/fpb-rx261-fast-prototyping-board-rx261-mcu-group"
+      },
+      {
+        "text": "EK-RX261",
+        "url": "https://www.renesas.com/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/ek-rx261-evaluation-kit-rx261-mcu-group"
+      },
+      {
+        "text": "Capacitive Touch Evaluation System for RX261",
+        "url": "https://www.renesas.com/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rtk0eg0055s01001bj-capacitive-touch-evaluation-system-rx261"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21566489"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21566498"
+      }
+    ]
+  }
+}

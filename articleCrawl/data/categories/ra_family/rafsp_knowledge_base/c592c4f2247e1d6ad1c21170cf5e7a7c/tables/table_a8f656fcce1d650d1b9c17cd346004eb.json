@@ -1,0 +1,33 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "RA Devices",
+      "The number of configurable interrupts / exceptions\n(not including the first 16 Exceptions from Reset to SYSTICK)",
+      "Minimum image header size"
+    ],
+    [
+      "Group 1",
+      "16 (0) - 64 (48) Note1",
+      "0x100"
+    ],
+    [
+      "Group 2",
+      "16 (0) - 128 (112) Note1",
+      "0x200"
+    ],
+    [
+      "Group 3",
+      "16 (0) - 32 (16)",
+      "0x80"
+    ],
+    [
+      "33 (17) - 64 (48)",
+      "0x100"
+    ],
+    [
+      "65 (49) - 128 (112) Note1",
+      "0x200"
+    ]
+  ]
+}

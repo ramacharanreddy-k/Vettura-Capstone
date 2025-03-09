@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "void cbID_SCREEN_00(WM_MESSAGE * pMsg) {\n  WM_HWIN  hWin;\n  int      Id, NCode;\n    switch (pMsg->MsgId) {\n    case WM_INIT_DIALOG:\n        hWin = TEXT_CreateEx(5, 5, 100, 100, pMsg->hWin, WM_CF_SHOW, 0, GUI_ID_TEXT0, \"HI\");\n      break;\n      case WM_NOTIFY_PARENT:\n      Id = WM_GetId(pMsg->hWinSrc);\n      NCode = pMsg->Data.v;\n        switch(Id) {\n        case ID_BUTTON_00:\n            switch(NCode){\n              case WM_NOTIFICATION_CLICKED:\n                hWin = WM_GetDialogItem(pMsg->hWin, GUI_ID_TEXT0);\n                TEXT_SetText(hWin, \"Success\");\n              break;\n            }\n            break;\n      }\n      break;\n    default:\n      //WM_DefaultProc(); --> ”Screen” callback MUST not have default function handler\n      break;\n  }\n}"
+    ]
+  ]
+}

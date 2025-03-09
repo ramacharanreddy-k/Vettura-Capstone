@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20145771",
+    "title": "RA2: Operation temperature",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:31:30.147067"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the maximum operating temperature?\nAnswer:\nRA2 series supports wide range of operating temperature.\nRA2L1, RA2E1, RA2E3 and RA2A2 support from -40 to 105degC. (ambient temperature)\nRA2E2 supports from -40 to 125degC. (ambient temperature)\nSuitable Products\nRA2L1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "What is the maximum operating temperature?"
+      },
+      {
+        "type": "text",
+        "content": "What is the maximum operating temperature?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRA2 series supports wide range of operating temperature.\nRA2L1, RA2E1, RA2E3 and RA2A2 support from -40 to 105degC. (ambient temperature)\nRA2E2 supports from -40 to 125degC. (ambient temperature)\nSuitable Products\nRA2L1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "RA2 series supports wide range of operating temperature.\nRA2L1, RA2E1, RA2E3 and RA2A2 support from -40 to 105degC. (ambient temperature)\nRA2E2 supports from -40 to 125degC. (ambient temperature)"
+      },
+      {
+        "type": "text",
+        "content": "RA2 series supports wide range of operating temperature.\nRA2L1, RA2E1, RA2E3 and RA2A2 support from -40 to 105degC. (ambient temperature)\nRA2E2 supports from -40 to 125degC. (ambient temperature)"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA2L1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA2L1, RA2E1, RA2E2, RA2E3, RA2A2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA2L1, RA2E1, RA2E2, RA2E3, RA2A2"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20145777"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20145774"
+      }
+    ]
+  }
+}

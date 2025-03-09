@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20855728",
+    "title": "Device: I can’t find the part number of the device in any distributor stock; how can I purchase it?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:25:48.970129"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI can’t find the part number of the device in any distributor stock; how can I purchase it?\nAnswer:\nThe generic part number of the Voice HMI ASSP is R9A06G150. However, the full part number includes a ROM code made of 3 digits (one letter and two numbers) which identify the application software programmed in the device at factory. So, for example, for a specific application, the full part number of the product might be R9A06G150D01GNH where D01 identifies the ROM (application firmware) code. The ROM code is defined according to the specific Voice HMI application and functionality implemented. Please contact your Renesas sales representative for more information.\nSuitable Products\nRISC-V Voice ASSP"
+      },
+      {
+        "type": "text",
+        "content": "I can’t find the part number of the device in any distributor stock; how can I purchase it?"
+      },
+      {
+        "type": "text",
+        "content": "I can’t find the part number of the device in any distributor stock; how can I purchase it?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe generic part number of the Voice HMI ASSP is R9A06G150. However, the full part number includes a ROM code made of 3 digits (one letter and two numbers) which identify the application software programmed in the device at factory. So, for example, for a specific application, the full part number of the product might be R9A06G150D01GNH where D01 identifies the ROM (application firmware) code. The ROM code is defined according to the specific Voice HMI application and functionality implemented. Please contact your Renesas sales representative for more information.\nSuitable Products\nRISC-V Voice ASSP"
+      },
+      {
+        "type": "text",
+        "content": "The generic part number of the Voice HMI ASSP is R9A06G150. However, the full part number includes a ROM code made of 3 digits (one letter and two numbers) which identify the application software programmed in the device at factory. So, for example, for a specific application, the full part number of the product might be R9A06G150D01GNH where D01 identifies the ROM (application firmware) code. The ROM code is defined according to the specific Voice HMI application and functionality implemented. Please contact your Renesas sales representative for more information."
+      },
+      {
+        "type": "text",
+        "content": "The generic part number of the Voice HMI ASSP is R9A06G150. However, the full part number includes a ROM code made of 3 digits (one letter and two numbers) which identify the application software programmed in the device at factory. So, for example, for a specific application, the full part number of the product might be R9A06G150D01GNH where D01 identifies the ROM (application firmware) code. The ROM code is defined according to the specific Voice HMI application and functionality implemented. Please contact your Renesas sales representative for more information."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRISC-V Voice ASSP"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RISC-V Voice ASSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RISC-V Voice ASSP"
+    ],
+    "links": []
+  }
+}

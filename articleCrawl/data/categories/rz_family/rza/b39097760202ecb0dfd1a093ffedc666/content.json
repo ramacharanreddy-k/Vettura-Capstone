@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20590549",
+    "title": "OS support of RZ/A3UL",
+    "last_updated": "2022-04-08",
+    "extracted_at": "2025-03-08T23:42:50.512993"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan an RTOS other than FreeRTOS be used?\nAnswer:\nYes. Renesas provides a flexible software package (FSP) to enable you to freely select an RTOS. This allows you to use the RZ/A3UL with your preferred RTOS as necessary. However, some of the middleware stack is dependent on the FreeRTOS currently, so we plan to integrate the RTOS wrappers in a future release to increase portability.\nSuitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Can an RTOS other than FreeRTOS be used?"
+      },
+      {
+        "type": "text",
+        "content": "Can an RTOS other than FreeRTOS be used?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes. Renesas provides a flexible software package (FSP) to enable you to freely select an RTOS. This allows you to use the RZ/A3UL with your preferred RTOS as necessary. However, some of the middleware stack is dependent on the FreeRTOS currently, so we plan to integrate the RTOS wrappers in a future release to increase portability.\nSuitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Yes. Renesas provides a flexible software package (FSP) to enable you to freely select an RTOS. This allows you to use the RZ/A3UL with your preferred RTOS as necessary. However, some of the middleware stack is dependent on the FreeRTOS currently, so we plan to integrate the RTOS wrappers in a future release to increase portability."
+      },
+      {
+        "type": "text",
+        "content": "Yes. Renesas provides a flexible software package (FSP) to enable you to freely select an RTOS. This allows you to use the RZ/A3UL with your preferred RTOS as necessary. However, some of the middleware stack is dependent on the FreeRTOS currently, so we plan to integrate the RTOS wrappers in a future release to increase portability."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A3UL"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A3UL"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20590557"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20590566"
+      }
+    ]
+  }
+}

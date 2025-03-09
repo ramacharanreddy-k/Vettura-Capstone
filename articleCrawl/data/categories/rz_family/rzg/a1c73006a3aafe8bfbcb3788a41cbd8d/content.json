@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21175346",
+    "title": "RZ/G3S: Tell me about the mechanism to recover from the state of the VBATT mode",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:44:03.134333"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nPlease tell me about the mechanism to recover from the state of the VBATT mode.\nAnswer:\nOperating the CPU and outputting a signal to external circuits are not possible in the VBATT mode. Therefore, it is necessary to make a mechanism to start powering on of the RZ/G3S from a PMIC or external circuit. \nThe RZ/G3S needs to identify the state before recovery in the startup program after power-on to change the startup process.\nSuitable Products\nRZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "Please tell me about the mechanism to recover from the state of the VBATT mode."
+      },
+      {
+        "type": "text",
+        "content": "Please tell me about the mechanism to recover from the state of the VBATT mode."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nOperating the CPU and outputting a signal to external circuits are not possible in the VBATT mode. Therefore, it is necessary to make a mechanism to start powering on of the RZ/G3S from a PMIC or external circuit. \nThe RZ/G3S needs to identify the state before recovery in the startup program after power-on to change the startup process.\nSuitable Products\nRZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "Operating the CPU and outputting a signal to external circuits are not possible in the VBATT mode. Therefore, it is necessary to make a mechanism to start powering on of the RZ/G3S from a PMIC or external circuit. \nThe RZ/G3S needs to identify the state before recovery in the startup program after power-on to change the startup process."
+      },
+      {
+        "type": "text",
+        "content": "Operating the CPU and outputting a signal to external circuits are not possible in the VBATT mode. Therefore, it is necessary to make a mechanism to start powering on of the RZ/G3S from a PMIC or external circuit. \nThe RZ/G3S needs to identify the state before recovery in the startup program after power-on to change the startup process."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/G3S"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/G3S"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21175360"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21175368"
+      }
+    ]
+  }
+}

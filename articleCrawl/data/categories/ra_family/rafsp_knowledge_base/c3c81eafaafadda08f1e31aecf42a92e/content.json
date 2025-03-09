@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21177410",
+    "title": "RA Family: How to create a test program when performing USB compliance testing in host mode?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:23:41.687967"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to create a test program when performing USB compliance testing in host mode?\nAnswer:\nPlease refer to \"Usage Notes\" -> \"Compliance Test\" under \"USB (r_usb_basic)\" in the FSP User's Manual. FSP has an implementation of USB test mode. You can see the implementation by looking for USB_CFG_COMPLIANCE in the FSP source code.\nSuitable Products\nRA/FSP"
+      },
+      {
+        "type": "text",
+        "content": "How to create a test program when performing USB compliance testing in host mode?"
+      },
+      {
+        "type": "text",
+        "content": "How to create a test program when performing USB compliance testing in host mode?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nPlease refer to \"Usage Notes\" -> \"Compliance Test\" under \"USB (r_usb_basic)\" in the FSP User's Manual. FSP has an implementation of USB test mode. You can see the implementation by looking for USB_CFG_COMPLIANCE in the FSP source code.\nSuitable Products\nRA/FSP"
+      },
+      {
+        "type": "text",
+        "content": "Please refer to \"Usage Notes\" -> \"Compliance Test\" under \"USB (r_usb_basic)\" in the FSP User's Manual. FSP has an implementation of USB test mode. You can see the implementation by looking for USB_CFG_COMPLIANCE in the FSP source code."
+      },
+      {
+        "type": "text",
+        "content": "Please refer to \"Usage Notes\" -> \"Compliance Test\" under \"USB (r_usb_basic)\" in the FSP User's Manual. FSP has an implementation of USB test mode. You can see the implementation by looking for USB_CFG_COMPLIANCE in the FSP source code."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA/FSP"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA/FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA/FSP"
+    ],
+    "links": []
+  }
+}

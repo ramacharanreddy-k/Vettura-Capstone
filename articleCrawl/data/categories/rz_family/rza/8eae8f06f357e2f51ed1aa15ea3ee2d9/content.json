@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21051014",
+    "title": "RZ/A2M: Frequency setting for clock input from EXTAL pin",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:43:26.027813"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nThe user's manual describes 12/24 MHz as the input from EXTAL (Figure 6.6), but the register setting that specifies the frequency cannot be found. How can I set this up?\nAnswer:\nPlease refer to the following table.\nEXTAL/XTAL UCLKSEL MD_CLK\n12MHz±100ppm 0 0\n24MHz±100ppm 0 1\n10MHz to 12MHz 1 0\n20MHz to 24MHz 1 1\n＊UCLKSEL is the bit that selects the clock to be supplied to USBPHY.\nFor example, when selecting EXTAL as the clock for the USB2.0 host/function interface and inputting 24MHz±100ppm, the settings are as follows.\nUCLKSEL=0\nMD_CLK=1\nSuitable Products\nRZ/A2M"
+      },
+      {
+        "type": "text",
+        "content": "The user's manual describes 12/24 MHz as the input from EXTAL (Figure 6.6), but the register setting that specifies the frequency cannot be found. How can I set this up?"
+      },
+      {
+        "type": "text",
+        "content": "The user's manual describes 12/24 MHz as the input from EXTAL (Figure 6.6), but the register setting that specifies the frequency cannot be found. How can I set this up?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nPlease refer to the following table.\nEXTAL/XTAL UCLKSEL MD_CLK\n12MHz±100ppm 0 0\n24MHz±100ppm 0 1\n10MHz to 12MHz 1 0\n20MHz to 24MHz 1 1\n＊UCLKSEL is the bit that selects the clock to be supplied to USBPHY.\nFor example, when selecting EXTAL as the clock for the USB2.0 host/function interface and inputting 24MHz±100ppm, the settings are as follows.\nUCLKSEL=0\nMD_CLK=1\nSuitable Products\nRZ/A2M"
+      },
+      {
+        "type": "text",
+        "content": "Please refer to the following table.\nEXTAL/XTAL UCLKSEL MD_CLK\n12MHz±100ppm 0 0\n24MHz±100ppm 0 1\n10MHz to 12MHz 1 0\n20MHz to 24MHz 1 1\n＊UCLKSEL is the bit that selects the clock to be supplied to USBPHY.\nFor example, when selecting EXTAL as the clock for the USB2.0 host/function interface and inputting 24MHz±100ppm, the settings are as follows.\nUCLKSEL=0\nMD_CLK=1"
+      },
+      {
+        "type": "text",
+        "content": "Please refer to the following table."
+      },
+      {
+        "type": "text",
+        "content": "＊UCLKSEL is the bit that selects the clock to be supplied to USBPHY."
+      },
+      {
+        "type": "text",
+        "content": "For example, when selecting EXTAL as the clock for the USB2.0 host/function interface and inputting 24MHz±100ppm, the settings are as follows."
+      },
+      {
+        "type": "text",
+        "content": "UCLKSEL=0\nMD_CLK=1"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A2M"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "EXTAL/XTAL",
+            "UCLKSEL",
+            "MD_CLK"
+          ],
+          [
+            "12MHz±100ppm",
+            "0",
+            "0"
+          ],
+          [
+            "24MHz±100ppm",
+            "0",
+            "1"
+          ],
+          [
+            "10MHz to 12MHz",
+            "1",
+            "0"
+          ],
+          [
+            "20MHz to 24MHz",
+            "1",
+            "1"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A2M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A2M"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21051017"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21051019"
+      }
+    ]
+  }
+}

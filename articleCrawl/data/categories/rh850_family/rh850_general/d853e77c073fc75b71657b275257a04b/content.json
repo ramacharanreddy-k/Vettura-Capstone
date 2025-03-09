@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20364149",
+    "title": "Can anyone have CC Compiler for RH850 on e2 Studio IDE?",
+    "last_updated": "2022-01-02",
+    "extracted_at": "2025-03-09T00:28:49.741809"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan anyone have CC Compiler for RH850 on e2 Studio IDE?\nAnswer:\nThe Renesas CC-RH compiler is only supported by the CS+ IDE and not by e2 studio.\nSuitable Products\nRH850/F1x"
+      },
+      {
+        "type": "text",
+        "content": "Can anyone have CC Compiler for RH850 on e2 Studio IDE?"
+      },
+      {
+        "type": "text",
+        "content": "Can anyone have CC Compiler for RH850 on e2 Studio IDE?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe Renesas CC-RH compiler is only supported by the CS+ IDE and not by e2 studio.\nSuitable Products\nRH850/F1x"
+      },
+      {
+        "type": "text",
+        "content": "The Renesas CC-RH compiler is only supported by the CS+ IDE and not by e2 studio."
+      },
+      {
+        "type": "text",
+        "content": "The Renesas CC-RH compiler is only supported by the CS+ IDE and not by e2 studio."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850/F1x"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850/F1x"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850/F1x"
+    ],
+    "links": []
+  }
+}

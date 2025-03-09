@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20536980",
+    "title": "RA Family: What type of microphone interfaces are used ?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:41:05.549198"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat type of microphone interfaces are used ?\nAnswer:\nDigital microphones on VOICE kits use the I2S emulated interface.\nSuitable Products\nMCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+      },
+      {
+        "type": "text",
+        "content": "What type of microphone interfaces are used ?"
+      },
+      {
+        "type": "text",
+        "content": "What type of microphone interfaces are used ?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nDigital microphones on VOICE kits use the I2S emulated interface.\nSuitable Products\nMCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+      },
+      {
+        "type": "text",
+        "content": "Digital microphones on VOICE kits use the I2S emulated interface."
+      },
+      {
+        "type": "text",
+        "content": "Digital microphones on VOICE kits use the I2S emulated interface."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nMCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "MCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "MCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20545074"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20545085"
+      }
+    ]
+  }
+}

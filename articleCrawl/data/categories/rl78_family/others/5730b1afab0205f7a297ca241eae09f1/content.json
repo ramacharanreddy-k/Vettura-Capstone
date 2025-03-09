@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20916011",
+    "title": "Noise countermeasures to the REGC pin",
+    "last_updated": "2023-11-05",
+    "extracted_at": "2025-03-09T00:01:32.575371"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat are the concerns with inserting a resistor between the REGC pin and the capacitor?\nAnswer:\nThe voltage applied to the REGC pin is crucial for the internal circuits of RL78 products. \nWe would like to inform you that inserting a resistor between the REGC pin and the capacitor can cause the voltage supplied to the internal circuit of the RL78 product to become unstable, potentially impacting the device's performance. Therefore, we do not recommend inserting a resistor for stable operation of RL78 products.\nHowever, if you require resistor insertion for some reason, please ensure that the following criteria are met and assess whether resistor insertion is acceptable or not.\nSelect a resistor with a resistance value of 50 Ω or less, and as small a value as possible.\nVoltage fluctuations on the REGC pin should always be within ± 0.1 V.\nCaution:\nThe voltage applied to the REGC pin (regulator output voltage) varies depending on the RL78 microcontroller and flash operation mode.\nFor the regulator output voltage, please refer to the \"Regulator\" section of the RL78 User's Manual Hardware of each product.\nExample of regulator output voltage:\nRL78/G13\nLS (Low-speed main) mode, LV (Low-voltage main) mode: 1.8V\nHS (high speed main) mode: 2.1V\nRL78/G23\n1.5V\nRemark:\nTo prevent noise from affecting the internal circuits of RL78 products through the capacitor connected to the REGC pin, it is recommended to strengthen the power supply by adding bypass capacitors near the device. \nIf noise is applied to the GND side, it may be transmitted to the internal circuits, so taking these measures can be effective in reducing its impact.\nSuitable Products\nRL78 Family"
+      },
+      {
+        "type": "text",
+        "content": "What are the concerns with inserting a resistor between the REGC pin and the capacitor?"
+      },
+      {
+        "type": "text",
+        "content": "What are the concerns with inserting a resistor between the REGC pin and the capacitor?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe voltage applied to the REGC pin is crucial for the internal circuits of RL78 products. \nWe would like to inform you that inserting a resistor between the REGC pin and the capacitor can cause the voltage supplied to the internal circuit of the RL78 product to become unstable, potentially impacting the device's performance. Therefore, we do not recommend inserting a resistor for stable operation of RL78 products.\nHowever, if you require resistor insertion for some reason, please ensure that the following criteria are met and assess whether resistor insertion is acceptable or not.\nSelect a resistor with a resistance value of 50 Ω or less, and as small a value as possible.\nVoltage fluctuations on the REGC pin should always be within ± 0.1 V.\nCaution:\nThe voltage applied to the REGC pin (regulator output voltage) varies depending on the RL78 microcontroller and flash operation mode.\nFor the regulator output voltage, please refer to the \"Regulator\" section of the RL78 User's Manual Hardware of each product.\nExample of regulator output voltage:\nRL78/G13\nLS (Low-speed main) mode, LV (Low-voltage main) mode: 1.8V\nHS (high speed main) mode: 2.1V\nRL78/G23\n1.5V\nRemark:\nTo prevent noise from affecting the internal circuits of RL78 products through the capacitor connected to the REGC pin, it is recommended to strengthen the power supply by adding bypass capacitors near the device. \nIf noise is applied to the GND side, it may be transmitted to the internal circuits, so taking these measures can be effective in reducing its impact.\nSuitable Products\nRL78 Family"
+      },
+      {
+        "type": "text",
+        "content": "The voltage applied to the REGC pin is crucial for the internal circuits of RL78 products. \nWe would like to inform you that inserting a resistor between the REGC pin and the capacitor can cause the voltage supplied to the internal circuit of the RL78 product to become unstable, potentially impacting the device's performance. Therefore, we do not recommend inserting a resistor for stable operation of RL78 products.\nHowever, if you require resistor insertion for some reason, please ensure that the following criteria are met and assess whether resistor insertion is acceptable or not.\nSelect a resistor with a resistance value of 50 Ω or less, and as small a value as possible.\nVoltage fluctuations on the REGC pin should always be within ± 0.1 V.\nCaution:\nThe voltage applied to the REGC pin (regulator output voltage) varies depending on the RL78 microcontroller and flash operation mode.\nFor the regulator output voltage, please refer to the \"Regulator\" section of the RL78 User's Manual Hardware of each product.\nExample of regulator output voltage:\nRL78/G13\nLS (Low-speed main) mode, LV (Low-voltage main) mode: 1.8V\nHS (high speed main) mode: 2.1V\nRL78/G23\n1.5V\nRemark:\nTo prevent noise from affecting the internal circuits of RL78 products through the capacitor connected to the REGC pin, it is recommended to strengthen the power supply by adding bypass capacitors near the device. \nIf noise is applied to the GND side, it may be transmitted to the internal circuits, so taking these measures can be effective in reducing its impact."
+      },
+      {
+        "type": "text",
+        "content": "The voltage applied to the REGC pin is crucial for the internal circuits of RL78 products. \nWe would like to inform you that inserting a resistor between the REGC pin and the capacitor can cause the voltage supplied to the internal circuit of the RL78 product to become unstable, potentially impacting the device's performance. Therefore, we do not recommend inserting a resistor for stable operation of RL78 products.\nHowever, if you require resistor insertion for some reason, please ensure that the following criteria are met and assess whether resistor insertion is acceptable or not."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/368749.png",
+          "alt_text": "",
+          "width": "510",
+          "height": "258",
+          "local_path": "data/categories/rl78_family/others/5730b1afab0205f7a297ca241eae09f1/images/cbd80ea6cb946652c96b61d100d15ca1.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Caution:"
+      },
+      {
+        "type": "text",
+        "content": "The voltage applied to the REGC pin (regulator output voltage) varies depending on the RL78 microcontroller and flash operation mode.\nFor the regulator output voltage, please refer to the \"Regulator\" section of the RL78 User's Manual Hardware of each product."
+      },
+      {
+        "type": "text",
+        "content": "Example of regulator output voltage:"
+      },
+      {
+        "type": "text",
+        "content": "Remark:"
+      },
+      {
+        "type": "text",
+        "content": "To prevent noise from affecting the internal circuits of RL78 products through the capacitor connected to the REGC pin, it is recommended to strengthen the power supply by adding bypass capacitors near the device. \nIf noise is applied to the GND side, it may be transmitted to the internal circuits, so taking these measures can be effective in reducing its impact."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78 Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/368749.png",
+        "alt_text": "",
+        "width": "510",
+        "height": "258",
+        "local_path": "data/categories/rl78_family/others/5730b1afab0205f7a297ca241eae09f1/images/cbd80ea6cb946652c96b61d100d15ca1.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78 Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78 Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20916009"
+      }
+    ]
+  }
+}

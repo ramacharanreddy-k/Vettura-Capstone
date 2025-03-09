@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21246425",
+    "title": "Amazon FreeRTOS and Trusted Secure IP on an RX65N",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:23:41.244635"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan an RX65N having no TSIP module be used in an Amazon FreeRTOS environment that uses the TLS protocol? \nAnswer:\nYes. It can.\nIf you use the Trusted Secure IP on Amazon FreeRTOS, the information at the following link should be helpful.\nYou will be able to obtain performance information and understand the implementation method.\nEvaluation of performance of communication in the SSL TLS layer using the Security IP in an RX72N\nFor the general TLS implementation method and the method of linkage with the Trusted Secure IP driver, the application note at the following link should be helpful.\nhttps://www.renesas.com/software-tool/trusted-secure-ip-driver\n-> Trusted Secure IP driver (binary version) for RX-family products\n-> In the case of Rev.1.13\n-> \\r20an0548xx0113-lib-rx-tsip-security\\reference_documents\\ja\\r01an5880jj0100-rx-tsip.pdf\n  Suitable Products\nRX65N"
+      },
+      {
+        "type": "text",
+        "content": "Can an RX65N having no TSIP module be used in an Amazon FreeRTOS environment that uses the TLS protocol?"
+      },
+      {
+        "type": "text",
+        "content": "Can an RX65N having no TSIP module be used in an Amazon FreeRTOS environment that uses the TLS protocol?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes. It can.\nIf you use the Trusted Secure IP on Amazon FreeRTOS, the information at the following link should be helpful.\nYou will be able to obtain performance information and understand the implementation method.\nEvaluation of performance of communication in the SSL TLS layer using the Security IP in an RX72N\nFor the general TLS implementation method and the method of linkage with the Trusted Secure IP driver, the application note at the following link should be helpful.\nhttps://www.renesas.com/software-tool/trusted-secure-ip-driver\n-> Trusted Secure IP driver (binary version) for RX-family products\n-> In the case of Rev.1.13\n-> \\r20an0548xx0113-lib-rx-tsip-security\\reference_documents\\ja\\r01an5880jj0100-rx-tsip.pdf\n  Suitable Products\nRX65N"
+      },
+      {
+        "type": "text",
+        "content": "Yes. It can.\nIf you use the Trusted Secure IP on Amazon FreeRTOS, the information at the following link should be helpful.\nYou will be able to obtain performance information and understand the implementation method.\nEvaluation of performance of communication in the SSL TLS layer using the Security IP in an RX72N\nFor the general TLS implementation method and the method of linkage with the Trusted Secure IP driver, the application note at the following link should be helpful.\nhttps://www.renesas.com/software-tool/trusted-secure-ip-driver\n-> Trusted Secure IP driver (binary version) for RX-family products\n-> In the case of Rev.1.13\n-> \\r20an0548xx0113-lib-rx-tsip-security\\reference_documents\\ja\\r01an5880jj0100-rx-tsip.pdf"
+      },
+      {
+        "type": "text",
+        "content": "Yes. It can.\nIf you use the Trusted Secure IP on Amazon FreeRTOS, the information at the following link should be helpful.\nYou will be able to obtain performance information and understand the implementation method."
+      },
+      {
+        "type": "text",
+        "content": "Evaluation of performance of communication in the SSL TLS layer using the Security IP in an RX72N"
+      },
+      {
+        "type": "text",
+        "content": "For the general TLS implementation method and the method of linkage with the Trusted Secure IP driver, the application note at the following link should be helpful.\nhttps://www.renesas.com/software-tool/trusted-secure-ip-driver"
+      },
+      {
+        "type": "text",
+        "content": "-> Trusted Secure IP driver (binary version) for RX-family products\n-> In the case of Rev.1.13\n-> \\r20an0548xx0113-lib-rx-tsip-security\\reference_documents\\ja\\r01an5880jj0100-rx-tsip.pdf"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX65N"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX65N"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX65N"
+    ],
+    "links": [
+      {
+        "text": "Evaluation of performance of communication in the SSL TLS layer using the Security IP in an RX72N",
+        "url": "https://github.com/renesas/amazon-freertos/wiki/RX72N%E5%86%85%E8%94%B5%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3IP%E3%82%92%E6%B4%BB%E7%94%A8%E3%81%97%E3%81%9FSSL-TLS%E5%B1%A4%E3%81%AE%E9%80%9A%E4%BF%A1%E6%80%A7%E8%83%BD%E8%A9%95%E4%BE%A1"
+      },
+      {
+        "text": "https://www.renesas.com/software-tool/trusted-secure-ip-driver",
+        "url": "https://www.renesas.com/software-tool/trusted-secure-ip-driver"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20236149"
+      }
+    ]
+  }
+}

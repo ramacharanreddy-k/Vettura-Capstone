@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21659605",
+    "title": "RA and FSP Curriculum : Getting Started with EK-RA8D1 Graphics Application Embedded Wizard",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:11:18.058539"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "This lab material explains all necessary steps to create an Embedded Wizard UI application suitable for RA8D1 Evaluation Kit."
+      },
+      {
+        "type": "text",
+        "content": "Getting Started with EK-RA8D1 Graphics Application Embedded Wizard for FSP 5.5.0 - a hands on lab using EK-RA8D1, Embedded Wizard Studio and FSP 5.5.0. Please make sure you"
+      },
+      {
+        "type": "text",
+        "content": "follow the instructions carefully and step by step in order to ensure that you set everything up and run your own UI application on EK-RA8D1."
+      },
+      {
+        "type": "text",
+        "content": "All lab materials are available in a single zip file here."
+      },
+      {
+        "type": "text",
+        "content": "All lab materials are available in a single zip file"
+      },
+      {
+        "type": "text",
+        "content": "All Courses"
+      },
+      {
+        "type": "text",
+        "content": "All RA and FSP courses are listed here."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA8D1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA8D1"
+    ],
+    "links": [
+      {
+        "text": "here.",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3528"
+      },
+      {
+        "text": "here.",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files"
+      }
+    ]
+  }
+}

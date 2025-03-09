@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21173998",
+    "title": "Feature and performance upgrade from RL78/F13, F14",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:55:16.728993"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat are differences between RL78/F23, F24 and F13, F14?\nAnswer:\nThe maximum CPU clock of RL78/F23 and F24 has been increased to 40MHz for all temperature grades. As a security function, it supports AES-128/192/256 and is functionally equivalent to Evita-light. In terms of functional safety, it is equivalent to ASIL-B. It has dedicated hardware to support BLDC motor control. For F24, it supports CAN FD. Other functions have compatibility with F13, F14. They are fully pin compatible to F13 and F14 to make it easy for transition to F23, F24.\nSuitable Products\nRL78/F23, RL78/F24"
+      },
+      {
+        "type": "text",
+        "content": "What are differences between RL78/F23, F24 and F13, F14?"
+      },
+      {
+        "type": "text",
+        "content": "What are differences between RL78/F23, F24 and F13, F14?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe maximum CPU clock of RL78/F23 and F24 has been increased to 40MHz for all temperature grades. As a security function, it supports AES-128/192/256 and is functionally equivalent to Evita-light. In terms of functional safety, it is equivalent to ASIL-B. It has dedicated hardware to support BLDC motor control. For F24, it supports CAN FD. Other functions have compatibility with F13, F14. They are fully pin compatible to F13 and F14 to make it easy for transition to F23, F24.\nSuitable Products\nRL78/F23, RL78/F24"
+      },
+      {
+        "type": "text",
+        "content": "The maximum CPU clock of RL78/F23 and F24 has been increased to 40MHz for all temperature grades. As a security function, it supports AES-128/192/256 and is functionally equivalent to Evita-light. In terms of functional safety, it is equivalent to ASIL-B. It has dedicated hardware to support BLDC motor control. For F24, it supports CAN FD. Other functions have compatibility with F13, F14. They are fully pin compatible to F13 and F14 to make it easy for transition to F23, F24."
+      },
+      {
+        "type": "text",
+        "content": "The maximum CPU clock of RL78/F23 and F24 has been increased to 40MHz for all temperature grades. As a security function, it supports AES-128/192/256 and is functionally equivalent to Evita-light. In terms of functional safety, it is equivalent to ASIL-B. It has dedicated hardware to support BLDC motor control. For F24, it supports CAN FD. Other functions have compatibility with F13, F14. They are fully pin compatible to F13 and F14 to make it easy for transition to F23, F24."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/F23, RL78/F24"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/F23, RL78/F24"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/F23, RL78/F24"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21174006"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21174026"
+      }
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20414187",
+    "title": "Changing data endian setting of a RX project",
+    "last_updated": "2022-04-03",
+    "extracted_at": "2025-03-09T00:11:12.562451"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow can I change data endian setting of a RX project?\nAnswer:\nPlease follow the below instruction.\nPlease note that configurations when building and debugging should be matched in order to work properly. Although the example below describes the conversion from little endian to big endian, the opposite conversion can be done similarly.\nBuild option setting:\nBy the following configuration, -endian=big option will be applied for compiler, assembler and linker (-endian=little is the default).\n[CS+]\nOpen \"Common Options\" tab in Property panel of Build Tool and change \"Endian type for data\" to \"Big-endian data\" \n[e² studio]\nOpen Project Properties dialog. In \"C/C++ Build\", go to \"Settings\", select \"Tool Settings\" tab, go to “Common” and select “CPU”. Change Data Endian (-endian) to “\"Big-endian data\".\nIn GCC project, -mbig-endian-data will be specified by Data Endian setting in CPU category of Tool Settings tab.\nDebugger setting:\n[CS+]\nThe endian setting of Debug Tool option may have been changed due to the change of Build Tool configuration. Open Debug Tool's Property Panel. In \"Connect Settings\" tab, set endian in \"Endian of CPU\".\n[e² studio]\nOpen Debug Configuration dialog→“Debugger“ tab→“Debug Tool Settings\" tab, change setting in \"Endian\" in Memory category. Debug configuration is common for both CC-RX and GCC project.\n________________________________________\nAffects to source code descriptions:\nThe setting of -endian=big in CC-RX (or -mbig-endian-data of GCC) enables internal symbol __BIG (and disable __LIT) of compiler\nIn GCC project, -mbig-endian-data setting does not affect to bitfield order. You should re-order bitfields when migrating source files from little endian projects.\nNote for FreeRTOS projects:\nIn FreeRTOS projects, several descriptions should be changed such as follows. File and line location of description may be different among FreeRTOS versions.\nFreeRTOSIPConfig.h :\n#define ipconfigBYTE_ORDER pdFREERTOS_LITTLE_ENDIAN\n→ change to pdFREERTOS_BIG_ENDIAN\naws_secure_sockets_config.h :\n#define socketsconfigBYTE_ORDER pdLITTLE_ENDIAN\n→ change to pdBIG_ENDIAN\nSuitable Products\nRX Family, \nC/C++ Compiler Package for RX Family (CC-RX), \nGCC for Renesas RX, \nCS+ (formerly CubeSuite+), \ne² studio"
+      },
+      {
+        "type": "text",
+        "content": "How can I change data endian setting of a RX project?"
+      },
+      {
+        "type": "text",
+        "content": "How can I change data endian setting of a RX project?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nPlease follow the below instruction.\nPlease note that configurations when building and debugging should be matched in order to work properly. Although the example below describes the conversion from little endian to big endian, the opposite conversion can be done similarly.\nBuild option setting:\nBy the following configuration, -endian=big option will be applied for compiler, assembler and linker (-endian=little is the default).\n[CS+]\nOpen \"Common Options\" tab in Property panel of Build Tool and change \"Endian type for data\" to \"Big-endian data\" \n[e² studio]\nOpen Project Properties dialog. In \"C/C++ Build\", go to \"Settings\", select \"Tool Settings\" tab, go to “Common” and select “CPU”. Change Data Endian (-endian) to “\"Big-endian data\".\nIn GCC project, -mbig-endian-data will be specified by Data Endian setting in CPU category of Tool Settings tab.\nDebugger setting:\n[CS+]\nThe endian setting of Debug Tool option may have been changed due to the change of Build Tool configuration. Open Debug Tool's Property Panel. In \"Connect Settings\" tab, set endian in \"Endian of CPU\".\n[e² studio]\nOpen Debug Configuration dialog→“Debugger“ tab→“Debug Tool Settings\" tab, change setting in \"Endian\" in Memory category. Debug configuration is common for both CC-RX and GCC project.\n________________________________________\nAffects to source code descriptions:\nThe setting of -endian=big in CC-RX (or -mbig-endian-data of GCC) enables internal symbol __BIG (and disable __LIT) of compiler\nIn GCC project, -mbig-endian-data setting does not affect to bitfield order. You should re-order bitfields when migrating source files from little endian projects.\nNote for FreeRTOS projects:\nIn FreeRTOS projects, several descriptions should be changed such as follows. File and line location of description may be different among FreeRTOS versions.\nFreeRTOSIPConfig.h :\n#define ipconfigBYTE_ORDER pdFREERTOS_LITTLE_ENDIAN\n→ change to pdFREERTOS_BIG_ENDIAN\naws_secure_sockets_config.h :\n#define socketsconfigBYTE_ORDER pdLITTLE_ENDIAN\n→ change to pdBIG_ENDIAN\nSuitable Products\nRX Family, \nC/C++ Compiler Package for RX Family (CC-RX), \nGCC for Renesas RX, \nCS+ (formerly CubeSuite+), \ne² studio"
+      },
+      {
+        "type": "text",
+        "content": "Please follow the below instruction.\nPlease note that configurations when building and debugging should be matched in order to work properly. Although the example below describes the conversion from little endian to big endian, the opposite conversion can be done similarly.\nBuild option setting:\nBy the following configuration, -endian=big option will be applied for compiler, assembler and linker (-endian=little is the default).\n[CS+]\nOpen \"Common Options\" tab in Property panel of Build Tool and change \"Endian type for data\" to \"Big-endian data\" \n[e² studio]\nOpen Project Properties dialog. In \"C/C++ Build\", go to \"Settings\", select \"Tool Settings\" tab, go to “Common” and select “CPU”. Change Data Endian (-endian) to “\"Big-endian data\".\nIn GCC project, -mbig-endian-data will be specified by Data Endian setting in CPU category of Tool Settings tab.\nDebugger setting:\n[CS+]\nThe endian setting of Debug Tool option may have been changed due to the change of Build Tool configuration. Open Debug Tool's Property Panel. In \"Connect Settings\" tab, set endian in \"Endian of CPU\".\n[e² studio]\nOpen Debug Configuration dialog→“Debugger“ tab→“Debug Tool Settings\" tab, change setting in \"Endian\" in Memory category. Debug configuration is common for both CC-RX and GCC project.\n________________________________________\nAffects to source code descriptions:\nThe setting of -endian=big in CC-RX (or -mbig-endian-data of GCC) enables internal symbol __BIG (and disable __LIT) of compiler\nIn GCC project, -mbig-endian-data setting does not affect to bitfield order. You should re-order bitfields when migrating source files from little endian projects.\nNote for FreeRTOS projects:\nIn FreeRTOS projects, several descriptions should be changed such as follows. File and line location of description may be different among FreeRTOS versions.\nFreeRTOSIPConfig.h :\n#define ipconfigBYTE_ORDER pdFREERTOS_LITTLE_ENDIAN\n→ change to pdFREERTOS_BIG_ENDIAN\naws_secure_sockets_config.h :\n#define socketsconfigBYTE_ORDER pdLITTLE_ENDIAN\n→ change to pdBIG_ENDIAN"
+      },
+      {
+        "type": "text",
+        "content": "Please follow the below instruction.\nPlease note that configurations when building and debugging should be matched in order to work properly. Although the example below describes the conversion from little endian to big endian, the opposite conversion can be done similarly."
+      },
+      {
+        "type": "text",
+        "content": "Build option setting:\nBy the following configuration, -endian=big option will be applied for compiler, assembler and linker (-endian=little is the default).\n[CS+]\nOpen \"Common Options\" tab in Property panel of Build Tool and change \"Endian type for data\" to \"Big-endian data\" \n[e² studio]\nOpen Project Properties dialog. In \"C/C++ Build\", go to \"Settings\", select \"Tool Settings\" tab, go to “Common” and select “CPU”. Change Data Endian (-endian) to “\"Big-endian data\".\nIn GCC project, -mbig-endian-data will be specified by Data Endian setting in CPU category of Tool Settings tab."
+      },
+      {
+        "type": "text",
+        "content": "Debugger setting:\n[CS+]\nThe endian setting of Debug Tool option may have been changed due to the change of Build Tool configuration. Open Debug Tool's Property Panel. In \"Connect Settings\" tab, set endian in \"Endian of CPU\".\n[e² studio]\nOpen Debug Configuration dialog→“Debugger“ tab→“Debug Tool Settings\" tab, change setting in \"Endian\" in Memory category. Debug configuration is common for both CC-RX and GCC project.\n________________________________________"
+      },
+      {
+        "type": "text",
+        "content": "Affects to source code descriptions:\nThe setting of -endian=big in CC-RX (or -mbig-endian-data of GCC) enables internal symbol __BIG (and disable __LIT) of compiler\nIn GCC project, -mbig-endian-data setting does not affect to bitfield order. You should re-order bitfields when migrating source files from little endian projects."
+      },
+      {
+        "type": "text",
+        "content": "Note for FreeRTOS projects:\nIn FreeRTOS projects, several descriptions should be changed such as follows. File and line location of description may be different among FreeRTOS versions.\nFreeRTOSIPConfig.h :\n#define ipconfigBYTE_ORDER pdFREERTOS_LITTLE_ENDIAN\n→ change to pdFREERTOS_BIG_ENDIAN\naws_secure_sockets_config.h :\n#define socketsconfigBYTE_ORDER pdLITTLE_ENDIAN\n→ change to pdBIG_ENDIAN"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family, \nC/C++ Compiler Package for RX Family (CC-RX), \nGCC for Renesas RX, \nCS+ (formerly CubeSuite+), \ne² studio"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family, \nC/C++ Compiler Package for RX Family (CC-RX), \nGCC for Renesas RX, \nCS+ (formerly CubeSuite+), \ne² studio"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family, \nC/C++ Compiler Package for RX Family (CC-RX), \nGCC for Renesas RX, \nCS+ (formerly CubeSuite+), \ne² studio"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20414178"
+      }
+    ]
+  }
+}

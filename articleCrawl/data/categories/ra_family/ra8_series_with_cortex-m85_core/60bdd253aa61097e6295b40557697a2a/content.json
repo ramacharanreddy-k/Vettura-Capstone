@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21626705",
+    "title": "Connecting 1.8V components to the RA8 Series MCUs",
+    "last_updated": "2024-05-11",
+    "extracted_at": "2025-03-08T23:29:21.219648"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan I use 1.8V components with the RA8 Series MCUs?\nAnswer:\nThe RA8 Series MCUs support a wide operating voltage range of 1.68-3.6V. External components that operate at 1.8V can be easily connected to the RA8 Series MCUs. In addition, the RA8 Series MCUs support Vcc2 domain that allows connection to 1.8V external components while the rest of the device operates at 3.3V. This provides a high degree of flexibility to our customers, while also helping them lower the overall power consumption.\nSuitable Products\nRA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+      },
+      {
+        "type": "text",
+        "content": "Can I use 1.8V components with the RA8 Series MCUs?"
+      },
+      {
+        "type": "text",
+        "content": "Can I use 1.8V components with the RA8 Series MCUs?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RA8 Series MCUs support a wide operating voltage range of 1.68-3.6V. External components that operate at 1.8V can be easily connected to the RA8 Series MCUs. In addition, the RA8 Series MCUs support Vcc2 domain that allows connection to 1.8V external components while the rest of the device operates at 3.3V. This provides a high degree of flexibility to our customers, while also helping them lower the overall power consumption.\nSuitable Products\nRA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+      },
+      {
+        "type": "text",
+        "content": "The RA8 Series MCUs support a wide operating voltage range of 1.68-3.6V. External components that operate at 1.8V can be easily connected to the RA8 Series MCUs. In addition, the RA8 Series MCUs support Vcc2 domain that allows connection to 1.8V external components while the rest of the device operates at 3.3V. This provides a high degree of flexibility to our customers, while also helping them lower the overall power consumption."
+      },
+      {
+        "type": "text",
+        "content": "The RA8 Series MCUs support a wide operating voltage range of 1.68-3.6V. External components that operate at 1.8V can be easily connected to the RA8 Series MCUs. In addition, the RA8 Series MCUs support Vcc2 domain that allows connection to 1.8V external components while the rest of the device operates at 3.3V. This provides a high degree of flexibility to our customers, while also helping them lower the overall power consumption."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21626716"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21626719"
+      }
+    ]
+  }
+}

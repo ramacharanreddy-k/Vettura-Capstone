@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21173996",
+    "title": "RL78/F23, F24 position, target application",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:55:14.449839"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow is RL78/F23,F24 positioned within RL78 family? And what is the target application?\nAnswer:\nRL78/F23,F24 are positioned as a high-function, high-performance products in RL78 family. Its security and safety make it suitable for all low-end applications expected in automotive E/E architectures.\nLike the RL78/F1x, it can also be used in non-automotive applications requiring CAN FD, security, and functional safety support.\nSuitable Products\nRL78/F23, RL78/F24"
+      },
+      {
+        "type": "text",
+        "content": "How is RL78/F23,F24 positioned within RL78 family? And what is the target application?"
+      },
+      {
+        "type": "text",
+        "content": "How is RL78/F23,F24 positioned within RL78 family? And what is the target application?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRL78/F23,F24 are positioned as a high-function, high-performance products in RL78 family. Its security and safety make it suitable for all low-end applications expected in automotive E/E architectures.\nLike the RL78/F1x, it can also be used in non-automotive applications requiring CAN FD, security, and functional safety support.\nSuitable Products\nRL78/F23, RL78/F24"
+      },
+      {
+        "type": "text",
+        "content": "RL78/F23,F24 are positioned as a high-function, high-performance products in RL78 family. Its security and safety make it suitable for all low-end applications expected in automotive E/E architectures.\nLike the RL78/F1x, it can also be used in non-automotive applications requiring CAN FD, security, and functional safety support."
+      },
+      {
+        "type": "text",
+        "content": "RL78/F23,F24 are positioned as a high-function, high-performance products in RL78 family. Its security and safety make it suitable for all low-end applications expected in automotive E/E architectures.\nLike the RL78/F1x, it can also be used in non-automotive applications requiring CAN FD, security, and functional safety support."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/F23, RL78/F24"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/F23, RL78/F24"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/F23, RL78/F24"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21174005"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21174025"
+      }
+    ]
+  }
+}

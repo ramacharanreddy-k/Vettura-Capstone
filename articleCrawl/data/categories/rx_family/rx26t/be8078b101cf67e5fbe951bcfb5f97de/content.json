@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20938976",
+    "title": "RX26T compatibility with existing products",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:06:04.041095"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs the RX26T compatible with existing products?\nAnswer:\nThe RX26T is highly compatible with existing RX-T series products.\nThe RX26T uses the 5V power supply that has high demand in motor applications. This enables reuse and utilization of conventional 5V power supply system components. This product has enhanced functionality and improved usability compared to existing products, such as the RX24T, while maintaining a high degree of compatibility for built-in functions such as inverter control timers and pin layout orientation.\nDifferences between each product are summarized in the application notes below, which include a comparison of built-in functions, an overview of specifications, terminal functionality, and considerations for migration.\nDifferences between RX26T and RX66T groups \nDifferences between RX26T and RX24T/RX24U groups\nDifferences between RX26T and RX62T groups\nDifferences between RX26T and RX63T groups\nDifferences between RX26T and RX23T groups\nOther related information: Tips on Replacing MCUs of Other Families with RX MCUs\n  Suitable Products\nRX26T"
+      },
+      {
+        "type": "text",
+        "content": "Is the RX26T compatible with existing products?"
+      },
+      {
+        "type": "text",
+        "content": "Is the RX26T compatible with existing products?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RX26T is highly compatible with existing RX-T series products.\nThe RX26T uses the 5V power supply that has high demand in motor applications. This enables reuse and utilization of conventional 5V power supply system components. This product has enhanced functionality and improved usability compared to existing products, such as the RX24T, while maintaining a high degree of compatibility for built-in functions such as inverter control timers and pin layout orientation.\nDifferences between each product are summarized in the application notes below, which include a comparison of built-in functions, an overview of specifications, terminal functionality, and considerations for migration.\nDifferences between RX26T and RX66T groups \nDifferences between RX26T and RX24T/RX24U groups\nDifferences between RX26T and RX62T groups\nDifferences between RX26T and RX63T groups\nDifferences between RX26T and RX23T groups\nOther related information: Tips on Replacing MCUs of Other Families with RX MCUs\n  Suitable Products\nRX26T"
+      },
+      {
+        "type": "text",
+        "content": "The RX26T is highly compatible with existing RX-T series products.\nThe RX26T uses the 5V power supply that has high demand in motor applications. This enables reuse and utilization of conventional 5V power supply system components. This product has enhanced functionality and improved usability compared to existing products, such as the RX24T, while maintaining a high degree of compatibility for built-in functions such as inverter control timers and pin layout orientation.\nDifferences between each product are summarized in the application notes below, which include a comparison of built-in functions, an overview of specifications, terminal functionality, and considerations for migration.\nDifferences between RX26T and RX66T groups \nDifferences between RX26T and RX24T/RX24U groups\nDifferences between RX26T and RX62T groups\nDifferences between RX26T and RX63T groups\nDifferences between RX26T and RX23T groups\nOther related information: Tips on Replacing MCUs of Other Families with RX MCUs"
+      },
+      {
+        "type": "text",
+        "content": "The RX26T is highly compatible with existing RX-T series products."
+      },
+      {
+        "type": "text",
+        "content": "The RX26T uses the 5V power supply that has high demand in motor applications. This enables reuse and utilization of conventional 5V power supply system components. This product has enhanced functionality and improved usability compared to existing products, such as the RX24T, while maintaining a high degree of compatibility for built-in functions such as inverter control timers and pin layout orientation."
+      },
+      {
+        "type": "text",
+        "content": "Differences between each product are summarized in the application notes below, which include a comparison of built-in functions, an overview of specifications, terminal functionality, and considerations for migration."
+      },
+      {
+        "type": "text",
+        "content": "Other related information: Tips on Replacing MCUs of Other Families with RX MCUs"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX26T"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX26T"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX26T"
+    ],
+    "links": [
+      {
+        "text": "Tips on Replacing MCUs of Other Families with RX MCUs",
+        "url": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/software-tools/replacing-mcu-with-rx"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20938981"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20938986"
+      }
+    ]
+  }
+}

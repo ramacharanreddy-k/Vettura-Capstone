@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20537032",
+    "title": "RX Family: Is it possible to incorporate the CK-RA6M5 or CK-RX65N into products?",
+    "last_updated": "2022-09-06",
+    "extracted_at": "2025-03-09T00:03:15.934164"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs it possible to incorporate the CK-RA6M5 or CK-RX65N into products?\nAnswer:\nNo, the Renesas RX65N Cloud Kit is intended for development and evaluation. It is not intended to be incorporated into products.\nSuitable Products\nRA6M5,\nRX65N/RX651"
+      },
+      {
+        "type": "text",
+        "content": "Is it possible to incorporate the CK-RA6M5 or CK-RX65N into products?"
+      },
+      {
+        "type": "text",
+        "content": "Is it possible to incorporate the CK-RA6M5 or CK-RX65N into products?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nNo, the Renesas RX65N Cloud Kit is intended for development and evaluation. It is not intended to be incorporated into products.\nSuitable Products\nRA6M5,\nRX65N/RX651"
+      },
+      {
+        "type": "text",
+        "content": "No, the Renesas RX65N Cloud Kit is intended for development and evaluation. It is not intended to be incorporated into products."
+      },
+      {
+        "type": "text",
+        "content": "No, the Renesas RX65N Cloud Kit is intended for development and evaluation. It is not intended to be incorporated into products."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA6M5,\nRX65N/RX651"
+      },
+      {
+        "type": "text",
+        "content": "RA6M5,"
+      },
+      {
+        "type": "text",
+        "content": "RX65N/RX651"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA6M5,\nRX65N/RX651"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA6M5,\nRX65N/RX651"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20537036"
+      }
+    ]
+  }
+}

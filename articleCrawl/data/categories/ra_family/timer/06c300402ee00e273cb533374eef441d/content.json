@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21116862",
+    "title": "RA Family: GPT versus AGT",
+    "last_updated": "2023-02-11",
+    "extracted_at": "2025-03-08T23:40:04.524419"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat are the main differences between the  General PWM Timer (GPT) and the Asynchronous General Purpose Timer (AGT).\nAnswer:\nAGT: The AGT timers are 16-bit timers.\nGPT: All RA MCUs have at least one 32-bit GPT timer.\nAGT: The AGT runs off PCLKB, LOCO, or subclock.\nGPT: The GPT runs off PCLKD with a configurable divider up to 1024.\nGPT: The GPT can be configured to count ELC events or external pulses.\nAGT: The AGT can operate in all low power modes. It is located in the Vbatt domain and can operate from Vbatt.\nGPT: The GPT can operate in sleep mode.\n  Suitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "What are the main differences between the  General PWM Timer (GPT) and the Asynchronous General Purpose Timer (AGT)."
+      },
+      {
+        "type": "text",
+        "content": "What are the main differences between the  General PWM Timer (GPT) and the Asynchronous General Purpose Timer (AGT)."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nAGT: The AGT timers are 16-bit timers.\nGPT: All RA MCUs have at least one 32-bit GPT timer.\nAGT: The AGT runs off PCLKB, LOCO, or subclock.\nGPT: The GPT runs off PCLKD with a configurable divider up to 1024.\nGPT: The GPT can be configured to count ELC events or external pulses.\nAGT: The AGT can operate in all low power modes. It is located in the Vbatt domain and can operate from Vbatt.\nGPT: The GPT can operate in sleep mode.\n  Suitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "AGT: The AGT timers are 16-bit timers.\nGPT: All RA MCUs have at least one 32-bit GPT timer.\nAGT: The AGT runs off PCLKB, LOCO, or subclock.\nGPT: The GPT runs off PCLKD with a configurable divider up to 1024.\nGPT: The GPT can be configured to count ELC events or external pulses.\nAGT: The AGT can operate in all low power modes. It is located in the Vbatt domain and can operate from Vbatt.\nGPT: The GPT can operate in sleep mode."
+      },
+      {
+        "type": "text",
+        "content": "AGT: The AGT timers are 16-bit timers.\nGPT: All RA MCUs have at least one 32-bit GPT timer.\nAGT: The AGT runs off PCLKB, LOCO, or subclock.\nGPT: The GPT runs off PCLKD with a configurable divider up to 1024.\nGPT: The GPT can be configured to count ELC events or external pulses.\nAGT: The AGT can operate in all low power modes. It is located in the Vbatt domain and can operate from Vbatt.\nGPT: The GPT can operate in sleep mode."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": []
+  }
+}

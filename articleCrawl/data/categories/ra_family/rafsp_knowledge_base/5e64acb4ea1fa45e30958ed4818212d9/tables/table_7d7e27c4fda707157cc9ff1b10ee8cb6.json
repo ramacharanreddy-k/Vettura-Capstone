@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "In case of warm start or a hard reset (when VBATT powers RTC in case of power loss), user \nmight not want to reinitialize the clock source after reset. In this case, disable the Set \nSource Clock in Open property for RTC and call R_RTC_ClockSourceSet() only when RTC \nclock source needs to be set. Application should check for the reset type and should \naccordingly call the R_RTC_ClockSourceSet()."
+    ]
+  ]
+}

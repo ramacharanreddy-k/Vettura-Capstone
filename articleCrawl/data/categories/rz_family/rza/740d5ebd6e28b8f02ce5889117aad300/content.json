@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20590547",
+    "title": "RZ/A3UL: Pin compatible",
+    "last_updated": "2022-04-08",
+    "extracted_at": "2025-03-08T23:42:45.902598"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nThere is pin compatibility with the RZ/G2UL and RZ/Five, but how should each of them be used?\nAnswer:\nThe RZ/A3UL, which is a product for RTOS, has compatibility in respect to peripheral functions and packages between the RZ/G2UL incorporating a Cortex-A55 to implement Linux-based HMI and the RZ/Five incorporating a RISC-V core. Using the same board design facilitates roll out as different products by just replacing the chip, and since, for example, migration from a product incorporating an RTOS to a Linux-based product is simple, the roll out of multiple models can be performed efficiently.\nSuitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "There is pin compatibility with the RZ/G2UL and RZ/Five, but how should each of them be used?"
+      },
+      {
+        "type": "text",
+        "content": "There is pin compatibility with the RZ/G2UL and RZ/Five, but how should each of them be used?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RZ/A3UL, which is a product for RTOS, has compatibility in respect to peripheral functions and packages between the RZ/G2UL incorporating a Cortex-A55 to implement Linux-based HMI and the RZ/Five incorporating a RISC-V core. Using the same board design facilitates roll out as different products by just replacing the chip, and since, for example, migration from a product incorporating an RTOS to a Linux-based product is simple, the roll out of multiple models can be performed efficiently.\nSuitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "The RZ/A3UL, which is a product for RTOS, has compatibility in respect to peripheral functions and packages between the RZ/G2UL incorporating a Cortex-A55 to implement Linux-based HMI and the RZ/Five incorporating a RISC-V core. Using the same board design facilitates roll out as different products by just replacing the chip, and since, for example, migration from a product incorporating an RTOS to a Linux-based product is simple, the roll out of multiple models can be performed efficiently."
+      },
+      {
+        "type": "text",
+        "content": "The RZ/A3UL, which is a product for RTOS, has compatibility in respect to peripheral functions and packages between the RZ/G2UL incorporating a Cortex-A55 to implement Linux-based HMI and the RZ/Five incorporating a RISC-V core. Using the same board design facilitates roll out as different products by just replacing the chip, and since, for example, migration from a product incorporating an RTOS to a Linux-based product is simple, the roll out of multiple models can be performed efficiently."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A3UL"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A3UL"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20590555"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20590564"
+      }
+    ]
+  }
+}

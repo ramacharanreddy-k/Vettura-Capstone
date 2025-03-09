@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21715562",
+    "title": "RA Family: FSP initialization R_BSP_Init_RTC function does not finish and user program does not run",
+    "last_updated": "2024-10-12",
+    "extracted_at": "2025-03-08T23:22:36.505997"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nThe user program (such as the hal_entcy function) does not execute because the R_BSP_Init_RTC function called from the FSP initialization function SystemInit does not complete.\nAnswer:\nThe RTC registers are not initialized by reset. In order to prevent unintentional counting operations, initialization processing in software is required even when the RTC is not used. If the Subclock Populated parameter is set to Populated in the BSP tab properties of the FSP Configurator, the R_BSP_Init_RTC function executes the RTC software reset process using the subclock oscillator as the clock source and waits for the process to complete. If no subclocks are populated, the process does not terminate.\nIf you do not want to use a subclock oscillator, set Subclock Populated to Not Populated.\nFor details on the initialization procedure when the RTC is not used, refer to RTC > Usage Notes > Initialization Procedure When the RTC Is Not to Be Used in the Hardware User's Manual of the MCU device.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "The user program (such as the hal_entcy function) does not execute because the R_BSP_Init_RTC function called from the FSP initialization function SystemInit does not complete."
+      },
+      {
+        "type": "text",
+        "content": "The user program (such as the hal_entcy function) does not execute because the R_BSP_Init_RTC function called from the FSP initialization function SystemInit does not complete."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RTC registers are not initialized by reset. In order to prevent unintentional counting operations, initialization processing in software is required even when the RTC is not used. If the Subclock Populated parameter is set to Populated in the BSP tab properties of the FSP Configurator, the R_BSP_Init_RTC function executes the RTC software reset process using the subclock oscillator as the clock source and waits for the process to complete. If no subclocks are populated, the process does not terminate.\nIf you do not want to use a subclock oscillator, set Subclock Populated to Not Populated.\nFor details on the initialization procedure when the RTC is not used, refer to RTC > Usage Notes > Initialization Procedure When the RTC Is Not to Be Used in the Hardware User's Manual of the MCU device.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "The RTC registers are not initialized by reset. In order to prevent unintentional counting operations, initialization processing in software is required even when the RTC is not used. If the Subclock Populated parameter is set to Populated in the BSP tab properties of the FSP Configurator, the R_BSP_Init_RTC function executes the RTC software reset process using the subclock oscillator as the clock source and waits for the process to complete. If no subclocks are populated, the process does not terminate.\nIf you do not want to use a subclock oscillator, set Subclock Populated to Not Populated.\nFor details on the initialization procedure when the RTC is not used, refer to RTC > Usage Notes > Initialization Procedure When the RTC Is Not to Be Used in the Hardware User's Manual of the MCU device."
+      },
+      {
+        "type": "text",
+        "content": "The RTC registers are not initialized by reset. In order to prevent unintentional counting operations, initialization processing in software is required even when the RTC is not used. If the Subclock Populated parameter is set to Populated in the BSP tab properties of the FSP Configurator, the R_BSP_Init_RTC function executes the RTC software reset process using the subclock oscillator as the clock source and waits for the process to complete. If no subclocks are populated, the process does not terminate."
+      },
+      {
+        "type": "text",
+        "content": "If you do not want to use a subclock oscillator, set Subclock Populated to Not Populated."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396377.png",
+          "alt_text": "",
+          "width": "521",
+          "height": "76",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/f740f948e991648be77e7da74c03781d/images/d40e5b590b2429225ee30d42781b81eb.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "For details on the initialization procedure when the RTC is not used, refer to RTC > Usage Notes > Initialization Procedure When the RTC Is Not to Be Used in the Hardware User's Manual of the MCU device."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396377.png",
+        "alt_text": "",
+        "width": "521",
+        "height": "76",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/f740f948e991648be77e7da74c03781d/images/d40e5b590b2429225ee30d42781b81eb.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21715567"
+      }
+    ]
+  }
+}

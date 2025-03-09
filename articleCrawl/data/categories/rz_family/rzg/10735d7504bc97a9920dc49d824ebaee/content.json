@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20655668",
+    "title": "RZ/Five: What methods do the Gigabit Ethernet interface of the RZ/Five support?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:44:40.014544"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat methods do the Gigabit Ethernet interface of the RZ/Five support?\nAnswer:\nMII and RGMII are supported.\nSuitable Products\nRZ/Five"
+      },
+      {
+        "type": "text",
+        "content": "What methods do the Gigabit Ethernet interface of the RZ/Five support?"
+      },
+      {
+        "type": "text",
+        "content": "What methods do the Gigabit Ethernet interface of the RZ/Five support?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nMII and RGMII are supported.\nSuitable Products\nRZ/Five"
+      },
+      {
+        "type": "text",
+        "content": "MII and RGMII are supported."
+      },
+      {
+        "type": "text",
+        "content": "MII and RGMII are supported."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/Five"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/Five"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/Five"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20655675"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20655681"
+      }
+    ]
+  }
+}

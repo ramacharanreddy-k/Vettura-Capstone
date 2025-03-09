@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21763410",
+    "title": "RA4L1 Part numbering",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:30:13.870943"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow do I understand the part number of the RA4L1\nAnswer:\nThe RA4L1 Part numbering system allows us to indicate the operating temperate, package type and memory size of a specific device. Each P/N begins R7FA4L1B. The B represents that this device contains CAN FD.\nThe next digit prepresents the memory size and can be B for 256k flash and D for 512k flash.\nThe next digit is temperature range, and can be a 3 - 105 degree C operation or a 4 for 125 degree C operation, this is dependant on package.\nFinally we have the package code.\nFP       LQFP100\nFM       LQFP64\nFL        LQFP48\nNE       QFN48\nAG       BGA100\nAH       BGA64\nDB       CSP72\nYou can find a full explanation of the part number in the RA4L1 Hardware Manual.\nSuitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "How do I understand the part number of the RA4L1"
+      },
+      {
+        "type": "text",
+        "content": "How do I understand the part number of the RA4L1"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RA4L1 Part numbering system allows us to indicate the operating temperate, package type and memory size of a specific device. Each P/N begins R7FA4L1B. The B represents that this device contains CAN FD.\nThe next digit prepresents the memory size and can be B for 256k flash and D for 512k flash.\nThe next digit is temperature range, and can be a 3 - 105 degree C operation or a 4 for 125 degree C operation, this is dependant on package.\nFinally we have the package code.\nFP       LQFP100\nFM       LQFP64\nFL        LQFP48\nNE       QFN48\nAG       BGA100\nAH       BGA64\nDB       CSP72\nYou can find a full explanation of the part number in the RA4L1 Hardware Manual.\nSuitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "The RA4L1 Part numbering system allows us to indicate the operating temperate, package type and memory size of a specific device. Each P/N begins R7FA4L1B. The B represents that this device contains CAN FD.\nThe next digit prepresents the memory size and can be B for 256k flash and D for 512k flash.\nThe next digit is temperature range, and can be a 3 - 105 degree C operation or a 4 for 125 degree C operation, this is dependant on package.\nFinally we have the package code.\nFP       LQFP100\nFM       LQFP64\nFL        LQFP48\nNE       QFN48\nAG       BGA100\nAH       BGA64\nDB       CSP72\nYou can find a full explanation of the part number in the RA4L1 Hardware Manual."
+      },
+      {
+        "type": "text",
+        "content": "The RA4L1 Part numbering system allows us to indicate the operating temperate, package type and memory size of a specific device. Each P/N begins R7FA4L1B. The B represents that this device contains CAN FD.\nThe next digit prepresents the memory size and can be B for 256k flash and D for 512k flash.\nThe next digit is temperature range, and can be a 3 - 105 degree C operation or a 4 for 125 degree C operation, this is dependant on package.\nFinally we have the package code."
+      },
+      {
+        "type": "text",
+        "content": "FP       LQFP100\nFM       LQFP64\nFL        LQFP48\nNE       QFN48\nAG       BGA100\nAH       BGA64\nDB       CSP72"
+      },
+      {
+        "type": "text",
+        "content": "You can find a full explanation of the part number in the RA4L1 Hardware Manual."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "Japanese Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA4L1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA4L1"
+    ],
+    "links": [
+      {
+        "text": "Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21763455"
+      },
+      {
+        "text": "Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21763467"
+      }
+    ]
+  }
+}

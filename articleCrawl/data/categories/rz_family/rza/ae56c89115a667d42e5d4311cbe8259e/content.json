@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20789819",
+    "title": "Octal-SPI Flash available for RZ/A2M, RZ/A3UL",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:43:37.637857"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nTell me about the Octal-SPI Flash available in RZ/A2M and RZ/A3UL.\nAnswer:\nThe Octal-SPI Flash which can be connected to RZ/A2M and RZ/A3UL is products which supports the ‘Octa Peripheral Interface’ (OPI) proposed by Macronix. Specifically, those are products of Macronix, so please refer to the Macronix's website.\nSuitable Products\nRZ/A2M, RZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Tell me about the Octal-SPI Flash available in RZ/A2M and RZ/A3UL."
+      },
+      {
+        "type": "text",
+        "content": "Tell me about the Octal-SPI Flash available in RZ/A2M and RZ/A3UL."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe Octal-SPI Flash which can be connected to RZ/A2M and RZ/A3UL is products which supports the ‘Octa Peripheral Interface’ (OPI) proposed by Macronix. Specifically, those are products of Macronix, so please refer to the Macronix's website.\nSuitable Products\nRZ/A2M, RZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "The Octal-SPI Flash which can be connected to RZ/A2M and RZ/A3UL is products which supports the ‘Octa Peripheral Interface’ (OPI) proposed by Macronix. Specifically, those are products of Macronix, so please refer to the Macronix's website."
+      },
+      {
+        "type": "text",
+        "content": "The Octal-SPI Flash which can be connected to RZ/A2M and RZ/A3UL is products which supports the ‘Octa Peripheral Interface’ (OPI) proposed by Macronix. Specifically, those are products of Macronix, so please refer to the Macronix's website."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A2M, RZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "RZ/A2M, RZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A2M, RZ/A3UL"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A2M, RZ/A3UL"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20789833"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20789846"
+      }
+    ]
+  }
+}

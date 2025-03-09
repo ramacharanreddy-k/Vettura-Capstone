@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21266843",
+    "title": "RA2A2: Segment LCD Controller",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:32:02.095013"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is new feature of Segment LCD Controller?\nAnswer:\nRA2A2 supports new modes that are VL2 reference mode at internal voltage boosting method and VL4 reference mode at capacitor split method. Because efficiency of voltage generation for panel drive able to improve by these two new modes, these contribute power consumption efficiency of end-products. Furthermore, please check RA2A2 Blog describing this feature.\nSuitable Products\nRA2A2"
+      },
+      {
+        "type": "text",
+        "content": "What is new feature of Segment LCD Controller?"
+      },
+      {
+        "type": "text",
+        "content": "What is new feature of Segment LCD Controller?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRA2A2 supports new modes that are VL2 reference mode at internal voltage boosting method and VL4 reference mode at capacitor split method. Because efficiency of voltage generation for panel drive able to improve by these two new modes, these contribute power consumption efficiency of end-products. Furthermore, please check RA2A2 Blog describing this feature.\nSuitable Products\nRA2A2"
+      },
+      {
+        "type": "text",
+        "content": "RA2A2 supports new modes that are VL2 reference mode at internal voltage boosting method and VL4 reference mode at capacitor split method. Because efficiency of voltage generation for panel drive able to improve by these two new modes, these contribute power consumption efficiency of end-products. Furthermore, please check RA2A2 Blog describing this feature."
+      },
+      {
+        "type": "text",
+        "content": "RA2A2 supports new modes that are VL2 reference mode at internal voltage boosting method and VL4 reference mode at capacitor split method. Because efficiency of voltage generation for panel drive able to improve by these two new modes, these contribute power consumption efficiency of end-products. Furthermore, please check RA2A2 Blog describing this feature."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA2A2"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA2A2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA2A2"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21266846"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21266849"
+      }
+    ]
+  }
+}

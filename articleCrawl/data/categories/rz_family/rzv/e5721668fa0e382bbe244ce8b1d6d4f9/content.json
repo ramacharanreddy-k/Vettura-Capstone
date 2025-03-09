@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21250641",
+    "title": "RZ/V2H: Usage for AI Training",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:51:52.890265"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan RZ/V2H also be used in AI training?\nAnswer:\nIt is designed with a focus on AI inference in edge uses, and is not a processor for use in training. When beginning from AI training, the tool flow is to input neural networks trained using an AI framework such as a Linux PC or Pytorch into an RZ/V2H tool (AI SDK) in ONNX format.\nSuitable Products\nRZ/V2H"
+      },
+      {
+        "type": "text",
+        "content": "Can RZ/V2H also be used in AI training?"
+      },
+      {
+        "type": "text",
+        "content": "Can RZ/V2H also be used in AI training?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIt is designed with a focus on AI inference in edge uses, and is not a processor for use in training. When beginning from AI training, the tool flow is to input neural networks trained using an AI framework such as a Linux PC or Pytorch into an RZ/V2H tool (AI SDK) in ONNX format.\nSuitable Products\nRZ/V2H"
+      },
+      {
+        "type": "text",
+        "content": "It is designed with a focus on AI inference in edge uses, and is not a processor for use in training. When beginning from AI training, the tool flow is to input neural networks trained using an AI framework such as a Linux PC or Pytorch into an RZ/V2H tool (AI SDK) in ONNX format."
+      },
+      {
+        "type": "text",
+        "content": "It is designed with a focus on AI inference in edge uses, and is not a processor for use in training. When beginning from AI training, the tool flow is to input neural networks trained using an AI framework such as a Linux PC or Pytorch into an RZ/V2H tool (AI SDK) in ONNX format."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V2H"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V2H"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V2H"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21250651"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21250663"
+      }
+    ]
+  }
+}

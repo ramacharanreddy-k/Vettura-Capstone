@@ -1,0 +1,129 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21716024",
+    "title": "Is there any limitation when using Double-Precision Floating-Point Coprocessor on some RXv3 devices (RX66N, RX72N, RX72M)?",
+    "last_updated": "2024-10-12",
+    "extracted_at": "2025-03-09T00:02:24.563425"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there any limitation when using Double-Precision Floating-Point Coprocessor on some RXv3 devices (RX66N, RX72N, RX72M)?\n  Answer:\n  Ιn some RXv3 devices, when the Double-Precision Floating Point Coprocessor is enabled, the byte-alignement for the floating point variables should be 4 bytes or 8bytes respectively. Any other byte-alignement smaller than 4 bytes will cause an undefined exeption.\n  If the double precision floating handling isn't enabled, there isn't any byte-alignement limitation on the RXv3 core.\n  For more information, Chapter 2.8 of RX66N user's manual describes this feature:\n  https://www.renesas.com/en/document/mah/rx66n-group-users-manual-hardware?r=1170201\n  The double- Precision Floating Coprocessor can be enabled/disabled on the e2studio from the setting below:\n        Ιf IAR is using for the RX project developement, the double FPU functionality can be enabled/disabled from the setting below:\n      Suitable Products\nRX66N, RX72N, RX72M"
+      },
+      {
+        "type": "text",
+        "content": "Is there any limitation when using Double-Precision Floating-Point Coprocessor on some RXv3 devices (RX66N, RX72N, RX72M)?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\n  Ιn some RXv3 devices, when the Double-Precision Floating Point Coprocessor is enabled, the byte-alignement for the floating point variables should be 4 bytes or 8bytes respectively. Any other byte-alignement smaller than 4 bytes will cause an undefined exeption.\n  If the double precision floating handling isn't enabled, there isn't any byte-alignement limitation on the RXv3 core.\n  For more information, Chapter 2.8 of RX66N user's manual describes this feature:\n  https://www.renesas.com/en/document/mah/rx66n-group-users-manual-hardware?r=1170201\n  The double- Precision Floating Coprocessor can be enabled/disabled on the e2studio from the setting below:\n        Ιf IAR is using for the RX project developement, the double FPU functionality can be enabled/disabled from the setting below:\n      Suitable Products\nRX66N, RX72N, RX72M"
+      },
+      {
+        "type": "text",
+        "content": "Ιn some RXv3 devices, when the Double-Precision Floating Point Coprocessor is enabled, the byte-alignement for the floating point variables should be 4 bytes or 8bytes respectively. Any other byte-alignement smaller than 4 bytes will cause an undefined exeption."
+      },
+      {
+        "type": "text",
+        "content": "If the double precision floating handling isn't enabled, there isn't any byte-alignement limitation on the RXv3 core."
+      },
+      {
+        "type": "text",
+        "content": "For more information, Chapter 2.8 of RX66N user's manual describes this feature:"
+      },
+      {
+        "type": "text",
+        "content": "https://www.renesas.com/en/document/mah/rx66n-group-users-manual-hardware?r=1170201"
+      },
+      {
+        "type": "text",
+        "content": "The double- Precision Floating Coprocessor can be enabled/disabled on the e2studio from the setting below:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/01344840-94a0-402e-acf1-4d7fabe6a170",
+          "alt_text": "",
+          "width": "725",
+          "height": "534",
+          "local_path": "data/categories/rx_family/rx72m_rx72n_rx66n/e91bb1809fd784a3ae3f68c8e6d4f02d/images/21e9b37a6a9e7a6fdf3c40eb2897e807.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Ιf IAR is using for the RX project developement, the double FPU functionality can be enabled/disabled from the setting below:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/756135f5-bab6-4e8d-9f63-1426e0aba291",
+          "alt_text": "",
+          "width": "567",
+          "height": "535",
+          "local_path": "data/categories/rx_family/rx72m_rx72n_rx66n/e91bb1809fd784a3ae3f68c8e6d4f02d/images/b186c0cd427793732d9768d591175945.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX66N, RX72N, RX72M"
+      },
+      {
+        "type": "text",
+        "content": "??? ??"
+      },
+      {
+        "type": "text",
+        "content": "???"
+      },
+      {
+        "type": "text",
+        "content": "??"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/01344840-94a0-402e-acf1-4d7fabe6a170",
+        "alt_text": "",
+        "width": "725",
+        "height": "534",
+        "local_path": "data/categories/rx_family/rx72m_rx72n_rx66n/e91bb1809fd784a3ae3f68c8e6d4f02d/images/21e9b37a6a9e7a6fdf3c40eb2897e807.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/756135f5-bab6-4e8d-9f63-1426e0aba291",
+        "alt_text": "",
+        "width": "567",
+        "height": "535",
+        "local_path": "data/categories/rx_family/rx72m_rx72n_rx66n/e91bb1809fd784a3ae3f68c8e6d4f02d/images/b186c0cd427793732d9768d591175945.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX66N, RX72N, RX72M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX66N, RX72N, RX72M"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/en/document/mah/rx66n-group-users-manual-hardware?r=1170201",
+        "url": "https://www.renesas.com/en/document/mah/rx66n-group-users-manual-hardware?r=1170201"
+      },
+      {
+        "text": "???",
+        "url": "https://ja-support.renesas.com/knowledgeBase/YYYYYYYY"
+      },
+      {
+        "text": "??",
+        "url": "https://zh-support.renesas.com/knowledgeBase/ZZZZZZZZ"
+      }
+    ]
+  }
+}

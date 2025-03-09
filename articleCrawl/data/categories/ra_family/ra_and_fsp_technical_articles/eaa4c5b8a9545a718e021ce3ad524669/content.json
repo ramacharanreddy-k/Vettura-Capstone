@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20426924",
+    "title": "RA Family: Unable to step into a non-secure callable program in a project using TrustZone®",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:12:03.839098"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI tried to step into a non-secure callable program in a non-secure project using ARM® TrustZone®, but I get a step-over (following a function call).\nAnswer:\nIn the transition between secure and non-secure, the compiler inserts code for TrustZone® and no debug information is generated in the inserted code.\nAs a result, step-in behavior may not work as intended.\nPlease try the countermeasures explained in the FAQ below.\nUnable to step into function (e² studio) https://en-support.renesas.com/knowledgeBase/20424844\n  Suitable Products\nRA family devices with Trust Zone"
+      },
+      {
+        "type": "text",
+        "content": "I tried to step into a non-secure callable program in a non-secure project using ARM® TrustZone®, but I get a step-over (following a function call)."
+      },
+      {
+        "type": "text",
+        "content": "I tried to step into a non-secure callable program in a non-secure project using ARM® TrustZone®, but I get a step-over (following a function call)."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIn the transition between secure and non-secure, the compiler inserts code for TrustZone® and no debug information is generated in the inserted code.\nAs a result, step-in behavior may not work as intended.\nPlease try the countermeasures explained in the FAQ below.\nUnable to step into function (e² studio) https://en-support.renesas.com/knowledgeBase/20424844\n  Suitable Products\nRA family devices with Trust Zone"
+      },
+      {
+        "type": "text",
+        "content": "In the transition between secure and non-secure, the compiler inserts code for TrustZone® and no debug information is generated in the inserted code.\nAs a result, step-in behavior may not work as intended.\nPlease try the countermeasures explained in the FAQ below.\nUnable to step into function (e² studio) https://en-support.renesas.com/knowledgeBase/20424844"
+      },
+      {
+        "type": "text",
+        "content": "In the transition between secure and non-secure, the compiler inserts code for TrustZone® and no debug information is generated in the inserted code.\nAs a result, step-in behavior may not work as intended.\nPlease try the countermeasures explained in the FAQ below."
+      },
+      {
+        "type": "text",
+        "content": "Unable to step into function (e² studio) https://en-support.renesas.com/knowledgeBase/20424844"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA family devices with Trust Zone"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA family devices with Trust Zone"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA family devices with Trust Zone"
+    ],
+    "links": [
+      {
+        "text": "https://en-support.renesas.com/knowledgeBase/20424844",
+        "url": "https://en-support.renesas.com/knowledgeBase/20424844"
+      },
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20424932"
+      }
+    ]
+  }
+}

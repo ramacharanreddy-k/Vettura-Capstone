@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20797627",
+    "title": "RA Family: RTC calendar does not work properly when month changes",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:25:00.188854"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nRTC calendar does not work properly when month changes\nAnswer:\nMake sure tm_mon in rtc_time_t is set between 0 (January) and 11 (December). rtc_time_t is defined using the tm structure of the C standard library <time.h> as shown in the comments below.\n/** Date and time structure defined in C standard library  */\ntypedef struct tm rtc_time_t;\nAs for struct tm, see the description of “Time Functions (time.h)” in the document  “The Red Hat newlib C Library “ that comes with GCC.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "RTC calendar does not work properly when month changes"
+      },
+      {
+        "type": "text",
+        "content": "RTC calendar does not work properly when month changes"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nMake sure tm_mon in rtc_time_t is set between 0 (January) and 11 (December). rtc_time_t is defined using the tm structure of the C standard library <time.h> as shown in the comments below.\n/** Date and time structure defined in C standard library  */\ntypedef struct tm rtc_time_t;\nAs for struct tm, see the description of “Time Functions (time.h)” in the document  “The Red Hat newlib C Library “ that comes with GCC.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Make sure tm_mon in rtc_time_t is set between 0 (January) and 11 (December). rtc_time_t is defined using the tm structure of the C standard library <time.h> as shown in the comments below.\n/** Date and time structure defined in C standard library  */\ntypedef struct tm rtc_time_t;\nAs for struct tm, see the description of “Time Functions (time.h)” in the document  “The Red Hat newlib C Library “ that comes with GCC.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Make sure tm_mon in rtc_time_t is set between 0 (January) and 11 (December). rtc_time_t is defined using the tm structure of the C standard library <time.h> as shown in the comments below."
+      },
+      {
+        "type": "text",
+        "content": "As for struct tm, see the description of “Time Functions (time.h)” in the document  “The Red Hat newlib C Library “ that comes with GCC."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20796390"
+      }
+    ]
+  }
+}

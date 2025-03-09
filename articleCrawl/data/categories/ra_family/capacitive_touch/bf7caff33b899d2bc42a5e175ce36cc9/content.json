@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21810981",
+    "title": "RA Family: The serial communication monitor that is provided by QE for Capacitive Touch, Development Assistance Tool for Capacitive Touch sensors, fails to start.",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:34:44.725145"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI am trying to perform the serial communication monitor that is provided by QE for Capacitive Touch. I wrote a capacitive touch application for the RA MCU and executed it, but the error message \"Failed to connect to the serial port.\" is displayed and monitoring cannot be started. Are there any possible causes?\nAnswer:\n1. In the program's configurator settings, the serial connection monitor is disabled.\nCheck if the Touch Middleware (rm_touch) properties > Common > \"Support for QE monitoring using UART\" is set to \"Enabled\".\n2. In the program's configurator settings, the UART driver module for QE monitoring is not set properly.\nCheck if the UART driver module (r_sci_uart) is added under the Touch middleware block.\nCheck the Pins tab to see if any pins are assigned to the UART function pins used in the UART driver (g_uart_qe). It is possible to check the allocation status of the UART driver (g_uart_qe) properties > Pins > TXDn/RXDn.\nCheck if the baud rate set in the UART driver (g_uart_qe) properties > Module g_uart_qe UART (r_sci_uart) > Baud > Baud Rate and the Baud rate set in the CapTouch workflow in QE for Capacitive Touch match.\n3. The program written to the MCU stopped.\nThis may be due to the state of the previous debug connection. After physically disconnecting the debugger, power cycle the evaluation board, then check if the serial connection is successful.\nThe program may not be executed as expected due to software implementation errors. Use the debugger to see where the program stops and fix the problem.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "I am trying to perform the serial communication monitor that is provided by QE for Capacitive Touch. I wrote a capacitive touch application for the RA MCU and executed it, but the error message \"Failed to connect to the serial port.\" is displayed and monitoring cannot be started. Are there any possible causes?"
+      },
+      {
+        "type": "text",
+        "content": "I am trying to perform the serial communication monitor that is provided by QE for Capacitive Touch. I wrote a capacitive touch application for the RA MCU and executed it, but the error message \"Failed to connect to the serial port.\" is displayed and monitoring cannot be started. Are there any possible causes?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\n1. In the program's configurator settings, the serial connection monitor is disabled.\nCheck if the Touch Middleware (rm_touch) properties > Common > \"Support for QE monitoring using UART\" is set to \"Enabled\".\n2. In the program's configurator settings, the UART driver module for QE monitoring is not set properly.\nCheck if the UART driver module (r_sci_uart) is added under the Touch middleware block.\nCheck the Pins tab to see if any pins are assigned to the UART function pins used in the UART driver (g_uart_qe). It is possible to check the allocation status of the UART driver (g_uart_qe) properties > Pins > TXDn/RXDn.\nCheck if the baud rate set in the UART driver (g_uart_qe) properties > Module g_uart_qe UART (r_sci_uart) > Baud > Baud Rate and the Baud rate set in the CapTouch workflow in QE for Capacitive Touch match.\n3. The program written to the MCU stopped.\nThis may be due to the state of the previous debug connection. After physically disconnecting the debugger, power cycle the evaluation board, then check if the serial connection is successful.\nThe program may not be executed as expected due to software implementation errors. Use the debugger to see where the program stops and fix the problem.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "1. In the program's configurator settings, the serial connection monitor is disabled.\nCheck if the Touch Middleware (rm_touch) properties > Common > \"Support for QE monitoring using UART\" is set to \"Enabled\".\n2. In the program's configurator settings, the UART driver module for QE monitoring is not set properly.\nCheck if the UART driver module (r_sci_uart) is added under the Touch middleware block.\nCheck the Pins tab to see if any pins are assigned to the UART function pins used in the UART driver (g_uart_qe). It is possible to check the allocation status of the UART driver (g_uart_qe) properties > Pins > TXDn/RXDn.\nCheck if the baud rate set in the UART driver (g_uart_qe) properties > Module g_uart_qe UART (r_sci_uart) > Baud > Baud Rate and the Baud rate set in the CapTouch workflow in QE for Capacitive Touch match.\n3. The program written to the MCU stopped.\nThis may be due to the state of the previous debug connection. After physically disconnecting the debugger, power cycle the evaluation board, then check if the serial connection is successful.\nThe program may not be executed as expected due to software implementation errors. Use the debugger to see where the program stops and fix the problem."
+      },
+      {
+        "type": "text",
+        "content": "1. In the program's configurator settings, the serial connection monitor is disabled."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399872_1.png",
+          "alt_text": "",
+          "width": "1074",
+          "height": "323",
+          "local_path": "data/categories/ra_family/capacitive_touch/bf7caff33b899d2bc42a5e175ce36cc9/images/726184cc9c92dcf112663f9a14ce352f.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "2. In the program's configurator settings, the UART driver module for QE monitoring is not set properly."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399872_2a.png",
+          "alt_text": "",
+          "width": "1067",
+          "height": "436",
+          "local_path": "data/categories/ra_family/capacitive_touch/bf7caff33b899d2bc42a5e175ce36cc9/images/d68004df3def89855c39b641341bf6f1.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399872_3.png",
+          "alt_text": "",
+          "width": "757",
+          "height": "653",
+          "local_path": "data/categories/ra_family/capacitive_touch/bf7caff33b899d2bc42a5e175ce36cc9/images/1a8c7caeeb656cea0d17ee318247b685.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399872_4.png",
+          "alt_text": "",
+          "width": "1075",
+          "height": "669",
+          "local_path": "data/categories/ra_family/capacitive_touch/bf7caff33b899d2bc42a5e175ce36cc9/images/d7abdd49f019a654bfe3ecee256cbae9.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "3. The program written to the MCU stopped."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399872_1.png",
+        "alt_text": "",
+        "width": "1074",
+        "height": "323",
+        "local_path": "data/categories/ra_family/capacitive_touch/bf7caff33b899d2bc42a5e175ce36cc9/images/726184cc9c92dcf112663f9a14ce352f.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399872_2a.png",
+        "alt_text": "",
+        "width": "1067",
+        "height": "436",
+        "local_path": "data/categories/ra_family/capacitive_touch/bf7caff33b899d2bc42a5e175ce36cc9/images/d68004df3def89855c39b641341bf6f1.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399872_3.png",
+        "alt_text": "",
+        "width": "757",
+        "height": "653",
+        "local_path": "data/categories/ra_family/capacitive_touch/bf7caff33b899d2bc42a5e175ce36cc9/images/1a8c7caeeb656cea0d17ee318247b685.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399872_4.png",
+        "alt_text": "",
+        "width": "1075",
+        "height": "669",
+        "local_path": "data/categories/ra_family/capacitive_touch/bf7caff33b899d2bc42a5e175ce36cc9/images/d7abdd49f019a654bfe3ecee256cbae9.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21733826"
+      }
+    ]
+  }
+}

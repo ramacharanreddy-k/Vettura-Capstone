@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/16980398",
+    "title": "RX Family: SDCLK High-speed Operation with SDRAM Access",
+    "last_updated": "2017-08-06",
+    "extracted_at": "2025-03-09T00:13:42.905056"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhen operating the SDCLK in high speed via SDRAM access, sometimes the read-out values do not match the written values. Where should I check to fix it?"
+      },
+      {
+        "type": "text",
+        "content": "When operating the SDCLK in high speed via SDRAM access, sometimes the read-out values do not match the written values. Where should I check to fix it?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYou need to check the terminal settings used for SDRAM access. Check the setting of the “DSCR” drive capacity control register and select “High-drive output” for all the terminals which can be set to high speed and try again.\n  Suitable Products\nRX63N, RX631\nRX65N, RX651\nRX64M\nRX71M"
+      },
+      {
+        "type": "text",
+        "content": "You need to check the terminal settings used for SDRAM access. Check the setting of the “DSCR” drive capacity control register and select “High-drive output” for all the terminals which can be set to high speed and try again."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX63N, RX631\nRX65N, RX651\nRX64M\nRX71M"
+      },
+      {
+        "type": "text",
+        "content": "[Tags]   FAQNo:2000146,   JFAQNo:2000146,   SDRAM Controller"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX63N, RX631\nRX65N, RX651\nRX64M\nRX71M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX63N, RX631\nRX65N, RX651\nRX64M\nRX71M"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17794799"
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/16980261",
+    "title": "Characteristics and advantages of capacitive touch IP",
+    "last_updated": "2023-07-03",
+    "extracted_at": "2025-03-09T00:05:37.231867"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the feature of CTSU?\nWhat are the merits that manufacturers can obtain by using a new capacitive touch IP?\nAnswer:\nRenesas' capacitive touch sensor CTSU supports both \"self-capacitance\" and \"mutual capacitance\" methods, which significantly improve sensitivity and noise immunity characteristics.\nBoth methods enable accurate operation even in wet environments where malfunctions can easily occur, as well as in materials that are conventionally difficult to use, such as wood, glass, and thick acrylic.\nThis combination of superior sensitivity and noise immunity allows CTSUs to be used in a wide variety of applications, including control panels for household appliances and equipment used around water, where design is important, and in industrial machinery that must be operated with gloves for hygiene and safety reasons.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "What is the feature of CTSU?\nWhat are the merits that manufacturers can obtain by using a new capacitive touch IP?"
+      },
+      {
+        "type": "text",
+        "content": "What is the feature of CTSU?\nWhat are the merits that manufacturers can obtain by using a new capacitive touch IP?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRenesas' capacitive touch sensor CTSU supports both \"self-capacitance\" and \"mutual capacitance\" methods, which significantly improve sensitivity and noise immunity characteristics.\nBoth methods enable accurate operation even in wet environments where malfunctions can easily occur, as well as in materials that are conventionally difficult to use, such as wood, glass, and thick acrylic.\nThis combination of superior sensitivity and noise immunity allows CTSUs to be used in a wide variety of applications, including control panels for household appliances and equipment used around water, where design is important, and in industrial machinery that must be operated with gloves for hygiene and safety reasons.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Renesas' capacitive touch sensor CTSU supports both \"self-capacitance\" and \"mutual capacitance\" methods, which significantly improve sensitivity and noise immunity characteristics.\nBoth methods enable accurate operation even in wet environments where malfunctions can easily occur, as well as in materials that are conventionally difficult to use, such as wood, glass, and thick acrylic.\nThis combination of superior sensitivity and noise immunity allows CTSUs to be used in a wide variety of applications, including control panels for household appliances and equipment used around water, where design is important, and in industrial machinery that must be operated with gloves for hygiene and safety reasons."
+      },
+      {
+        "type": "text",
+        "content": "Renesas' capacitive touch sensor CTSU supports both \"self-capacitance\" and \"mutual capacitance\" methods, which significantly improve sensitivity and noise immunity characteristics."
+      },
+      {
+        "type": "text",
+        "content": "Both methods enable accurate operation even in wet environments where malfunctions can easily occur, as well as in materials that are conventionally difficult to use, such as wood, glass, and thick acrylic."
+      },
+      {
+        "type": "text",
+        "content": "This combination of superior sensitivity and noise immunity allows CTSUs to be used in a wide variety of applications, including control panels for household appliances and equipment used around water, where design is important, and in industrial machinery that must be operated with gloves for hygiene and safety reasons."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17794766"
+      }
+    ]
+  }
+}

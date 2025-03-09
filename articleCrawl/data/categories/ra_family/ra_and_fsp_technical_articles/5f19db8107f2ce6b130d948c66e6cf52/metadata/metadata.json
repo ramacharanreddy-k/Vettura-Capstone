@@ -1,0 +1,6 @@
+{
+  "url": "https://en-support.renesas.com/knowledgeBase/20538803",
+  "title": "RA2E2: R_IIC_B_SLAVE_Open() does not return an error if slave address is in the range of reserved addresses.",
+  "last_updated": "2020-10-04",
+  "extracted_at": "2025-03-08T23:13:06.784054"
+}

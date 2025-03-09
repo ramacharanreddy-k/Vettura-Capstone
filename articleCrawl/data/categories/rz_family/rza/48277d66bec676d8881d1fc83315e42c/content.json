@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20789815",
+    "title": "RZ/A1, RZ/A2M: Permissible output current value of DP and DM terminals of USB",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:42:36.486687"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs it correct to assume that the permissible output current values for the USB DP and DM pins are the same as those in Table 47.3 Permissible Output Currents in the RZ/A1L Group User's Manual?\nAnswer:\nThe USB DP and DM pins are not included in the Max.2mA specification in Table 47.3 Permissible Output Currents in the RZ/A1L User's Manual. According to Table 47.2 DC Characteristics (8) in the User's Manual, the maximum current flow to the DP and DM pins is approximately 21.7 mA, based on the output high level voltage max = 440 mV and the termination resistance of 45 Ω ± 10% (40.5 Ω to 49.5 Ω). If RZ/A1L is used in accordance with USB2.0 specifications, there is no need for the customer to consider the permissible output current values.\n*The above explanation is for RZ/A1L, but the same applies to other applicable products.\nSuitable Products\nRZ/A1 Group, \nRZ/A2M"
+      },
+      {
+        "type": "text",
+        "content": "Is it correct to assume that the permissible output current values for the USB DP and DM pins are the same as those in Table 47.3 Permissible Output Currents in the RZ/A1L Group User's Manual?"
+      },
+      {
+        "type": "text",
+        "content": "Is it correct to assume that the permissible output current values for the USB DP and DM pins are the same as those in Table 47.3 Permissible Output Currents in the RZ/A1L Group User's Manual?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe USB DP and DM pins are not included in the Max.2mA specification in Table 47.3 Permissible Output Currents in the RZ/A1L User's Manual. According to Table 47.2 DC Characteristics (8) in the User's Manual, the maximum current flow to the DP and DM pins is approximately 21.7 mA, based on the output high level voltage max = 440 mV and the termination resistance of 45 Ω ± 10% (40.5 Ω to 49.5 Ω). If RZ/A1L is used in accordance with USB2.0 specifications, there is no need for the customer to consider the permissible output current values.\n*The above explanation is for RZ/A1L, but the same applies to other applicable products.\nSuitable Products\nRZ/A1 Group, \nRZ/A2M"
+      },
+      {
+        "type": "text",
+        "content": "The USB DP and DM pins are not included in the Max.2mA specification in Table 47.3 Permissible Output Currents in the RZ/A1L User's Manual. According to Table 47.2 DC Characteristics (8) in the User's Manual, the maximum current flow to the DP and DM pins is approximately 21.7 mA, based on the output high level voltage max = 440 mV and the termination resistance of 45 Ω ± 10% (40.5 Ω to 49.5 Ω). If RZ/A1L is used in accordance with USB2.0 specifications, there is no need for the customer to consider the permissible output current values.\n*The above explanation is for RZ/A1L, but the same applies to other applicable products."
+      },
+      {
+        "type": "text",
+        "content": "The USB DP and DM pins are not included in the Max.2mA specification in Table 47.3 Permissible Output Currents in the RZ/A1L User's Manual. According to Table 47.2 DC Characteristics (8) in the User's Manual, the maximum current flow to the DP and DM pins is approximately 21.7 mA, based on the output high level voltage max = 440 mV and the termination resistance of 45 Ω ± 10% (40.5 Ω to 49.5 Ω). If RZ/A1L is used in accordance with USB2.0 specifications, there is no need for the customer to consider the permissible output current values."
+      },
+      {
+        "type": "text",
+        "content": "*The above explanation is for RZ/A1L, but the same applies to other applicable products."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A1 Group, \nRZ/A2M"
+      },
+      {
+        "type": "text",
+        "content": "RZ/A1 Group, \nRZ/A2M"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A1 Group, \nRZ/A2M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A1 Group, \nRZ/A2M"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20789829"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20789842"
+      }
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21652592",
+    "title": "RA Family: Precaution for disabling XiP mode with RA8 OSPI peripheral when Data Cache is enabled",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:37:31.193067"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhen trying to disable the XiP mode on the RA8 MCU using the R_OSPI_B_XipExit function of the FSP R_OSPI_B driver, the MCU does not output a read signal containing XiP disable code to the connected memory. The data cache of the RA8 Cortex-M85 CPU is enabled.\nAnswer:\nThe OSPI peripheral module (OSPI_B version) of the RA8 MCU supports the XiP mode (called Performance Enhance Mode in some memories) that omits the command phase during read access to reduce transfer latency.\nThis XiP mode is enabled or disabled depending on the application running state in order to issue write access or register set to connected memory. The OSPI peripheral module provides multiple methods to disable it (performing dummy read operation using memory mapping address, or sending manual XiP Exit pattern). In case of the r_ospi_b_XipExit function of FSP r_ospi_b driver, it issues a dummy read to OSPI memory area address (memory mapping address), then outputs a read signal with XiP Exit code to the connected memory device.\nHowever, if the Cortex-m85 Data Cache is enabled and the OSPI memory area is in the cacheable area, and if a cache hit occurs to the dummy read address issued by the R_OSPI_B_XipExit function, no read instruction is generated. Therefore, the XiP mode cannot be disabled.\nThe R_OSPI_B_XipExit function performs a dummy read access to the following address. To call this function, it is recommended to invalidate the cache data in this address or disable the cache function in advance.\nWhen using OSPI channel 0, read 1 byte of 0x8000_0000\nWhen using OSPI channel 1, read 1 byte of 0x9000_0000\nNote: This article is written based on FSPv5.5.0.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "When trying to disable the XiP mode on the RA8 MCU using the R_OSPI_B_XipExit function of the FSP R_OSPI_B driver, the MCU does not output a read signal containing XiP disable code to the connected memory. The data cache of the RA8 Cortex-M85 CPU is enabled."
+      },
+      {
+        "type": "text",
+        "content": "When trying to disable the XiP mode on the RA8 MCU using the R_OSPI_B_XipExit function of the FSP R_OSPI_B driver, the MCU does not output a read signal containing XiP disable code to the connected memory. The data cache of the RA8 Cortex-M85 CPU is enabled."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe OSPI peripheral module (OSPI_B version) of the RA8 MCU supports the XiP mode (called Performance Enhance Mode in some memories) that omits the command phase during read access to reduce transfer latency.\nThis XiP mode is enabled or disabled depending on the application running state in order to issue write access or register set to connected memory. The OSPI peripheral module provides multiple methods to disable it (performing dummy read operation using memory mapping address, or sending manual XiP Exit pattern). In case of the r_ospi_b_XipExit function of FSP r_ospi_b driver, it issues a dummy read to OSPI memory area address (memory mapping address), then outputs a read signal with XiP Exit code to the connected memory device.\nHowever, if the Cortex-m85 Data Cache is enabled and the OSPI memory area is in the cacheable area, and if a cache hit occurs to the dummy read address issued by the R_OSPI_B_XipExit function, no read instruction is generated. Therefore, the XiP mode cannot be disabled.\nThe R_OSPI_B_XipExit function performs a dummy read access to the following address. To call this function, it is recommended to invalidate the cache data in this address or disable the cache function in advance.\nWhen using OSPI channel 0, read 1 byte of 0x8000_0000\nWhen using OSPI channel 1, read 1 byte of 0x9000_0000\nNote: This article is written based on FSPv5.5.0.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "The OSPI peripheral module (OSPI_B version) of the RA8 MCU supports the XiP mode (called Performance Enhance Mode in some memories) that omits the command phase during read access to reduce transfer latency.\nThis XiP mode is enabled or disabled depending on the application running state in order to issue write access or register set to connected memory. The OSPI peripheral module provides multiple methods to disable it (performing dummy read operation using memory mapping address, or sending manual XiP Exit pattern). In case of the r_ospi_b_XipExit function of FSP r_ospi_b driver, it issues a dummy read to OSPI memory area address (memory mapping address), then outputs a read signal with XiP Exit code to the connected memory device.\nHowever, if the Cortex-m85 Data Cache is enabled and the OSPI memory area is in the cacheable area, and if a cache hit occurs to the dummy read address issued by the R_OSPI_B_XipExit function, no read instruction is generated. Therefore, the XiP mode cannot be disabled.\nThe R_OSPI_B_XipExit function performs a dummy read access to the following address. To call this function, it is recommended to invalidate the cache data in this address or disable the cache function in advance.\nWhen using OSPI channel 0, read 1 byte of 0x8000_0000\nWhen using OSPI channel 1, read 1 byte of 0x9000_0000\nNote: This article is written based on FSPv5.5.0."
+      },
+      {
+        "type": "text",
+        "content": "The OSPI peripheral module (OSPI_B version) of the RA8 MCU supports the XiP mode (called Performance Enhance Mode in some memories) that omits the command phase during read access to reduce transfer latency."
+      },
+      {
+        "type": "text",
+        "content": "This XiP mode is enabled or disabled depending on the application running state in order to issue write access or register set to connected memory. The OSPI peripheral module provides multiple methods to disable it (performing dummy read operation using memory mapping address, or sending manual XiP Exit pattern). In case of the r_ospi_b_XipExit function of FSP r_ospi_b driver, it issues a dummy read to OSPI memory area address (memory mapping address), then outputs a read signal with XiP Exit code to the connected memory device."
+      },
+      {
+        "type": "text",
+        "content": "However, if the Cortex-m85 Data Cache is enabled and the OSPI memory area is in the cacheable area, and if a cache hit occurs to the dummy read address issued by the R_OSPI_B_XipExit function, no read instruction is generated. Therefore, the XiP mode cannot be disabled."
+      },
+      {
+        "type": "text",
+        "content": "The R_OSPI_B_XipExit function performs a dummy read access to the following address. To call this function, it is recommended to invalidate the cache data in this address or disable the cache function in advance."
+      },
+      {
+        "type": "text",
+        "content": "Note: This article is written based on FSPv5.5.0."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21652598"
+      }
+    ]
+  }
+}

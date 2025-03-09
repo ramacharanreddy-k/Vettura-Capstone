@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21246429",
+    "title": "Standard for the precision of the clock (UCLK) when using a USB 2.0 host/function module of an RX231",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:23:36.501919"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there a standard for the precision of the clock (UCLK) when using a USB 2.0 host/function module of an RX231?\nCan a system clock at 50 ppm precision be used before PLL input?\nAnswer:\n1. For a USB host:\nBecause the USB output waveform must satisfy a precision of ±500 ppm, it is recommended that you use the source clock at a precision of ±100 ppm.\n2. For a USB function:\nBecause the USB output waveform must satisfy a precision of ±2500 ppm, it is recommended that you use the source clock at a precision of 500 ppm.\n  Suitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "Is there a standard for the precision of the clock (UCLK) when using a USB 2.0 host/function module of an RX231?\nCan a system clock at 50 ppm precision be used before PLL input?"
+      },
+      {
+        "type": "text",
+        "content": "Is there a standard for the precision of the clock (UCLK) when using a USB 2.0 host/function module of an RX231?\nCan a system clock at 50 ppm precision be used before PLL input?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\n1. For a USB host:\nBecause the USB output waveform must satisfy a precision of ±500 ppm, it is recommended that you use the source clock at a precision of ±100 ppm.\n2. For a USB function:\nBecause the USB output waveform must satisfy a precision of ±2500 ppm, it is recommended that you use the source clock at a precision of 500 ppm.\n  Suitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "1. For a USB host:\nBecause the USB output waveform must satisfy a precision of ±500 ppm, it is recommended that you use the source clock at a precision of ±100 ppm.\n2. For a USB function:\nBecause the USB output waveform must satisfy a precision of ±2500 ppm, it is recommended that you use the source clock at a precision of 500 ppm."
+      },
+      {
+        "type": "text",
+        "content": "1. For a USB host:\nBecause the USB output waveform must satisfy a precision of ±500 ppm, it is recommended that you use the source clock at a precision of ±100 ppm."
+      },
+      {
+        "type": "text",
+        "content": "2. For a USB function:\nBecause the USB output waveform must satisfy a precision of ±2500 ppm, it is recommended that you use the source clock at a precision of 500 ppm."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20016994"
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18284514",
+    "title": "How Long Is the Sampling Time?",
+    "last_updated": "2023-02-03",
+    "extracted_at": "2025-03-09T00:09:00.799143"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow long is the sampling time?\nAnswer:\nSampling time per electrode is described below:\nSelf-capacitance method approx. 500 μs\nMutual capacitance method: approx. 1000 μs\nThe measurement time of the mutual capacitance method is double that of the self-capacitance method because the mutual capacitance calculates touch results from two measurement results.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "How long is the sampling time?"
+      },
+      {
+        "type": "text",
+        "content": "How long is the sampling time?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nSampling time per electrode is described below:\nSelf-capacitance method approx. 500 μs\nMutual capacitance method: approx. 1000 μs\nThe measurement time of the mutual capacitance method is double that of the self-capacitance method because the mutual capacitance calculates touch results from two measurement results.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Sampling time per electrode is described below:\nSelf-capacitance method approx. 500 μs\nMutual capacitance method: approx. 1000 μs\nThe measurement time of the mutual capacitance method is double that of the self-capacitance method because the mutual capacitance calculates touch results from two measurement results."
+      },
+      {
+        "type": "text",
+        "content": "Sampling time per electrode is described below:"
+      },
+      {
+        "type": "text",
+        "content": "Self-capacitance method approx. 500 μs\nMutual capacitance method: approx. 1000 μs"
+      },
+      {
+        "type": "text",
+        "content": "The measurement time of the mutual capacitance method is double that of the self-capacitance method because the mutual capacitance calculates touch results from two measurement results."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792870"
+      }
+    ]
+  }
+}

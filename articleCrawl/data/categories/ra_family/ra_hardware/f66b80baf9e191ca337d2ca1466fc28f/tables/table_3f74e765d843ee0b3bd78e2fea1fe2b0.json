@@ -1,0 +1,35 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "project",
+      "RA2E1/RA2E2/RA2L1",
+      "RA2A1/RA4M1/RA4W1/RA6M1/RA6M2/RA6M3/RA6T1",
+      "RA4M2/RA4M3/RA6M4/RA6M5/RA6T2/RA4E1/ RA6E1"
+    ],
+    [
+      "Unique ID (16bytes)",
+      "0x0100_1C00",
+      "FMIFRT+14h (0x407F_B1B0)",
+      "0x0100_8190"
+    ],
+    [
+      "Part number (16bytes)",
+      "0x0100_1C10",
+      "FMIFRT+24h (0x407F_B1C0)",
+      "0x0100_80F0"
+    ],
+    [
+      "Mask version (1byte)",
+      "0x0100_1C20",
+      "FMIFRT+44h (0x407F_B1E0)",
+      "0x0100_81B0"
+    ],
+    [
+      "FMIFRT*",
+      "No",
+      "Yes",
+      "No"
+    ]
+  ]
+}

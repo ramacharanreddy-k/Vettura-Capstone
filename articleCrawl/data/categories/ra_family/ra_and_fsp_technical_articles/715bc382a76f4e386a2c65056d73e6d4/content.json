@@ -1,0 +1,733 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21246525",
+    "title": "A detailed explanation of the RA6T2 16-bit ADC mixed sampling mode application",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:12:45.052299"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "This article details how to use the RA6T2 16-bit ADC to apply the sample-and-hold function for AD sampling in hybrid mode, as well as the specific application of the background function. In this article, we use FSP to build an application project, explain in detail how to set the operation time of each part of the ADC module according to the data sheet, and show the measured results. The application uses FSP4.0.0 to generate the main code framework, which is easily portable.\n1. Introduction to Hybrid mode\n1.1 The RA6T2 16-bit ADC can operate in both Oversampling and Hybrid modes, but the ADC conversion process is slower when the oversampling single sweep function is used. Therefore, when the ADC conversion time is required to be fast, it is recommended that the Scan Mode be set to Continuous Scan and the Conversion Method be set to Hybrid Mode as shown below.\n1.2 In this example, AN003, AN005, AN007, and AN008 are selected as the signal acquisition ports.\nSee the RA6T2 data sheet, ADC Channel Affiliation and Functional Design:\nAN003 and AN005 of the ADC0 unit and AN007 and AN008 of the ADC1 unit can be set to sample-and-hold\nFor specific FSP settings, please refer to the picture and pay attention to the settings of virtual2 and virtual5.\nFor the specific group mode FSP, please see the below properties windows.\n    According to data sheet Section 36.9 Scan Conversion Time, the AD conversion time in this mode should be added as seen in the yellow highlight below.\n  According to data sheet Section 46.4 A/D Converter Characteristics, set the highlighted characteristics above as shown in the steps below.\n1) Start by setting the tAD_SPL time\n  2) Set the tSH_D time\n  3) Set the tAD_CNV time\n  4) Set the sample-and-hold function time\n  After the above settings are completed, the project is established.\n1.3 The following is the actual measurement of the AD sampling process, confirmed as per Figure 36.56 on page 1559 of the data sheet.\n  In this mode, the processing time of each AD conversion is as follows:\ntSH_D +（tSH_SPL+ tSH_HLD）+（tAD_SPL+ tAD_CNV）* 2+ tADDP\n=2 +（25+4）+（7+11）* 2 + 9 + 5=81 (ADCLK),\nWhen we selected a 60MHz clock, the time was around 1.35us.\nIn the actual test, we measured the ADC conversion time by flipping the I/O port in the ADC End Transition Interrupt adc_b_adi0_isr. As shown in the figure below, the port rollover time is 1.44us.\nThe additional test is 0.084us for the individual rollover port time, that is, the actual ADC conversion time is (1.44us-0.084us =) 1.356us. This result shows that the data sheet is consistent with the FSP actual engineering test results.\n\n2. Explanation of the specific application of the background mode function in hybrid mode\nThe background mode can be set to trigger at a specific moment to output the current AD sampling result.\n2.1 Set the ADC Conversion Method to Hybrid Mode and Scan Mode to Background Continuous Scan (Hybrid Conversion Method Only)\nThis test was conducted using the official Renesas model MCK-RA6T2, please refer to the MCK-RA6T2 User's Manual (renesas.com) for details. The experiment was designed based on 4 ADC channels and divided into two groups. And enable the end interrupt of ADC0 and output an I/O signal to test the end time of the ADC.\n  Using the ELC function, the comparison match between the ADC12A0 and GPT4 is linked, and the ADC is triggered when the comparison match occurs on GPT4.\nWhen a comparison match occurs, set the GTIOC4A output signal to assist in confirming the ADC time.\n  In the GPT4 Comparison Match interrupt program, we make the PE11 output high,\n  void gpt_capture_a_isr (void)\n{\n  .....\n  g_ioport.p_api->pinWrite(g_ioport.p_ctrl,BSP_IO_PORT_14_PIN_11,BSP_IO_LEVEL_HIGH);\n  .....\n}\n  In the ADC0 end interrupt, we make the PE11 output low\n  void adc_b_adi0_isr (void)\n{\n.....\ng_ioport.p_api->pinWrite (g_ioport.p_ctrl,BSP_IO_PORT_14_PIN_11,BSP_IO_LEVEL_LOW);\n.....\n}\n  Tested with an oscilloscope, the AD conversion time was 0.39us. As shown in the figure below, green is the GPT4 comparison matching output, and purple is the PE11 output.\nThe working principle of Hybrid background mode is shown in the following figure:\n  As detailed in Table 36.55, Table 36.56, and Figure 36.55 in the data sheet, when the ADCLK is set to 60MHz, the theoretical calculation time of this action process is computed as shown below.\nTotal elapsed time = (trigger duration) + (data output time) = tD_ADST + tADD= tD_TRG + tD_ITRG + tD_SYOP = (1+3+1+3+0+9) * ADCLK+5* PCLKA= 0.283+0.042=0.322us.\nThus the theoretical calculations are basically consistent with the actual test results.\n  Suitable Products\nRA6T2"
+      },
+      {
+        "type": "text",
+        "content": "This article details how to use the RA6T2 16-bit ADC to apply the sample-and-hold function for AD sampling in hybrid mode, as well as the specific application of the background function. In this article, we use FSP to build an application project, explain in detail how to set the operation time of each part of the ADC module according to the data sheet, and show the measured results. The application uses FSP4.0.0 to generate the main code framework, which is easily portable.\n1. Introduction to Hybrid mode\n1.1 The RA6T2 16-bit ADC can operate in both Oversampling and Hybrid modes, but the ADC conversion process is slower when the oversampling single sweep function is used. Therefore, when the ADC conversion time is required to be fast, it is recommended that the Scan Mode be set to Continuous Scan and the Conversion Method be set to Hybrid Mode as shown below.\n1.2 In this example, AN003, AN005, AN007, and AN008 are selected as the signal acquisition ports.\nSee the RA6T2 data sheet, ADC Channel Affiliation and Functional Design:\nAN003 and AN005 of the ADC0 unit and AN007 and AN008 of the ADC1 unit can be set to sample-and-hold\nFor specific FSP settings, please refer to the picture and pay attention to the settings of virtual2 and virtual5.\nFor the specific group mode FSP, please see the below properties windows.\n    According to data sheet Section 36.9 Scan Conversion Time, the AD conversion time in this mode should be added as seen in the yellow highlight below.\n  According to data sheet Section 46.4 A/D Converter Characteristics, set the highlighted characteristics above as shown in the steps below.\n1) Start by setting the tAD_SPL time\n  2) Set the tSH_D time\n  3) Set the tAD_CNV time\n  4) Set the sample-and-hold function time\n  After the above settings are completed, the project is established.\n1.3 The following is the actual measurement of the AD sampling process, confirmed as per Figure 36.56 on page 1559 of the data sheet.\n  In this mode, the processing time of each AD conversion is as follows:\ntSH_D +（tSH_SPL+ tSH_HLD）+（tAD_SPL+ tAD_CNV）* 2+ tADDP\n=2 +（25+4）+（7+11）* 2 + 9 + 5=81 (ADCLK),\nWhen we selected a 60MHz clock, the time was around 1.35us.\nIn the actual test, we measured the ADC conversion time by flipping the I/O port in the ADC End Transition Interrupt adc_b_adi0_isr. As shown in the figure below, the port rollover time is 1.44us.\nThe additional test is 0.084us for the individual rollover port time, that is, the actual ADC conversion time is (1.44us-0.084us =) 1.356us. This result shows that the data sheet is consistent with the FSP actual engineering test results.\n\n2. Explanation of the specific application of the background mode function in hybrid mode\nThe background mode can be set to trigger at a specific moment to output the current AD sampling result.\n2.1 Set the ADC Conversion Method to Hybrid Mode and Scan Mode to Background Continuous Scan (Hybrid Conversion Method Only)\nThis test was conducted using the official Renesas model MCK-RA6T2, please refer to the MCK-RA6T2 User's Manual (renesas.com) for details. The experiment was designed based on 4 ADC channels and divided into two groups. And enable the end interrupt of ADC0 and output an I/O signal to test the end time of the ADC.\n  Using the ELC function, the comparison match between the ADC12A0 and GPT4 is linked, and the ADC is triggered when the comparison match occurs on GPT4.\nWhen a comparison match occurs, set the GTIOC4A output signal to assist in confirming the ADC time.\n  In the GPT4 Comparison Match interrupt program, we make the PE11 output high,\n  void gpt_capture_a_isr (void)\n{\n  .....\n  g_ioport.p_api->pinWrite(g_ioport.p_ctrl,BSP_IO_PORT_14_PIN_11,BSP_IO_LEVEL_HIGH);\n  .....\n}\n  In the ADC0 end interrupt, we make the PE11 output low\n  void adc_b_adi0_isr (void)\n{\n.....\ng_ioport.p_api->pinWrite (g_ioport.p_ctrl,BSP_IO_PORT_14_PIN_11,BSP_IO_LEVEL_LOW);\n.....\n}\n  Tested with an oscilloscope, the AD conversion time was 0.39us. As shown in the figure below, green is the GPT4 comparison matching output, and purple is the PE11 output.\nThe working principle of Hybrid background mode is shown in the following figure:\n  As detailed in Table 36.55, Table 36.56, and Figure 36.55 in the data sheet, when the ADCLK is set to 60MHz, the theoretical calculation time of this action process is computed as shown below.\nTotal elapsed time = (trigger duration) + (data output time) = tD_ADST + tADD= tD_TRG + tD_ITRG + tD_SYOP = (1+3+1+3+0+9) * ADCLK+5* PCLKA= 0.283+0.042=0.322us.\nThus the theoretical calculations are basically consistent with the actual test results.\n  Suitable Products\nRA6T2"
+      },
+      {
+        "type": "text",
+        "content": "This article details how to use the RA6T2 16-bit ADC to apply the sample-and-hold function for AD sampling in hybrid mode, as well as the specific application of the background function. In this article, we use FSP to build an application project, explain in detail how to set the operation time of each part of the ADC module according to the data sheet, and show the measured results. The application uses FSP4.0.0 to generate the main code framework, which is easily portable.\n1. Introduction to Hybrid mode\n1.1 The RA6T2 16-bit ADC can operate in both Oversampling and Hybrid modes, but the ADC conversion process is slower when the oversampling single sweep function is used. Therefore, when the ADC conversion time is required to be fast, it is recommended that the Scan Mode be set to Continuous Scan and the Conversion Method be set to Hybrid Mode as shown below.\n1.2 In this example, AN003, AN005, AN007, and AN008 are selected as the signal acquisition ports.\nSee the RA6T2 data sheet, ADC Channel Affiliation and Functional Design:\nAN003 and AN005 of the ADC0 unit and AN007 and AN008 of the ADC1 unit can be set to sample-and-hold\nFor specific FSP settings, please refer to the picture and pay attention to the settings of virtual2 and virtual5.\nFor the specific group mode FSP, please see the below properties windows.\n    According to data sheet Section 36.9 Scan Conversion Time, the AD conversion time in this mode should be added as seen in the yellow highlight below.\n  According to data sheet Section 46.4 A/D Converter Characteristics, set the highlighted characteristics above as shown in the steps below.\n1) Start by setting the tAD_SPL time\n  2) Set the tSH_D time\n  3) Set the tAD_CNV time\n  4) Set the sample-and-hold function time\n  After the above settings are completed, the project is established.\n1.3 The following is the actual measurement of the AD sampling process, confirmed as per Figure 36.56 on page 1559 of the data sheet.\n  In this mode, the processing time of each AD conversion is as follows:\ntSH_D +（tSH_SPL+ tSH_HLD）+（tAD_SPL+ tAD_CNV）* 2+ tADDP\n=2 +（25+4）+（7+11）* 2 + 9 + 5=81 (ADCLK),\nWhen we selected a 60MHz clock, the time was around 1.35us.\nIn the actual test, we measured the ADC conversion time by flipping the I/O port in the ADC End Transition Interrupt adc_b_adi0_isr. As shown in the figure below, the port rollover time is 1.44us.\nThe additional test is 0.084us for the individual rollover port time, that is, the actual ADC conversion time is (1.44us-0.084us =) 1.356us. This result shows that the data sheet is consistent with the FSP actual engineering test results.\n\n2. Explanation of the specific application of the background mode function in hybrid mode\nThe background mode can be set to trigger at a specific moment to output the current AD sampling result.\n2.1 Set the ADC Conversion Method to Hybrid Mode and Scan Mode to Background Continuous Scan (Hybrid Conversion Method Only)\nThis test was conducted using the official Renesas model MCK-RA6T2, please refer to the MCK-RA6T2 User's Manual (renesas.com) for details. The experiment was designed based on 4 ADC channels and divided into two groups. And enable the end interrupt of ADC0 and output an I/O signal to test the end time of the ADC.\n  Using the ELC function, the comparison match between the ADC12A0 and GPT4 is linked, and the ADC is triggered when the comparison match occurs on GPT4.\nWhen a comparison match occurs, set the GTIOC4A output signal to assist in confirming the ADC time.\n  In the GPT4 Comparison Match interrupt program, we make the PE11 output high,\n  void gpt_capture_a_isr (void)\n{\n  .....\n  g_ioport.p_api->pinWrite(g_ioport.p_ctrl,BSP_IO_PORT_14_PIN_11,BSP_IO_LEVEL_HIGH);\n  .....\n}\n  In the ADC0 end interrupt, we make the PE11 output low\n  void adc_b_adi0_isr (void)\n{\n.....\ng_ioport.p_api->pinWrite (g_ioport.p_ctrl,BSP_IO_PORT_14_PIN_11,BSP_IO_LEVEL_LOW);\n.....\n}\n  Tested with an oscilloscope, the AD conversion time was 0.39us. As shown in the figure below, green is the GPT4 comparison matching output, and purple is the PE11 output.\nThe working principle of Hybrid background mode is shown in the following figure:\n  As detailed in Table 36.55, Table 36.56, and Figure 36.55 in the data sheet, when the ADCLK is set to 60MHz, the theoretical calculation time of this action process is computed as shown below.\nTotal elapsed time = (trigger duration) + (data output time) = tD_ADST + tADD= tD_TRG + tD_ITRG + tD_SYOP = (1+3+1+3+0+9) * ADCLK+5* PCLKA= 0.283+0.042=0.322us.\nThus the theoretical calculations are basically consistent with the actual test results."
+      },
+      {
+        "type": "text",
+        "content": "This article details how to use the RA6T2 16-bit ADC to apply the sample-and-hold function for AD sampling in hybrid mode, as well as the specific application of the background function. In this article, we use FSP to build an application project, explain in detail how to set the operation time of each part of the ADC module according to the data sheet, and show the measured results. The application uses FSP4.0.0 to generate the main code framework, which is easily portable."
+      },
+      {
+        "type": "text",
+        "content": "1. Introduction to Hybrid mode"
+      },
+      {
+        "type": "text",
+        "content": "1.1 The RA6T2 16-bit ADC can operate in both Oversampling and Hybrid modes, but the ADC conversion process is slower when the oversampling single sweep function is used. Therefore, when the ADC conversion time is required to be fast, it is recommended that the Scan Mode be set to Continuous Scan and the Conversion Method be set to Hybrid Mode as shown below."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/d741efe8-f716-440b-9738-2325fb436fc9",
+          "alt_text": "",
+          "width": "0",
+          "height": "0",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/3a0957dd56a5f4dc4affb67f432e4a87.jpg"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-1.png",
+          "alt_text": "",
+          "width": "554",
+          "height": "238",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/3165e2cd0e4182abe24cd8c7ae647814.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "1.2 In this example, AN003, AN005, AN007, and AN008 are selected as the signal acquisition ports."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/0922fe3d-fbd5-49c6-8644-2b48d6c21352",
+          "alt_text": "",
+          "width": "0",
+          "height": "0",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/82ef6aef27dbcc20a92fcd2d2390ba7d.jpg"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-2a.png",
+          "alt_text": "",
+          "width": "424",
+          "height": "399",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/bd4eddd03b2c9e050b276ab93d6f4824.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "See the RA6T2 data sheet, ADC Channel Affiliation and Functional Design:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/de8614e1-ed2e-427c-a339-fc57b4847bd0",
+          "alt_text": "",
+          "width": "0",
+          "height": "0",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/9fbf744eb425c124a74a6959fec81c2e.jpg"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5BTable364%5D.png",
+          "alt_text": "",
+          "width": "840",
+          "height": "418",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/679fbca67a3ecb13fcf07da80bffb057.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "AN003 and AN005 of the ADC0 unit and AN007 and AN008 of the ADC1 unit can be set to sample-and-hold"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-4.png",
+          "alt_text": "",
+          "width": "554",
+          "height": "228",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/47418356fe8422c99be03a03f4e0719b.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "For specific FSP settings, please refer to the picture and pay attention to the settings of virtual2 and virtual5."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-5.png",
+          "alt_text": "",
+          "width": "734",
+          "height": "881",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/b10c35dc45bbc07bd796b22cbebaf25a.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "For the specific group mode FSP, please see the below properties windows."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5Bg_adc0ADCDriveronr_adc_b%5D.png",
+          "alt_text": "",
+          "width": "558",
+          "height": "527",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/c69d29b39791acc278dd502c16dbff24.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5Bg_adc0ADCDriveronr_adc_b-2%5D_2.png",
+          "alt_text": "",
+          "width": "550",
+          "height": "427",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/21e6552802c7c66f368ac74e8cae646a.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "According to data sheet Section 36.9 Scan Conversion Time, the AD conversion time in this mode should be added as seen in the yellow highlight below."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5BTotalscanstartprocessingtime%5D.png",
+          "alt_text": "",
+          "width": "804",
+          "height": "313",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/52b2e1200bb78bb57a5665a0d595d97d.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "According to data sheet Section 46.4 A/D Converter Characteristics, set the highlighted characteristics above as shown in the steps below."
+      },
+      {
+        "type": "text",
+        "content": "1) Start by setting the tAD_SPL time"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5BTable4634-2%5D.png",
+          "alt_text": "",
+          "width": "744",
+          "height": "367",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/8e6afa1e2d8534d1a946bd53e4336bee.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "2) Set the tSH_D time"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5BTable36214%5D.png",
+          "alt_text": "",
+          "width": "744",
+          "height": "497",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/75b401d624183a94fcbaade4f4f53128.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "3) Set the tAD_CNV time"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5B11%5D_2.png",
+          "alt_text": "",
+          "width": "745",
+          "height": "563",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/4453e16fe59b8d21f42b48378c37c5a7.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "4) Set the sample-and-hold function time"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5B254%5D.png",
+          "alt_text": "",
+          "width": "748",
+          "height": "420",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/ea710b319ae163c8a423fc272022b5cf.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "After the above settings are completed, the project is established."
+      },
+      {
+        "type": "text",
+        "content": "1.3 The following is the actual measurement of the AD sampling process, confirmed as per Figure 36.56 on page 1559 of the data sheet."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5BFigure3656%5D.png",
+          "alt_text": "",
+          "width": "819",
+          "height": "357",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/9f87324aa9c332bba068b36de422a6e5.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "In this mode, the processing time of each AD conversion is as follows:"
+      },
+      {
+        "type": "text",
+        "content": "tSH_D +（tSH_SPL+ tSH_HLD）+（tAD_SPL+ tAD_CNV）* 2+ tADDP\n=2 +（25+4）+（7+11）* 2 + 9 + 5=81 (ADCLK),"
+      },
+      {
+        "type": "text",
+        "content": "When we selected a 60MHz clock, the time was around 1.35us."
+      },
+      {
+        "type": "text",
+        "content": "In the actual test, we measured the ADC conversion time by flipping the I/O port in the ADC End Transition Interrupt adc_b_adi0_isr. As shown in the figure below, the port rollover time is 1.44us."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-14.jpg",
+          "alt_text": "",
+          "width": "466",
+          "height": "309",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/609aad12438d56dfe72118510d8564ac.jpg"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The additional test is 0.084us for the individual rollover port time, that is, the actual ADC conversion time is (1.44us-0.084us =) 1.356us. This result shows that the data sheet is consistent with the FSP actual engineering test results."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-15.jpg",
+          "alt_text": "",
+          "width": "468",
+          "height": "316",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/43b9e9242d92f26bf334f52ff7e3c67a.jpg"
+        }
+      },
+      {
+        "type": "text",
+        "content": "2. Explanation of the specific application of the background mode function in hybrid mode"
+      },
+      {
+        "type": "text",
+        "content": "The background mode can be set to trigger at a specific moment to output the current AD sampling result."
+      },
+      {
+        "type": "text",
+        "content": "2.1 Set the ADC Conversion Method to Hybrid Mode and Scan Mode to Background Continuous Scan (Hybrid Conversion Method Only)"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-16.png",
+          "alt_text": "",
+          "width": "554",
+          "height": "237",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/c3b50e708f05622eb841a5ef3a872369.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "This test was conducted using the official Renesas model MCK-RA6T2, please refer to the MCK-RA6T2 User's Manual (renesas.com) for details. The experiment was designed based on 4 ADC channels and divided into two groups. And enable the end interrupt of ADC0 and output an I/O signal to test the end time of the ADC."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-17.png",
+          "alt_text": "",
+          "width": "620",
+          "height": "746",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/61398bb02ec2ed3ab223381996c79f13.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5BADC0%5D.png",
+          "alt_text": "",
+          "width": "541",
+          "height": "317",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/d25daaef161876f30cde09a115929e13.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-19.png",
+          "alt_text": "",
+          "width": "412",
+          "height": "329",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/cb01fa7ac9ba0544f30b2a813585606c.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Using the ELC function, the comparison match between the ADC12A0 and GPT4 is linked, and the ADC is triggered when the comparison match occurs on GPT4."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-20.png",
+          "alt_text": "",
+          "width": "554",
+          "height": "54",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/ebd19128a51e02f4fb3ca4fb2366528b.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-21.png",
+          "alt_text": "",
+          "width": "550",
+          "height": "231",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/b9182bccfd7a4e088e77fac8070e909c.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-22.png",
+          "alt_text": "",
+          "width": "549",
+          "height": "239",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/c85bbb3987d6504f57c0ea141686cd50.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "When a comparison match occurs, set the GTIOC4A output signal to assist in confirming the ADC time."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5BEnabled%5D.png",
+          "alt_text": "",
+          "width": "762",
+          "height": "530",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/a8edf34e1f6a98a46bf06ea22e7c88f5.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "In the GPT4 Comparison Match interrupt program, we make the PE11 output high,"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5BPriority11%5D.png",
+          "alt_text": "",
+          "width": "759",
+          "height": "338",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/d752eeb5eb3e86ddaaad51725c0258ad.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "void gpt_capture_a_isr (void)\n{\n  .....\n  g_ioport.p_api->pinWrite(g_ioport.p_ctrl,BSP_IO_PORT_14_PIN_11,BSP_IO_LEVEL_HIGH);\n  .....\n}"
+      },
+      {
+        "type": "text",
+        "content": "In the ADC0 end interrupt, we make the PE11 output low"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5BPriority12%5D.png",
+          "alt_text": "",
+          "width": "753",
+          "height": "362",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/73f64e14e80b9c156461508582d8aa77.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "void adc_b_adi0_isr (void)\n{\n.....\ng_ioport.p_api->pinWrite (g_ioport.p_ctrl,BSP_IO_PORT_14_PIN_11,BSP_IO_LEVEL_LOW);\n.....\n}"
+      },
+      {
+        "type": "text",
+        "content": "Tested with an oscilloscope, the AD conversion time was 0.39us. As shown in the figure below, green is the GPT4 comparison matching output, and purple is the PE11 output."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-26_2.jpg",
+          "alt_text": "",
+          "width": "469",
+          "height": "434",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/e5b7edbe75dec852083d62c135102459.jpg"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The working principle of Hybrid background mode is shown in the following figure:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5BStartTrigger%5D_2.png",
+          "alt_text": "",
+          "width": "876",
+          "height": "249",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/0f3f650492498ad8d2b313c9127361ac.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "As detailed in Table 36.55, Table 36.56, and Figure 36.55 in the data sheet, when the ADCLK is set to 60MHz, the theoretical calculation time of this action process is computed as shown below."
+      },
+      {
+        "type": "text",
+        "content": "Total elapsed time = (trigger duration) + (data output time) = tD_ADST + tADD= tD_TRG + tD_ITRG + tD_SYOP = (1+3+1+3+0+9) * ADCLK+5* PCLKA= 0.283+0.042=0.322us."
+      },
+      {
+        "type": "text",
+        "content": "Thus the theoretical calculations are basically consistent with the actual test results."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA6T2"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/d741efe8-f716-440b-9738-2325fb436fc9",
+        "alt_text": "",
+        "width": "0",
+        "height": "0",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/3a0957dd56a5f4dc4affb67f432e4a87.jpg"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-1.png",
+        "alt_text": "",
+        "width": "554",
+        "height": "238",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/3165e2cd0e4182abe24cd8c7ae647814.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/0922fe3d-fbd5-49c6-8644-2b48d6c21352",
+        "alt_text": "",
+        "width": "0",
+        "height": "0",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/82ef6aef27dbcc20a92fcd2d2390ba7d.jpg"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-2a.png",
+        "alt_text": "",
+        "width": "424",
+        "height": "399",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/bd4eddd03b2c9e050b276ab93d6f4824.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/de8614e1-ed2e-427c-a339-fc57b4847bd0",
+        "alt_text": "",
+        "width": "0",
+        "height": "0",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/9fbf744eb425c124a74a6959fec81c2e.jpg"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5BTable364%5D.png",
+        "alt_text": "",
+        "width": "840",
+        "height": "418",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/679fbca67a3ecb13fcf07da80bffb057.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-4.png",
+        "alt_text": "",
+        "width": "554",
+        "height": "228",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/47418356fe8422c99be03a03f4e0719b.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-5.png",
+        "alt_text": "",
+        "width": "734",
+        "height": "881",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/b10c35dc45bbc07bd796b22cbebaf25a.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5Bg_adc0ADCDriveronr_adc_b%5D.png",
+        "alt_text": "",
+        "width": "558",
+        "height": "527",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/c69d29b39791acc278dd502c16dbff24.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5Bg_adc0ADCDriveronr_adc_b-2%5D_2.png",
+        "alt_text": "",
+        "width": "550",
+        "height": "427",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/21e6552802c7c66f368ac74e8cae646a.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5BTotalscanstartprocessingtime%5D.png",
+        "alt_text": "",
+        "width": "804",
+        "height": "313",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/52b2e1200bb78bb57a5665a0d595d97d.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5BTable4634-2%5D.png",
+        "alt_text": "",
+        "width": "744",
+        "height": "367",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/8e6afa1e2d8534d1a946bd53e4336bee.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5BTable36214%5D.png",
+        "alt_text": "",
+        "width": "744",
+        "height": "497",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/75b401d624183a94fcbaade4f4f53128.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5B11%5D_2.png",
+        "alt_text": "",
+        "width": "745",
+        "height": "563",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/4453e16fe59b8d21f42b48378c37c5a7.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5B254%5D.png",
+        "alt_text": "",
+        "width": "748",
+        "height": "420",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/ea710b319ae163c8a423fc272022b5cf.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5BFigure3656%5D.png",
+        "alt_text": "",
+        "width": "819",
+        "height": "357",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/9f87324aa9c332bba068b36de422a6e5.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-14.jpg",
+        "alt_text": "",
+        "width": "466",
+        "height": "309",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/609aad12438d56dfe72118510d8564ac.jpg"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-15.jpg",
+        "alt_text": "",
+        "width": "468",
+        "height": "316",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/43b9e9242d92f26bf334f52ff7e3c67a.jpg"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-16.png",
+        "alt_text": "",
+        "width": "554",
+        "height": "237",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/c3b50e708f05622eb841a5ef3a872369.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-17.png",
+        "alt_text": "",
+        "width": "620",
+        "height": "746",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/61398bb02ec2ed3ab223381996c79f13.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5BADC0%5D.png",
+        "alt_text": "",
+        "width": "541",
+        "height": "317",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/d25daaef161876f30cde09a115929e13.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-19.png",
+        "alt_text": "",
+        "width": "412",
+        "height": "329",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/cb01fa7ac9ba0544f30b2a813585606c.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-20.png",
+        "alt_text": "",
+        "width": "554",
+        "height": "54",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/ebd19128a51e02f4fb3ca4fb2366528b.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-21.png",
+        "alt_text": "",
+        "width": "550",
+        "height": "231",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/b9182bccfd7a4e088e77fac8070e909c.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-22.png",
+        "alt_text": "",
+        "width": "549",
+        "height": "239",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/c85bbb3987d6504f57c0ea141686cd50.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5BEnabled%5D.png",
+        "alt_text": "",
+        "width": "762",
+        "height": "530",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/a8edf34e1f6a98a46bf06ea22e7c88f5.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5BPriority11%5D.png",
+        "alt_text": "",
+        "width": "759",
+        "height": "338",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/d752eeb5eb3e86ddaaad51725c0258ad.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5BPriority12%5D.png",
+        "alt_text": "",
+        "width": "753",
+        "height": "362",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/73f64e14e80b9c156461508582d8aa77.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-26_2.jpg",
+        "alt_text": "",
+        "width": "469",
+        "height": "434",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/e5b7edbe75dec852083d62c135102459.jpg"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/383320-%5BStartTrigger%5D_2.png",
+        "alt_text": "",
+        "width": "876",
+        "height": "249",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/715bc382a76f4e386a2c65056d73e6d4/images/0f3f650492498ad8d2b313c9127361ac.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "void gpt_capture_a_isr (void)\n{\n  .....\n  g_ioport.p_api->pinWrite(g_ioport.p_ctrl,BSP_IO_PORT_14_PIN_11,BSP_IO_LEVEL_HIGH);\n  .....\n}"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "void adc_b_adi0_isr (void)\n{\n.....\ng_ioport.p_api->pinWrite (g_ioport.p_ctrl,BSP_IO_PORT_14_PIN_11,BSP_IO_LEVEL_LOW);\n.....\n}"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA6T2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA6T2"
+    ],
+    "links": [
+      {
+        "text": "User's Manual (renesas.com)",
+        "url": "https://www.renesas.com/cn/zh/document/mat/mck-ra6t2-users-manual?r=1542426"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21260601"
+      }
+    ]
+  }
+}

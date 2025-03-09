@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21177415",
+    "title": "RA Family: How to reset the Flash Access Window setting?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:23:46.713059"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to reset the Flash Access Window setting?\nAnswer:\nIf the flash access window is set unintentionally and the program cannot be downloaded, you can initialize it by writing data that initializes the flash access window in SCI boot mode or USB boot mode. For example, the attached file can reset the AWS (Access Window Setting) Register located at 0x01010010 on the RA2E1. The address of the AWS register may vary depending on the type of MCU. Please refer to the manual\nS00A000052656e6573617324\nS30901010010FFFFFFFFE8\nS70500000000FA\n  Suitable Products\nRA/FSP"
+      },
+      {
+        "type": "text",
+        "content": "How to reset the Flash Access Window setting?"
+      },
+      {
+        "type": "text",
+        "content": "How to reset the Flash Access Window setting?"
+      },
+      {
+        "type": "text",
+        "content": "How to reset the Flash Access Window setting?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIf the flash access window is set unintentionally and the program cannot be downloaded, you can initialize it by writing data that initializes the flash access window in SCI boot mode or USB boot mode. For example, the attached file can reset the AWS (Access Window Setting) Register located at 0x01010010 on the RA2E1. The address of the AWS register may vary depending on the type of MCU. Please refer to the manual\nS00A000052656e6573617324\nS30901010010FFFFFFFFE8\nS70500000000FA\n  Suitable Products\nRA/FSP"
+      },
+      {
+        "type": "text",
+        "content": "If the flash access window is set unintentionally and the program cannot be downloaded, you can initialize it by writing data that initializes the flash access window in SCI boot mode or USB boot mode. For example, the attached file can reset the AWS (Access Window Setting) Register located at 0x01010010 on the RA2E1. The address of the AWS register may vary depending on the type of MCU. Please refer to the manual\nS00A000052656e6573617324\nS30901010010FFFFFFFFE8\nS70500000000FA"
+      },
+      {
+        "type": "text",
+        "content": "If the flash access window is set unintentionally and the program cannot be downloaded, you can initialize it by writing data that initializes the flash access window in SCI boot mode or USB boot mode. For example, the attached file can reset the AWS (Access Window Setting) Register located at 0x01010010 on the RA2E1. The address of the AWS register may vary depending on the type of MCU. Please refer to the manual"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA/FSP"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "S00A000052656e6573617324\nS30901010010FFFFFFFFE8\nS70500000000FA"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA/FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA/FSP"
+    ],
+    "links": []
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20938934",
+    "title": "The first RA MCU for motor control with USB FS interface",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:33:03.974552"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nAre there any RA-T series products with a USB interface?\nAnswer:\nThe RA6T3 is provided with a USB 2.0 FS interface. In addition, it supports various other communication interfaces such as CAN FD and I3C for use in a wide range of applications.\nSuitable Products\nRA4T1, RA6T3"
+      },
+      {
+        "type": "text",
+        "content": "Are there any RA-T series products with a USB interface?"
+      },
+      {
+        "type": "text",
+        "content": "Are there any RA-T series products with a USB interface?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RA6T3 is provided with a USB 2.0 FS interface. In addition, it supports various other communication interfaces such as CAN FD and I3C for use in a wide range of applications.\nSuitable Products\nRA4T1, RA6T3"
+      },
+      {
+        "type": "text",
+        "content": "The RA6T3 is provided with a USB 2.0 FS interface. In addition, it supports various other communication interfaces such as CAN FD and I3C for use in a wide range of applications."
+      },
+      {
+        "type": "text",
+        "content": "The RA6T3 is provided with a USB 2.0 FS interface. In addition, it supports various other communication interfaces such as CAN FD and I3C for use in a wide range of applications."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA4T1, RA6T3"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA4T1, RA6T3"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA4T1, RA6T3"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20938936"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20938938"
+      }
+    ]
+  }
+}

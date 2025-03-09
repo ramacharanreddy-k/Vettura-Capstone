@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21698326",
+    "title": "RZ Family: How to use USB Ethernet Adaptor supports CDC-ECM on RZT2M-RSK?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:50:23.316645"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\n How to use USB Ethernet Adaptor supports CDC-ECM on RZT2M-RSK?\nAnswer:\nTo use the USB Ethernet Adapter that works as a CDC-ECM, configure the USB Host CDC and application program by following the steps below.\nStep1: Choose the Configuration (by bConfigurationValue) contained the interface class (2: USB_CLASS_COMMUNICATIONS) and subclass (6: USB_CDC_ECM_SUBCLASS). The below log is an example produced by the lsusb utility. The bConfigurationValue is 3 in this example.\nStep2: Choose the CDC Communication (2: USB_CLASS_COMMUNICATIONS) and Data (10: USB_CLASS_CDC_DATA) interfaces (by bInterfaceNumber and bAlternateSetting) contained the endpoints for the transaction of BULK-IN/OUT and INTR-IN. The below log is an example produced by lsusb utility. In this case, the bInterfaceNumber & bAlternateSetting are 0 & 0 and 1 & 1 for CDC Comm. and Data interfaces respectively.\nStep3: Set no packet filter (0x43: SET_ETHERNET_PACKET_FILTER) to 0x1F.\nThe filter values are as the following\nUSB_CDC_PACKET_TYPE_PROMISCUOUS          0x01\nUSB_CDC_PACKET_TYPE_ALL_MULTICAST       0x02\nUSB_CDC_PACKET_TYPE_DIRECTED                  0x04\nUSB_CDC_PACKET_TYPE_BROADCAST               0x08\nUSB_CDC_PACKET_TYPE_MULTICAST               0x10\nStep4: Get the notification of network connection and disconnection through CDC Communication Interface (INTR-IN EP).\nUSB_CDC_NETWORK_CONNECT packet\n{\n0xA1, /* bmRequestType */\n0x00, /* bRequest */\n0x01, /* wValue (lo) */\n0x00, /* wValue (hi) */\n0x01, /* wIndex (lo) */\n0x00, /* wIndex (hi) */\n0x00, /* wLength (lo) */\n0x00 /* wLength (hi) */\n}\nUSB_CDC_NETWORK_DISCONNECT packet\n{\n0xA1, /* bmRequestType */\n0x00, /* bRequest */\n0x00, /* wValue (lo) */\n0x00, /* wValue (hi) */\n0x01, /* wIndex (lo) */\n0x00, /* wIndex (hi) */\n0x00, /* wLength (lo) */\n0x00 /* wLength (hi) */\n}\nStep5: Transmit and receive ethernet packets through CDC Data Interface (BULK-IN/OUT EPs).\nBesides the above steps, there are several more points to be checked. The 1st one is to allocate USB buffer in non-cache area and the 2nd one is to check USB device enumeration process. Will it just use configuration 0 as default? Or it will check available configurations and choose the proper one. The last one is to make sure with different buffer location for INTR-IN and BULK-IN/OUT EPs. Finally, there are two CDC-ECM dongles (RTL8153 and AX88179A) with verified functionalities on T2M-RSK with FreeRTOS+TCP stack.\nSuitable Products\nRZ/T2M"
+      },
+      {
+        "type": "text",
+        "content": "How to use USB Ethernet Adaptor supports CDC-ECM on RZT2M-RSK?"
+      },
+      {
+        "type": "text",
+        "content": "How to use USB Ethernet Adaptor supports CDC-ECM on RZT2M-RSK?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nTo use the USB Ethernet Adapter that works as a CDC-ECM, configure the USB Host CDC and application program by following the steps below.\nStep1: Choose the Configuration (by bConfigurationValue) contained the interface class (2: USB_CLASS_COMMUNICATIONS) and subclass (6: USB_CDC_ECM_SUBCLASS). The below log is an example produced by the lsusb utility. The bConfigurationValue is 3 in this example.\nStep2: Choose the CDC Communication (2: USB_CLASS_COMMUNICATIONS) and Data (10: USB_CLASS_CDC_DATA) interfaces (by bInterfaceNumber and bAlternateSetting) contained the endpoints for the transaction of BULK-IN/OUT and INTR-IN. The below log is an example produced by lsusb utility. In this case, the bInterfaceNumber & bAlternateSetting are 0 & 0 and 1 & 1 for CDC Comm. and Data interfaces respectively.\nStep3: Set no packet filter (0x43: SET_ETHERNET_PACKET_FILTER) to 0x1F.\nThe filter values are as the following\nUSB_CDC_PACKET_TYPE_PROMISCUOUS          0x01\nUSB_CDC_PACKET_TYPE_ALL_MULTICAST       0x02\nUSB_CDC_PACKET_TYPE_DIRECTED                  0x04\nUSB_CDC_PACKET_TYPE_BROADCAST               0x08\nUSB_CDC_PACKET_TYPE_MULTICAST               0x10\nStep4: Get the notification of network connection and disconnection through CDC Communication Interface (INTR-IN EP).\nUSB_CDC_NETWORK_CONNECT packet\n{\n0xA1, /* bmRequestType */\n0x00, /* bRequest */\n0x01, /* wValue (lo) */\n0x00, /* wValue (hi) */\n0x01, /* wIndex (lo) */\n0x00, /* wIndex (hi) */\n0x00, /* wLength (lo) */\n0x00 /* wLength (hi) */\n}\nUSB_CDC_NETWORK_DISCONNECT packet\n{\n0xA1, /* bmRequestType */\n0x00, /* bRequest */\n0x00, /* wValue (lo) */\n0x00, /* wValue (hi) */\n0x01, /* wIndex (lo) */\n0x00, /* wIndex (hi) */\n0x00, /* wLength (lo) */\n0x00 /* wLength (hi) */\n}\nStep5: Transmit and receive ethernet packets through CDC Data Interface (BULK-IN/OUT EPs).\nBesides the above steps, there are several more points to be checked. The 1st one is to allocate USB buffer in non-cache area and the 2nd one is to check USB device enumeration process. Will it just use configuration 0 as default? Or it will check available configurations and choose the proper one. The last one is to make sure with different buffer location for INTR-IN and BULK-IN/OUT EPs. Finally, there are two CDC-ECM dongles (RTL8153 and AX88179A) with verified functionalities on T2M-RSK with FreeRTOS+TCP stack.\nSuitable Products\nRZ/T2M"
+      },
+      {
+        "type": "text",
+        "content": "To use the USB Ethernet Adapter that works as a CDC-ECM, configure the USB Host CDC and application program by following the steps below.\nStep1: Choose the Configuration (by bConfigurationValue) contained the interface class (2: USB_CLASS_COMMUNICATIONS) and subclass (6: USB_CDC_ECM_SUBCLASS). The below log is an example produced by the lsusb utility. The bConfigurationValue is 3 in this example.\nStep2: Choose the CDC Communication (2: USB_CLASS_COMMUNICATIONS) and Data (10: USB_CLASS_CDC_DATA) interfaces (by bInterfaceNumber and bAlternateSetting) contained the endpoints for the transaction of BULK-IN/OUT and INTR-IN. The below log is an example produced by lsusb utility. In this case, the bInterfaceNumber & bAlternateSetting are 0 & 0 and 1 & 1 for CDC Comm. and Data interfaces respectively.\nStep3: Set no packet filter (0x43: SET_ETHERNET_PACKET_FILTER) to 0x1F.\nThe filter values are as the following\nUSB_CDC_PACKET_TYPE_PROMISCUOUS          0x01\nUSB_CDC_PACKET_TYPE_ALL_MULTICAST       0x02\nUSB_CDC_PACKET_TYPE_DIRECTED                  0x04\nUSB_CDC_PACKET_TYPE_BROADCAST               0x08\nUSB_CDC_PACKET_TYPE_MULTICAST               0x10\nStep4: Get the notification of network connection and disconnection through CDC Communication Interface (INTR-IN EP).\nUSB_CDC_NETWORK_CONNECT packet\n{\n0xA1, /* bmRequestType */\n0x00, /* bRequest */\n0x01, /* wValue (lo) */\n0x00, /* wValue (hi) */\n0x01, /* wIndex (lo) */\n0x00, /* wIndex (hi) */\n0x00, /* wLength (lo) */\n0x00 /* wLength (hi) */\n}\nUSB_CDC_NETWORK_DISCONNECT packet\n{\n0xA1, /* bmRequestType */\n0x00, /* bRequest */\n0x00, /* wValue (lo) */\n0x00, /* wValue (hi) */\n0x01, /* wIndex (lo) */\n0x00, /* wIndex (hi) */\n0x00, /* wLength (lo) */\n0x00 /* wLength (hi) */\n}\nStep5: Transmit and receive ethernet packets through CDC Data Interface (BULK-IN/OUT EPs).\nBesides the above steps, there are several more points to be checked. The 1st one is to allocate USB buffer in non-cache area and the 2nd one is to check USB device enumeration process. Will it just use configuration 0 as default? Or it will check available configurations and choose the proper one. The last one is to make sure with different buffer location for INTR-IN and BULK-IN/OUT EPs. Finally, there are two CDC-ECM dongles (RTL8153 and AX88179A) with verified functionalities on T2M-RSK with FreeRTOS+TCP stack."
+      },
+      {
+        "type": "text",
+        "content": "To use the USB Ethernet Adapter that works as a CDC-ECM, configure the USB Host CDC and application program by following the steps below."
+      },
+      {
+        "type": "text",
+        "content": "Step1: Choose the Configuration (by bConfigurationValue) contained the interface class (2: USB_CLASS_COMMUNICATIONS) and subclass (6: USB_CDC_ECM_SUBCLASS). The below log is an example produced by the lsusb utility. The bConfigurationValue is 3 in this example."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/395873_1.png",
+          "alt_text": "",
+          "width": "612",
+          "height": "493",
+          "local_path": "data/categories/rz_family/rzt2m/bda26d0e54eb84cd230f57eead9420df/images/3f8722265fad494f2ea9904ae91b8c90.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Step2: Choose the CDC Communication (2: USB_CLASS_COMMUNICATIONS) and Data (10: USB_CLASS_CDC_DATA) interfaces (by bInterfaceNumber and bAlternateSetting) contained the endpoints for the transaction of BULK-IN/OUT and INTR-IN. The below log is an example produced by lsusb utility. In this case, the bInterfaceNumber & bAlternateSetting are 0 & 0 and 1 & 1 for CDC Comm. and Data interfaces respectively."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/395873_2.png",
+          "alt_text": "",
+          "width": "596",
+          "height": "543",
+          "local_path": "data/categories/rz_family/rzt2m/bda26d0e54eb84cd230f57eead9420df/images/3e6d5c5000679bc2e60128a650ae91dd.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Step3: Set no packet filter (0x43: SET_ETHERNET_PACKET_FILTER) to 0x1F."
+      },
+      {
+        "type": "text",
+        "content": "The filter values are as the following"
+      },
+      {
+        "type": "text",
+        "content": "USB_CDC_PACKET_TYPE_PROMISCUOUS          0x01\nUSB_CDC_PACKET_TYPE_ALL_MULTICAST       0x02\nUSB_CDC_PACKET_TYPE_DIRECTED                  0x04\nUSB_CDC_PACKET_TYPE_BROADCAST               0x08\nUSB_CDC_PACKET_TYPE_MULTICAST               0x10"
+      },
+      {
+        "type": "text",
+        "content": "Step4: Get the notification of network connection and disconnection through CDC Communication Interface (INTR-IN EP)."
+      },
+      {
+        "type": "text",
+        "content": "USB_CDC_NETWORK_CONNECT packet"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "0xA1, /* bmRequestType */\n0x00, /* bRequest */\n0x01, /* wValue (lo) */\n0x00, /* wValue (hi) */\n0x01, /* wIndex (lo) */\n0x00, /* wIndex (hi) */\n0x00, /* wLength (lo) */\n0x00 /* wLength (hi) */"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "USB_CDC_NETWORK_DISCONNECT packet"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "0xA1, /* bmRequestType */\n0x00, /* bRequest */\n0x00, /* wValue (lo) */\n0x00, /* wValue (hi) */\n0x01, /* wIndex (lo) */\n0x00, /* wIndex (hi) */\n0x00, /* wLength (lo) */\n0x00 /* wLength (hi) */"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "Step5: Transmit and receive ethernet packets through CDC Data Interface (BULK-IN/OUT EPs)."
+      },
+      {
+        "type": "text",
+        "content": "Besides the above steps, there are several more points to be checked. The 1st one is to allocate USB buffer in non-cache area and the 2nd one is to check USB device enumeration process. Will it just use configuration 0 as default? Or it will check available configurations and choose the proper one. The last one is to make sure with different buffer location for INTR-IN and BULK-IN/OUT EPs. Finally, there are two CDC-ECM dongles (RTL8153 and AX88179A) with verified functionalities on T2M-RSK with FreeRTOS+TCP stack."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/T2M"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/395873_1.png",
+        "alt_text": "",
+        "width": "612",
+        "height": "493",
+        "local_path": "data/categories/rz_family/rzt2m/bda26d0e54eb84cd230f57eead9420df/images/3f8722265fad494f2ea9904ae91b8c90.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/395873_2.png",
+        "alt_text": "",
+        "width": "596",
+        "height": "543",
+        "local_path": "data/categories/rz_family/rzt2m/bda26d0e54eb84cd230f57eead9420df/images/3e6d5c5000679bc2e60128a650ae91dd.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/T2M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/T2M"
+    ],
+    "links": []
+  }
+}

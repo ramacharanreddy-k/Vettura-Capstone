@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21652596",
+    "title": "RA Family: Graphics drawing process using GUIX does not work properly",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:23:18.835137"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Answer:\nWhen the DRW Engine Support is Enabled, there must be enough heap memory (set by Heap size in the FSP Configurator BSP tab properties) to match the value set for MAX DRW Operations.  This is because the DRW Engine prepares a display list, which is a collection of rendering operations, and performs the drawing process, but this display list is placed in the heap area of memory.\nThe FSP User's Manual contains notes on MAX DRW Operations settings.\nMax DRW Operations\nSpecifies the maximum number of DRW operations before flushing the display list. Reducing this value may reduce the peak heap used by the application but may reduce performance.\n  Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nWhen the DRW Engine Support is Enabled, there must be enough heap memory (set by Heap size in the FSP Configurator BSP tab properties) to match the value set for MAX DRW Operations.  This is because the DRW Engine prepares a display list, which is a collection of rendering operations, and performs the drawing process, but this display list is placed in the heap area of memory.\nThe FSP User's Manual contains notes on MAX DRW Operations settings.\nMax DRW Operations\nSpecifies the maximum number of DRW operations before flushing the display list. Reducing this value may reduce the peak heap used by the application but may reduce performance.\n  Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "When the DRW Engine Support is Enabled, there must be enough heap memory (set by Heap size in the FSP Configurator BSP tab properties) to match the value set for MAX DRW Operations.  This is because the DRW Engine prepares a display list, which is a collection of rendering operations, and performs the drawing process, but this display list is placed in the heap area of memory.\nThe FSP User's Manual contains notes on MAX DRW Operations settings.\nMax DRW Operations\nSpecifies the maximum number of DRW operations before flushing the display list. Reducing this value may reduce the peak heap used by the application but may reduce performance."
+      },
+      {
+        "type": "text",
+        "content": "When the DRW Engine Support is Enabled, there must be enough heap memory (set by Heap size in the FSP Configurator BSP tab properties) to match the value set for MAX DRW Operations.  This is because the DRW Engine prepares a display list, which is a collection of rendering operations, and performs the drawing process, but this display list is placed in the heap area of memory."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/394690_1.png",
+          "alt_text": "",
+          "width": "433",
+          "height": "291",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/1048b8716f42024df89ed0789dd3d804/images/46ca31726f2b9b5b7cf090fd7e0bc8dc.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/394690_2.png",
+          "alt_text": "",
+          "width": "462",
+          "height": "270",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/1048b8716f42024df89ed0789dd3d804/images/43746fbb15022b5f8c3ef73a044b91bc.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The FSP User's Manual contains notes on MAX DRW Operations settings."
+      },
+      {
+        "type": "text",
+        "content": "Max DRW Operations"
+      },
+      {
+        "type": "text",
+        "content": "Specifies the maximum number of DRW operations before flushing the display list. Reducing this value may reduce the peak heap used by the application but may reduce performance."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/394690_1.png",
+        "alt_text": "",
+        "width": "433",
+        "height": "291",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/1048b8716f42024df89ed0789dd3d804/images/46ca31726f2b9b5b7cf090fd7e0bc8dc.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/394690_2.png",
+        "alt_text": "",
+        "width": "462",
+        "height": "270",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/1048b8716f42024df89ed0789dd3d804/images/43746fbb15022b5f8c3ef73a044b91bc.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "Max DRW Operations\nSpecifies the maximum number of DRW operations before flushing the display list. Reducing this value may reduce the peak heap used by the application but may reduce performance."
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21652602"
+      }
+    ]
+  }
+}

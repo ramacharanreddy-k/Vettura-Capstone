@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "static volatile int direction = 1; // 1 for incrementing, -1 for decrementing\nstatic volatile int u2_count_u = 0U;\nstatic void rm_motor_driver_set_uvw_duty_test (void)\n{\n    u2_count_u += direction;\n    // Check if the counter needs to change direction\n    if (u2_count_u == 6240) {\n        direction = -1; // Switch to decrementing\n    } else if (u2_count_u == 0) {\n        direction = 1; // Switch to incrementing\n    }\n    R_GPT4->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = (uint32_t) u2_count_u;\n    R_GPT5->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = (uint32_t) u2_count_u;\n    R_GPT6->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = (uint32_t) u2_count_u;\n}\n  #define DEBUG_OUTPUT_PD00_ENABLE 1\nvoid gpt_u_callback(timer_callback_args_t *p_args)\n{\n    /* TODO: add your own code here */\n    if(p_args->event == TIMER_EVENT_CREST)\n    {\n#if DEBUG_OUTPUT_PD00_ENABLE\n        R_IOPORT_PinWrite(&g_ioport_ctrl, BSP_IO_PORT_13_PIN_00, BSP_IO_LEVEL_LOW);\n#endif\n        rm_motor_driver_set_uvw_duty_test();\n    }\n      if(p_args->event == TIMER_EVENT_TROUGH)\n    {\n#if DEBUG_OUTPUT_PD00_ENABLE\n        R_IOPORT_PinWrite(&g_ioport_ctrl, BSP_IO_PORT_13_PIN_00, BSP_IO_LEVEL_HIGH);\n#endif\n        rm_motor_driver_set_uvw_duty_test();\n    }\n}"
+    ]
+  ]
+}

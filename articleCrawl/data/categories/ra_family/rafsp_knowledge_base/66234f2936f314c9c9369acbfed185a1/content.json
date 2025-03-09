@@ -1,0 +1,179 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20481444",
+    "title": "RA Family: How to change the pin configuration at run time",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:18:39.686443"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to change the pin configuration at run time\nAnswer:\nTo change pin settings at run time, you need to add configuration data for the pin settings you want to change, and then set that data in the pinsCfg API of the I/O Port HAL Driver. The following is an example showing how to set pins for the IIC0 at run time.\n1. Create a new pin configuration\nIn the Pin Configuration window, click \"Manage configurations... \" to display the “Manage Pin Configurations\" dialog.  In the dialog, click Add button to display “Configuration Name\" dialog. In the dialog, enter any name (e.g. New_IIC0) for the new configuration. Then click the OK button.\n  2. Create the configuration forthe pin to be changed\nIn \"Select Pin Configuration\", select the newly created pin configuration above, and set the pin configuration of IIC0. Check the checkbox for \"Generate data:\" and input variable name for the new configuration data to the text box (e.g. g_bsp_pin_cfg_iic0). In the pin configuration, DEBUG0 is not required, so set it to Disabled. After setting up, click Generate Project Content.\nAdd pin setting for IIC0\n  Remove pin settings for DEBUG0\n  3. Confirm pin configuration data\nConfirm that the data for the pin configuration added above is generated in ra_gen/pin_data.c as the specified variable.\n4. Implementation of pin configuration change processing\nAdd the API call to set the pin configuration data created above to the application as follows.\n/* Change pin configuration */\nR_IOPORT_PinsCfg(&g_ioport_ctrl, &g_bsp_pin_cfg_iic0);\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "How to change the pin configuration at run time"
+      },
+      {
+        "type": "text",
+        "content": "How to change the pin configuration at run time"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nTo change pin settings at run time, you need to add configuration data for the pin settings you want to change, and then set that data in the pinsCfg API of the I/O Port HAL Driver. The following is an example showing how to set pins for the IIC0 at run time.\n1. Create a new pin configuration\nIn the Pin Configuration window, click \"Manage configurations... \" to display the “Manage Pin Configurations\" dialog.  In the dialog, click Add button to display “Configuration Name\" dialog. In the dialog, enter any name (e.g. New_IIC0) for the new configuration. Then click the OK button.\n  2. Create the configuration forthe pin to be changed\nIn \"Select Pin Configuration\", select the newly created pin configuration above, and set the pin configuration of IIC0. Check the checkbox for \"Generate data:\" and input variable name for the new configuration data to the text box (e.g. g_bsp_pin_cfg_iic0). In the pin configuration, DEBUG0 is not required, so set it to Disabled. After setting up, click Generate Project Content.\nAdd pin setting for IIC0\n  Remove pin settings for DEBUG0\n  3. Confirm pin configuration data\nConfirm that the data for the pin configuration added above is generated in ra_gen/pin_data.c as the specified variable.\n4. Implementation of pin configuration change processing\nAdd the API call to set the pin configuration data created above to the application as follows.\n/* Change pin configuration */\nR_IOPORT_PinsCfg(&g_ioport_ctrl, &g_bsp_pin_cfg_iic0);\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "To change pin settings at run time, you need to add configuration data for the pin settings you want to change, and then set that data in the pinsCfg API of the I/O Port HAL Driver. The following is an example showing how to set pins for the IIC0 at run time.\n1. Create a new pin configuration\nIn the Pin Configuration window, click \"Manage configurations... \" to display the “Manage Pin Configurations\" dialog.  In the dialog, click Add button to display “Configuration Name\" dialog. In the dialog, enter any name (e.g. New_IIC0) for the new configuration. Then click the OK button.\n  2. Create the configuration forthe pin to be changed\nIn \"Select Pin Configuration\", select the newly created pin configuration above, and set the pin configuration of IIC0. Check the checkbox for \"Generate data:\" and input variable name for the new configuration data to the text box (e.g. g_bsp_pin_cfg_iic0). In the pin configuration, DEBUG0 is not required, so set it to Disabled. After setting up, click Generate Project Content.\nAdd pin setting for IIC0\n  Remove pin settings for DEBUG0\n  3. Confirm pin configuration data\nConfirm that the data for the pin configuration added above is generated in ra_gen/pin_data.c as the specified variable.\n4. Implementation of pin configuration change processing\nAdd the API call to set the pin configuration data created above to the application as follows.\n/* Change pin configuration */\nR_IOPORT_PinsCfg(&g_ioport_ctrl, &g_bsp_pin_cfg_iic0);"
+      },
+      {
+        "type": "text",
+        "content": "To change pin settings at run time, you need to add configuration data for the pin settings you want to change, and then set that data in the pinsCfg API of the I/O Port HAL Driver. The following is an example showing how to set pins for the IIC0 at run time."
+      },
+      {
+        "type": "text",
+        "content": "1. Create a new pin configuration"
+      },
+      {
+        "type": "text",
+        "content": "In the Pin Configuration window, click \"Manage configurations... \" to display the “Manage Pin Configurations\" dialog.  In the dialog, click Add button to display “Configuration Name\" dialog. In the dialog, enter any name (e.g. New_IIC0) for the new configuration. Then click the OK button."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/d511157c-154d-4dac-8446-7a8d82198157.png",
+          "alt_text": "",
+          "width": "966",
+          "height": "711",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/66234f2936f314c9c9369acbfed185a1/images/7e94ef95521b98bd714fea56642fef6b.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "2. Create the configuration forthe pin to be changed"
+      },
+      {
+        "type": "text",
+        "content": "In \"Select Pin Configuration\", select the newly created pin configuration above, and set the pin configuration of IIC0. Check the checkbox for \"Generate data:\" and input variable name for the new configuration data to the text box (e.g. g_bsp_pin_cfg_iic0). In the pin configuration, DEBUG0 is not required, so set it to Disabled. After setting up, click Generate Project Content."
+      },
+      {
+        "type": "text",
+        "content": "Add pin setting for IIC0"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/b66b83a6-e102-431c-8e8a-473831ad434f.png",
+          "alt_text": "",
+          "width": "974",
+          "height": "336",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/66234f2936f314c9c9369acbfed185a1/images/360ebfa84b5b568eb5f1a4db2115f711.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Remove pin settings for DEBUG0"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/b2ede666-6d60-4d46-8d61-8d1e182b5449.png",
+          "alt_text": "",
+          "width": "972",
+          "height": "407",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/66234f2936f314c9c9369acbfed185a1/images/6d6e129fcf2ce0199dc6805c5fe6b2e7.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "3. Confirm pin configuration data"
+      },
+      {
+        "type": "text",
+        "content": "Confirm that the data for the pin configuration added above is generated in ra_gen/pin_data.c as the specified variable."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/33ff7547-6a94-463c-ab49-d43637207d17.png",
+          "alt_text": "",
+          "width": "1088",
+          "height": "202",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/66234f2936f314c9c9369acbfed185a1/images/d03be10b8be848523e16f947d8e526aa.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "4. Implementation of pin configuration change processing"
+      },
+      {
+        "type": "text",
+        "content": "Add the API call to set the pin configuration data created above to the application as follows."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/d511157c-154d-4dac-8446-7a8d82198157.png",
+        "alt_text": "",
+        "width": "966",
+        "height": "711",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/66234f2936f314c9c9369acbfed185a1/images/7e94ef95521b98bd714fea56642fef6b.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/b66b83a6-e102-431c-8e8a-473831ad434f.png",
+        "alt_text": "",
+        "width": "974",
+        "height": "336",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/66234f2936f314c9c9369acbfed185a1/images/360ebfa84b5b568eb5f1a4db2115f711.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/b2ede666-6d60-4d46-8d61-8d1e182b5449.png",
+        "alt_text": "",
+        "width": "972",
+        "height": "407",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/66234f2936f314c9c9369acbfed185a1/images/6d6e129fcf2ce0199dc6805c5fe6b2e7.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/33ff7547-6a94-463c-ab49-d43637207d17.png",
+        "alt_text": "",
+        "width": "1088",
+        "height": "202",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/66234f2936f314c9c9369acbfed185a1/images/d03be10b8be848523e16f947d8e526aa.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20481440"
+      }
+    ]
+  }
+}

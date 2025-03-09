@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20853184",
+    "title": "RZ/T2L: Can a program that is placed on an external QSPI device be run on the QSPI?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:49:47.579000"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan a program that is placed on an external QSPI device be run on the QSPI?\nAnswer:\nXIP operation on an external XIP device is possible for the RZ/T2L. \nIf the address of the xSPI space is set to be read from the CPU in the settings of the memory-mapping mode, conversion to an SPI transaction will be performed automatically. \nWhen a memory size of 576 KB (TCM) + 1.0 M (SYSRAM) is not sufficient, memory size can be extended by XIP access. However, access speeds of XIP access is slower than internal memory (TCM/SYSRAM) access.\nSuitable Products\nRZ/T2L"
+      },
+      {
+        "type": "text",
+        "content": "Can a program that is placed on an external QSPI device be run on the QSPI?"
+      },
+      {
+        "type": "text",
+        "content": "Can a program that is placed on an external QSPI device be run on the QSPI?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nXIP operation on an external XIP device is possible for the RZ/T2L. \nIf the address of the xSPI space is set to be read from the CPU in the settings of the memory-mapping mode, conversion to an SPI transaction will be performed automatically. \nWhen a memory size of 576 KB (TCM) + 1.0 M (SYSRAM) is not sufficient, memory size can be extended by XIP access. However, access speeds of XIP access is slower than internal memory (TCM/SYSRAM) access.\nSuitable Products\nRZ/T2L"
+      },
+      {
+        "type": "text",
+        "content": "XIP operation on an external XIP device is possible for the RZ/T2L. \nIf the address of the xSPI space is set to be read from the CPU in the settings of the memory-mapping mode, conversion to an SPI transaction will be performed automatically. \nWhen a memory size of 576 KB (TCM) + 1.0 M (SYSRAM) is not sufficient, memory size can be extended by XIP access. However, access speeds of XIP access is slower than internal memory (TCM/SYSRAM) access."
+      },
+      {
+        "type": "text",
+        "content": "XIP operation on an external XIP device is possible for the RZ/T2L. \nIf the address of the xSPI space is set to be read from the CPU in the settings of the memory-mapping mode, conversion to an SPI transaction will be performed automatically. \nWhen a memory size of 576 KB (TCM) + 1.0 M (SYSRAM) is not sufficient, memory size can be extended by XIP access. However, access speeds of XIP access is slower than internal memory (TCM/SYSRAM) access."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/T2L"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/T2L"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/T2L"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20853102"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20855822"
+      }
+    ]
+  }
+}

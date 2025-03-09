@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20411960",
+    "title": "Read and Write to External I2C EEPROM with FSP 3.5.0 and EK-RA6M3 Kit",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:13:29.824165"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "The below attached project for FSP 3.5.0 and the EK-RA6M3 kit demonstrates the use of FSP APIs to access an external 24L128 (128 kbit) I2C EEPROM."
+      },
+      {
+        "type": "text",
+        "content": "Here are some details from the hal_entry.c file:"
+      },
+      {
+        "type": "text",
+        "content": "/*\n * IIC Channel 2\n * SDA - P511\n * SCL - P512\n * Above pins are on the EK-RA6M3 Arduino header J14\n *\n * Tested with 24LC128 EEPROM (128 kbit / 16kB)\n *\n *  */"
+      },
+      {
+        "type": "text",
+        "content": "The project demonstrates EEPROM reads and writes using a wait for a callback event to indicate the action is complete."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP\n  source: https://renesasrulz.com/ra/f/forum/19490/i2c-eeprom/64094#64094"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP\n  source: https://renesasrulz.com/ra/f/forum/19490/i2c-eeprom/64094#64094"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP\n  source: https://renesasrulz.com/ra/f/forum/19490/i2c-eeprom/64094#64094"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP\n  source: https://renesasrulz.com/ra/f/forum/19490/i2c-eeprom/64094#64094"
+      },
+      {
+        "type": "text",
+        "content": "source: https://renesasrulz.com/ra/f/forum/19490/i2c-eeprom/64094#64094"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": [
+      {
+        "text": "https://renesasrulz.com/ra/f/forum/19490/i2c-eeprom/64094#64094",
+        "url": "https://renesasrulz.com/ra/f/forum/19490/i2c-eeprom/64094#64094"
+      }
+    ]
+  }
+}

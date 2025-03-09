@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/16980188",
+    "title": "Why Does the Emulator Not Start on a Lower Power Supply Voltage? (E2, E2 Lite, E1) [RL78]",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:01:37.126349"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Number: FAQ 1010566\nLast Updated: 06/13/2022"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nIn a new application for the RL78, I tried to use a lower power supply voltage than I had used in a previous application. However, the emulator that previously operated no longer starts on this lower power supply voltage. Both the target and the emulator have been operating without problems.\nAnswer:\nThe possible cause is that the reset of the RL78 is not released because the LVD voltage set by the option bytes of the RL78 mounted on the target is higher than the new voltage.\n\nStart the emulator with the higher power supply voltage that was previously used. Then, write settings in which the option byte has been changed to the \"LVD off\" setting or in which the detection voltage has been changed to lower than the new power supply voltage you want to use.\n(Alternatively, you can erase the flash by using a flash programmer.)\nSuitable Products\nRL78 Family\nE2 Emulator [RTE0T00020KCE00000R] \nE2 Emulator Lite [RTE0T0002LKCE00000R] \nE1 [R0E000010KCE00] Discontinued product\nGo to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "In a new application for the RL78, I tried to use a lower power supply voltage than I had used in a previous application. However, the emulator that previously operated no longer starts on this lower power supply voltage. Both the target and the emulator have been operating without problems."
+      },
+      {
+        "type": "text",
+        "content": "In a new application for the RL78, I tried to use a lower power supply voltage than I had used in a previous application. However, the emulator that previously operated no longer starts on this lower power supply voltage. Both the target and the emulator have been operating without problems."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe possible cause is that the reset of the RL78 is not released because the LVD voltage set by the option bytes of the RL78 mounted on the target is higher than the new voltage.\n\nStart the emulator with the higher power supply voltage that was previously used. Then, write settings in which the option byte has been changed to the \"LVD off\" setting or in which the detection voltage has been changed to lower than the new power supply voltage you want to use.\n(Alternatively, you can erase the flash by using a flash programmer.)\nSuitable Products\nRL78 Family\nE2 Emulator [RTE0T00020KCE00000R] \nE2 Emulator Lite [RTE0T0002LKCE00000R] \nE1 [R0E000010KCE00] Discontinued product"
+      },
+      {
+        "type": "text",
+        "content": "The possible cause is that the reset of the RL78 is not released because the LVD voltage set by the option bytes of the RL78 mounted on the target is higher than the new voltage.\n\nStart the emulator with the higher power supply voltage that was previously used. Then, write settings in which the option byte has been changed to the \"LVD off\" setting or in which the detection voltage has been changed to lower than the new power supply voltage you want to use.\n(Alternatively, you can erase the flash by using a flash programmer.)"
+      },
+      {
+        "type": "text",
+        "content": "The possible cause is that the reset of the RL78 is not released because the LVD voltage set by the option bytes of the RL78 mounted on the target is higher than the new voltage.\n\nStart the emulator with the higher power supply voltage that was previously used. Then, write settings in which the option byte has been changed to the \"LVD off\" setting or in which the detection voltage has been changed to lower than the new power supply voltage you want to use.\n(Alternatively, you can erase the flash by using a flash programmer.)"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78 Family\nE2 Emulator [RTE0T00020KCE00000R] \nE2 Emulator Lite [RTE0T0002LKCE00000R] \nE1 [R0E000010KCE00] Discontinued product"
+      },
+      {
+        "type": "text",
+        "content": "Discontinued product"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78 Family"
+          ],
+          [
+            "E2 Emulator [RTE0T00020KCE00000R]"
+          ],
+          [
+            "E2 Emulator Lite [RTE0T0002LKCE00000R]"
+          ],
+          [
+            "E1 [R0E000010KCE00] Discontinued product"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78 Family",
+      "E2 Emulator [RTE0T00020KCE00000R]",
+      "E2 Emulator Lite [RTE0T0002LKCE00000R]",
+      "E1 [R0E000010KCE00] Discontinued product"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17794731"
+      }
+    ]
+  }
+}

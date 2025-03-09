@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21074329",
+    "title": "RA Family: Quick FSP 4.6.0 Labs: Creating Blinky from Scratch",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:12:17.211209"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "The objective of this Quick FSP Labs session is to illustrate the use of the Autocomplete and Edit Hover features of FSP to accelerate the development of Synergy projects. This lab uses the RA EK-RA6M3 or EK-RA6M4 Evaluation Kit and a simple Blinky application to illustrate the capability of code development features useful for accelerating project development. By the end of the lab these features will be familiar and valuable additions to your code development toolkit."
+      },
+      {
+        "type": "text",
+        "content": "Just follow along from the step by step description in the below attached lab guide for either the EK-RA6M3 or EK-RA6M4. This lab assumes you have done the previous lab since it uses the project developed in that lab. You can find that previous lab here."
+      },
+      {
+        "type": "text",
+        "content": "A complete list of all Quick FSP Labs is available here."
+      }
+    ],
+    "images": [],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": [
+      {
+        "text": "here",
+        "url": "https://en-support.renesas.com/knowledgeBase/21074286"
+      },
+      {
+        "text": "here.",
+        "url": "https://en-support.renesas.com/knowledgeBase/19450948"
+      }
+    ]
+  }
+}

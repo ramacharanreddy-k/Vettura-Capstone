@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21661597",
+    "title": "RA6, RA8: Which PHY devices are supported from r_ether_phy module in FSP?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:35:03.022842"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Which PHY chips are supported from r_ether_phy module in FSP?"
+      },
+      {
+        "type": "text",
+        "content": "Below you can find the list of the PHY devices supported from the r_ether_phy module in FSP."
+      },
+      {
+        "type": "text",
+        "content": "The r_ether_phy module may need to be customized for PHY devices other than the ones currently supported. Use the existing code as a starting point for creating custom implementation."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA6M2,RA6M3,RA6M4,RA6M5,RA8M1,RA8D1,RA8T1"
+      },
+      {
+        "type": "text",
+        "content": "RA6M2,RA6M3,RA6M4,RA6M5,RA8M1,RA8D1,RA8T1"
+      }
+    ],
+    "images": [],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": []
+  }
+}

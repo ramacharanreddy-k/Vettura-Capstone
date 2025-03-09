@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21671343",
+    "title": "RH850 interrupt relocation failure",
+    "last_updated": "2024-07-11",
+    "extracted_at": "2025-03-09T00:28:42.279365"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Number: FAQ ×××××××"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nWe have a bootloader stored in FLASH from address 0x0000 to 0x10000. The application starts at address 0x10000 with 8 bytes (CRC + application size), followed by the reset vector and interrupt table. We tried relocating these using the RBASE and EBASE registers to address 0x10008, but all interrupts remain disabled at this address. I also attempted to relocate them to address 0x10100, but the interrupts still didn’t work. However, when relocated to address 0x11000, all interrupts function as expected.\nWhy can’t we relocate the reset vector and interrupt table to address 0x10008? And why does 0x11000 seem to be the next working address?\nAnswer:\nRBASE and EBASE registers have a granularity of 512 bytes (0x200 offsets), meaning you can’t set the lower address bits 0-8. This also applies to the INTBP, which is the base address of the Interrupt Handler Table. That is the reason for this behavior.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "We have a bootloader stored in FLASH from address 0x0000 to 0x10000. The application starts at address 0x10000 with 8 bytes (CRC + application size), followed by the reset vector and interrupt table. We tried relocating these using the RBASE and EBASE registers to address 0x10008, but all interrupts remain disabled at this address. I also attempted to relocate them to address 0x10100, but the interrupts still didn’t work. However, when relocated to address 0x11000, all interrupts function as expected.\nWhy can’t we relocate the reset vector and interrupt table to address 0x10008? And why does 0x11000 seem to be the next working address?"
+      },
+      {
+        "type": "text",
+        "content": "We have a bootloader stored in FLASH from address 0x0000 to 0x10000. The application starts at address 0x10000 with 8 bytes (CRC + application size), followed by the reset vector and interrupt table. We tried relocating these using the RBASE and EBASE registers to address 0x10008, but all interrupts remain disabled at this address. I also attempted to relocate them to address 0x10100, but the interrupts still didn’t work. However, when relocated to address 0x11000, all interrupts function as expected."
+      },
+      {
+        "type": "text",
+        "content": "We have a bootloader stored in FLASH from address 0x0000 to 0x10000. The application starts at address 0x10000 with 8 bytes (CRC + application size), followed by the reset vector and interrupt table. We tried relocating these using the RBASE and EBASE registers to address 0x10008, but all interrupts remain disabled at this address. I also attempted to relocate them to address 0x10100, but the interrupts still didn’t work. However, when relocated to address 0x11000, all interrupts function as expected."
+      },
+      {
+        "type": "text",
+        "content": "Why can’t we relocate the reset vector and interrupt table to address 0x10008? And why does 0x11000 seem to be the next working address?"
+      },
+      {
+        "type": "text",
+        "content": "Why can’t we relocate the reset vector and interrupt table to address 0x10008? And why does 0x11000 seem to be the next working address?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRBASE and EBASE registers have a granularity of 512 bytes (0x200 offsets), meaning you can’t set the lower address bits 0-8. This also applies to the INTBP, which is the base address of the Interrupt Handler Table. That is the reason for this behavior.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "RBASE and EBASE registers have a granularity of 512 bytes (0x200 offsets), meaning you can’t set the lower address bits 0-8. This also applies to the INTBP, which is the base address of the Interrupt Handler Table. That is the reason for this behavior."
+      },
+      {
+        "type": "text",
+        "content": "RBASE and EBASE registers have a granularity of 512 bytes (0x200 offsets), meaning you can’t set the lower address bits 0-8. This also applies to the INTBP, which is the base address of the Interrupt Handler Table. That is the reason for this behavior."
+      },
+      {
+        "type": "text",
+        "content": "RBASE and EBASE registers have a granularity of 512 bytes (0x200 offsets), meaning you can’t set the lower address bits 0-8. This also applies to the INTBP, which is the base address of the Interrupt Handler Table. That is the reason for this behavior."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850"
+    ],
+    "links": []
+  }
+}

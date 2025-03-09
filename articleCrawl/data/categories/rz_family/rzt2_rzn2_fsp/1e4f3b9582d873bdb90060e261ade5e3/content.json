@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21733842",
+    "title": "Update the FSP version in the RZ/T and RZ/N FSP project after changing linker script",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:52:36.887783"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nAfter changing linker script in a project using RZ/T FSP v2.1.0, I updated FSP to RZ/T FSP v2.2.0, but linker script is not updated. Is there any way to update it?\nAnswer:\nTo update FSP version of a project that has changed linker script, please follow the steps below to update linker script. The procedure is described for updating from FSP v2.1.0 to FSP v2.2.0, but the procedure is the same for other versions.\nLocation of linker script file: {project name}/script\nCopy linker script file of FSP v2.1.0 with changes out of the project.\nRemove linker script file in the project.\nSelect FSP v2.2.0 as FSP version in the BSP tab of FSP Configuration and generate codes.\nApply the changes in step 1 to generated linker script of FSP v2.2.0.\nIn RZ/T FSP v2.2.0 and RZ/N FSP v2.1.0 or later, errors may occur depending on the linker script changes. Please refer to the related FAQ: Error regarding smart bundle occurs when building the project for details.\nSuitable Products\nRZ/T2M, RZ/T2L, RZ/T2ME, RZ/T2H, RZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "After changing linker script in a project using RZ/T FSP v2.1.0, I updated FSP to RZ/T FSP v2.2.0, but linker script is not updated. Is there any way to update it?"
+      },
+      {
+        "type": "text",
+        "content": "After changing linker script in a project using RZ/T FSP v2.1.0, I updated FSP to RZ/T FSP v2.2.0, but linker script is not updated. Is there any way to update it?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nTo update FSP version of a project that has changed linker script, please follow the steps below to update linker script. The procedure is described for updating from FSP v2.1.0 to FSP v2.2.0, but the procedure is the same for other versions.\nLocation of linker script file: {project name}/script\nCopy linker script file of FSP v2.1.0 with changes out of the project.\nRemove linker script file in the project.\nSelect FSP v2.2.0 as FSP version in the BSP tab of FSP Configuration and generate codes.\nApply the changes in step 1 to generated linker script of FSP v2.2.0.\nIn RZ/T FSP v2.2.0 and RZ/N FSP v2.1.0 or later, errors may occur depending on the linker script changes. Please refer to the related FAQ: Error regarding smart bundle occurs when building the project for details.\nSuitable Products\nRZ/T2M, RZ/T2L, RZ/T2ME, RZ/T2H, RZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "To update FSP version of a project that has changed linker script, please follow the steps below to update linker script. The procedure is described for updating from FSP v2.1.0 to FSP v2.2.0, but the procedure is the same for other versions.\nLocation of linker script file: {project name}/script\nCopy linker script file of FSP v2.1.0 with changes out of the project.\nRemove linker script file in the project.\nSelect FSP v2.2.0 as FSP version in the BSP tab of FSP Configuration and generate codes.\nApply the changes in step 1 to generated linker script of FSP v2.2.0.\nIn RZ/T FSP v2.2.0 and RZ/N FSP v2.1.0 or later, errors may occur depending on the linker script changes. Please refer to the related FAQ: Error regarding smart bundle occurs when building the project for details."
+      },
+      {
+        "type": "text",
+        "content": "To update FSP version of a project that has changed linker script, please follow the steps below to update linker script. The procedure is described for updating from FSP v2.1.0 to FSP v2.2.0, but the procedure is the same for other versions.\nLocation of linker script file: {project name}/script"
+      },
+      {
+        "type": "text",
+        "content": "In RZ/T FSP v2.2.0 and RZ/N FSP v2.1.0 or later, errors may occur depending on the linker script changes. Please refer to the related FAQ: Error regarding smart bundle occurs when building the project for details."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/T2M, RZ/T2L, RZ/T2ME, RZ/T2H, RZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/T2M, RZ/T2L, RZ/T2ME, RZ/T2H, RZ/N2L"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/T2M, RZ/T2L, RZ/T2ME, RZ/T2H, RZ/N2L"
+    ],
+    "links": [
+      {
+        "text": "Error regarding smart bundle occurs when building the project",
+        "url": "https://en-support.renesas.com/knowledgeBase/21733883"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21733884"
+      }
+    ]
+  }
+}

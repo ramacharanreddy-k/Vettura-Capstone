@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/19575558",
+    "title": "RA Family: Measure Time Interval Between Debug Events in e2 studio",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:16:07.690627"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "During debug it is sometimes useful to capture a time delay between two different debug events. Measuring the delay between two breakpoints, for example, can help identify processing bottlenecks. In e2 studio you can use the DWT report to see the delay in time as well as in clock cycles."
+      },
+      {
+        "type": "text",
+        "content": "The DWT report needs to know the CPU frequency, so this needs to be set in the debug configuration."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/b51a9e14-3980-42a9-8afd-cac8263d5b20.png",
+          "alt_text": "",
+          "width": "853",
+          "height": "660",
+          "local_path": "data/categories/ra_family/rafsp_software/0b8504a5b9dc96d02b4177eb55cef291/images/1ee8a36e62fdc2ca001e67e138bb6d26.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Make sure this frequency reflects the operating frequency of the MCU during debug."
+      },
+      {
+        "type": "text",
+        "content": "Once this is set, simply use the DWT report, shown at information ribbon at the bottom of the e2 studio window."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/485d3962-cc51-4bde-8ffe-709b168ccd9b.png",
+          "alt_text": "",
+          "width": "972",
+          "height": "60",
+          "local_path": "data/categories/ra_family/rafsp_software/0b8504a5b9dc96d02b4177eb55cef291/images/2c3fb4bb7d153b86cae83cba754ac1a2.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "e2 studio"
+      },
+      {
+        "type": "text",
+        "content": "e2 studio"
+      },
+      {
+        "type": "text",
+        "content": "e2 studio"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/b51a9e14-3980-42a9-8afd-cac8263d5b20.png",
+        "alt_text": "",
+        "width": "853",
+        "height": "660",
+        "local_path": "data/categories/ra_family/rafsp_software/0b8504a5b9dc96d02b4177eb55cef291/images/1ee8a36e62fdc2ca001e67e138bb6d26.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/485d3962-cc51-4bde-8ffe-709b168ccd9b.png",
+        "alt_text": "",
+        "width": "972",
+        "height": "60",
+        "local_path": "data/categories/ra_family/rafsp_software/0b8504a5b9dc96d02b4177eb55cef291/images/2c3fb4bb7d153b86cae83cba754ac1a2.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "e2 studio"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "e2 studio"
+    ],
+    "links": []
+  }
+}

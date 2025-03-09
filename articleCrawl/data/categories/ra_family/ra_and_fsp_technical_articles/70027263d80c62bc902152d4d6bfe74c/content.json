@@ -1,0 +1,184 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20540919",
+    "title": "Using Arm Cortex SWO with printf with RA and FSP",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:13:27.514771"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "The below description assumes you are using GCC complier and e2studio and is demonstrated with the RA6M5.\n  In the linker settings for the project, change the Other linker flags so the semihosted version of newlib is not used:\n    In the BSP tab of the configurator, add some heap memory (printf() requires some heap):\n    Override the low level write function of the C runtime library, with a version that will write the data to the ITM:\n  \nint _write(int file, char *ptr, int len)\n{\n  FSP_PARAMETER_NOT_USED(file);\n\n  int32_t todo;\n\n  /* If the debugger is connected */\n  if (CoreDebug->DHCSR & CoreDebug_DHCSR_C_DEBUGEN_Msk)\n  {\n      /* Send the character */\n        for (todo = 0; todo < len; todo++)\n        {\n            ITM_SendChar((uint32_t)*ptr);/* CMSIS call */\n            ptr++;\n        }\n  }\n\n  return len;\n}\nIn your code, call printf().\n uint32_t count = 0;\n    \n    while(1)\n    {\n        printf(\"FSP ITM printf %ld\\r\\n\", count++);\n        R_BSP_SoftwareDelay(1000, BSP_DELAY_UNITS_MILLISECONDS);\n    }\n Build the project.\n  In the debug configuration for the project, set the SWV Core clock:\n    The frequency set in the SWV Core clock in the debug configuration is not actually the speed the CPU core is operating at, it is the speed of the trace clock (TRCLK). In the case of the RA6M5 the JLink will configure the TRCKCR register to 0x81, which will divide the system clock by 2 (PLL is the system clock by default in an FSP project), giving a trace clock speed of 100MHz. This results in the value of 100MHz for the core clock speed in the debug configuration.\n  Open the Live Trace Console window (Window->Show View->Other ). In the setting for the Live Trace Console, enable ITM stimulus port 0:\n    Then enable the Live Trace Console, and run the program, and you should see the output of the printf:\n      Printf\nFSP and RA\nSourced from: 346439"
+      },
+      {
+        "type": "text",
+        "content": "The below description assumes you are using GCC complier and e2studio and is demonstrated with the RA6M5.\n  In the linker settings for the project, change the Other linker flags so the semihosted version of newlib is not used:\n    In the BSP tab of the configurator, add some heap memory (printf() requires some heap):\n    Override the low level write function of the C runtime library, with a version that will write the data to the ITM:\n  \nint _write(int file, char *ptr, int len)\n{\n  FSP_PARAMETER_NOT_USED(file);\n\n  int32_t todo;\n\n  /* If the debugger is connected */\n  if (CoreDebug->DHCSR & CoreDebug_DHCSR_C_DEBUGEN_Msk)\n  {\n      /* Send the character */\n        for (todo = 0; todo < len; todo++)\n        {\n            ITM_SendChar((uint32_t)*ptr);/* CMSIS call */\n            ptr++;\n        }\n  }\n\n  return len;\n}\nIn your code, call printf().\n uint32_t count = 0;\n    \n    while(1)\n    {\n        printf(\"FSP ITM printf %ld\\r\\n\", count++);\n        R_BSP_SoftwareDelay(1000, BSP_DELAY_UNITS_MILLISECONDS);\n    }\n Build the project.\n  In the debug configuration for the project, set the SWV Core clock:\n    The frequency set in the SWV Core clock in the debug configuration is not actually the speed the CPU core is operating at, it is the speed of the trace clock (TRCLK). In the case of the RA6M5 the JLink will configure the TRCKCR register to 0x81, which will divide the system clock by 2 (PLL is the system clock by default in an FSP project), giving a trace clock speed of 100MHz. This results in the value of 100MHz for the core clock speed in the debug configuration.\n  Open the Live Trace Console window (Window->Show View->Other ). In the setting for the Live Trace Console, enable ITM stimulus port 0:\n    Then enable the Live Trace Console, and run the program, and you should see the output of the printf:\n      Printf\nFSP and RA\nSourced from: 346439"
+      },
+      {
+        "type": "text",
+        "content": "The below description assumes you are using GCC complier and e2studio and is demonstrated with the RA6M5."
+      },
+      {
+        "type": "text",
+        "content": "RA6M5."
+      },
+      {
+        "type": "text",
+        "content": "In the linker settings for the project, change the Other linker flags so the semihosted version of newlib is not used:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/bd2e2c8d-3f3a-42db-b818-ce0a04ea88f1.png",
+          "alt_text": "",
+          "width": "472",
+          "height": "402",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/70027263d80c62bc902152d4d6bfe74c/images/8725ea5bd5841443b1813a7f69320889.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "In the BSP tab of the configurator, add some heap memory (printf() requires some heap):"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/e107cd26-9be6-4599-b3bb-f39e9a40f575.png",
+          "alt_text": "",
+          "width": "552",
+          "height": "230",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/70027263d80c62bc902152d4d6bfe74c/images/41ed6235aa6f5282c05791f598127ad3.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Override the low level write function of the C runtime library, with a version that will write the data to the ITM:"
+      },
+      {
+        "type": "text",
+        "content": "In your code, call printf()."
+      },
+      {
+        "type": "text",
+        "content": "Build the project."
+      },
+      {
+        "type": "text",
+        "content": "In the debug configuration for the project, set the SWV Core clock:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/e3efa3ed-563a-4440-b10f-2fcd9e78e5ed.png",
+          "alt_text": "",
+          "width": "527",
+          "height": "538",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/70027263d80c62bc902152d4d6bfe74c/images/9974cbc88e1911a9edd00c6b6029151f.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The frequency set in the SWV Core clock in the debug configuration is not actually the speed the CPU core is operating at, it is the speed of the trace clock (TRCLK). In the case of the RA6M5 the JLink will configure the TRCKCR register to 0x81, which will divide the system clock by 2 (PLL is the system clock by default in an FSP project), giving a trace clock speed of 100MHz. This results in the value of 100MHz for the core clock speed in the debug configuration."
+      },
+      {
+        "type": "text",
+        "content": "Open the Live Trace Console window (Window->Show View->Other ). In the setting for the Live Trace Console, enable ITM stimulus port 0:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/b8a32008-ca15-4c19-a09f-e487296df7c8.png",
+          "alt_text": "",
+          "width": "504",
+          "height": "215",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/70027263d80c62bc902152d4d6bfe74c/images/b1f5e2367ec53ab5d8295d034d7de548.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Then enable the Live Trace Console, and run the program, and you should see the output of the printf:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/f2e253da-aa88-4f73-832f-41b89687e700.png",
+          "alt_text": "",
+          "width": "563",
+          "height": "380",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/70027263d80c62bc902152d4d6bfe74c/images/f2be995af3d8bbe52df2ddc38cac0c53.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Printf\nFSP and RA\nSourced from: 346439"
+      },
+      {
+        "type": "text",
+        "content": "Sourced from: 346439"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/bd2e2c8d-3f3a-42db-b818-ce0a04ea88f1.png",
+        "alt_text": "",
+        "width": "472",
+        "height": "402",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/70027263d80c62bc902152d4d6bfe74c/images/8725ea5bd5841443b1813a7f69320889.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/e107cd26-9be6-4599-b3bb-f39e9a40f575.png",
+        "alt_text": "",
+        "width": "552",
+        "height": "230",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/70027263d80c62bc902152d4d6bfe74c/images/41ed6235aa6f5282c05791f598127ad3.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/e3efa3ed-563a-4440-b10f-2fcd9e78e5ed.png",
+        "alt_text": "",
+        "width": "527",
+        "height": "538",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/70027263d80c62bc902152d4d6bfe74c/images/9974cbc88e1911a9edd00c6b6029151f.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/b8a32008-ca15-4c19-a09f-e487296df7c8.png",
+        "alt_text": "",
+        "width": "504",
+        "height": "215",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/70027263d80c62bc902152d4d6bfe74c/images/b1f5e2367ec53ab5d8295d034d7de548.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/f2e253da-aa88-4f73-832f-41b89687e700.png",
+        "alt_text": "",
+        "width": "563",
+        "height": "380",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/70027263d80c62bc902152d4d6bfe74c/images/f2be995af3d8bbe52df2ddc38cac0c53.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "Printf"
+          ],
+          [
+            "FSP and RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "Printf",
+      "FSP and RA"
+    ],
+    "links": [
+      {
+        "text": "346439",
+        "url": "https://app.na4.teamsupport.com/?TicketNumber=346439"
+      }
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21687979",
+    "title": "Display resolutions that are supported by the RZ/G2L and RZ/G2LC (Portrait LCD)",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:44:00.842121"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nThe RZ/G2L manual lists the supported display resolution as 1920 x 1080 pixels, but is it possible to display 1080 x 1920 pixels by swapping the height and width?\nAnswer:\nYes, 1080 x 1920 is also supported.\nSuitable Products\nRZ/G2L, RZ/G2LC"
+      },
+      {
+        "type": "text",
+        "content": "The RZ/G2L manual lists the supported display resolution as 1920 x 1080 pixels, but is it possible to display 1080 x 1920 pixels by swapping the height and width?"
+      },
+      {
+        "type": "text",
+        "content": "The RZ/G2L manual lists the supported display resolution as 1920 x 1080 pixels, but is it possible to display 1080 x 1920 pixels by swapping the height and width?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes, 1080 x 1920 is also supported.\nSuitable Products\nRZ/G2L, RZ/G2LC"
+      },
+      {
+        "type": "text",
+        "content": "Yes, 1080 x 1920 is also supported."
+      },
+      {
+        "type": "text",
+        "content": "Yes, 1080 x 1920 is also supported."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/G2L, RZ/G2LC"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/G2L, RZ/G2LC"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/G2L, RZ/G2LC"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21687982"
+      }
+    ]
+  }
+}

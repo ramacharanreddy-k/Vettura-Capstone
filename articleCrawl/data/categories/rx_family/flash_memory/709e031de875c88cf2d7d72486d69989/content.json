@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21698325",
+    "title": "Measurement conditions for flash memory Programming time, Erasure time, and Blank check time",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:14:19.557519"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nSoftware processing is required when writing to flash memory, but under what conditions are the Programming time, Erasure time, and Blank check time listed in the electrical characteristics of the manual measured?\nAnswer:\n[Products that use the FACI command to control flash memory]\nProcessing begins when the FACI command is issued and the command is accepted.\nThe Programming time, Erasure time, and Blank check time are the time from when command processing starts to when it ends.\nThis does not include the time required for software processing before the command is accepted.\n[Products that use software commands to control flash memory]\nWhen a software command (81h(Program) etc.) is set in the FCR register, command processing begins.\nThe Programming time, Erasure time, and Blank check time are the time from when the software command is set to when command processing ends.\nThis does not include the software processing time required to set the software command in the FCR register.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Software processing is required when writing to flash memory, but under what conditions are the Programming time, Erasure time, and Blank check time listed in the electrical characteristics of the manual measured?"
+      },
+      {
+        "type": "text",
+        "content": "Software processing is required when writing to flash memory, but under what conditions are the Programming time, Erasure time, and Blank check time listed in the electrical characteristics of the manual measured?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\n[Products that use the FACI command to control flash memory]\nProcessing begins when the FACI command is issued and the command is accepted.\nThe Programming time, Erasure time, and Blank check time are the time from when command processing starts to when it ends.\nThis does not include the time required for software processing before the command is accepted.\n[Products that use software commands to control flash memory]\nWhen a software command (81h(Program) etc.) is set in the FCR register, command processing begins.\nThe Programming time, Erasure time, and Blank check time are the time from when the software command is set to when command processing ends.\nThis does not include the software processing time required to set the software command in the FCR register.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "[Products that use the FACI command to control flash memory]\nProcessing begins when the FACI command is issued and the command is accepted.\nThe Programming time, Erasure time, and Blank check time are the time from when command processing starts to when it ends.\nThis does not include the time required for software processing before the command is accepted.\n[Products that use software commands to control flash memory]\nWhen a software command (81h(Program) etc.) is set in the FCR register, command processing begins.\nThe Programming time, Erasure time, and Blank check time are the time from when the software command is set to when command processing ends.\nThis does not include the software processing time required to set the software command in the FCR register."
+      },
+      {
+        "type": "text",
+        "content": "[Products that use the FACI command to control flash memory]\nProcessing begins when the FACI command is issued and the command is accepted.\nThe Programming time, Erasure time, and Blank check time are the time from when command processing starts to when it ends.\nThis does not include the time required for software processing before the command is accepted.\n[Products that use software commands to control flash memory]\nWhen a software command (81h(Program) etc.) is set in the FCR register, command processing begins.\nThe Programming time, Erasure time, and Blank check time are the time from when the software command is set to when command processing ends.\nThis does not include the software processing time required to set the software command in the FCR register."
+      },
+      {
+        "type": "text",
+        "content": "[Products that use the FACI command to control flash memory]"
+      },
+      {
+        "type": "text",
+        "content": "Processing begins when the FACI command is issued and the command is accepted.\nThe Programming time, Erasure time, and Blank check time are the time from when command processing starts to when it ends.\nThis does not include the time required for software processing before the command is accepted."
+      },
+      {
+        "type": "text",
+        "content": "[Products that use software commands to control flash memory]"
+      },
+      {
+        "type": "text",
+        "content": "When a software command (81h(Program) etc.) is set in the FCR register, command processing begins.\nThe Programming time, Erasure time, and Blank check time are the time from when the software command is set to when command processing ends.\nThis does not include the software processing time required to set the software command in the FCR register."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21698344"
+      }
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20855749",
+    "title": "Solution and tools: Which interfaces are available to control the ASSP?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:26:21.092524"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhich interfaces are available to control the ASSP?\nAnswer:\nThe device has several interfaces like Uart, SPI, I2C/I3C to make it easy to interface to an external host, for controlling it and exchange information about the recognized keywords and commands. Additionally, the device has also analog and digital inputs and output capability to provide user feedback or implement control functionality in absence of an external host.\nSuitable Products\nRISC-V Voice ASSP"
+      },
+      {
+        "type": "text",
+        "content": "Which interfaces are available to control the ASSP?"
+      },
+      {
+        "type": "text",
+        "content": "Which interfaces are available to control the ASSP?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe device has several interfaces like Uart, SPI, I2C/I3C to make it easy to interface to an external host, for controlling it and exchange information about the recognized keywords and commands. Additionally, the device has also analog and digital inputs and output capability to provide user feedback or implement control functionality in absence of an external host.\nSuitable Products\nRISC-V Voice ASSP"
+      },
+      {
+        "type": "text",
+        "content": "The device has several interfaces like Uart, SPI, I2C/I3C to make it easy to interface to an external host, for controlling it and exchange information about the recognized keywords and commands. Additionally, the device has also analog and digital inputs and output capability to provide user feedback or implement control functionality in absence of an external host."
+      },
+      {
+        "type": "text",
+        "content": "The device has several interfaces like Uart, SPI, I2C/I3C to make it easy to interface to an external host, for controlling it and exchange information about the recognized keywords and commands. Additionally, the device has also analog and digital inputs and output capability to provide user feedback or implement control functionality in absence of an external host."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRISC-V Voice ASSP"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RISC-V Voice ASSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RISC-V Voice ASSP"
+    ],
+    "links": []
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20940276",
+    "title": "How can I use a touch controller that is not supported by the emWin FIT module or QE for Display?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:23:21.441307"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow can I use a touch controller that is not supported by the emWin FIT module or QE for Display?\nAnswer:\nWith a touch controller that is not supported by the emWin FIT module, you cannot specify settings from QE. In this case, you must implement a program that communicates with the touch controller by yourself.\nSee the following procedure:\n(1) Specify the settings to the extent possible, and then output the configuration file (qe_emwin_config.h).\n  (2) In the “qe_emwin_config.h” file that is output, set the EMWIN_TOUCH_IF definition to TOUCH_IF_OTHER.\nTo use multi-touch operations, also set the EMWIN_USE_MULTITOUCH definition to 1.\n(Note that if you output the configuration file from QE again, the changes you made will be lost.)\n(3) Implement a program that communicates with the touch controller you use in the following two files:\n• r_emwin_rx_pid_user_if.c\nDirectory:\n<project-name>\\src\\smc_gen\\r_emwin_rx\\src\nOverview of the program to be implemented:\nImplement processing that obtains touch event data in accordance with the specifications and protocol of the controller to be used and then passes the data to the r_emwin_rx_pidconf_cb function. Implement programs that initialize the peripherals that are used to obtain touch event data and set the interval at which to obtain the touch event data by using a timer so that the data is obtained periodically.\nNotes on implementation:\nThe implemented program will probably use interrupt processing to obtain data and send it to emWin. Therefore, make sure that the program does not include a wait loop.\nHint:\nConsult the implementations of r_emwin_rx_pid_iic_if.c and r_emwin_rx_pid_spi_if.c in the same directory.\n• PIDConf.c\nDirectory:\n<project-name>\\src\\smc_gen\\r_emwin_rx\\lib\\Config\\PIDConf.c\nOverview of the program to be implemented:\nImplement the pidconf_cb_single function called from the r_emwin_rx_pidconf_cb function. (Lines 363 to 383)\nThe pidconf_cb_single function reformats the touch event data passed by an argument into a format that can be passed to emWin(GUI_PID_STATE type (GUI_Type.h)). The function then sets the data in the GUI_TOUCH_StoreStateEx function so that the data is sent to emWin.\nFor a touch controller that supports multi-touch operations, processing that recognizes multi-touch operations must be implemented and the GUI_MTOUCH_StoreEvent function is required, instead of GUI_TOUCH_StoreStateEx, for notification to emWin.\nFor an analog touch device, you need to implement measurement processing. (Lines 827 to 888)\nGUI_TOUCH_X_ActivateX, GUI_TOUCH_X_MeasureX, and other unimplemented functions are provided. Implement analog value measurement programs for these functions.\nAnd create a program in r_emwin_rx_pid_user_if.c to periodically execute GUI_TOUCH_Exec().\n(For information on how to execute periodically, refer to r_emwin_rx_pid_iic_if.c and r_emwin_rx_pid_spi_if.c.)\nNotes on implementation:\nThe origin coordinates (0,0) for touch operations might be different from the base point of the LCD. Therefore, coordinate conversion might be needed depending on the LCD to be used.\nHint: \n• pidconf_cb_single, pidconf_cb_multi, and other functions in PIDConf.c\nSupplementary information:\nYou need to implement the programs in accordance with the emWin specifications.\nFor details about the GUI_PID_STATE type, the GUI_TOUCH_StoreStateEx function, and the GUI_MTOUCH_StoreEvent function, see the emWin user's manual (UM03001_emWin.pdf) bundled with the emWin FIT module or the web manual provided by Segger, which developed emWin (emWin User Guide & Reference Manual (segger.com)).\n• Page related to touch operations\n5.9.4.1 Generic touch screen API\n(https://www.segger.com/doc/UM03001_emWin.html#Generic_touch_screen_API)\n5.9.4.2.3.4 GUI_TOUCH_X_MeasureY()\n(https://www.segger.com/doc/UM03001_emWin.html#GUI_TOUCH_X_MeasureY)\n5.9.4.2 The analog touch screen driver\n(https://www.segger.com/doc/UM03001_emWin.html#The_analog_touch_screen_driver)\nFor details about emWin, contact Segger(https://www.segger.com/) or it local agency. \nSuitable Products\nRX Family\n  日本語"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nHow can I use a touch controller that is not supported by the emWin FIT module or QE for Display?\nAnswer:\nWith a touch controller that is not supported by the emWin FIT module, you cannot specify settings from QE. In this case, you must implement a program that communicates with the touch controller by yourself.\nSee the following procedure:\n(1) Specify the settings to the extent possible, and then output the configuration file (qe_emwin_config.h).\n  (2) In the “qe_emwin_config.h” file that is output, set the EMWIN_TOUCH_IF definition to TOUCH_IF_OTHER.\nTo use multi-touch operations, also set the EMWIN_USE_MULTITOUCH definition to 1.\n(Note that if you output the configuration file from QE again, the changes you made will be lost.)\n(3) Implement a program that communicates with the touch controller you use in the following two files:\n• r_emwin_rx_pid_user_if.c\nDirectory:\n<project-name>\\src\\smc_gen\\r_emwin_rx\\src\nOverview of the program to be implemented:\nImplement processing that obtains touch event data in accordance with the specifications and protocol of the controller to be used and then passes the data to the r_emwin_rx_pidconf_cb function. Implement programs that initialize the peripherals that are used to obtain touch event data and set the interval at which to obtain the touch event data by using a timer so that the data is obtained periodically.\nNotes on implementation:\nThe implemented program will probably use interrupt processing to obtain data and send it to emWin. Therefore, make sure that the program does not include a wait loop.\nHint:\nConsult the implementations of r_emwin_rx_pid_iic_if.c and r_emwin_rx_pid_spi_if.c in the same directory.\n• PIDConf.c\nDirectory:\n<project-name>\\src\\smc_gen\\r_emwin_rx\\lib\\Config\\PIDConf.c\nOverview of the program to be implemented:\nImplement the pidconf_cb_single function called from the r_emwin_rx_pidconf_cb function. (Lines 363 to 383)\nThe pidconf_cb_single function reformats the touch event data passed by an argument into a format that can be passed to emWin(GUI_PID_STATE type (GUI_Type.h)). The function then sets the data in the GUI_TOUCH_StoreStateEx function so that the data is sent to emWin.\nFor a touch controller that supports multi-touch operations, processing that recognizes multi-touch operations must be implemented and the GUI_MTOUCH_StoreEvent function is required, instead of GUI_TOUCH_StoreStateEx, for notification to emWin.\nFor an analog touch device, you need to implement measurement processing. (Lines 827 to 888)\nGUI_TOUCH_X_ActivateX, GUI_TOUCH_X_MeasureX, and other unimplemented functions are provided. Implement analog value measurement programs for these functions.\nAnd create a program in r_emwin_rx_pid_user_if.c to periodically execute GUI_TOUCH_Exec().\n(For information on how to execute periodically, refer to r_emwin_rx_pid_iic_if.c and r_emwin_rx_pid_spi_if.c.)\nNotes on implementation:\nThe origin coordinates (0,0) for touch operations might be different from the base point of the LCD. Therefore, coordinate conversion might be needed depending on the LCD to be used.\nHint: \n• pidconf_cb_single, pidconf_cb_multi, and other functions in PIDConf.c\nSupplementary information:\nYou need to implement the programs in accordance with the emWin specifications.\nFor details about the GUI_PID_STATE type, the GUI_TOUCH_StoreStateEx function, and the GUI_MTOUCH_StoreEvent function, see the emWin user's manual (UM03001_emWin.pdf) bundled with the emWin FIT module or the web manual provided by Segger, which developed emWin (emWin User Guide & Reference Manual (segger.com)).\n• Page related to touch operations\n5.9.4.1 Generic touch screen API\n(https://www.segger.com/doc/UM03001_emWin.html#Generic_touch_screen_API)\n5.9.4.2.3.4 GUI_TOUCH_X_MeasureY()\n(https://www.segger.com/doc/UM03001_emWin.html#GUI_TOUCH_X_MeasureY)\n5.9.4.2 The analog touch screen driver\n(https://www.segger.com/doc/UM03001_emWin.html#The_analog_touch_screen_driver)\nFor details about emWin, contact Segger(https://www.segger.com/) or it local agency. \nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "How can I use a touch controller that is not supported by the emWin FIT module or QE for Display?"
+      },
+      {
+        "type": "text",
+        "content": "How can I use a touch controller that is not supported by the emWin FIT module or QE for Display?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nWith a touch controller that is not supported by the emWin FIT module, you cannot specify settings from QE. In this case, you must implement a program that communicates with the touch controller by yourself.\nSee the following procedure:\n(1) Specify the settings to the extent possible, and then output the configuration file (qe_emwin_config.h).\n  (2) In the “qe_emwin_config.h” file that is output, set the EMWIN_TOUCH_IF definition to TOUCH_IF_OTHER.\nTo use multi-touch operations, also set the EMWIN_USE_MULTITOUCH definition to 1.\n(Note that if you output the configuration file from QE again, the changes you made will be lost.)\n(3) Implement a program that communicates with the touch controller you use in the following two files:\n• r_emwin_rx_pid_user_if.c\nDirectory:\n<project-name>\\src\\smc_gen\\r_emwin_rx\\src\nOverview of the program to be implemented:\nImplement processing that obtains touch event data in accordance with the specifications and protocol of the controller to be used and then passes the data to the r_emwin_rx_pidconf_cb function. Implement programs that initialize the peripherals that are used to obtain touch event data and set the interval at which to obtain the touch event data by using a timer so that the data is obtained periodically.\nNotes on implementation:\nThe implemented program will probably use interrupt processing to obtain data and send it to emWin. Therefore, make sure that the program does not include a wait loop.\nHint:\nConsult the implementations of r_emwin_rx_pid_iic_if.c and r_emwin_rx_pid_spi_if.c in the same directory.\n• PIDConf.c\nDirectory:\n<project-name>\\src\\smc_gen\\r_emwin_rx\\lib\\Config\\PIDConf.c\nOverview of the program to be implemented:\nImplement the pidconf_cb_single function called from the r_emwin_rx_pidconf_cb function. (Lines 363 to 383)\nThe pidconf_cb_single function reformats the touch event data passed by an argument into a format that can be passed to emWin(GUI_PID_STATE type (GUI_Type.h)). The function then sets the data in the GUI_TOUCH_StoreStateEx function so that the data is sent to emWin.\nFor a touch controller that supports multi-touch operations, processing that recognizes multi-touch operations must be implemented and the GUI_MTOUCH_StoreEvent function is required, instead of GUI_TOUCH_StoreStateEx, for notification to emWin.\nFor an analog touch device, you need to implement measurement processing. (Lines 827 to 888)\nGUI_TOUCH_X_ActivateX, GUI_TOUCH_X_MeasureX, and other unimplemented functions are provided. Implement analog value measurement programs for these functions.\nAnd create a program in r_emwin_rx_pid_user_if.c to periodically execute GUI_TOUCH_Exec().\n(For information on how to execute periodically, refer to r_emwin_rx_pid_iic_if.c and r_emwin_rx_pid_spi_if.c.)\nNotes on implementation:\nThe origin coordinates (0,0) for touch operations might be different from the base point of the LCD. Therefore, coordinate conversion might be needed depending on the LCD to be used.\nHint: \n• pidconf_cb_single, pidconf_cb_multi, and other functions in PIDConf.c\nSupplementary information:\nYou need to implement the programs in accordance with the emWin specifications.\nFor details about the GUI_PID_STATE type, the GUI_TOUCH_StoreStateEx function, and the GUI_MTOUCH_StoreEvent function, see the emWin user's manual (UM03001_emWin.pdf) bundled with the emWin FIT module or the web manual provided by Segger, which developed emWin (emWin User Guide & Reference Manual (segger.com)).\n• Page related to touch operations\n5.9.4.1 Generic touch screen API\n(https://www.segger.com/doc/UM03001_emWin.html#Generic_touch_screen_API)\n5.9.4.2.3.4 GUI_TOUCH_X_MeasureY()\n(https://www.segger.com/doc/UM03001_emWin.html#GUI_TOUCH_X_MeasureY)\n5.9.4.2 The analog touch screen driver\n(https://www.segger.com/doc/UM03001_emWin.html#The_analog_touch_screen_driver)\nFor details about emWin, contact Segger(https://www.segger.com/) or it local agency. \nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "With a touch controller that is not supported by the emWin FIT module, you cannot specify settings from QE. In this case, you must implement a program that communicates with the touch controller by yourself.\nSee the following procedure:\n(1) Specify the settings to the extent possible, and then output the configuration file (qe_emwin_config.h).\n  (2) In the “qe_emwin_config.h” file that is output, set the EMWIN_TOUCH_IF definition to TOUCH_IF_OTHER.\nTo use multi-touch operations, also set the EMWIN_USE_MULTITOUCH definition to 1.\n(Note that if you output the configuration file from QE again, the changes you made will be lost.)\n(3) Implement a program that communicates with the touch controller you use in the following two files:\n• r_emwin_rx_pid_user_if.c\nDirectory:\n<project-name>\\src\\smc_gen\\r_emwin_rx\\src\nOverview of the program to be implemented:\nImplement processing that obtains touch event data in accordance with the specifications and protocol of the controller to be used and then passes the data to the r_emwin_rx_pidconf_cb function. Implement programs that initialize the peripherals that are used to obtain touch event data and set the interval at which to obtain the touch event data by using a timer so that the data is obtained periodically.\nNotes on implementation:\nThe implemented program will probably use interrupt processing to obtain data and send it to emWin. Therefore, make sure that the program does not include a wait loop.\nHint:\nConsult the implementations of r_emwin_rx_pid_iic_if.c and r_emwin_rx_pid_spi_if.c in the same directory.\n• PIDConf.c\nDirectory:\n<project-name>\\src\\smc_gen\\r_emwin_rx\\lib\\Config\\PIDConf.c\nOverview of the program to be implemented:\nImplement the pidconf_cb_single function called from the r_emwin_rx_pidconf_cb function. (Lines 363 to 383)\nThe pidconf_cb_single function reformats the touch event data passed by an argument into a format that can be passed to emWin(GUI_PID_STATE type (GUI_Type.h)). The function then sets the data in the GUI_TOUCH_StoreStateEx function so that the data is sent to emWin.\nFor a touch controller that supports multi-touch operations, processing that recognizes multi-touch operations must be implemented and the GUI_MTOUCH_StoreEvent function is required, instead of GUI_TOUCH_StoreStateEx, for notification to emWin.\nFor an analog touch device, you need to implement measurement processing. (Lines 827 to 888)\nGUI_TOUCH_X_ActivateX, GUI_TOUCH_X_MeasureX, and other unimplemented functions are provided. Implement analog value measurement programs for these functions.\nAnd create a program in r_emwin_rx_pid_user_if.c to periodically execute GUI_TOUCH_Exec().\n(For information on how to execute periodically, refer to r_emwin_rx_pid_iic_if.c and r_emwin_rx_pid_spi_if.c.)\nNotes on implementation:\nThe origin coordinates (0,0) for touch operations might be different from the base point of the LCD. Therefore, coordinate conversion might be needed depending on the LCD to be used.\nHint: \n• pidconf_cb_single, pidconf_cb_multi, and other functions in PIDConf.c\nSupplementary information:\nYou need to implement the programs in accordance with the emWin specifications.\nFor details about the GUI_PID_STATE type, the GUI_TOUCH_StoreStateEx function, and the GUI_MTOUCH_StoreEvent function, see the emWin user's manual (UM03001_emWin.pdf) bundled with the emWin FIT module or the web manual provided by Segger, which developed emWin (emWin User Guide & Reference Manual (segger.com)).\n• Page related to touch operations\n5.9.4.1 Generic touch screen API\n(https://www.segger.com/doc/UM03001_emWin.html#Generic_touch_screen_API)\n5.9.4.2.3.4 GUI_TOUCH_X_MeasureY()\n(https://www.segger.com/doc/UM03001_emWin.html#GUI_TOUCH_X_MeasureY)\n5.9.4.2 The analog touch screen driver\n(https://www.segger.com/doc/UM03001_emWin.html#The_analog_touch_screen_driver)\nFor details about emWin, contact Segger(https://www.segger.com/) or it local agency."
+      },
+      {
+        "type": "text",
+        "content": "With a touch controller that is not supported by the emWin FIT module, you cannot specify settings from QE. In this case, you must implement a program that communicates with the touch controller by yourself."
+      },
+      {
+        "type": "text",
+        "content": "See the following procedure:"
+      },
+      {
+        "type": "text",
+        "content": "(1) Specify the settings to the extent possible, and then output the configuration file (qe_emwin_config.h)."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370045.png",
+          "alt_text": "",
+          "width": "344",
+          "height": "326",
+          "local_path": "data/categories/rx_family/others/85f2f3ea1400a595658872fdb8fe99d6/images/1159e5a88de327f27e91e3d6feb5f337.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "(2) In the “qe_emwin_config.h” file that is output, set the EMWIN_TOUCH_IF definition to TOUCH_IF_OTHER.\nTo use multi-touch operations, also set the EMWIN_USE_MULTITOUCH definition to 1.\n(Note that if you output the configuration file from QE again, the changes you made will be lost.)\n(3) Implement a program that communicates with the touch controller you use in the following two files:"
+      },
+      {
+        "type": "text",
+        "content": "• r_emwin_rx_pid_user_if.c\nDirectory:\n<project-name>\\src\\smc_gen\\r_emwin_rx\\src"
+      },
+      {
+        "type": "text",
+        "content": "Overview of the program to be implemented:\nImplement processing that obtains touch event data in accordance with the specifications and protocol of the controller to be used and then passes the data to the r_emwin_rx_pidconf_cb function. Implement programs that initialize the peripherals that are used to obtain touch event data and set the interval at which to obtain the touch event data by using a timer so that the data is obtained periodically."
+      },
+      {
+        "type": "text",
+        "content": "Notes on implementation:\nThe implemented program will probably use interrupt processing to obtain data and send it to emWin. Therefore, make sure that the program does not include a wait loop."
+      },
+      {
+        "type": "text",
+        "content": "Hint:\nConsult the implementations of r_emwin_rx_pid_iic_if.c and r_emwin_rx_pid_spi_if.c in the same directory."
+      },
+      {
+        "type": "text",
+        "content": "• PIDConf.c\nDirectory:\n<project-name>\\src\\smc_gen\\r_emwin_rx\\lib\\Config\\PIDConf.c"
+      },
+      {
+        "type": "text",
+        "content": "Overview of the program to be implemented:\nImplement the pidconf_cb_single function called from the r_emwin_rx_pidconf_cb function. (Lines 363 to 383)\nThe pidconf_cb_single function reformats the touch event data passed by an argument into a format that can be passed to emWin(GUI_PID_STATE type (GUI_Type.h)). The function then sets the data in the GUI_TOUCH_StoreStateEx function so that the data is sent to emWin.\nFor a touch controller that supports multi-touch operations, processing that recognizes multi-touch operations must be implemented and the GUI_MTOUCH_StoreEvent function is required, instead of GUI_TOUCH_StoreStateEx, for notification to emWin."
+      },
+      {
+        "type": "text",
+        "content": "For an analog touch device, you need to implement measurement processing. (Lines 827 to 888)\nGUI_TOUCH_X_ActivateX, GUI_TOUCH_X_MeasureX, and other unimplemented functions are provided. Implement analog value measurement programs for these functions.\nAnd create a program in r_emwin_rx_pid_user_if.c to periodically execute GUI_TOUCH_Exec().\n(For information on how to execute periodically, refer to r_emwin_rx_pid_iic_if.c and r_emwin_rx_pid_spi_if.c.)"
+      },
+      {
+        "type": "text",
+        "content": "Notes on implementation:\nThe origin coordinates (0,0) for touch operations might be different from the base point of the LCD. Therefore, coordinate conversion might be needed depending on the LCD to be used."
+      },
+      {
+        "type": "text",
+        "content": "Hint: \n• pidconf_cb_single, pidconf_cb_multi, and other functions in PIDConf.c"
+      },
+      {
+        "type": "text",
+        "content": "Supplementary information:\nYou need to implement the programs in accordance with the emWin specifications.\nFor details about the GUI_PID_STATE type, the GUI_TOUCH_StoreStateEx function, and the GUI_MTOUCH_StoreEvent function, see the emWin user's manual (UM03001_emWin.pdf) bundled with the emWin FIT module or the web manual provided by Segger, which developed emWin (emWin User Guide & Reference Manual (segger.com))."
+      },
+      {
+        "type": "text",
+        "content": "• Page related to touch operations\n5.9.4.1 Generic touch screen API\n(https://www.segger.com/doc/UM03001_emWin.html#Generic_touch_screen_API)\n5.9.4.2.3.4 GUI_TOUCH_X_MeasureY()\n(https://www.segger.com/doc/UM03001_emWin.html#GUI_TOUCH_X_MeasureY)\n5.9.4.2 The analog touch screen driver\n(https://www.segger.com/doc/UM03001_emWin.html#The_analog_touch_screen_driver)"
+      },
+      {
+        "type": "text",
+        "content": "For details about emWin, contact Segger(https://www.segger.com/) or it local agency."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370045.png",
+        "alt_text": "",
+        "width": "344",
+        "height": "326",
+        "local_path": "data/categories/rx_family/others/85f2f3ea1400a595658872fdb8fe99d6/images/1159e5a88de327f27e91e3d6feb5f337.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "https://www.segger.com/doc/UM03001_emWin.html#Generic_touch_screen_API)",
+        "url": "https://www.segger.com/doc/UM03001_emWin.html#Generic_touch_screen_API)"
+      },
+      {
+        "text": "https://www.segger.com/doc/UM03001_emWin.html#GUI_TOUCH_X_MeasureY)",
+        "url": "https://www.segger.com/doc/UM03001_emWin.html#GUI_TOUCH_X_MeasureY)"
+      },
+      {
+        "text": "https://www.segger.com/doc/UM03001_emWin.html#The_analog_touch_screen_driver)",
+        "url": "https://www.segger.com/doc/UM03001_emWin.html#The_analog_touch_screen_driver)"
+      },
+      {
+        "text": "https://www.segger.com/)",
+        "url": "https://www.segger.com/)"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20857260"
+      }
+    ]
+  }
+}

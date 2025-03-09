@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18286043",
+    "title": "Is It Possible to Reduce Power by Intermittent Operation?",
+    "last_updated": "2023-02-03",
+    "extracted_at": "2025-03-09T00:08:53.816128"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs it possible to conserve power by using touch key detection intermittently?\nAnswer:\nPower can be reduced by intermittent operation.\nRefer to APN below for more information.\nRA2L1 Group Capacitive Touch Low Power Guide\nhttps://www.renesas.com/us/en/document/apn/ra2l1-group-capacitive-touch-low-power-guide\nRL78/G23 Group RL78/G23 Capacitive Touch Low Power Guide (SMS function)\nhttps://www.renesas.com/us/en/document/apn/rl78g23-group-rl78g23-capacitive-touch-low-power-guide-sms-function-rev100\nRA6M2 Group Capacitive Touch Low Power Guide\nhttps://www.renesas.com/us/en/document/apn/ra6m2-group-capacitive-touch-low-power-guide\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Is it possible to conserve power by using touch key detection intermittently?"
+      },
+      {
+        "type": "text",
+        "content": "Is it possible to conserve power by using touch key detection intermittently?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nPower can be reduced by intermittent operation.\nRefer to APN below for more information.\nRA2L1 Group Capacitive Touch Low Power Guide\nhttps://www.renesas.com/us/en/document/apn/ra2l1-group-capacitive-touch-low-power-guide\nRL78/G23 Group RL78/G23 Capacitive Touch Low Power Guide (SMS function)\nhttps://www.renesas.com/us/en/document/apn/rl78g23-group-rl78g23-capacitive-touch-low-power-guide-sms-function-rev100\nRA6M2 Group Capacitive Touch Low Power Guide\nhttps://www.renesas.com/us/en/document/apn/ra6m2-group-capacitive-touch-low-power-guide\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Power can be reduced by intermittent operation.\nRefer to APN below for more information.\nRA2L1 Group Capacitive Touch Low Power Guide\nhttps://www.renesas.com/us/en/document/apn/ra2l1-group-capacitive-touch-low-power-guide\nRL78/G23 Group RL78/G23 Capacitive Touch Low Power Guide (SMS function)\nhttps://www.renesas.com/us/en/document/apn/rl78g23-group-rl78g23-capacitive-touch-low-power-guide-sms-function-rev100\nRA6M2 Group Capacitive Touch Low Power Guide\nhttps://www.renesas.com/us/en/document/apn/ra6m2-group-capacitive-touch-low-power-guide"
+      },
+      {
+        "type": "text",
+        "content": "Power can be reduced by intermittent operation.\nRefer to APN below for more information."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/us/en/document/apn/ra2l1-group-capacitive-touch-low-power-guide",
+        "url": "https://www.renesas.com/us/en/document/apn/ra2l1-group-capacitive-touch-low-power-guide"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/document/apn/rl78g23-group-rl78g23-capacitive-touch-low-power-guide-sms-function-rev100",
+        "url": "https://www.renesas.com/us/en/document/apn/rl78g23-group-rl78g23-capacitive-touch-low-power-guide-sms-function-rev100"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/document/apn/ra6m2-group-capacitive-touch-low-power-guide",
+        "url": "https://www.renesas.com/us/en/document/apn/ra6m2-group-capacitive-touch-low-power-guide"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792852"
+      }
+    ]
+  }
+}

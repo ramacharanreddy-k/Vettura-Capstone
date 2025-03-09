@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21287444",
+    "title": "RA0E1: External Memory interface",
+    "last_updated": "2024-09-04",
+    "extracted_at": "2025-03-08T23:32:33.034361"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs it possible to interface the external SRAM to the RA0 series ?\nAnswer:\nThe RA0 series is the single chip microcontroller, it doesn't have an external bus interface. For this reason, it is not possible to connect external memory to the CPU's address and data bus.\nSuitable Products\nRA0E1"
+      },
+      {
+        "type": "text",
+        "content": "Is it possible to interface the external SRAM to the RA0 series ?"
+      },
+      {
+        "type": "text",
+        "content": "Is it possible to interface the external SRAM to the RA0 series ?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RA0 series is the single chip microcontroller, it doesn't have an external bus interface. For this reason, it is not possible to connect external memory to the CPU's address and data bus.\nSuitable Products\nRA0E1"
+      },
+      {
+        "type": "text",
+        "content": "The RA0 series is the single chip microcontroller, it doesn't have an external bus interface. For this reason, it is not possible to connect external memory to the CPU's address and data bus."
+      },
+      {
+        "type": "text",
+        "content": "The RA0 series is the single chip microcontroller, it doesn't have an external bus interface. For this reason, it is not possible to connect external memory to the CPU's address and data bus."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA0E1"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA0E1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA0E1"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21287461"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21287472"
+      }
+    ]
+  }
+}

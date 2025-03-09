@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20590548",
+    "title": "RZ/A3UL: Intended use",
+    "last_updated": "2022-04-08",
+    "extracted_at": "2025-03-08T23:42:48.178410"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nFor what kind of application is the RZ/A3UL a suitable product?\nAnswer:\nThe RZ/A3UL is a product for RTOS that incorporates a CPU for GHz operation. The startup time can be shortened because there is support for RTOS. It is thus suitable for HMI products such as those that need to start up immediately upon power-on.\nSuitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "For what kind of application is the RZ/A3UL a suitable product?"
+      },
+      {
+        "type": "text",
+        "content": "For what kind of application is the RZ/A3UL a suitable product?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RZ/A3UL is a product for RTOS that incorporates a CPU for GHz operation. The startup time can be shortened because there is support for RTOS. It is thus suitable for HMI products such as those that need to start up immediately upon power-on.\nSuitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "The RZ/A3UL is a product for RTOS that incorporates a CPU for GHz operation. The startup time can be shortened because there is support for RTOS. It is thus suitable for HMI products such as those that need to start up immediately upon power-on."
+      },
+      {
+        "type": "text",
+        "content": "The RZ/A3UL is a product for RTOS that incorporates a CPU for GHz operation. The startup time can be shortened because there is support for RTOS. It is thus suitable for HMI products such as those that need to start up immediately upon power-on."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A3UL"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A3UL"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20590556"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20590565"
+      }
+    ]
+  }
+}

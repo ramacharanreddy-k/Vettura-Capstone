@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18284525",
+    "title": "How Is the Drive Pulse Frequency Determined?",
+    "last_updated": "2023-03-03",
+    "extracted_at": "2025-03-09T00:07:43.392979"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow is the drive pulse frequency determined when measuring capacitance?\nAnswer:\nThe measurement drive pulse frequency can be set to 0.5MHz, 1MHz, 2MHz, or 4MHz by automatic tuning of QE for Capacitive Touch.\nThe measurement drive pulse frequency is determined by the parasitic capacitance of the wiring path, the capacitance of the touch area, and the total resistance, and the higher each value is, the lower the frequency is set.\nWith i=FCV, the current i is proportional to the measurement drive pulse frequency F, the capacitance of the capacitor C, and the voltage V. The higher the frequency, the higher the current flow. Therefore, the higher the frequency, the higher the current and the higher the sensitivity. However, even if switching is performed faster than the full charge/discharge time of the capacitor, the sensitivity will be maximal, so the frequency must be determined according to the capacitance connected to the TS pin. The resistance between the electrode and the TS pin affects the charging/discharging time of the capacitor, and the measured drive pulse frequency is lowered almost inversely proportional to the resistance value.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "How is the drive pulse frequency determined when measuring capacitance?"
+      },
+      {
+        "type": "text",
+        "content": "How is the drive pulse frequency determined when measuring capacitance?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe measurement drive pulse frequency can be set to 0.5MHz, 1MHz, 2MHz, or 4MHz by automatic tuning of QE for Capacitive Touch.\nThe measurement drive pulse frequency is determined by the parasitic capacitance of the wiring path, the capacitance of the touch area, and the total resistance, and the higher each value is, the lower the frequency is set.\nWith i=FCV, the current i is proportional to the measurement drive pulse frequency F, the capacitance of the capacitor C, and the voltage V. The higher the frequency, the higher the current flow. Therefore, the higher the frequency, the higher the current and the higher the sensitivity. However, even if switching is performed faster than the full charge/discharge time of the capacitor, the sensitivity will be maximal, so the frequency must be determined according to the capacitance connected to the TS pin. The resistance between the electrode and the TS pin affects the charging/discharging time of the capacitor, and the measured drive pulse frequency is lowered almost inversely proportional to the resistance value.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "The measurement drive pulse frequency can be set to 0.5MHz, 1MHz, 2MHz, or 4MHz by automatic tuning of QE for Capacitive Touch.\nThe measurement drive pulse frequency is determined by the parasitic capacitance of the wiring path, the capacitance of the touch area, and the total resistance, and the higher each value is, the lower the frequency is set.\nWith i=FCV, the current i is proportional to the measurement drive pulse frequency F, the capacitance of the capacitor C, and the voltage V. The higher the frequency, the higher the current flow. Therefore, the higher the frequency, the higher the current and the higher the sensitivity. However, even if switching is performed faster than the full charge/discharge time of the capacitor, the sensitivity will be maximal, so the frequency must be determined according to the capacitance connected to the TS pin. The resistance between the electrode and the TS pin affects the charging/discharging time of the capacitor, and the measured drive pulse frequency is lowered almost inversely proportional to the resistance value."
+      },
+      {
+        "type": "text",
+        "content": "The measurement drive pulse frequency can be set to 0.5MHz, 1MHz, 2MHz, or 4MHz by automatic tuning of QE for Capacitive Touch.\nThe measurement drive pulse frequency is determined by the parasitic capacitance of the wiring path, the capacitance of the touch area, and the total resistance, and the higher each value is, the lower the frequency is set."
+      },
+      {
+        "type": "text",
+        "content": "With i=FCV, the current i is proportional to the measurement drive pulse frequency F, the capacitance of the capacitor C, and the voltage V. The higher the frequency, the higher the current flow. Therefore, the higher the frequency, the higher the current and the higher the sensitivity. However, even if switching is performed faster than the full charge/discharge time of the capacitor, the sensitivity will be maximal, so the frequency must be determined according to the capacitance connected to the TS pin. The resistance between the electrode and the TS pin affects the charging/discharging time of the capacitor, and the measured drive pulse frequency is lowered almost inversely proportional to the resistance value."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792864"
+      }
+    ]
+  }
+}

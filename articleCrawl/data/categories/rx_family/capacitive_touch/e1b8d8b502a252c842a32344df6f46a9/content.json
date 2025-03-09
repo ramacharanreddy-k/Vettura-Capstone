@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18287568",
+    "title": "Why Is Not the Threshold Etc. Displayed in Status Monitor?",
+    "last_updated": "2023-03-03",
+    "extracted_at": "2025-03-09T00:07:36.413866"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nThe reference value and the touch judgment threshold value are not displayed in Status monitor. What are the possible causes?\nAnswer:\nIn Workbench 6, if the TS terminal being monitored is a TS terminal that constitutes a slider or wheel, the\nTouch Decision Thresholds are not displayed.\nIn QE for Capacitive Touch, they are displayed in CapTouch Board Monitor (QE) and CapTouch Parameter List (QE).\nWorkbench6 is now in maintenance status, and we do not plan to update it in the future.\nUse QE for Capacitive Touch as a support tool for developing a modern capacitive touch sensor.\nQE for Capacitive Touch can be downloaded from URL below.\nhttps://www.renesas.com/qe-capacitive-touch\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "The reference value and the touch judgment threshold value are not displayed in Status monitor. What are the possible causes?"
+      },
+      {
+        "type": "text",
+        "content": "The reference value and the touch judgment threshold value are not displayed in Status monitor. What are the possible causes?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIn Workbench 6, if the TS terminal being monitored is a TS terminal that constitutes a slider or wheel, the\nTouch Decision Thresholds are not displayed.\nIn QE for Capacitive Touch, they are displayed in CapTouch Board Monitor (QE) and CapTouch Parameter List (QE).\nWorkbench6 is now in maintenance status, and we do not plan to update it in the future.\nUse QE for Capacitive Touch as a support tool for developing a modern capacitive touch sensor.\nQE for Capacitive Touch can be downloaded from URL below.\nhttps://www.renesas.com/qe-capacitive-touch\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "In Workbench 6, if the TS terminal being monitored is a TS terminal that constitutes a slider or wheel, the\nTouch Decision Thresholds are not displayed.\nIn QE for Capacitive Touch, they are displayed in CapTouch Board Monitor (QE) and CapTouch Parameter List (QE).\nWorkbench6 is now in maintenance status, and we do not plan to update it in the future.\nUse QE for Capacitive Touch as a support tool for developing a modern capacitive touch sensor.\nQE for Capacitive Touch can be downloaded from URL below.\nhttps://www.renesas.com/qe-capacitive-touch"
+      },
+      {
+        "type": "text",
+        "content": "In Workbench 6, if the TS terminal being monitored is a TS terminal that constitutes a slider or wheel, the\nTouch Decision Thresholds are not displayed."
+      },
+      {
+        "type": "text",
+        "content": "In QE for Capacitive Touch, they are displayed in CapTouch Board Monitor (QE) and CapTouch Parameter List (QE)."
+      },
+      {
+        "type": "text",
+        "content": "Workbench6 is now in maintenance status, and we do not plan to update it in the future.\nUse QE for Capacitive Touch as a support tool for developing a modern capacitive touch sensor.\nQE for Capacitive Touch can be downloaded from URL below."
+      },
+      {
+        "type": "text",
+        "content": "https://www.renesas.com/qe-capacitive-touch"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/qe-capacitive-touch",
+        "url": "https://www.renesas.com/qe-capacitive-touch"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792799"
+      }
+    ]
+  }
+}

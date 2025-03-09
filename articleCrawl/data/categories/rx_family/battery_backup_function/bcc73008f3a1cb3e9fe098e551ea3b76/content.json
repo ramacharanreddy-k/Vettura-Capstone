@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21588894",
+    "title": "RX Family: When using battery backup mode, where should the RTCICn pins be pulled up?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:06:58.169554"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhere should the RTCICn pins be pulled up when using battery backup mode where power is supplied from the VBATT pin when the voltage from the VCC pin drops?\nAnswer:\nFirst, if the RTCICn pins are pulled up to VCC and VCC becomes a voltage of VBATT/2, the state of RTCICn pins become an intermediate potential and a through-current may flow. Also, if the RTCICn pins are pulled up to VCC when using the RTCICn function, the RTCICn function cannot be used if VCC is not greater than 0.8 × VBATT.\nMeanwhile, the following is an example of a typical battery backup switching circuit. The connection circuit should be determined by the customer after thorough enough evaluation.\nWhen the RTCICn pins are pulled up as shown in the circuit example above, they are pulled up to the VCC reference (Note) during VCC operation, and they are pulled up to the VBATT reference (Note) during the battery backup mode operation.\n(Note) Please consider the voltage drop due to the diode. Also, make sure that the input voltage on the RTCICn pins meets the VIH and VIL electrical characteristics.\nSuitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "Where should the RTCICn pins be pulled up when using battery backup mode where power is supplied from the VBATT pin when the voltage from the VCC pin drops?"
+      },
+      {
+        "type": "text",
+        "content": "Where should the RTCICn pins be pulled up when using battery backup mode where power is supplied from the VBATT pin when the voltage from the VCC pin drops?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nFirst, if the RTCICn pins are pulled up to VCC and VCC becomes a voltage of VBATT/2, the state of RTCICn pins become an intermediate potential and a through-current may flow. Also, if the RTCICn pins are pulled up to VCC when using the RTCICn function, the RTCICn function cannot be used if VCC is not greater than 0.8 × VBATT.\nMeanwhile, the following is an example of a typical battery backup switching circuit. The connection circuit should be determined by the customer after thorough enough evaluation.\nWhen the RTCICn pins are pulled up as shown in the circuit example above, they are pulled up to the VCC reference (Note) during VCC operation, and they are pulled up to the VBATT reference (Note) during the battery backup mode operation.\n(Note) Please consider the voltage drop due to the diode. Also, make sure that the input voltage on the RTCICn pins meets the VIH and VIL electrical characteristics.\nSuitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "First, if the RTCICn pins are pulled up to VCC and VCC becomes a voltage of VBATT/2, the state of RTCICn pins become an intermediate potential and a through-current may flow. Also, if the RTCICn pins are pulled up to VCC when using the RTCICn function, the RTCICn function cannot be used if VCC is not greater than 0.8 × VBATT.\nMeanwhile, the following is an example of a typical battery backup switching circuit. The connection circuit should be determined by the customer after thorough enough evaluation.\nWhen the RTCICn pins are pulled up as shown in the circuit example above, they are pulled up to the VCC reference (Note) during VCC operation, and they are pulled up to the VBATT reference (Note) during the battery backup mode operation.\n(Note) Please consider the voltage drop due to the diode. Also, make sure that the input voltage on the RTCICn pins meets the VIH and VIL electrical characteristics."
+      },
+      {
+        "type": "text",
+        "content": "First, if the RTCICn pins are pulled up to VCC and VCC becomes a voltage of VBATT/2, the state of RTCICn pins become an intermediate potential and a through-current may flow. Also, if the RTCICn pins are pulled up to VCC when using the RTCICn function, the RTCICn function cannot be used if VCC is not greater than 0.8 × VBATT.\nMeanwhile, the following is an example of a typical battery backup switching circuit. The connection circuit should be determined by the customer after thorough enough evaluation.\nWhen the RTCICn pins are pulled up as shown in the circuit example above, they are pulled up to the VCC reference (Note) during VCC operation, and they are pulled up to the VBATT reference (Note) during the battery backup mode operation.\n(Note) Please consider the voltage drop due to the diode. Also, make sure that the input voltage on the RTCICn pins meets the VIH and VIL electrical characteristics."
+      },
+      {
+        "type": "text",
+        "content": "First, if the RTCICn pins are pulled up to VCC and VCC becomes a voltage of VBATT/2, the state of RTCICn pins become an intermediate potential and a through-current may flow. Also, if the RTCICn pins are pulled up to VCC when using the RTCICn function, the RTCICn function cannot be used if VCC is not greater than 0.8 × VBATT."
+      },
+      {
+        "type": "text",
+        "content": "Meanwhile, the following is an example of a typical battery backup switching circuit. The connection circuit should be determined by the customer after thorough enough evaluation."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/393297.png",
+          "alt_text": "",
+          "width": "813",
+          "height": "511",
+          "local_path": "data/categories/rx_family/battery_backup_function/bcc73008f3a1cb3e9fe098e551ea3b76/images/58462d2cb45ad055cc284d541842ea7f.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "When the RTCICn pins are pulled up as shown in the circuit example above, they are pulled up to the VCC reference (Note) during VCC operation, and they are pulled up to the VBATT reference (Note) during the battery backup mode operation."
+      },
+      {
+        "type": "text",
+        "content": "(Note) Please consider the voltage drop due to the diode. Also, make sure that the input voltage on the RTCICn pins meets the VIH and VIL electrical characteristics."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/393297.png",
+        "alt_text": "",
+        "width": "813",
+        "height": "511",
+        "local_path": "data/categories/rx_family/battery_backup_function/bcc73008f3a1cb3e9fe098e551ea3b76/images/58462d2cb45ad055cc284d541842ea7f.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21588895"
+      }
+    ]
+  }
+}

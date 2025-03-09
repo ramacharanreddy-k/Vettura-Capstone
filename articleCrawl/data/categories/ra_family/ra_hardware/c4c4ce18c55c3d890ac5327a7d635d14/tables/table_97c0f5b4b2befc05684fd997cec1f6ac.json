@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "The example below demonstrates using the complementary PWM mode with consecutive three GPT channels to generate three-phase PWM waveform with dead time based on below conditions.\nPWM Frequency: 10kHz\nDeadtime period: 2us (GTDVU=240, PCLKD=120MHz)\nGTIOA output: \nInitial output level is Low, and active level is High\nOutput level is High in up count compare match, and it becomes Low in down count compare match.\nGTIOB: Initial output level is Low\nInitial output level is Low, and active level is High.\nOutput level is Low in up count compare match, and it becomes High in down count compare match."
+    ]
+  ]
+}

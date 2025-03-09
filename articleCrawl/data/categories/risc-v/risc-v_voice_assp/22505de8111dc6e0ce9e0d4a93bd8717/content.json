@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20855751",
+    "title": "Solution and tools: Does the device need internet connectivity to perform the keyword recognition?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:26:23.485789"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDoes the device need internet connectivity to perform the keyword recognition?\nAnswer:\nNo, the keyword recognition functionality can be performed completely offline. No connection to the internet is needed.\nSuitable Products\nRISC-V Voice ASSP"
+      },
+      {
+        "type": "text",
+        "content": "Does the device need internet connectivity to perform the keyword recognition?"
+      },
+      {
+        "type": "text",
+        "content": "Does the device need internet connectivity to perform the keyword recognition?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nNo, the keyword recognition functionality can be performed completely offline. No connection to the internet is needed.\nSuitable Products\nRISC-V Voice ASSP"
+      },
+      {
+        "type": "text",
+        "content": "No, the keyword recognition functionality can be performed completely offline. No connection to the internet is needed."
+      },
+      {
+        "type": "text",
+        "content": "No, the keyword recognition functionality can be performed completely offline. No connection to the internet is needed."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRISC-V Voice ASSP"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RISC-V Voice ASSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RISC-V Voice ASSP"
+    ],
+    "links": []
+  }
+}

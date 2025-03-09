@@ -1,0 +1,30 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "RH850 F1Kx",
+      "→",
+      "ICU-S Secure Hardware Extension"
+    ],
+    [
+      "RH850 F1KM-S1",
+      "→",
+      "ICU-S Secure Hardware Extension"
+    ],
+    [
+      "RH850 F1KM-S2",
+      "→",
+      "ICU-M (EVITA MID)"
+    ],
+    [
+      "RH850 F1KM-S4",
+      "→",
+      "ICU-M (EVITA MID)"
+    ],
+    [
+      "RH850 F1KH-D8",
+      "→",
+      "ICU-MH (EVITA FULL)"
+    ]
+  ]
+}

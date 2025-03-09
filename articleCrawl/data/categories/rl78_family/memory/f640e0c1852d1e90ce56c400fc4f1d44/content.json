@@ -1,0 +1,576 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21092507",
+    "title": "How to setup a FDL T04 project on a RL78/x1x device ?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:59:53.261431"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Last updated: 10/10/2023"
+      },
+      {
+        "type": "text",
+        "content": "How to setup a FDL T04 project on a RL78/x1x device ?"
+      },
+      {
+        "type": "text",
+        "content": "The Data Flash Library T04 is a software library to perform operations on the data flash memory of the RL78 microcontroller. All information about the FDL T04 library can be found on: \nhttps://www.renesas.com/us/en/document/mat/data-flash-access-library-type-t04-pico-european-release-rev120 \n  This guide walks the user through all the necessary steps to set up an RL78 project to access data flash using FDL T04 library. The example code for implementation of all available data flash operations is also provided. \n  Download Data Flash Library T04 for RL78 family from: https://www.renesas.com/us/en/software-tool/data-flash-libraries \n    Unzip the .zip file and install the library files. During installation process select your compiler (for example CC-RL): \n        Create a new project for your RL78 device and set the following settings on Code Generator under Clock Generator section: \n      Import the library files into the project. The project should now have the following files: \npfdl_types.h  \npfdl.h  \npfdl.inc \npfdl.lib \n    Go to Linker -> Settings and open the Section Viewer after disabling the automatic section layout: \n  On e2studio: \n    On CS+: \n    If the section ‘PFDL_COD’ does not already exist as a section already, create a new section with this name: \n  ‘PFDL_COD’ contains the code of data flash library functions. It can be placed to ROM or RAM. \n    Import the ‘pfdl.lib’ library file that already exists in the project folder from linker’s input settings: \nOn e2studio: \n          On CS+: \n        The data flash library requires some space in RAM which is called self-RAM area. Depending on the device this area can be either in a specific address range or placed anywhere by the linker. \n  Locate your device in self-RAM list document: \nhttps://www.renesas.com/us/en/document/mat/rl78-family-self-ram-list-flash-self-programming-library-rev305 \n  If your device has no dedicated area for FDL T04 library (for example R5F100xA), no action is required, and you can proceed to the next step. \n  If your device requires a dedicated area to be allocated (for example R5F100xE), you need to make sure no other data is placed in this area. There are 2 ways to do this:  \n  Go to Linker -> Device and select the ‘self-RAM area’ option. \n  On e2studio: \n    On CS+: \n    This option will reserve the needed self-RAM area, but it will by default allocate the maximum self-RAM area of all flash libraries which is 1Kbytes (FSL T01 self-RAM size). \n  To allocate only the 136 bytes which are needed by FDL T04, the self-RAM area option should be set to ‘None’. \nOn e2studio: \n        On CS+: \n      Next, add these lines in your source code: \n  #pragma address self_ram_area = <starting address of self-RAM area for FDL T04> \nvolatile char self_ram_area[136] \n  For example, for R5F100xE device: \n  #pragma address self_ram_area = 0xFEF00  \nvolatile char self_ram_area[136] \n      In the attached example project all 5 data flash library commands are implemented. The example project is targeted for a device with dedicated self-RAM area.\nOpen -> Erase -> Blank check -> Write -> Internal verification -> Read -> Close"
+      },
+      {
+        "type": "text",
+        "content": "The Data Flash Library T04 is a software library to perform operations on the data flash memory of the RL78 microcontroller. All information about the FDL T04 library can be found on: \nhttps://www.renesas.com/us/en/document/mat/data-flash-access-library-type-t04-pico-european-release-rev120 \n  This guide walks the user through all the necessary steps to set up an RL78 project to access data flash using FDL T04 library. The example code for implementation of all available data flash operations is also provided. \n  Download Data Flash Library T04 for RL78 family from: https://www.renesas.com/us/en/software-tool/data-flash-libraries"
+      },
+      {
+        "type": "text",
+        "content": "The Data Flash Library T04 is a software library to perform operations on the data flash memory of the RL78 microcontroller. All information about the FDL T04 library can be found on:"
+      },
+      {
+        "type": "text",
+        "content": "The Data Flash Library T04 is a software library to perform operations on the data flash memory of the RL78 microcontroller. All information about the FDL T04 library can be found on:"
+      },
+      {
+        "type": "text",
+        "content": "https://www.renesas.com/us/en/document/mat/data-flash-access-library-type-t04-pico-european-release-rev120"
+      },
+      {
+        "type": "text",
+        "content": "https://www.renesas.com/us/en/document/mat/data-flash-access-library-type-t04-pico-european-release-rev120"
+      },
+      {
+        "type": "text",
+        "content": "This guide walks the user through all the necessary steps to set up an RL78 project to access data flash using FDL T04 library. The example code for implementation of all available data flash operations is also provided."
+      },
+      {
+        "type": "text",
+        "content": "This guide walks the user through all the necessary steps to set up an RL78 project to access data flash using FDL T04 library. The example code for implementation of all available data flash operations is also provided."
+      },
+      {
+        "type": "text",
+        "content": "Download Data Flash Library T04 for RL78 family from: https://www.renesas.com/us/en/software-tool/data-flash-libraries"
+      },
+      {
+        "type": "text",
+        "content": "Download Data Flash Library T04 for RL78 family from: https://www.renesas.com/us/en/software-tool/data-flash-libraries"
+      },
+      {
+        "type": "text",
+        "content": "Unzip the .zip file and install the library files. During installation process select your compiler (for example CC-RL):"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/670e65e1-a1e7-48a4-ad15-292dd8a00ed3",
+          "alt_text": "",
+          "width": "785",
+          "height": "443",
+          "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/d6931ddceac57defd1f2f6074f115784.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Unzip the .zip file and install the library files. During installation process select your compiler (for example CC-RL):"
+      },
+      {
+        "type": "text",
+        "content": "Unzip the .zip file and install the library files. During installation process select your compiler (for example CC-RL):"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/680832f0-ddf4-4f42-904e-229ae46182c4",
+          "alt_text": "",
+          "width": "614",
+          "height": "478",
+          "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/3c5a851ab4989520d023c4ccdb6c0881.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Create a new project for your RL78 device and set the following settings on Code Generator under Clock Generator section: \n      Import the library files into the project. The project should now have the following files: \npfdl_types.h  \npfdl.h"
+      },
+      {
+        "type": "text",
+        "content": "Create a new project for your RL78 device and set the following settings on Code Generator under Clock Generator section:"
+      },
+      {
+        "type": "text",
+        "content": "Create a new project for your RL78 device and set the following settings on Code Generator under Clock Generator section:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/4c4c37f6-e8d2-433d-bda0-6bfbfc93ce2c",
+          "alt_text": "",
+          "width": "727",
+          "height": "147",
+          "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/008468b2d7a09dd842259ef244135988.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Import the library files into the project. The project should now have the following files:"
+      },
+      {
+        "type": "text",
+        "content": "Import the library files into the project. The project should now have the following files:"
+      },
+      {
+        "type": "text",
+        "content": "pfdl_types.h"
+      },
+      {
+        "type": "text",
+        "content": "pfdl_types.h"
+      },
+      {
+        "type": "text",
+        "content": "pfdl.h"
+      },
+      {
+        "type": "text",
+        "content": "pfdl.h"
+      },
+      {
+        "type": "text",
+        "content": "pfdl.inc \npfdl.lib \n    Go to Linker -> Settings and open the Section Viewer after disabling the automatic section layout:"
+      },
+      {
+        "type": "text",
+        "content": "pfdl.inc"
+      },
+      {
+        "type": "text",
+        "content": "pfdl.inc"
+      },
+      {
+        "type": "text",
+        "content": "pfdl.lib"
+      },
+      {
+        "type": "text",
+        "content": "pfdl.lib"
+      },
+      {
+        "type": "text",
+        "content": "Go to Linker -> Settings and open the Section Viewer after disabling the automatic section layout:"
+      },
+      {
+        "type": "text",
+        "content": "Go to Linker -> Settings and open the Section Viewer after disabling the automatic section layout:"
+      },
+      {
+        "type": "text",
+        "content": "On e2studio:"
+      },
+      {
+        "type": "text",
+        "content": "On e2studio:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/3f4c16b1-51cf-4d0d-aafa-b44c88aa18fb",
+          "alt_text": "",
+          "width": "623",
+          "height": "535",
+          "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/9b7ce4c34545f10a1f8a7f53e176c454.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "On CS+:"
+      },
+      {
+        "type": "text",
+        "content": "On CS+:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/ab8dd712-4b41-4743-b9e3-d91fa0e5b28c",
+          "alt_text": "",
+          "width": "756",
+          "height": "315",
+          "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/8fa4a41ef08f4b333df6de4c0d51ceab.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "If the section ‘PFDL_COD’ does not already exist as a section already, create a new section with this name:"
+      },
+      {
+        "type": "text",
+        "content": "If the section ‘PFDL_COD’ does not already exist as a section already, create a new section with this name:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/1d8ed6ac-d68c-429f-b5d9-6d85bd3d29ad",
+          "alt_text": "",
+          "width": "330",
+          "height": "448",
+          "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/0cbcef07d871a63b8fa31f916836208a.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "‘PFDL_COD’ contains the code of data flash library functions. It can be placed to ROM or RAM."
+      },
+      {
+        "type": "text",
+        "content": "‘PFDL_COD’ contains the code of data flash library functions. It can be placed to ROM or RAM."
+      },
+      {
+        "type": "text",
+        "content": "Import the ‘pfdl.lib’ library file that already exists in the project folder from linker’s input settings: \nOn e2studio:"
+      },
+      {
+        "type": "text",
+        "content": "Import the ‘pfdl.lib’ library file that already exists in the project folder from linker’s input settings:"
+      },
+      {
+        "type": "text",
+        "content": "Import the ‘pfdl.lib’ library file that already exists in the project folder from linker’s input settings:"
+      },
+      {
+        "type": "text",
+        "content": "On e2studio:"
+      },
+      {
+        "type": "text",
+        "content": "On e2studio:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/a13df472-8c7b-421a-a079-a353d95fecf0",
+          "alt_text": "",
+          "width": "713",
+          "height": "616",
+          "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/5a03c6e97ece70e4374467d52847a7ac.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "On CS+:"
+      },
+      {
+        "type": "text",
+        "content": "On CS+:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/8ab42147-a844-42f1-b404-95164b895e08",
+          "alt_text": "",
+          "width": "766",
+          "height": "319",
+          "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/35c0277498d1c446d9e46bc79f62482a.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The data flash library requires some space in RAM which is called self-RAM area. Depending on the device this area can be either in a specific address range or placed anywhere by the linker. \n  Locate your device in self-RAM list document: \nhttps://www.renesas.com/us/en/document/mat/rl78-family-self-ram-list-flash-self-programming-library-rev305"
+      },
+      {
+        "type": "text",
+        "content": "The data flash library requires some space in RAM which is called self-RAM area. Depending on the device this area can be either in a specific address range or placed anywhere by the linker."
+      },
+      {
+        "type": "text",
+        "content": "The data flash library requires some space in RAM which is called self-RAM area. Depending on the device this area can be either in a specific address range or placed anywhere by the linker."
+      },
+      {
+        "type": "text",
+        "content": "Locate your device in self-RAM list document:"
+      },
+      {
+        "type": "text",
+        "content": "Locate your device in self-RAM list document:"
+      },
+      {
+        "type": "text",
+        "content": "https://www.renesas.com/us/en/document/mat/rl78-family-self-ram-list-flash-self-programming-library-rev305"
+      },
+      {
+        "type": "text",
+        "content": "https://www.renesas.com/us/en/document/mat/rl78-family-self-ram-list-flash-self-programming-library-rev305"
+      },
+      {
+        "type": "text",
+        "content": "If your device has no dedicated area for FDL T04 library (for example R5F100xA), no action is required, and you can proceed to the next step."
+      },
+      {
+        "type": "text",
+        "content": "If your device has no dedicated area for FDL T04 library (for example R5F100xA), no action is required, and you can proceed to the next step."
+      },
+      {
+        "type": "text",
+        "content": "If your device requires a dedicated area to be allocated (for example R5F100xE), you need to make sure no other data is placed in this area. There are 2 ways to do this:"
+      },
+      {
+        "type": "text",
+        "content": "If your device requires a dedicated area to be allocated (for example R5F100xE), you need to make sure no other data is placed in this area. There are 2 ways to do this:"
+      },
+      {
+        "type": "text",
+        "content": "Go to Linker -> Device and select the ‘self-RAM area’ option. \n  On e2studio:"
+      },
+      {
+        "type": "text",
+        "content": "Go to Linker -> Device and select the ‘self-RAM area’ option."
+      },
+      {
+        "type": "text",
+        "content": "Go to Linker -> Device and select the ‘self-RAM area’ option."
+      },
+      {
+        "type": "text",
+        "content": "On e2studio:"
+      },
+      {
+        "type": "text",
+        "content": "On e2studio:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/19b7d737-9ca4-4e19-9f08-91aef826e5c5",
+          "alt_text": "",
+          "width": "718",
+          "height": "609",
+          "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/b8baf077a35a3fcf56c9cf883042aff2.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "On CS+:"
+      },
+      {
+        "type": "text",
+        "content": "On CS+:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/bf87f1c7-6f7d-4c46-8d36-5812dffcc4e9",
+          "alt_text": "",
+          "width": "830",
+          "height": "346",
+          "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/c2068acb584a81fec2bf953627d74af1.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "This option will reserve the needed self-RAM area, but it will by default allocate the maximum self-RAM area of all flash libraries which is 1Kbytes (FSL T01 self-RAM size)."
+      },
+      {
+        "type": "text",
+        "content": "This option will reserve the needed self-RAM area, but it will by default allocate the maximum self-RAM area of all flash libraries which is 1Kbytes (FSL T01 self-RAM size)."
+      },
+      {
+        "type": "text",
+        "content": "To allocate only the 136 bytes which are needed by FDL T04, the self-RAM area option should be set to ‘None’. \nOn e2studio:"
+      },
+      {
+        "type": "text",
+        "content": "To allocate only the 136 bytes which are needed by FDL T04, the self-RAM area option should be set to ‘None’."
+      },
+      {
+        "type": "text",
+        "content": "To allocate only the 136 bytes which are needed by FDL T04, the self-RAM area option should be set to ‘None’."
+      },
+      {
+        "type": "text",
+        "content": "On e2studio:"
+      },
+      {
+        "type": "text",
+        "content": "On e2studio:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/b8b45b7a-f5c9-4b13-8af4-fd760cd8802d",
+          "alt_text": "",
+          "width": "618",
+          "height": "542",
+          "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/8e6c5b485d1cf029a9c2655d881cfc9e.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "On CS+:"
+      },
+      {
+        "type": "text",
+        "content": "On CS+:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/f0b8f43e-e274-4cc6-a7f9-6744fdd32856",
+          "alt_text": "",
+          "width": "797",
+          "height": "332",
+          "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/6ad7d654f237aff173f34da69368081d.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Next, add these lines in your source code:"
+      },
+      {
+        "type": "text",
+        "content": "Next, add these lines in your source code:"
+      },
+      {
+        "type": "text",
+        "content": "#pragma address self_ram_area = <starting address of self-RAM area for FDL T04> \nvolatile char self_ram_area[136]"
+      },
+      {
+        "type": "text",
+        "content": "#pragma address self_ram_area = <starting address of self-RAM area for FDL T04> \nvolatile char self_ram_area[136]"
+      },
+      {
+        "type": "text",
+        "content": "For example, for R5F100xE device:"
+      },
+      {
+        "type": "text",
+        "content": "For example, for R5F100xE device:"
+      },
+      {
+        "type": "text",
+        "content": "#pragma address self_ram_area = 0xFEF00  \nvolatile char self_ram_area[136]"
+      },
+      {
+        "type": "text",
+        "content": "#pragma address self_ram_area = 0xFEF00  \nvolatile char self_ram_area[136]"
+      },
+      {
+        "type": "text",
+        "content": "In the attached example project all 5 data flash library commands are implemented. The example project is targeted for a device with dedicated self-RAM area."
+      },
+      {
+        "type": "text",
+        "content": "In the attached example project all 5 data flash library commands are implemented. The example project is targeted for a device with dedicated self-RAM area."
+      },
+      {
+        "type": "text",
+        "content": "Open -> Erase -> Blank check -> Write -> Internal verification -> Read -> Close"
+      },
+      {
+        "type": "text",
+        "content": "Open -> Erase -> Blank check -> Write -> Internal verification -> Read -> Close"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/670e65e1-a1e7-48a4-ad15-292dd8a00ed3",
+        "alt_text": "",
+        "width": "785",
+        "height": "443",
+        "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/d6931ddceac57defd1f2f6074f115784.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/680832f0-ddf4-4f42-904e-229ae46182c4",
+        "alt_text": "",
+        "width": "614",
+        "height": "478",
+        "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/3c5a851ab4989520d023c4ccdb6c0881.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/4c4c37f6-e8d2-433d-bda0-6bfbfc93ce2c",
+        "alt_text": "",
+        "width": "727",
+        "height": "147",
+        "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/008468b2d7a09dd842259ef244135988.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/3f4c16b1-51cf-4d0d-aafa-b44c88aa18fb",
+        "alt_text": "",
+        "width": "623",
+        "height": "535",
+        "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/9b7ce4c34545f10a1f8a7f53e176c454.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/ab8dd712-4b41-4743-b9e3-d91fa0e5b28c",
+        "alt_text": "",
+        "width": "756",
+        "height": "315",
+        "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/8fa4a41ef08f4b333df6de4c0d51ceab.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/1d8ed6ac-d68c-429f-b5d9-6d85bd3d29ad",
+        "alt_text": "",
+        "width": "330",
+        "height": "448",
+        "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/0cbcef07d871a63b8fa31f916836208a.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/a13df472-8c7b-421a-a079-a353d95fecf0",
+        "alt_text": "",
+        "width": "713",
+        "height": "616",
+        "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/5a03c6e97ece70e4374467d52847a7ac.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/8ab42147-a844-42f1-b404-95164b895e08",
+        "alt_text": "",
+        "width": "766",
+        "height": "319",
+        "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/35c0277498d1c446d9e46bc79f62482a.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/19b7d737-9ca4-4e19-9f08-91aef826e5c5",
+        "alt_text": "",
+        "width": "718",
+        "height": "609",
+        "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/b8baf077a35a3fcf56c9cf883042aff2.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/bf87f1c7-6f7d-4c46-8d36-5812dffcc4e9",
+        "alt_text": "",
+        "width": "830",
+        "height": "346",
+        "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/c2068acb584a81fec2bf953627d74af1.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/b8b45b7a-f5c9-4b13-8af4-fd760cd8802d",
+        "alt_text": "",
+        "width": "618",
+        "height": "542",
+        "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/8e6c5b485d1cf029a9c2655d881cfc9e.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/f0b8f43e-e274-4cc6-a7f9-6744fdd32856",
+        "alt_text": "",
+        "width": "797",
+        "height": "332",
+        "local_path": "data/categories/rl78_family/memory/f640e0c1852d1e90ce56c400fc4f1d44/images/6ad7d654f237aff173f34da69368081d.png"
+      }
+    ],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": [
+      {
+        "text": "https://www.renesas.com/us/en/document/mat/data-flash-access-library-type-t04-pico-european-release-rev120",
+        "url": "https://www.renesas.com/us/en/document/mat/data-flash-access-library-type-t04-pico-european-release-rev120"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/software-tool/data-flash-libraries",
+        "url": "https://www.renesas.com/us/en/software-tool/data-flash-libraries"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/document/mat/rl78-family-self-ram-list-flash-self-programming-library-rev305",
+        "url": "https://www.renesas.com/us/en/document/mat/rl78-family-self-ram-list-flash-self-programming-library-rev305"
+      }
+    ]
+  }
+}

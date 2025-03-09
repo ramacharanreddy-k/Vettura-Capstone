@@ -1,0 +1,41 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "",
+      "ALeRASE function"
+    ],
+    [
+      "e2 studio",
+      "RFP"
+    ],
+    [
+      "E2/E2 Lite",
+      "J-Link"
+    ],
+    [
+      "(1)",
+      "Available",
+      "Not available (*2)",
+      "Not available"
+    ],
+    [
+      "(2)",
+      "Available",
+      "Not available (*2)",
+      "Available"
+    ],
+    [
+      "(3)",
+      "Not available",
+      "Not available",
+      "Not available"
+    ],
+    [
+      "(4)",
+      "Available (*1)",
+      "Not available (*2)",
+      "Not available"
+    ]
+  ]
+}

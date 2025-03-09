@@ -1,0 +1,124 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20977340",
+    "title": "Notes for touch development using CC-RL free evaluation version (V1.12.00 or later) (Optimization option)",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:56:55.835312"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nAre there any precautions when using the CC-RL free evaluation version (V1.12.00 or later) for touch development?\nAnswer:\nSerial tuning cannot be performed if you are using RL78 family and CC-RL compiler (V1.12.00 or later) and the optimization level of CC-RL compiler is set to \"-Olite\".\nTo perform serial tuning, set the CC-RL compiler optimization level to \"-Onothing\".\nFor details, please refer to the following document on p. 38.\nRL78 Family Using QE (standalone ver.) to Develop Touch Applications for FPB board\nPlease refer to the following guide for the details specifications of the optimization level option of the CC-RL free evaluation version (V1.12.00).\n[Notification] C Compiler Package for RL78 Family (CC-RL) Changes in Specifications of Free Evaluation Edition\nSuitable Products\nRL78/G23, RL78/G22, RL78/G16"
+      },
+      {
+        "type": "text",
+        "content": "Are there any precautions when using the CC-RL free evaluation version (V1.12.00 or later) for touch development?"
+      },
+      {
+        "type": "text",
+        "content": "Are there any precautions when using the CC-RL free evaluation version (V1.12.00 or later) for touch development?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nSerial tuning cannot be performed if you are using RL78 family and CC-RL compiler (V1.12.00 or later) and the optimization level of CC-RL compiler is set to \"-Olite\".\nTo perform serial tuning, set the CC-RL compiler optimization level to \"-Onothing\".\nFor details, please refer to the following document on p. 38.\nRL78 Family Using QE (standalone ver.) to Develop Touch Applications for FPB board\nPlease refer to the following guide for the details specifications of the optimization level option of the CC-RL free evaluation version (V1.12.00).\n[Notification] C Compiler Package for RL78 Family (CC-RL) Changes in Specifications of Free Evaluation Edition\nSuitable Products\nRL78/G23, RL78/G22, RL78/G16"
+      },
+      {
+        "type": "text",
+        "content": "Serial tuning cannot be performed if you are using RL78 family and CC-RL compiler (V1.12.00 or later) and the optimization level of CC-RL compiler is set to \"-Olite\".\nTo perform serial tuning, set the CC-RL compiler optimization level to \"-Onothing\".\nFor details, please refer to the following document on p. 38.\nRL78 Family Using QE (standalone ver.) to Develop Touch Applications for FPB board\nPlease refer to the following guide for the details specifications of the optimization level option of the CC-RL free evaluation version (V1.12.00).\n[Notification] C Compiler Package for RL78 Family (CC-RL) Changes in Specifications of Free Evaluation Edition"
+      },
+      {
+        "type": "text",
+        "content": "Serial tuning cannot be performed if you are using RL78 family and CC-RL compiler (V1.12.00 or later) and the optimization level of CC-RL compiler is set to \"-Olite\"."
+      },
+      {
+        "type": "text",
+        "content": "To perform serial tuning, set the CC-RL compiler optimization level to \"-Onothing\"."
+      },
+      {
+        "type": "text",
+        "content": "For details, please refer to the following document on p. 38."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372027.png",
+          "alt_text": "",
+          "width": "884",
+          "height": "461",
+          "local_path": "data/categories/rl78_family/capacitive_touch/d3418a81006d6c7b069e207077ce3cda/images/74bdbb7fce363641e345f41c2241f84c.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "RL78 Family Using QE (standalone ver.) to Develop Touch Applications for FPB board"
+      },
+      {
+        "type": "text",
+        "content": "Please refer to the following guide for the details specifications of the optimization level option of the CC-RL free evaluation version (V1.12.00)."
+      },
+      {
+        "type": "text",
+        "content": "[Notification] C Compiler Package for RL78 Family (CC-RL) Changes in Specifications of Free Evaluation Edition"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/G23, RL78/G22, RL78/G16"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372027.png",
+        "alt_text": "",
+        "width": "884",
+        "height": "461",
+        "local_path": "data/categories/rl78_family/capacitive_touch/d3418a81006d6c7b069e207077ce3cda/images/74bdbb7fce363641e345f41c2241f84c.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G23, RL78/G22, RL78/G16"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G23, RL78/G22, RL78/G16"
+    ],
+    "links": [
+      {
+        "text": "RL78 Family Using QE (standalone ver.) to Develop Touch Applications for FPB board",
+        "url": "https://www.renesas.com/jp/ja/document/apn/rl78-family-using-qe-standalone-ver-develop-touch-applications-fpb-board-rev100?language=en&r=25408646"
+      },
+      {
+        "text": "[Notification] C Compiler Package for RL78 Family (CC-RL) Changes in Specifications of Free Evaluation Edition",
+        "url": "https://www.renesas.com/jp/ja/document/tnn/notification-c-compiler-package-rl78-family-cc-rl-changes-specifications-free-evaluation-edition?language=en&r=488776"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20977346"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20977353"
+      }
+    ]
+  }
+}

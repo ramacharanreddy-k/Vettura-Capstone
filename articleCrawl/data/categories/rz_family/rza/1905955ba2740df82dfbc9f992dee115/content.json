@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20789822",
+    "title": "Setting e2studio FPU in RZ/A1 group",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:43:44.636349"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow should I set the e2studio FPU when using the RZ/A1 Group LSI?\nAnswer:\nThe sample program provided by Renesas is set to 'vfpv3-d16'. Please use this setting when developing based on this sample.\nIf you are developing based on a partner's OS, please change the settings to those recommended by the partner.\nSuitable Products\nRZ/A1 Group"
+      },
+      {
+        "type": "text",
+        "content": "How should I set the e2studio FPU when using the RZ/A1 Group LSI?"
+      },
+      {
+        "type": "text",
+        "content": "How should I set the e2studio FPU when using the RZ/A1 Group LSI?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe sample program provided by Renesas is set to 'vfpv3-d16'. Please use this setting when developing based on this sample.\nIf you are developing based on a partner's OS, please change the settings to those recommended by the partner.\nSuitable Products\nRZ/A1 Group"
+      },
+      {
+        "type": "text",
+        "content": "The sample program provided by Renesas is set to 'vfpv3-d16'. Please use this setting when developing based on this sample.\nIf you are developing based on a partner's OS, please change the settings to those recommended by the partner."
+      },
+      {
+        "type": "text",
+        "content": "The sample program provided by Renesas is set to 'vfpv3-d16'. Please use this setting when developing based on this sample.\nIf you are developing based on a partner's OS, please change the settings to those recommended by the partner."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A1 Group"
+      },
+      {
+        "type": "text",
+        "content": "RZ/A1 Group"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A1 Group"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A1 Group"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20789836"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20789849"
+      }
+    ]
+  }
+}

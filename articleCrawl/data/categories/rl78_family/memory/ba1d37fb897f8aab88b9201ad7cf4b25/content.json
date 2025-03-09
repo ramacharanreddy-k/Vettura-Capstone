@@ -1,0 +1,201 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21204937",
+    "title": "How can I read the flash contents of a RL78 device ?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:59:57.857640"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Last updated: 18/01/2024"
+      },
+      {
+        "type": "text",
+        "content": "How can I read the flash contents of a RL78 device ?"
+      },
+      {
+        "type": "text",
+        "content": "The RL78 programming interface does not permit reading flash memory at all."
+      },
+      {
+        "type": "text",
+        "content": "The RL78 debugging interface does under the following conditions:"
+      },
+      {
+        "type": "text",
+        "content": "1. The debugging is enabled on the device."
+      },
+      {
+        "type": "text",
+        "content": "2. The debug monitor area (small piece of code installed to the flash memory downloaded when debugging the device) is installed on the device."
+      },
+      {
+        "type": "text",
+        "content": "3. Both points above are not typical of released devices - only the user can answer whether they have devices in this state."
+      },
+      {
+        "type": "text",
+        "content": "4. The user will need to ensure they have matching security ID's (if the user has changed it at all, again he will need to know this in advance)."
+      },
+      {
+        "type": "text",
+        "content": "The above points can be summarized with the question: With the binary the device was flashed with, was debugging enabled?"
+      },
+      {
+        "type": "text",
+        "content": "If it was, the subsequent information is relevant.. If it was not, there is no retrieving program data without corruption of flash."
+      },
+      {
+        "type": "text",
+        "content": "Assuming debugging was enabled on the binary the following can be done:"
+      },
+      {
+        "type": "text",
+        "content": "1. Create an empty project for a device which they would like to communicate."
+      },
+      {
+        "type": "text",
+        "content": "2. Disable flash erase in the debug tool settings."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/30453281-4024-42cf-b5fd-9d9f952b51c3",
+          "alt_text": "",
+          "width": "759",
+          "height": "697",
+          "local_path": "data/categories/rl78_family/memory/ba1d37fb897f8aab88b9201ad7cf4b25/images/03f040f6bfef2e5b153ea94d113980e9.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "3.Then also uncheck the program binary in \"Load image and symbols\":"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/dd202ff0-00d3-41a2-8fda-791c1647aaea",
+          "alt_text": "",
+          "width": "908",
+          "height": "831",
+          "local_path": "data/categories/rl78_family/memory/ba1d37fb897f8aab88b9201ad7cf4b25/images/c08c7f283e01c4b5806a6eddb61e8550.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "4. Then launch a debug session connecting to your device."
+      },
+      {
+        "type": "text",
+        "content": "5. You will be presented with something like this i.e., no source or symbols (because you have no program data or symbols):"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/00f28e59-c65c-440d-9edc-09edf62ef248",
+          "alt_text": "",
+          "width": "1070",
+          "height": "480",
+          "local_path": "data/categories/rl78_family/memory/ba1d37fb897f8aab88b9201ad7cf4b25/images/bc0b20170dcf6248c5fbc47517743868.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "6.From here you can use the memory view:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/0504f920-7fb3-4135-ae36-975306f1c214",
+          "alt_text": "",
+          "width": "411",
+          "height": "559",
+          "local_path": "data/categories/rl78_family/memory/ba1d37fb897f8aab88b9201ad7cf4b25/images/53810cec90a6abaedc8b88f973d62b9e.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "7. Then use the \"export tool\" (circled in red in top right of first image below) to export the entire flash memory range for your device (I am using the rl78/g22 (R7F102GxE) with 64k code flash as an example):"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/dd1c1304-af73-4dba-92fb-7a920e1fbf1c",
+          "alt_text": "",
+          "width": "1235",
+          "height": "277",
+          "local_path": "data/categories/rl78_family/memory/ba1d37fb897f8aab88b9201ad7cf4b25/images/573b90bfd5e4297d2127e7a69c466133.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/74628df8-0c5e-4493-a378-caaa9cfe2047",
+          "alt_text": "",
+          "width": "781",
+          "height": "210",
+          "local_path": "data/categories/rl78_family/memory/ba1d37fb897f8aab88b9201ad7cf4b25/images/ff4e7ed59a434105231ea05a9aac3fa4.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "This will output the program binary in S3 SREC format, fixed 32bit width for the entire code flash - but again please specify the code flash memory range for your device.\nIf you do not have debugging enabled on the device already, the only way to connect to the device would be the corrupt the code flash by re-writing it with debugging code, which will make the output useless."
+      },
+      {
+        "type": "text",
+        "content": "This is the best we can do - but it's worth noting that if the device is in the right state for connection and the result is to get the binary output – this won't give any code symbols, it's just post-compilation binary data, with which the user will not be able to reverse compile the project to get the code back."
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/30453281-4024-42cf-b5fd-9d9f952b51c3",
+        "alt_text": "",
+        "width": "759",
+        "height": "697",
+        "local_path": "data/categories/rl78_family/memory/ba1d37fb897f8aab88b9201ad7cf4b25/images/03f040f6bfef2e5b153ea94d113980e9.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/dd202ff0-00d3-41a2-8fda-791c1647aaea",
+        "alt_text": "",
+        "width": "908",
+        "height": "831",
+        "local_path": "data/categories/rl78_family/memory/ba1d37fb897f8aab88b9201ad7cf4b25/images/c08c7f283e01c4b5806a6eddb61e8550.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/00f28e59-c65c-440d-9edc-09edf62ef248",
+        "alt_text": "",
+        "width": "1070",
+        "height": "480",
+        "local_path": "data/categories/rl78_family/memory/ba1d37fb897f8aab88b9201ad7cf4b25/images/bc0b20170dcf6248c5fbc47517743868.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/0504f920-7fb3-4135-ae36-975306f1c214",
+        "alt_text": "",
+        "width": "411",
+        "height": "559",
+        "local_path": "data/categories/rl78_family/memory/ba1d37fb897f8aab88b9201ad7cf4b25/images/53810cec90a6abaedc8b88f973d62b9e.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/dd1c1304-af73-4dba-92fb-7a920e1fbf1c",
+        "alt_text": "",
+        "width": "1235",
+        "height": "277",
+        "local_path": "data/categories/rl78_family/memory/ba1d37fb897f8aab88b9201ad7cf4b25/images/573b90bfd5e4297d2127e7a69c466133.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/74628df8-0c5e-4493-a378-caaa9cfe2047",
+        "alt_text": "",
+        "width": "781",
+        "height": "210",
+        "local_path": "data/categories/rl78_family/memory/ba1d37fb897f8aab88b9201ad7cf4b25/images/ff4e7ed59a434105231ea05a9aac3fa4.png"
+      }
+    ],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": []
+  }
+}

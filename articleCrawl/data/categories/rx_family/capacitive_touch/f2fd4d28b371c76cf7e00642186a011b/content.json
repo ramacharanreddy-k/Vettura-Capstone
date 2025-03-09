@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18286142",
+    "title": "Why Cannot I Connect the Evaluation Kit to Workbench6?",
+    "last_updated": "2023-02-03",
+    "extracted_at": "2025-03-09T00:08:25.771219"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhen I try connecting the RX130 Capacitive Touch Evaluation System and Workbench6 via USB, \"Serial port communication failure. Check serial port number and baudrate\" appears as an error. I can't establish the connection due to this problem. What are the possible causes?\nAnswer:\n\"Serial port communication failure. Check serial port number and baudrate\" indicates that the initial communication between the specified COM port and Touch API has failed.\nThree points can be considered as the cause; each cause and countermeasure is described below:\nThe COM port to which the RX130 board is connected may be wrong.\nWhen using the RX130 capacitive touch system (RTK 0EG0003S02001B), select \"COMxx: USB Serial Port (COMxx)\" in \"Select COM port\".\n\nThe baud rate may be wrong.\nWhen using the RX130 capacitive touch system (RTK 0EG0003S02001B), 38400 bps. (38400 bps at 32 MHz system clock frequency)\n\nThe communication control processing between Workbench6 and the program downloaded to the RX130 board may be invalid.\nIf you are using a version earlier than Workbench6 V1.05.00.00, you need to rewrite the source code of the RX130 board program created in the First Step Guide.\nChange the following code in the below line 508 r_cgc.h in the project generated in the First Step Guide.\n\n#if (MCU_SERIES_T == R5F5130)\n#undef USB_SERIAL_USE\n/ * Workbench SCI Connect Option * /\n#undef SCI_SERIAL_USE / * Change this line from \"#undef SCI_SERIAL_USE\"\nto \"#define SCI_SERIALUSE\". * /\n#endif // (MCU_SERIES_T == R5F5130)\n\nWorkbench6 is now in maintenance status, and we do not plan to update it in the future.\nUse QE for Capacitive Touch as a support tool for developing a modern capacitive touch sensor.\nQE for Capacitive Touch can be downloaded from URL below.\n\nhttps://www.renesas.com/qe-capacitive-touch\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "When I try connecting the RX130 Capacitive Touch Evaluation System and Workbench6 via USB, \"Serial port communication failure. Check serial port number and baudrate\" appears as an error. I can't establish the connection due to this problem. What are the possible causes?"
+      },
+      {
+        "type": "text",
+        "content": "When I try connecting the RX130 Capacitive Touch Evaluation System and Workbench6 via USB, \"Serial port communication failure. Check serial port number and baudrate\" appears as an error. I can't establish the connection due to this problem. What are the possible causes?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\n\"Serial port communication failure. Check serial port number and baudrate\" indicates that the initial communication between the specified COM port and Touch API has failed.\nThree points can be considered as the cause; each cause and countermeasure is described below:\nThe COM port to which the RX130 board is connected may be wrong.\nWhen using the RX130 capacitive touch system (RTK 0EG0003S02001B), select \"COMxx: USB Serial Port (COMxx)\" in \"Select COM port\".\n\nThe baud rate may be wrong.\nWhen using the RX130 capacitive touch system (RTK 0EG0003S02001B), 38400 bps. (38400 bps at 32 MHz system clock frequency)\n\nThe communication control processing between Workbench6 and the program downloaded to the RX130 board may be invalid.\nIf you are using a version earlier than Workbench6 V1.05.00.00, you need to rewrite the source code of the RX130 board program created in the First Step Guide.\nChange the following code in the below line 508 r_cgc.h in the project generated in the First Step Guide.\n\n#if (MCU_SERIES_T == R5F5130)\n#undef USB_SERIAL_USE\n/ * Workbench SCI Connect Option * /\n#undef SCI_SERIAL_USE / * Change this line from \"#undef SCI_SERIAL_USE\"\nto \"#define SCI_SERIALUSE\". * /\n#endif // (MCU_SERIES_T == R5F5130)\n\nWorkbench6 is now in maintenance status, and we do not plan to update it in the future.\nUse QE for Capacitive Touch as a support tool for developing a modern capacitive touch sensor.\nQE for Capacitive Touch can be downloaded from URL below.\n\nhttps://www.renesas.com/qe-capacitive-touch\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "\"Serial port communication failure. Check serial port number and baudrate\" indicates that the initial communication between the specified COM port and Touch API has failed.\nThree points can be considered as the cause; each cause and countermeasure is described below:\nThe COM port to which the RX130 board is connected may be wrong.\nWhen using the RX130 capacitive touch system (RTK 0EG0003S02001B), select \"COMxx: USB Serial Port (COMxx)\" in \"Select COM port\".\n\nThe baud rate may be wrong.\nWhen using the RX130 capacitive touch system (RTK 0EG0003S02001B), 38400 bps. (38400 bps at 32 MHz system clock frequency)\n\nThe communication control processing between Workbench6 and the program downloaded to the RX130 board may be invalid.\nIf you are using a version earlier than Workbench6 V1.05.00.00, you need to rewrite the source code of the RX130 board program created in the First Step Guide.\nChange the following code in the below line 508 r_cgc.h in the project generated in the First Step Guide.\n\n#if (MCU_SERIES_T == R5F5130)\n#undef USB_SERIAL_USE\n/ * Workbench SCI Connect Option * /\n#undef SCI_SERIAL_USE / * Change this line from \"#undef SCI_SERIAL_USE\"\nto \"#define SCI_SERIALUSE\". * /\n#endif // (MCU_SERIES_T == R5F5130)\n\nWorkbench6 is now in maintenance status, and we do not plan to update it in the future.\nUse QE for Capacitive Touch as a support tool for developing a modern capacitive touch sensor.\nQE for Capacitive Touch can be downloaded from URL below.\n\nhttps://www.renesas.com/qe-capacitive-touch"
+      },
+      {
+        "type": "text",
+        "content": "\"Serial port communication failure. Check serial port number and baudrate\" indicates that the initial communication between the specified COM port and Touch API has failed."
+      },
+      {
+        "type": "text",
+        "content": "Three points can be considered as the cause; each cause and countermeasure is described below:"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/qe-capacitive-touch",
+        "url": "https://www.renesas.com/qe-capacitive-touch"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792821"
+      }
+    ]
+  }
+}

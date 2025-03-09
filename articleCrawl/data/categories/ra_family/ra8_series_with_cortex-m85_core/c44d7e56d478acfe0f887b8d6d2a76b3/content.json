@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21088667",
+    "title": "Lower power features on the RA8 Series MCUs",
+    "last_updated": "2024-05-11",
+    "extracted_at": "2025-03-08T23:29:26.262908"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat low power features on the RA8 Series MCUs will help me reduce my overall power consumption?\nAnswer:\nRA8 Series MCUs integrate new low power features and multiple low power modes to improve power efficiency, even while providing industry-leading performance. A combination of built-in DCDC converter, low power modes, independent power domains, lower operating voltage range, fast wakeup time and low typical active and standby currents enables lower overall system power and allows customers to meet regulatory requirements. The new Arm Cortex-M85 core also reduces power consumption for DSP/ML tasks.\nSuitable Products\nRA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+      },
+      {
+        "type": "text",
+        "content": "What low power features on the RA8 Series MCUs will help me reduce my overall power consumption?"
+      },
+      {
+        "type": "text",
+        "content": "What low power features on the RA8 Series MCUs will help me reduce my overall power consumption?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRA8 Series MCUs integrate new low power features and multiple low power modes to improve power efficiency, even while providing industry-leading performance. A combination of built-in DCDC converter, low power modes, independent power domains, lower operating voltage range, fast wakeup time and low typical active and standby currents enables lower overall system power and allows customers to meet regulatory requirements. The new Arm Cortex-M85 core also reduces power consumption for DSP/ML tasks.\nSuitable Products\nRA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+      },
+      {
+        "type": "text",
+        "content": "RA8 Series MCUs integrate new low power features and multiple low power modes to improve power efficiency, even while providing industry-leading performance. A combination of built-in DCDC converter, low power modes, independent power domains, lower operating voltage range, fast wakeup time and low typical active and standby currents enables lower overall system power and allows customers to meet regulatory requirements. The new Arm Cortex-M85 core also reduces power consumption for DSP/ML tasks."
+      },
+      {
+        "type": "text",
+        "content": "RA8 Series MCUs integrate new low power features and multiple low power modes to improve power efficiency, even while providing industry-leading performance. A combination of built-in DCDC converter, low power modes, independent power domains, lower operating voltage range, fast wakeup time and low typical active and standby currents enables lower overall system power and allows customers to meet regulatory requirements. The new Arm Cortex-M85 core also reduces power consumption for DSP/ML tasks."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21088727"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21088739"
+      }
+    ]
+  }
+}

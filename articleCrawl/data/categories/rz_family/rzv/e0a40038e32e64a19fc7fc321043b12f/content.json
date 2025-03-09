@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20797664",
+    "title": "RZ/V: Can Verified Linux for RZ/V operate in x11?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:51:06.410038"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDoes Verified Linux for RZ/V have any experience running on x11?\nAnswer:\nRZ/V Verified Linux does not support x11. Also, there are no plans to support x11.\nAs an alternative, how about using xWayland, an X server that runs as a Wayland client?\nSuitable Products\nRZ/V"
+      },
+      {
+        "type": "text",
+        "content": "Does Verified Linux for RZ/V have any experience running on x11?"
+      },
+      {
+        "type": "text",
+        "content": "Does Verified Linux for RZ/V have any experience running on x11?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRZ/V Verified Linux does not support x11. Also, there are no plans to support x11.\nAs an alternative, how about using xWayland, an X server that runs as a Wayland client?\nSuitable Products\nRZ/V"
+      },
+      {
+        "type": "text",
+        "content": "RZ/V Verified Linux does not support x11. Also, there are no plans to support x11.\nAs an alternative, how about using xWayland, an X server that runs as a Wayland client?"
+      },
+      {
+        "type": "text",
+        "content": "RZ/V Verified Linux does not support x11. Also, there are no plans to support x11.\nAs an alternative, how about using xWayland, an X server that runs as a Wayland client?"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20797669"
+      }
+    ]
+  }
+}

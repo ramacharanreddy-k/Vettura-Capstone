@@ -1,0 +1,69 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "HW SCE operation",
+      "S-Cache",
+      "C-Cache",
+      "F-Cache",
+      "Process time"
+    ],
+    [
+      "HW_SCE_Aes256EncryptDecryptInitSub",
+      "Enable",
+      "Enable",
+      "Enable",
+      "23us"
+    ],
+    [
+      "HW_SCE_Aes256EncryptDecryptUpdateSub",
+      "34us"
+    ],
+    [
+      "HW_SCE_Aes256EncryptDecryptFinalSub",
+      "2.8us"
+    ],
+    [
+      "Whole AE256 CBC Encryption process",
+      "60us"
+    ],
+    [
+      "HW_SCE_Aes256EncryptDecryptInitSub",
+      "Disable",
+      "Enable",
+      "Enable",
+      "26us"
+    ],
+    [
+      "HW_SCE_Aes256EncryptDecryptUpdateSub",
+      "35.3us"
+    ],
+    [
+      "HW_SCE_Aes256EncryptDecryptFinalSub",
+      "3.1us"
+    ],
+    [
+      "Whole AE256 CBC Encryption process",
+      "62.82us"
+    ],
+    [
+      "HW_SCE_Aes256EncryptDecryptInitSub",
+      "Disable",
+      "Disable",
+      "Enable",
+      "35us"
+    ],
+    [
+      "HW_SCE_Aes256EncryptDecryptUpdateSub",
+      "39.8us"
+    ],
+    [
+      "HW_SCE_Aes256EncryptDecryptFinalSub",
+      "4.3us"
+    ],
+    [
+      "Whole AE256 CBC Encryption process",
+      "78.1us"
+    ]
+  ]
+}

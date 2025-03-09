@@ -1,0 +1,106 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20851878",
+    "title": "Can I evaluate and develop the RL78 microcontroller on the Arduino IDE?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:53:23.672571"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan I evaluate and develop the RL78 microcontroller on the Arduino IDE?\nAnswer:\nYes. Various information such as supported evaluation boards can be found at the following URL (GitHub). It also includes information on available Arduino APIs and the latest information (new version support, additional supported boards, etc.).\nHome · renesas/Arduino Wiki · GitHub\nQuick Start Guide is provided so that you can start evaluation and development on the Arduino IDE as soon as you have the evaluation board.\nQuick Start Guide · renesas/Arduino Wiki · GitHub\nAlthough the Quick Start Guide uses the \"RL78/G23-64p Fast Prototyping Board\", other applicable boards can be used, too. You can start RL78 Arduino development with a board, a USB cable, and a Windows PC.\nThe Arduino IDE enables software development using the Arduino API. On the other hand, in the case of mass-production product development, it is often necessary to have more control over you code to ensure quality and efficiency. For such full-scale software development, please consider Renesas IDEs such as CS+ and e2 studio, or partner tools such as IAR Embedded Workbench for Renesas RL78 by IAR Inc.\nRL78/G23, RL78/G22, RL78/G15"
+      },
+      {
+        "type": "text",
+        "content": "Can I evaluate and develop the RL78 microcontroller on the Arduino IDE?"
+      },
+      {
+        "type": "text",
+        "content": "Can I evaluate and develop the RL78 microcontroller on the Arduino IDE?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes. Various information such as supported evaluation boards can be found at the following URL (GitHub). It also includes information on available Arduino APIs and the latest information (new version support, additional supported boards, etc.).\nHome · renesas/Arduino Wiki · GitHub\nQuick Start Guide is provided so that you can start evaluation and development on the Arduino IDE as soon as you have the evaluation board.\nQuick Start Guide · renesas/Arduino Wiki · GitHub\nAlthough the Quick Start Guide uses the \"RL78/G23-64p Fast Prototyping Board\", other applicable boards can be used, too. You can start RL78 Arduino development with a board, a USB cable, and a Windows PC.\nThe Arduino IDE enables software development using the Arduino API. On the other hand, in the case of mass-production product development, it is often necessary to have more control over you code to ensure quality and efficiency. For such full-scale software development, please consider Renesas IDEs such as CS+ and e2 studio, or partner tools such as IAR Embedded Workbench for Renesas RL78 by IAR Inc.\nRL78/G23, RL78/G22, RL78/G15"
+      },
+      {
+        "type": "text",
+        "content": "Yes. Various information such as supported evaluation boards can be found at the following URL (GitHub). It also includes information on available Arduino APIs and the latest information (new version support, additional supported boards, etc.).\nHome · renesas/Arduino Wiki · GitHub\nQuick Start Guide is provided so that you can start evaluation and development on the Arduino IDE as soon as you have the evaluation board.\nQuick Start Guide · renesas/Arduino Wiki · GitHub\nAlthough the Quick Start Guide uses the \"RL78/G23-64p Fast Prototyping Board\", other applicable boards can be used, too. You can start RL78 Arduino development with a board, a USB cable, and a Windows PC.\nThe Arduino IDE enables software development using the Arduino API. On the other hand, in the case of mass-production product development, it is often necessary to have more control over you code to ensure quality and efficiency. For such full-scale software development, please consider Renesas IDEs such as CS+ and e2 studio, or partner tools such as IAR Embedded Workbench for Renesas RL78 by IAR Inc."
+      },
+      {
+        "type": "text",
+        "content": "Yes. Various information such as supported evaluation boards can be found at the following URL (GitHub). It also includes information on available Arduino APIs and the latest information (new version support, additional supported boards, etc.)."
+      },
+      {
+        "type": "text",
+        "content": "Home · renesas/Arduino Wiki · GitHub"
+      },
+      {
+        "type": "text",
+        "content": "Quick Start Guide is provided so that you can start evaluation and development on the Arduino IDE as soon as you have the evaluation board."
+      },
+      {
+        "type": "text",
+        "content": "Quick Start Guide · renesas/Arduino Wiki · GitHub"
+      },
+      {
+        "type": "text",
+        "content": "Although the Quick Start Guide uses the \"RL78/G23-64p Fast Prototyping Board\", other applicable boards can be used, too. You can start RL78 Arduino development with a board, a USB cable, and a Windows PC."
+      },
+      {
+        "type": "text",
+        "content": "The Arduino IDE enables software development using the Arduino API. On the other hand, in the case of mass-production product development, it is often necessary to have more control over you code to ensure quality and efficiency. For such full-scale software development, please consider Renesas IDEs such as CS+ and e2 studio, or partner tools such as IAR Embedded Workbench for Renesas RL78 by IAR Inc."
+      },
+      {
+        "type": "text",
+        "content": "RL78/G23, RL78/G22, RL78/G15"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G23, RL78/G22, RL78/G15"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G23, RL78/G22, RL78/G15"
+    ],
+    "links": [
+      {
+        "text": "Home · renesas/Arduino Wiki · GitHub",
+        "url": "https://github.com/renesas/Arduino/wiki"
+      },
+      {
+        "text": "Quick Start Guide · renesas/Arduino Wiki · GitHub",
+        "url": "https://github.com/renesas/Arduino/wiki/Quick-Start-Guide"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20851872"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20851879"
+      }
+    ]
+  }
+}

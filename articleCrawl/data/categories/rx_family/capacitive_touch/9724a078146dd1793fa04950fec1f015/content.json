@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18286167",
+    "title": "How Do I Determine the Hysteresis?",
+    "last_updated": "2023-07-03",
+    "extracted_at": "2025-03-09T00:07:29.405312"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow do I determine the hysteresis?\nAnswer:\nHysteresis is automatically set to a value of 5% of the threshold.\nThe hysteresis is set to prevent chattering. By offsetting the threshold after key ON and hysterising from the key OFF to ON, ON to OFF threshold, chattering is prevented.\nThe noise level differs depending on the customer's board. Please adjust the noise level and evaluate it thoroughly.\nRefer to the detail description at following material.\nhttps://renesas.github.io/fsp/group___t_o_u_c_h.html\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "How do I determine the hysteresis?"
+      },
+      {
+        "type": "text",
+        "content": "How do I determine the hysteresis?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nHysteresis is automatically set to a value of 5% of the threshold.\nThe hysteresis is set to prevent chattering. By offsetting the threshold after key ON and hysterising from the key OFF to ON, ON to OFF threshold, chattering is prevented.\nThe noise level differs depending on the customer's board. Please adjust the noise level and evaluate it thoroughly.\nRefer to the detail description at following material.\nhttps://renesas.github.io/fsp/group___t_o_u_c_h.html\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Hysteresis is automatically set to a value of 5% of the threshold.\nThe hysteresis is set to prevent chattering. By offsetting the threshold after key ON and hysterising from the key OFF to ON, ON to OFF threshold, chattering is prevented.\nThe noise level differs depending on the customer's board. Please adjust the noise level and evaluate it thoroughly.\nRefer to the detail description at following material.\nhttps://renesas.github.io/fsp/group___t_o_u_c_h.html"
+      },
+      {
+        "type": "text",
+        "content": "Hysteresis is automatically set to a value of 5% of the threshold."
+      },
+      {
+        "type": "text",
+        "content": "The hysteresis is set to prevent chattering. By offsetting the threshold after key ON and hysterising from the key OFF to ON, ON to OFF threshold, chattering is prevented."
+      },
+      {
+        "type": "text",
+        "content": "The noise level differs depending on the customer's board. Please adjust the noise level and evaluate it thoroughly."
+      },
+      {
+        "type": "text",
+        "content": "Refer to the detail description at following material.\nhttps://renesas.github.io/fsp/group___t_o_u_c_h.html"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "https://renesas.github.io/fsp/group___t_o_u_c_h.html",
+        "url": "https://renesas.github.io/fsp/group___t_o_u_c_h.html"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792811"
+      }
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20725018",
+    "title": "RZ/G2L: Standards compliance of evaluation boards",
+    "last_updated": "2022-01-11",
+    "extracted_at": "2025-03-08T23:44:28.425866"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the state of standards compliance for module boards of RZ/G2L evaluation boards?\nAnswer:\nThe module boards of RZ/G2L EVK comply with the SMARC2.1 standard. Refer to the following for details. \nhttps://www.renesas.com/products/microcontrollers-microprocessors/rz-mpus/rzg2l-evaluation-board-kit-rzg2l-evaluation-board-kit\nPartner boards, etc. that comply with other standards are also available. For details on partner boards, see the following page. \nhttps://www.renesas.com/products/microcontrollers-microprocessors/rz-mpus/rz-partner-solutions#quick-link-2846\nSuitable Products\nRZ/G2L"
+      },
+      {
+        "type": "text",
+        "content": "What is the state of standards compliance for module boards of RZ/G2L evaluation boards?"
+      },
+      {
+        "type": "text",
+        "content": "What is the state of standards compliance for module boards of RZ/G2L evaluation boards?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe module boards of RZ/G2L EVK comply with the SMARC2.1 standard. Refer to the following for details. \nhttps://www.renesas.com/products/microcontrollers-microprocessors/rz-mpus/rzg2l-evaluation-board-kit-rzg2l-evaluation-board-kit\nPartner boards, etc. that comply with other standards are also available. For details on partner boards, see the following page. \nhttps://www.renesas.com/products/microcontrollers-microprocessors/rz-mpus/rz-partner-solutions#quick-link-2846\nSuitable Products\nRZ/G2L"
+      },
+      {
+        "type": "text",
+        "content": "The module boards of RZ/G2L EVK comply with the SMARC2.1 standard. Refer to the following for details. \nhttps://www.renesas.com/products/microcontrollers-microprocessors/rz-mpus/rzg2l-evaluation-board-kit-rzg2l-evaluation-board-kit\nPartner boards, etc. that comply with other standards are also available. For details on partner boards, see the following page. \nhttps://www.renesas.com/products/microcontrollers-microprocessors/rz-mpus/rz-partner-solutions#quick-link-2846"
+      },
+      {
+        "type": "text",
+        "content": "The module boards of RZ/G2L EVK comply with the SMARC2.1 standard. Refer to the following for details. \nhttps://www.renesas.com/products/microcontrollers-microprocessors/rz-mpus/rzg2l-evaluation-board-kit-rzg2l-evaluation-board-kit"
+      },
+      {
+        "type": "text",
+        "content": "Partner boards, etc. that comply with other standards are also available. For details on partner boards, see the following page. \nhttps://www.renesas.com/products/microcontrollers-microprocessors/rz-mpus/rz-partner-solutions#quick-link-2846"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/G2L"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/G2L"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/G2L"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/products/microcontrollers-microprocessors/rz-mpus/rzg2l-evaluation-board-kit-rzg2l-evaluation-board-kit",
+        "url": "https://www.renesas.com/products/microcontrollers-microprocessors/rz-mpus/rzg2l-evaluation-board-kit-rzg2l-evaluation-board-kit"
+      },
+      {
+        "text": "https://www.renesas.com/products/microcontrollers-microprocessors/rz-mpus/rz-partner-solutions#quick-link-2846",
+        "url": "https://www.renesas.com/products/microcontrollers-microprocessors/rz-mpus/rz-partner-solutions#quick-link-2846"
+      },
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20725011"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20725024"
+      }
+    ]
+  }
+}

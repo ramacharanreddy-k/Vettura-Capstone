@@ -1,0 +1,663 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20936546",
+    "title": "RA6M4, RA6M5: My considered OctaRAM memory device is not listed above, how can I further check if it is compatible?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:37:28.848296"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nMy considered OctaRAM memory device is not listed above, how can I further check if it is compatible?\nAnswer:\nMost of the devices compatible with the Macronix Serial Multi I/O (MXSMIO®) Octa Peripheral Interface (OPI) and flash devices compliant with JEDEC standard JESD251, Profile 1.0 are supported.\nPlease note devices with 1.8V operating voltage are not supported.\nSpecifically on OctaRAM devices, the RA6M4/M5 OSPI controller supports an address mapping like shown in the below picture (according to the datasheet of memory device APS6408L-3OCx )\nA31\nA30\nA29\nA28\nA27\nA26\nA25\nA24\nA23\nA22\nA21\nA20\nA19\nA18\nA17\nA16\n-\n-\n-\nR12\nR11\nR10\nR9\nR8\nR7\nR6\nR5\nR4\nR3\nR2\nR1\nR0\nA15\nA14\nA13\nA12\nA11\nA10\nA09\nA08\nA07\nA06\nA05\nA04\nA03\nA02\nA01\nA00\nC9\nC8\nC7\nC6\nC5\nC4\n-\n-\n-\n-\n-\n-\nC3\nC2\nC1\nC0\n  \"Linear\" mappings as implemented in \"XcceleraRAM\" compatible products are not supported.\nPlease refer to the memory manufacturer datasheet for further details.\nSuitable Products\nRA6M4, RA6M5\n  日本語"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nMy considered OctaRAM memory device is not listed above, how can I further check if it is compatible?\nAnswer:\nMost of the devices compatible with the Macronix Serial Multi I/O (MXSMIO®) Octa Peripheral Interface (OPI) and flash devices compliant with JEDEC standard JESD251, Profile 1.0 are supported.\nPlease note devices with 1.8V operating voltage are not supported.\nSpecifically on OctaRAM devices, the RA6M4/M5 OSPI controller supports an address mapping like shown in the below picture (according to the datasheet of memory device APS6408L-3OCx )\nA31\nA30\nA29\nA28\nA27\nA26\nA25\nA24\nA23\nA22\nA21\nA20\nA19\nA18\nA17\nA16\n-\n-\n-\nR12\nR11\nR10\nR9\nR8\nR7\nR6\nR5\nR4\nR3\nR2\nR1\nR0\nA15\nA14\nA13\nA12\nA11\nA10\nA09\nA08\nA07\nA06\nA05\nA04\nA03\nA02\nA01\nA00\nC9\nC8\nC7\nC6\nC5\nC4\n-\n-\n-\n-\n-\n-\nC3\nC2\nC1\nC0\n  \"Linear\" mappings as implemented in \"XcceleraRAM\" compatible products are not supported.\nPlease refer to the memory manufacturer datasheet for further details.\nSuitable Products\nRA6M4, RA6M5"
+      },
+      {
+        "type": "text",
+        "content": "My considered OctaRAM memory device is not listed above, how can I further check if it is compatible?"
+      },
+      {
+        "type": "text",
+        "content": "My considered OctaRAM memory device is not listed above, how can I further check if it is compatible?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nMost of the devices compatible with the Macronix Serial Multi I/O (MXSMIO®) Octa Peripheral Interface (OPI) and flash devices compliant with JEDEC standard JESD251, Profile 1.0 are supported.\nPlease note devices with 1.8V operating voltage are not supported.\nSpecifically on OctaRAM devices, the RA6M4/M5 OSPI controller supports an address mapping like shown in the below picture (according to the datasheet of memory device APS6408L-3OCx )\nA31\nA30\nA29\nA28\nA27\nA26\nA25\nA24\nA23\nA22\nA21\nA20\nA19\nA18\nA17\nA16\n-\n-\n-\nR12\nR11\nR10\nR9\nR8\nR7\nR6\nR5\nR4\nR3\nR2\nR1\nR0\nA15\nA14\nA13\nA12\nA11\nA10\nA09\nA08\nA07\nA06\nA05\nA04\nA03\nA02\nA01\nA00\nC9\nC8\nC7\nC6\nC5\nC4\n-\n-\n-\n-\n-\n-\nC3\nC2\nC1\nC0\n  \"Linear\" mappings as implemented in \"XcceleraRAM\" compatible products are not supported.\nPlease refer to the memory manufacturer datasheet for further details.\nSuitable Products\nRA6M4, RA6M5"
+      },
+      {
+        "type": "text",
+        "content": "Most of the devices compatible with the Macronix Serial Multi I/O (MXSMIO®) Octa Peripheral Interface (OPI) and flash devices compliant with JEDEC standard JESD251, Profile 1.0 are supported.\nPlease note devices with 1.8V operating voltage are not supported.\nSpecifically on OctaRAM devices, the RA6M4/M5 OSPI controller supports an address mapping like shown in the below picture (according to the datasheet of memory device APS6408L-3OCx )\nA31\nA30\nA29\nA28\nA27\nA26\nA25\nA24\nA23\nA22\nA21\nA20\nA19\nA18\nA17\nA16\n-\n-\n-\nR12\nR11\nR10\nR9\nR8\nR7\nR6\nR5\nR4\nR3\nR2\nR1\nR0\nA15\nA14\nA13\nA12\nA11\nA10\nA09\nA08\nA07\nA06\nA05\nA04\nA03\nA02\nA01\nA00\nC9\nC8\nC7\nC6\nC5\nC4\n-\n-\n-\n-\n-\n-\nC3\nC2\nC1\nC0\n  \"Linear\" mappings as implemented in \"XcceleraRAM\" compatible products are not supported.\nPlease refer to the memory manufacturer datasheet for further details."
+      },
+      {
+        "type": "text",
+        "content": "A31"
+      },
+      {
+        "type": "text",
+        "content": "A31"
+      },
+      {
+        "type": "text",
+        "content": "A30"
+      },
+      {
+        "type": "text",
+        "content": "A30"
+      },
+      {
+        "type": "text",
+        "content": "A29"
+      },
+      {
+        "type": "text",
+        "content": "A29"
+      },
+      {
+        "type": "text",
+        "content": "A28"
+      },
+      {
+        "type": "text",
+        "content": "A28"
+      },
+      {
+        "type": "text",
+        "content": "A27"
+      },
+      {
+        "type": "text",
+        "content": "A27"
+      },
+      {
+        "type": "text",
+        "content": "A26"
+      },
+      {
+        "type": "text",
+        "content": "A26"
+      },
+      {
+        "type": "text",
+        "content": "A25"
+      },
+      {
+        "type": "text",
+        "content": "A25"
+      },
+      {
+        "type": "text",
+        "content": "A24"
+      },
+      {
+        "type": "text",
+        "content": "A24"
+      },
+      {
+        "type": "text",
+        "content": "A23"
+      },
+      {
+        "type": "text",
+        "content": "A23"
+      },
+      {
+        "type": "text",
+        "content": "A22"
+      },
+      {
+        "type": "text",
+        "content": "A22"
+      },
+      {
+        "type": "text",
+        "content": "A21"
+      },
+      {
+        "type": "text",
+        "content": "A21"
+      },
+      {
+        "type": "text",
+        "content": "A20"
+      },
+      {
+        "type": "text",
+        "content": "A20"
+      },
+      {
+        "type": "text",
+        "content": "A19"
+      },
+      {
+        "type": "text",
+        "content": "A19"
+      },
+      {
+        "type": "text",
+        "content": "A18"
+      },
+      {
+        "type": "text",
+        "content": "A18"
+      },
+      {
+        "type": "text",
+        "content": "A17"
+      },
+      {
+        "type": "text",
+        "content": "A17"
+      },
+      {
+        "type": "text",
+        "content": "A16"
+      },
+      {
+        "type": "text",
+        "content": "A16"
+      },
+      {
+        "type": "text",
+        "content": "-"
+      },
+      {
+        "type": "text",
+        "content": "-"
+      },
+      {
+        "type": "text",
+        "content": "-"
+      },
+      {
+        "type": "text",
+        "content": "-"
+      },
+      {
+        "type": "text",
+        "content": "-"
+      },
+      {
+        "type": "text",
+        "content": "-"
+      },
+      {
+        "type": "text",
+        "content": "R12"
+      },
+      {
+        "type": "text",
+        "content": "R12"
+      },
+      {
+        "type": "text",
+        "content": "R11"
+      },
+      {
+        "type": "text",
+        "content": "R11"
+      },
+      {
+        "type": "text",
+        "content": "R10"
+      },
+      {
+        "type": "text",
+        "content": "R10"
+      },
+      {
+        "type": "text",
+        "content": "R9"
+      },
+      {
+        "type": "text",
+        "content": "R9"
+      },
+      {
+        "type": "text",
+        "content": "R8"
+      },
+      {
+        "type": "text",
+        "content": "R8"
+      },
+      {
+        "type": "text",
+        "content": "R7"
+      },
+      {
+        "type": "text",
+        "content": "R7"
+      },
+      {
+        "type": "text",
+        "content": "R6"
+      },
+      {
+        "type": "text",
+        "content": "R6"
+      },
+      {
+        "type": "text",
+        "content": "R5"
+      },
+      {
+        "type": "text",
+        "content": "R5"
+      },
+      {
+        "type": "text",
+        "content": "R4"
+      },
+      {
+        "type": "text",
+        "content": "R4"
+      },
+      {
+        "type": "text",
+        "content": "R3"
+      },
+      {
+        "type": "text",
+        "content": "R3"
+      },
+      {
+        "type": "text",
+        "content": "R2"
+      },
+      {
+        "type": "text",
+        "content": "R2"
+      },
+      {
+        "type": "text",
+        "content": "R1"
+      },
+      {
+        "type": "text",
+        "content": "R1"
+      },
+      {
+        "type": "text",
+        "content": "R0"
+      },
+      {
+        "type": "text",
+        "content": "R0"
+      },
+      {
+        "type": "text",
+        "content": "A15"
+      },
+      {
+        "type": "text",
+        "content": "A15"
+      },
+      {
+        "type": "text",
+        "content": "A14"
+      },
+      {
+        "type": "text",
+        "content": "A14"
+      },
+      {
+        "type": "text",
+        "content": "A13"
+      },
+      {
+        "type": "text",
+        "content": "A13"
+      },
+      {
+        "type": "text",
+        "content": "A12"
+      },
+      {
+        "type": "text",
+        "content": "A12"
+      },
+      {
+        "type": "text",
+        "content": "A11"
+      },
+      {
+        "type": "text",
+        "content": "A11"
+      },
+      {
+        "type": "text",
+        "content": "A10"
+      },
+      {
+        "type": "text",
+        "content": "A10"
+      },
+      {
+        "type": "text",
+        "content": "A09"
+      },
+      {
+        "type": "text",
+        "content": "A09"
+      },
+      {
+        "type": "text",
+        "content": "A08"
+      },
+      {
+        "type": "text",
+        "content": "A08"
+      },
+      {
+        "type": "text",
+        "content": "A07"
+      },
+      {
+        "type": "text",
+        "content": "A07"
+      },
+      {
+        "type": "text",
+        "content": "A06"
+      },
+      {
+        "type": "text",
+        "content": "A06"
+      },
+      {
+        "type": "text",
+        "content": "A05"
+      },
+      {
+        "type": "text",
+        "content": "A05"
+      },
+      {
+        "type": "text",
+        "content": "A04"
+      },
+      {
+        "type": "text",
+        "content": "A04"
+      },
+      {
+        "type": "text",
+        "content": "A03"
+      },
+      {
+        "type": "text",
+        "content": "A03"
+      },
+      {
+        "type": "text",
+        "content": "A02"
+      },
+      {
+        "type": "text",
+        "content": "A02"
+      },
+      {
+        "type": "text",
+        "content": "A01"
+      },
+      {
+        "type": "text",
+        "content": "A01"
+      },
+      {
+        "type": "text",
+        "content": "A00"
+      },
+      {
+        "type": "text",
+        "content": "A00"
+      },
+      {
+        "type": "text",
+        "content": "C9"
+      },
+      {
+        "type": "text",
+        "content": "C9"
+      },
+      {
+        "type": "text",
+        "content": "C8"
+      },
+      {
+        "type": "text",
+        "content": "C8"
+      },
+      {
+        "type": "text",
+        "content": "C7"
+      },
+      {
+        "type": "text",
+        "content": "C7"
+      },
+      {
+        "type": "text",
+        "content": "C6"
+      },
+      {
+        "type": "text",
+        "content": "C6"
+      },
+      {
+        "type": "text",
+        "content": "C5"
+      },
+      {
+        "type": "text",
+        "content": "C5"
+      },
+      {
+        "type": "text",
+        "content": "C4"
+      },
+      {
+        "type": "text",
+        "content": "C4"
+      },
+      {
+        "type": "text",
+        "content": "-"
+      },
+      {
+        "type": "text",
+        "content": "-"
+      },
+      {
+        "type": "text",
+        "content": "-"
+      },
+      {
+        "type": "text",
+        "content": "-"
+      },
+      {
+        "type": "text",
+        "content": "-"
+      },
+      {
+        "type": "text",
+        "content": "-"
+      },
+      {
+        "type": "text",
+        "content": "-"
+      },
+      {
+        "type": "text",
+        "content": "-"
+      },
+      {
+        "type": "text",
+        "content": "-"
+      },
+      {
+        "type": "text",
+        "content": "-"
+      },
+      {
+        "type": "text",
+        "content": "-"
+      },
+      {
+        "type": "text",
+        "content": "-"
+      },
+      {
+        "type": "text",
+        "content": "C3"
+      },
+      {
+        "type": "text",
+        "content": "C3"
+      },
+      {
+        "type": "text",
+        "content": "C2"
+      },
+      {
+        "type": "text",
+        "content": "C2"
+      },
+      {
+        "type": "text",
+        "content": "C1"
+      },
+      {
+        "type": "text",
+        "content": "C1"
+      },
+      {
+        "type": "text",
+        "content": "C0"
+      },
+      {
+        "type": "text",
+        "content": "C0"
+      },
+      {
+        "type": "text",
+        "content": "\"Linear\" mappings as implemented in \"XcceleraRAM\" compatible products are not supported.\nPlease refer to the memory manufacturer datasheet for further details."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA6M4, RA6M5"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "A31",
+            "A30",
+            "A29",
+            "A28",
+            "A27",
+            "A26",
+            "A25",
+            "A24",
+            "A23",
+            "A22",
+            "A21",
+            "A20",
+            "A19",
+            "A18",
+            "A17",
+            "A16"
+          ],
+          [
+            "-",
+            "-",
+            "-",
+            "R12",
+            "R11",
+            "R10",
+            "R9",
+            "R8",
+            "R7",
+            "R6",
+            "R5",
+            "R4",
+            "R3",
+            "R2",
+            "R1",
+            "R0"
+          ],
+          [
+            "A15",
+            "A14",
+            "A13",
+            "A12",
+            "A11",
+            "A10",
+            "A09",
+            "A08",
+            "A07",
+            "A06",
+            "A05",
+            "A04",
+            "A03",
+            "A02",
+            "A01",
+            "A00"
+          ],
+          [
+            "C9",
+            "C8",
+            "C7",
+            "C6",
+            "C5",
+            "C4",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "C3",
+            "C2",
+            "C1",
+            "C0"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA6M4, RA6M5"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA6M4, RA6M5"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20936550"
+      }
+    ]
+  }
+}

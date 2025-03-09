@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20797665",
+    "title": "RZ/V2L: Is it possible to build an interface compliant with BT656?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:51:08.692710"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs it possible to build a BT656 compliant interface using GPIO?\nAnswer:\nMIPI CSI has dedicated pins. However, the Parallel Input Interface does not provide dedicated pins, but rather dual-use pins.\nThe default setting is to set the GPIO pin to the Camera In function pin. It is possible to use the Parallel Input Interface to input BT.656 data.\nSuitable Products\nRZ/V2L"
+      },
+      {
+        "type": "text",
+        "content": "Is it possible to build a BT656 compliant interface using GPIO?"
+      },
+      {
+        "type": "text",
+        "content": "Is it possible to build a BT656 compliant interface using GPIO?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nMIPI CSI has dedicated pins. However, the Parallel Input Interface does not provide dedicated pins, but rather dual-use pins.\nThe default setting is to set the GPIO pin to the Camera In function pin. It is possible to use the Parallel Input Interface to input BT.656 data.\nSuitable Products\nRZ/V2L"
+      },
+      {
+        "type": "text",
+        "content": "MIPI CSI has dedicated pins. However, the Parallel Input Interface does not provide dedicated pins, but rather dual-use pins.\nThe default setting is to set the GPIO pin to the Camera In function pin. It is possible to use the Parallel Input Interface to input BT.656 data."
+      },
+      {
+        "type": "text",
+        "content": "MIPI CSI has dedicated pins. However, the Parallel Input Interface does not provide dedicated pins, but rather dual-use pins.\nThe default setting is to set the GPIO pin to the Camera In function pin. It is possible to use the Parallel Input Interface to input BT.656 data."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V2L"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V2L"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V2L"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20797670"
+      }
+    ]
+  }
+}

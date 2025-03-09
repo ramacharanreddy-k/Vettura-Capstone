@@ -1,0 +1,193 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21297051",
+    "title": "RA Family: How to change the MAC address of the device runtime using FreeRTOS+TCP",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:35:16.886376"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Issue:"
+      },
+      {
+        "type": "text",
+        "content": "After calling the FreeRTOS_IPInit API and setting  the static IP of the device and the initial MAC address. You call the FreeRTOS_UpdateMACAddress API to set the new MAC address."
+      },
+      {
+        "type": "text",
+        "content": "Even though you can see the new MAC address being assigned to the device with the initial static IP address you have set. You are not able to ping  with the new MAC address set."
+      },
+      {
+        "type": "text",
+        "content": "Answer:"
+      },
+      {
+        "type": "text",
+        "content": "The issue is the fact that even though the MAC address has been updated after the FreeRTOS_UpdateMACAddress API call. The hardware is still listening on the old MAC address. To solve this problem, you should also update the MAC address for the ethernet peripheral. You should set the new MAC address into the configuration structure of the ethernet instance in your code."
+      },
+      {
+        "type": "text",
+        "content": "If you navigate the common_data.c file under the ra_gen directory, you will see that there is a configuration structure for the ethernet peripheral holding inside the MAC address set for the device:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/b13cc493-6926-43da-8770-b5ad69f1695a",
+          "alt_text": "",
+          "width": "400",
+          "height": "494",
+          "local_path": "data/categories/ra_family/ethernet/d7990364595fa35ac98b1796d83f6efe/images/6dd0b9e10ee506b3e5712b384ac87248.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/fa458ea4-09eb-415c-accc-566bffecf557",
+          "alt_text": "",
+          "width": "975",
+          "height": "403",
+          "local_path": "data/categories/ra_family/ethernet/d7990364595fa35ac98b1796d83f6efe/images/954307efcdf1a4fa24ebb52469297296.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "As you can see the MAC address in this structure, is set depending on the value of g_ether0_mac_address table also declared on the same file:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/eb55f599-7d25-4a91-9c6d-1e78e124f5ac",
+          "alt_text": "",
+          "width": "975",
+          "height": "565",
+          "local_path": "data/categories/ra_family/ethernet/d7990364595fa35ac98b1796d83f6efe/images/0a2cc705763f0b9aae79a98e4fed7cc5.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "This variable holds the contents of  the setting for the MAC address users set on r_ether stack properties in Stacks Tab:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/4b561922-c812-4a83-9af7-86fc0b303a10",
+          "alt_text": "",
+          "width": "975",
+          "height": "730",
+          "local_path": "data/categories/ra_family/ethernet/d7990364595fa35ac98b1796d83f6efe/images/6690044c1e3654fd9851452e93047ab9.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "To change the MAC address for the ethernet peripheral you should declare again the table g_ether0_mac_address as extern in the file you want to make the changes. Update its contents with the new physical address and then de-initialize the ethernet peripheral and re-initialize it with the new MAC adress now set:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/067f2e6a-f2f8-4e61-93eb-c2afee9c9d22",
+          "alt_text": "",
+          "width": "975",
+          "height": "428",
+          "local_path": "data/categories/ra_family/ethernet/d7990364595fa35ac98b1796d83f6efe/images/033336ffcd445a485d7a35357b32ba62.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "As soon as this change is done, the device keeping the initial static IP address can ping also with the new MAC address set, other devices in the same network:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/98b8fc7e-0375-4673-924e-0028862f0ead",
+          "alt_text": "",
+          "width": "975",
+          "height": "222",
+          "local_path": "data/categories/ra_family/ethernet/d7990364595fa35ac98b1796d83f6efe/images/c8d2aef5311a6b13988b0123e44de9d3.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Source:  https://community.renesas.com/mcu-mpu/ra/f/forum/33669/change-mac-address-in-ra6m5-microcontroller-during-runtime-after-freertos_ipinit-api-call/119993#119993"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/b13cc493-6926-43da-8770-b5ad69f1695a",
+        "alt_text": "",
+        "width": "400",
+        "height": "494",
+        "local_path": "data/categories/ra_family/ethernet/d7990364595fa35ac98b1796d83f6efe/images/6dd0b9e10ee506b3e5712b384ac87248.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/fa458ea4-09eb-415c-accc-566bffecf557",
+        "alt_text": "",
+        "width": "975",
+        "height": "403",
+        "local_path": "data/categories/ra_family/ethernet/d7990364595fa35ac98b1796d83f6efe/images/954307efcdf1a4fa24ebb52469297296.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/eb55f599-7d25-4a91-9c6d-1e78e124f5ac",
+        "alt_text": "",
+        "width": "975",
+        "height": "565",
+        "local_path": "data/categories/ra_family/ethernet/d7990364595fa35ac98b1796d83f6efe/images/0a2cc705763f0b9aae79a98e4fed7cc5.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/4b561922-c812-4a83-9af7-86fc0b303a10",
+        "alt_text": "",
+        "width": "975",
+        "height": "730",
+        "local_path": "data/categories/ra_family/ethernet/d7990364595fa35ac98b1796d83f6efe/images/6690044c1e3654fd9851452e93047ab9.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/067f2e6a-f2f8-4e61-93eb-c2afee9c9d22",
+        "alt_text": "",
+        "width": "975",
+        "height": "428",
+        "local_path": "data/categories/ra_family/ethernet/d7990364595fa35ac98b1796d83f6efe/images/033336ffcd445a485d7a35357b32ba62.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/98b8fc7e-0375-4673-924e-0028862f0ead",
+        "alt_text": "",
+        "width": "975",
+        "height": "222",
+        "local_path": "data/categories/ra_family/ethernet/d7990364595fa35ac98b1796d83f6efe/images/c8d2aef5311a6b13988b0123e44de9d3.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA / FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA / FSP"
+    ],
+    "links": [
+      {
+        "text": "https://community.renesas.com/mcu-mpu/ra/f/forum/33669/change-mac-address-in-ra6m5-microcontroller-during-runtime-after-freertos_ipinit-api-call/119993#119993",
+        "url": "https://community.renesas.com/mcu-mpu/ra/f/forum/33669/change-mac-address-in-ra6m5-microcontroller-during-runtime-after-freertos_ipinit-api-call/119993#119993"
+      }
+    ]
+  }
+}

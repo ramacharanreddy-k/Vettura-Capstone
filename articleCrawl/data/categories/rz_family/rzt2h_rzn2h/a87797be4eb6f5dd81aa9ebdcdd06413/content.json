@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21681487",
+    "title": "RZ/T2H, RZ/N2H: Access to peripherals",
+    "last_updated": "2025-07-02",
+    "extracted_at": "2025-03-08T23:49:36.683842"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat are the differences in functionality of the internal hardware that can be used by the CPU cores? What happens when multiple CPUs try to use the same feature at the same time?\nAnswer:\nThere is no difference in the peripherals of RZ/T2H or RZ/N2H hardware accessible by CPU cores. If the same peripheral device is used by multiple CPU cores, make sure to implement CPU exclusive control in software.\nSuitable Products\nRZ/T2H, RZ/N2H"
+      },
+      {
+        "type": "text",
+        "content": "What are the differences in functionality of the internal hardware that can be used by the CPU cores? What happens when multiple CPUs try to use the same feature at the same time?"
+      },
+      {
+        "type": "text",
+        "content": "What are the differences in functionality of the internal hardware that can be used by the CPU cores? What happens when multiple CPUs try to use the same feature at the same time?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThere is no difference in the peripherals of RZ/T2H or RZ/N2H hardware accessible by CPU cores. If the same peripheral device is used by multiple CPU cores, make sure to implement CPU exclusive control in software.\nSuitable Products\nRZ/T2H, RZ/N2H"
+      },
+      {
+        "type": "text",
+        "content": "There is no difference in the peripherals of RZ/T2H or RZ/N2H hardware accessible by CPU cores. If the same peripheral device is used by multiple CPU cores, make sure to implement CPU exclusive control in software."
+      },
+      {
+        "type": "text",
+        "content": "There is no difference in the peripherals of RZ/T2H or RZ/N2H hardware accessible by CPU cores. If the same peripheral device is used by multiple CPU cores, make sure to implement CPU exclusive control in software."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/T2H, RZ/N2H"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/T2H, RZ/N2H"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/T2H, RZ/N2H"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21662850"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21686003"
+      }
+    ]
+  }
+}

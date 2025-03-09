@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21789659",
+    "title": "RA Family: How to run code from external QSPI flash using XIP mode",
+    "last_updated": "2025-04-02",
+    "extracted_at": "2025-03-08T23:22:21.203943"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Answer:\nRA6 MCU device supports QSPI memory controller for connecting serial ROM such as serial flash memory and has an SPI compatible interface. The QSPI controls the XIP mode for serial flash using serial data signals. Thus it is possible to run the code from external QSPI flash memory using XIP mode.\nThe attached reference example code builds on voice-ra6e1 kit, this board is equipped with AT25SF64 QSPI flash memory and connected to MCU QSPI interface as below –\nTo configure the board for QSPI flash memory, the jumper setting needs to be selected as mentioned above.\nThe reference sample application performs initial configuration for the AT25SF64 and enables the QSPI XIP mode, and subsequently runs the “blinky_fun” function which is placed in QSPI section \".qspi_flash\" of  external flash memory.\nAfter loading the application into the MCU via e2studio, you can also confirm the QSPI external flash area through the memory view window of e2studio as below –\nEnvironment details of sample project:\nBoard:       Voice-ra6e1 kit\nFSP:          v5.5.0 or later\nIDE:           e2studio - 2024-07 (24.7.0) or later\nCompiler:  GCC - 12.2.1.arm-12-mpacbti-34 or later\nSuitable Products\nRA6E1"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRA6 MCU device supports QSPI memory controller for connecting serial ROM such as serial flash memory and has an SPI compatible interface. The QSPI controls the XIP mode for serial flash using serial data signals. Thus it is possible to run the code from external QSPI flash memory using XIP mode.\nThe attached reference example code builds on voice-ra6e1 kit, this board is equipped with AT25SF64 QSPI flash memory and connected to MCU QSPI interface as below –\nTo configure the board for QSPI flash memory, the jumper setting needs to be selected as mentioned above.\nThe reference sample application performs initial configuration for the AT25SF64 and enables the QSPI XIP mode, and subsequently runs the “blinky_fun” function which is placed in QSPI section \".qspi_flash\" of  external flash memory.\nAfter loading the application into the MCU via e2studio, you can also confirm the QSPI external flash area through the memory view window of e2studio as below –\nEnvironment details of sample project:\nBoard:       Voice-ra6e1 kit\nFSP:          v5.5.0 or later\nIDE:           e2studio - 2024-07 (24.7.0) or later\nCompiler:  GCC - 12.2.1.arm-12-mpacbti-34 or later\nSuitable Products\nRA6E1"
+      },
+      {
+        "type": "text",
+        "content": "RA6 MCU device supports QSPI memory controller for connecting serial ROM such as serial flash memory and has an SPI compatible interface. The QSPI controls the XIP mode for serial flash using serial data signals. Thus it is possible to run the code from external QSPI flash memory using XIP mode.\nThe attached reference example code builds on voice-ra6e1 kit, this board is equipped with AT25SF64 QSPI flash memory and connected to MCU QSPI interface as below –\nTo configure the board for QSPI flash memory, the jumper setting needs to be selected as mentioned above.\nThe reference sample application performs initial configuration for the AT25SF64 and enables the QSPI XIP mode, and subsequently runs the “blinky_fun” function which is placed in QSPI section \".qspi_flash\" of  external flash memory.\nAfter loading the application into the MCU via e2studio, you can also confirm the QSPI external flash area through the memory view window of e2studio as below –\nEnvironment details of sample project:\nBoard:       Voice-ra6e1 kit\nFSP:          v5.5.0 or later\nIDE:           e2studio - 2024-07 (24.7.0) or later\nCompiler:  GCC - 12.2.1.arm-12-mpacbti-34 or later"
+      },
+      {
+        "type": "text",
+        "content": "RA6 MCU device supports QSPI memory controller for connecting serial ROM such as serial flash memory and has an SPI compatible interface. The QSPI controls the XIP mode for serial flash using serial data signals. Thus it is possible to run the code from external QSPI flash memory using XIP mode."
+      },
+      {
+        "type": "text",
+        "content": "The attached reference example code builds on voice-ra6e1 kit, this board is equipped with AT25SF64 QSPI flash memory and connected to MCU QSPI interface as below –"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399049_1.png",
+          "alt_text": "",
+          "width": "698",
+          "height": "274",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/56b8d942e88e655c62d995783a04781a/images/33546e3a71a70457d7afa0743683b8ba.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "To configure the board for QSPI flash memory, the jumper setting needs to be selected as mentioned above."
+      },
+      {
+        "type": "text",
+        "content": "The reference sample application performs initial configuration for the AT25SF64 and enables the QSPI XIP mode, and subsequently runs the “blinky_fun” function which is placed in QSPI section \".qspi_flash\" of  external flash memory."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399049_2.png",
+          "alt_text": "",
+          "width": "525",
+          "height": "40",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/56b8d942e88e655c62d995783a04781a/images/d498529cd3cf59e3deb93e4de610118a.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "After loading the application into the MCU via e2studio, you can also confirm the QSPI external flash area through the memory view window of e2studio as below –"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399049_3.png",
+          "alt_text": "",
+          "width": "491",
+          "height": "176",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/56b8d942e88e655c62d995783a04781a/images/40e8725348c21bb7444d29076bf2830c.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Environment details of sample project:"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA6E1"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399049_1.png",
+        "alt_text": "",
+        "width": "698",
+        "height": "274",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/56b8d942e88e655c62d995783a04781a/images/33546e3a71a70457d7afa0743683b8ba.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399049_2.png",
+        "alt_text": "",
+        "width": "525",
+        "height": "40",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/56b8d942e88e655c62d995783a04781a/images/d498529cd3cf59e3deb93e4de610118a.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399049_3.png",
+        "alt_text": "",
+        "width": "491",
+        "height": "176",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/56b8d942e88e655c62d995783a04781a/images/40e8725348c21bb7444d29076bf2830c.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA6E1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA6E1"
+    ],
+    "links": [
+      {
+        "text": "Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21789663"
+      }
+    ]
+  }
+}

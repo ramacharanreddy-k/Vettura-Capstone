@@ -1,0 +1,33 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "Config Option",
+      "S-Cache control",
+      "C-Cache control",
+      "F-Cache control",
+      "Process time"
+    ],
+    [
+      "1",
+      "Enable*1",
+      "Enable",
+      "Enable",
+      "820us"
+    ],
+    [
+      "2",
+      "Disable",
+      "Enable",
+      "Enable",
+      "1.47ms"
+    ],
+    [
+      "3",
+      "Disable",
+      "Disable*1",
+      "Enable",
+      "2.46ms"
+    ]
+  ]
+}

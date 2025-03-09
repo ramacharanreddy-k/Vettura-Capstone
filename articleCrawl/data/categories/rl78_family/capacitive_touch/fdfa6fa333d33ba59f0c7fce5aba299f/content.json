@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20977343",
+    "title": "Unable to monitor on QE for Capacitive Touch via E2/E2 Lite emulator",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:56:45.802251"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nUnable to monitor on QE for Capacitive Touch via E2/E2 Lite emulator\nAnswer:\nPlease note that monitoring on QE for Capacitive Touch cannot be executed via the E2/E2 Lite emulator when the main system clock is set to a low frequency (less than 8 MHz).\nAlso, in case of RL78/G16, monitoring cannot be executed via 2/E2 Lite emulator, so please execute it using serial communication (UART).\nSuitable Products\nRL78/G23, RL78/G22, RL78/G16"
+      },
+      {
+        "type": "text",
+        "content": "Unable to monitor on QE for Capacitive Touch via E2/E2 Lite emulator"
+      },
+      {
+        "type": "text",
+        "content": "Unable to monitor on QE for Capacitive Touch via E2/E2 Lite emulator"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nPlease note that monitoring on QE for Capacitive Touch cannot be executed via the E2/E2 Lite emulator when the main system clock is set to a low frequency (less than 8 MHz).\nAlso, in case of RL78/G16, monitoring cannot be executed via 2/E2 Lite emulator, so please execute it using serial communication (UART).\nSuitable Products\nRL78/G23, RL78/G22, RL78/G16"
+      },
+      {
+        "type": "text",
+        "content": "Please note that monitoring on QE for Capacitive Touch cannot be executed via the E2/E2 Lite emulator when the main system clock is set to a low frequency (less than 8 MHz).\nAlso, in case of RL78/G16, monitoring cannot be executed via 2/E2 Lite emulator, so please execute it using serial communication (UART)."
+      },
+      {
+        "type": "text",
+        "content": "Please note that monitoring on QE for Capacitive Touch cannot be executed via the E2/E2 Lite emulator when the main system clock is set to a low frequency (less than 8 MHz)."
+      },
+      {
+        "type": "text",
+        "content": "Also, in case of RL78/G16, monitoring cannot be executed via 2/E2 Lite emulator, so please execute it using serial communication (UART)."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/G23, RL78/G22, RL78/G16"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G23, RL78/G22, RL78/G16"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G23, RL78/G22, RL78/G16"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20977349"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20977356"
+      }
+    ]
+  }
+}

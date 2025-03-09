@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20590551",
+    "title": "Resolution of images output from RZ/A3UL",
+    "last_updated": "2022-04-08",
+    "extracted_at": "2025-03-08T23:42:55.144496"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan the RZ/A3UL output Full HD (1920x1080) images?\nAnswer:\nImage output of a resolution of WXGA (1280x800) is permitted by the specifications of the RZ/A3UL.\nSuitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Can the RZ/A3UL output Full HD (1920x1080) images?"
+      },
+      {
+        "type": "text",
+        "content": "Can the RZ/A3UL output Full HD (1920x1080) images?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nImage output of a resolution of WXGA (1280x800) is permitted by the specifications of the RZ/A3UL.\nSuitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Image output of a resolution of WXGA (1280x800) is permitted by the specifications of the RZ/A3UL."
+      },
+      {
+        "type": "text",
+        "content": "Image output of a resolution of WXGA (1280x800) is permitted by the specifications of the RZ/A3UL."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A3UL"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A3UL"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20590559"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20590568"
+      }
+    ]
+  }
+}

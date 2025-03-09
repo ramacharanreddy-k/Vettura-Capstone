@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21450120",
+    "title": "RX Family: Is it possible to skip the failed leaf device and continue updating the other leaf devices using Azure cloud?",
+    "last_updated": "2024-07-08",
+    "extracted_at": "2025-03-09T00:23:24.620802"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhen updating leaf devices with Azure RTOS ver. 6.2.1 or earlier, if one of the devices fails to update the firmware, consecutive updates on other devices are stopped.\nIn such a situation, how can I apply the firmware update to the following  leaf devices?\nAnswer:\nOn Azure RTOS ver. 6.2.1 or earlier, when OTA fails on one of the leaf devices, the updating process terminates at that point even if the next device is listed.\nRenesas reported this issue to Microsoft issue and received a patch for the Azure RTOS ver.6.2.1.\nThis patch will allow the update process to continue by skipping the faulted device.\nFigure 1. Overview of leaf device update\nFigure 2. The process for  leaf device update before and after applying the patch.\nRenesas can provide the patch on request, please contact your Renesas FAE or use our online support for further information.\nThis issue is fixed on Azure RTOS ver.6.3.0.\nPlease note, user can apply patch to Azure RTOS ver.6.2.1 or use the latest version for RX to overcome from such scenario.\nMore information about the Leaf Update (secondary OTA) can be found from the below link -\nhttps://www.renesas.com/document/apn/rx-family-sample-code-secondary-ota-update-using-microsoft-azure-adu-rev100\nSuitable Products\nRX65N, RX"
+      },
+      {
+        "type": "text",
+        "content": "When updating leaf devices with Azure RTOS ver. 6.2.1 or earlier, if one of the devices fails to update the firmware, consecutive updates on other devices are stopped.\nIn such a situation, how can I apply the firmware update to the following  leaf devices?"
+      },
+      {
+        "type": "text",
+        "content": "When updating leaf devices with Azure RTOS ver. 6.2.1 or earlier, if one of the devices fails to update the firmware, consecutive updates on other devices are stopped.\nIn such a situation, how can I apply the firmware update to the following  leaf devices?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nOn Azure RTOS ver. 6.2.1 or earlier, when OTA fails on one of the leaf devices, the updating process terminates at that point even if the next device is listed.\nRenesas reported this issue to Microsoft issue and received a patch for the Azure RTOS ver.6.2.1.\nThis patch will allow the update process to continue by skipping the faulted device.\nFigure 1. Overview of leaf device update\nFigure 2. The process for  leaf device update before and after applying the patch.\nRenesas can provide the patch on request, please contact your Renesas FAE or use our online support for further information.\nThis issue is fixed on Azure RTOS ver.6.3.0.\nPlease note, user can apply patch to Azure RTOS ver.6.2.1 or use the latest version for RX to overcome from such scenario.\nMore information about the Leaf Update (secondary OTA) can be found from the below link -\nhttps://www.renesas.com/document/apn/rx-family-sample-code-secondary-ota-update-using-microsoft-azure-adu-rev100\nSuitable Products\nRX65N, RX"
+      },
+      {
+        "type": "text",
+        "content": "On Azure RTOS ver. 6.2.1 or earlier, when OTA fails on one of the leaf devices, the updating process terminates at that point even if the next device is listed.\nRenesas reported this issue to Microsoft issue and received a patch for the Azure RTOS ver.6.2.1.\nThis patch will allow the update process to continue by skipping the faulted device.\nFigure 1. Overview of leaf device update\nFigure 2. The process for  leaf device update before and after applying the patch.\nRenesas can provide the patch on request, please contact your Renesas FAE or use our online support for further information.\nThis issue is fixed on Azure RTOS ver.6.3.0.\nPlease note, user can apply patch to Azure RTOS ver.6.2.1 or use the latest version for RX to overcome from such scenario.\nMore information about the Leaf Update (secondary OTA) can be found from the below link -\nhttps://www.renesas.com/document/apn/rx-family-sample-code-secondary-ota-update-using-microsoft-azure-adu-rev100\nSuitable Products"
+      },
+      {
+        "type": "text",
+        "content": "On Azure RTOS ver. 6.2.1 or earlier, when OTA fails on one of the leaf devices, the updating process terminates at that point even if the next device is listed."
+      },
+      {
+        "type": "text",
+        "content": "Renesas reported this issue to Microsoft issue and received a patch for the Azure RTOS ver.6.2.1."
+      },
+      {
+        "type": "text",
+        "content": "This patch will allow the update process to continue by skipping the faulted device."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/389153-1.png",
+          "alt_text": "",
+          "width": "477",
+          "height": "327",
+          "local_path": "data/categories/rx_family/others/66b8e403181e3afaf8bcbe519679c4f5/images/52a7e611ce022a6c036d6eefa9a2ab19.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 1. Overview of leaf device update"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/389153-2.png",
+          "alt_text": "",
+          "width": "706",
+          "height": "489",
+          "local_path": "data/categories/rx_family/others/66b8e403181e3afaf8bcbe519679c4f5/images/fbf53e7d6b39b2f5836299f3f26f667d.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 2. The process for  leaf device update before and after applying the patch."
+      },
+      {
+        "type": "text",
+        "content": "Renesas can provide the patch on request, please contact your Renesas FAE or use our online support for further information."
+      },
+      {
+        "type": "text",
+        "content": "This issue is fixed on Azure RTOS ver.6.3.0."
+      },
+      {
+        "type": "text",
+        "content": "Please note, user can apply patch to Azure RTOS ver.6.2.1 or use the latest version for RX to overcome from such scenario."
+      },
+      {
+        "type": "text",
+        "content": "More information about the Leaf Update (secondary OTA) can be found from the below link -"
+      },
+      {
+        "type": "text",
+        "content": "https://www.renesas.com/document/apn/rx-family-sample-code-secondary-ota-update-using-microsoft-azure-adu-rev100"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RX65N, RX"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/389153-1.png",
+        "alt_text": "",
+        "width": "477",
+        "height": "327",
+        "local_path": "data/categories/rx_family/others/66b8e403181e3afaf8bcbe519679c4f5/images/52a7e611ce022a6c036d6eefa9a2ab19.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/389153-2.png",
+        "alt_text": "",
+        "width": "706",
+        "height": "489",
+        "local_path": "data/categories/rx_family/others/66b8e403181e3afaf8bcbe519679c4f5/images/fbf53e7d6b39b2f5836299f3f26f667d.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX65N, RX"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX65N, RX"
+    ],
+    "links": [
+      {
+        "text": "online support",
+        "url": "https://en-support.renesas.com/createticket"
+      },
+      {
+        "text": "https://www.renesas.com/document/apn/rx-family-sample-code-secondary-ota-update-using-microsoft-azure-adu-rev100",
+        "url": "https://www.renesas.com/document/apn/rx-family-sample-code-secondary-ota-update-using-microsoft-azure-adu-rev100"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21450123"
+      }
+    ]
+  }
+}

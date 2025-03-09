@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20459401",
+    "title": "When using USBX Host Printer Class, UX_NO_TD_AVAILABLE error occurs",
+    "last_updated": "2022-05-04",
+    "extracted_at": "2025-03-08T23:25:25.639024"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhen using USBX Host Printer Class, UX_NO_TD_AVAILABLE error occurs\nAnswer:\nIf the number of TDs (Transfer Descriptor)s is insufficient, the UX_NO_TD_AVAILABLE error occurs. If wMaxPacketSize is small (eg 8 bytes), many TDs are needed. Setting a large number of TDs will eliminate the error. The Maximum TDs (default value is 128) can be defined in the USBX Source property. See “USBX Source Component Overview” in the SSP Users Manual.\n  Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "When using USBX Host Printer Class, UX_NO_TD_AVAILABLE error occurs"
+      },
+      {
+        "type": "text",
+        "content": "When using USBX Host Printer Class, UX_NO_TD_AVAILABLE error occurs"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIf the number of TDs (Transfer Descriptor)s is insufficient, the UX_NO_TD_AVAILABLE error occurs. If wMaxPacketSize is small (eg 8 bytes), many TDs are needed. Setting a large number of TDs will eliminate the error. The Maximum TDs (default value is 128) can be defined in the USBX Source property. See “USBX Source Component Overview” in the SSP Users Manual.\n  Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "If the number of TDs (Transfer Descriptor)s is insufficient, the UX_NO_TD_AVAILABLE error occurs. If wMaxPacketSize is small (eg 8 bytes), many TDs are needed. Setting a large number of TDs will eliminate the error. The Maximum TDs (default value is 128) can be defined in the USBX Source property. See “USBX Source Component Overview” in the SSP Users Manual."
+      },
+      {
+        "type": "text",
+        "content": "If the number of TDs (Transfer Descriptor)s is insufficient, the UX_NO_TD_AVAILABLE error occurs. If wMaxPacketSize is small (eg 8 bytes), many TDs are needed. Setting a large number of TDs will eliminate the error. The Maximum TDs (default value is 128) can be defined in the USBX Source property. See “USBX Source Component Overview” in the SSP Users Manual."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/348657.png",
+          "alt_text": "",
+          "width": "795",
+          "height": "317",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/22e1c8081711a1e3ff1a1860fa7ced4f/images/6aea1a04b7917f35d212489e4b52e9cb.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/348657.png",
+        "alt_text": "",
+        "width": "795",
+        "height": "317",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/22e1c8081711a1e3ff1a1860fa7ced4f/images/6aea1a04b7917f35d212489e4b52e9cb.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20459395"
+      }
+    ]
+  }
+}

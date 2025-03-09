@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20352688",
+    "title": "RZ/V: Errors in DRP-AI Translator",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:50:50.046960"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nAn error occurred when an AI model in ONNX format was converted using DRP-AI Translator. \nWhat should I do next?\nAnswer:\nDetermine the cause of the error from the error code. \nIf you are using an operator that is not supported by the DRP-AI, replace it with another operator. \nFor the supported operators, refer to the User's Manual for DRP-AI Translator.\nSuitable Products\nRZ/V2L, RZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "An error occurred when an AI model in ONNX format was converted using DRP-AI Translator. \nWhat should I do next?"
+      },
+      {
+        "type": "text",
+        "content": "An error occurred when an AI model in ONNX format was converted using DRP-AI Translator. \nWhat should I do next?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nDetermine the cause of the error from the error code. \nIf you are using an operator that is not supported by the DRP-AI, replace it with another operator. \nFor the supported operators, refer to the User's Manual for DRP-AI Translator.\nSuitable Products\nRZ/V2L, RZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "Determine the cause of the error from the error code. \nIf you are using an operator that is not supported by the DRP-AI, replace it with another operator. \nFor the supported operators, refer to the User's Manual for DRP-AI Translator."
+      },
+      {
+        "type": "text",
+        "content": "Determine the cause of the error from the error code. \nIf you are using an operator that is not supported by the DRP-AI, replace it with another operator. \nFor the supported operators, refer to the User's Manual for DRP-AI Translator."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V2L, RZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V2L, RZ/V2M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V2L, RZ/V2M"
+    ],
+    "links": [
+      {
+        "text": "User's Manual for DRP-AI Translator",
+        "url": "https://www.renesas.com/us/en/document/mas/rzv2m-drp-ai-driver-users-manual-revision-100"
+      },
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20352674"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20352698"
+      }
+    ]
+  }
+}

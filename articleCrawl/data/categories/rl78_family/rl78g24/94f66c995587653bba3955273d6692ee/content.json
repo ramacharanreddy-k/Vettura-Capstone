@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21062254",
+    "title": "Compatibility with existing products",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:52:53.564930"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs the RL78/G24 compatible with existing RL78 products?\nAnswer:\nThe CPU core is the same as RL78/G14, etc. The pin layout is also compatible with RL78/G14.\nSuitable Products\nRL78/G24"
+      },
+      {
+        "type": "text",
+        "content": "Is the RL78/G24 compatible with existing RL78 products?"
+      },
+      {
+        "type": "text",
+        "content": "Is the RL78/G24 compatible with existing RL78 products?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe CPU core is the same as RL78/G14, etc. The pin layout is also compatible with RL78/G14.\nSuitable Products\nRL78/G24"
+      },
+      {
+        "type": "text",
+        "content": "The CPU core is the same as RL78/G14, etc. The pin layout is also compatible with RL78/G14."
+      },
+      {
+        "type": "text",
+        "content": "The CPU core is the same as RL78/G14, etc. The pin layout is also compatible with RL78/G14."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/G24"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G24"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G24"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21062261"
+      }
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20629338",
+    "title": "RA Family: Transmission of Zero Packet Length on USB",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:12:06.147747"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "The end of USB data transfer is determined by one of the following conditions."
+      },
+      {
+        "type": "text",
+        "content": "Now considering the case where the data length to be transferred is not pre-defined between the USB host and the USB device and the length is a multiple of wMaxPacketSize, the condition (b) above is not to be satisfied. In this case, a zero-length packet is appended to satisfy the condition (c)."
+      },
+      {
+        "type": "text",
+        "content": "Note: The maximum length of a USB packet to or from a USB endpoint is limited to the value of the wMaxPacketSize field of the endpoint's descriptor."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nFSP"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nFSP"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nFSP"
+      },
+      {
+        "type": "text",
+        "content": "Source:"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "FSP"
+    ],
+    "links": []
+  }
+}

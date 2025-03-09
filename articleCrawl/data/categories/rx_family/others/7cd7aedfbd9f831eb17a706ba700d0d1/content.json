@@ -1,0 +1,201 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20940280",
+    "title": "Is there a way in which I can use a debugger to check the data drawn in a frame buffer?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:24:19.723975"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there a way in which I can use a debugger to check the data drawn in a frame buffer?\nAnswer:\nIf you are using e2 studio, you can check drawn data by using the [Memory] view.\nNote: This method is unavailable for CLUT8, CLUT4, and other color depths that require a color palette.\n1. From the menu bar, select [Window] > [Display View] > [Memory] to open the [Memory] view.\n  2. In the [Memory] view, specify the settings so that the first address of a frame buffer is monitored.\n  3. In the [New Rendering] tab, select [RAW Image], and then add a new rendering.\n  4. Click the [Raw Image Format] button.\n  5. Specify the size and encoding of the image to be displayed (in this example, RGB565 is specified as the encoding), and then click [OK].\n  After a while, an image will appear.\nThe following example shows an image that appears when the display adjustment function is used in QE for Display.\nSuitable Products\nRX Family\n  日本語"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nIs there a way in which I can use a debugger to check the data drawn in a frame buffer?\nAnswer:\nIf you are using e2 studio, you can check drawn data by using the [Memory] view.\nNote: This method is unavailable for CLUT8, CLUT4, and other color depths that require a color palette.\n1. From the menu bar, select [Window] > [Display View] > [Memory] to open the [Memory] view.\n  2. In the [Memory] view, specify the settings so that the first address of a frame buffer is monitored.\n  3. In the [New Rendering] tab, select [RAW Image], and then add a new rendering.\n  4. Click the [Raw Image Format] button.\n  5. Specify the size and encoding of the image to be displayed (in this example, RGB565 is specified as the encoding), and then click [OK].\n  After a while, an image will appear.\nThe following example shows an image that appears when the display adjustment function is used in QE for Display.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Is there a way in which I can use a debugger to check the data drawn in a frame buffer?"
+      },
+      {
+        "type": "text",
+        "content": "Is there a way in which I can use a debugger to check the data drawn in a frame buffer?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIf you are using e2 studio, you can check drawn data by using the [Memory] view.\nNote: This method is unavailable for CLUT8, CLUT4, and other color depths that require a color palette.\n1. From the menu bar, select [Window] > [Display View] > [Memory] to open the [Memory] view.\n  2. In the [Memory] view, specify the settings so that the first address of a frame buffer is monitored.\n  3. In the [New Rendering] tab, select [RAW Image], and then add a new rendering.\n  4. Click the [Raw Image Format] button.\n  5. Specify the size and encoding of the image to be displayed (in this example, RGB565 is specified as the encoding), and then click [OK].\n  After a while, an image will appear.\nThe following example shows an image that appears when the display adjustment function is used in QE for Display.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "If you are using e2 studio, you can check drawn data by using the [Memory] view.\nNote: This method is unavailable for CLUT8, CLUT4, and other color depths that require a color palette.\n1. From the menu bar, select [Window] > [Display View] > [Memory] to open the [Memory] view.\n  2. In the [Memory] view, specify the settings so that the first address of a frame buffer is monitored.\n  3. In the [New Rendering] tab, select [RAW Image], and then add a new rendering.\n  4. Click the [Raw Image Format] button.\n  5. Specify the size and encoding of the image to be displayed (in this example, RGB565 is specified as the encoding), and then click [OK].\n  After a while, an image will appear.\nThe following example shows an image that appears when the display adjustment function is used in QE for Display."
+      },
+      {
+        "type": "text",
+        "content": "If you are using e2 studio, you can check drawn data by using the [Memory] view.\nNote: This method is unavailable for CLUT8, CLUT4, and other color depths that require a color palette."
+      },
+      {
+        "type": "text",
+        "content": "1. From the menu bar, select [Window] > [Display View] > [Memory] to open the [Memory] view."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370049.png",
+          "alt_text": "",
+          "width": "409",
+          "height": "476",
+          "local_path": "data/categories/rx_family/others/7cd7aedfbd9f831eb17a706ba700d0d1/images/687fedfcce2f9beebff26e8d68a77377.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "2. In the [Memory] view, specify the settings so that the first address of a frame buffer is monitored."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370049-2.png",
+          "alt_text": "",
+          "width": "621",
+          "height": "716",
+          "local_path": "data/categories/rx_family/others/7cd7aedfbd9f831eb17a706ba700d0d1/images/3cd62b8ebfe450eca7b607238be800f5.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "3. In the [New Rendering] tab, select [RAW Image], and then add a new rendering."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370049-3.png",
+          "alt_text": "",
+          "width": "942",
+          "height": "527",
+          "local_path": "data/categories/rx_family/others/7cd7aedfbd9f831eb17a706ba700d0d1/images/34f9039af9fe5c1a6aff18e6127ed7bf.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "4. Click the [Raw Image Format] button."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370049-4.png",
+          "alt_text": "",
+          "width": "820",
+          "height": "470",
+          "local_path": "data/categories/rx_family/others/7cd7aedfbd9f831eb17a706ba700d0d1/images/5a74f74e4d4f6e25e8ec31e6130b9e47.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "5. Specify the size and encoding of the image to be displayed (in this example, RGB565 is specified as the encoding), and then click [OK]."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370049-5.png",
+          "alt_text": "",
+          "width": "591",
+          "height": "555",
+          "local_path": "data/categories/rx_family/others/7cd7aedfbd9f831eb17a706ba700d0d1/images/0a843c77b4df91605afe3c023aeb7590.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "After a while, an image will appear.\nThe following example shows an image that appears when the display adjustment function is used in QE for Display."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370049-6.png",
+          "alt_text": "",
+          "width": "851",
+          "height": "383",
+          "local_path": "data/categories/rx_family/others/7cd7aedfbd9f831eb17a706ba700d0d1/images/6af1e09e718b5d1b4547830bd8c632be.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370049.png",
+        "alt_text": "",
+        "width": "409",
+        "height": "476",
+        "local_path": "data/categories/rx_family/others/7cd7aedfbd9f831eb17a706ba700d0d1/images/687fedfcce2f9beebff26e8d68a77377.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370049-2.png",
+        "alt_text": "",
+        "width": "621",
+        "height": "716",
+        "local_path": "data/categories/rx_family/others/7cd7aedfbd9f831eb17a706ba700d0d1/images/3cd62b8ebfe450eca7b607238be800f5.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370049-3.png",
+        "alt_text": "",
+        "width": "942",
+        "height": "527",
+        "local_path": "data/categories/rx_family/others/7cd7aedfbd9f831eb17a706ba700d0d1/images/34f9039af9fe5c1a6aff18e6127ed7bf.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370049-4.png",
+        "alt_text": "",
+        "width": "820",
+        "height": "470",
+        "local_path": "data/categories/rx_family/others/7cd7aedfbd9f831eb17a706ba700d0d1/images/5a74f74e4d4f6e25e8ec31e6130b9e47.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370049-5.png",
+        "alt_text": "",
+        "width": "591",
+        "height": "555",
+        "local_path": "data/categories/rx_family/others/7cd7aedfbd9f831eb17a706ba700d0d1/images/0a843c77b4df91605afe3c023aeb7590.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370049-6.png",
+        "alt_text": "",
+        "width": "851",
+        "height": "383",
+        "local_path": "data/categories/rx_family/others/7cd7aedfbd9f831eb17a706ba700d0d1/images/6af1e09e718b5d1b4547830bd8c632be.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20857264"
+      }
+    ]
+  }
+}

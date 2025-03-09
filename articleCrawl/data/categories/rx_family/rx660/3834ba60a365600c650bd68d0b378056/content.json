@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20590532",
+    "title": "Sample software",
+    "last_updated": "2022-02-08",
+    "extracted_at": "2025-03-09T00:03:06.172443"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there any sample software for the RX660?\nAnswer:\nThe following sample software is provided.\nTarget Board for RX660 LED Lighting Control Program (R20AN0658)\nRenesas Starter Kit for RX660 LED Lighting Control Program\nInitial Register Setting Program (R01AN6015)\nSuitable Products\nRX660"
+      },
+      {
+        "type": "text",
+        "content": "Is there any sample software for the RX660?"
+      },
+      {
+        "type": "text",
+        "content": "Is there any sample software for the RX660?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe following sample software is provided.\nTarget Board for RX660 LED Lighting Control Program (R20AN0658)\nRenesas Starter Kit for RX660 LED Lighting Control Program\nInitial Register Setting Program (R01AN6015)\nSuitable Products\nRX660"
+      },
+      {
+        "type": "text",
+        "content": "The following sample software is provided.\nTarget Board for RX660 LED Lighting Control Program (R20AN0658)\nRenesas Starter Kit for RX660 LED Lighting Control Program\nInitial Register Setting Program (R01AN6015)"
+      },
+      {
+        "type": "text",
+        "content": "The following sample software is provided."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX660"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX660"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX660"
+    ],
+    "links": [
+      {
+        "text": "Target Board for RX660 LED Lighting Control Program (R20AN0658)",
+        "url": "https://www.renesas.com/us/en/document/apn/rx660-group-target-board-rx660-led-blink-control-program-rev100-sample-code?language=en&r=1618116"
+      },
+      {
+        "text": "Renesas Starter Kit for RX660 LED Lighting Control Program",
+        "url": "https://www.renesas.com/us/en/document/scd/rx660-renesas-starter-kit-sample-code-e-studio-cc-rx-rev100-sample-code?language=en&r=1620446"
+      },
+      {
+        "text": "Initial Register Setting Program (R01AN6015)",
+        "url": "https://www.renesas.com/us/en/document/apn/rx660-group-initial-settings-example"
+      },
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20590537"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20590543"
+      }
+    ]
+  }
+}

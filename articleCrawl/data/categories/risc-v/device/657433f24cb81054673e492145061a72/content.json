@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20626300",
+    "title": "I can’t find the part number of the device in any distributor stock; how can I purchase it?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:24:56.611688"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI can’t find the part number of the device in any distributor stock; how can I purchase it?\nAnswer:\nThe generic part number of the motor control ASSP is R9A02G0204GNH.\nHowever, the full part number includes a ROM code made of 3 digits (one letter and two numbers) which identify the application software programmed in the device at factory. So, for example, for a specific application, the full part number of the product might be R9A02G0204D01GNH where D01 identifies the ROM (application firmware) code.\nThe ROM code is specified according to the specific motor control application and functionality implemented. Please contact your renesas sales representative for more information.\nSuitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "I can’t find the part number of the device in any distributor stock; how can I purchase it?"
+      },
+      {
+        "type": "text",
+        "content": "I can’t find the part number of the device in any distributor stock; how can I purchase it?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe generic part number of the motor control ASSP is R9A02G0204GNH.\nHowever, the full part number includes a ROM code made of 3 digits (one letter and two numbers) which identify the application software programmed in the device at factory. So, for example, for a specific application, the full part number of the product might be R9A02G0204D01GNH where D01 identifies the ROM (application firmware) code.\nThe ROM code is specified according to the specific motor control application and functionality implemented. Please contact your renesas sales representative for more information.\nSuitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "The generic part number of the motor control ASSP is R9A02G0204GNH.\nHowever, the full part number includes a ROM code made of 3 digits (one letter and two numbers) which identify the application software programmed in the device at factory. So, for example, for a specific application, the full part number of the product might be R9A02G0204D01GNH where D01 identifies the ROM (application firmware) code.\nThe ROM code is specified according to the specific motor control application and functionality implemented. Please contact your renesas sales representative for more information."
+      },
+      {
+        "type": "text",
+        "content": "The generic part number of the motor control ASSP is R9A02G0204GNH."
+      },
+      {
+        "type": "text",
+        "content": "However, the full part number includes a ROM code made of 3 digits (one letter and two numbers) which identify the application software programmed in the device at factory. So, for example, for a specific application, the full part number of the product might be R9A02G0204D01GNH where D01 identifies the ROM (application firmware) code."
+      },
+      {
+        "type": "text",
+        "content": "The ROM code is specified according to the specific motor control application and functionality implemented. Please contact your renesas sales representative for more information."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RISC-V ASSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RISC-V ASSP"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20626319"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20628060"
+      }
+    ]
+  }
+}

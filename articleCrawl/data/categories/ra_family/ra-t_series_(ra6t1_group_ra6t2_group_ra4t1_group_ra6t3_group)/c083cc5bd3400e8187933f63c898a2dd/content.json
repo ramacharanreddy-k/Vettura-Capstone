@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21603105",
+    "title": "RA6T2: Development tools for HV inverter kit",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:32:47.458259"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat kind of tools can I get for HV inverter kit?\nAnswer:\nRenesas are offering sensor-less vector control sample code, app note that described sample code contents, schematics, BOM list and Gerber data on Renesas.com.\nhttps://www.renesas.com/RTK0EM0000B14030BJ\nSuitable Products\nRA6T2"
+      },
+      {
+        "type": "text",
+        "content": "What kind of tools can I get for HV inverter kit?"
+      },
+      {
+        "type": "text",
+        "content": "What kind of tools can I get for HV inverter kit?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRenesas are offering sensor-less vector control sample code, app note that described sample code contents, schematics, BOM list and Gerber data on Renesas.com.\nhttps://www.renesas.com/RTK0EM0000B14030BJ\nSuitable Products\nRA6T2"
+      },
+      {
+        "type": "text",
+        "content": "Renesas are offering sensor-less vector control sample code, app note that described sample code contents, schematics, BOM list and Gerber data on Renesas.com.\nhttps://www.renesas.com/RTK0EM0000B14030BJ"
+      },
+      {
+        "type": "text",
+        "content": "Renesas are offering sensor-less vector control sample code, app note that described sample code contents, schematics, BOM list and Gerber data on Renesas.com."
+      },
+      {
+        "type": "text",
+        "content": "https://www.renesas.com/RTK0EM0000B14030BJ"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA6T2"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA6T2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA6T2"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/RTK0EM0000B14030BJ",
+        "url": "https://www.renesas.com/RTK0EM0000B14030BJ"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21603113"
+      }
+    ]
+  }
+}

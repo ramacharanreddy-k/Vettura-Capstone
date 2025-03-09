@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21225584",
+    "title": "RH850 Secure Key Storage",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:29:22.414893"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI am using rh850-f1km-s4. I would also like to know, what are the other interfaces (other than ICUM) and external interfaces that can read out the  data/keys stored in secure Data Flash ? Those interfaces can be : Debugger (secure/ non secure) , Flash reader/programmer etc that we need to disable to protect the keys if any.\nAnswer:\nFor the debugger: if the ICUM is not protected by C&R(Challenge-Response (C&R) authentication), the debugger would have access to the secure Data Flash once it passed the initial protection of the debugging interface with the OCDID. If the protection is required, the C&R for the ICU-M needs to be activated. Also the upgrade protection 2 should be activated, as otherwise it would be possible to deactivate the ICU-M by rewriting the option bytes.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nI am using rh850-f1km-s4. I would also like to know, what are the other interfaces (other than ICUM) and external interfaces that can read out the  data/keys stored in secure Data Flash ? Those interfaces can be : Debugger (secure/ non secure) , Flash reader/programmer etc that we need to disable to protect the keys if any.\nAnswer:\nFor the debugger: if the ICUM is not protected by C&R(Challenge-Response (C&R) authentication), the debugger would have access to the secure Data Flash once it passed the initial protection of the debugging interface with the OCDID. If the protection is required, the C&R for the ICU-M needs to be activated. Also the upgrade protection 2 should be activated, as otherwise it would be possible to deactivate the ICU-M by rewriting the option bytes.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "I am using rh850-f1km-s4. I would also like to know, what are the other interfaces (other than ICUM) and external interfaces that can read out the  data/keys stored in secure Data Flash ? Those interfaces can be : Debugger (secure/ non secure) , Flash reader/programmer etc that we need to disable to protect the keys if any."
+      },
+      {
+        "type": "text",
+        "content": "I am using rh850-f1km-s4. I would also like to know, what are the other interfaces (other than ICUM) and external interfaces that can read out the  data/keys stored in secure Data Flash ? Those interfaces can be : Debugger (secure/ non secure) , Flash reader/programmer etc that we need to disable to protect the keys if any."
+      },
+      {
+        "type": "text",
+        "content": "I am using"
+      },
+      {
+        "type": "text",
+        "content": "rh850-f1km-s4. I would also like to know, what are the other interfaces (other than ICUM) and external interfaces that can read out the  data/keys stored in secure Data Flash ? Those interfaces can be : Debugger (secure/ non secure) , Flash reader/programmer etc that we need to disable to protect the keys if any."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nFor the debugger: if the ICUM is not protected by C&R(Challenge-Response (C&R) authentication), the debugger would have access to the secure Data Flash once it passed the initial protection of the debugging interface with the OCDID. If the protection is required, the C&R for the ICU-M needs to be activated. Also the upgrade protection 2 should be activated, as otherwise it would be possible to deactivate the ICU-M by rewriting the option bytes.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "For the debugger: if the ICUM is not protected by C&R(Challenge-Response (C&R) authentication), the debugger would have access to the secure Data Flash once it passed the initial protection of the debugging interface with the OCDID. If the protection is required, the C&R for the ICU-M needs to be activated. Also the upgrade protection 2 should be activated, as otherwise it would be possible to deactivate the ICU-M by rewriting the option bytes."
+      },
+      {
+        "type": "text",
+        "content": "For the debugger: if the ICUM is not protected by C&R(Challenge-Response (C&R) authentication), the debugger would have access to the secure Data Flash once it passed the initial protection of the debugging interface with the OCDID. If the protection is required, the C&R for the ICU-M needs to be activated. Also the upgrade protection 2 should be activated, as otherwise it would be possible to deactivate the ICU-M by rewriting the option bytes."
+      },
+      {
+        "type": "text",
+        "content": "For the debugger: if the ICUM is not protected by C&R("
+      },
+      {
+        "type": "text",
+        "content": "Challenge-Response (C&R) authentication"
+      },
+      {
+        "type": "text",
+        "content": "), the debugger would have access to the secure Data Flash once it passed the initial protection of the debugging interface with the OCDID. If the protection is required, the C&R for the ICU-M needs to be activated. Also the upgrade protection 2 should be activated, as otherwise it would be possible to deactivate the ICU-M by rewriting the option bytes."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850"
+    ],
+    "links": []
+  }
+}

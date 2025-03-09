@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20977337",
+    "title": "Precautions when Developing Touch Functions with the RL78/G16",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:54:00.310568"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nAre there any precautions when developing touch functions on the RL78/G16?\nAnswer:\nTuning and monitoring functions by QE for Capacitive Touch must be executed using serial communication (UART). (They cannot be executed via the E2/E2 Lite emulator.)\nAlso, monitoring via serial communication (UART) cannot be executed with variable values registered in IDE functions (e2 studio: Expression View, CS+: watch-expression).\nPlease also refer to the table below.\n  Suitable Products\nRL78/G16"
+      },
+      {
+        "type": "text",
+        "content": "Are there any precautions when developing touch functions on the RL78/G16?"
+      },
+      {
+        "type": "text",
+        "content": "Are there any precautions when developing touch functions on the RL78/G16?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nTuning and monitoring functions by QE for Capacitive Touch must be executed using serial communication (UART). (They cannot be executed via the E2/E2 Lite emulator.)\nAlso, monitoring via serial communication (UART) cannot be executed with variable values registered in IDE functions (e2 studio: Expression View, CS+: watch-expression).\nPlease also refer to the table below.\n  Suitable Products\nRL78/G16"
+      },
+      {
+        "type": "text",
+        "content": "Tuning and monitoring functions by QE for Capacitive Touch must be executed using serial communication (UART). (They cannot be executed via the E2/E2 Lite emulator.)\nAlso, monitoring via serial communication (UART) cannot be executed with variable values registered in IDE functions (e2 studio: Expression View, CS+: watch-expression).\nPlease also refer to the table below."
+      },
+      {
+        "type": "text",
+        "content": "Tuning and monitoring functions by QE for Capacitive Touch must be executed using serial communication (UART). (They cannot be executed via the E2/E2 Lite emulator.)"
+      },
+      {
+        "type": "text",
+        "content": "Also, monitoring via serial communication (UART) cannot be executed with variable values registered in IDE functions (e2 studio: Expression View, CS+: watch-expression)."
+      },
+      {
+        "type": "text",
+        "content": "Please also refer to the table below."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372025.png",
+          "alt_text": "",
+          "width": "894",
+          "height": "309",
+          "local_path": "data/categories/rl78_family/rl78g16/c16698da0408a214bcadc398c7d4e79f/images/6df500e8e194807dee4b1120e8ec4eeb.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/G16"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372025.png",
+        "alt_text": "",
+        "width": "894",
+        "height": "309",
+        "local_path": "data/categories/rl78_family/rl78g16/c16698da0408a214bcadc398c7d4e79f/images/6df500e8e194807dee4b1120e8ec4eeb.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G16"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G16"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20977345"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20977352"
+      }
+    ]
+  }
+}

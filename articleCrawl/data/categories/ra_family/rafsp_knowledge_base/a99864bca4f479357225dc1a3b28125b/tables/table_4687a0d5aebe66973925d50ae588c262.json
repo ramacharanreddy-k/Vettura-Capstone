@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "// Open Each device\ng_comms_i2c_device0.p_api->open(g_comms_i2c_device0.p_ctrl, g_comms_i2c_device0.p_cfg);\ng_comms_i2c_device1.p_api->open(g_comms_i2c_device1.p_ctrl, g_comms_i2c_device1.p_cfg);\n  // Call I2C Communication Device Write or Read to communicate with Device(0x44)\ng_comms_i2c_device0.p_api->write(...);\ng_comms_i2c_device0.p_api->read(...);\n  // Call I2C Communication Device Write or Read to communicate with Device(0x55)\ng_comms_i2c_device1.p_api->write(...);\ng_comms_i2c_device1.p_api->read(...);"
+    ]
+  ]
+}

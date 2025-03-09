@@ -1,0 +1,232 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21789661",
+    "title": "RA Family: How to use SPI Burst Mode?",
+    "last_updated": "2025-04-02",
+    "extracted_at": "2025-03-08T23:22:27.544396"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow do I configure SPI to implement the following waveform in the manual on RA6M4?\nAnswer:\nTo achieve the waveform shown in the figure, the SPI Burst Transfer needs to be used. The specific configuration method is:\nBefore the last transmission, update SPCMD_b[0].SSLKP from 1 to 0. One transmission represents the number of data bits specified by the bits [11:8]-SPB[3:0] (SPI Data Length Setting) of the register SPCMDm.\nPlease update the SPI-related API as follows (add the content between #if 1 and #endif). The r_spi_transmit function is located in the ra\\fsp\\src\\r_spi\\r_spi.c file.\nstatic void r_spi_transmit (spi_instance_ctrl_t * p_ctrl)\n{   \n    uint32_t tx_count = p_ctrl->tx_count;   \n    if (tx_count == p_ctrl->count)   \n    {       \n        return;   \n    }\n#if 1   // added for burst transmit\n    if (tx_count == p_ctrl->count-1)   \n    {       \n        p_ctrl->p_regs->SPCMD_b[0].SSLKP = 0;   \n    }\n#endif\n  Note that if you use SPI Burst Transfer, you cannot use DTC or DMA for SPI transfers.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "How do I configure SPI to implement the following waveform in the manual on RA6M4?"
+      },
+      {
+        "type": "text",
+        "content": "How do I configure SPI to implement the following waveform in the manual on RA6M4?"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399051.png",
+          "alt_text": "",
+          "width": "643",
+          "height": "213",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/ba4a792be062013a3461af816b82a367/images/f684a0552db7123b81872006f18af8dd.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nTo achieve the waveform shown in the figure, the SPI Burst Transfer needs to be used. The specific configuration method is:\nBefore the last transmission, update SPCMD_b[0].SSLKP from 1 to 0. One transmission represents the number of data bits specified by the bits [11:8]-SPB[3:0] (SPI Data Length Setting) of the register SPCMDm.\nPlease update the SPI-related API as follows (add the content between #if 1 and #endif). The r_spi_transmit function is located in the ra\\fsp\\src\\r_spi\\r_spi.c file.\nstatic void r_spi_transmit (spi_instance_ctrl_t * p_ctrl)\n{   \n    uint32_t tx_count = p_ctrl->tx_count;   \n    if (tx_count == p_ctrl->count)   \n    {       \n        return;   \n    }\n#if 1   // added for burst transmit\n    if (tx_count == p_ctrl->count-1)   \n    {       \n        p_ctrl->p_regs->SPCMD_b[0].SSLKP = 0;   \n    }\n#endif\n  Note that if you use SPI Burst Transfer, you cannot use DTC or DMA for SPI transfers.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "To achieve the waveform shown in the figure, the SPI Burst Transfer needs to be used. The specific configuration method is:\nBefore the last transmission, update SPCMD_b[0].SSLKP from 1 to 0. One transmission represents the number of data bits specified by the bits [11:8]-SPB[3:0] (SPI Data Length Setting) of the register SPCMDm.\nPlease update the SPI-related API as follows (add the content between #if 1 and #endif). The r_spi_transmit function is located in the ra\\fsp\\src\\r_spi\\r_spi.c file.\nstatic void r_spi_transmit (spi_instance_ctrl_t * p_ctrl)\n{   \n    uint32_t tx_count = p_ctrl->tx_count;   \n    if (tx_count == p_ctrl->count)   \n    {       \n        return;   \n    }\n#if 1   // added for burst transmit\n    if (tx_count == p_ctrl->count-1)   \n    {       \n        p_ctrl->p_regs->SPCMD_b[0].SSLKP = 0;   \n    }\n#endif\n  Note that if you use SPI Burst Transfer, you cannot use DTC or DMA for SPI transfers."
+      },
+      {
+        "type": "text",
+        "content": "To achieve the waveform shown in the figure, the SPI Burst Transfer needs to be used. The specific configuration method is:"
+      },
+      {
+        "type": "text",
+        "content": "Before the last transmission, update SPCMD_b[0].SSLKP from 1 to 0. One transmission represents the number of data bits specified by the bits [11:8]-SPB[3:0] (SPI Data Length Setting) of the register SPCMDm."
+      },
+      {
+        "type": "text",
+        "content": "Please update the SPI-related API as follows (add the content between #if 1 and #endif). The r_spi_transmit function is located in the ra\\fsp\\src\\r_spi\\r_spi.c file."
+      },
+      {
+        "type": "text",
+        "content": "static void r_spi_transmit (spi_instance_ctrl_t * p_ctrl)"
+      },
+      {
+        "type": "text",
+        "content": "static"
+      },
+      {
+        "type": "text",
+        "content": "void r_spi_transmit (spi_instance_ctrl_t * p_ctrl)"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "uint32_t tx_count = p_ctrl->tx_count;"
+      },
+      {
+        "type": "text",
+        "content": "uint32_t tx_count = p_ctrl->tx_count;"
+      },
+      {
+        "type": "text",
+        "content": "if (tx_count == p_ctrl->count)"
+      },
+      {
+        "type": "text",
+        "content": "if"
+      },
+      {
+        "type": "text",
+        "content": "(tx_count == p_ctrl->count)"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "return;"
+      },
+      {
+        "type": "text",
+        "content": "return"
+      },
+      {
+        "type": "text",
+        "content": ";"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "#if 1   // added for burst transmit"
+      },
+      {
+        "type": "text",
+        "content": "#"
+      },
+      {
+        "type": "text",
+        "content": "if"
+      },
+      {
+        "type": "text",
+        "content": "1"
+      },
+      {
+        "type": "text",
+        "content": "// added for burst transmit"
+      },
+      {
+        "type": "text",
+        "content": "if (tx_count == p_ctrl->count-1)"
+      },
+      {
+        "type": "text",
+        "content": "if"
+      },
+      {
+        "type": "text",
+        "content": "(tx_count == p_ctrl->count-1)"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "p_ctrl->p_regs->SPCMD_b[0].SSLKP = 0;"
+      },
+      {
+        "type": "text",
+        "content": "p_ctrl->p_regs->SPCMD_b[0].SSLKP = 0;"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "#endif"
+      },
+      {
+        "type": "text",
+        "content": "#endif"
+      },
+      {
+        "type": "text",
+        "content": "Note that if you use SPI Burst Transfer, you cannot use DTC or DMA for SPI transfers."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Chinese"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399051.png",
+        "alt_text": "",
+        "width": "643",
+        "height": "213",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/ba4a792be062013a3461af816b82a367/images/f684a0552db7123b81872006f18af8dd.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21468750"
+      }
+    ]
+  }
+}

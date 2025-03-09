@@ -1,0 +1,171 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21373720",
+    "title": "UART Reception Timing when using Serial Array Unit",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:57:30.144946"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhen using the Serial Array Unit (SAU) to perform UART communication, how are start bit detection and data detection conducted?\nAnswer:\nUART communication uses a start bit to determine the timing of data detection. \n  Start bit detection\nTo detect the start bit, the receive signal must be sampled, and the start bit detected. This sampling uses the SAU operating clock (fMCK) which generates the baud rate. There may be a delay of one cycle of the sampling clock when taking in the received signal into the SAU. If the sampling result is at a low level, it proceeds to the next step in the process.\nWhen a low level is detected in the received signal, the counter of the baud rate generator begins operation. The detection of the start bit is performed at a position that is half the width of one bit as determined by the baud rate setting, near the center of one bit width. If the sampling result is at a low level, it is determined to be a start bit, and data detection is carried out.\nThe sampling result is judged as noise if it is at a high level, and the process of detection of the start bit is started again.\n  Data detection\nData detection uses sampling which  is conducted at intervals of one bit each, as determined by the baud rate setting, starting from the detection point of the start bit, which is near the middle of a 1-bit width.\nRemark\nfCLK :     CPU/peripheral hardware clock frequency\nfMCK :     Sampling clock\nfTCLK :    Transfer clock used in shift register\nSuitable Products\nRL78 Family"
+      },
+      {
+        "type": "text",
+        "content": "When using the Serial Array Unit (SAU) to perform UART communication, how are start bit detection and data detection conducted?"
+      },
+      {
+        "type": "text",
+        "content": "When using the Serial Array Unit (SAU) to perform UART communication, how are start bit detection and data detection conducted?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nUART communication uses a start bit to determine the timing of data detection. \n  Start bit detection\nTo detect the start bit, the receive signal must be sampled, and the start bit detected. This sampling uses the SAU operating clock (fMCK) which generates the baud rate. There may be a delay of one cycle of the sampling clock when taking in the received signal into the SAU. If the sampling result is at a low level, it proceeds to the next step in the process.\nWhen a low level is detected in the received signal, the counter of the baud rate generator begins operation. The detection of the start bit is performed at a position that is half the width of one bit as determined by the baud rate setting, near the center of one bit width. If the sampling result is at a low level, it is determined to be a start bit, and data detection is carried out.\nThe sampling result is judged as noise if it is at a high level, and the process of detection of the start bit is started again.\n  Data detection\nData detection uses sampling which  is conducted at intervals of one bit each, as determined by the baud rate setting, starting from the detection point of the start bit, which is near the middle of a 1-bit width.\nRemark\nfCLK :     CPU/peripheral hardware clock frequency\nfMCK :     Sampling clock\nfTCLK :    Transfer clock used in shift register\nSuitable Products\nRL78 Family"
+      },
+      {
+        "type": "text",
+        "content": "UART communication uses a start bit to determine the timing of data detection. \n  Start bit detection\nTo detect the start bit, the receive signal must be sampled, and the start bit detected. This sampling uses the SAU operating clock (fMCK) which generates the baud rate. There may be a delay of one cycle of the sampling clock when taking in the received signal into the SAU. If the sampling result is at a low level, it proceeds to the next step in the process.\nWhen a low level is detected in the received signal, the counter of the baud rate generator begins operation. The detection of the start bit is performed at a position that is half the width of one bit as determined by the baud rate setting, near the center of one bit width. If the sampling result is at a low level, it is determined to be a start bit, and data detection is carried out.\nThe sampling result is judged as noise if it is at a high level, and the process of detection of the start bit is started again.\n  Data detection\nData detection uses sampling which  is conducted at intervals of one bit each, as determined by the baud rate setting, starting from the detection point of the start bit, which is near the middle of a 1-bit width.\nRemark\nfCLK :     CPU/peripheral hardware clock frequency\nfMCK :     Sampling clock\nfTCLK :    Transfer clock used in shift register"
+      },
+      {
+        "type": "text",
+        "content": "UART communication uses a start bit to determine the timing of data detection."
+      },
+      {
+        "type": "text",
+        "content": "Start bit detection"
+      },
+      {
+        "type": "text",
+        "content": "To detect the start bit, the receive signal must be sampled, and the start bit detected. This sampling uses the SAU operating clock (fMCK) which generates the baud rate. There may be a delay of one cycle of the sampling clock when taking in the received signal into the SAU. If the sampling result is at a low level, it proceeds to the next step in the process."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/386539-1.png",
+          "alt_text": "",
+          "width": "739",
+          "height": "158",
+          "local_path": "data/categories/rl78_family/communication_function/779ed323d666d0c8134a0a37e52e5d91/images/56f4fdda5157f926ed2ef6296aa3a952.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "When a low level is detected in the received signal, the counter of the baud rate generator begins operation. The detection of the start bit is performed at a position that is half the width of one bit as determined by the baud rate setting, near the center of one bit width. If the sampling result is at a low level, it is determined to be a start bit, and data detection is carried out."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/386539-2.png",
+          "alt_text": "",
+          "width": "761",
+          "height": "173",
+          "local_path": "data/categories/rl78_family/communication_function/779ed323d666d0c8134a0a37e52e5d91/images/3d232ebfcb80d615fadd3cdc4d169a11.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The sampling result is judged as noise if it is at a high level, and the process of detection of the start bit is started again."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/386539-3.png",
+          "alt_text": "",
+          "width": "763",
+          "height": "199",
+          "local_path": "data/categories/rl78_family/communication_function/779ed323d666d0c8134a0a37e52e5d91/images/d9362f4f7f703945cef78526fe060c61.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Data detection"
+      },
+      {
+        "type": "text",
+        "content": "Data detection uses sampling which  is conducted at intervals of one bit each, as determined by the baud rate setting, starting from the detection point of the start bit, which is near the middle of a 1-bit width."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/386539-4.png",
+          "alt_text": "",
+          "width": "635",
+          "height": "203",
+          "local_path": "data/categories/rl78_family/communication_function/779ed323d666d0c8134a0a37e52e5d91/images/a6802f75612c47fec22614d5280b16d2.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Remark"
+      },
+      {
+        "type": "text",
+        "content": "fCLK :     CPU/peripheral hardware clock frequency\nfMCK :     Sampling clock\nfTCLK :    Transfer clock used in shift register"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78 Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/386539-1.png",
+        "alt_text": "",
+        "width": "739",
+        "height": "158",
+        "local_path": "data/categories/rl78_family/communication_function/779ed323d666d0c8134a0a37e52e5d91/images/56f4fdda5157f926ed2ef6296aa3a952.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/386539-2.png",
+        "alt_text": "",
+        "width": "761",
+        "height": "173",
+        "local_path": "data/categories/rl78_family/communication_function/779ed323d666d0c8134a0a37e52e5d91/images/3d232ebfcb80d615fadd3cdc4d169a11.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/386539-3.png",
+        "alt_text": "",
+        "width": "763",
+        "height": "199",
+        "local_path": "data/categories/rl78_family/communication_function/779ed323d666d0c8134a0a37e52e5d91/images/d9362f4f7f703945cef78526fe060c61.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/386539-4.png",
+        "alt_text": "",
+        "width": "635",
+        "height": "203",
+        "local_path": "data/categories/rl78_family/communication_function/779ed323d666d0c8134a0a37e52e5d91/images/a6802f75612c47fec22614d5280b16d2.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78 Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78 Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17793984"
+      }
+    ]
+  }
+}

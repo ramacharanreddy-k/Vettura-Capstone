@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21245136",
+    "title": "About the Windows version of the PCDC driver for the RZ/A1 microprocessor",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:43:11.831216"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs the following driver necessary on the PC side?\nUSB Peripheral Communications Device Class Driver (PCDC) (renesas.com)\nhttps://www.renesas.com/us/en/document/apn/rza1h-group-usb-peripheral-communications-device-class-driver-pcdc\nAnswer:\nYes. A Windows standard COM driver is available.\nSuitable Products\nRZ/A1"
+      },
+      {
+        "type": "text",
+        "content": "Is the following driver necessary on the PC side?\nUSB Peripheral Communications Device Class Driver (PCDC) (renesas.com)\nhttps://www.renesas.com/us/en/document/apn/rza1h-group-usb-peripheral-communications-device-class-driver-pcdc"
+      },
+      {
+        "type": "text",
+        "content": "Is the following driver necessary on the PC side?\nUSB Peripheral Communications Device Class Driver (PCDC) (renesas.com)"
+      },
+      {
+        "type": "text",
+        "content": "https://www.renesas.com/us/en/document/apn/rza1h-group-usb-peripheral-communications-device-class-driver-pcdc"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes. A Windows standard COM driver is available.\nSuitable Products\nRZ/A1"
+      },
+      {
+        "type": "text",
+        "content": "Yes. A Windows standard COM driver is available."
+      },
+      {
+        "type": "text",
+        "content": "Yes. A Windows standard COM driver is available."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A1"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A1"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/us/en/document/apn/rza1h-group-usb-peripheral-communications-device-class-driver-pcdc",
+        "url": "https://www.renesas.com/us/en/document/apn/rza1h-group-usb-peripheral-communications-device-class-driver-pcdc"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20165083"
+      }
+    ]
+  }
+}

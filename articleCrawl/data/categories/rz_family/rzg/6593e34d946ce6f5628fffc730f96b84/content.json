@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21175344",
+    "title": "RZ/G3S: Tell me about the power supply modes of the RZ/G3S",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:44:07.805982"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nPlease tell me about the power supply modes of the RZ/G3S.\nAnswer:\nThe RZ/G3S each consist of three independent power domains. The power consumed by the SOC state can be significantly reduced by turning power domains off.\nALL_ON mode: All power domains are in the power-on state. \nAWO mode: The MPU domain is in the power-off state. Only the IP placed in the AWO domain can be operated. \nVBATT mode: The MPU domain and AWO domain are in the power-off state. Only the VBATT domain is powered on.\nIn addition, the RZ/G3S can maintain only the DDR I/O area in the power-on state.\nPlease also refer to the user's manual (https://www.renesas.com/us/en/document/mah/rzg3s-group-users-manual-hardware?r=25458591), 41. Low Power Consumption.\nSuitable Products\nRZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "Please tell me about the power supply modes of the RZ/G3S."
+      },
+      {
+        "type": "text",
+        "content": "Please tell me about the power supply modes of the RZ/G3S."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RZ/G3S each consist of three independent power domains. The power consumed by the SOC state can be significantly reduced by turning power domains off.\nALL_ON mode: All power domains are in the power-on state. \nAWO mode: The MPU domain is in the power-off state. Only the IP placed in the AWO domain can be operated. \nVBATT mode: The MPU domain and AWO domain are in the power-off state. Only the VBATT domain is powered on.\nIn addition, the RZ/G3S can maintain only the DDR I/O area in the power-on state.\nPlease also refer to the user's manual (https://www.renesas.com/us/en/document/mah/rzg3s-group-users-manual-hardware?r=25458591), 41. Low Power Consumption.\nSuitable Products\nRZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "The RZ/G3S each consist of three independent power domains. The power consumed by the SOC state can be significantly reduced by turning power domains off.\nALL_ON mode: All power domains are in the power-on state. \nAWO mode: The MPU domain is in the power-off state. Only the IP placed in the AWO domain can be operated. \nVBATT mode: The MPU domain and AWO domain are in the power-off state. Only the VBATT domain is powered on.\nIn addition, the RZ/G3S can maintain only the DDR I/O area in the power-on state.\nPlease also refer to the user's manual (https://www.renesas.com/us/en/document/mah/rzg3s-group-users-manual-hardware?r=25458591), 41. Low Power Consumption."
+      },
+      {
+        "type": "text",
+        "content": "The RZ/G3S each consist of three independent power domains. The power consumed by the SOC state can be significantly reduced by turning power domains off."
+      },
+      {
+        "type": "text",
+        "content": "ALL_ON mode: All power domains are in the power-on state. \nAWO mode: The MPU domain is in the power-off state. Only the IP placed in the AWO domain can be operated. \nVBATT mode: The MPU domain and AWO domain are in the power-off state. Only the VBATT domain is powered on."
+      },
+      {
+        "type": "text",
+        "content": "In addition, the RZ/G3S can maintain only the DDR I/O area in the power-on state."
+      },
+      {
+        "type": "text",
+        "content": "Please also refer to the user's manual (https://www.renesas.com/us/en/document/mah/rzg3s-group-users-manual-hardware?r=25458591), 41. Low Power Consumption."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/G3S"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/G3S"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/us/en/document/mah/rzg3s-group-users-manual-hardware?r=25458591",
+        "url": "https://www.renesas.com/us/en/document/mah/rzg3s-group-users-manual-hardware?r=25458591"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21175358"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21175366"
+      }
+    ]
+  }
+}

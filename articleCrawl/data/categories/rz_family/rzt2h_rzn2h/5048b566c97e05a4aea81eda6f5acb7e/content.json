@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21557040",
+    "title": "RZ/T2H, RZ/N2H: Handling of unused pins",
+    "last_updated": "2025-07-02",
+    "extracted_at": "2025-03-08T23:49:19.318848"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat should I do with pins I don't use?\nAnswer:\nRefer to the following chapter in the User’s Manual: Hardware to address unused pins. Note that measures differ depending on the pin.\n17.6 Handling of Unused Pins\nSuitable Products\nRZ/T2H, RZ/N2H"
+      },
+      {
+        "type": "text",
+        "content": "What should I do with pins I don't use?"
+      },
+      {
+        "type": "text",
+        "content": "What should I do with pins I don't use?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRefer to the following chapter in the User’s Manual: Hardware to address unused pins. Note that measures differ depending on the pin.\n17.6 Handling of Unused Pins\nSuitable Products\nRZ/T2H, RZ/N2H"
+      },
+      {
+        "type": "text",
+        "content": "Refer to the following chapter in the User’s Manual: Hardware to address unused pins. Note that measures differ depending on the pin.\n17.6 Handling of Unused Pins"
+      },
+      {
+        "type": "text",
+        "content": "Refer to the following chapter in the User’s Manual: Hardware to address unused pins. Note that measures differ depending on the pin."
+      },
+      {
+        "type": "text",
+        "content": "17.6 Handling of Unused Pins"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/392782.png",
+          "alt_text": "",
+          "width": "867",
+          "height": "796",
+          "local_path": "data/categories/rz_family/rzt2h_rzn2h/5048b566c97e05a4aea81eda6f5acb7e/images/bfaf8a7d7dc7f14cc870c51726af24d2.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/T2H, RZ/N2H"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/392782.png",
+        "alt_text": "",
+        "width": "867",
+        "height": "796",
+        "local_path": "data/categories/rz_family/rzt2h_rzn2h/5048b566c97e05a4aea81eda6f5acb7e/images/bfaf8a7d7dc7f14cc870c51726af24d2.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/T2H, RZ/N2H"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/T2H, RZ/N2H"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21570829"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21618847"
+      }
+    ]
+  }
+}

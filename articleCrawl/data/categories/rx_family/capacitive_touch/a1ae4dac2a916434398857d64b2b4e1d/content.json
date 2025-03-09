@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18287524",
+    "title": "Why Does It Suddenly Turn OFF When Touching for a While?",
+    "last_updated": "2023-07-03",
+    "extracted_at": "2025-03-09T00:07:22.247527"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhy does the judgement suddenly switch to OFF when the electrode is touched for a while?\nAnswer:\nLong Press Cancel may have been activated.\nIf Long Press Cancel is enabled, ON is judged by the value set as Continuous Touch Duration,\nThe drift correction process is executed.\nIt can be cancelled by disabling long press cancel.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Why does the judgement suddenly switch to OFF when the electrode is touched for a while?"
+      },
+      {
+        "type": "text",
+        "content": "Why does the judgement suddenly switch to OFF when the electrode is touched for a while?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nLong Press Cancel may have been activated.\nIf Long Press Cancel is enabled, ON is judged by the value set as Continuous Touch Duration,\nThe drift correction process is executed.\nIt can be cancelled by disabling long press cancel.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Long Press Cancel may have been activated.\nIf Long Press Cancel is enabled, ON is judged by the value set as Continuous Touch Duration,\nThe drift correction process is executed.\nIt can be cancelled by disabling long press cancel."
+      },
+      {
+        "type": "text",
+        "content": "Long Press Cancel may have been activated.\nIf Long Press Cancel is enabled, ON is judged by the value set as Continuous Touch Duration,\nThe drift correction process is executed.\nIt can be cancelled by disabling long press cancel."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792805"
+      }
+    ]
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21671338",
+    "title": "RH850 IOR dump in CS+",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:28:45.063199"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow do I dump the RH850 whole IOR registers in the debug mode of CS+ IDE? Is there any tool that help to dump whole IOR registers and save them as a text file? I need compare those dump data between two SDK source code regarding their IOR registers.\nAnswer:\nIn CS+, you have the option to export any window as either text or CSV.\nFor your specific needs, please open the IOR window(if not visible View->IOR) and make sure it is focused (click inside the window). Then, go to the File menu, select \"Save IOR Data As,\" and choose the format you prefer.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nHow do I dump the RH850 whole IOR registers in the debug mode of CS+ IDE? Is there any tool that help to dump whole IOR registers and save them as a text file? I need compare those dump data between two SDK source code regarding their IOR registers.\nAnswer:\nIn CS+, you have the option to export any window as either text or CSV.\nFor your specific needs, please open the IOR window(if not visible View->IOR) and make sure it is focused (click inside the window). Then, go to the File menu, select \"Save IOR Data As,\" and choose the format you prefer.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "How do I dump the RH850 whole IOR registers in the debug mode of CS+ IDE? Is there any tool that help to dump whole IOR registers and save them as a text file? I need compare those dump data between two SDK source code regarding their IOR registers."
+      },
+      {
+        "type": "text",
+        "content": "How do I dump the RH850 whole IOR registers in the debug mode of CS+ IDE? Is there any tool that help to dump whole IOR registers and save them as a text file? I need compare those dump data between two SDK source code regarding their IOR registers."
+      },
+      {
+        "type": "text",
+        "content": "How do I dump the RH850 whole IOR registers in the debug mode of CS+ IDE? Is there any tool that help to dump whole IOR registers and save them as a text file? I need compare those dump data between two SDK source code regarding their IOR registers."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIn CS+, you have the option to export any window as either text or CSV.\nFor your specific needs, please open the IOR window(if not visible View->IOR) and make sure it is focused (click inside the window). Then, go to the File menu, select \"Save IOR Data As,\" and choose the format you prefer.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "In CS+, you have the option to export any window as either text or CSV.\nFor your specific needs, please open the IOR window(if not visible View->IOR) and make sure it is focused (click inside the window). Then, go to the File menu, select \"Save IOR Data As,\" and choose the format you prefer."
+      },
+      {
+        "type": "text",
+        "content": "In CS+, you have the option to export any window as either text or CSV."
+      },
+      {
+        "type": "text",
+        "content": "In CS+, you have the option to export any window as either text or CSV."
+      },
+      {
+        "type": "text",
+        "content": "For your specific needs, please open the IOR window(if not visible View->IOR) and make sure it is focused (click inside the window). Then, go to the File menu, select \"Save IOR Data As,\" and choose the format you prefer."
+      },
+      {
+        "type": "text",
+        "content": "For your specific needs, please open the IOR window(if not visible View->IOR) and make sure it is focused (click inside the window). Then, go to the File menu, select \"Save IOR Data As,\" and choose the format you prefer."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/b00d4d35-019c-43aa-b6e4-cf21e6658e95",
+          "alt_text": "",
+          "width": "601",
+          "height": "253",
+          "local_path": "data/categories/rh850_family/rh850_general/aef18c1527e32753e293578beff82f85/images/8a1c4d4b373a89027dc6bc425b274e02.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/b00d4d35-019c-43aa-b6e4-cf21e6658e95",
+        "alt_text": "",
+        "width": "601",
+        "height": "253",
+        "local_path": "data/categories/rh850_family/rh850_general/aef18c1527e32753e293578beff82f85/images/8a1c4d4b373a89027dc6bc425b274e02.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850"
+    ],
+    "links": []
+  }
+}

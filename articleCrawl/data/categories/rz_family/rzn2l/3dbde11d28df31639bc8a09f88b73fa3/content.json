@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20612313",
+    "title": "In what combinations can the three Ethernet ports of the RZ/N2L be used?",
+    "last_updated": "2022-09-08",
+    "extracted_at": "2025-03-08T23:46:50.122557"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIn what combinations can the three Ethernet ports of the RZ/N2L be used?\nAnswer:\nThe assignments of the Ethernet/EtherCAT communication ports for the RZ/N2L can be selected in the MODCTRL register. \nThe following figure shows the available combinations.\nFor details, refer to the following items. \nTable 26.4 MAC-PHY interface mode\n26.2.2 MODCTRL: Mode Control Register in RZ/N2L Group User’s Manual: Hardware (r01uh0955ej0110-rzn2l)\nSuitable Products\nRZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "In what combinations can the three Ethernet ports of the RZ/N2L be used?"
+      },
+      {
+        "type": "text",
+        "content": "In what combinations can the three Ethernet ports of the RZ/N2L be used?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe assignments of the Ethernet/EtherCAT communication ports for the RZ/N2L can be selected in the MODCTRL register. \nThe following figure shows the available combinations.\nFor details, refer to the following items. \nTable 26.4 MAC-PHY interface mode\n26.2.2 MODCTRL: Mode Control Register in RZ/N2L Group User’s Manual: Hardware (r01uh0955ej0110-rzn2l)\nSuitable Products\nRZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "The assignments of the Ethernet/EtherCAT communication ports for the RZ/N2L can be selected in the MODCTRL register. \nThe following figure shows the available combinations.\nFor details, refer to the following items. \nTable 26.4 MAC-PHY interface mode\n26.2.2 MODCTRL: Mode Control Register in RZ/N2L Group User’s Manual: Hardware (r01uh0955ej0110-rzn2l)"
+      },
+      {
+        "type": "text",
+        "content": "The assignments of the Ethernet/EtherCAT communication ports for the RZ/N2L can be selected in the MODCTRL register. \nThe following figure shows the available combinations."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/c09c0763-c174-4fdf-80da-133a0b1b3fc7.png",
+          "alt_text": "",
+          "width": "0",
+          "height": "0",
+          "local_path": "data/categories/rz_family/rzn2l/3dbde11d28df31639bc8a09f88b73fa3/images/008031755259d543c144b56c9b0ceb79.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "For details, refer to the following items. \nTable 26.4 MAC-PHY interface mode\n26.2.2 MODCTRL: Mode Control Register in RZ/N2L Group User’s Manual: Hardware (r01uh0955ej0110-rzn2l)"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/c09c0763-c174-4fdf-80da-133a0b1b3fc7.png",
+        "alt_text": "",
+        "width": "0",
+        "height": "0",
+        "local_path": "data/categories/rz_family/rzn2l/3dbde11d28df31639bc8a09f88b73fa3/images/008031755259d543c144b56c9b0ceb79.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/N2L"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/N2L"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20612291"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20612331"
+      }
+    ]
+  }
+}

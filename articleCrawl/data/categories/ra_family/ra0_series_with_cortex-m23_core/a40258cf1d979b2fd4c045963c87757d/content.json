@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21287441",
+    "title": "RA0E1: Evaluation board",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:32:21.398413"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat kind of evaluation boards are prepared for RA0 series?\nAnswer:\nThe RA family offers the following three main types of evaluation environments\nEvaluation Kit (EK): This is supported by rich on-board features for seamless evaluation.\nFast Prototyping Board (FPB): This is an inexpensive evaluation board specialized for prototype development of various applications.\nSolution Kit: Solution kits for ASSP products. \nFor the RA0 series, the Fast Prototyping Board (FPB) is provided, and for the RA0E1 group, it is FPB-RA0E1.\nSuitable Products\nRA0E1"
+      },
+      {
+        "type": "text",
+        "content": "What kind of evaluation boards are prepared for RA0 series?"
+      },
+      {
+        "type": "text",
+        "content": "What kind of evaluation boards are prepared for RA0 series?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RA family offers the following three main types of evaluation environments\nEvaluation Kit (EK): This is supported by rich on-board features for seamless evaluation.\nFast Prototyping Board (FPB): This is an inexpensive evaluation board specialized for prototype development of various applications.\nSolution Kit: Solution kits for ASSP products. \nFor the RA0 series, the Fast Prototyping Board (FPB) is provided, and for the RA0E1 group, it is FPB-RA0E1.\nSuitable Products\nRA0E1"
+      },
+      {
+        "type": "text",
+        "content": "The RA family offers the following three main types of evaluation environments\nEvaluation Kit (EK): This is supported by rich on-board features for seamless evaluation.\nFast Prototyping Board (FPB): This is an inexpensive evaluation board specialized for prototype development of various applications.\nSolution Kit: Solution kits for ASSP products. \nFor the RA0 series, the Fast Prototyping Board (FPB) is provided, and for the RA0E1 group, it is FPB-RA0E1."
+      },
+      {
+        "type": "text",
+        "content": "The RA family offers the following three main types of evaluation environments\nEvaluation Kit (EK): This is supported by rich on-board features for seamless evaluation.\nFast Prototyping Board (FPB): This is an inexpensive evaluation board specialized for prototype development of various applications.\nSolution Kit: Solution kits for ASSP products. \nFor the RA0 series, the Fast Prototyping Board (FPB) is provided, and for the RA0E1 group, it is FPB-RA0E1."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA0E1"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA0E1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA0E1"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21287458"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21287469"
+      }
+    ]
+  }
+}

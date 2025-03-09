@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21618619",
+    "title": "RA Family: RAM remaining for an RA6M4 ethernet project",
+    "last_updated": "2024-04-10",
+    "extracted_at": "2025-03-08T23:23:22.319010"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Overview:\nDuring compilation on the e2studio/GCC toolchain, we can look at the output of the arm-none-eabi-size to see the amount of ROM/RAM used.\nFor an RA6M4 project using ethernet the netx ftp example project in this case), the RAM (bss) shows high usage : 260564 bytes out of total 256 kbyte available.  This is due to a special requirement to place the EDMAC buffers in non-secure RAM. Non-secure RAM is typically assigned to the end of usable RAM.\nYou can see below that the linker script relocates the “.ns_buffer” towards the end of RAM.\nTo find out the available RAM for this project, look at the project’s .map file and see the amount that has been skipped.\n  In the figure above, the *fill* amount in .ns_buffer is 0x264d0 ( 158,880 bytes). These are skipped over, to place ethernet buffers at the end of RAM.  This 158kb is the available (unused) RAM for this project.\nSuitable Products\nRA6M4, RA6M5"
+      },
+      {
+        "type": "text",
+        "content": "During compilation on the e2studio/GCC toolchain, we can look at the output of the arm-none-eabi-size to see the amount of ROM/RAM used.\nFor an RA6M4 project using ethernet the netx ftp example project in this case), the RAM (bss) shows high usage : 260564 bytes out of total 256 kbyte available.  This is due to a special requirement to place the EDMAC buffers in non-secure RAM. Non-secure RAM is typically assigned to the end of usable RAM.\nYou can see below that the linker script relocates the “.ns_buffer” towards the end of RAM.\nTo find out the available RAM for this project, look at the project’s .map file and see the amount that has been skipped.\n  In the figure above, the *fill* amount in .ns_buffer is 0x264d0 ( 158,880 bytes). These are skipped over, to place ethernet buffers at the end of RAM.  This 158kb is the available (unused) RAM for this project."
+      },
+      {
+        "type": "text",
+        "content": "During compilation on the e2studio/GCC toolchain, we can look at the output of the arm-none-eabi-size to see the amount of ROM/RAM used."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/393840-1.png",
+          "alt_text": "",
+          "width": "1204",
+          "height": "280",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/1ea78483764d956552ea9fac90a28ba7/images/6d7ee47dbcf937332cd8d72cbdad173f.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "For an RA6M4 project using ethernet the netx ftp example project in this case), the RAM (bss) shows high usage : 260564 bytes out of total 256 kbyte available.  This is due to a special requirement to place the EDMAC buffers in non-secure RAM. Non-secure RAM is typically assigned to the end of usable RAM."
+      },
+      {
+        "type": "text",
+        "content": "You can see below that the linker script relocates the “.ns_buffer” towards the end of RAM."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/393840-2.png",
+          "alt_text": "",
+          "width": "1140",
+          "height": "231",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/1ea78483764d956552ea9fac90a28ba7/images/831bb49657123d6a425750c990b62915.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "To find out the available RAM for this project, look at the project’s .map file and see the amount that has been skipped."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/393840-3_2.png",
+          "alt_text": "",
+          "width": "916",
+          "height": "99",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/1ea78483764d956552ea9fac90a28ba7/images/1e8380b690b9337b323dc07bfd1daaab.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "In the figure above, the *fill* amount in .ns_buffer is 0x264d0 ( 158,880 bytes). These are skipped over, to place ethernet buffers at the end of RAM.  This 158kb is the available (unused) RAM for this project."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA6M4, RA6M5"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA6M4, RA6M5"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/393840-1.png",
+        "alt_text": "",
+        "width": "1204",
+        "height": "280",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/1ea78483764d956552ea9fac90a28ba7/images/6d7ee47dbcf937332cd8d72cbdad173f.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/393840-2.png",
+        "alt_text": "",
+        "width": "1140",
+        "height": "231",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/1ea78483764d956552ea9fac90a28ba7/images/831bb49657123d6a425750c990b62915.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/393840-3_2.png",
+        "alt_text": "",
+        "width": "916",
+        "height": "99",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/1ea78483764d956552ea9fac90a28ba7/images/1e8380b690b9337b323dc07bfd1daaab.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA6M4, RA6M5"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA6M4, RA6M5"
+    ],
+    "links": []
+  }
+}

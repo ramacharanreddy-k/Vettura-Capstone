@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21074468",
+    "title": "RA Family: Quick FSP 4.6.0 Labs: Export and Import",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:12:14.997394"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "This Quick FSP Lab demonstrates how to use the Export function to save a project and the Import function to restore the project. This lab also reviews some of the key features of e2 studio useful in navigating within a project, like sizing windows for better visibility on a laptop and other generally helpful tips and techniques."
+      },
+      {
+        "type": "text",
+        "content": "This Quick FSP Lab is best done after completing the Introduction Quick FSP Lab, but if you are even somewhat experienced with e2 studio and FSP you should be able to complete this lab without doing the Introduction lab first."
+      },
+      {
+        "type": "text",
+        "content": "Just follow along with the step by step guide attached below to complete the lab, using the one for your target kit. \nThe complete list of all Quick FSP Labs is available here."
+      }
+    ],
+    "images": [],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": [
+      {
+        "text": "here.",
+        "url": "https://en-support.renesas.com/knowledgeBase/19450948"
+      }
+    ]
+  }
+}

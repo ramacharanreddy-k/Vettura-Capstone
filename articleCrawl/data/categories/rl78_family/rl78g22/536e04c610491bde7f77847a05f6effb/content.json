@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20982731",
+    "title": "RL78/G22: Current consumption when measuring capacitive touch",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:53:43.322021"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow much current is consumed when measuring capacitive touch?\nAnswer:\nSNOOZE mode sequencer (SMS) and multi-electrode connection function (MEC) reduce current consumption.\nThe average current consumption measured with a capacitive touch cycle of 100 ms is 9.7 μA (reference value for the RL78/G22).\n  Figure 1: Current consumption results(Touch measurement using SMS/MEC function)\nPlease refer to this document for details.\nRL78/G22 Capacitive Touch Low Power Guide (SMS / MEC function) (R01AN6847)\nSuitable Products\nRL78/G22"
+      },
+      {
+        "type": "text",
+        "content": "How much current is consumed when measuring capacitive touch?"
+      },
+      {
+        "type": "text",
+        "content": "How much current is consumed when measuring capacitive touch?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nSNOOZE mode sequencer (SMS) and multi-electrode connection function (MEC) reduce current consumption.\nThe average current consumption measured with a capacitive touch cycle of 100 ms is 9.7 μA (reference value for the RL78/G22).\n  Figure 1: Current consumption results(Touch measurement using SMS/MEC function)\nPlease refer to this document for details.\nRL78/G22 Capacitive Touch Low Power Guide (SMS / MEC function) (R01AN6847)\nSuitable Products\nRL78/G22"
+      },
+      {
+        "type": "text",
+        "content": "SNOOZE mode sequencer (SMS) and multi-electrode connection function (MEC) reduce current consumption.\nThe average current consumption measured with a capacitive touch cycle of 100 ms is 9.7 μA (reference value for the RL78/G22).\n  Figure 1: Current consumption results(Touch measurement using SMS/MEC function)\nPlease refer to this document for details.\nRL78/G22 Capacitive Touch Low Power Guide (SMS / MEC function) (R01AN6847)\nSuitable Products"
+      },
+      {
+        "type": "text",
+        "content": "SNOOZE mode sequencer (SMS) and multi-electrode connection function (MEC) reduce current consumption.\nThe average current consumption measured with a capacitive touch cycle of 100 ms is 9.7 μA (reference value for the RL78/G22)."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372340.png",
+          "alt_text": "",
+          "width": "730",
+          "height": "476",
+          "local_path": "data/categories/rl78_family/rl78g22/536e04c610491bde7f77847a05f6effb/images/6d889e5372360438633f9310ffc53244.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 1: Current consumption results(Touch measurement using SMS/MEC function)"
+      },
+      {
+        "type": "text",
+        "content": "Please refer to this document for details.\nRL78/G22 Capacitive Touch Low Power Guide (SMS / MEC function) (R01AN6847)"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RL78/G22"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372340.png",
+        "alt_text": "",
+        "width": "730",
+        "height": "476",
+        "local_path": "data/categories/rl78_family/rl78g22/536e04c610491bde7f77847a05f6effb/images/6d889e5372360438633f9310ffc53244.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G22"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G22"
+    ],
+    "links": [
+      {
+        "text": "RL78/G22 Capacitive Touch Low Power Guide (SMS / MEC function) (R01AN6847)",
+        "url": "https://www.renesas.com/jp/ja/document/apn/rl78g22-capacitive-touch-low-power-guide-sms-mec-function?language=en&r=25408646"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20982732"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20982733"
+      }
+    ]
+  }
+}

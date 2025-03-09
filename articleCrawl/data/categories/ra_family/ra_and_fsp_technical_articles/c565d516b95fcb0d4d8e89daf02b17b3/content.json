@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/19558422",
+    "title": "Finding the right crystals for RA MCUs",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:13:37.432764"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow do I find the right crystals for RA MCUs?"
+      },
+      {
+        "type": "text",
+        "content": "Question:"
+      },
+      {
+        "type": "text",
+        "content": "How do I find the right crystals for RA MCUs?"
+      },
+      {
+        "type": "text",
+        "content": "How do I find the right crystals for RA MCUs?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYou can find the crystals you need for the sub-clock resonators on RA MCUs from the crystal manufacturer’s web site here:\nhttps://global.kyocera.com/prdct/electro/product/crystal-device/xtal/  \nSimply click on the search tool:\n  And then using a search with Renesas as the IC Manufacturer and the desired RA Series as the IC Family. The recommended Crystals will show up at the bottom of the page.\nSee below for RA2 series other than RA2A1.\nhttps://www.sii.co.jp/en/quartz/news/topics/2021/12/06/1678/\nSuitable Products"
+      },
+      {
+        "type": "text",
+        "content": "Answer:"
+      },
+      {
+        "type": "text",
+        "content": "You can find the crystals you need for the sub-clock resonators on RA MCUs from the crystal manufacturer’s web site here:\nhttps://global.kyocera.com/prdct/electro/product/crystal-device/xtal/  \nSimply click on the search tool:\n  And then using a search with Renesas as the IC Manufacturer and the desired RA Series as the IC Family. The recommended Crystals will show up at the bottom of the page.\nSee below for RA2 series other than RA2A1.\nhttps://www.sii.co.jp/en/quartz/news/topics/2021/12/06/1678/\nSuitable Products"
+      },
+      {
+        "type": "text",
+        "content": "You can find the crystals you need for the sub-clock resonators on RA MCUs from the crystal manufacturer’s web site here:\nhttps://global.kyocera.com/prdct/electro/product/crystal-device/xtal/"
+      },
+      {
+        "type": "text",
+        "content": "You can find the crystals you need for the sub-clock resonators on RA MCUs from the crystal manufacturer’s web site here:"
+      },
+      {
+        "type": "text",
+        "content": "https://global.kyocera.com/prdct/electro/product/crystal-device/xtal/"
+      },
+      {
+        "type": "text",
+        "content": "Simply click on the search tool:"
+      },
+      {
+        "type": "text",
+        "content": "Simply click on the search tool:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/e0875471-bd29-48f3-8086-c8c2263877b3.png",
+          "alt_text": "",
+          "width": "286",
+          "height": "169",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/c565d516b95fcb0d4d8e89daf02b17b3/images/95b01bd0387d8a076515fa62281af95f.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "And then using a search with Renesas as the IC Manufacturer and the desired RA Series as the IC Family. The recommended Crystals will show up at the bottom of the page."
+      },
+      {
+        "type": "text",
+        "content": "And then"
+      },
+      {
+        "type": "text",
+        "content": "using a search with"
+      },
+      {
+        "type": "text",
+        "content": "Renesas as the IC Manufacturer and the desired RA Series as the IC Family. The recommended Crystals will show up at the bottom of the page."
+      },
+      {
+        "type": "text",
+        "content": "See below for RA2 series other than RA2A1.\nhttps://www.sii.co.jp/en/quartz/news/topics/2021/12/06/1678/"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA2 Series\nRA4 Series\nRA6 Series"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/e0875471-bd29-48f3-8086-c8c2263877b3.png",
+        "alt_text": "",
+        "width": "286",
+        "height": "169",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/c565d516b95fcb0d4d8e89daf02b17b3/images/95b01bd0387d8a076515fa62281af95f.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA2 Series\nRA4 Series\nRA6 Series"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA2 Series\nRA4 Series\nRA6 Series"
+    ],
+    "links": [
+      {
+        "text": "https://global.kyocera.com/prdct/electro/product/crystal-device/xtal/",
+        "url": "https://global.kyocera.com/prdct/electro/product/crystal-device/xtal/"
+      },
+      {
+        "text": "https://www.sii.co.jp/en/quartz/news/topics/2021/12/06/1678/",
+        "url": "https://www.sii.co.jp/en/quartz/news/topics/2021/12/06/1678/"
+      }
+    ]
+  }
+}

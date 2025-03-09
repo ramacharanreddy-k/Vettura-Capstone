@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20871913",
+    "title": "RA Family: Virtual EEPROM (VEEPROM) Introduction and Lab",
+    "last_updated": "2023-03-13",
+    "extracted_at": "2025-03-08T23:11:57.989819"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "The Virtual EEPROM module in FSP is a very useful element to save data internally to the device in a non-volatile format using a simple EEPROM-like interface. The lab uses FSP 4.2.0 and targets the EK-RA6M3 kit.\nThe below attached zip file contains an introductory presentation and a hands-on lab that will familiarize the developer with the key aspects of using the VEEPROM module.\nSuitable Products\nFSP, RA MCU, VEEPROM Module"
+      },
+      {
+        "type": "text",
+        "content": "The Virtual EEPROM module in FSP is a very useful element to save data internally to the device in a non-volatile format using a simple EEPROM-like interface. The lab uses FSP 4.2.0 and targets the EK-RA6M3 kit.\nThe below attached zip file contains an introductory presentation and a hands-on lab that will familiarize the developer with the key aspects of using the VEEPROM module.\nSuitable Products\nFSP, RA MCU, VEEPROM Module"
+      },
+      {
+        "type": "text",
+        "content": "The Virtual EEPROM module in FSP is a very useful element to save data internally to the device in a non-volatile format using a simple EEPROM-like interface. The lab uses FSP 4.2.0 and targets the EK-RA6M3 kit."
+      },
+      {
+        "type": "text",
+        "content": "The below attached zip file contains an introductory presentation and a hands-on lab that will familiarize the developer with the key aspects of using the VEEPROM module."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nFSP, RA MCU, VEEPROM Module"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "FSP, RA MCU, VEEPROM Module"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "FSP, RA MCU, VEEPROM Module"
+    ],
+    "links": []
+  }
+}

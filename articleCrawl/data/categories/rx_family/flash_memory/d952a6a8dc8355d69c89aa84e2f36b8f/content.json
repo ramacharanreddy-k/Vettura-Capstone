@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/16980287",
+    "title": "RX Family: Has the data flash correctly erased according to the procedure?",
+    "last_updated": "2023-10-07",
+    "extracted_at": "2025-03-09T00:14:12.646773"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHas the data flash correctly erased according to the procedure?\nAnswer:\nAfter a data flash area has been erased, the value cannot be read correctly. If read, the value is undefined. Please use the blank check command to check whether the data flash has been correctly erased (blanked).\n  Suitable Products\nRX210\nRX21A\nRX220\nRX26T\nRX600 Series\nRX700 Series"
+      },
+      {
+        "type": "text",
+        "content": "Has the data flash correctly erased according to the procedure?"
+      },
+      {
+        "type": "text",
+        "content": "Has the data flash correctly erased according to the procedure?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nAfter a data flash area has been erased, the value cannot be read correctly. If read, the value is undefined. Please use the blank check command to check whether the data flash has been correctly erased (blanked).\n  Suitable Products\nRX210\nRX21A\nRX220\nRX26T\nRX600 Series\nRX700 Series"
+      },
+      {
+        "type": "text",
+        "content": "After a data flash area has been erased, the value cannot be read correctly. If read, the value is undefined. Please use the blank check command to check whether the data flash has been correctly erased (blanked)."
+      },
+      {
+        "type": "text",
+        "content": "After a data flash area has been erased, the value cannot be read correctly. If read, the value is undefined. Please use the blank check command to check whether the data flash has been correctly erased (blanked)."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX210\nRX21A\nRX220\nRX26T\nRX600 Series\nRX700 Series"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX210\nRX21A\nRX220\nRX26T\nRX600 Series\nRX700 Series"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX210\nRX21A\nRX220\nRX26T\nRX600 Series\nRX700 Series"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17795000"
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20537029",
+    "title": "RX Family: How can the CK-RA6M5 or CK-RX65N IoT evaluation kit be extended?",
+    "last_updated": "2022-09-06",
+    "extracted_at": "2025-03-09T00:03:18.220760"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow can the CK-RA6M5 or CK-RX65N IoT evaluation kit be extended?\nAnswer:\nBoth kits are available with both PMOD type-6A and Arduino Uno expansion connectors.\nYou can choose from our Quick-Connect-IoT PMODs or third-party expansion products that support the connector interface.\nSuitable Products\nRA6M5,\nRX65N/RX651"
+      },
+      {
+        "type": "text",
+        "content": "How can the CK-RA6M5 or CK-RX65N IoT evaluation kit be extended?"
+      },
+      {
+        "type": "text",
+        "content": "How can the CK-RA6M5 or CK-RX65N IoT evaluation kit be extended?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nBoth kits are available with both PMOD type-6A and Arduino Uno expansion connectors.\nYou can choose from our Quick-Connect-IoT PMODs or third-party expansion products that support the connector interface.\nSuitable Products\nRA6M5,\nRX65N/RX651"
+      },
+      {
+        "type": "text",
+        "content": "Both kits are available with both PMOD type-6A and Arduino Uno expansion connectors.\nYou can choose from our Quick-Connect-IoT PMODs or third-party expansion products that support the connector interface."
+      },
+      {
+        "type": "text",
+        "content": "Both kits are available with both PMOD type-6A and Arduino Uno expansion connectors.\nYou can choose from our Quick-Connect-IoT PMODs or third-party expansion products that support the connector interface."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA6M5,\nRX65N/RX651"
+      },
+      {
+        "type": "text",
+        "content": "RA6M5,"
+      },
+      {
+        "type": "text",
+        "content": "RX65N/RX651"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA6M5,\nRX65N/RX651"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA6M5,\nRX65N/RX651"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20537033"
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20590531",
+    "title": "Function differences by product model name",
+    "last_updated": "2022-02-08",
+    "extracted_at": "2025-03-09T00:03:03.901641"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there a way to check whether or not functions are available by product model name?\nAnswer:\nRefer to “1.2 Product List” in the hardware manual. \nCaution: The product model name differs depending on whether or not the JTAG, SubOSC, and CANFD functions are available, so select a model name according to the functions to be used. In addition, the model name differs depending on the ROM size, temperature range, and package.\nSuitable Products\nRX660"
+      },
+      {
+        "type": "text",
+        "content": "Is there a way to check whether or not functions are available by product model name?"
+      },
+      {
+        "type": "text",
+        "content": "Is there a way to check whether or not functions are available by product model name?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRefer to “1.2 Product List” in the hardware manual. \nCaution: The product model name differs depending on whether or not the JTAG, SubOSC, and CANFD functions are available, so select a model name according to the functions to be used. In addition, the model name differs depending on the ROM size, temperature range, and package.\nSuitable Products\nRX660"
+      },
+      {
+        "type": "text",
+        "content": "Refer to “1.2 Product List” in the hardware manual. \nCaution: The product model name differs depending on whether or not the JTAG, SubOSC, and CANFD functions are available, so select a model name according to the functions to be used. In addition, the model name differs depending on the ROM size, temperature range, and package."
+      },
+      {
+        "type": "text",
+        "content": "Refer to “1.2 Product List” in the hardware manual. \nCaution: The product model name differs depending on whether or not the JTAG, SubOSC, and CANFD functions are available, so select a model name according to the functions to be used. In addition, the model name differs depending on the ROM size, temperature range, and package."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX660"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX660"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX660"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20590536"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20590542"
+      }
+    ]
+  }
+}

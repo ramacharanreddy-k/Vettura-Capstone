@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21116865",
+    "title": "RA Family: e² studio Windows Compatibility",
+    "last_updated": "2023-02-11",
+    "extracted_at": "2025-03-08T23:16:36.880443"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Number: FAQ 3000695\nLast Updated: 11/02/2023"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nI’m not able to build an RA example project. What could be wrong?\nAnswer:\nFSP 2020-04 and later releases of e2studio are based on 64-bit windows versions.\nIf your system is windows 32-bit, it may be the reason for your problem.\nΙf you see two versions of FSP on your system, try to uninstall the old one.\nIf possible, uninstall both of the versions of fsp and try to install the latest versions, downloaded from the Renesas website.\n  Suitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "I’m not able to build an RA example project. What could be wrong?"
+      },
+      {
+        "type": "text",
+        "content": "I’m not able to build an RA example project. What could be wrong?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nFSP 2020-04 and later releases of e2studio are based on 64-bit windows versions.\nIf your system is windows 32-bit, it may be the reason for your problem.\nΙf you see two versions of FSP on your system, try to uninstall the old one.\nIf possible, uninstall both of the versions of fsp and try to install the latest versions, downloaded from the Renesas website.\n  Suitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "FSP 2020-04 and later releases of e2studio are based on 64-bit windows versions.\nIf your system is windows 32-bit, it may be the reason for your problem.\nΙf you see two versions of FSP on your system, try to uninstall the old one.\nIf possible, uninstall both of the versions of fsp and try to install the latest versions, downloaded from the Renesas website."
+      },
+      {
+        "type": "text",
+        "content": "FSP 2020-04 and later releases of e2studio are based on 64-bit windows versions."
+      },
+      {
+        "type": "text",
+        "content": "If your system is windows 32-bit, it may be the reason for your problem."
+      },
+      {
+        "type": "text",
+        "content": "Ιf you see two versions of FSP on your system, try to uninstall the old one."
+      },
+      {
+        "type": "text",
+        "content": "If possible, uninstall both of the versions of fsp and try to install the latest versions, downloaded from the Renesas website."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": []
+  }
+}

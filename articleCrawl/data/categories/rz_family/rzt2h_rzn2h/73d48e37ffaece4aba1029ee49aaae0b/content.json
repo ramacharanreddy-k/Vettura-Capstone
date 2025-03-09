@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21681486",
+    "title": "RZ/T2H, RZ/N2H: Interrupt notifications",
+    "last_updated": "2025-07-02",
+    "extracted_at": "2025-03-08T23:49:34.389838"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan a single interrupt go to multiple CPU cores?\nAnswer:\nYes, it can. If the same peripheral is selected, or if an interrupt is coming from a peripheral that is connected to all cores by default, multiple cores can be notified of a single interrupt simultaneously.\nSuitable Products\nRZ/T2H, RZ/N2H"
+      },
+      {
+        "type": "text",
+        "content": "Can a single interrupt go to multiple CPU cores?"
+      },
+      {
+        "type": "text",
+        "content": "Can a single interrupt go to multiple CPU cores?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes, it can. If the same peripheral is selected, or if an interrupt is coming from a peripheral that is connected to all cores by default, multiple cores can be notified of a single interrupt simultaneously.\nSuitable Products\nRZ/T2H, RZ/N2H"
+      },
+      {
+        "type": "text",
+        "content": "Yes, it can. If the same peripheral is selected, or if an interrupt is coming from a peripheral that is connected to all cores by default, multiple cores can be notified of a single interrupt simultaneously."
+      },
+      {
+        "type": "text",
+        "content": "Yes, it can. If the same peripheral is selected, or if an interrupt is coming from a peripheral that is connected to all cores by default, multiple cores can be notified of a single interrupt simultaneously."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/T2H, RZ/N2H"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/T2H, RZ/N2H"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/T2H, RZ/N2H"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21662849"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21686002"
+      }
+    ]
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20344994",
+    "title": "Correct Connections for VCL pin on RA4M2 MCUs",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:13:13.657895"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to I connect the VCL pin on RA4M2 MCUs?"
+      },
+      {
+        "type": "text",
+        "content": "Question:"
+      },
+      {
+        "type": "text",
+        "content": "How to I connect the VCL pin on RA4M2 MCUs?"
+      },
+      {
+        "type": "text",
+        "content": "How to I connect the VCL pin on RA4M2 MCUs?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYou might be confused on what to do with the VCL pin when reading the datasheet. Section 1.5 says: \n\"Connect this pin to the VSS pin by the smoothing capacitor used to stabilize the internal power supply\", you might think that you connect VCL to Vss right next to the main decoupling capacitor. This would be incorrect.\nThe Hardware User Manual, section 45 shows more clearly what to do- connect VCL to a capacitor that then connects to VSS- as seen in the right side of the below diagram."
+      },
+      {
+        "type": "text",
+        "content": "Answer:"
+      },
+      {
+        "type": "text",
+        "content": "You might be confused on what to do with the VCL pin when reading the datasheet. Section 1.5 says: \n\"Connect this pin to the VSS pin by the smoothing capacitor used to stabilize the internal power supply\", you might think that you connect VCL to Vss right next to the main decoupling capacitor. This would be incorrect.\nThe Hardware User Manual, section 45 shows more clearly what to do- connect VCL to a capacitor that then connects to VSS- as seen in the right side of the below diagram."
+      },
+      {
+        "type": "text",
+        "content": "You might be confused on what to do with the VCL pin when reading the datasheet. Section 1.5 says:"
+      },
+      {
+        "type": "text",
+        "content": "You might be confused on what to do with the VCL pin when reading the datasheet. Section 1.5 says:"
+      },
+      {
+        "type": "text",
+        "content": "\"Connect this pin to the VSS pin by the smoothing capacitor used to stabilize the internal power supply\", you might think that you connect VCL to Vss right next to the main decoupling capacitor. This would be incorrect."
+      },
+      {
+        "type": "text",
+        "content": "The Hardware User Manual, section 45 shows more clearly what to do- connect VCL to a capacitor that then connects to VSS- as seen in the right side of the below diagram."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/53ccd24d-9f06-4213-937b-4b6820f09bb3.png",
+          "alt_text": "",
+          "width": "739",
+          "height": "827",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/53dfb41c0a87368066a2be97a9245fe6/images/1a84e7b92f46b6b0888fd7ca9ed9b7df.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA4 Series"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/53ccd24d-9f06-4213-937b-4b6820f09bb3.png",
+        "alt_text": "",
+        "width": "739",
+        "height": "827",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/53dfb41c0a87368066a2be97a9245fe6/images/1a84e7b92f46b6b0888fd7ca9ed9b7df.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA4 Series"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA4 Series"
+    ],
+    "links": []
+  }
+}

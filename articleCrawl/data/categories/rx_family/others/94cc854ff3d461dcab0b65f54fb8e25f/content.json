@@ -1,0 +1,258 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21727826",
+    "title": "RX Family: How to configure the CC-RX Optimizing Linkage Options through the project configuration in the e2studio IDE",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:23:04.242757"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to configure the CC-RX Optimizing Linkage Options through the project configuration in the e2studio IDE\nAnswer:\nThe CC-RX compiler offers Optimizing Linkage Editor (rlink) Options for users to determine how to link object module, link directive files, and library files and generates an object file executable in the target system. This article is meant for guiding fresh users to configure the CC-RX Compiler linker optimization through the e2 studio IDE. In addition, user can also refer to the CC-RX Compiler User’s Manual for the detail descriptions of the supported Optimizing Linkage Editor Options after reading this article.\nThe first step for user is to open the Linker Optimization configuration through the e2 studio IDE. Please follow the instructions below to get ready for doing the further configuration.\nSpecify the RX project\nThrough the e2studio toolbar, click the Project and click the Properties\nIn the Properties window, navigate to C/C++ Build and expand it\nSelect the Settings to open the corresponding configuration in the left side pane of Properties window.\nIn the left side pane, navigate to the Tool Settings tab and expand the Linker item\nSelect the Optimization item within Linker settings\nNow, users can proceed with the Optimization configuration based on your needs, and there are five major settings which are introduced below.\nThe Optimization Type (-optimize) configuration:\nWhen Optimization type is configured as All, the -optimize without sub options, which executes all optimization, is used.\nIt is equivalent to “-optimize=symbol_delete,same_code,short_format,branch”.\nUser can specify the Minimum code size (-samesize) with a hexadecimal value from 8 to 7FFF for the optimization with the “same_code” unification. The default size is 0x1E (-samesize=1E).\nWhen Optimization type is configured as No optimize, the -nooptimize option is specified, and optimization is not performed at linkage.\nWhen Optimization type is configured as Speed-oriented optimization, the -optimize=speed option is used.\nThis configuration executes optimizations other than those reducing object speed.\nThis is equivalent to “-optimize=symbol_delete,short_format,branch”.\nWhen Optimization type is configured as Safe optimization, the -optimize=safe option is used.\nThis configuration executes optimization other than those limited by variable or function attributes. This is equivalent to “-optimize=short_format,branch”.\nWhen Optimization type is configured as Custom, the sub options will be incorporated based upon the following user configuration.\nDeletes variables/functions that are not referenced (-optimize=symbol_delete)\nCreates a subroutine for the same instruction sequence (-optimize=same_code)\nWhen “-optimize=same_code” is specified, the “-samesize” will be included along with the option.\nReplaces an instruction with a smaller-size instruction (-optimize=short_format)\nOptimizes branch instruction size (optimize=branch)\nFor example, the Custom configuration incorporates the symbol_delete sub option usage.\nExclude the specified variable or function from the unreferenced symbol deletion optimization (-symbol_forbid)\nFor a C/C++ variable or C function name, add an underscore (_) at the head of the definition name in the configuration.\nFor an example as below, if I want to disable the optimization for an unreferenced variable (test_unreference_variable) in my program, the corresponding configuration is like below. This is equivalent to -symbol_forbid=_test_unreference_variable\nExclude the specified variable or function from the same-code unification optimization (-samecode_forbid)\nFor a C/C++ variable or C function name, add an underscore (_) at the head of the definition name in the configuration. When the function argument is void, specify as _<function name>().\nFor example, if I want to exclude the “test_func()” from the optimization in my program, the corresponding configuration is like below. Note that this is equivalent to -samecode_forbid=_test_func().\nExclude the specified from the optimization (-section_forbid)\nIn the e2studio properties window, user can go to Section (Linker/Section) and open the section viewer to add or check the section configuration.\nFor example, if I want to exclude the PFRAM section from the optimization in my program, the corresponding configuration is like below. This is equivalent to -section_forbid=(PFRAM)\nExclude a specified address range from the optimization (-absolute_forbid)\nDisables optimization regarding the input address plus size specification.\nFor example:\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "How to configure the CC-RX Optimizing Linkage Options through the project configuration in the e2studio IDE"
+      },
+      {
+        "type": "text",
+        "content": "How to configure the CC-RX Optimizing Linkage Options through the project configuration in the e2studio IDE"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe CC-RX compiler offers Optimizing Linkage Editor (rlink) Options for users to determine how to link object module, link directive files, and library files and generates an object file executable in the target system. This article is meant for guiding fresh users to configure the CC-RX Compiler linker optimization through the e2 studio IDE. In addition, user can also refer to the CC-RX Compiler User’s Manual for the detail descriptions of the supported Optimizing Linkage Editor Options after reading this article.\nThe first step for user is to open the Linker Optimization configuration through the e2 studio IDE. Please follow the instructions below to get ready for doing the further configuration.\nSpecify the RX project\nThrough the e2studio toolbar, click the Project and click the Properties\nIn the Properties window, navigate to C/C++ Build and expand it\nSelect the Settings to open the corresponding configuration in the left side pane of Properties window.\nIn the left side pane, navigate to the Tool Settings tab and expand the Linker item\nSelect the Optimization item within Linker settings\nNow, users can proceed with the Optimization configuration based on your needs, and there are five major settings which are introduced below.\nThe Optimization Type (-optimize) configuration:\nWhen Optimization type is configured as All, the -optimize without sub options, which executes all optimization, is used.\nIt is equivalent to “-optimize=symbol_delete,same_code,short_format,branch”.\nUser can specify the Minimum code size (-samesize) with a hexadecimal value from 8 to 7FFF for the optimization with the “same_code” unification. The default size is 0x1E (-samesize=1E).\nWhen Optimization type is configured as No optimize, the -nooptimize option is specified, and optimization is not performed at linkage.\nWhen Optimization type is configured as Speed-oriented optimization, the -optimize=speed option is used.\nThis configuration executes optimizations other than those reducing object speed.\nThis is equivalent to “-optimize=symbol_delete,short_format,branch”.\nWhen Optimization type is configured as Safe optimization, the -optimize=safe option is used.\nThis configuration executes optimization other than those limited by variable or function attributes. This is equivalent to “-optimize=short_format,branch”.\nWhen Optimization type is configured as Custom, the sub options will be incorporated based upon the following user configuration.\nDeletes variables/functions that are not referenced (-optimize=symbol_delete)\nCreates a subroutine for the same instruction sequence (-optimize=same_code)\nWhen “-optimize=same_code” is specified, the “-samesize” will be included along with the option.\nReplaces an instruction with a smaller-size instruction (-optimize=short_format)\nOptimizes branch instruction size (optimize=branch)\nFor example, the Custom configuration incorporates the symbol_delete sub option usage.\nExclude the specified variable or function from the unreferenced symbol deletion optimization (-symbol_forbid)\nFor a C/C++ variable or C function name, add an underscore (_) at the head of the definition name in the configuration.\nFor an example as below, if I want to disable the optimization for an unreferenced variable (test_unreference_variable) in my program, the corresponding configuration is like below. This is equivalent to -symbol_forbid=_test_unreference_variable\nExclude the specified variable or function from the same-code unification optimization (-samecode_forbid)\nFor a C/C++ variable or C function name, add an underscore (_) at the head of the definition name in the configuration. When the function argument is void, specify as _<function name>().\nFor example, if I want to exclude the “test_func()” from the optimization in my program, the corresponding configuration is like below. Note that this is equivalent to -samecode_forbid=_test_func().\nExclude the specified from the optimization (-section_forbid)\nIn the e2studio properties window, user can go to Section (Linker/Section) and open the section viewer to add or check the section configuration.\nFor example, if I want to exclude the PFRAM section from the optimization in my program, the corresponding configuration is like below. This is equivalent to -section_forbid=(PFRAM)\nExclude a specified address range from the optimization (-absolute_forbid)\nDisables optimization regarding the input address plus size specification.\nFor example:\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "The CC-RX compiler offers Optimizing Linkage Editor (rlink) Options for users to determine how to link object module, link directive files, and library files and generates an object file executable in the target system. This article is meant for guiding fresh users to configure the CC-RX Compiler linker optimization through the e2 studio IDE. In addition, user can also refer to the CC-RX Compiler User’s Manual for the detail descriptions of the supported Optimizing Linkage Editor Options after reading this article.\nThe first step for user is to open the Linker Optimization configuration through the e2 studio IDE. Please follow the instructions below to get ready for doing the further configuration.\nSpecify the RX project\nThrough the e2studio toolbar, click the Project and click the Properties\nIn the Properties window, navigate to C/C++ Build and expand it\nSelect the Settings to open the corresponding configuration in the left side pane of Properties window.\nIn the left side pane, navigate to the Tool Settings tab and expand the Linker item\nSelect the Optimization item within Linker settings\nNow, users can proceed with the Optimization configuration based on your needs, and there are five major settings which are introduced below.\nThe Optimization Type (-optimize) configuration:\nWhen Optimization type is configured as All, the -optimize without sub options, which executes all optimization, is used.\nIt is equivalent to “-optimize=symbol_delete,same_code,short_format,branch”.\nUser can specify the Minimum code size (-samesize) with a hexadecimal value from 8 to 7FFF for the optimization with the “same_code” unification. The default size is 0x1E (-samesize=1E).\nWhen Optimization type is configured as No optimize, the -nooptimize option is specified, and optimization is not performed at linkage.\nWhen Optimization type is configured as Speed-oriented optimization, the -optimize=speed option is used.\nThis configuration executes optimizations other than those reducing object speed.\nThis is equivalent to “-optimize=symbol_delete,short_format,branch”.\nWhen Optimization type is configured as Safe optimization, the -optimize=safe option is used.\nThis configuration executes optimization other than those limited by variable or function attributes. This is equivalent to “-optimize=short_format,branch”.\nWhen Optimization type is configured as Custom, the sub options will be incorporated based upon the following user configuration.\nDeletes variables/functions that are not referenced (-optimize=symbol_delete)\nCreates a subroutine for the same instruction sequence (-optimize=same_code)\nWhen “-optimize=same_code” is specified, the “-samesize” will be included along with the option.\nReplaces an instruction with a smaller-size instruction (-optimize=short_format)\nOptimizes branch instruction size (optimize=branch)\nFor example, the Custom configuration incorporates the symbol_delete sub option usage.\nExclude the specified variable or function from the unreferenced symbol deletion optimization (-symbol_forbid)\nFor a C/C++ variable or C function name, add an underscore (_) at the head of the definition name in the configuration.\nFor an example as below, if I want to disable the optimization for an unreferenced variable (test_unreference_variable) in my program, the corresponding configuration is like below. This is equivalent to -symbol_forbid=_test_unreference_variable\nExclude the specified variable or function from the same-code unification optimization (-samecode_forbid)\nFor a C/C++ variable or C function name, add an underscore (_) at the head of the definition name in the configuration. When the function argument is void, specify as _<function name>().\nFor example, if I want to exclude the “test_func()” from the optimization in my program, the corresponding configuration is like below. Note that this is equivalent to -samecode_forbid=_test_func().\nExclude the specified from the optimization (-section_forbid)\nIn the e2studio properties window, user can go to Section (Linker/Section) and open the section viewer to add or check the section configuration.\nFor example, if I want to exclude the PFRAM section from the optimization in my program, the corresponding configuration is like below. This is equivalent to -section_forbid=(PFRAM)\nExclude a specified address range from the optimization (-absolute_forbid)\nDisables optimization regarding the input address plus size specification.\nFor example:"
+      },
+      {
+        "type": "text",
+        "content": "The CC-RX compiler offers Optimizing Linkage Editor (rlink) Options for users to determine how to link object module, link directive files, and library files and generates an object file executable in the target system. This article is meant for guiding fresh users to configure the CC-RX Compiler linker optimization through the e2 studio IDE. In addition, user can also refer to the CC-RX Compiler User’s Manual for the detail descriptions of the supported Optimizing Linkage Editor Options after reading this article."
+      },
+      {
+        "type": "text",
+        "content": "The first step for user is to open the Linker Optimization configuration through the e2 studio IDE. Please follow the instructions below to get ready for doing the further configuration."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396682-1.png",
+          "alt_text": "",
+          "width": "602",
+          "height": "222",
+          "local_path": "data/categories/rx_family/others/94cc854ff3d461dcab0b65f54fb8e25f/images/5fb9db7af0c037fd31d168caaab5eb42.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Now, users can proceed with the Optimization configuration based on your needs, and there are five major settings which are introduced below."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396682-2.png",
+          "alt_text": "",
+          "width": "537",
+          "height": "120",
+          "local_path": "data/categories/rx_family/others/94cc854ff3d461dcab0b65f54fb8e25f/images/adac9960064a98a453f5e04c4794be38.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396682-3.png",
+          "alt_text": "",
+          "width": "537",
+          "height": "125",
+          "local_path": "data/categories/rx_family/others/94cc854ff3d461dcab0b65f54fb8e25f/images/999e1788be2278656c8f0361983dc09c.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396682-4.png",
+          "alt_text": "",
+          "width": "538",
+          "height": "126",
+          "local_path": "data/categories/rx_family/others/94cc854ff3d461dcab0b65f54fb8e25f/images/fc8ca249b46d51a86d368616d2eaee45.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396682-5.png",
+          "alt_text": "",
+          "width": "529",
+          "height": "122",
+          "local_path": "data/categories/rx_family/others/94cc854ff3d461dcab0b65f54fb8e25f/images/9ac8679252f3440a58b18aeded5a4bd4.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396682-6.png",
+          "alt_text": "",
+          "width": "522",
+          "height": "125",
+          "local_path": "data/categories/rx_family/others/94cc854ff3d461dcab0b65f54fb8e25f/images/3b4ce9eaf37b46cf549ce765850eb948.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396682-7.png",
+          "alt_text": "",
+          "width": "537",
+          "height": "91",
+          "local_path": "data/categories/rx_family/others/94cc854ff3d461dcab0b65f54fb8e25f/images/b39b1b862bebfd07a2c6c34503e4a081.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396682-8.png",
+          "alt_text": "",
+          "width": "527",
+          "height": "97",
+          "local_path": "data/categories/rx_family/others/94cc854ff3d461dcab0b65f54fb8e25f/images/83a1bfbe0c718f4eea4b41a7e69b01a4.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396682-9.png",
+          "alt_text": "",
+          "width": "436",
+          "height": "320",
+          "local_path": "data/categories/rx_family/others/94cc854ff3d461dcab0b65f54fb8e25f/images/7f3c4fd447588fee97bc7e7fa4adb1b8.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396682-10.png",
+          "alt_text": "",
+          "width": "513",
+          "height": "87",
+          "local_path": "data/categories/rx_family/others/94cc854ff3d461dcab0b65f54fb8e25f/images/633e4df4df0e971956873910ccbf7582.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396682-11.png",
+          "alt_text": "",
+          "width": "510",
+          "height": "57",
+          "local_path": "data/categories/rx_family/others/94cc854ff3d461dcab0b65f54fb8e25f/images/7d823e46016bcb87d7a11600b643c820.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396682-1.png",
+        "alt_text": "",
+        "width": "602",
+        "height": "222",
+        "local_path": "data/categories/rx_family/others/94cc854ff3d461dcab0b65f54fb8e25f/images/5fb9db7af0c037fd31d168caaab5eb42.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396682-2.png",
+        "alt_text": "",
+        "width": "537",
+        "height": "120",
+        "local_path": "data/categories/rx_family/others/94cc854ff3d461dcab0b65f54fb8e25f/images/adac9960064a98a453f5e04c4794be38.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396682-3.png",
+        "alt_text": "",
+        "width": "537",
+        "height": "125",
+        "local_path": "data/categories/rx_family/others/94cc854ff3d461dcab0b65f54fb8e25f/images/999e1788be2278656c8f0361983dc09c.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396682-4.png",
+        "alt_text": "",
+        "width": "538",
+        "height": "126",
+        "local_path": "data/categories/rx_family/others/94cc854ff3d461dcab0b65f54fb8e25f/images/fc8ca249b46d51a86d368616d2eaee45.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396682-5.png",
+        "alt_text": "",
+        "width": "529",
+        "height": "122",
+        "local_path": "data/categories/rx_family/others/94cc854ff3d461dcab0b65f54fb8e25f/images/9ac8679252f3440a58b18aeded5a4bd4.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396682-6.png",
+        "alt_text": "",
+        "width": "522",
+        "height": "125",
+        "local_path": "data/categories/rx_family/others/94cc854ff3d461dcab0b65f54fb8e25f/images/3b4ce9eaf37b46cf549ce765850eb948.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396682-7.png",
+        "alt_text": "",
+        "width": "537",
+        "height": "91",
+        "local_path": "data/categories/rx_family/others/94cc854ff3d461dcab0b65f54fb8e25f/images/b39b1b862bebfd07a2c6c34503e4a081.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396682-8.png",
+        "alt_text": "",
+        "width": "527",
+        "height": "97",
+        "local_path": "data/categories/rx_family/others/94cc854ff3d461dcab0b65f54fb8e25f/images/83a1bfbe0c718f4eea4b41a7e69b01a4.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396682-9.png",
+        "alt_text": "",
+        "width": "436",
+        "height": "320",
+        "local_path": "data/categories/rx_family/others/94cc854ff3d461dcab0b65f54fb8e25f/images/7f3c4fd447588fee97bc7e7fa4adb1b8.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396682-10.png",
+        "alt_text": "",
+        "width": "513",
+        "height": "87",
+        "local_path": "data/categories/rx_family/others/94cc854ff3d461dcab0b65f54fb8e25f/images/633e4df4df0e971956873910ccbf7582.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396682-11.png",
+        "alt_text": "",
+        "width": "510",
+        "height": "57",
+        "local_path": "data/categories/rx_family/others/94cc854ff3d461dcab0b65f54fb8e25f/images/7d823e46016bcb87d7a11600b643c820.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "CC-RX Compiler User’s Manual",
+        "url": "https://www.renesas.com/document/mat/cc-rx-compiler-users-manual"
+      }
+    ]
+  }
+}

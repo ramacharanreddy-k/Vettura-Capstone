@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21116866",
+    "title": "RA Family: SPI and QSPI compatibility",
+    "last_updated": "2023-02-11",
+    "extracted_at": "2025-03-08T23:39:29.712984"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nAre SPI and QSPI pin-compatible?\nAnswer:\nMost flash chips these days have a pin layout that lets the user decide to either use it as normal SPI or Quad SPI.\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "Are SPI and QSPI pin-compatible?"
+      },
+      {
+        "type": "text",
+        "content": "Are SPI and QSPI pin-compatible?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nMost flash chips these days have a pin layout that lets the user decide to either use it as normal SPI or Quad SPI.\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "Most flash chips these days have a pin layout that lets the user decide to either use it as normal SPI or Quad SPI."
+      },
+      {
+        "type": "text",
+        "content": "Most flash chips these days have a pin layout that lets the user decide to either use it as normal SPI or Quad SPI."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": []
+  }
+}

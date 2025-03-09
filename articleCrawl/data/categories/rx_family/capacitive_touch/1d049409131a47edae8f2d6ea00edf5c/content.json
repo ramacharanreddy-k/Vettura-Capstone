@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18286032",
+    "title": "Does the Touch MCU Have a Shield Function?",
+    "last_updated": "2023-02-03",
+    "extracted_at": "2025-03-09T00:08:56.157088"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nAre 2nd generation touch key technology MCUs equipped with a shielding function (also called active shield, guard, etc.)?\nAnswer:\nThe second generation does not have an active shield function.\nIn the third-generation CTSU2, an active-shield function has been added to the self-capacitance method.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Are 2nd generation touch key technology MCUs equipped with a shielding function (also called active shield, guard, etc.)?"
+      },
+      {
+        "type": "text",
+        "content": "Are 2nd generation touch key technology MCUs equipped with a shielding function (also called active shield, guard, etc.)?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe second generation does not have an active shield function.\nIn the third-generation CTSU2, an active-shield function has been added to the self-capacitance method.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "The second generation does not have an active shield function.\nIn the third-generation CTSU2, an active-shield function has been added to the self-capacitance method."
+      },
+      {
+        "type": "text",
+        "content": "The second generation does not have an active shield function.\nIn the third-generation CTSU2, an active-shield function has been added to the self-capacitance method."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792855"
+      }
+    ]
+  }
+}

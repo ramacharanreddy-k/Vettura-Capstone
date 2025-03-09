@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20855741",
+    "title": "Kit: How can I provide power to the kit, is an external supply necessary?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:26:02.665819"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow can I provide power to the kit, is an external supply necessary?\nAnswer:\nThe kit can be simply powered using the available USB type C connector.\nSuitable Products\nRISC-V Voice ASSP"
+      },
+      {
+        "type": "text",
+        "content": "How can I provide power to the kit, is an external supply necessary?"
+      },
+      {
+        "type": "text",
+        "content": "How can I provide power to the kit, is an external supply necessary?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe kit can be simply powered using the available USB type C connector.\nSuitable Products\nRISC-V Voice ASSP"
+      },
+      {
+        "type": "text",
+        "content": "The kit can be simply powered using the available USB type C connector."
+      },
+      {
+        "type": "text",
+        "content": "The kit can be simply powered using the available USB type C connector."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRISC-V Voice ASSP"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RISC-V Voice ASSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RISC-V Voice ASSP"
+    ],
+    "links": []
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21763412",
+    "title": "RA4L1 MCU Package Options",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:30:30.138492"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat package options are available for the RA4L1 Group MCUs?\nAnswer:\nThe RA4L1 Group MCUs are available in a wide range of standard and compact package options. The RA4L1 is available in 48, 64 and 100LQFP packages as well as 48 QFN, and compact 64 BGA and 100 BGA packages with 0.5mm pitch . The RA4L1 Is also available in a space saving 72 CSP package which is only 3.66 x 4.30mm with a 0.4 mm pitch.\nSuitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "What package options are available for the RA4L1 Group MCUs?"
+      },
+      {
+        "type": "text",
+        "content": "What package options are available for the RA4L1 Group MCUs?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RA4L1 Group MCUs are available in a wide range of standard and compact package options. The RA4L1 is available in 48, 64 and 100LQFP packages as well as 48 QFN, and compact 64 BGA and 100 BGA packages with 0.5mm pitch . The RA4L1 Is also available in a space saving 72 CSP package which is only 3.66 x 4.30mm with a 0.4 mm pitch.\nSuitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "The RA4L1 Group MCUs are available in a wide range of standard and compact package options. The RA4L1 is available in 48, 64 and 100LQFP packages as well as 48 QFN, and compact 64 BGA and 100 BGA packages with 0.5mm pitch . The RA4L1 Is also available in a space saving 72 CSP package which is only 3.66 x 4.30mm with a 0.4 mm pitch."
+      },
+      {
+        "type": "text",
+        "content": "The RA4L1 Group MCUs are available in a wide range of standard and compact package options. The RA4L1 is available in 48, 64 and 100LQFP packages as well as 48 QFN, and compact 64 BGA and 100 BGA packages with 0.5mm pitch . The RA4L1 Is also available in a space saving 72 CSP package which is only 3.66 x 4.30mm with a 0.4 mm pitch."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "Japanese Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA4L1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA4L1"
+    ],
+    "links": [
+      {
+        "text": "Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21763457"
+      },
+      {
+        "text": "Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21763469"
+      }
+    ]
+  }
+}

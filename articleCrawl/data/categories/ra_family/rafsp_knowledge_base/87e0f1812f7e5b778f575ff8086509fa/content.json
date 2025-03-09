@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20797520",
+    "title": "RA Family: How to test operation when SRAM parity error or ECC error occurs",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:25:07.074849"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to test operation when SRAM parity error or ECC error occurs \nAnswer:\nFor SRAM areas with a parity function, a parity bit is added to each 8-bit data when writing, and a parity check is performed when reading. When the ECC function is enabled, a check bit is added during writing for each 32-bit data, and the check bit is checked during reading. Since the data in SRAM is undefined after the power is turned on, parity and ECC errors may occur when accessing SRAM to which nothing has been written. By using this memory status, it is possible to intentionally generate an SRAM parity error or ECC error and check the status of related registers and interrupt generation operations when an error occurs. As for the parity function, there is a 1 in 2 chance that the parity bits will match, so it doesn't always happen on a single read. In that case, try reading memory data from multiple addresses.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "How to test operation when SRAM parity error or ECC error occurs"
+      },
+      {
+        "type": "text",
+        "content": "How to test operation when SRAM parity error or ECC error occurs"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nFor SRAM areas with a parity function, a parity bit is added to each 8-bit data when writing, and a parity check is performed when reading. When the ECC function is enabled, a check bit is added during writing for each 32-bit data, and the check bit is checked during reading. Since the data in SRAM is undefined after the power is turned on, parity and ECC errors may occur when accessing SRAM to which nothing has been written. By using this memory status, it is possible to intentionally generate an SRAM parity error or ECC error and check the status of related registers and interrupt generation operations when an error occurs. As for the parity function, there is a 1 in 2 chance that the parity bits will match, so it doesn't always happen on a single read. In that case, try reading memory data from multiple addresses.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "For SRAM areas with a parity function, a parity bit is added to each 8-bit data when writing, and a parity check is performed when reading. When the ECC function is enabled, a check bit is added during writing for each 32-bit data, and the check bit is checked during reading. Since the data in SRAM is undefined after the power is turned on, parity and ECC errors may occur when accessing SRAM to which nothing has been written. By using this memory status, it is possible to intentionally generate an SRAM parity error or ECC error and check the status of related registers and interrupt generation operations when an error occurs. As for the parity function, there is a 1 in 2 chance that the parity bits will match, so it doesn't always happen on a single read. In that case, try reading memory data from multiple addresses.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "For SRAM areas with a parity function, a parity bit is added to each 8-bit data when writing, and a parity check is performed when reading. When the ECC function is enabled, a check bit is added during writing for each 32-bit data, and the check bit is checked during reading. Since the data in SRAM is undefined after the power is turned on, parity and ECC errors may occur when accessing SRAM to which nothing has been written. By using this memory status, it is possible to intentionally generate an SRAM parity error or ECC error and check the status of related registers and interrupt generation operations when an error occurs. As for the parity function, there is a 1 in 2 chance that the parity bits will match, so it doesn't always happen on a single read. In that case, try reading memory data from multiple addresses."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20793400"
+      }
+    ]
+  }
+}

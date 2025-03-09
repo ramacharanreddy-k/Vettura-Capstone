@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18284511",
+    "title": "What Is the Measurable Capacitance?",
+    "last_updated": "2023-07-03",
+    "extracted_at": "2025-03-09T00:07:34.114175"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the recommended range of parasitic capacitance for electrodes?\nAnswer:\nThe following capacities are recommended:\nSelf-capacitance method: \n50pF or less\nMutual capacitance method: \nTransmittier pin : 20pF or less\nReceiver pin : 20pF or less\nFor more information, refer to \"2.1 Outline of Design Recommendations \" and \"3.2 Outline of Design Recommendations\" in the Application Note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\".\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "What is the recommended range of parasitic capacitance for electrodes?"
+      },
+      {
+        "type": "text",
+        "content": "What is the recommended range of parasitic capacitance for electrodes?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe following capacities are recommended:\nSelf-capacitance method: \n50pF or less\nMutual capacitance method: \nTransmittier pin : 20pF or less\nReceiver pin : 20pF or less\nFor more information, refer to \"2.1 Outline of Design Recommendations \" and \"3.2 Outline of Design Recommendations\" in the Application Note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\".\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "The following capacities are recommended:\nSelf-capacitance method: \n50pF or less\nMutual capacitance method: \nTransmittier pin : 20pF or less\nReceiver pin : 20pF or less\nFor more information, refer to \"2.1 Outline of Design Recommendations \" and \"3.2 Outline of Design Recommendations\" in the Application Note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\"."
+      },
+      {
+        "type": "text",
+        "content": "The following capacities are recommended:\nSelf-capacitance method: \n50pF or less\nMutual capacitance method: \nTransmittier pin : 20pF or less\nReceiver pin : 20pF or less"
+      },
+      {
+        "type": "text",
+        "content": "For more information, refer to \"2.1 Outline of Design Recommendations \" and \"3.2 Outline of Design Recommendations\" in the Application Note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\"."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792873"
+      }
+    ]
+  }
+}

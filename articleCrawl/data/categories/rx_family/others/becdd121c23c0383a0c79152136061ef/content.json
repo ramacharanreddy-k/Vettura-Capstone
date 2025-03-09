@@ -1,0 +1,214 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20940273",
+    "title": "What are the requirements for the development environment in which emWin can be used? If sample code is provided, please tell me where it is available.",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:23:14.794396"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat are the requirements for the development environment in which emWin can be used? If sample code is provided, please tell me where it is available.\nAnswer:\nWe provide the following environment, application note, and sample code:\nDevelopment environment:\nThe development environment consists of e2 studio, QE for Display, a compiler, and FIT modules. Use the latest versions of these components.\n[e2 studio]\nhttps://www.renesas.com/es/un/software-tool/e-studio#overview\n[QE for Display [RX/RA] (e2 studio plugin)]\nhttps://www.renesas.com/us/en/software-tool/qe-display-development-assistance-tool-display-applications\nNote: Although you can download the QE for Display [RX/RA] plugin from the preceding URL, you can also install it from the e2 studio installer.\n[Board]\n• RX72N Envision Kit\nhttps://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx72n-envision-kit-rx72n-envision-kit\n• Renesas Starter Kit+ for RX72N\nhttps://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx72n-starter-kit-plus-renesas-starter-kit-rx72n\n• RX-Family-Target-Board\nhttps://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx-family-target-board-target-board-rx-family\nReference materials:\n• QE for Display [RX] Application Note\nhttps://www.renesas.com/us/en/document/apn/rx-family-qe-display-rx-application-note\n• RX Family QE for Display GUI Display Application Development Guide using Serial Connection LCD\nhttps://www.renesas.com/us/en/document/apn/rx-family-qe-display-gui-display-application-development-guide-using-serial-connection-lcd\nNote: This document describes a procedure for displaying a simple window by using QE and emWin or AppWizard.\n• Sample video for GUI development using QE for Display [RX] and the emWin library\nhttps://www.renesas.com/us/en/video/easy-gui-development-using-qe-display?rxsw-j\nFor details about how to design a graphical user interface by using emWin and how to use AppWizard, contact Segger, which developed emWin.\nhttps://www.segger.com/\nThe Wikipedia article provided by Segger and videos provided by third parties are also available as reference materials.\nEven though different devices are used in these reference materials, almost the same operation procedures are applicable.\nNote that how to specify settings might differ depending on the version of AppWizard.\nhttps://wiki.segger.com/emWin\nhttps://www.youtube.com/results?search_query=emwin+renesas+segger\nSample programs:\n[Segger's emWin webpage for the RX family]\nhttps://www.segger.com/products/user-interface/emwin/add-ons/emwin-support-renesas-rx-mcu/\nNote: These sample programs are applicable to the Renesas RX65N or RX72N Envision Kit. \nThese sample programs have a configuration that is different from the configuration in which QE for Display or a Renesas emWin FIT module is used. Use the “Application” folder of each sample as the main reference material.\n[Segger’s emWin Samples]\nhttps://wiki.segger.com/emWin_Examples\nNote: These sample programs use API programming\n[Sample program for displaying images on a WVGA display using internal memory in the RX family (Rev. 1.00)]\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-chip-memory-display-images-wvga-display-rev100-sample-code\n[RX Family GUI Sample Program using Serial LCD and emWin Library]\nhttps://www.renesas.com/us/en/document/scd/rx-family-gui-sample-program-using-serial-lcd-and-emwin-library\n[emWin FIT module]\nYou can download an emWin FIT module bundled with a training document: \nFITModules\\r_emwin_rx_vX.XX_XXX.zip\nWhen this file is unzipped, the training document is available in the following folder: r_emwin_rx\\doc\\Training\nSuitable Products\nRX Family\n  日本語"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nWhat are the requirements for the development environment in which emWin can be used? If sample code is provided, please tell me where it is available.\nAnswer:\nWe provide the following environment, application note, and sample code:\nDevelopment environment:\nThe development environment consists of e2 studio, QE for Display, a compiler, and FIT modules. Use the latest versions of these components.\n[e2 studio]\nhttps://www.renesas.com/es/un/software-tool/e-studio#overview\n[QE for Display [RX/RA] (e2 studio plugin)]\nhttps://www.renesas.com/us/en/software-tool/qe-display-development-assistance-tool-display-applications\nNote: Although you can download the QE for Display [RX/RA] plugin from the preceding URL, you can also install it from the e2 studio installer.\n[Board]\n• RX72N Envision Kit\nhttps://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx72n-envision-kit-rx72n-envision-kit\n• Renesas Starter Kit+ for RX72N\nhttps://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx72n-starter-kit-plus-renesas-starter-kit-rx72n\n• RX-Family-Target-Board\nhttps://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx-family-target-board-target-board-rx-family\nReference materials:\n• QE for Display [RX] Application Note\nhttps://www.renesas.com/us/en/document/apn/rx-family-qe-display-rx-application-note\n• RX Family QE for Display GUI Display Application Development Guide using Serial Connection LCD\nhttps://www.renesas.com/us/en/document/apn/rx-family-qe-display-gui-display-application-development-guide-using-serial-connection-lcd\nNote: This document describes a procedure for displaying a simple window by using QE and emWin or AppWizard.\n• Sample video for GUI development using QE for Display [RX] and the emWin library\nhttps://www.renesas.com/us/en/video/easy-gui-development-using-qe-display?rxsw-j\nFor details about how to design a graphical user interface by using emWin and how to use AppWizard, contact Segger, which developed emWin.\nhttps://www.segger.com/\nThe Wikipedia article provided by Segger and videos provided by third parties are also available as reference materials.\nEven though different devices are used in these reference materials, almost the same operation procedures are applicable.\nNote that how to specify settings might differ depending on the version of AppWizard.\nhttps://wiki.segger.com/emWin\nhttps://www.youtube.com/results?search_query=emwin+renesas+segger\nSample programs:\n[Segger's emWin webpage for the RX family]\nhttps://www.segger.com/products/user-interface/emwin/add-ons/emwin-support-renesas-rx-mcu/\nNote: These sample programs are applicable to the Renesas RX65N or RX72N Envision Kit. \nThese sample programs have a configuration that is different from the configuration in which QE for Display or a Renesas emWin FIT module is used. Use the “Application” folder of each sample as the main reference material.\n[Segger’s emWin Samples]\nhttps://wiki.segger.com/emWin_Examples\nNote: These sample programs use API programming\n[Sample program for displaying images on a WVGA display using internal memory in the RX family (Rev. 1.00)]\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-chip-memory-display-images-wvga-display-rev100-sample-code\n[RX Family GUI Sample Program using Serial LCD and emWin Library]\nhttps://www.renesas.com/us/en/document/scd/rx-family-gui-sample-program-using-serial-lcd-and-emwin-library\n[emWin FIT module]\nYou can download an emWin FIT module bundled with a training document: \nFITModules\\r_emwin_rx_vX.XX_XXX.zip\nWhen this file is unzipped, the training document is available in the following folder: r_emwin_rx\\doc\\Training\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "What are the requirements for the development environment in which emWin can be used? If sample code is provided, please tell me where it is available."
+      },
+      {
+        "type": "text",
+        "content": "What are the requirements for the development environment in which emWin can be used? If sample code is provided, please tell me where it is available."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nWe provide the following environment, application note, and sample code:\nDevelopment environment:\nThe development environment consists of e2 studio, QE for Display, a compiler, and FIT modules. Use the latest versions of these components.\n[e2 studio]\nhttps://www.renesas.com/es/un/software-tool/e-studio#overview\n[QE for Display [RX/RA] (e2 studio plugin)]\nhttps://www.renesas.com/us/en/software-tool/qe-display-development-assistance-tool-display-applications\nNote: Although you can download the QE for Display [RX/RA] plugin from the preceding URL, you can also install it from the e2 studio installer.\n[Board]\n• RX72N Envision Kit\nhttps://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx72n-envision-kit-rx72n-envision-kit\n• Renesas Starter Kit+ for RX72N\nhttps://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx72n-starter-kit-plus-renesas-starter-kit-rx72n\n• RX-Family-Target-Board\nhttps://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx-family-target-board-target-board-rx-family\nReference materials:\n• QE for Display [RX] Application Note\nhttps://www.renesas.com/us/en/document/apn/rx-family-qe-display-rx-application-note\n• RX Family QE for Display GUI Display Application Development Guide using Serial Connection LCD\nhttps://www.renesas.com/us/en/document/apn/rx-family-qe-display-gui-display-application-development-guide-using-serial-connection-lcd\nNote: This document describes a procedure for displaying a simple window by using QE and emWin or AppWizard.\n• Sample video for GUI development using QE for Display [RX] and the emWin library\nhttps://www.renesas.com/us/en/video/easy-gui-development-using-qe-display?rxsw-j\nFor details about how to design a graphical user interface by using emWin and how to use AppWizard, contact Segger, which developed emWin.\nhttps://www.segger.com/\nThe Wikipedia article provided by Segger and videos provided by third parties are also available as reference materials.\nEven though different devices are used in these reference materials, almost the same operation procedures are applicable.\nNote that how to specify settings might differ depending on the version of AppWizard.\nhttps://wiki.segger.com/emWin\nhttps://www.youtube.com/results?search_query=emwin+renesas+segger\nSample programs:\n[Segger's emWin webpage for the RX family]\nhttps://www.segger.com/products/user-interface/emwin/add-ons/emwin-support-renesas-rx-mcu/\nNote: These sample programs are applicable to the Renesas RX65N or RX72N Envision Kit. \nThese sample programs have a configuration that is different from the configuration in which QE for Display or a Renesas emWin FIT module is used. Use the “Application” folder of each sample as the main reference material.\n[Segger’s emWin Samples]\nhttps://wiki.segger.com/emWin_Examples\nNote: These sample programs use API programming\n[Sample program for displaying images on a WVGA display using internal memory in the RX family (Rev. 1.00)]\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-chip-memory-display-images-wvga-display-rev100-sample-code\n[RX Family GUI Sample Program using Serial LCD and emWin Library]\nhttps://www.renesas.com/us/en/document/scd/rx-family-gui-sample-program-using-serial-lcd-and-emwin-library\n[emWin FIT module]\nYou can download an emWin FIT module bundled with a training document: \nFITModules\\r_emwin_rx_vX.XX_XXX.zip\nWhen this file is unzipped, the training document is available in the following folder: r_emwin_rx\\doc\\Training\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "We provide the following environment, application note, and sample code:\nDevelopment environment:\nThe development environment consists of e2 studio, QE for Display, a compiler, and FIT modules. Use the latest versions of these components.\n[e2 studio]\nhttps://www.renesas.com/es/un/software-tool/e-studio#overview\n[QE for Display [RX/RA] (e2 studio plugin)]\nhttps://www.renesas.com/us/en/software-tool/qe-display-development-assistance-tool-display-applications\nNote: Although you can download the QE for Display [RX/RA] plugin from the preceding URL, you can also install it from the e2 studio installer.\n[Board]\n• RX72N Envision Kit\nhttps://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx72n-envision-kit-rx72n-envision-kit\n• Renesas Starter Kit+ for RX72N\nhttps://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx72n-starter-kit-plus-renesas-starter-kit-rx72n\n• RX-Family-Target-Board\nhttps://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx-family-target-board-target-board-rx-family\nReference materials:\n• QE for Display [RX] Application Note\nhttps://www.renesas.com/us/en/document/apn/rx-family-qe-display-rx-application-note\n• RX Family QE for Display GUI Display Application Development Guide using Serial Connection LCD\nhttps://www.renesas.com/us/en/document/apn/rx-family-qe-display-gui-display-application-development-guide-using-serial-connection-lcd\nNote: This document describes a procedure for displaying a simple window by using QE and emWin or AppWizard.\n• Sample video for GUI development using QE for Display [RX] and the emWin library\nhttps://www.renesas.com/us/en/video/easy-gui-development-using-qe-display?rxsw-j\nFor details about how to design a graphical user interface by using emWin and how to use AppWizard, contact Segger, which developed emWin.\nhttps://www.segger.com/\nThe Wikipedia article provided by Segger and videos provided by third parties are also available as reference materials.\nEven though different devices are used in these reference materials, almost the same operation procedures are applicable.\nNote that how to specify settings might differ depending on the version of AppWizard.\nhttps://wiki.segger.com/emWin\nhttps://www.youtube.com/results?search_query=emwin+renesas+segger\nSample programs:\n[Segger's emWin webpage for the RX family]\nhttps://www.segger.com/products/user-interface/emwin/add-ons/emwin-support-renesas-rx-mcu/\nNote: These sample programs are applicable to the Renesas RX65N or RX72N Envision Kit. \nThese sample programs have a configuration that is different from the configuration in which QE for Display or a Renesas emWin FIT module is used. Use the “Application” folder of each sample as the main reference material.\n[Segger’s emWin Samples]\nhttps://wiki.segger.com/emWin_Examples\nNote: These sample programs use API programming\n[Sample program for displaying images on a WVGA display using internal memory in the RX family (Rev. 1.00)]\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-chip-memory-display-images-wvga-display-rev100-sample-code\n[RX Family GUI Sample Program using Serial LCD and emWin Library]\nhttps://www.renesas.com/us/en/document/scd/rx-family-gui-sample-program-using-serial-lcd-and-emwin-library\n[emWin FIT module]\nYou can download an emWin FIT module bundled with a training document: \nFITModules\\r_emwin_rx_vX.XX_XXX.zip\nWhen this file is unzipped, the training document is available in the following folder: r_emwin_rx\\doc\\Training"
+      },
+      {
+        "type": "text",
+        "content": "We provide the following environment, application note, and sample code:"
+      },
+      {
+        "type": "text",
+        "content": "Development environment:"
+      },
+      {
+        "type": "text",
+        "content": "The development environment consists of e2 studio, QE for Display, a compiler, and FIT modules. Use the latest versions of these components."
+      },
+      {
+        "type": "text",
+        "content": "[e2 studio]\nhttps://www.renesas.com/es/un/software-tool/e-studio#overview"
+      },
+      {
+        "type": "text",
+        "content": "[QE for Display [RX/RA] (e2 studio plugin)]\nhttps://www.renesas.com/us/en/software-tool/qe-display-development-assistance-tool-display-applications\nNote: Although you can download the QE for Display [RX/RA] plugin from the preceding URL, you can also install it from the e2 studio installer."
+      },
+      {
+        "type": "text",
+        "content": "[Board]"
+      },
+      {
+        "type": "text",
+        "content": "• RX72N Envision Kit\nhttps://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx72n-envision-kit-rx72n-envision-kit"
+      },
+      {
+        "type": "text",
+        "content": "• Renesas Starter Kit+ for RX72N\nhttps://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx72n-starter-kit-plus-renesas-starter-kit-rx72n"
+      },
+      {
+        "type": "text",
+        "content": "• RX-Family-Target-Board\nhttps://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx-family-target-board-target-board-rx-family"
+      },
+      {
+        "type": "text",
+        "content": "Reference materials:"
+      },
+      {
+        "type": "text",
+        "content": "• QE for Display [RX] Application Note\nhttps://www.renesas.com/us/en/document/apn/rx-family-qe-display-rx-application-note"
+      },
+      {
+        "type": "text",
+        "content": "• RX Family QE for Display GUI Display Application Development Guide using Serial Connection LCD\nhttps://www.renesas.com/us/en/document/apn/rx-family-qe-display-gui-display-application-development-guide-using-serial-connection-lcd\nNote: This document describes a procedure for displaying a simple window by using QE and emWin or AppWizard."
+      },
+      {
+        "type": "text",
+        "content": "• Sample video for GUI development using QE for Display [RX] and the emWin library\nhttps://www.renesas.com/us/en/video/easy-gui-development-using-qe-display?rxsw-j"
+      },
+      {
+        "type": "text",
+        "content": "For details about how to design a graphical user interface by using emWin and how to use AppWizard, contact Segger, which developed emWin.\nhttps://www.segger.com/"
+      },
+      {
+        "type": "text",
+        "content": "The Wikipedia article provided by Segger and videos provided by third parties are also available as reference materials.\nEven though different devices are used in these reference materials, almost the same operation procedures are applicable.\nNote that how to specify settings might differ depending on the version of AppWizard.\nhttps://wiki.segger.com/emWin\nhttps://www.youtube.com/results?search_query=emwin+renesas+segger"
+      },
+      {
+        "type": "text",
+        "content": "Sample programs:"
+      },
+      {
+        "type": "text",
+        "content": "[Segger's emWin webpage for the RX family]\nhttps://www.segger.com/products/user-interface/emwin/add-ons/emwin-support-renesas-rx-mcu/\nNote: These sample programs are applicable to the Renesas RX65N or RX72N Envision Kit. \nThese sample programs have a configuration that is different from the configuration in which QE for Display or a Renesas emWin FIT module is used. Use the “Application” folder of each sample as the main reference material."
+      },
+      {
+        "type": "text",
+        "content": "[Segger’s emWin Samples]\nhttps://wiki.segger.com/emWin_Examples\nNote: These sample programs use API programming"
+      },
+      {
+        "type": "text",
+        "content": "[Sample program for displaying images on a WVGA display using internal memory in the RX family (Rev. 1.00)]\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-chip-memory-display-images-wvga-display-rev100-sample-code"
+      },
+      {
+        "type": "text",
+        "content": "[RX Family GUI Sample Program using Serial LCD and emWin Library]\nhttps://www.renesas.com/us/en/document/scd/rx-family-gui-sample-program-using-serial-lcd-and-emwin-library"
+      },
+      {
+        "type": "text",
+        "content": "[emWin FIT module]\nYou can download an emWin FIT module bundled with a training document: \nFITModules\\r_emwin_rx_vX.XX_XXX.zip\nWhen this file is unzipped, the training document is available in the following folder: r_emwin_rx\\doc\\Training"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/es/un/software-tool/e-studio#overview",
+        "url": "https://www.renesas.com/es/un/software-tool/e-studio#overview"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/software-tool/qe-display-development-assistance-tool-display-applications",
+        "url": "https://www.renesas.com/us/en/software-tool/qe-display-development-assistance-tool-display-applications"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx72n-envision-kit-rx72n-envision-kit",
+        "url": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx72n-envision-kit-rx72n-envision-kit"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx72n-starter-kit-plus-renesas-starter-kit-rx72n",
+        "url": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx72n-starter-kit-plus-renesas-starter-kit-rx72n"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx-family-target-board-target-board-rx-family",
+        "url": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx-family-target-board-target-board-rx-family"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/document/apn/rx-family-qe-display-rx-application-note",
+        "url": "https://www.renesas.com/us/en/document/apn/rx-family-qe-display-rx-application-note"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/document/apn/rx-family-qe-display-gui-display-application-development-guide-using-serial-connection-lcd",
+        "url": "https://www.renesas.com/us/en/document/apn/rx-family-qe-display-gui-display-application-development-guide-using-serial-connection-lcd"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/video/easy-gui-development-using-qe-display?rxsw-j",
+        "url": "https://www.renesas.com/us/en/video/easy-gui-development-using-qe-display?rxsw-j"
+      },
+      {
+        "text": "https://www.segger.com/",
+        "url": "https://www.segger.com/"
+      },
+      {
+        "text": "https://wiki.segger.com/emWin",
+        "url": "https://wiki.segger.com/emWin"
+      },
+      {
+        "text": "https://www.youtube.com/results?search_query=emwin+renesas+segger",
+        "url": "https://www.youtube.com/results?search_query=emwin+renesas+segger"
+      },
+      {
+        "text": "https://www.segger.com/products/user-interface/emwin/add-ons/emwin-support-renesas-rx-mcu/",
+        "url": "https://www.segger.com/products/user-interface/emwin/add-ons/emwin-support-renesas-rx-mcu/"
+      },
+      {
+        "text": "https://wiki.segger.com/emWin_Examples",
+        "url": "https://wiki.segger.com/emWin_Examples"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-chip-memory-display-images-wvga-display-rev100-sample-code",
+        "url": "https://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-chip-memory-display-images-wvga-display-rev100-sample-code"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/document/scd/rx-family-gui-sample-program-using-serial-lcd-and-emwin-library",
+        "url": "https://www.renesas.com/us/en/document/scd/rx-family-gui-sample-program-using-serial-lcd-and-emwin-library"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20684883"
+      }
+    ]
+  }
+}

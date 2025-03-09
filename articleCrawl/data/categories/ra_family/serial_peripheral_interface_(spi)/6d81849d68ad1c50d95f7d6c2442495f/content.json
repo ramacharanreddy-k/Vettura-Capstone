@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21116867",
+    "title": "Using the QSPI for SPI on RA MCUs",
+    "last_updated": "2023-02-11",
+    "extracted_at": "2025-03-08T23:39:47.364086"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan you use the QSPI for SPI on RA MCUs?\nAnswer:\nThe QSPI can be used in SPI mode to interface to serial peripherals (such as ADCs, DACs, LCD controllers, CAN controllers and sensors), or in Serial Memory mode to interface to serial Flash memories.\nThe QSPI allows the system to execute code directly from a serial Flash memory (XIP) without code shadowing to RAM.\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "Can you use the QSPI for SPI on RA MCUs?"
+      },
+      {
+        "type": "text",
+        "content": "Can you use the QSPI for SPI on RA MCUs?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe QSPI can be used in SPI mode to interface to serial peripherals (such as ADCs, DACs, LCD controllers, CAN controllers and sensors), or in Serial Memory mode to interface to serial Flash memories.\nThe QSPI allows the system to execute code directly from a serial Flash memory (XIP) without code shadowing to RAM.\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "The QSPI can be used in SPI mode to interface to serial peripherals (such as ADCs, DACs, LCD controllers, CAN controllers and sensors), or in Serial Memory mode to interface to serial Flash memories.\nThe QSPI allows the system to execute code directly from a serial Flash memory (XIP) without code shadowing to RAM."
+      },
+      {
+        "type": "text",
+        "content": "The QSPI can be used in SPI mode to interface to serial peripherals (such as ADCs, DACs, LCD controllers, CAN controllers and sensors), or in Serial Memory mode to interface to serial Flash memories."
+      },
+      {
+        "type": "text",
+        "content": "The QSPI allows the system to execute code directly from a serial Flash memory (XIP) without code shadowing to RAM."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": []
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21715563",
+    "title": "RA Family: How to customize (add or replace) interrupt service routines (ISRs)",
+    "last_updated": "2024-10-12",
+    "extracted_at": "2025-03-08T23:22:39.749204"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there a way to customize the Interrupt Service Routine (ISR) settings in FSP Configurator?\nFor instance:\nStacks tab: Replace the ISR of the added driver with a user-defined one.\nRegister a new ISR corresponding to the interrupt event of each peripheral function.\nAnswer:\nIn the FSP Configurator, you can check, edit, and register additional ISR settings in the Interrupts tab. For example, if you add a driver module for GPT channel 0 to the Stacks tab, the ISR provided by the FSP driver will be registered as follows.\nIf you add a new gpt_user_isr as an ISR for GPT0 COUNTER OVERFLOW from New User Event, gpt_user_isr will be registered as an ISR as shown below.\nFor interrupt events that are not listed in Allocations, you can register a new user-defined function as an ISR by following the same procedure.\nReferences:\nFSP User's Manual \"Configuring a Project\"\nURL: https://renesas.github.io/fsp/_s_t_a_r_t__d_e_v.html#configuring-a-project\nRA and FSP Curriculum: I-002A Fundamentals of FSP (Non-Trustzone)\nFSP CONFIGURATOR – INTERRUPT LINKS TAB\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "Is there a way to customize the Interrupt Service Routine (ISR) settings in FSP Configurator?\nFor instance:\nStacks tab: Replace the ISR of the added driver with a user-defined one.\nRegister a new ISR corresponding to the interrupt event of each peripheral function."
+      },
+      {
+        "type": "text",
+        "content": "Is there a way to customize the Interrupt Service Routine (ISR) settings in FSP Configurator?"
+      },
+      {
+        "type": "text",
+        "content": "For instance:"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIn the FSP Configurator, you can check, edit, and register additional ISR settings in the Interrupts tab. For example, if you add a driver module for GPT channel 0 to the Stacks tab, the ISR provided by the FSP driver will be registered as follows.\nIf you add a new gpt_user_isr as an ISR for GPT0 COUNTER OVERFLOW from New User Event, gpt_user_isr will be registered as an ISR as shown below.\nFor interrupt events that are not listed in Allocations, you can register a new user-defined function as an ISR by following the same procedure.\nReferences:\nFSP User's Manual \"Configuring a Project\"\nURL: https://renesas.github.io/fsp/_s_t_a_r_t__d_e_v.html#configuring-a-project\nRA and FSP Curriculum: I-002A Fundamentals of FSP (Non-Trustzone)\nFSP CONFIGURATOR – INTERRUPT LINKS TAB\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "In the FSP Configurator, you can check, edit, and register additional ISR settings in the Interrupts tab. For example, if you add a driver module for GPT channel 0 to the Stacks tab, the ISR provided by the FSP driver will be registered as follows.\nIf you add a new gpt_user_isr as an ISR for GPT0 COUNTER OVERFLOW from New User Event, gpt_user_isr will be registered as an ISR as shown below.\nFor interrupt events that are not listed in Allocations, you can register a new user-defined function as an ISR by following the same procedure.\nReferences:\nFSP User's Manual \"Configuring a Project\"\nURL: https://renesas.github.io/fsp/_s_t_a_r_t__d_e_v.html#configuring-a-project\nRA and FSP Curriculum: I-002A Fundamentals of FSP (Non-Trustzone)\nFSP CONFIGURATOR – INTERRUPT LINKS TAB\nSuitable Products"
+      },
+      {
+        "type": "text",
+        "content": "In the FSP Configurator, you can check, edit, and register additional ISR settings in the Interrupts tab. For example, if you add a driver module for GPT channel 0 to the Stacks tab, the ISR provided by the FSP driver will be registered as follows.\nIf you add a new gpt_user_isr as an ISR for GPT0 COUNTER OVERFLOW from New User Event, gpt_user_isr will be registered as an ISR as shown below.\nFor interrupt events that are not listed in Allocations, you can register a new user-defined function as an ISR by following the same procedure.\nReferences:\nFSP User's Manual \"Configuring a Project\"\nURL: https://renesas.github.io/fsp/_s_t_a_r_t__d_e_v.html#configuring-a-project\nRA and FSP Curriculum: I-002A Fundamentals of FSP (Non-Trustzone)\nFSP CONFIGURATOR – INTERRUPT LINKS TAB"
+      },
+      {
+        "type": "text",
+        "content": "In the FSP Configurator, you can check, edit, and register additional ISR settings in the Interrupts tab. For example, if you add a driver module for GPT channel 0 to the Stacks tab, the ISR provided by the FSP driver will be registered as follows."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396378_1.png",
+          "alt_text": "",
+          "width": "643",
+          "height": "279",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/d19612efac1ff72ba73b5e38e6da5a23/images/9edb7aca4a002bf48ee5a2733b1dee14.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "If you add a new gpt_user_isr as an ISR for GPT0 COUNTER OVERFLOW from New User Event, gpt_user_isr will be registered as an ISR as shown below."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396378_2.png",
+          "alt_text": "",
+          "width": "642",
+          "height": "273",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/d19612efac1ff72ba73b5e38e6da5a23/images/c8e473e2186a3c1cb0b28651ef694ee9.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "For interrupt events that are not listed in Allocations, you can register a new user-defined function as an ISR by following the same procedure."
+      },
+      {
+        "type": "text",
+        "content": "References:"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396378_1.png",
+        "alt_text": "",
+        "width": "643",
+        "height": "279",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/d19612efac1ff72ba73b5e38e6da5a23/images/9edb7aca4a002bf48ee5a2733b1dee14.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396378_2.png",
+        "alt_text": "",
+        "width": "642",
+        "height": "273",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/d19612efac1ff72ba73b5e38e6da5a23/images/c8e473e2186a3c1cb0b28651ef694ee9.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "https://renesas.github.io/fsp/_s_t_a_r_t__d_e_v.html#configuring-a-project",
+        "url": "https://renesas.github.io/fsp/_s_t_a_r_t__d_e_v.html#configuring-a-project"
+      },
+      {
+        "text": "I-002A Fundamentals of FSP (Non-Trustzone)",
+        "url": "https://en-support.renesas.com/knowledgeBase/20522676"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21715568"
+      }
+    ]
+  }
+}

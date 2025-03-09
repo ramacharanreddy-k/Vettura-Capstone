@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20590553",
+    "title": "RZ/A3UL: What specific applications require a large amount of DDR memory in RTOS?",
+    "last_updated": "2022-04-08",
+    "extracted_at": "2025-03-08T23:42:27.391244"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat specific applications require a large amount of DDR memory in RTOS?\nAnswer:\nThe memory footprint of RTOS itself is small, but a large amount of memory is required in cases such as when many images are captured at once with an HMI application such as a QR scanner that needs to start immediately, and one of those images is being processed by the RZ/A3UL.\nSuitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "What specific applications require a large amount of DDR memory in RTOS?"
+      },
+      {
+        "type": "text",
+        "content": "What specific applications require a large amount of DDR memory in RTOS?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe memory footprint of RTOS itself is small, but a large amount of memory is required in cases such as when many images are captured at once with an HMI application such as a QR scanner that needs to start immediately, and one of those images is being processed by the RZ/A3UL.\nSuitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "The memory footprint of RTOS itself is small, but a large amount of memory is required in cases such as when many images are captured at once with an HMI application such as a QR scanner that needs to start immediately, and one of those images is being processed by the RZ/A3UL."
+      },
+      {
+        "type": "text",
+        "content": "The memory footprint of RTOS itself is small, but a large amount of memory is required in cases such as when many images are captured at once with an HMI application such as a QR scanner that needs to start immediately, and one of those images is being processed by the RZ/A3UL."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A3UL"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A3UL"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20590561"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20590570"
+      }
+    ]
+  }
+}

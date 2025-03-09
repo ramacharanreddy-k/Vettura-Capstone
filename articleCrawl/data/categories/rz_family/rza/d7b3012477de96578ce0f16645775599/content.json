@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21245141",
+    "title": "Can an RZ/A1H microprocessor be shared by USB-connected hosts or devices?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:43:14.225775"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan an RZ/A1H microprocessor operate with two USB-connected hosts or devices?\nAre channels 0 and 1 concurrently available to hosts or devices? \nAnswer:\nYes. A separate host or device can be used with each channel.\nSuitable Products\nRZ/A1H"
+      },
+      {
+        "type": "text",
+        "content": "Can an RZ/A1H microprocessor operate with two USB-connected hosts or devices?\nAre channels 0 and 1 concurrently available to hosts or devices?"
+      },
+      {
+        "type": "text",
+        "content": "Can an RZ/A1H microprocessor operate with two USB-connected hosts or devices?\nAre channels 0 and 1 concurrently available to hosts or devices?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes. A separate host or device can be used with each channel.\nSuitable Products\nRZ/A1H"
+      },
+      {
+        "type": "text",
+        "content": "Yes. A separate host or device can be used with each channel."
+      },
+      {
+        "type": "text",
+        "content": "Yes. A separate host or device can be used with each channel."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A1H"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A1H"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A1H"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20165079"
+      }
+    ]
+  }
+}

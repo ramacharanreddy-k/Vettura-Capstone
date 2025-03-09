@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21088661",
+    "title": "RA8: Arm Cortex-M85 core vs. Cortex-M7 cores",
+    "last_updated": "2024-05-11",
+    "extracted_at": "2025-03-08T23:29:16.517488"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat are the differences between the CM7 and CM85 cores\nAnswer:\nThe CM85 core is based on the latest Arm v8.1-M architecture and has a superscalar, 7 stage pipeline while the CM7 core is based on the Arm v7m architecture, with a 6 stage pipeline. The CM85 core provides performance of 6.39 CM/MHz vs. 5.29 with the CM7 core. With the v8.1m architecture, the CM85 supports Helium or Arm M-Profile Vector Extension (MVE), which enables 4x the performance boost for DSP and AI/ML tasks, over the CM7 core. The CM85 core also supports TrustZone, which is not supported on the CM7 core. On the CM85 core, Arm has introduced half precision scalar and half and single precision vector floating point support, both of which are not available on the CM7 core. The CM85 core can support 2x 32bitx32bit, 4x 16bitx16bit and 8 bitx8bit MACs per cycle,  whereas the CM7 core supports 1x 32bitx32bit MAC per cycle. Arm has also made several other enhancements to the core architecture that brings much higher performance to the CM85 core, such as optimized branch and loop instructions, support for circular buffers, instructions fusion etc..\nSuitable Products\nRA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+      },
+      {
+        "type": "text",
+        "content": "What are the differences between the CM7 and CM85 cores"
+      },
+      {
+        "type": "text",
+        "content": "What are the differences between the CM7 and CM85 cores"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe CM85 core is based on the latest Arm v8.1-M architecture and has a superscalar, 7 stage pipeline while the CM7 core is based on the Arm v7m architecture, with a 6 stage pipeline. The CM85 core provides performance of 6.39 CM/MHz vs. 5.29 with the CM7 core. With the v8.1m architecture, the CM85 supports Helium or Arm M-Profile Vector Extension (MVE), which enables 4x the performance boost for DSP and AI/ML tasks, over the CM7 core. The CM85 core also supports TrustZone, which is not supported on the CM7 core. On the CM85 core, Arm has introduced half precision scalar and half and single precision vector floating point support, both of which are not available on the CM7 core. The CM85 core can support 2x 32bitx32bit, 4x 16bitx16bit and 8 bitx8bit MACs per cycle,  whereas the CM7 core supports 1x 32bitx32bit MAC per cycle. Arm has also made several other enhancements to the core architecture that brings much higher performance to the CM85 core, such as optimized branch and loop instructions, support for circular buffers, instructions fusion etc..\nSuitable Products\nRA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+      },
+      {
+        "type": "text",
+        "content": "The CM85 core is based on the latest Arm v8.1-M architecture and has a superscalar, 7 stage pipeline while the CM7 core is based on the Arm v7m architecture, with a 6 stage pipeline. The CM85 core provides performance of 6.39 CM/MHz vs. 5.29 with the CM7 core. With the v8.1m architecture, the CM85 supports Helium or Arm M-Profile Vector Extension (MVE), which enables 4x the performance boost for DSP and AI/ML tasks, over the CM7 core. The CM85 core also supports TrustZone, which is not supported on the CM7 core. On the CM85 core, Arm has introduced half precision scalar and half and single precision vector floating point support, both of which are not available on the CM7 core. The CM85 core can support 2x 32bitx32bit, 4x 16bitx16bit and 8 bitx8bit MACs per cycle,  whereas the CM7 core supports 1x 32bitx32bit MAC per cycle. Arm has also made several other enhancements to the core architecture that brings much higher performance to the CM85 core, such as optimized branch and loop instructions, support for circular buffers, instructions fusion etc.."
+      },
+      {
+        "type": "text",
+        "content": "The CM85 core is based on the latest Arm v8.1-M architecture and has a superscalar, 7 stage pipeline while the CM7 core is based on the Arm v7m architecture, with a 6 stage pipeline. The CM85 core provides performance of 6.39 CM/MHz vs. 5.29 with the CM7 core. With the v8.1m architecture, the CM85 supports Helium or Arm M-Profile Vector Extension (MVE), which enables 4x the performance boost for DSP and AI/ML tasks, over the CM7 core. The CM85 core also supports TrustZone, which is not supported on the CM7 core. On the CM85 core, Arm has introduced half precision scalar and half and single precision vector floating point support, both of which are not available on the CM7 core. The CM85 core can support 2x 32bitx32bit, 4x 16bitx16bit and 8 bitx8bit MACs per cycle,  whereas the CM7 core supports 1x 32bitx32bit MAC per cycle. Arm has also made several other enhancements to the core architecture that brings much higher performance to the CM85 core, such as optimized branch and loop instructions, support for circular buffers, instructions fusion etc.."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21088719"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21088733"
+      }
+    ]
+  }
+}

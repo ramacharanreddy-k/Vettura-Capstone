@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21124676",
+    "title": "RA2: Evaluation board",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:31:39.438628"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat kind of evaluation boards are prepared?\nAnswer:\nRA Family is preparing three types of evaluation board in public following RA kit strategy. First one is EK-Board which aiming for seamlessly evaluation by supporting rich on-board features. Second one is Fast Prototyping board specialized for prototype development for a variety of applications. Last one is Solution kit for ASSP products.\nFor the RA2 Series,  we provide EK-board as EK-RA2L1, EK-RA2A1, EK-RA2E1,EK-RA2E2 and EK-RA2A2. Regards to FPB board, we provide  FPB-RA2E1, FPB-RA2E2 and FPB-RA2E3. Regards to Solution kit, we  provide Capacitive Touch Evaluation system for RA2L1.\nSuitable Products\nRA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "What kind of evaluation boards are prepared?"
+      },
+      {
+        "type": "text",
+        "content": "What kind of evaluation boards are prepared?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRA Family is preparing three types of evaluation board in public following RA kit strategy. First one is EK-Board which aiming for seamlessly evaluation by supporting rich on-board features. Second one is Fast Prototyping board specialized for prototype development for a variety of applications. Last one is Solution kit for ASSP products.\nFor the RA2 Series,  we provide EK-board as EK-RA2L1, EK-RA2A1, EK-RA2E1,EK-RA2E2 and EK-RA2A2. Regards to FPB board, we provide  FPB-RA2E1, FPB-RA2E2 and FPB-RA2E3. Regards to Solution kit, we  provide Capacitive Touch Evaluation system for RA2L1.\nSuitable Products\nRA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "RA Family is preparing three types of evaluation board in public following RA kit strategy. First one is EK-Board which aiming for seamlessly evaluation by supporting rich on-board features. Second one is Fast Prototyping board specialized for prototype development for a variety of applications. Last one is Solution kit for ASSP products.\nFor the RA2 Series,  we provide EK-board as EK-RA2L1, EK-RA2A1, EK-RA2E1,EK-RA2E2 and EK-RA2A2. Regards to FPB board, we provide  FPB-RA2E1, FPB-RA2E2 and FPB-RA2E3. Regards to Solution kit, we  provide Capacitive Touch Evaluation system for RA2L1."
+      },
+      {
+        "type": "text",
+        "content": "RA Family is preparing three types of evaluation board in public following RA kit strategy. First one is EK-Board which aiming for seamlessly evaluation by supporting rich on-board features. Second one is Fast Prototyping board specialized for prototype development for a variety of applications. Last one is Solution kit for ASSP products."
+      },
+      {
+        "type": "text",
+        "content": "For the RA2 Series,  we provide EK-board as EK-RA2L1, EK-RA2A1, EK-RA2E1,EK-RA2E2 and EK-RA2A2. Regards to FPB board, we provide  FPB-RA2E1, FPB-RA2E2 and FPB-RA2E3. Regards to Solution kit, we  provide Capacitive Touch Evaluation system for RA2L1."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21141943"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21141948"
+      }
+    ]
+  }
+}

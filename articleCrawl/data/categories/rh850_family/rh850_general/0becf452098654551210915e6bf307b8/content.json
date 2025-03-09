@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21124767",
+    "title": "RH850: Prevent variable from updating on software reset",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:28:57.511121"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI am using RH850 device with CS+. Is it possible to define a section, which can be used to locate uninitialized variables? An example use-case would be for a variable to be able to preserve its data after a software reset has been undertaken. So, this variable is not cleared or initialized at startup.\nAnswer:\nTo store uninitialized variable, you may have to modify the startup-code so that the particular section is not modified. \n  If you are interested in not initializing the RAM on software reset ( or situations like deep sleep) you can try to keep the variables in retention ram area. Apart from PORST the values of the variables are un-affected. But you need to make sure that at startup depending on the reset cause, the variable is not updated in the startup code. To understand the cause for reset RESF register could be used.\n  With respect to startup code, you can make sure that the variable is placed in the required area using the following pragma as reference.\n    #pragma section r0_disp32 \"NO_INIT_TEST\"\n  int my_var;\n  #pragma section default\n  Additionally, sections should be defined on the Linker tab as below.\n  Figure 1: Section Settings window\n  NO_INIT_TEST.data.R and NO_INIT_TEST.bss are the sections inside retention RAM.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nI am using RH850 device with CS+. Is it possible to define a section, which can be used to locate uninitialized variables? An example use-case would be for a variable to be able to preserve its data after a software reset has been undertaken. So, this variable is not cleared or initialized at startup.\nAnswer:\nTo store uninitialized variable, you may have to modify the startup-code so that the particular section is not modified. \n  If you are interested in not initializing the RAM on software reset ( or situations like deep sleep) you can try to keep the variables in retention ram area. Apart from PORST the values of the variables are un-affected. But you need to make sure that at startup depending on the reset cause, the variable is not updated in the startup code. To understand the cause for reset RESF register could be used.\n  With respect to startup code, you can make sure that the variable is placed in the required area using the following pragma as reference.\n    #pragma section r0_disp32 \"NO_INIT_TEST\"\n  int my_var;\n  #pragma section default\n  Additionally, sections should be defined on the Linker tab as below.\n  Figure 1: Section Settings window\n  NO_INIT_TEST.data.R and NO_INIT_TEST.bss are the sections inside retention RAM.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "I am using RH850 device with CS+. Is it possible to define a section, which can be used to locate uninitialized variables? An example use-case would be for a variable to be able to preserve its data after a software reset has been undertaken. So, this variable is not cleared or initialized at startup."
+      },
+      {
+        "type": "text",
+        "content": "I am using RH850 device with CS+. Is it possible to define a section, which can be used to locate uninitialized variables? An example use-case would be for a variable to be able to preserve its data after a software reset has been undertaken. So, this variable is not cleared or initialized at startup."
+      },
+      {
+        "type": "text",
+        "content": "I am using RH850 device with CS+."
+      },
+      {
+        "type": "text",
+        "content": "Is it possible to define a section, which can be used to locate uninitialized variables? An example use-case would be for a variable to be able to preserve its data after a software reset has been undertaken. So, this variable is not cleared or initialized at startup."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nTo store uninitialized variable, you may have to modify the startup-code so that the particular section is not modified. \n  If you are interested in not initializing the RAM on software reset ( or situations like deep sleep) you can try to keep the variables in retention ram area. Apart from PORST the values of the variables are un-affected. But you need to make sure that at startup depending on the reset cause, the variable is not updated in the startup code. To understand the cause for reset RESF register could be used.\n  With respect to startup code, you can make sure that the variable is placed in the required area using the following pragma as reference.\n    #pragma section r0_disp32 \"NO_INIT_TEST\"\n  int my_var;\n  #pragma section default\n  Additionally, sections should be defined on the Linker tab as below.\n  Figure 1: Section Settings window\n  NO_INIT_TEST.data.R and NO_INIT_TEST.bss are the sections inside retention RAM.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "To store uninitialized variable, you may have to modify the startup-code so that the particular section is not modified. \n  If you are interested in not initializing the RAM on software reset ( or situations like deep sleep) you can try to keep the variables in retention ram area. Apart from PORST the values of the variables are un-affected. But you need to make sure that at startup depending on the reset cause, the variable is not updated in the startup code. To understand the cause for reset RESF register could be used.\n  With respect to startup code, you can make sure that the variable is placed in the required area using the following pragma as reference.\n    #pragma section r0_disp32 \"NO_INIT_TEST\"\n  int my_var;\n  #pragma section default\n  Additionally, sections should be defined on the Linker tab as below.\n  Figure 1: Section Settings window\n  NO_INIT_TEST.data.R and NO_INIT_TEST.bss are the sections inside retention RAM."
+      },
+      {
+        "type": "text",
+        "content": "To store uninitialized variable, you may have to modify the startup-code so that the particular section is not modified."
+      },
+      {
+        "type": "text",
+        "content": "To store uninitialized variable, you may have to modify the startup-code so that the particular section is not modified."
+      },
+      {
+        "type": "text",
+        "content": "If you are interested in not initializing the RAM on software reset ( or situations like deep sleep) you can try to keep the variables in retention ram area. Apart from PORST the values of the variables are un-affected. But you need to make sure that at startup depending on the reset cause, the variable is not updated in the startup code. To understand the cause for reset RESF register could be used."
+      },
+      {
+        "type": "text",
+        "content": "If you are interested in not initializing the RAM on software reset ( or situations like deep sleep) you can try to keep the variables in retention ram area. Apart from PORST the values of the variables are un-affected. But you need to make sure that at startup depending on the reset cause, the variable is not updated in the startup code. To understand the cause for reset RESF register could be used."
+      },
+      {
+        "type": "text",
+        "content": "With respect to startup code, you can make sure that the variable is placed in the required area using the following pragma as reference."
+      },
+      {
+        "type": "text",
+        "content": "With respect to startup code, you can make sure that the variable is placed in the required area using the following pragma as reference."
+      },
+      {
+        "type": "text",
+        "content": "#pragma section r0_disp32 \"NO_INIT_TEST\""
+      },
+      {
+        "type": "text",
+        "content": "#pragma section r0_disp32 \"NO_INIT_TEST\""
+      },
+      {
+        "type": "text",
+        "content": "int my_var;"
+      },
+      {
+        "type": "text",
+        "content": "int my_var;"
+      },
+      {
+        "type": "text",
+        "content": "#pragma section default"
+      },
+      {
+        "type": "text",
+        "content": "#pragma section default"
+      },
+      {
+        "type": "text",
+        "content": "Additionally, sections should be defined on the Linker tab as below."
+      },
+      {
+        "type": "text",
+        "content": "Additionally, sections should be defined on the Linker tab as below."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/f65a698a-fa3b-453b-8604-6df229d905d4",
+          "alt_text": "A screenshot of a computer programDescription automatically generated",
+          "width": "452",
+          "height": "395",
+          "local_path": "data/categories/rh850_family/rh850_general/0becf452098654551210915e6bf307b8/images/b2e5fd14f6b5c407de10b99726bd360b.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 1: Section Settings window"
+      },
+      {
+        "type": "text",
+        "content": "NO_INIT_TEST.data.R and NO_INIT_TEST.bss are the sections inside retention RAM."
+      },
+      {
+        "type": "text",
+        "content": "NO_INIT_TEST.data.R and NO_INIT_TEST.bss are the sections inside retention RAM."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/f65a698a-fa3b-453b-8604-6df229d905d4",
+        "alt_text": "A screenshot of a computer programDescription automatically generated",
+        "width": "452",
+        "height": "395",
+        "local_path": "data/categories/rh850_family/rh850_general/0becf452098654551210915e6bf307b8/images/b2e5fd14f6b5c407de10b99726bd360b.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850"
+    ],
+    "links": []
+  }
+}

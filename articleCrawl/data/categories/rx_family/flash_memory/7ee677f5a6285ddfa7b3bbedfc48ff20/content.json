@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21676061",
+    "title": "RX Family: Can I write to flash memory from any address?",
+    "last_updated": "2024-12-11",
+    "extracted_at": "2025-03-09T00:14:21.856267"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan I write to flash memory from any address?\nAnswer:\nNo. For both code flash memory and data flash memory it depends on the unit of programming.\nFor example, if the unit of programming is 1 byte, writing can start at any address, but if the unit of programming is 4 bytes, writing must start at a 4-byte boundary (address that is a multiple of 4), and similarly if the unit of programming is 128 bytes, writing must start at a 128-byte boundary (address that is a multiple of 128).\nFor details about the unit of programming, refer to the \"Flash Memory\" chapter in the user's manual for the microcontroller you are using.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Can I write to flash memory from any address?"
+      },
+      {
+        "type": "text",
+        "content": "Can I write to flash memory from any address?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nNo. For both code flash memory and data flash memory it depends on the unit of programming.\nFor example, if the unit of programming is 1 byte, writing can start at any address, but if the unit of programming is 4 bytes, writing must start at a 4-byte boundary (address that is a multiple of 4), and similarly if the unit of programming is 128 bytes, writing must start at a 128-byte boundary (address that is a multiple of 128).\nFor details about the unit of programming, refer to the \"Flash Memory\" chapter in the user's manual for the microcontroller you are using.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "No. For both code flash memory and data flash memory it depends on the unit of programming.\nFor example, if the unit of programming is 1 byte, writing can start at any address, but if the unit of programming is 4 bytes, writing must start at a 4-byte boundary (address that is a multiple of 4), and similarly if the unit of programming is 128 bytes, writing must start at a 128-byte boundary (address that is a multiple of 128).\nFor details about the unit of programming, refer to the \"Flash Memory\" chapter in the user's manual for the microcontroller you are using."
+      },
+      {
+        "type": "text",
+        "content": "No. For both code flash memory and data flash memory it depends on the unit of programming.\nFor example, if the unit of programming is 1 byte, writing can start at any address, but if the unit of programming is 4 bytes, writing must start at a 4-byte boundary (address that is a multiple of 4), and similarly if the unit of programming is 128 bytes, writing must start at a 128-byte boundary (address that is a multiple of 128).\nFor details about the unit of programming, refer to the \"Flash Memory\" chapter in the user's manual for the microcontroller you are using."
+      },
+      {
+        "type": "text",
+        "content": "No. For both code flash memory and data flash memory it depends on the unit of programming."
+      },
+      {
+        "type": "text",
+        "content": "For example, if the unit of programming is 1 byte, writing can start at any address, but if the unit of programming is 4 bytes, writing must start at a 4-byte boundary (address that is a multiple of 4), and similarly if the unit of programming is 128 bytes, writing must start at a 128-byte boundary (address that is a multiple of 128)."
+      },
+      {
+        "type": "text",
+        "content": "For details about the unit of programming, refer to the \"Flash Memory\" chapter in the user's manual for the microcontroller you are using."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21676064"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1249 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21397541",
+    "title": "About how RA MCU reads Unique ID and Device Part Number",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:14:12.060291"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "For the applications such as the Internet of Things or product version management, reading the information of an MCU is a common task for developers. This topic describes how to read the Unique ID, Part Number, and Mask Version information on Renesas RA Family microcontrollers.\nWe can obtain information using the content stored in the following three addresses, which are located as shown below:\nproject RA2E1/RA2E2/RA2L1 RA2A1/RA4M1/RA4W1/RA6M1/RA6M2/RA6M3/RA6T1 RA4M2/RA4M3/RA6M4/RA6M5/RA6T2/RA4E1/ RA6E1\nUnique ID (16bytes) 0x0100_1C00 FMIFRT+14h (0x407F_B1B0) 0x0100_8190\nPart number (16bytes) 0x0100_1C10 FMIFRT+24h (0x407F_B1C0) 0x0100_80F0\nMask version (1byte) 0x0100_1C20 FMIFRT+44h (0x407F_B1E0) 0x0100_81B0\nFMIFRT* No Yes No\nNote: The address of the FMIFRT register is 0x407F_B19C.\nAbout FMIFRT registers\nFMIRT register is built into RA2A1, RA4M1, RA4W1, RA6M1, RA6M2, RA6M3, and RA6T1.\nFMIFRT is a read-only register that stores the base addresses of the Unique ID register, Part Number register, and MCU Version register.\nFMIFRT should be read in 32-bit units.\nThe address of the FMIFRT register is 0x407F_B19C.\nThe following steps describe how to read out the Unique ID, Part Number, and Mask Version through the program code, using the RA2L1 as an example.\n(1) Unique ID register address and readout method\nThe 128-bit Unique ID can be read directly through the FSP API \"R_BSP_UniqueIdGet\".\nRefer to the following command:\nconst bsp_unique_id_t* unique_id = R_BSP_UniqueIdGet();\n(2) Part Number register address and readout method\nThere is no API in FSP to read Part Numbers, so the following code is required.\nFirst, define the address of the Part Number register and store the struct of the Part Number array.\n#define BSP_FEATURE_BSP_PART_NUMBER_POINTER (0x01001C10U)\ntypedef struct st_bsp_part_number\n{\n    union\n    {\n        uint32_t part_number_words[4];\n        uint8_t  part_number_bytes[16];\n    };\n} bsp_part_number_t;\nThen execute the following command in the user code to read out the Part Number.\nconst bsp_part_number_t* part_number = BSP_FEATURE_BSP_PART_NUMBER_POINTER;\n(3) MCU Version register address and readout method\nThere is no API to read the MCU version in the FSP, so the following code is required.\nFirst, define the address of the MCU Version register:\n#define BSP_FEATURE_BSP_MASK_REVISION_POINTER (0x01001C20U)\nThen run the following command in the user code to read out the MCU Version.\nconst uint8_t* mask_version = BSP_FEATURE_BSP_MASK_REVISION_POINTER;\nThe following results are read out in the debug state (RA2L1 is used as an example):\nThe product model is written in ASCII code, and the RA2L1 is used as an example to illustrate the following.\nAddress : 0x0100_1C0F  <->  0x0100_1C00\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nAddress : 0x0100_1C1F  <->  0x0100_1C10\n（Part number : R7FA2L1AB2DFP case）\nspace\nspace\nspace\nR\n7\nF\nA\n2\nL\n1\nA\nB\n2\nD\nF\nP\n0x20\n0x20\n0x20\n0x52\n0x37\n0x46\n0x41\n0x32\n0x4C\n0x31\n0x41\n0x42\n0x32\n0x44\n0x46\n0x50\nAddress : 0x0100_1C1F  <->  0x0100_1C10\n（Part number : R7FA2L1AB2DFM case）\nspace\nspace\nspace\nR\n7\nF\nA\n2\nL\n1\nA\nB\n2\nD\nF\nM\n0x20\n0x20\n0x20\n0x52\n0x37\n0x46\n0x41\n0x32\n0x4C\n0x31\n0x41\n0x42\n0x32\n0x44\n0x46\n0x4D\nAddress : 0x0100_1C2F  <->  0x0100_1C20\n~\n~\n~\n~\n~\n~\n~\n~\n~\n~\n~\n~\n0xFF\n0xFF\n0xFF\n0x01\n\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "For the applications such as the Internet of Things or product version management, reading the information of an MCU is a common task for developers. This topic describes how to read the Unique ID, Part Number, and Mask Version information on Renesas RA Family microcontrollers.\nWe can obtain information using the content stored in the following three addresses, which are located as shown below:\nproject RA2E1/RA2E2/RA2L1 RA2A1/RA4M1/RA4W1/RA6M1/RA6M2/RA6M3/RA6T1 RA4M2/RA4M3/RA6M4/RA6M5/RA6T2/RA4E1/ RA6E1\nUnique ID (16bytes) 0x0100_1C00 FMIFRT+14h (0x407F_B1B0) 0x0100_8190\nPart number (16bytes) 0x0100_1C10 FMIFRT+24h (0x407F_B1C0) 0x0100_80F0\nMask version (1byte) 0x0100_1C20 FMIFRT+44h (0x407F_B1E0) 0x0100_81B0\nFMIFRT* No Yes No\nNote: The address of the FMIFRT register is 0x407F_B19C.\nAbout FMIFRT registers\nFMIRT register is built into RA2A1, RA4M1, RA4W1, RA6M1, RA6M2, RA6M3, and RA6T1.\nFMIFRT is a read-only register that stores the base addresses of the Unique ID register, Part Number register, and MCU Version register.\nFMIFRT should be read in 32-bit units.\nThe address of the FMIFRT register is 0x407F_B19C.\nThe following steps describe how to read out the Unique ID, Part Number, and Mask Version through the program code, using the RA2L1 as an example.\n(1) Unique ID register address and readout method\nThe 128-bit Unique ID can be read directly through the FSP API \"R_BSP_UniqueIdGet\".\nRefer to the following command:\nconst bsp_unique_id_t* unique_id = R_BSP_UniqueIdGet();\n(2) Part Number register address and readout method\nThere is no API in FSP to read Part Numbers, so the following code is required.\nFirst, define the address of the Part Number register and store the struct of the Part Number array.\n#define BSP_FEATURE_BSP_PART_NUMBER_POINTER (0x01001C10U)\ntypedef struct st_bsp_part_number\n{\n    union\n    {\n        uint32_t part_number_words[4];\n        uint8_t  part_number_bytes[16];\n    };\n} bsp_part_number_t;\nThen execute the following command in the user code to read out the Part Number.\nconst bsp_part_number_t* part_number = BSP_FEATURE_BSP_PART_NUMBER_POINTER;\n(3) MCU Version register address and readout method\nThere is no API to read the MCU version in the FSP, so the following code is required.\nFirst, define the address of the MCU Version register:\n#define BSP_FEATURE_BSP_MASK_REVISION_POINTER (0x01001C20U)\nThen run the following command in the user code to read out the MCU Version.\nconst uint8_t* mask_version = BSP_FEATURE_BSP_MASK_REVISION_POINTER;\nThe following results are read out in the debug state (RA2L1 is used as an example):\nThe product model is written in ASCII code, and the RA2L1 is used as an example to illustrate the following.\nAddress : 0x0100_1C0F  <->  0x0100_1C00\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nAddress : 0x0100_1C1F  <->  0x0100_1C10\n（Part number : R7FA2L1AB2DFP case）\nspace\nspace\nspace\nR\n7\nF\nA\n2\nL\n1\nA\nB\n2\nD\nF\nP\n0x20\n0x20\n0x20\n0x52\n0x37\n0x46\n0x41\n0x32\n0x4C\n0x31\n0x41\n0x42\n0x32\n0x44\n0x46\n0x50\nAddress : 0x0100_1C1F  <->  0x0100_1C10\n（Part number : R7FA2L1AB2DFM case）\nspace\nspace\nspace\nR\n7\nF\nA\n2\nL\n1\nA\nB\n2\nD\nF\nM\n0x20\n0x20\n0x20\n0x52\n0x37\n0x46\n0x41\n0x32\n0x4C\n0x31\n0x41\n0x42\n0x32\n0x44\n0x46\n0x4D\nAddress : 0x0100_1C2F  <->  0x0100_1C20\n~\n~\n~\n~\n~\n~\n~\n~\n~\n~\n~\n~\n0xFF\n0xFF\n0xFF\n0x01\n\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "For the applications such as the Internet of Things or product version management, reading the information of an MCU is a common task for developers. This topic describes how to read the Unique ID, Part Number, and Mask Version information on Renesas RA Family microcontrollers.\nWe can obtain information using the content stored in the following three addresses, which are located as shown below:\nproject RA2E1/RA2E2/RA2L1 RA2A1/RA4M1/RA4W1/RA6M1/RA6M2/RA6M3/RA6T1 RA4M2/RA4M3/RA6M4/RA6M5/RA6T2/RA4E1/ RA6E1\nUnique ID (16bytes) 0x0100_1C00 FMIFRT+14h (0x407F_B1B0) 0x0100_8190\nPart number (16bytes) 0x0100_1C10 FMIFRT+24h (0x407F_B1C0) 0x0100_80F0\nMask version (1byte) 0x0100_1C20 FMIFRT+44h (0x407F_B1E0) 0x0100_81B0\nFMIFRT* No Yes No\nNote: The address of the FMIFRT register is 0x407F_B19C.\nAbout FMIFRT registers\nFMIRT register is built into RA2A1, RA4M1, RA4W1, RA6M1, RA6M2, RA6M3, and RA6T1.\nFMIFRT is a read-only register that stores the base addresses of the Unique ID register, Part Number register, and MCU Version register.\nFMIFRT should be read in 32-bit units.\nThe address of the FMIFRT register is 0x407F_B19C.\nThe following steps describe how to read out the Unique ID, Part Number, and Mask Version through the program code, using the RA2L1 as an example.\n(1) Unique ID register address and readout method\nThe 128-bit Unique ID can be read directly through the FSP API \"R_BSP_UniqueIdGet\".\nRefer to the following command:\nconst bsp_unique_id_t* unique_id = R_BSP_UniqueIdGet();\n(2) Part Number register address and readout method\nThere is no API in FSP to read Part Numbers, so the following code is required.\nFirst, define the address of the Part Number register and store the struct of the Part Number array.\n#define BSP_FEATURE_BSP_PART_NUMBER_POINTER (0x01001C10U)\ntypedef struct st_bsp_part_number\n{\n    union\n    {\n        uint32_t part_number_words[4];\n        uint8_t  part_number_bytes[16];\n    };\n} bsp_part_number_t;\nThen execute the following command in the user code to read out the Part Number.\nconst bsp_part_number_t* part_number = BSP_FEATURE_BSP_PART_NUMBER_POINTER;\n(3) MCU Version register address and readout method\nThere is no API to read the MCU version in the FSP, so the following code is required.\nFirst, define the address of the MCU Version register:\n#define BSP_FEATURE_BSP_MASK_REVISION_POINTER (0x01001C20U)\nThen run the following command in the user code to read out the MCU Version.\nconst uint8_t* mask_version = BSP_FEATURE_BSP_MASK_REVISION_POINTER;\nThe following results are read out in the debug state (RA2L1 is used as an example):\nThe product model is written in ASCII code, and the RA2L1 is used as an example to illustrate the following.\nAddress : 0x0100_1C0F  <->  0x0100_1C00\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nxx\nAddress : 0x0100_1C1F  <->  0x0100_1C10\n（Part number : R7FA2L1AB2DFP case）\nspace\nspace\nspace\nR\n7\nF\nA\n2\nL\n1\nA\nB\n2\nD\nF\nP\n0x20\n0x20\n0x20\n0x52\n0x37\n0x46\n0x41\n0x32\n0x4C\n0x31\n0x41\n0x42\n0x32\n0x44\n0x46\n0x50\nAddress : 0x0100_1C1F  <->  0x0100_1C10\n（Part number : R7FA2L1AB2DFM case）\nspace\nspace\nspace\nR\n7\nF\nA\n2\nL\n1\nA\nB\n2\nD\nF\nM\n0x20\n0x20\n0x20\n0x52\n0x37\n0x46\n0x41\n0x32\n0x4C\n0x31\n0x41\n0x42\n0x32\n0x44\n0x46\n0x4D\nAddress : 0x0100_1C2F  <->  0x0100_1C20\n~\n~\n~\n~\n~\n~\n~\n~\n~\n~\n~\n~\n0xFF\n0xFF\n0xFF\n0x01"
+      },
+      {
+        "type": "text",
+        "content": "For the applications such as the Internet of Things or product version management, reading the information of an MCU is a common task for developers. This topic describes how to read the Unique ID, Part Number, and Mask Version information on Renesas RA Family microcontrollers."
+      },
+      {
+        "type": "text",
+        "content": "We can obtain information using the content stored in the following three addresses, which are located as shown below:"
+      },
+      {
+        "type": "text",
+        "content": "Note: The address of the FMIFRT register is 0x407F_B19C."
+      },
+      {
+        "type": "text",
+        "content": "About FMIFRT registers"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387438-1.png",
+          "alt_text": "",
+          "width": "553",
+          "height": "272",
+          "local_path": "data/categories/ra_family/ra_hardware/f66b80baf9e191ca337d2ca1466fc28f/images/022ea4391fdab4bfe20bacbaab096253.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The following steps describe how to read out the Unique ID, Part Number, and Mask Version through the program code, using the RA2L1 as an example."
+      },
+      {
+        "type": "text",
+        "content": "(1) Unique ID register address and readout method"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387438-2.png",
+          "alt_text": "",
+          "width": "555",
+          "height": "200",
+          "local_path": "data/categories/ra_family/ra_hardware/f66b80baf9e191ca337d2ca1466fc28f/images/537533407aa4c811e0635ddb92055094.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The 128-bit Unique ID can be read directly through the FSP API \"R_BSP_UniqueIdGet\"."
+      },
+      {
+        "type": "text",
+        "content": "Refer to the following command:"
+      },
+      {
+        "type": "text",
+        "content": "const bsp_unique_id_t* unique_id = R_BSP_UniqueIdGet();"
+      },
+      {
+        "type": "text",
+        "content": "const bsp_unique_id_t* unique_id = R_BSP_UniqueIdGet();"
+      },
+      {
+        "type": "text",
+        "content": "(2) Part Number register address and readout method"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387438-3.png",
+          "alt_text": "",
+          "width": "551",
+          "height": "201",
+          "local_path": "data/categories/ra_family/ra_hardware/f66b80baf9e191ca337d2ca1466fc28f/images/84f145e865ab8df4d545bc49d0a26588.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "There is no API in FSP to read Part Numbers, so the following code is required."
+      },
+      {
+        "type": "text",
+        "content": "First, define the address of the Part Number register and store the struct of the Part Number array."
+      },
+      {
+        "type": "text",
+        "content": "#define BSP_FEATURE_BSP_PART_NUMBER_POINTER (0x01001C10U)\ntypedef struct st_bsp_part_number\n{\n    union\n    {\n        uint32_t part_number_words[4];\n        uint8_t  part_number_bytes[16];\n    };\n} bsp_part_number_t;"
+      },
+      {
+        "type": "text",
+        "content": "Then execute the following command in the user code to read out the Part Number."
+      },
+      {
+        "type": "text",
+        "content": "const bsp_part_number_t* part_number = BSP_FEATURE_BSP_PART_NUMBER_POINTER;"
+      },
+      {
+        "type": "text",
+        "content": "const bsp_part_number_t* part_number = BSP_FEATURE_BSP_PART_NUMBER_POINTER;"
+      },
+      {
+        "type": "text",
+        "content": "(3) MCU Version register address and readout method"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387438-4.png",
+          "alt_text": "",
+          "width": "551",
+          "height": "198",
+          "local_path": "data/categories/ra_family/ra_hardware/f66b80baf9e191ca337d2ca1466fc28f/images/b9e58503fbcc3997ec396a27d5e84610.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "There is no API to read the MCU version in the FSP, so the following code is required.\nFirst, define the address of the MCU Version register:"
+      },
+      {
+        "type": "text",
+        "content": "#define BSP_FEATURE_BSP_MASK_REVISION_POINTER (0x01001C20U)"
+      },
+      {
+        "type": "text",
+        "content": "Then run the following command in the user code to read out the MCU Version."
+      },
+      {
+        "type": "text",
+        "content": "const uint8_t* mask_version = BSP_FEATURE_BSP_MASK_REVISION_POINTER;"
+      },
+      {
+        "type": "text",
+        "content": "const uint8_t* mask_version = BSP_FEATURE_BSP_MASK_REVISION_POINTER;"
+      },
+      {
+        "type": "text",
+        "content": "The following results are read out in the debug state (RA2L1 is used as an example):"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387438-5.png",
+          "alt_text": "",
+          "width": "553",
+          "height": "154",
+          "local_path": "data/categories/ra_family/ra_hardware/f66b80baf9e191ca337d2ca1466fc28f/images/7b90d83182253db54f83b490d14dd3ed.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387438-6.png",
+          "alt_text": "",
+          "width": "548",
+          "height": "404",
+          "local_path": "data/categories/ra_family/ra_hardware/f66b80baf9e191ca337d2ca1466fc28f/images/d30a4927e87e9142b7a058b6912818aa.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387438-7.png",
+          "alt_text": "",
+          "width": "551",
+          "height": "47",
+          "local_path": "data/categories/ra_family/ra_hardware/f66b80baf9e191ca337d2ca1466fc28f/images/9d3953580a05769fbbff05450164a87c.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The product model is written in ASCII code, and the RA2L1 is used as an example to illustrate the following."
+      },
+      {
+        "type": "text",
+        "content": "Address : 0x0100_1C0F  <->  0x0100_1C00"
+      },
+      {
+        "type": "text",
+        "content": "Address : 0x0100_1C0F  <->  0x0100_1C00"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "xx"
+      },
+      {
+        "type": "text",
+        "content": "Address : 0x0100_1C1F  <->  0x0100_1C10\n（Part number : R7FA2L1AB2DFP case）"
+      },
+      {
+        "type": "text",
+        "content": "Address : 0x0100_1C1F  <->  0x0100_1C10"
+      },
+      {
+        "type": "text",
+        "content": "（"
+      },
+      {
+        "type": "text",
+        "content": "Part number : R7FA2L1AB2DFP case"
+      },
+      {
+        "type": "text",
+        "content": "）"
+      },
+      {
+        "type": "text",
+        "content": "space"
+      },
+      {
+        "type": "text",
+        "content": "space"
+      },
+      {
+        "type": "text",
+        "content": "space"
+      },
+      {
+        "type": "text",
+        "content": "space"
+      },
+      {
+        "type": "text",
+        "content": "space"
+      },
+      {
+        "type": "text",
+        "content": "space"
+      },
+      {
+        "type": "text",
+        "content": "R"
+      },
+      {
+        "type": "text",
+        "content": "R"
+      },
+      {
+        "type": "text",
+        "content": "7"
+      },
+      {
+        "type": "text",
+        "content": "7"
+      },
+      {
+        "type": "text",
+        "content": "F"
+      },
+      {
+        "type": "text",
+        "content": "F"
+      },
+      {
+        "type": "text",
+        "content": "A"
+      },
+      {
+        "type": "text",
+        "content": "A"
+      },
+      {
+        "type": "text",
+        "content": "2"
+      },
+      {
+        "type": "text",
+        "content": "2"
+      },
+      {
+        "type": "text",
+        "content": "L"
+      },
+      {
+        "type": "text",
+        "content": "L"
+      },
+      {
+        "type": "text",
+        "content": "1"
+      },
+      {
+        "type": "text",
+        "content": "1"
+      },
+      {
+        "type": "text",
+        "content": "A"
+      },
+      {
+        "type": "text",
+        "content": "A"
+      },
+      {
+        "type": "text",
+        "content": "B"
+      },
+      {
+        "type": "text",
+        "content": "B"
+      },
+      {
+        "type": "text",
+        "content": "2"
+      },
+      {
+        "type": "text",
+        "content": "2"
+      },
+      {
+        "type": "text",
+        "content": "D"
+      },
+      {
+        "type": "text",
+        "content": "D"
+      },
+      {
+        "type": "text",
+        "content": "F"
+      },
+      {
+        "type": "text",
+        "content": "F"
+      },
+      {
+        "type": "text",
+        "content": "P"
+      },
+      {
+        "type": "text",
+        "content": "P"
+      },
+      {
+        "type": "text",
+        "content": "0x20"
+      },
+      {
+        "type": "text",
+        "content": "0x20"
+      },
+      {
+        "type": "text",
+        "content": "0x20"
+      },
+      {
+        "type": "text",
+        "content": "0x20"
+      },
+      {
+        "type": "text",
+        "content": "0x20"
+      },
+      {
+        "type": "text",
+        "content": "0x20"
+      },
+      {
+        "type": "text",
+        "content": "0x52"
+      },
+      {
+        "type": "text",
+        "content": "0x52"
+      },
+      {
+        "type": "text",
+        "content": "0x37"
+      },
+      {
+        "type": "text",
+        "content": "0x37"
+      },
+      {
+        "type": "text",
+        "content": "0x46"
+      },
+      {
+        "type": "text",
+        "content": "0x46"
+      },
+      {
+        "type": "text",
+        "content": "0x41"
+      },
+      {
+        "type": "text",
+        "content": "0x41"
+      },
+      {
+        "type": "text",
+        "content": "0x32"
+      },
+      {
+        "type": "text",
+        "content": "0x32"
+      },
+      {
+        "type": "text",
+        "content": "0x4C"
+      },
+      {
+        "type": "text",
+        "content": "0x4C"
+      },
+      {
+        "type": "text",
+        "content": "0x31"
+      },
+      {
+        "type": "text",
+        "content": "0x31"
+      },
+      {
+        "type": "text",
+        "content": "0x41"
+      },
+      {
+        "type": "text",
+        "content": "0x41"
+      },
+      {
+        "type": "text",
+        "content": "0x42"
+      },
+      {
+        "type": "text",
+        "content": "0x42"
+      },
+      {
+        "type": "text",
+        "content": "0x32"
+      },
+      {
+        "type": "text",
+        "content": "0x32"
+      },
+      {
+        "type": "text",
+        "content": "0x44"
+      },
+      {
+        "type": "text",
+        "content": "0x44"
+      },
+      {
+        "type": "text",
+        "content": "0x46"
+      },
+      {
+        "type": "text",
+        "content": "0x46"
+      },
+      {
+        "type": "text",
+        "content": "0x50"
+      },
+      {
+        "type": "text",
+        "content": "0x50"
+      },
+      {
+        "type": "text",
+        "content": "Address : 0x0100_1C1F  <->  0x0100_1C10\n（Part number : R7FA2L1AB2DFM case）"
+      },
+      {
+        "type": "text",
+        "content": "Address : 0x0100_1C1F  <->  0x0100_1C10"
+      },
+      {
+        "type": "text",
+        "content": "（"
+      },
+      {
+        "type": "text",
+        "content": "Part number : R7FA2L1AB2DFM case"
+      },
+      {
+        "type": "text",
+        "content": "）"
+      },
+      {
+        "type": "text",
+        "content": "space"
+      },
+      {
+        "type": "text",
+        "content": "space"
+      },
+      {
+        "type": "text",
+        "content": "space"
+      },
+      {
+        "type": "text",
+        "content": "space"
+      },
+      {
+        "type": "text",
+        "content": "space"
+      },
+      {
+        "type": "text",
+        "content": "space"
+      },
+      {
+        "type": "text",
+        "content": "R"
+      },
+      {
+        "type": "text",
+        "content": "R"
+      },
+      {
+        "type": "text",
+        "content": "7"
+      },
+      {
+        "type": "text",
+        "content": "7"
+      },
+      {
+        "type": "text",
+        "content": "F"
+      },
+      {
+        "type": "text",
+        "content": "F"
+      },
+      {
+        "type": "text",
+        "content": "A"
+      },
+      {
+        "type": "text",
+        "content": "A"
+      },
+      {
+        "type": "text",
+        "content": "2"
+      },
+      {
+        "type": "text",
+        "content": "2"
+      },
+      {
+        "type": "text",
+        "content": "L"
+      },
+      {
+        "type": "text",
+        "content": "L"
+      },
+      {
+        "type": "text",
+        "content": "1"
+      },
+      {
+        "type": "text",
+        "content": "1"
+      },
+      {
+        "type": "text",
+        "content": "A"
+      },
+      {
+        "type": "text",
+        "content": "A"
+      },
+      {
+        "type": "text",
+        "content": "B"
+      },
+      {
+        "type": "text",
+        "content": "B"
+      },
+      {
+        "type": "text",
+        "content": "2"
+      },
+      {
+        "type": "text",
+        "content": "2"
+      },
+      {
+        "type": "text",
+        "content": "D"
+      },
+      {
+        "type": "text",
+        "content": "D"
+      },
+      {
+        "type": "text",
+        "content": "F"
+      },
+      {
+        "type": "text",
+        "content": "F"
+      },
+      {
+        "type": "text",
+        "content": "M"
+      },
+      {
+        "type": "text",
+        "content": "M"
+      },
+      {
+        "type": "text",
+        "content": "0x20"
+      },
+      {
+        "type": "text",
+        "content": "0x20"
+      },
+      {
+        "type": "text",
+        "content": "0x20"
+      },
+      {
+        "type": "text",
+        "content": "0x20"
+      },
+      {
+        "type": "text",
+        "content": "0x20"
+      },
+      {
+        "type": "text",
+        "content": "0x20"
+      },
+      {
+        "type": "text",
+        "content": "0x52"
+      },
+      {
+        "type": "text",
+        "content": "0x52"
+      },
+      {
+        "type": "text",
+        "content": "0x37"
+      },
+      {
+        "type": "text",
+        "content": "0x37"
+      },
+      {
+        "type": "text",
+        "content": "0x46"
+      },
+      {
+        "type": "text",
+        "content": "0x46"
+      },
+      {
+        "type": "text",
+        "content": "0x41"
+      },
+      {
+        "type": "text",
+        "content": "0x41"
+      },
+      {
+        "type": "text",
+        "content": "0x32"
+      },
+      {
+        "type": "text",
+        "content": "0x32"
+      },
+      {
+        "type": "text",
+        "content": "0x4C"
+      },
+      {
+        "type": "text",
+        "content": "0x4C"
+      },
+      {
+        "type": "text",
+        "content": "0x31"
+      },
+      {
+        "type": "text",
+        "content": "0x31"
+      },
+      {
+        "type": "text",
+        "content": "0x41"
+      },
+      {
+        "type": "text",
+        "content": "0x41"
+      },
+      {
+        "type": "text",
+        "content": "0x42"
+      },
+      {
+        "type": "text",
+        "content": "0x42"
+      },
+      {
+        "type": "text",
+        "content": "0x32"
+      },
+      {
+        "type": "text",
+        "content": "0x32"
+      },
+      {
+        "type": "text",
+        "content": "0x44"
+      },
+      {
+        "type": "text",
+        "content": "0x44"
+      },
+      {
+        "type": "text",
+        "content": "0x46"
+      },
+      {
+        "type": "text",
+        "content": "0x46"
+      },
+      {
+        "type": "text",
+        "content": "0x4D"
+      },
+      {
+        "type": "text",
+        "content": "0x4D"
+      },
+      {
+        "type": "text",
+        "content": "Address : 0x0100_1C2F  <->  0x0100_1C20"
+      },
+      {
+        "type": "text",
+        "content": "Address : 0x0100_1C2F  <->  0x0100_1C20"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "~"
+      },
+      {
+        "type": "text",
+        "content": "0xFF"
+      },
+      {
+        "type": "text",
+        "content": "0xFF"
+      },
+      {
+        "type": "text",
+        "content": "0xFF"
+      },
+      {
+        "type": "text",
+        "content": "0xFF"
+      },
+      {
+        "type": "text",
+        "content": "0xFF"
+      },
+      {
+        "type": "text",
+        "content": "0xFF"
+      },
+      {
+        "type": "text",
+        "content": "0x01"
+      },
+      {
+        "type": "text",
+        "content": "0x01"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387438-1.png",
+        "alt_text": "",
+        "width": "553",
+        "height": "272",
+        "local_path": "data/categories/ra_family/ra_hardware/f66b80baf9e191ca337d2ca1466fc28f/images/022ea4391fdab4bfe20bacbaab096253.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387438-2.png",
+        "alt_text": "",
+        "width": "555",
+        "height": "200",
+        "local_path": "data/categories/ra_family/ra_hardware/f66b80baf9e191ca337d2ca1466fc28f/images/537533407aa4c811e0635ddb92055094.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387438-3.png",
+        "alt_text": "",
+        "width": "551",
+        "height": "201",
+        "local_path": "data/categories/ra_family/ra_hardware/f66b80baf9e191ca337d2ca1466fc28f/images/84f145e865ab8df4d545bc49d0a26588.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387438-4.png",
+        "alt_text": "",
+        "width": "551",
+        "height": "198",
+        "local_path": "data/categories/ra_family/ra_hardware/f66b80baf9e191ca337d2ca1466fc28f/images/b9e58503fbcc3997ec396a27d5e84610.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387438-5.png",
+        "alt_text": "",
+        "width": "553",
+        "height": "154",
+        "local_path": "data/categories/ra_family/ra_hardware/f66b80baf9e191ca337d2ca1466fc28f/images/7b90d83182253db54f83b490d14dd3ed.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387438-6.png",
+        "alt_text": "",
+        "width": "548",
+        "height": "404",
+        "local_path": "data/categories/ra_family/ra_hardware/f66b80baf9e191ca337d2ca1466fc28f/images/d30a4927e87e9142b7a058b6912818aa.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387438-7.png",
+        "alt_text": "",
+        "width": "551",
+        "height": "47",
+        "local_path": "data/categories/ra_family/ra_hardware/f66b80baf9e191ca337d2ca1466fc28f/images/9d3953580a05769fbbff05450164a87c.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "project",
+            "RA2E1/RA2E2/RA2L1",
+            "RA2A1/RA4M1/RA4W1/RA6M1/RA6M2/RA6M3/RA6T1",
+            "RA4M2/RA4M3/RA6M4/RA6M5/RA6T2/RA4E1/ RA6E1"
+          ],
+          [
+            "Unique ID (16bytes)",
+            "0x0100_1C00",
+            "FMIFRT+14h (0x407F_B1B0)",
+            "0x0100_8190"
+          ],
+          [
+            "Part number (16bytes)",
+            "0x0100_1C10",
+            "FMIFRT+24h (0x407F_B1C0)",
+            "0x0100_80F0"
+          ],
+          [
+            "Mask version (1byte)",
+            "0x0100_1C20",
+            "FMIFRT+44h (0x407F_B1E0)",
+            "0x0100_81B0"
+          ],
+          [
+            "FMIFRT*",
+            "No",
+            "Yes",
+            "No"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "Address : 0x0100_1C0F  <->  0x0100_1C00"
+          ],
+          [
+            "xx",
+            "xx",
+            "xx",
+            "xx",
+            "xx",
+            "xx",
+            "xx",
+            "xx",
+            "xx",
+            "xx",
+            "xx",
+            "xx",
+            "xx",
+            "xx",
+            "xx",
+            "xx"
+          ],
+          [
+            "Address : 0x0100_1C1F  <->  0x0100_1C10\n（Part number : R7FA2L1AB2DFP case）"
+          ],
+          [
+            "space",
+            "space",
+            "space",
+            "R",
+            "7",
+            "F",
+            "A",
+            "2",
+            "L",
+            "1",
+            "A",
+            "B",
+            "2",
+            "D",
+            "F",
+            "P"
+          ],
+          [
+            "0x20",
+            "0x20",
+            "0x20",
+            "0x52",
+            "0x37",
+            "0x46",
+            "0x41",
+            "0x32",
+            "0x4C",
+            "0x31",
+            "0x41",
+            "0x42",
+            "0x32",
+            "0x44",
+            "0x46",
+            "0x50"
+          ],
+          [
+            "Address : 0x0100_1C1F  <->  0x0100_1C10\n（Part number : R7FA2L1AB2DFM case）"
+          ],
+          [
+            "space",
+            "space",
+            "space",
+            "R",
+            "7",
+            "F",
+            "A",
+            "2",
+            "L",
+            "1",
+            "A",
+            "B",
+            "2",
+            "D",
+            "F",
+            "M"
+          ],
+          [
+            "0x20",
+            "0x20",
+            "0x20",
+            "0x52",
+            "0x37",
+            "0x46",
+            "0x41",
+            "0x32",
+            "0x4C",
+            "0x31",
+            "0x41",
+            "0x42",
+            "0x32",
+            "0x44",
+            "0x46",
+            "0x4D"
+          ],
+          [
+            "Address : 0x0100_1C2F  <->  0x0100_1C20"
+          ],
+          [
+            "~",
+            "~",
+            "~",
+            "~",
+            "~",
+            "~",
+            "~",
+            "~",
+            "~",
+            "~",
+            "~",
+            "~",
+            "0xFF",
+            "0xFF",
+            "0xFF",
+            "0x01"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": []
+  }
+}

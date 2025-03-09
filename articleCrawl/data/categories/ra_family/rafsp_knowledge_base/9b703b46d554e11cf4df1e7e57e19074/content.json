@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20797521",
+    "title": "RA Family: Does MMF (Memory Mirror Function) work for DMA or DTC?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:25:09.468056"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDoes MMF (Memory Mirror Function) work for DMA or DTC?\nAnswer:\nNo. MMF only changes the memory address to the mirror address when CPU accesses the memory. The function does not work for a memory access by the other bus masters such as DMA, DTC. Therefore, it is necessary to avoid assigning memory mirror addresses to areas accessed by those peripherals.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Does MMF (Memory Mirror Function) work for DMA or DTC?"
+      },
+      {
+        "type": "text",
+        "content": "Does MMF (Memory Mirror Function) work for DMA or DTC?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nNo. MMF only changes the memory address to the mirror address when CPU accesses the memory. The function does not work for a memory access by the other bus masters such as DMA, DTC. Therefore, it is necessary to avoid assigning memory mirror addresses to areas accessed by those peripherals.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "No. MMF only changes the memory address to the mirror address when CPU accesses the memory. The function does not work for a memory access by the other bus masters such as DMA, DTC. Therefore, it is necessary to avoid assigning memory mirror addresses to areas accessed by those peripherals.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "No. MMF only changes the memory address to the mirror address when CPU accesses the memory. The function does not work for a memory access by the other bus masters such as DMA, DTC. Therefore, it is necessary to avoid assigning memory mirror addresses to areas accessed by those peripherals."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20796330"
+      }
+    ]
+  }
+}

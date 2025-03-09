@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21266842",
+    "title": "What is RA2A2?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:31:59.809582"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the key features of RA2A2 and difference points with other RA2 Series?\nAnswer:\nRA2A2 is an RA family’s rich analog line MCU with Arm Cortex-M23 CPU and rich peripheral features to deliver better a design experience that allows high level analog sensing while reducing power consumption, system cost and overall footprint. In addition to analog sensing capability, RA2A2 has advantages in 512KB Dual Bank Flash, Segment LCD Controller, Independent Power Supply RTC and Security functions.\nSuitable Products\nRA2A2"
+      },
+      {
+        "type": "text",
+        "content": "What is the key features of RA2A2 and difference points with other RA2 Series?"
+      },
+      {
+        "type": "text",
+        "content": "What is the key features of RA2A2 and difference points with other RA2 Series?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRA2A2 is an RA family’s rich analog line MCU with Arm Cortex-M23 CPU and rich peripheral features to deliver better a design experience that allows high level analog sensing while reducing power consumption, system cost and overall footprint. In addition to analog sensing capability, RA2A2 has advantages in 512KB Dual Bank Flash, Segment LCD Controller, Independent Power Supply RTC and Security functions.\nSuitable Products\nRA2A2"
+      },
+      {
+        "type": "text",
+        "content": "RA2A2 is an RA family’s rich analog line MCU with Arm Cortex-M23 CPU and rich peripheral features to deliver better a design experience that allows high level analog sensing while reducing power consumption, system cost and overall footprint. In addition to analog sensing capability, RA2A2 has advantages in 512KB Dual Bank Flash, Segment LCD Controller, Independent Power Supply RTC and Security functions."
+      },
+      {
+        "type": "text",
+        "content": "RA2A2 is an RA family’s rich analog line MCU with Arm Cortex-M23 CPU and rich peripheral features to deliver better a design experience that allows high level analog sensing while reducing power consumption, system cost and overall footprint. In addition to analog sensing capability, RA2A2 has advantages in 512KB Dual Bank Flash, Segment LCD Controller, Independent Power Supply RTC and Security functions."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA2A2"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA2A2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA2A2"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21266845"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21266848"
+      }
+    ]
+  }
+}

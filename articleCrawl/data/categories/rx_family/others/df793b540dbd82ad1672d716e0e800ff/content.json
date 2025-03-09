@@ -1,0 +1,253 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20872128",
+    "title": "RX family LCD-related FAQ List",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:23:53.918439"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Below is a list of FAQs related to LCDs for RX family.\nemWin\nWhat are the requirements for the development environment in which emWin can be used? If sample code is provided, please tell me where it is available.\nIs it possible to change the screen display orientation by using emWin at runtime rather than during compilation?\nIs there a way to lower RAM consumption in emWin or GLCDC?\nA link error occurs due to insufficient internal RAM for some reason.\nHow can I use an LCD controller that is not supported by the emWin FIT module or QE for Display?\nHow can I use a touch controller that is not supported by the emWin FIT module or QE for Display?\nHow can I change the color format when emWin and QE for Display are used?\nBitmap images are not correctly displayed if DRW2D is enabled by using emWin. This phenomenon occurs in a GCC or IAR environment.\nHow should I configure frame buffers when using emWin with RX family? Where are frame buffers secured?\nTell me how to calculate the size of a frame buffer when using emWin for RX family.\nI am using a custom board and LCD. No window appears and the LCD does not respond to touch operations.\nQE for Display\nCan I migrate evaluation board or LCD information configured in QE for Display to another project?\nGLCDC\nThere is a parameter that sets the offset to the next line in the GLCDC input image settings. How does this parameter affect the functionality?\nWhat is the relationship between the GLCDC color format and the output data format?\nIs there a way in which I can use a debugger to check the data drawn in a frame buffer?\nOther\nOptimal RX MCU for Controlling Color TFT LCD\nVideos\nQE for Display[RX,RA] Tutorial: How to Prepare a Project\nQE for Display[RX,RA] Tutorial: How to Adjust LCD\nQE for Display[RX,RA] Tutorial: How to Create GUI\nQE for Display[RX,RA] Tutorial (RX: Serial LCD) #1: How to Prepare a Project\nQE for Display[RX,RA] Tutorial (RX: Serial LCD) #2: How to Create GUI\nEasy GUI Development QE For Display + Aeropoint GUI\nEasy GUI Development by Using QE for Display\nUnboxing the Renesas RX65N Envision Kit\nRX72N Envision Kit Optimized for HMI Development in IoT Applications\n  Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Below is a list of FAQs related to LCDs for RX family."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "emWin"
+          ],
+          [
+            "What are the requirements for the development environment in which emWin can be used? If sample code is provided, please tell me where it is available."
+          ],
+          [
+            "Is it possible to change the screen display orientation by using emWin at runtime rather than during compilation?"
+          ],
+          [
+            "Is there a way to lower RAM consumption in emWin or GLCDC?"
+          ],
+          [
+            "A link error occurs due to insufficient internal RAM for some reason."
+          ],
+          [
+            "How can I use an LCD controller that is not supported by the emWin FIT module or QE for Display?"
+          ],
+          [
+            "How can I use a touch controller that is not supported by the emWin FIT module or QE for Display?"
+          ],
+          [
+            "How can I change the color format when emWin and QE for Display are used?"
+          ],
+          [
+            "Bitmap images are not correctly displayed if DRW2D is enabled by using emWin. This phenomenon occurs in a GCC or IAR environment."
+          ],
+          [
+            "How should I configure frame buffers when using emWin with RX family? Where are frame buffers secured?"
+          ],
+          [
+            "Tell me how to calculate the size of a frame buffer when using emWin for RX family."
+          ],
+          [
+            "I am using a custom board and LCD. No window appears and the LCD does not respond to touch operations."
+          ],
+          [
+            "QE for Display"
+          ],
+          [
+            "Can I migrate evaluation board or LCD information configured in QE for Display to another project?"
+          ],
+          [
+            "GLCDC"
+          ],
+          [
+            "There is a parameter that sets the offset to the next line in the GLCDC input image settings. How does this parameter affect the functionality?"
+          ],
+          [
+            "What is the relationship between the GLCDC color format and the output data format?"
+          ],
+          [
+            "Is there a way in which I can use a debugger to check the data drawn in a frame buffer?"
+          ],
+          [
+            "Other"
+          ],
+          [
+            "Optimal RX MCU for Controlling Color TFT LCD"
+          ],
+          [
+            "Videos"
+          ],
+          [
+            "QE for Display[RX,RA] Tutorial: How to Prepare a Project"
+          ],
+          [
+            "QE for Display[RX,RA] Tutorial: How to Adjust LCD"
+          ],
+          [
+            "QE for Display[RX,RA] Tutorial: How to Create GUI"
+          ],
+          [
+            "QE for Display[RX,RA] Tutorial (RX: Serial LCD) #1: How to Prepare a Project"
+          ],
+          [
+            "QE for Display[RX,RA] Tutorial (RX: Serial LCD) #2: How to Create GUI"
+          ],
+          [
+            "Easy GUI Development QE For Display + Aeropoint GUI"
+          ],
+          [
+            "Easy GUI Development by Using QE for Display"
+          ],
+          [
+            "Unboxing the Renesas RX65N Envision Kit"
+          ],
+          [
+            "RX72N Envision Kit Optimized for HMI Development in IoT Applications"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "What are the requirements for the development environment in which emWin can be used? If sample code is provided, please tell me where it is available.",
+        "url": "https://en-support.renesas.com/knowledgeBase/20940273"
+      },
+      {
+        "text": "Is it possible to change the screen display orientation by using emWin at runtime rather than during compilation?",
+        "url": "https://en-support.renesas.com/knowledgeBase/20940236"
+      },
+      {
+        "text": "Is there a way to lower RAM consumption in emWin or GLCDC?",
+        "url": "https://en-support.renesas.com/knowledgeBase/20940274"
+      },
+      {
+        "text": "A link error occurs due to insufficient internal RAM for some reason.",
+        "url": "https://en-support.renesas.com/knowledgeBase/20940271"
+      },
+      {
+        "text": "How can I use an LCD controller that is not supported by the emWin FIT module or QE for Display?",
+        "url": "https://en-support.renesas.com/knowledgeBase/20940275"
+      },
+      {
+        "text": "How can I use a touch controller that is not supported by the emWin FIT module or QE for Display?",
+        "url": "https://en-support.renesas.com/knowledgeBase/20940276"
+      },
+      {
+        "text": "How can I change the color format when emWin and QE for Display are used?",
+        "url": "https://en-support.renesas.com/knowledgeBase/20940277"
+      },
+      {
+        "text": "Bitmap images are not correctly displayed if DRW2D is enabled by using emWin. This phenomenon occurs in a GCC or IAR environment.",
+        "url": "https://en-support.renesas.com/knowledgeBase/20940283"
+      },
+      {
+        "text": "How should I configure frame buffers when using emWin with RX family? Where are frame buffers secured?",
+        "url": "https://en-support.renesas.com/knowledgeBase/20940278"
+      },
+      {
+        "text": "Tell me how to calculate the size of a frame buffer when using emWin for RX family.",
+        "url": "https://en-support.renesas.com/knowledgeBase/20940279"
+      },
+      {
+        "text": "I am using a custom board and LCD. No window appears and the LCD does not respond to touch operations.",
+        "url": "https://en-support.renesas.com/knowledgeBase/20940281"
+      },
+      {
+        "text": "Can I migrate evaluation board or LCD information configured in QE for Display to another project?",
+        "url": "https://en-support.renesas.com/knowledgeBase/19907240"
+      },
+      {
+        "text": "There is a parameter that sets the offset to the next line in the GLCDC input image settings. How does this parameter affect the functionality?",
+        "url": "https://en-support.renesas.com/knowledgeBase/20940272"
+      },
+      {
+        "text": "What is the relationship between the GLCDC color format and the output data format?",
+        "url": "https://en-support.renesas.com/knowledgeBase/20940282"
+      },
+      {
+        "text": "Is there a way in which I can use a debugger to check the data drawn in a frame buffer?",
+        "url": "https://en-support.renesas.com/knowledgeBase/20940280"
+      },
+      {
+        "text": "Optimal RX MCU for Controlling Color TFT LCD",
+        "url": "https://en-support.renesas.com/knowledgeBase/19325963"
+      },
+      {
+        "text": "QE for Display[RX,RA] Tutorial: How to Prepare a Project",
+        "url": "https://www.renesas.com/us/en/video/qe-displayrxra-tutorial-how-prepare-project"
+      },
+      {
+        "text": "QE for Display[RX,RA] Tutorial: How to Adjust LCD",
+        "url": "https://www.renesas.com/us/en/video/qe-displayrxra-tutorial-how-adjust-lcd"
+      },
+      {
+        "text": "QE for Display[RX,RA] Tutorial: How to Create GUI",
+        "url": "https://www.renesas.com/us/en/video/qe-displayrxra-tutorial-how-create-gui"
+      },
+      {
+        "text": "QE for Display[RX,RA] Tutorial (RX: Serial LCD) #1: How to Prepare a Project",
+        "url": "https://www.renesas.com/us/en/video/qe-displayrxra-tutorial-rx-serial-lcd-1-how-prepare-project"
+      },
+      {
+        "text": "QE for Display[RX,RA] Tutorial (RX: Serial LCD) #2: How to Create GUI",
+        "url": "https://www.renesas.com/us/en/video/qe-displayrxra-tutorial-rx-serial-lcd-2-how-create-gui"
+      },
+      {
+        "text": "Easy GUI Development QE For Display + Aeropoint GUI",
+        "url": "https://www.renesas.com/us/en/video/easy-gui-development-qe-display-aeropoint-gui"
+      },
+      {
+        "text": "Easy GUI Development by Using QE for Display",
+        "url": "https://www.renesas.com/us/en/video/easy-gui-development-using-qe-display"
+      },
+      {
+        "text": "Unboxing the Renesas RX65N Envision Kit",
+        "url": "https://www.renesas.com/us/en/video/unboxing-renesas-rx65n-envision-kit"
+      },
+      {
+        "text": "RX72N Envision Kit Optimized for HMI Development in IoT Applications",
+        "url": "https://www.renesas.com/us/en/video/rx72n-envision-kit-optimized-hmi-development-iot-applications"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20868214"
+      }
+    ]
+  }
+}

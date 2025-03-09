@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21733880",
+    "title": "RZ/T2M: Cannot debug a secondary project for multicore processing with flash boot mode in e² studio.",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:52:28.383648"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nFor multicore processing using RZ/T2M device, I create projects and build them in e2 studio with reference to RZ/T2,RZ/N2 Getting Started with Flexible Software Package. \nWhen I try to connect to the debugger in the secondary project with the debugger connected in the primary project, the following error occurs and the debugger does not start. What is the cause?\n(The error message is \"Command ... is timed out\". Which command times out depends on the situation.)\nAnswer:\nIf the download does not finish within the GDB command timeout period, the startup may fail.\nPlease refer to the related FAQ: e² studio debugger failed with timeout error to extend the timeout period.\nSuitable Products\nRZ/T2M, RZ/T2ME, RZ/T2H"
+      },
+      {
+        "type": "text",
+        "content": "For multicore processing using RZ/T2M device, I create projects and build them in e2 studio with reference to RZ/T2,RZ/N2 Getting Started with Flexible Software Package. \nWhen I try to connect to the debugger in the secondary project with the debugger connected in the primary project, the following error occurs and the debugger does not start. What is the cause?\n(The error message is \"Command ... is timed out\". Which command times out depends on the situation.)"
+      },
+      {
+        "type": "text",
+        "content": "For multicore processing using RZ/T2M device, I create projects and build them in e2 studio with reference to RZ/T2,RZ/N2 Getting Started with Flexible Software Package. \nWhen I try to connect to the debugger in the secondary project with the debugger connected in the primary project, the following error occurs and the debugger does not start. What is the cause?"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/02_e2studio_timeout.png",
+          "alt_text": "",
+          "width": "600",
+          "height": "222",
+          "local_path": "data/categories/rz_family/rzt2_rzn2_fsp/153f60c2408d5bf988a443daf4a23364/images/a3c76ad5aabee3a6e24636c6b898d6d7.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "(The error message is \"Command ... is timed out\". Which command times out depends on the situation.)"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIf the download does not finish within the GDB command timeout period, the startup may fail.\nPlease refer to the related FAQ: e² studio debugger failed with timeout error to extend the timeout period.\nSuitable Products\nRZ/T2M, RZ/T2ME, RZ/T2H"
+      },
+      {
+        "type": "text",
+        "content": "If the download does not finish within the GDB command timeout period, the startup may fail.\nPlease refer to the related FAQ: e² studio debugger failed with timeout error to extend the timeout period."
+      },
+      {
+        "type": "text",
+        "content": "If the download does not finish within the GDB command timeout period, the startup may fail.\nPlease refer to the related FAQ: e² studio debugger failed with timeout error to extend the timeout period."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/T2M, RZ/T2ME, RZ/T2H"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/02_e2studio_timeout.png",
+        "alt_text": "",
+        "width": "600",
+        "height": "222",
+        "local_path": "data/categories/rz_family/rzt2_rzn2_fsp/153f60c2408d5bf988a443daf4a23364/images/a3c76ad5aabee3a6e24636c6b898d6d7.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/T2M, RZ/T2ME, RZ/T2H"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/T2M, RZ/T2ME, RZ/T2H"
+    ],
+    "links": [
+      {
+        "text": "RZ/T2,RZ/N2 Getting Started with Flexible Software Package",
+        "url": "https://www.renesas.com/document/qsg/rzt2-rzn2-getting-started-flexible-software-package"
+      },
+      {
+        "text": "e² studio debugger failed with timeout error",
+        "url": "https://en-support.renesas.com/knowledgeBase/21250742"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21733886"
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21250571",
+    "title": "RX Family: Does Renesas provide a design guide for oscillation circuits?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:16:11.951680"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDoes Renesas provide a design guide for oscillation circuits?\nAnswer:\nYes, we provide it. Please use the Design Guide for Main Clock Circuit and Sub-Clock Circuit (R01AN7202EJ).\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Does Renesas provide a design guide for oscillation circuits?"
+      },
+      {
+        "type": "text",
+        "content": "Does Renesas provide a design guide for oscillation circuits?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes, we provide it. Please use the Design Guide for Main Clock Circuit and Sub-Clock Circuit (R01AN7202EJ).\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Yes, we provide it. Please use the Design Guide for Main Clock Circuit and Sub-Clock Circuit (R01AN7202EJ).\nSuitable Products"
+      },
+      {
+        "type": "text",
+        "content": "Yes, we provide it. Please use the Design Guide for Main Clock Circuit and Sub-Clock Circuit (R01AN7202EJ)."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "Design Guide for Main Clock Circuit and Sub-Clock Circuit (R01AN7202EJ)",
+        "url": "https://www.renesas.com/us/en/document/apn/design-guide-main-clock-circuit-and-sub-clock-circuit-rev100"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21250569"
+      }
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18287577",
+    "title": "When FSG's \"Target Board Activation\" Is Not Accepted?",
+    "last_updated": "2023-03-03",
+    "extracted_at": "2025-03-09T00:07:50.555583"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIn the Workbench6 First Step Guide, sometimes the \"Target board activation\" doesn't operate properly. What are the possible causes?\nAnswer:\nThis problem occurs when \"e2 studio with Emulator\" are selected in the First Step Guide under \"Select the connecting method with your board\".\nIf the model number of the selected MCU and the model number of the actual MCU on the target board do not match, or the power supply setting on the target board is incorrect, \"Firmware download completed\" icon blinks on \"Target board startup\" screen and the process can't be completed. If this occurs, the First Step Guide may not operate properly. In that case, please close e2studio.\nAfter that, check the MCU model number and power supply setting on the target board and execute the First Step Guide again.\nWorkbench6 is now in maintenance status, and we do not plan to update it in the future.\nUse QE for Capacitive Touch as a support tool for developing a modern capacitive touch sensor.\nQE for Capacitive Touch can be downloaded from URL below.\nhttps://www.renesas.com/qe-capacitive-touch\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "In the Workbench6 First Step Guide, sometimes the \"Target board activation\" doesn't operate properly. What are the possible causes?"
+      },
+      {
+        "type": "text",
+        "content": "In the Workbench6 First Step Guide, sometimes the \"Target board activation\" doesn't operate properly. What are the possible causes?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThis problem occurs when \"e2 studio with Emulator\" are selected in the First Step Guide under \"Select the connecting method with your board\".\nIf the model number of the selected MCU and the model number of the actual MCU on the target board do not match, or the power supply setting on the target board is incorrect, \"Firmware download completed\" icon blinks on \"Target board startup\" screen and the process can't be completed. If this occurs, the First Step Guide may not operate properly. In that case, please close e2studio.\nAfter that, check the MCU model number and power supply setting on the target board and execute the First Step Guide again.\nWorkbench6 is now in maintenance status, and we do not plan to update it in the future.\nUse QE for Capacitive Touch as a support tool for developing a modern capacitive touch sensor.\nQE for Capacitive Touch can be downloaded from URL below.\nhttps://www.renesas.com/qe-capacitive-touch\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "This problem occurs when \"e2 studio with Emulator\" are selected in the First Step Guide under \"Select the connecting method with your board\".\nIf the model number of the selected MCU and the model number of the actual MCU on the target board do not match, or the power supply setting on the target board is incorrect, \"Firmware download completed\" icon blinks on \"Target board startup\" screen and the process can't be completed. If this occurs, the First Step Guide may not operate properly. In that case, please close e2studio.\nAfter that, check the MCU model number and power supply setting on the target board and execute the First Step Guide again.\nWorkbench6 is now in maintenance status, and we do not plan to update it in the future.\nUse QE for Capacitive Touch as a support tool for developing a modern capacitive touch sensor.\nQE for Capacitive Touch can be downloaded from URL below.\nhttps://www.renesas.com/qe-capacitive-touch"
+      },
+      {
+        "type": "text",
+        "content": "This problem occurs when \"e2 studio with Emulator\" are selected in the First Step Guide under \"Select the connecting method with your board\"."
+      },
+      {
+        "type": "text",
+        "content": "If the model number of the selected MCU and the model number of the actual MCU on the target board do not match, or the power supply setting on the target board is incorrect, \"Firmware download completed\" icon blinks on \"Target board startup\" screen and the process can't be completed. If this occurs, the First Step Guide may not operate properly. In that case, please close e2studio."
+      },
+      {
+        "type": "text",
+        "content": "After that, check the MCU model number and power supply setting on the target board and execute the First Step Guide again."
+      },
+      {
+        "type": "text",
+        "content": "Workbench6 is now in maintenance status, and we do not plan to update it in the future.\nUse QE for Capacitive Touch as a support tool for developing a modern capacitive touch sensor.\nQE for Capacitive Touch can be downloaded from URL below."
+      },
+      {
+        "type": "text",
+        "content": "https://www.renesas.com/qe-capacitive-touch"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/qe-capacitive-touch",
+        "url": "https://www.renesas.com/qe-capacitive-touch"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792798"
+      }
+    ]
+  }
+}

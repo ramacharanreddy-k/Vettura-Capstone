@@ -1,0 +1,129 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20824901",
+    "title": "Differences between the touch functionality of the RL78/G22 and RL78/G23",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:53:48.910151"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow does the internal touch functionality of the RL78/G22 differ from that of the RL78/G23?\nAnswer:\nMultiple electrode connection (MEC) functionality has been added to the CTSU2La featured on the RL78/G22.\nMultiple touch channels can be connected to a single channel inside the MCU, and touch detection performed.\nFigure 1: The CTSU2L (without MEC) and CTSU2La (with MEC)\nUsing MEC has the following benefits.\nThe unit can return from standby mode even when any of the touch channels have been touched.\nCan be used as a single large proximity (contactless) sensor.\nTouch channel measurement completes with a single scan, reducing power consumption compared to scanning a single channel at a time.\nFigure 2: Comparison between measurement times for the RL78/G23 (without MEC) and the RL78/G22 (when using MEC)\nSuitable Products\nRL78/G22"
+      },
+      {
+        "type": "text",
+        "content": "How does the internal touch functionality of the RL78/G22 differ from that of the RL78/G23?"
+      },
+      {
+        "type": "text",
+        "content": "How does the internal touch functionality of the RL78/G22 differ from that of the RL78/G23?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nMultiple electrode connection (MEC) functionality has been added to the CTSU2La featured on the RL78/G22.\nMultiple touch channels can be connected to a single channel inside the MCU, and touch detection performed.\nFigure 1: The CTSU2L (without MEC) and CTSU2La (with MEC)\nUsing MEC has the following benefits.\nThe unit can return from standby mode even when any of the touch channels have been touched.\nCan be used as a single large proximity (contactless) sensor.\nTouch channel measurement completes with a single scan, reducing power consumption compared to scanning a single channel at a time.\nFigure 2: Comparison between measurement times for the RL78/G23 (without MEC) and the RL78/G22 (when using MEC)\nSuitable Products\nRL78/G22"
+      },
+      {
+        "type": "text",
+        "content": "Multiple electrode connection (MEC) functionality has been added to the CTSU2La featured on the RL78/G22.\nMultiple touch channels can be connected to a single channel inside the MCU, and touch detection performed.\nFigure 1: The CTSU2L (without MEC) and CTSU2La (with MEC)\nUsing MEC has the following benefits.\nThe unit can return from standby mode even when any of the touch channels have been touched.\nCan be used as a single large proximity (contactless) sensor.\nTouch channel measurement completes with a single scan, reducing power consumption compared to scanning a single channel at a time.\nFigure 2: Comparison between measurement times for the RL78/G23 (without MEC) and the RL78/G22 (when using MEC)\nSuitable Products"
+      },
+      {
+        "type": "text",
+        "content": "Multiple electrode connection (MEC) functionality has been added to the CTSU2La featured on the RL78/G22.\nMultiple touch channels can be connected to a single channel inside the MCU, and touch detection performed."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/363995-1.png",
+          "alt_text": "",
+          "width": "950",
+          "height": "409",
+          "local_path": "data/categories/rl78_family/rl78g22/1060b2aeacfc0b9c8616c6e2db45ff35/images/1b8fd22a17c2d1a537d0ab637d719628.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 1: The CTSU2L (without MEC) and CTSU2La (with MEC)"
+      },
+      {
+        "type": "text",
+        "content": "Using MEC has the following benefits."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/363995-2.png",
+          "alt_text": "",
+          "width": "950",
+          "height": "456",
+          "local_path": "data/categories/rl78_family/rl78g22/1060b2aeacfc0b9c8616c6e2db45ff35/images/3fe68907e911fbeffd7b22a77748ba54.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 2: Comparison between measurement times for the RL78/G23 (without MEC) and the RL78/G22 (when using MEC)"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RL78/G22"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/363995-1.png",
+        "alt_text": "",
+        "width": "950",
+        "height": "409",
+        "local_path": "data/categories/rl78_family/rl78g22/1060b2aeacfc0b9c8616c6e2db45ff35/images/1b8fd22a17c2d1a537d0ab637d719628.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/363995-2.png",
+        "alt_text": "",
+        "width": "950",
+        "height": "456",
+        "local_path": "data/categories/rl78_family/rl78g22/1060b2aeacfc0b9c8616c6e2db45ff35/images/3fe68907e911fbeffd7b22a77748ba54.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G22"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G22"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20824907"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20824912"
+      }
+    ]
+  }
+}

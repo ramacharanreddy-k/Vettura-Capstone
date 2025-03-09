@@ -1,0 +1,207 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21177407",
+    "title": "RA6M4/RA6M5: CPU Performance Difference when C-/S-caches are on/off",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:14:18.098153"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCPU Performance Difference when C-/S-caches are on/off\nAnswer:\nFor Renesas Cortex-M33 RA6M4 and RA6M5 MCUs, there are system level caches for both instruction cache and data cache, which help to improve instruction and data fetch speed. The data cache is named S-Cache in the Renesas RA6M4/RA6M5 MCU Hardware User’s Manual, and it’s on the MCU’s system bus. The instruction cache is named C-Cache, and it’s on the code bus. The Cache detail specifications, which includes Capacity, Way, Line Size, Write Way, Cache Support Area, etc., can be found through the Renesas RA6M4/RA6M5 MCU Hardware User’s Manual Table 14.9. Basically, this article briefly showcases how the RA6M4 or RA6M5 CPU performance is influenced based on different combinations of C-cache, and S-cache configuration. The relevant information about benchmark testing conditions as well as the result comparison is described below.\nThe environment of Benchmark testing:\nMCU and the runtime environment initialization (SystemInit) is based on FSPv5.0.0\nCompiler: GCC10.3.1\nCompiler Optimization Level: O2 (Optimize More)\nSystem Clock configuration: ICLK=200MHz\nBoard: EK-RA6M4\nThe first method of CPU performance measurement:\nA simple For loop with accumulation operation\nToggling GPIO before and after the calculation\n\n\nThe CPU process time measurement from output level change:\nConfig Option S-Cache control C-Cache control F-Cache control Process time\n1 Enable*1 Enable Enable 820us\n2 Disable Enable Enable 1.47ms\n3 Disable Disable*1 Enable 2.46ms\nNote1: Change at the beginning of the application. Others are default setting after FSP SystemInit.\nAccording to the above result, enabling the S-Cache can significantly improve MCU performance because the measured operation basically focuses on the SRAM write access. When the S-Cache is enabled, the access cycle of SRAM write is reduced from 2 cycles to 1 cycle. Especially if the system clock ICLK is configured to 100MHz or less, accessing SRAM is always 0 wait state. At such condition, enabling the S-Cache to reduce the required cycle of SRAM write access can obviously improve the performance.\nThe second method of CPU performance measurement:\nFixed point iteration method for locating the real roots of an equation within a specified iteration cycle\nToggling GPIO before and after the calculation\n\nThe CPU process time measurement from output level change:\n  S-Cache control C-Cache control F-Cache control Process time\n1 Enable*1 Enable Enable 3.125ms\n2 Disable Enable Enable 3.81ms\n3 Disable Disable*1 Enable 6.97ms\nNote1: Change at the beginning of the application. Others are default setting after FSP SystemInit.\nFor this measured operation, enabling the C-Cache, which reduces the required access cycle of instruction fetch, can significantly improve the MCU performance. When the C-cache is enabled and the cacheable access is from CPU, the read access is one cycle if C-cache is hit. For the C-Cache is missed while C-Cache operation is enabled, or C-cache is disabled, the read access is three cycles.\nReference Attachments:\nExample project on EK-RA6M4 for above benchmark testing (below)\nExample project on EK-RA6M5 for above benchmark testing (below)\nSuitable Products\nRA6M4, RA6M5"
+      },
+      {
+        "type": "text",
+        "content": "CPU Performance Difference when C-/S-caches are on/off"
+      },
+      {
+        "type": "text",
+        "content": "CPU Performance Difference when C-/S-caches are on/off"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nFor Renesas Cortex-M33 RA6M4 and RA6M5 MCUs, there are system level caches for both instruction cache and data cache, which help to improve instruction and data fetch speed. The data cache is named S-Cache in the Renesas RA6M4/RA6M5 MCU Hardware User’s Manual, and it’s on the MCU’s system bus. The instruction cache is named C-Cache, and it’s on the code bus. The Cache detail specifications, which includes Capacity, Way, Line Size, Write Way, Cache Support Area, etc., can be found through the Renesas RA6M4/RA6M5 MCU Hardware User’s Manual Table 14.9. Basically, this article briefly showcases how the RA6M4 or RA6M5 CPU performance is influenced based on different combinations of C-cache, and S-cache configuration. The relevant information about benchmark testing conditions as well as the result comparison is described below.\nThe environment of Benchmark testing:\nMCU and the runtime environment initialization (SystemInit) is based on FSPv5.0.0\nCompiler: GCC10.3.1\nCompiler Optimization Level: O2 (Optimize More)\nSystem Clock configuration: ICLK=200MHz\nBoard: EK-RA6M4\nThe first method of CPU performance measurement:\nA simple For loop with accumulation operation\nToggling GPIO before and after the calculation\n\n\nThe CPU process time measurement from output level change:\nConfig Option S-Cache control C-Cache control F-Cache control Process time\n1 Enable*1 Enable Enable 820us\n2 Disable Enable Enable 1.47ms\n3 Disable Disable*1 Enable 2.46ms\nNote1: Change at the beginning of the application. Others are default setting after FSP SystemInit.\nAccording to the above result, enabling the S-Cache can significantly improve MCU performance because the measured operation basically focuses on the SRAM write access. When the S-Cache is enabled, the access cycle of SRAM write is reduced from 2 cycles to 1 cycle. Especially if the system clock ICLK is configured to 100MHz or less, accessing SRAM is always 0 wait state. At such condition, enabling the S-Cache to reduce the required cycle of SRAM write access can obviously improve the performance.\nThe second method of CPU performance measurement:\nFixed point iteration method for locating the real roots of an equation within a specified iteration cycle\nToggling GPIO before and after the calculation\n\nThe CPU process time measurement from output level change:\n  S-Cache control C-Cache control F-Cache control Process time\n1 Enable*1 Enable Enable 3.125ms\n2 Disable Enable Enable 3.81ms\n3 Disable Disable*1 Enable 6.97ms\nNote1: Change at the beginning of the application. Others are default setting after FSP SystemInit.\nFor this measured operation, enabling the C-Cache, which reduces the required access cycle of instruction fetch, can significantly improve the MCU performance. When the C-cache is enabled and the cacheable access is from CPU, the read access is one cycle if C-cache is hit. For the C-Cache is missed while C-Cache operation is enabled, or C-cache is disabled, the read access is three cycles.\nReference Attachments:\nExample project on EK-RA6M4 for above benchmark testing (below)\nExample project on EK-RA6M5 for above benchmark testing (below)\nSuitable Products\nRA6M4, RA6M5"
+      },
+      {
+        "type": "text",
+        "content": "For Renesas Cortex-M33 RA6M4 and RA6M5 MCUs, there are system level caches for both instruction cache and data cache, which help to improve instruction and data fetch speed. The data cache is named S-Cache in the Renesas RA6M4/RA6M5 MCU Hardware User’s Manual, and it’s on the MCU’s system bus. The instruction cache is named C-Cache, and it’s on the code bus. The Cache detail specifications, which includes Capacity, Way, Line Size, Write Way, Cache Support Area, etc., can be found through the Renesas RA6M4/RA6M5 MCU Hardware User’s Manual Table 14.9. Basically, this article briefly showcases how the RA6M4 or RA6M5 CPU performance is influenced based on different combinations of C-cache, and S-cache configuration. The relevant information about benchmark testing conditions as well as the result comparison is described below.\nThe environment of Benchmark testing:\nMCU and the runtime environment initialization (SystemInit) is based on FSPv5.0.0\nCompiler: GCC10.3.1\nCompiler Optimization Level: O2 (Optimize More)\nSystem Clock configuration: ICLK=200MHz\nBoard: EK-RA6M4\nThe first method of CPU performance measurement:\nA simple For loop with accumulation operation\nToggling GPIO before and after the calculation\n\n\nThe CPU process time measurement from output level change:\nConfig Option S-Cache control C-Cache control F-Cache control Process time\n1 Enable*1 Enable Enable 820us\n2 Disable Enable Enable 1.47ms\n3 Disable Disable*1 Enable 2.46ms\nNote1: Change at the beginning of the application. Others are default setting after FSP SystemInit.\nAccording to the above result, enabling the S-Cache can significantly improve MCU performance because the measured operation basically focuses on the SRAM write access. When the S-Cache is enabled, the access cycle of SRAM write is reduced from 2 cycles to 1 cycle. Especially if the system clock ICLK is configured to 100MHz or less, accessing SRAM is always 0 wait state. At such condition, enabling the S-Cache to reduce the required cycle of SRAM write access can obviously improve the performance.\nThe second method of CPU performance measurement:\nFixed point iteration method for locating the real roots of an equation within a specified iteration cycle\nToggling GPIO before and after the calculation\n\nThe CPU process time measurement from output level change:\n  S-Cache control C-Cache control F-Cache control Process time\n1 Enable*1 Enable Enable 3.125ms\n2 Disable Enable Enable 3.81ms\n3 Disable Disable*1 Enable 6.97ms\nNote1: Change at the beginning of the application. Others are default setting after FSP SystemInit.\nFor this measured operation, enabling the C-Cache, which reduces the required access cycle of instruction fetch, can significantly improve the MCU performance. When the C-cache is enabled and the cacheable access is from CPU, the read access is one cycle if C-cache is hit. For the C-Cache is missed while C-Cache operation is enabled, or C-cache is disabled, the read access is three cycles.\nReference Attachments:\nExample project on EK-RA6M4 for above benchmark testing (below)\nExample project on EK-RA6M5 for above benchmark testing (below)"
+      },
+      {
+        "type": "text",
+        "content": "For Renesas Cortex-M33 RA6M4 and RA6M5 MCUs, there are system level caches for both instruction cache and data cache, which help to improve instruction and data fetch speed. The data cache is named S-Cache in the Renesas RA6M4/RA6M5 MCU Hardware User’s Manual, and it’s on the MCU’s system bus. The instruction cache is named C-Cache, and it’s on the code bus. The Cache detail specifications, which includes Capacity, Way, Line Size, Write Way, Cache Support Area, etc., can be found through the Renesas RA6M4/RA6M5 MCU Hardware User’s Manual Table 14.9. Basically, this article briefly showcases how the RA6M4 or RA6M5 CPU performance is influenced based on different combinations of C-cache, and S-cache configuration. The relevant information about benchmark testing conditions as well as the result comparison is described below."
+      },
+      {
+        "type": "text",
+        "content": "The environment of Benchmark testing:"
+      },
+      {
+        "type": "text",
+        "content": "The first method of CPU performance measurement:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380669-1c.png",
+          "alt_text": "",
+          "width": "500",
+          "height": "89",
+          "local_path": "data/categories/ra_family/ra_hardware/2bed78d04899c936b6e2e1aa93932a2b/images/ccc102eeb158ae50086aaf6f534cdff2.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Note1: Change at the beginning of the application. Others are default setting after FSP SystemInit."
+      },
+      {
+        "type": "text",
+        "content": "According to the above result, enabling the S-Cache can significantly improve MCU performance because the measured operation basically focuses on the SRAM write access. When the S-Cache is enabled, the access cycle of SRAM write is reduced from 2 cycles to 1 cycle. Especially if the system clock ICLK is configured to 100MHz or less, accessing SRAM is always 0 wait state. At such condition, enabling the S-Cache to reduce the required cycle of SRAM write access can obviously improve the performance."
+      },
+      {
+        "type": "text",
+        "content": "The second method of CPU performance measurement:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380669-2c.png",
+          "alt_text": "",
+          "width": "500",
+          "height": "159",
+          "local_path": "data/categories/ra_family/ra_hardware/2bed78d04899c936b6e2e1aa93932a2b/images/7c8e9f9013a637dafa927d9060c959ca.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/92e7bfb4-dd82-42bd-9ff8-3dc10c12b05c",
+          "alt_text": "",
+          "width": "0",
+          "height": "0",
+          "local_path": "data/categories/ra_family/ra_hardware/2bed78d04899c936b6e2e1aa93932a2b/images/53b450079879257082d5f3e6107402c6.jpg"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Note1: Change at the beginning of the application. Others are default setting after FSP SystemInit."
+      },
+      {
+        "type": "text",
+        "content": "For this measured operation, enabling the C-Cache, which reduces the required access cycle of instruction fetch, can significantly improve the MCU performance. When the C-cache is enabled and the cacheable access is from CPU, the read access is one cycle if C-cache is hit. For the C-Cache is missed while C-Cache operation is enabled, or C-cache is disabled, the read access is three cycles."
+      },
+      {
+        "type": "text",
+        "content": "Reference Attachments:"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA6M4, RA6M5"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380669-1c.png",
+        "alt_text": "",
+        "width": "500",
+        "height": "89",
+        "local_path": "data/categories/ra_family/ra_hardware/2bed78d04899c936b6e2e1aa93932a2b/images/ccc102eeb158ae50086aaf6f534cdff2.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380669-2c.png",
+        "alt_text": "",
+        "width": "500",
+        "height": "159",
+        "local_path": "data/categories/ra_family/ra_hardware/2bed78d04899c936b6e2e1aa93932a2b/images/7c8e9f9013a637dafa927d9060c959ca.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/92e7bfb4-dd82-42bd-9ff8-3dc10c12b05c",
+        "alt_text": "",
+        "width": "0",
+        "height": "0",
+        "local_path": "data/categories/ra_family/ra_hardware/2bed78d04899c936b6e2e1aa93932a2b/images/53b450079879257082d5f3e6107402c6.jpg"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "Config Option",
+            "S-Cache control",
+            "C-Cache control",
+            "F-Cache control",
+            "Process time"
+          ],
+          [
+            "1",
+            "Enable*1",
+            "Enable",
+            "Enable",
+            "820us"
+          ],
+          [
+            "2",
+            "Disable",
+            "Enable",
+            "Enable",
+            "1.47ms"
+          ],
+          [
+            "3",
+            "Disable",
+            "Disable*1",
+            "Enable",
+            "2.46ms"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "",
+            "S-Cache control",
+            "C-Cache control",
+            "F-Cache control",
+            "Process time"
+          ],
+          [
+            "1",
+            "Enable*1",
+            "Enable",
+            "Enable",
+            "3.125ms"
+          ],
+          [
+            "2",
+            "Disable",
+            "Enable",
+            "Enable",
+            "3.81ms"
+          ],
+          [
+            "3",
+            "Disable",
+            "Disable*1",
+            "Enable",
+            "6.97ms"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA6M4, RA6M5"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA6M4, RA6M5"
+    ],
+    "links": []
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21763416",
+    "title": "TrustZone on RA4L1 group MCUs",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:30:20.815891"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow can developers partition their system into secure and non-secure zones?\nAnswer:\nThe Cortex-M33 core on the RA4L1 offers TrustZone, a hardware enforced separation of MCU resources, that enables isolation and Secure/Non-Secure partitioning of memory and peripherals. Code executing in the Secure world can act on code/data/peripherals that are located in the Non-secure World, but not vice versa. However, designated Secure Services may be called by code in the Non-secure world. Renesas has applied the TrustZone filters to other busses inside the MCU, preventing Non-secure code from extracting Secure code/data using other bus masters, such as DMA and DTC. Renesas has also applied those filters to pins and peripherals, protecting the external interfaces from eavesdropping and impersonation. Arm TrustZone enables a more secure and robust high performance system design.\nSuitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "How can developers partition their system into secure and non-secure zones?"
+      },
+      {
+        "type": "text",
+        "content": "How can developers partition their system into secure and non-secure zones?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe Cortex-M33 core on the RA4L1 offers TrustZone, a hardware enforced separation of MCU resources, that enables isolation and Secure/Non-Secure partitioning of memory and peripherals. Code executing in the Secure world can act on code/data/peripherals that are located in the Non-secure World, but not vice versa. However, designated Secure Services may be called by code in the Non-secure world. Renesas has applied the TrustZone filters to other busses inside the MCU, preventing Non-secure code from extracting Secure code/data using other bus masters, such as DMA and DTC. Renesas has also applied those filters to pins and peripherals, protecting the external interfaces from eavesdropping and impersonation. Arm TrustZone enables a more secure and robust high performance system design.\nSuitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "The Cortex-M33 core on the RA4L1 offers TrustZone, a hardware enforced separation of MCU resources, that enables isolation and Secure/Non-Secure partitioning of memory and peripherals. Code executing in the Secure world can act on code/data/peripherals that are located in the Non-secure World, but not vice versa. However, designated Secure Services may be called by code in the Non-secure world. Renesas has applied the TrustZone filters to other busses inside the MCU, preventing Non-secure code from extracting Secure code/data using other bus masters, such as DMA and DTC. Renesas has also applied those filters to pins and peripherals, protecting the external interfaces from eavesdropping and impersonation. Arm TrustZone enables a more secure and robust high performance system design."
+      },
+      {
+        "type": "text",
+        "content": "The Cortex-M33 core on the RA4L1 offers TrustZone, a hardware enforced separation of MCU resources, that enables isolation and Secure/Non-Secure partitioning of memory and peripherals. Code executing in the Secure world can act on code/data/peripherals that are located in the Non-secure World, but not vice versa. However, designated Secure Services may be called by code in the Non-secure world. Renesas has applied the TrustZone filters to other busses inside the MCU, preventing Non-secure code from extracting Secure code/data using other bus masters, such as DMA and DTC. Renesas has also applied those filters to pins and peripherals, protecting the external interfaces from eavesdropping and impersonation. Arm TrustZone enables a more secure and robust high performance system design."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "Japanese Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA4L1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA4L1"
+    ],
+    "links": [
+      {
+        "text": "Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21763462"
+      },
+      {
+        "text": "Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21763474"
+      }
+    ]
+  }
+}

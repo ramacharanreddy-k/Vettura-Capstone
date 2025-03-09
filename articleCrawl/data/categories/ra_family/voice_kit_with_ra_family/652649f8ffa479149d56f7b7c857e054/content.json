@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20536974",
+    "title": "RA Family: What technology of voice command can this solution run on ?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:41:07.850222"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat technology of voice command can this solution run on ?\nAnswer:\nThree basics are supported.\nVoice User Interface functions : Local voice recognition algorithm, no network connectivity needed. Phoneme-based modeling. Quick command customization: no advance speech data collection. Optimization by model adaptation just with small amount speech data. Global language support: 44+ languages worldwide.\nVoice Activity Detection : Most IoT end-point applications are power constrained and speech recognition/ wake-word systems need to operate in always-on mode so our solution feature reduces power consumption further by up to 30%\nVoice Audio Playback : Enables voice response function on RA --> Input by Voice or TTS --> Compression to reduce file size --> Decompression and playback on RA.\nSuitable Products\nMCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+      },
+      {
+        "type": "text",
+        "content": "What technology of voice command can this solution run on ?"
+      },
+      {
+        "type": "text",
+        "content": "What technology of voice command can this solution run on ?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThree basics are supported.\nVoice User Interface functions : Local voice recognition algorithm, no network connectivity needed. Phoneme-based modeling. Quick command customization: no advance speech data collection. Optimization by model adaptation just with small amount speech data. Global language support: 44+ languages worldwide.\nVoice Activity Detection : Most IoT end-point applications are power constrained and speech recognition/ wake-word systems need to operate in always-on mode so our solution feature reduces power consumption further by up to 30%\nVoice Audio Playback : Enables voice response function on RA --> Input by Voice or TTS --> Compression to reduce file size --> Decompression and playback on RA.\nSuitable Products\nMCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+      },
+      {
+        "type": "text",
+        "content": "Three basics are supported.\nVoice User Interface functions : Local voice recognition algorithm, no network connectivity needed. Phoneme-based modeling. Quick command customization: no advance speech data collection. Optimization by model adaptation just with small amount speech data. Global language support: 44+ languages worldwide.\nVoice Activity Detection : Most IoT end-point applications are power constrained and speech recognition/ wake-word systems need to operate in always-on mode so our solution feature reduces power consumption further by up to 30%\nVoice Audio Playback : Enables voice response function on RA --> Input by Voice or TTS --> Compression to reduce file size --> Decompression and playback on RA."
+      },
+      {
+        "type": "text",
+        "content": "Three basics are supported."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nMCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "MCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "MCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20545070"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20545081"
+      }
+    ]
+  }
+}

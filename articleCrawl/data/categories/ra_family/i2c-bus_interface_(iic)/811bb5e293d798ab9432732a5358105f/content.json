@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21180394",
+    "title": "RA Family: I2C-BUS could detect unexpected Start Condition and malfunction when a slave device executes clock stretching",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:36:45.558284"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhen an I2C slave executes a clock stretching action (holding the clock line SCL low to  wait for the master), RA family MCU (master) detects an unexpected start condition on the I2C bus.\nAnswer:\nWhen a I2C slave executes a clock stretching and releases it, it outputs the data line signal for the next first clock, and then sets up a data input setup time specified by the electrical characteristics of the MCU (please refer to the MCU user's manual) and a data setup time specified by I2C bus specification (Standard mode: Min 250 ns, High-speed mode: Min 100 ns) before releasing the clock line low.\nIf the data setup time is not met, the master may detect an unexpected start condition (the data line SDA is falling during the clock line SCL is high).\nFigure. Example of timing of I2C clock stretching\nSuitable Products\nRA MCU"
+      },
+      {
+        "type": "text",
+        "content": "When an I2C slave executes a clock stretching action (holding the clock line SCL low to  wait for the master), RA family MCU (master) detects an unexpected start condition on the I2C bus."
+      },
+      {
+        "type": "text",
+        "content": "When an I2C slave executes a clock stretching action (holding the clock line SCL low to  wait for the master), RA family MCU (master) detects an unexpected start condition on the I2C bus."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nWhen a I2C slave executes a clock stretching and releases it, it outputs the data line signal for the next first clock, and then sets up a data input setup time specified by the electrical characteristics of the MCU (please refer to the MCU user's manual) and a data setup time specified by I2C bus specification (Standard mode: Min 250 ns, High-speed mode: Min 100 ns) before releasing the clock line low.\nIf the data setup time is not met, the master may detect an unexpected start condition (the data line SDA is falling during the clock line SCL is high).\nFigure. Example of timing of I2C clock stretching\nSuitable Products\nRA MCU"
+      },
+      {
+        "type": "text",
+        "content": "When a I2C slave executes a clock stretching and releases it, it outputs the data line signal for the next first clock, and then sets up a data input setup time specified by the electrical characteristics of the MCU (please refer to the MCU user's manual) and a data setup time specified by I2C bus specification (Standard mode: Min 250 ns, High-speed mode: Min 100 ns) before releasing the clock line low.\nIf the data setup time is not met, the master may detect an unexpected start condition (the data line SDA is falling during the clock line SCL is high).\nFigure. Example of timing of I2C clock stretching"
+      },
+      {
+        "type": "text",
+        "content": "When a I2C slave executes a clock stretching and releases it, it outputs the data line signal for the next first clock, and then sets up a data input setup time specified by the electrical characteristics of the MCU (please refer to the MCU user's manual) and a data setup time specified by I2C bus specification (Standard mode: Min 250 ns, High-speed mode: Min 100 ns) before releasing the clock line low."
+      },
+      {
+        "type": "text",
+        "content": "If the data setup time is not met, the master may detect an unexpected start condition (the data line SDA is falling during the clock line SCL is high)."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380802.png",
+          "alt_text": "",
+          "width": "1253",
+          "height": "342",
+          "local_path": "data/categories/ra_family/i2c-bus_interface_(iic)/811bb5e293d798ab9432732a5358105f/images/837e223a822c744d3c7abe227137e351.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure. Example of timing of I2C clock stretching"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA MCU"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380802.png",
+        "alt_text": "",
+        "width": "1253",
+        "height": "342",
+        "local_path": "data/categories/ra_family/i2c-bus_interface_(iic)/811bb5e293d798ab9432732a5358105f/images/837e223a822c744d3c7abe227137e351.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA MCU"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA MCU"
+    ],
+    "links": []
+  }
+}

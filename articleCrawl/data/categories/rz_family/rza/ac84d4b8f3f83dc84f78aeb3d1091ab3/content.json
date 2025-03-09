@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20787026",
+    "title": "RZ/A: Boundary scan mode setting timing",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:42:22.771775"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nAt what point should BSCANP be set to H to enter boundary scan mode?\nAnswer:\nThe BSCANP pin selects whether the JTAG pin is used in debug mode or boundary scan mode, and the BSCANP is not intended to be changed during operation.\nPlease set the BSCANP pin to the desired pin level and then release the reset.\nSuitable Products\nRZ/A1 Group, \nRZ/A2M,\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "At what point should BSCANP be set to H to enter boundary scan mode?"
+      },
+      {
+        "type": "text",
+        "content": "At what point should BSCANP be set to H to enter boundary scan mode?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe BSCANP pin selects whether the JTAG pin is used in debug mode or boundary scan mode, and the BSCANP is not intended to be changed during operation.\nPlease set the BSCANP pin to the desired pin level and then release the reset.\nSuitable Products\nRZ/A1 Group, \nRZ/A2M,\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "The BSCANP pin selects whether the JTAG pin is used in debug mode or boundary scan mode, and the BSCANP is not intended to be changed during operation.\nPlease set the BSCANP pin to the desired pin level and then release the reset."
+      },
+      {
+        "type": "text",
+        "content": "The BSCANP pin selects whether the JTAG pin is used in debug mode or boundary scan mode, and the BSCANP is not intended to be changed during operation.\nPlease set the BSCANP pin to the desired pin level and then release the reset."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A1 Group, \nRZ/A2M,\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "RZ/A1 Group, \nRZ/A2M,"
+      },
+      {
+        "type": "text",
+        "content": "RZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A1 Group, \nRZ/A2M,\nRZ/A3UL"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A1 Group, \nRZ/A2M,\nRZ/A3UL"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20788285"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20789813"
+      }
+    ]
+  }
+}

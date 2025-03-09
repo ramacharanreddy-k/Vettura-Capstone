@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20536977",
+    "title": "Why does VOICE-RA4E1 kit only have one digital microphone ?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:41:38.173219"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhy does VOICE-RA4E1 kit only have one digital microphone ?\nAnswer:\nVOICE-RA4E1 uses RA4E1 microcontroller in 48pin package which only has enough pins for a single digital microcontroller connection. In case you will need two digital microphone, please use VOICE-RA6E1.\nSuitable Products\nMCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+      },
+      {
+        "type": "text",
+        "content": "Why does VOICE-RA4E1 kit only have one digital microphone ?"
+      },
+      {
+        "type": "text",
+        "content": "Why does VOICE-RA4E1 kit only have one digital microphone ?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nVOICE-RA4E1 uses RA4E1 microcontroller in 48pin package which only has enough pins for a single digital microcontroller connection. In case you will need two digital microphone, please use VOICE-RA6E1.\nSuitable Products\nMCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+      },
+      {
+        "type": "text",
+        "content": "VOICE-RA4E1 uses RA4E1 microcontroller in 48pin package which only has enough pins for a single digital microcontroller connection. In case you will need two digital microphone, please use VOICE-RA6E1."
+      },
+      {
+        "type": "text",
+        "content": "VOICE-RA4E1 uses RA4E1 microcontroller in 48pin package which only has enough pins for a single digital microcontroller connection. In case you will need two digital microphone, please use VOICE-RA6E1."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nMCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "MCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "MCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20545072"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20545083"
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21272675",
+    "title": "In RA4E1 AI kit, what's the expected performance (resolution/FSP) of the TFT LCD considering no HMI capabilities?",
+    "last_updated": "2024-12-03",
+    "extracted_at": "2025-03-08T23:40:53.578432"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIn RA4E1 AI kit, what's the expected performance (resolution/FSP) of the TFT LCD considering no HMI capabilities?\nAnswer:\nThe communication to the display is over the SPI bus write 40MHz, read back 20MHz, 2.5MHz for the touch controller.\nSuitable Products\nAIK-RA4E1"
+      },
+      {
+        "type": "text",
+        "content": "In RA4E1 AI kit, what's the expected performance (resolution/FSP) of the TFT LCD considering no HMI capabilities?"
+      },
+      {
+        "type": "text",
+        "content": "In RA4E1 AI kit, what's the expected performance (resolution/FSP) of the TFT LCD considering no HMI capabilities?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe communication to the display is over the SPI bus write 40MHz, read back 20MHz, 2.5MHz for the touch controller.\nSuitable Products\nAIK-RA4E1"
+      },
+      {
+        "type": "text",
+        "content": "The communication to the display is over the SPI bus write 40MHz, read back 20MHz, 2.5MHz for the touch controller."
+      },
+      {
+        "type": "text",
+        "content": "The communication to the display is over the SPI bus write 40MHz, read back 20MHz, 2.5MHz for the touch controller."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nAIK-RA4E1"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "AIK-RA4E1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "AIK-RA4E1"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21272706"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21272718"
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21272672",
+    "title": "RA Family: Where to find BSP?",
+    "last_updated": "2024-12-03",
+    "extracted_at": "2025-03-08T23:40:30.243185"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhere to find BSP?\nAnswer:\nPlease find the BSP in the Github.\nAccess link is https://github.com/renesas/aiot-ready/tree/master/kits.\nSuitable Products\nAIK-RA6M3\nAIK-RA4E1"
+      },
+      {
+        "type": "text",
+        "content": "Where to find BSP?"
+      },
+      {
+        "type": "text",
+        "content": "Where to find BSP?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nPlease find the BSP in the Github.\nAccess link is https://github.com/renesas/aiot-ready/tree/master/kits.\nSuitable Products\nAIK-RA6M3\nAIK-RA4E1"
+      },
+      {
+        "type": "text",
+        "content": "Please find the BSP in the Github.\nAccess link is https://github.com/renesas/aiot-ready/tree/master/kits."
+      },
+      {
+        "type": "text",
+        "content": "Please find the BSP in the Github.\nAccess link is https://github.com/renesas/aiot-ready/tree/master/kits."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nAIK-RA6M3\nAIK-RA4E1"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "AIK-RA6M3\nAIK-RA4E1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "AIK-RA6M3\nAIK-RA4E1"
+    ],
+    "links": [
+      {
+        "text": "https://github.com/renesas/aiot-ready/tree/master/kits",
+        "url": "https://github.com/renesas/aiot-ready/tree/master/kits"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21272702"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21272715"
+      }
+    ]
+  }
+}

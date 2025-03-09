@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21245144",
+    "title": "A question in regard to the function connection example for a self-powered USB connector",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:23:48.745923"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI have a question in regard to an example shown in the RX113 Group User's Manual: Hardware Rev.1.20 (https://www.renesas.com/us/en/document/man/rx113-group-user-s-manual-hardware).\nIn the connection shown in the following figure, suppose that no power is supplied to the microcomputer. In this case, if a voltage of 5 V DC is supplied to VBUS from a device via the USB connector, isn't the pin (PC16 or PC4) to which USB0_VBUS is connected damaged?\nAnswer:\nThe PC16 is 5-volt tolerant even when power is off. Therefore, no problem occurs when VBUS is directly connected.\nBecause the PC4 is not 5-volt tolerant, lower the voltage to 3.3 V by using, for example, a resistive voltage divider.\nSuitable Products\nRX113"
+      },
+      {
+        "type": "text",
+        "content": "I have a question in regard to an example shown in the RX113 Group User's Manual: Hardware Rev.1.20 (https://www.renesas.com/us/en/document/man/rx113-group-user-s-manual-hardware).\nIn the connection shown in the following figure, suppose that no power is supplied to the microcomputer. In this case, if a voltage of 5 V DC is supplied to VBUS from a device via the USB connector, isn't the pin (PC16 or PC4) to which USB0_VBUS is connected damaged?"
+      },
+      {
+        "type": "text",
+        "content": "I have a question in regard to an example shown in the RX113 Group User's Manual: Hardware Rev.1.20 (https://www.renesas.com/us/en/document/man/rx113-group-user-s-manual-hardware)."
+      },
+      {
+        "type": "text",
+        "content": "In the connection shown in the following figure, suppose that no power is supplied to the microcomputer. In this case, if a voltage of 5 V DC is supplied to VBUS from a device via the USB connector, isn't the pin (PC16 or PC4) to which USB0_VBUS is connected damaged?"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/3831691.png",
+          "alt_text": "",
+          "width": "708",
+          "height": "562",
+          "local_path": "data/categories/rx_family/others/c436f6248565606875b83e7d27b76bc5/images/76e4362fcd0128981e3a583e5e6dcf9f.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe PC16 is 5-volt tolerant even when power is off. Therefore, no problem occurs when VBUS is directly connected.\nBecause the PC4 is not 5-volt tolerant, lower the voltage to 3.3 V by using, for example, a resistive voltage divider.\nSuitable Products\nRX113"
+      },
+      {
+        "type": "text",
+        "content": "The PC16 is 5-volt tolerant even when power is off. Therefore, no problem occurs when VBUS is directly connected.\nBecause the PC4 is not 5-volt tolerant, lower the voltage to 3.3 V by using, for example, a resistive voltage divider."
+      },
+      {
+        "type": "text",
+        "content": "The PC16 is 5-volt tolerant even when power is off. Therefore, no problem occurs when VBUS is directly connected.\nBecause the PC4 is not 5-volt tolerant, lower the voltage to 3.3 V by using, for example, a resistive voltage divider."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/3831691.png",
+        "alt_text": "",
+        "width": "708",
+        "height": "562",
+        "local_path": "data/categories/rx_family/others/c436f6248565606875b83e7d27b76bc5/images/76e4362fcd0128981e3a583e5e6dcf9f.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/us/en/document/man/rx113-group-user-s-manual-hardware",
+        "url": "https://www.renesas.com/us/en/document/man/rx113-group-user-s-manual-hardware"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20197366"
+      }
+    ]
+  }
+}

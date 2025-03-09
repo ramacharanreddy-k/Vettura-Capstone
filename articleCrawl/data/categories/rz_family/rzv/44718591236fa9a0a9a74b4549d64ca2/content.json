@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21180421",
+    "title": "RZ/V: Cannot access the latest version AI SDK Website",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:52:02.578275"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI could access old version AI SDK website only when I access from a search engine. \nAnswer:\nthe latest version AI SDK website URL is below\nhttps://renesas-rz.github.io/rzv_ai_sdk/latest/\nYou can always access the latest page from this URL.\nSuitable Products\nRZ/V"
+      },
+      {
+        "type": "text",
+        "content": "I could access old version AI SDK website only when I access from a search engine."
+      },
+      {
+        "type": "text",
+        "content": "I could access old version AI SDK website only when I access from a search engine."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nthe latest version AI SDK website URL is below\nhttps://renesas-rz.github.io/rzv_ai_sdk/latest/\nYou can always access the latest page from this URL.\nSuitable Products\nRZ/V"
+      },
+      {
+        "type": "text",
+        "content": "the latest version AI SDK website URL is below\nhttps://renesas-rz.github.io/rzv_ai_sdk/latest/\nYou can always access the latest page from this URL."
+      },
+      {
+        "type": "text",
+        "content": "the latest version AI SDK website URL is below\nhttps://renesas-rz.github.io/rzv_ai_sdk/latest/\nYou can always access the latest page from this URL."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V"
+    ],
+    "links": [
+      {
+        "text": "https://renesas-rz.github.io/rzv_ai_sdk/latest/",
+        "url": "https://renesas-rz.github.io/rzv_ai_sdk/latest/"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21180425"
+      }
+    ]
+  }
+}

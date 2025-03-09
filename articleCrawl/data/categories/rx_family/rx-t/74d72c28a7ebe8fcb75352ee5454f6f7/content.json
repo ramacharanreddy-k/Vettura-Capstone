@@ -1,0 +1,300 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21656980",
+    "title": "Configuration of communication between Renesas Motor Workbench (RMW) and PC device on a custom RX-T project",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:06:16.399871"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to configure correctly  a custom project, in order to use MC-COM Port with Renesas Motor Workbench (RMW)?\nAnswer:\nIn general, using MC-COM, it is not difficult to implement the communication library ( ICS LIBRARY) to any customized board that uses RX-T MCUs. The only hardware requirement is the use of specific SCI channel for the communication between the RX-T mcu and the MC-COM board. For example, for RX23-T the SCI1 or SCI5 channel can be used for the communication.\nMC-COM includes the RMW command processing and analyzer processing, without needing to configure a lot of things on the RX-T mcu.\n  By following the necessary steps below, the user will be able to watch on the scope the global variables that he will define on his project:\n  1)Τhe user  should include the the necessary ICS2 library files on his project. The files that he will need is the ICS_RXxxT.h header file and ICS2_RXxxT.lib or ICS2_RXxxT.obj. These files can be easily found on any motor sample project that exists on Renesas official website. The header files needs a simple addition on the project folder.\n  For the .lib or .obj files, the user should got to Project properties -> Linker -> Input and add the library:\n        2)Τhe next step is to prepare the project, in order to generate the map file, that includes all the project’s variables and will be uploaded on the RMW tool. To do this check the screenshot below:\n        3) Τhe next step is to define some RAM area on the project for the DTC table that will be used for the communication. On the main file, the lines below have been added:\n      4)The RX memory sections should be defined on an appropriate way, in order to say to the compiler that the user wants to use a specific area called DTCTBL for his purpose.  0x00000000 of RAM is used:\n      5)Τhe next step is how the customer should use the functions provided from ICS2 library, in order to setup the communication between the MC-COM and the RX-T mcu. For this reason, the folder rmw that includes some definitions and apis has been added:\n    Οn r_app_rmw_interrupt.c file, the interrupt routines have been specified for the communication and the parameters of the ics2_init(), which is responsible for the initialization of the communication. The parameters of this function define the mode of the SCI communication ( for example the baud rate).\n    6) The final function that should be used is the ics2_watcpoint() function. This function can be called inside a routine, that the user will know that will called periodically on some specific us time interval. For that reason, CMT Timer that triggers a event every 100usec is used and the function inside this callback is called.\nFor more information, about ics2_init and ics2_watcpoint(), the customer can study Chapter 4.3 of RMW quick start guide:\nRMW_Quick_Start_Guide\n  After all the steps above, the user will be able to watch any global variable on the RMW. On the attached project, two variables that called variable and analog have been defined. The variable is increased when CMT event is triggered, while analog is a variable from an ADC channel input and if the user check the attached screenshot, he will be able to see a sine signal that be measured using the adc peripheral of RX26-T channel.\n  Finally, on the RMW tool, the customer should load the map file that can be found on the HardwareDebug file inside the project:\n            Also, find attached a RX26-T project that have been configured using the steps above and it is ready to be use for any custom application.\n    Suitable Products\nRX-T\n  ??? ??"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nHow to configure correctly  a custom project, in order to use MC-COM Port with Renesas Motor Workbench (RMW)?\nAnswer:\nIn general, using MC-COM, it is not difficult to implement the communication library ( ICS LIBRARY) to any customized board that uses RX-T MCUs. The only hardware requirement is the use of specific SCI channel for the communication between the RX-T mcu and the MC-COM board. For example, for RX23-T the SCI1 or SCI5 channel can be used for the communication.\nMC-COM includes the RMW command processing and analyzer processing, without needing to configure a lot of things on the RX-T mcu.\n  By following the necessary steps below, the user will be able to watch on the scope the global variables that he will define on his project:\n  1)Τhe user  should include the the necessary ICS2 library files on his project. The files that he will need is the ICS_RXxxT.h header file and ICS2_RXxxT.lib or ICS2_RXxxT.obj. These files can be easily found on any motor sample project that exists on Renesas official website. The header files needs a simple addition on the project folder.\n  For the .lib or .obj files, the user should got to Project properties -> Linker -> Input and add the library:\n        2)Τhe next step is to prepare the project, in order to generate the map file, that includes all the project’s variables and will be uploaded on the RMW tool. To do this check the screenshot below:\n        3) Τhe next step is to define some RAM area on the project for the DTC table that will be used for the communication. On the main file, the lines below have been added:\n      4)The RX memory sections should be defined on an appropriate way, in order to say to the compiler that the user wants to use a specific area called DTCTBL for his purpose.  0x00000000 of RAM is used:\n      5)Τhe next step is how the customer should use the functions provided from ICS2 library, in order to setup the communication between the MC-COM and the RX-T mcu. For this reason, the folder rmw that includes some definitions and apis has been added:\n    Οn r_app_rmw_interrupt.c file, the interrupt routines have been specified for the communication and the parameters of the ics2_init(), which is responsible for the initialization of the communication. The parameters of this function define the mode of the SCI communication ( for example the baud rate).\n    6) The final function that should be used is the ics2_watcpoint() function. This function can be called inside a routine, that the user will know that will called periodically on some specific us time interval. For that reason, CMT Timer that triggers a event every 100usec is used and the function inside this callback is called.\nFor more information, about ics2_init and ics2_watcpoint(), the customer can study Chapter 4.3 of RMW quick start guide:\nRMW_Quick_Start_Guide\n  After all the steps above, the user will be able to watch any global variable on the RMW. On the attached project, two variables that called variable and analog have been defined. The variable is increased when CMT event is triggered, while analog is a variable from an ADC channel input and if the user check the attached screenshot, he will be able to see a sine signal that be measured using the adc peripheral of RX26-T channel.\n  Finally, on the RMW tool, the customer should load the map file that can be found on the HardwareDebug file inside the project:\n            Also, find attached a RX26-T project that have been configured using the steps above and it is ready to be use for any custom application.\n    Suitable Products\nRX-T"
+      },
+      {
+        "type": "text",
+        "content": "How to configure correctly  a custom project, in order to use MC-COM Port with Renesas Motor Workbench (RMW)?"
+      },
+      {
+        "type": "text",
+        "content": "How to configure correctly  a custom project, in order to use MC-COM Port with Renesas Motor Workbench (RMW)?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIn general, using MC-COM, it is not difficult to implement the communication library ( ICS LIBRARY) to any customized board that uses RX-T MCUs. The only hardware requirement is the use of specific SCI channel for the communication between the RX-T mcu and the MC-COM board. For example, for RX23-T the SCI1 or SCI5 channel can be used for the communication.\nMC-COM includes the RMW command processing and analyzer processing, without needing to configure a lot of things on the RX-T mcu.\n  By following the necessary steps below, the user will be able to watch on the scope the global variables that he will define on his project:\n  1)Τhe user  should include the the necessary ICS2 library files on his project. The files that he will need is the ICS_RXxxT.h header file and ICS2_RXxxT.lib or ICS2_RXxxT.obj. These files can be easily found on any motor sample project that exists on Renesas official website. The header files needs a simple addition on the project folder.\n  For the .lib or .obj files, the user should got to Project properties -> Linker -> Input and add the library:\n        2)Τhe next step is to prepare the project, in order to generate the map file, that includes all the project’s variables and will be uploaded on the RMW tool. To do this check the screenshot below:\n        3) Τhe next step is to define some RAM area on the project for the DTC table that will be used for the communication. On the main file, the lines below have been added:\n      4)The RX memory sections should be defined on an appropriate way, in order to say to the compiler that the user wants to use a specific area called DTCTBL for his purpose.  0x00000000 of RAM is used:\n      5)Τhe next step is how the customer should use the functions provided from ICS2 library, in order to setup the communication between the MC-COM and the RX-T mcu. For this reason, the folder rmw that includes some definitions and apis has been added:\n    Οn r_app_rmw_interrupt.c file, the interrupt routines have been specified for the communication and the parameters of the ics2_init(), which is responsible for the initialization of the communication. The parameters of this function define the mode of the SCI communication ( for example the baud rate).\n    6) The final function that should be used is the ics2_watcpoint() function. This function can be called inside a routine, that the user will know that will called periodically on some specific us time interval. For that reason, CMT Timer that triggers a event every 100usec is used and the function inside this callback is called.\nFor more information, about ics2_init and ics2_watcpoint(), the customer can study Chapter 4.3 of RMW quick start guide:\nRMW_Quick_Start_Guide\n  After all the steps above, the user will be able to watch any global variable on the RMW. On the attached project, two variables that called variable and analog have been defined. The variable is increased when CMT event is triggered, while analog is a variable from an ADC channel input and if the user check the attached screenshot, he will be able to see a sine signal that be measured using the adc peripheral of RX26-T channel.\n  Finally, on the RMW tool, the customer should load the map file that can be found on the HardwareDebug file inside the project:\n            Also, find attached a RX26-T project that have been configured using the steps above and it is ready to be use for any custom application.\n    Suitable Products\nRX-T"
+      },
+      {
+        "type": "text",
+        "content": "In general, using MC-COM, it is not difficult to implement the communication library ( ICS LIBRARY) to any customized board that uses RX-T MCUs. The only hardware requirement is the use of specific SCI channel for the communication between the RX-T mcu and the MC-COM board. For example, for RX23-T the SCI1 or SCI5 channel can be used for the communication.\nMC-COM includes the RMW command processing and analyzer processing, without needing to configure a lot of things on the RX-T mcu.\n  By following the necessary steps below, the user will be able to watch on the scope the global variables that he will define on his project:\n  1)Τhe user  should include the the necessary ICS2 library files on his project. The files that he will need is the ICS_RXxxT.h header file and ICS2_RXxxT.lib or ICS2_RXxxT.obj. These files can be easily found on any motor sample project that exists on Renesas official website. The header files needs a simple addition on the project folder.\n  For the .lib or .obj files, the user should got to Project properties -> Linker -> Input and add the library:\n        2)Τhe next step is to prepare the project, in order to generate the map file, that includes all the project’s variables and will be uploaded on the RMW tool. To do this check the screenshot below:\n        3) Τhe next step is to define some RAM area on the project for the DTC table that will be used for the communication. On the main file, the lines below have been added:\n      4)The RX memory sections should be defined on an appropriate way, in order to say to the compiler that the user wants to use a specific area called DTCTBL for his purpose.  0x00000000 of RAM is used:\n      5)Τhe next step is how the customer should use the functions provided from ICS2 library, in order to setup the communication between the MC-COM and the RX-T mcu. For this reason, the folder rmw that includes some definitions and apis has been added:\n    Οn r_app_rmw_interrupt.c file, the interrupt routines have been specified for the communication and the parameters of the ics2_init(), which is responsible for the initialization of the communication. The parameters of this function define the mode of the SCI communication ( for example the baud rate).\n    6) The final function that should be used is the ics2_watcpoint() function. This function can be called inside a routine, that the user will know that will called periodically on some specific us time interval. For that reason, CMT Timer that triggers a event every 100usec is used and the function inside this callback is called.\nFor more information, about ics2_init and ics2_watcpoint(), the customer can study Chapter 4.3 of RMW quick start guide:\nRMW_Quick_Start_Guide\n  After all the steps above, the user will be able to watch any global variable on the RMW. On the attached project, two variables that called variable and analog have been defined. The variable is increased when CMT event is triggered, while analog is a variable from an ADC channel input and if the user check the attached screenshot, he will be able to see a sine signal that be measured using the adc peripheral of RX26-T channel.\n  Finally, on the RMW tool, the customer should load the map file that can be found on the HardwareDebug file inside the project:\n            Also, find attached a RX26-T project that have been configured using the steps above and it is ready to be use for any custom application."
+      },
+      {
+        "type": "text",
+        "content": "In general, using MC-COM, it is not difficult to implement the communication library ( ICS LIBRARY) to any customized board that uses RX-T MCUs. The only hardware requirement is the use of specific SCI channel for the communication between the RX-T mcu and the MC-COM board. For example, for RX23-T the SCI1 or SCI5 channel can be used for the communication."
+      },
+      {
+        "type": "text",
+        "content": "MC-COM includes the RMW command processing and analyzer processing, without needing to configure a lot of things on the RX-T mcu."
+      },
+      {
+        "type": "text",
+        "content": "By following the necessary steps below, the user will be able to watch on the scope the global variables that he will define on his project:"
+      },
+      {
+        "type": "text",
+        "content": "1)Τhe user  should include the the necessary ICS2 library files on his project. The files that he will need is the ICS_RXxxT.h header file and ICS2_RXxxT.lib or ICS2_RXxxT.obj. These files can be easily found on any motor sample project that exists on Renesas official website. The header files needs a simple addition on the project folder."
+      },
+      {
+        "type": "text",
+        "content": "For the .lib or .obj files, the user should got to Project properties -> Linker -> Input and add the library:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/89de5d38-1b80-416d-9c08-e84ff6487e3f",
+          "alt_text": "",
+          "width": "850",
+          "height": "508",
+          "local_path": "data/categories/rx_family/rx-t/74d72c28a7ebe8fcb75352ee5454f6f7/images/3c0c377540971b9e0b9dd32af515aec3.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "2)Τhe next step is to prepare the project, in order to generate the map file, that includes all the project’s variables and will be uploaded on the RMW tool. To do this check the screenshot below:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/7a2c46b7-8e4e-4fbc-9136-6c939bb17a19",
+          "alt_text": "",
+          "width": "827",
+          "height": "526",
+          "local_path": "data/categories/rx_family/rx-t/74d72c28a7ebe8fcb75352ee5454f6f7/images/cdf8cc3c97eaf8b4aaeac0d760ba84f7.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "3) Τhe next step is to define some RAM area on the project for the DTC table that will be used for the communication. On the main file, the lines below have been added:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/218dfb26-7908-41b3-9ef4-9bcff1796fb3",
+          "alt_text": "",
+          "width": "600",
+          "height": "482",
+          "local_path": "data/categories/rx_family/rx-t/74d72c28a7ebe8fcb75352ee5454f6f7/images/531c5a249d158d95d59b78fc4e29643b.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "4)The RX memory sections should be defined on an appropriate way, in order to say to the compiler that the user wants to use a specific area called DTCTBL for his purpose.  0x00000000 of RAM is used:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/20e35227-90c5-4328-a307-cb88c046aa40",
+          "alt_text": "",
+          "width": "474",
+          "height": "468",
+          "local_path": "data/categories/rx_family/rx-t/74d72c28a7ebe8fcb75352ee5454f6f7/images/92e57beb7c926a61c45078799116feec.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "5)Τhe next step is how the customer should use the functions provided from ICS2 library, in order to setup the communication between the MC-COM and the RX-T mcu. For this reason, the folder rmw that includes some definitions and apis has been added:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/1d63839b-4069-456a-bfc1-ccfde412738e",
+          "alt_text": "",
+          "width": "250",
+          "height": "184",
+          "local_path": "data/categories/rx_family/rx-t/74d72c28a7ebe8fcb75352ee5454f6f7/images/6f0724da2f9d3872d56694e1bbffe9df.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Οn r_app_rmw_interrupt.c file, the interrupt routines have been specified for the communication and the parameters of the ics2_init(), which is responsible for the initialization of the communication. The parameters of this function define the mode of the SCI communication ( for example the baud rate)."
+      },
+      {
+        "type": "text",
+        "content": "6) The final function that should be used is the ics2_watcpoint() function. This function can be called inside a routine, that the user will know that will called periodically on some specific us time interval. For that reason, CMT Timer that triggers a event every 100usec is used and the function inside this callback is called."
+      },
+      {
+        "type": "text",
+        "content": "For more information, about ics2_init and ics2_watcpoint(), the customer can study Chapter 4.3 of RMW quick start guide:"
+      },
+      {
+        "type": "text",
+        "content": "RMW_Quick_Start_Guide"
+      },
+      {
+        "type": "text",
+        "content": "After all the steps above, the user will be able to watch any global variable on the RMW. On the attached project, two variables that called variable and analog have been defined. The variable is increased when CMT event is triggered, while analog is a variable from an ADC channel input and if the user check the attached screenshot, he will be able to see a sine signal that be measured using the adc peripheral of RX26-T channel."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/acc3257c-79db-4da5-bdac-800c16efa883",
+          "alt_text": "",
+          "width": "575",
+          "height": "309",
+          "local_path": "data/categories/rx_family/rx-t/74d72c28a7ebe8fcb75352ee5454f6f7/images/15d9685135a97e232c6b112eed860205.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Finally, on the RMW tool, the customer should load the map file that can be found on the HardwareDebug file inside the project:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/da6d7bdf-db12-4504-bc1f-9b7e48a73f0c",
+          "alt_text": "",
+          "width": "576",
+          "height": "301",
+          "local_path": "data/categories/rx_family/rx-t/74d72c28a7ebe8fcb75352ee5454f6f7/images/ceeaa92caf5f9f4810437de400641eb4.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/51b459a0-01f7-46b4-9c18-735c48fc2d1d",
+          "alt_text": "",
+          "width": "463",
+          "height": "479",
+          "local_path": "data/categories/rx_family/rx-t/74d72c28a7ebe8fcb75352ee5454f6f7/images/b8491061cac70a3506aaa2df321c4413.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/4b9eb061-a656-4b75-940e-8ddfa5969c32",
+          "alt_text": "",
+          "width": "275",
+          "height": "475",
+          "local_path": "data/categories/rx_family/rx-t/74d72c28a7ebe8fcb75352ee5454f6f7/images/ee0c525a2f357ae97f8c005c076750c2.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Also, find attached a RX26-T project that have been configured using the steps above and it is ready to be use for any custom application."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX-T"
+      },
+      {
+        "type": "text",
+        "content": "??? ??"
+      },
+      {
+        "type": "text",
+        "content": "???"
+      },
+      {
+        "type": "text",
+        "content": "??"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/89de5d38-1b80-416d-9c08-e84ff6487e3f",
+        "alt_text": "",
+        "width": "850",
+        "height": "508",
+        "local_path": "data/categories/rx_family/rx-t/74d72c28a7ebe8fcb75352ee5454f6f7/images/3c0c377540971b9e0b9dd32af515aec3.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/7a2c46b7-8e4e-4fbc-9136-6c939bb17a19",
+        "alt_text": "",
+        "width": "827",
+        "height": "526",
+        "local_path": "data/categories/rx_family/rx-t/74d72c28a7ebe8fcb75352ee5454f6f7/images/cdf8cc3c97eaf8b4aaeac0d760ba84f7.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/218dfb26-7908-41b3-9ef4-9bcff1796fb3",
+        "alt_text": "",
+        "width": "600",
+        "height": "482",
+        "local_path": "data/categories/rx_family/rx-t/74d72c28a7ebe8fcb75352ee5454f6f7/images/531c5a249d158d95d59b78fc4e29643b.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/20e35227-90c5-4328-a307-cb88c046aa40",
+        "alt_text": "",
+        "width": "474",
+        "height": "468",
+        "local_path": "data/categories/rx_family/rx-t/74d72c28a7ebe8fcb75352ee5454f6f7/images/92e57beb7c926a61c45078799116feec.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/1d63839b-4069-456a-bfc1-ccfde412738e",
+        "alt_text": "",
+        "width": "250",
+        "height": "184",
+        "local_path": "data/categories/rx_family/rx-t/74d72c28a7ebe8fcb75352ee5454f6f7/images/6f0724da2f9d3872d56694e1bbffe9df.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/acc3257c-79db-4da5-bdac-800c16efa883",
+        "alt_text": "",
+        "width": "575",
+        "height": "309",
+        "local_path": "data/categories/rx_family/rx-t/74d72c28a7ebe8fcb75352ee5454f6f7/images/15d9685135a97e232c6b112eed860205.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/da6d7bdf-db12-4504-bc1f-9b7e48a73f0c",
+        "alt_text": "",
+        "width": "576",
+        "height": "301",
+        "local_path": "data/categories/rx_family/rx-t/74d72c28a7ebe8fcb75352ee5454f6f7/images/ceeaa92caf5f9f4810437de400641eb4.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/51b459a0-01f7-46b4-9c18-735c48fc2d1d",
+        "alt_text": "",
+        "width": "463",
+        "height": "479",
+        "local_path": "data/categories/rx_family/rx-t/74d72c28a7ebe8fcb75352ee5454f6f7/images/b8491061cac70a3506aaa2df321c4413.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/4b9eb061-a656-4b75-940e-8ddfa5969c32",
+        "alt_text": "",
+        "width": "275",
+        "height": "475",
+        "local_path": "data/categories/rx_family/rx-t/74d72c28a7ebe8fcb75352ee5454f6f7/images/ee0c525a2f357ae97f8c005c076750c2.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX-T"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX-T"
+    ],
+    "links": [
+      {
+        "text": "RMW_Quick_Start_Guide",
+        "url": "https://www.renesas.com/en/document/qsg/motor-control-development-support-tool-renesas-motor-workbench-312-quick-start-guide?r=25432286"
+      },
+      {
+        "text": "???",
+        "url": "https://ja-support.renesas.com/knowledgeBase/YYYYYYYY"
+      },
+      {
+        "text": "??",
+        "url": "https://zh-support.renesas.com/knowledgeBase/ZZZZZZZZ"
+      }
+    ]
+  }
+}

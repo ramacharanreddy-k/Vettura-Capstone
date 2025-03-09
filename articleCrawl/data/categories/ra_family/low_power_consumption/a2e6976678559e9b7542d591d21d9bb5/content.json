@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21180393",
+    "title": "RA Family: Why doesn't the current consumption of the MCU decrease in low power mode?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:37:02.489674"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhy doesn’t the current consumption of the MCU reach the referential value described in the electrical characteristics, even though the MCU has transitioned to low power mode (software standby mode, deep software standby mode).\nAnswer:\nPerhaps the following points impact the result;\nThe MCU has not definitely transitioned to low power mode.\nSome RA MCUs provide a function register that allows the debugger to cancel the MCU low-power mode, allowing continuous debug connection. Some debuggers may use this feature when starting a debug session, and may not be able to transition correctly if the MCU transitions to low-power mode is made without clearing the associated registers. It is recommended to first confirm the current consumption without debug connection.\nPlease refer to the debugger user’s manual and configure the appropriate debug setting. For Segger J-Link, please refer to the Knowledge Base \"Debugging During Low Power States with FSP\" for how to address it.\nThe clock setting of your application may be different from the measurement conditions described in the electrical characteristics. Please check the measurement conditions in user’s manual.\nIf the MCU output is at a high level while the MCU is in low power mode, that current may be included in the result. Please make sure that the measurement target does not include these current increases.\nCheck that the current measurement point includes only the MCU power pin and not additional peripheral components (such as LED) on the evaluation board.\nFor MCUs with special function power supply pins (for example, VCC_USB on USB supported MCUs, VCC18_MIPI on MIPI DSI supported MCUs), please check whether these current amounts are included. Please check if the evaluation target is correct in conjunction with the measurement conditions of the electrical characteristics.\nSuitable Products\nRA MCU"
+      },
+      {
+        "type": "text",
+        "content": "Why doesn’t the current consumption of the MCU reach the referential value described in the electrical characteristics, even though the MCU has transitioned to low power mode (software standby mode, deep software standby mode)."
+      },
+      {
+        "type": "text",
+        "content": "Why doesn’t the current consumption of the MCU reach the referential value described in the electrical characteristics, even though the MCU has transitioned to low power mode (software standby mode, deep software standby mode)."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nPerhaps the following points impact the result;\nThe MCU has not definitely transitioned to low power mode.\nSome RA MCUs provide a function register that allows the debugger to cancel the MCU low-power mode, allowing continuous debug connection. Some debuggers may use this feature when starting a debug session, and may not be able to transition correctly if the MCU transitions to low-power mode is made without clearing the associated registers. It is recommended to first confirm the current consumption without debug connection.\nPlease refer to the debugger user’s manual and configure the appropriate debug setting. For Segger J-Link, please refer to the Knowledge Base \"Debugging During Low Power States with FSP\" for how to address it.\nThe clock setting of your application may be different from the measurement conditions described in the electrical characteristics. Please check the measurement conditions in user’s manual.\nIf the MCU output is at a high level while the MCU is in low power mode, that current may be included in the result. Please make sure that the measurement target does not include these current increases.\nCheck that the current measurement point includes only the MCU power pin and not additional peripheral components (such as LED) on the evaluation board.\nFor MCUs with special function power supply pins (for example, VCC_USB on USB supported MCUs, VCC18_MIPI on MIPI DSI supported MCUs), please check whether these current amounts are included. Please check if the evaluation target is correct in conjunction with the measurement conditions of the electrical characteristics.\nSuitable Products\nRA MCU"
+      },
+      {
+        "type": "text",
+        "content": "Perhaps the following points impact the result;\nThe MCU has not definitely transitioned to low power mode.\nSome RA MCUs provide a function register that allows the debugger to cancel the MCU low-power mode, allowing continuous debug connection. Some debuggers may use this feature when starting a debug session, and may not be able to transition correctly if the MCU transitions to low-power mode is made without clearing the associated registers. It is recommended to first confirm the current consumption without debug connection.\nPlease refer to the debugger user’s manual and configure the appropriate debug setting. For Segger J-Link, please refer to the Knowledge Base \"Debugging During Low Power States with FSP\" for how to address it.\nThe clock setting of your application may be different from the measurement conditions described in the electrical characteristics. Please check the measurement conditions in user’s manual.\nIf the MCU output is at a high level while the MCU is in low power mode, that current may be included in the result. Please make sure that the measurement target does not include these current increases.\nCheck that the current measurement point includes only the MCU power pin and not additional peripheral components (such as LED) on the evaluation board.\nFor MCUs with special function power supply pins (for example, VCC_USB on USB supported MCUs, VCC18_MIPI on MIPI DSI supported MCUs), please check whether these current amounts are included. Please check if the evaluation target is correct in conjunction with the measurement conditions of the electrical characteristics."
+      },
+      {
+        "type": "text",
+        "content": "Perhaps the following points impact the result;"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA MCU"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA MCU"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA MCU"
+    ],
+    "links": [
+      {
+        "text": "Debugging During Low Power States with FSP",
+        "url": "https://en-support.renesas.com/knowledgeBase/19586039"
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20626309",
+    "title": "What type of motor applications is this device suited for?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:25:31.738021"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat type of motor applications is this device suited for?\nAnswer:\nThe motor control ASSP is suitable to control one motor in one or three shunt configurations, sensor-less or with external feedback, for end applications like home appliances, fans, pumps, compressors, power tools, drone motors and many more.\nSuitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "What type of motor applications is this device suited for?"
+      },
+      {
+        "type": "text",
+        "content": "What type of motor applications is this device suited for?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe motor control ASSP is suitable to control one motor in one or three shunt configurations, sensor-less or with external feedback, for end applications like home appliances, fans, pumps, compressors, power tools, drone motors and many more.\nSuitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "The motor control ASSP is suitable to control one motor in one or three shunt configurations, sensor-less or with external feedback, for end applications like home appliances, fans, pumps, compressors, power tools, drone motors and many more."
+      },
+      {
+        "type": "text",
+        "content": "The motor control ASSP is suitable to control one motor in one or three shunt configurations, sensor-less or with external feedback, for end applications like home appliances, fans, pumps, compressors, power tools, drone motors and many more."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RISC-V ASSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RISC-V ASSP"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20626329"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20628070"
+      }
+    ]
+  }
+}

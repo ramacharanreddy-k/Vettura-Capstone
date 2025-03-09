@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21124709",
+    "title": "Nested Interrupt in RH850",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:29:07.073666"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI couldn't find a possible way to enable nested interrupt. Any suggestion on \"How to enable interrupt nesting in RH850C1M-A1\".\nAnswer:\nNested interrupts are possible (for all RH850 CPUs). Interrupts Service Routines (ISR) can be interrupted by only higher priority interrupts. The precondition for nested interrupts is that a ISR have to enable interrupts again (__EI()), as interrupts are disable (same like __DI()), when the ISR is entered. This is the only thing you must ensure to enable nested interrupts: Each ISR have to allow nested interrupts by re-enabling interrupts again. \nNOTE:\nNested interrupts should also be allowed by the Compiler, which is even the default setting. The User must not use the \"nonreentrant\" paramete for GHS or  \"_flat\" for IAR. The default setting without \"nonreentrant\"/ \"flat\" force the Compiler to save/restore ALL interrupt related registers. For functions, which are not using nested interrupts/exceptions, the ISR processing may be speed up by using  the \"nonreentrant\"/ \"_flat\" parameter.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nI couldn't find a possible way to enable nested interrupt. Any suggestion on \"How to enable interrupt nesting in RH850C1M-A1\".\nAnswer:\nNested interrupts are possible (for all RH850 CPUs). Interrupts Service Routines (ISR) can be interrupted by only higher priority interrupts. The precondition for nested interrupts is that a ISR have to enable interrupts again (__EI()), as interrupts are disable (same like __DI()), when the ISR is entered. This is the only thing you must ensure to enable nested interrupts: Each ISR have to allow nested interrupts by re-enabling interrupts again. \nNOTE:\nNested interrupts should also be allowed by the Compiler, which is even the default setting. The User must not use the \"nonreentrant\" paramete for GHS or  \"_flat\" for IAR. The default setting without \"nonreentrant\"/ \"flat\" force the Compiler to save/restore ALL interrupt related registers. For functions, which are not using nested interrupts/exceptions, the ISR processing may be speed up by using  the \"nonreentrant\"/ \"_flat\" parameter.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "I couldn't find a possible way to enable nested interrupt. Any suggestion on \"How to enable interrupt nesting in RH850C1M-A1\"."
+      },
+      {
+        "type": "text",
+        "content": "I couldn't find a possible way to enable nested interrupt. Any suggestion on \"How to enable interrupt nesting in RH850C1M-A1\"."
+      },
+      {
+        "type": "text",
+        "content": "I couldn't find a possible way to enable nested interrupt. Any suggestion on \"How to enable interrupt nesting in RH850C1M-A1\"."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nNested interrupts are possible (for all RH850 CPUs). Interrupts Service Routines (ISR) can be interrupted by only higher priority interrupts. The precondition for nested interrupts is that a ISR have to enable interrupts again (__EI()), as interrupts are disable (same like __DI()), when the ISR is entered. This is the only thing you must ensure to enable nested interrupts: Each ISR have to allow nested interrupts by re-enabling interrupts again. \nNOTE:\nNested interrupts should also be allowed by the Compiler, which is even the default setting. The User must not use the \"nonreentrant\" paramete for GHS or  \"_flat\" for IAR. The default setting without \"nonreentrant\"/ \"flat\" force the Compiler to save/restore ALL interrupt related registers. For functions, which are not using nested interrupts/exceptions, the ISR processing may be speed up by using  the \"nonreentrant\"/ \"_flat\" parameter.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "Nested interrupts are possible (for all RH850 CPUs). Interrupts Service Routines (ISR) can be interrupted by only higher priority interrupts. The precondition for nested interrupts is that a ISR have to enable interrupts again (__EI()), as interrupts are disable (same like __DI()), when the ISR is entered. This is the only thing you must ensure to enable nested interrupts: Each ISR have to allow nested interrupts by re-enabling interrupts again. \nNOTE:\nNested interrupts should also be allowed by the Compiler, which is even the default setting. The User must not use the \"nonreentrant\" paramete for GHS or  \"_flat\" for IAR. The default setting without \"nonreentrant\"/ \"flat\" force the Compiler to save/restore ALL interrupt related registers. For functions, which are not using nested interrupts/exceptions, the ISR processing may be speed up by using  the \"nonreentrant\"/ \"_flat\" parameter."
+      },
+      {
+        "type": "text",
+        "content": "Nested interrupts are possible (for all RH850 CPUs). Interrupts Service Routines (ISR) can be interrupted by only higher priority interrupts. The precondition for nested interrupts is that a ISR have to enable interrupts again (__EI()), as interrupts are disable (same like __DI()), when the ISR is entered. This is the only thing you must ensure to enable nested interrupts: Each ISR have to allow nested interrupts by re-enabling interrupts again."
+      },
+      {
+        "type": "text",
+        "content": "Nested interrupts are possible (for all RH850 CPUs). Interrupts Service Routines (ISR) can be interrupted by only higher priority interrupts."
+      },
+      {
+        "type": "text",
+        "content": "The precondition for nested interrupts is that a ISR have to enable interrupts again (__EI()), as interrupts are disable (same like __DI()), when the ISR is entered. This is the only thing you must ensure to enable nested interrupts: Each ISR have to allow nested interrupts by re-enabling interrupts again."
+      },
+      {
+        "type": "text",
+        "content": "The precondition for nested interrupts is that a ISR have to enable interrupts again (__EI()), as interrupts are disable (same like __DI()), when the ISR is entered. This is the only thing you must ensure to enable nested interrupts: Each ISR have to allow nested interrupts by re-enabling interrupts again."
+      },
+      {
+        "type": "text",
+        "content": "NOTE:"
+      },
+      {
+        "type": "text",
+        "content": "NOTE:"
+      },
+      {
+        "type": "text",
+        "content": "Nested interrupts should also be allowed by the Compiler, which is even the default setting. The User must not use the \"nonreentrant\" paramete for GHS or  \"_flat\" for IAR. The default setting without \"nonreentrant\"/ \"flat\" force the Compiler to save/restore ALL interrupt related registers. For functions, which are not using nested interrupts/exceptions, the ISR processing may be speed up by using  the \"nonreentrant\"/ \"_flat\" parameter."
+      },
+      {
+        "type": "text",
+        "content": "Nested interrupts should also be allowed by the Compiler, which is even the default setting. The User must not use the \"nonreentrant\" paramete for GHS or  \"_flat\" for IAR. The default setting without \"nonreentrant\"/ \"flat\" force the Compiler to save/restore ALL interrupt related registers. For functions, which are not using nested interrupts/exceptions, the ISR processing may be speed up by using  the \"nonreentrant\"/ \"_flat\" parameter."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850"
+    ],
+    "links": []
+  }
+}

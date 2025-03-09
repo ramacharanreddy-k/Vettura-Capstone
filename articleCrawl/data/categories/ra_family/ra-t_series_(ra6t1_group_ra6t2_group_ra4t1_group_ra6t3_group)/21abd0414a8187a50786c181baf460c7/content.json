@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20918716",
+    "title": "New RA motor control MCUs",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:33:01.570453"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the difference between RA4T1 and RA6T3?\nAnswer:\nRA4T1 and RA6T3 are new motor control MCUs in the RA4 and RA6 series.\nRA4T1 and RA6T3 differ in maximum operating frequency, Code Flash option, and USB support, but are basically pin and peripheral function compatible, migration between products is very easy.\nSuitable Products\nRA4T1, RA6T3"
+      },
+      {
+        "type": "text",
+        "content": "What is the difference between RA4T1 and RA6T3?"
+      },
+      {
+        "type": "text",
+        "content": "What is the difference between RA4T1 and RA6T3?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRA4T1 and RA6T3 are new motor control MCUs in the RA4 and RA6 series.\nRA4T1 and RA6T3 differ in maximum operating frequency, Code Flash option, and USB support, but are basically pin and peripheral function compatible, migration between products is very easy.\nSuitable Products\nRA4T1, RA6T3"
+      },
+      {
+        "type": "text",
+        "content": "RA4T1 and RA6T3 are new motor control MCUs in the RA4 and RA6 series.\nRA4T1 and RA6T3 differ in maximum operating frequency, Code Flash option, and USB support, but are basically pin and peripheral function compatible, migration between products is very easy."
+      },
+      {
+        "type": "text",
+        "content": "RA4T1 and RA6T3 are new motor control MCUs in the RA4 and RA6 series.\nRA4T1 and RA6T3 differ in maximum operating frequency, Code Flash option, and USB support, but are basically pin and peripheral function compatible, migration between products is very easy."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA4T1, RA6T3"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA4T1, RA6T3"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA4T1, RA6T3"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20918717"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20918718"
+      }
+    ]
+  }
+}

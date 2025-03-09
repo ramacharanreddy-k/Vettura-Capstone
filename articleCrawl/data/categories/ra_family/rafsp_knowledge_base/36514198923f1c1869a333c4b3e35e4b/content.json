@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20797625",
+    "title": "RA Family: How to set up external bus using FSP",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:25:04.793171"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nRA Family: How to set up external bus using FSP\nAnswer:\nFSP does not provide configuration or a driver to set up the external bus. Users need to write code to setup the external bus registers appropriately when using the external bus. The code shown below is an example of the external bus setting for your reference. Note that settings will need to be modified to suit your environment.\nvoid bsp_exbus_init(void)\n{\n// control settings (CS0CR)\n    R_BUS->CSb[0].CR_b.EXENB = 0U;  //Disable CS0\n    R_BUS->CSb[0].CR_b.BSIZE = 2U;  //8bit\n    R_BUS->CSb[0].CR_b.EMODE = 0U;  //Little Endian\n    R_BUS->CSb[0].CR_b.MPXEN = 0U;  //Separated Bus\n\n// mode settings (CSnMOD)\n    R_BUS->CSa[0].MOD_b.WRMOD = 1U; //One write strobe mode\n    R_BUS->CSa[0].MOD_b.EWENB = 0U; //Disable External WAIT\n    R_BUS->CSa[0].MOD_b.PRENB = 0U; //Disable Page Read Access\n    R_BUS->CSa[0].MOD_b.PWENB = 0U; //Disable Page Write Access\n\n// timing settings (CS0WCR1)\n    R_BUS->CSa[0].WCR1_b.CSPRWAIT = 7U;\n    R_BUS->CSa[0].WCR1_b.CSPWWAIT = 7U;\n    R_BUS->CSa[0].WCR1_b.CSRWAIT  = 7U;\n    R_BUS->CSa[0].WCR1_b.CSWWAIT  = 7U;\n    \n// timing settings (CS0WCR2)\n    R_BUS->CSa[0].WCR2_b.CSROFF = 1U;\n    R_BUS->CSa[0].WCR2_b.CSWOFF = 1U;\n    R_BUS->CSa[0].WCR2_b.WDOFF  = 1U;\n    R_BUS->CSa[0].WCR2_b.AWAIT  = 0U;\n    R_BUS->CSa[0].WCR2_b.RDON   = 1U;\n    R_BUS->CSa[0].WCR2_b.WRON   = 1U;\n    R_BUS->CSa[0].WCR2_b.WDON   = 1U;\n    R_BUS->CSa[0].WCR2_b.CSON   = 0U;\n\n// Enable CS0 \n    R_BUS->CSb[0].CR_b.EXENB = 1;  //Enable CS0\n}\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "RA Family: How to set up external bus using FSP"
+      },
+      {
+        "type": "text",
+        "content": "RA Family: How to set up external bus using FSP"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nFSP does not provide configuration or a driver to set up the external bus. Users need to write code to setup the external bus registers appropriately when using the external bus. The code shown below is an example of the external bus setting for your reference. Note that settings will need to be modified to suit your environment.\nvoid bsp_exbus_init(void)\n{\n// control settings (CS0CR)\n    R_BUS->CSb[0].CR_b.EXENB = 0U;  //Disable CS0\n    R_BUS->CSb[0].CR_b.BSIZE = 2U;  //8bit\n    R_BUS->CSb[0].CR_b.EMODE = 0U;  //Little Endian\n    R_BUS->CSb[0].CR_b.MPXEN = 0U;  //Separated Bus\n\n// mode settings (CSnMOD)\n    R_BUS->CSa[0].MOD_b.WRMOD = 1U; //One write strobe mode\n    R_BUS->CSa[0].MOD_b.EWENB = 0U; //Disable External WAIT\n    R_BUS->CSa[0].MOD_b.PRENB = 0U; //Disable Page Read Access\n    R_BUS->CSa[0].MOD_b.PWENB = 0U; //Disable Page Write Access\n\n// timing settings (CS0WCR1)\n    R_BUS->CSa[0].WCR1_b.CSPRWAIT = 7U;\n    R_BUS->CSa[0].WCR1_b.CSPWWAIT = 7U;\n    R_BUS->CSa[0].WCR1_b.CSRWAIT  = 7U;\n    R_BUS->CSa[0].WCR1_b.CSWWAIT  = 7U;\n    \n// timing settings (CS0WCR2)\n    R_BUS->CSa[0].WCR2_b.CSROFF = 1U;\n    R_BUS->CSa[0].WCR2_b.CSWOFF = 1U;\n    R_BUS->CSa[0].WCR2_b.WDOFF  = 1U;\n    R_BUS->CSa[0].WCR2_b.AWAIT  = 0U;\n    R_BUS->CSa[0].WCR2_b.RDON   = 1U;\n    R_BUS->CSa[0].WCR2_b.WRON   = 1U;\n    R_BUS->CSa[0].WCR2_b.WDON   = 1U;\n    R_BUS->CSa[0].WCR2_b.CSON   = 0U;\n\n// Enable CS0 \n    R_BUS->CSb[0].CR_b.EXENB = 1;  //Enable CS0\n}\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "FSP does not provide configuration or a driver to set up the external bus. Users need to write code to setup the external bus registers appropriately when using the external bus. The code shown below is an example of the external bus setting for your reference. Note that settings will need to be modified to suit your environment.\nvoid bsp_exbus_init(void)\n{\n// control settings (CS0CR)\n    R_BUS->CSb[0].CR_b.EXENB = 0U;  //Disable CS0\n    R_BUS->CSb[0].CR_b.BSIZE = 2U;  //8bit\n    R_BUS->CSb[0].CR_b.EMODE = 0U;  //Little Endian\n    R_BUS->CSb[0].CR_b.MPXEN = 0U;  //Separated Bus\n\n// mode settings (CSnMOD)\n    R_BUS->CSa[0].MOD_b.WRMOD = 1U; //One write strobe mode\n    R_BUS->CSa[0].MOD_b.EWENB = 0U; //Disable External WAIT\n    R_BUS->CSa[0].MOD_b.PRENB = 0U; //Disable Page Read Access\n    R_BUS->CSa[0].MOD_b.PWENB = 0U; //Disable Page Write Access\n\n// timing settings (CS0WCR1)\n    R_BUS->CSa[0].WCR1_b.CSPRWAIT = 7U;\n    R_BUS->CSa[0].WCR1_b.CSPWWAIT = 7U;\n    R_BUS->CSa[0].WCR1_b.CSRWAIT  = 7U;\n    R_BUS->CSa[0].WCR1_b.CSWWAIT  = 7U;\n    \n// timing settings (CS0WCR2)\n    R_BUS->CSa[0].WCR2_b.CSROFF = 1U;\n    R_BUS->CSa[0].WCR2_b.CSWOFF = 1U;\n    R_BUS->CSa[0].WCR2_b.WDOFF  = 1U;\n    R_BUS->CSa[0].WCR2_b.AWAIT  = 0U;\n    R_BUS->CSa[0].WCR2_b.RDON   = 1U;\n    R_BUS->CSa[0].WCR2_b.WRON   = 1U;\n    R_BUS->CSa[0].WCR2_b.WDON   = 1U;\n    R_BUS->CSa[0].WCR2_b.CSON   = 0U;\n\n// Enable CS0 \n    R_BUS->CSb[0].CR_b.EXENB = 1;  //Enable CS0\n}\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "FSP does not provide configuration or a driver to set up the external bus. Users need to write code to setup the external bus registers appropriately when using the external bus. The code shown below is an example of the external bus setting for your reference. Note that settings will need to be modified to suit your environment."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20793545"
+      }
+    ]
+  }
+}

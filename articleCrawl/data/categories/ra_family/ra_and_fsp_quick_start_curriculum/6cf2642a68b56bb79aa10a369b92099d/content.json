@@ -1,0 +1,230 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20522676",
+    "title": "RA and FSP Curriculum: I-002A Fundamentals of FSP (Non-Trustzone)",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:11:23.137776"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "This introductory curriculum course is a hands-on lab that introduces you to the basics of using the FSP tool flow to develop with the RA MCU Family. This is a helpful pre-requisite to the follow-on Introduction to FreeRTOS and Azure RTOS ThreadX hands-on lab courses.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-TrustZone) for FSP 5.5.0 with EK-RA8D1- a step-by-step hands-on lab using FSP 5.5.0 and the EK-RA8D1 kit. It introduces FSP including components, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-TrustZone projects.   \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-TrustZone) for FSP 5.4.0 with FPB-RA0E1- a step-by-step PPT hands-on lab using FSP 5.4.0 and the FPB-RA0E1 kit. It introduces FSP including components, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-TrustZone projects.   \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-TrustZone) for FSP 5.2.0 with EK-RA8M1- a step by step PPT hands-on lab using FSP 5.2.0 and the EK-RA8M1 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-TrustZone projects.  \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-TrustZone) for FSP 5.0.0 with EK-RA8M1- a step by step PPT hands-on lab using FSP 5.0.0 and the EK-RA8M1 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-TrustZone projects.   \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-TrustZone) for FSP 5.0.0 with EK-RA6M3- a step by step PPT hands-on lab using FSP 5.0.0 and the EK-RA6M3 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-TrustZone projects.   \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 4.6.0 with EK-RA6M4- a step by step PPT hands-on lab using FSP 4.6.0 and the EK-RA6M4 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects.   \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 4.5.0 with EK-RA6M4- a step by step PPT hands-on lab using FSP 4.5.0 and the EK-RA6M4 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects.   \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 4.5.0 with EK-RA6M3- a step by step PPT hands-on lab using FSP 4.5.0 and the EK-RA6M3 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects.   \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 4.4.0 with EK-RA6M4- a step by step PPT hands-on lab using FSP 4.4.0 and the EK-RA6M4 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects.   \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 4.2.0 with EK-RA6M4- a step by step PPT hands-on lab using FSP 4.2.0 and the EK-RA6M4 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects.   \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 4.2.0 with EK-RA6M3- a step by step PPT hands-on lab using FSP 4.2.0 and the EK-RA6M3 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects.   \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 4.0.0 with EK-RA6M4- a step by step PPT hands-on lab using FSP 4.0.0 and the EK-RA6M4 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects.   \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 3.6.0 with EK-RA6M3- a step by step PPT hands-on lab using FSP 3.6.0 and the EK-RA6M3 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects.   \nThe hands-on PDF is attached below.\n    All Courses\nAll Introductory RA and FSP courses are listed here.\n  Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "This introductory curriculum course is a hands-on lab that introduces you to the basics of using the FSP tool flow to develop with the RA MCU Family. This is a helpful pre-requisite to the follow-on Introduction to FreeRTOS and Azure RTOS ThreadX hands-on lab courses.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-TrustZone) for FSP 5.5.0 with EK-RA8D1- a step-by-step hands-on lab using FSP 5.5.0 and the EK-RA8D1 kit. It introduces FSP including components, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-TrustZone projects.   \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-TrustZone) for FSP 5.4.0 with FPB-RA0E1- a step-by-step PPT hands-on lab using FSP 5.4.0 and the FPB-RA0E1 kit. It introduces FSP including components, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-TrustZone projects.   \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-TrustZone) for FSP 5.2.0 with EK-RA8M1- a step by step PPT hands-on lab using FSP 5.2.0 and the EK-RA8M1 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-TrustZone projects.  \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-TrustZone) for FSP 5.0.0 with EK-RA8M1- a step by step PPT hands-on lab using FSP 5.0.0 and the EK-RA8M1 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-TrustZone projects.   \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-TrustZone) for FSP 5.0.0 with EK-RA6M3- a step by step PPT hands-on lab using FSP 5.0.0 and the EK-RA6M3 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-TrustZone projects.   \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 4.6.0 with EK-RA6M4- a step by step PPT hands-on lab using FSP 4.6.0 and the EK-RA6M4 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects.   \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 4.5.0 with EK-RA6M4- a step by step PPT hands-on lab using FSP 4.5.0 and the EK-RA6M4 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects.   \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 4.5.0 with EK-RA6M3- a step by step PPT hands-on lab using FSP 4.5.0 and the EK-RA6M3 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects.   \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 4.4.0 with EK-RA6M4- a step by step PPT hands-on lab using FSP 4.4.0 and the EK-RA6M4 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects.   \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 4.2.0 with EK-RA6M4- a step by step PPT hands-on lab using FSP 4.2.0 and the EK-RA6M4 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects.   \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 4.2.0 with EK-RA6M3- a step by step PPT hands-on lab using FSP 4.2.0 and the EK-RA6M3 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects.   \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 4.0.0 with EK-RA6M4- a step by step PPT hands-on lab using FSP 4.0.0 and the EK-RA6M4 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects.   \n  All the lab materials are available in a single zip file located here.\n  I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 3.6.0 with EK-RA6M3- a step by step PPT hands-on lab using FSP 3.6.0 and the EK-RA6M3 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects.   \nThe hands-on PDF is attached below.\n    All Courses\nAll Introductory RA and FSP courses are listed here.\n  Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "This introductory curriculum course is a hands-on lab that introduces you to the basics of using the FSP tool flow to develop with the RA MCU Family. This is a helpful pre-requisite to the follow-on Introduction to FreeRTOS and Azure RTOS ThreadX hands-on lab courses."
+      },
+      {
+        "type": "text",
+        "content": "I-002A Fundamentals of FSP Presentation and Lab (Non-TrustZone) for FSP 5.5.0 with EK-RA8D1- a step-by-step hands-on lab using FSP 5.5.0 and the EK-RA8D1 kit. It introduces FSP including components, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-TrustZone projects."
+      },
+      {
+        "type": "text",
+        "content": "All the lab materials are available in a single zip file located here."
+      },
+      {
+        "type": "text",
+        "content": "I-002A Fundamentals of FSP Presentation and Lab (Non-TrustZone) for FSP 5.4.0 with FPB-RA0E1- a step-by-step PPT hands-on lab using FSP 5.4.0 and the FPB-RA0E1 kit. It introduces FSP including components, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-TrustZone projects."
+      },
+      {
+        "type": "text",
+        "content": "All the lab materials are available in a single zip file located here."
+      },
+      {
+        "type": "text",
+        "content": "I-002A Fundamentals of FSP Presentation and Lab (Non-TrustZone) for FSP 5.2.0 with EK-RA8M1- a step by step PPT hands-on lab using FSP 5.2.0 and the EK-RA8M1 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-TrustZone projects."
+      },
+      {
+        "type": "text",
+        "content": "All the lab materials are available in a single zip file located here."
+      },
+      {
+        "type": "text",
+        "content": "I-002A Fundamentals of FSP Presentation and Lab (Non-TrustZone) for FSP 5.0.0 with EK-RA8M1- a step by step PPT hands-on lab using FSP 5.0.0 and the EK-RA8M1 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-TrustZone projects."
+      },
+      {
+        "type": "text",
+        "content": "All the lab materials are available in a single zip file located here."
+      },
+      {
+        "type": "text",
+        "content": "I-002A Fundamentals of FSP Presentation and Lab (Non-TrustZone) for FSP 5.0.0 with EK-RA6M3- a step by step PPT hands-on lab using FSP 5.0.0 and the EK-RA6M3 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-TrustZone projects."
+      },
+      {
+        "type": "text",
+        "content": "All the lab materials are available in a single zip file located here."
+      },
+      {
+        "type": "text",
+        "content": "I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 4.6.0 with EK-RA6M4- a step by step PPT hands-on lab using FSP 4.6.0 and the EK-RA6M4 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects."
+      },
+      {
+        "type": "text",
+        "content": "All the lab materials are available in a single zip file located here."
+      },
+      {
+        "type": "text",
+        "content": "I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 4.5.0 with EK-RA6M4- a step by step PPT hands-on lab using FSP 4.5.0 and the EK-RA6M4 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects."
+      },
+      {
+        "type": "text",
+        "content": "All the lab materials are available in a single zip file located here."
+      },
+      {
+        "type": "text",
+        "content": "I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 4.5.0 with EK-RA6M3- a step by step PPT hands-on lab using FSP 4.5.0 and the EK-RA6M3 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects."
+      },
+      {
+        "type": "text",
+        "content": "All the lab materials are available in a single zip file located here."
+      },
+      {
+        "type": "text",
+        "content": "I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 4.4.0 with EK-RA6M4- a step by step PPT hands-on lab using FSP 4.4.0 and the EK-RA6M4 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects."
+      },
+      {
+        "type": "text",
+        "content": "All the lab materials are available in a single zip file located here."
+      },
+      {
+        "type": "text",
+        "content": "I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 4.2.0 with EK-RA6M4- a step by step PPT hands-on lab using FSP 4.2.0 and the EK-RA6M4 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects."
+      },
+      {
+        "type": "text",
+        "content": "All the lab materials are available in a single zip file located here."
+      },
+      {
+        "type": "text",
+        "content": "I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 4.2.0 with EK-RA6M3- a step by step PPT hands-on lab using FSP 4.2.0 and the EK-RA6M3 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects."
+      },
+      {
+        "type": "text",
+        "content": "All the lab materials are available in a single zip file located here."
+      },
+      {
+        "type": "text",
+        "content": "I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 4.0.0 with EK-RA6M4- a step by step PPT hands-on lab using FSP 4.0.0 and the EK-RA6M4 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects."
+      },
+      {
+        "type": "text",
+        "content": "All the lab materials are available in a single zip file located here."
+      },
+      {
+        "type": "text",
+        "content": "I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone) for FSP 3.6.0 with EK-RA6M3- a step by step PPT hands-on lab using FSP 3.6.0 and the EK-RA6M3 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects."
+      },
+      {
+        "type": "text",
+        "content": "The hands-on PDF is attached below."
+      },
+      {
+        "type": "text",
+        "content": "All Courses"
+      },
+      {
+        "type": "text",
+        "content": "All Introductory RA and FSP courses are listed here."
+      },
+      {
+        "type": "text",
+        "content": "Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA MCU"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA MCU"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA MCU"
+      },
+      {
+        "type": "text",
+        "content": "Source:    NA"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA MCU"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA MCU"
+    ],
+    "links": [
+      {
+        "text": "here.",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3527"
+      },
+      {
+        "text": "here.",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3519"
+      },
+      {
+        "text": "here.",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3517"
+      },
+      {
+        "text": "here.",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3515"
+      },
+      {
+        "text": "here.",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3514"
+      },
+      {
+        "text": "here",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3511"
+      },
+      {
+        "text": "here",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3503"
+      },
+      {
+        "text": "here",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3508"
+      },
+      {
+        "text": "here",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3501"
+      },
+      {
+        "text": "here",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3493"
+      },
+      {
+        "text": "here",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3495"
+      },
+      {
+        "text": "here",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3484"
+      },
+      {
+        "text": "here",
+        "url": "https://en-support.renesas.com/knowledgeBase/20522329"
+      }
+    ]
+  }
+}

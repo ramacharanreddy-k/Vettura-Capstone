@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20977341",
+    "title": "How to adjust sensitivity",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:56:53.027692"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow can we adjust the sensitivity?\nAnswer:\nButton sensitivity adjustment uses QE for Capacitive Touch. The sensitivity adjustment method is as follows.\nThe method using monitoring function of QE for Capacitive Touch\nFollow the tutorial from the \"CapTouch Workflow (QE)\" of QE for Capacitive Touch.\n\nReal-time change method using monitoring function of QE for Capacitive Touch\nDisplay the Cap Touch parameter list of QE for Capacitive Touch and adjust it by the following steps.\n\nSelect the touch I/F corresponding to the button you want to adjust.\nClick [Enable Monitoring] icon to start monitoring. When monitoring is enabled, the CapTouch parameter item is displayed.\nClick [Write Value to the Target Board] to enable.\nChange the value of [Touch Threshold].\nRepeat steps 4 to adjust the sensitivity. After completing the sensitivity adjustment, reflect the adjustment result in the source code by the following steps.\nClick [Output Parameter Files] to generate the parameter file.\nBuild the project using the IDE (e2 studio as an example).\nWrite the program to the MCU using the IDE (e2 studio as an example).\n\nHow to view the CapTouch Parameter List screen is as follows.\nHow to change the code manually\nIt can be adjusted by changing member variables of structure variable g_qe_touch_button_cfg_config01 to 03. The variables to change are:\n・ threshold : Touch detection threshold\nReference Application Notes:\nRL78/G22 Capacitive Touch Evaluation System Sample Code (R01AN6803)\nRL78 Family Using QE and SIS to Develop Capacitive Touch Applications (R01AN5512)\nSuitable Products\nRL78/G23, RL78/G22, RL78/G16"
+      },
+      {
+        "type": "text",
+        "content": "How can we adjust the sensitivity?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nButton sensitivity adjustment uses QE for Capacitive Touch. The sensitivity adjustment method is as follows.\nThe method using monitoring function of QE for Capacitive Touch\nFollow the tutorial from the \"CapTouch Workflow (QE)\" of QE for Capacitive Touch.\n\nReal-time change method using monitoring function of QE for Capacitive Touch\nDisplay the Cap Touch parameter list of QE for Capacitive Touch and adjust it by the following steps.\n\nSelect the touch I/F corresponding to the button you want to adjust.\nClick [Enable Monitoring] icon to start monitoring. When monitoring is enabled, the CapTouch parameter item is displayed.\nClick [Write Value to the Target Board] to enable.\nChange the value of [Touch Threshold].\nRepeat steps 4 to adjust the sensitivity. After completing the sensitivity adjustment, reflect the adjustment result in the source code by the following steps.\nClick [Output Parameter Files] to generate the parameter file.\nBuild the project using the IDE (e2 studio as an example).\nWrite the program to the MCU using the IDE (e2 studio as an example).\n\nHow to view the CapTouch Parameter List screen is as follows.\nHow to change the code manually\nIt can be adjusted by changing member variables of structure variable g_qe_touch_button_cfg_config01 to 03. The variables to change are:\n・ threshold : Touch detection threshold\nReference Application Notes:\nRL78/G22 Capacitive Touch Evaluation System Sample Code (R01AN6803)\nRL78 Family Using QE and SIS to Develop Capacitive Touch Applications (R01AN5512)\nSuitable Products\nRL78/G23, RL78/G22, RL78/G16"
+      },
+      {
+        "type": "text",
+        "content": "Button sensitivity adjustment uses QE for Capacitive Touch. The sensitivity adjustment method is as follows.\nThe method using monitoring function of QE for Capacitive Touch\nFollow the tutorial from the \"CapTouch Workflow (QE)\" of QE for Capacitive Touch.\n\nReal-time change method using monitoring function of QE for Capacitive Touch\nDisplay the Cap Touch parameter list of QE for Capacitive Touch and adjust it by the following steps.\n\nSelect the touch I/F corresponding to the button you want to adjust.\nClick [Enable Monitoring] icon to start monitoring. When monitoring is enabled, the CapTouch parameter item is displayed.\nClick [Write Value to the Target Board] to enable.\nChange the value of [Touch Threshold].\nRepeat steps 4 to adjust the sensitivity. After completing the sensitivity adjustment, reflect the adjustment result in the source code by the following steps.\nClick [Output Parameter Files] to generate the parameter file.\nBuild the project using the IDE (e2 studio as an example).\nWrite the program to the MCU using the IDE (e2 studio as an example).\n\nHow to view the CapTouch Parameter List screen is as follows.\nHow to change the code manually\nIt can be adjusted by changing member variables of structure variable g_qe_touch_button_cfg_config01 to 03. The variables to change are:\n・ threshold : Touch detection threshold\nReference Application Notes:\nRL78/G22 Capacitive Touch Evaluation System Sample Code (R01AN6803)\nRL78 Family Using QE and SIS to Develop Capacitive Touch Applications (R01AN5512)"
+      },
+      {
+        "type": "text",
+        "content": "Button sensitivity adjustment uses QE for Capacitive Touch. The sensitivity adjustment method is as follows."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372028.png",
+          "alt_text": "",
+          "width": "900",
+          "height": "437",
+          "local_path": "data/categories/rl78_family/capacitive_touch/33114193511a8fc78428a290c4a4e122/images/51cb533a6c1eb00f1d5c0c94dcdb85f9.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372028-2.png",
+          "alt_text": "",
+          "width": "810",
+          "height": "711",
+          "local_path": "data/categories/rl78_family/capacitive_touch/33114193511a8fc78428a290c4a4e122/images/1a10bc17fd6835bb8ad19243096badd6.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Reference Application Notes:"
+      },
+      {
+        "type": "text",
+        "content": "RL78/G22 Capacitive Touch Evaluation System Sample Code (R01AN6803)\nRL78 Family Using QE and SIS to Develop Capacitive Touch Applications (R01AN5512)"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/G23, RL78/G22, RL78/G16"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372028.png",
+        "alt_text": "",
+        "width": "900",
+        "height": "437",
+        "local_path": "data/categories/rl78_family/capacitive_touch/33114193511a8fc78428a290c4a4e122/images/51cb533a6c1eb00f1d5c0c94dcdb85f9.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372028-2.png",
+        "alt_text": "",
+        "width": "810",
+        "height": "711",
+        "local_path": "data/categories/rl78_family/capacitive_touch/33114193511a8fc78428a290c4a4e122/images/1a10bc17fd6835bb8ad19243096badd6.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G23, RL78/G22, RL78/G16"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G23, RL78/G22, RL78/G16"
+    ],
+    "links": [
+      {
+        "text": "RL78/G22 Capacitive Touch Evaluation System Sample Code (R01AN6803)",
+        "url": "https://www.renesas.com/jp/ja/document/apn/rl78g22-capacitive-touch-evaluation-system-sample-code-rev100?language=en&r=25408646"
+      },
+      {
+        "text": "RL78 Family Using QE and SIS to Develop Capacitive Touch Applications (R01AN5512)",
+        "url": "https://www.renesas.com/jp/ja/document/apn/rl78-family-using-qe-and-sis-develop-capacitive-touch-applications?language=en&r=25408646"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20977347"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20977354"
+      }
+    ]
+  }
+}

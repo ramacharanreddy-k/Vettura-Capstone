@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18286181",
+    "title": "Touching the Finger Slowly and Touching It Will Not Turn ON.",
+    "last_updated": "2023-03-03",
+    "extracted_at": "2025-03-09T00:07:59.970649"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhy doesn't the device go ON when I slowly movie a finger closer to the electrode?\nAnswer:\nThe execution interval of the drift correction process may be short.\nPlease adjust so that the drift correction interval is longer.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Why doesn't the device go ON when I slowly movie a finger closer to the electrode?"
+      },
+      {
+        "type": "text",
+        "content": "Why doesn't the device go ON when I slowly movie a finger closer to the electrode?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe execution interval of the drift correction process may be short.\nPlease adjust so that the drift correction interval is longer.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "The execution interval of the drift correction process may be short.\nPlease adjust so that the drift correction interval is longer."
+      },
+      {
+        "type": "text",
+        "content": "The execution interval of the drift correction process may be short.\nPlease adjust so that the drift correction interval is longer."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792807"
+      }
+    ]
+  }
+}

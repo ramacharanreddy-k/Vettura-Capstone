@@ -1,0 +1,371 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21132844",
+    "title": "RA Family: How to communicate with multiple slave devices on the same I2C bus.",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:24:06.353475"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to communicate with multiple slave devices on the same I2C bus.\nAnswer:\nWhen communicating with multiple I2C slave devices on the same bus, it is necessary to switch the slave address to communicate. There are two ways to do this.\n(1) Use the shared bus function of the I2C Communication Device (rm_comms_i2c)\n(2) Switch the slave address using the slaveAddressSet API of the I2C Master driver\nThe following steps describe each method.\n(1) Use the shared bus function of the I2C Communication Device (rm_comms_i2c)\n\nBy using the I2C Communication Device (rm_comms_i2c), the I2C master driver can communicate with multiple slave device via the I2C Shared bus. Either the r_iic_master driver or the r_sci_i2c driver can be used as the I2C master driver. Every instance of rm_comms_i2c has a 'Slave Address' setting in its properties, which can be configured independently. When an rm_comms_i2c instance communicates with a slave I2C device, the I2C Shared Bus switches to the respective slave device and communicates with it.\n\nWhen using an RTOS, rm_comms_i2c provides the following features:\nBlocking operation using a mutex for RM_COMMS_I2C_Write(), RM_COMMS_I2C_Read() and RM_COMMS_I2C_WriteRead().\nBus lock using a mutex.\nHere is an example. In this case, the address of the g_comms_i2c_dvice0 instance is 0x44, and the address of the g_comms_i2c_device1 is 0x55.\n    Pseudo code to show how to use shared i2c bus.\n// Open Each device\ng_comms_i2c_device0.p_api->open(g_comms_i2c_device0.p_ctrl, g_comms_i2c_device0.p_cfg);\ng_comms_i2c_device1.p_api->open(g_comms_i2c_device1.p_ctrl, g_comms_i2c_device1.p_cfg);\n  // Call I2C Communication Device Write or Read to communicate with Device(0x44)\ng_comms_i2c_device0.p_api->write(...);\ng_comms_i2c_device0.p_api->read(...);\n  // Call I2C Communication Device Write or Read to communicate with Device(0x55)\ng_comms_i2c_device1.p_api->write(...);\ng_comms_i2c_device1.p_api->read(...);\n  (2) Switch the slave address using the slaveAddressSet API of the I2C Master driver\nThis method creates one instance of the I2C master driver. The application then uses the slaveAddressSet API to switch the slave devices for communication. Here is an example where the addresses for the slave devices are 0x44 and 0x55.\nThe default slave address of the I2C master driver instance is set to 0x44 in this case.\nPseudo code to show when to use the slaveAddressSet API.\n// Open\ng_i2c_master.p_api->open(g_i2c_master.p_ctrl, g_i2c_master.p_cfg);\n  // Switch Slave address to 0x55\ng_i2c_master.p_api->slaveAddressSet(g_i2c_master.p_ctrl, 0x55, I2C_MASTER_ADDR_MODE_7BIT);\n  // Call I2C Write or Read to communicate with Device(0x55)\ng_i2c_master.p_api->write(…);\ng_i2c_master.p_api->read(…);\n  // Switch Slave address to 0x44\ng_i2c_master.p_api->slaveAddressSet(g_i2c_master.p_ctrl, 0x44, I2C_MASTER_ADDR_MODE_7BIT);\n  // Call I2C Write or Read to communicate with Device(0x44)\ng_i2c_master.p_api->write(…);\ng_i2c_master.p_api->read(…);\n  Suitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "How to communicate with multiple slave devices on the same I2C bus."
+      },
+      {
+        "type": "text",
+        "content": "How to communicate with multiple slave devices on the same I2C bus."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nWhen communicating with multiple I2C slave devices on the same bus, it is necessary to switch the slave address to communicate. There are two ways to do this.\n(1) Use the shared bus function of the I2C Communication Device (rm_comms_i2c)\n(2) Switch the slave address using the slaveAddressSet API of the I2C Master driver\nThe following steps describe each method.\n(1) Use the shared bus function of the I2C Communication Device (rm_comms_i2c)\n\nBy using the I2C Communication Device (rm_comms_i2c), the I2C master driver can communicate with multiple slave device via the I2C Shared bus. Either the r_iic_master driver or the r_sci_i2c driver can be used as the I2C master driver. Every instance of rm_comms_i2c has a 'Slave Address' setting in its properties, which can be configured independently. When an rm_comms_i2c instance communicates with a slave I2C device, the I2C Shared Bus switches to the respective slave device and communicates with it.\n\nWhen using an RTOS, rm_comms_i2c provides the following features:\nBlocking operation using a mutex for RM_COMMS_I2C_Write(), RM_COMMS_I2C_Read() and RM_COMMS_I2C_WriteRead().\nBus lock using a mutex.\nHere is an example. In this case, the address of the g_comms_i2c_dvice0 instance is 0x44, and the address of the g_comms_i2c_device1 is 0x55.\n    Pseudo code to show how to use shared i2c bus.\n// Open Each device\ng_comms_i2c_device0.p_api->open(g_comms_i2c_device0.p_ctrl, g_comms_i2c_device0.p_cfg);\ng_comms_i2c_device1.p_api->open(g_comms_i2c_device1.p_ctrl, g_comms_i2c_device1.p_cfg);\n  // Call I2C Communication Device Write or Read to communicate with Device(0x44)\ng_comms_i2c_device0.p_api->write(...);\ng_comms_i2c_device0.p_api->read(...);\n  // Call I2C Communication Device Write or Read to communicate with Device(0x55)\ng_comms_i2c_device1.p_api->write(...);\ng_comms_i2c_device1.p_api->read(...);\n  (2) Switch the slave address using the slaveAddressSet API of the I2C Master driver\nThis method creates one instance of the I2C master driver. The application then uses the slaveAddressSet API to switch the slave devices for communication. Here is an example where the addresses for the slave devices are 0x44 and 0x55.\nThe default slave address of the I2C master driver instance is set to 0x44 in this case.\nPseudo code to show when to use the slaveAddressSet API.\n// Open\ng_i2c_master.p_api->open(g_i2c_master.p_ctrl, g_i2c_master.p_cfg);\n  // Switch Slave address to 0x55\ng_i2c_master.p_api->slaveAddressSet(g_i2c_master.p_ctrl, 0x55, I2C_MASTER_ADDR_MODE_7BIT);\n  // Call I2C Write or Read to communicate with Device(0x55)\ng_i2c_master.p_api->write(…);\ng_i2c_master.p_api->read(…);\n  // Switch Slave address to 0x44\ng_i2c_master.p_api->slaveAddressSet(g_i2c_master.p_ctrl, 0x44, I2C_MASTER_ADDR_MODE_7BIT);\n  // Call I2C Write or Read to communicate with Device(0x44)\ng_i2c_master.p_api->write(…);\ng_i2c_master.p_api->read(…);\n  Suitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "When communicating with multiple I2C slave devices on the same bus, it is necessary to switch the slave address to communicate. There are two ways to do this.\n(1) Use the shared bus function of the I2C Communication Device (rm_comms_i2c)\n(2) Switch the slave address using the slaveAddressSet API of the I2C Master driver\nThe following steps describe each method.\n(1) Use the shared bus function of the I2C Communication Device (rm_comms_i2c)\n\nBy using the I2C Communication Device (rm_comms_i2c), the I2C master driver can communicate with multiple slave device via the I2C Shared bus. Either the r_iic_master driver or the r_sci_i2c driver can be used as the I2C master driver. Every instance of rm_comms_i2c has a 'Slave Address' setting in its properties, which can be configured independently. When an rm_comms_i2c instance communicates with a slave I2C device, the I2C Shared Bus switches to the respective slave device and communicates with it.\n\nWhen using an RTOS, rm_comms_i2c provides the following features:\nBlocking operation using a mutex for RM_COMMS_I2C_Write(), RM_COMMS_I2C_Read() and RM_COMMS_I2C_WriteRead().\nBus lock using a mutex.\nHere is an example. In this case, the address of the g_comms_i2c_dvice0 instance is 0x44, and the address of the g_comms_i2c_device1 is 0x55.\n    Pseudo code to show how to use shared i2c bus.\n// Open Each device\ng_comms_i2c_device0.p_api->open(g_comms_i2c_device0.p_ctrl, g_comms_i2c_device0.p_cfg);\ng_comms_i2c_device1.p_api->open(g_comms_i2c_device1.p_ctrl, g_comms_i2c_device1.p_cfg);\n  // Call I2C Communication Device Write or Read to communicate with Device(0x44)\ng_comms_i2c_device0.p_api->write(...);\ng_comms_i2c_device0.p_api->read(...);\n  // Call I2C Communication Device Write or Read to communicate with Device(0x55)\ng_comms_i2c_device1.p_api->write(...);\ng_comms_i2c_device1.p_api->read(...);\n  (2) Switch the slave address using the slaveAddressSet API of the I2C Master driver\nThis method creates one instance of the I2C master driver. The application then uses the slaveAddressSet API to switch the slave devices for communication. Here is an example where the addresses for the slave devices are 0x44 and 0x55.\nThe default slave address of the I2C master driver instance is set to 0x44 in this case.\nPseudo code to show when to use the slaveAddressSet API.\n// Open\ng_i2c_master.p_api->open(g_i2c_master.p_ctrl, g_i2c_master.p_cfg);\n  // Switch Slave address to 0x55\ng_i2c_master.p_api->slaveAddressSet(g_i2c_master.p_ctrl, 0x55, I2C_MASTER_ADDR_MODE_7BIT);\n  // Call I2C Write or Read to communicate with Device(0x55)\ng_i2c_master.p_api->write(…);\ng_i2c_master.p_api->read(…);\n  // Switch Slave address to 0x44\ng_i2c_master.p_api->slaveAddressSet(g_i2c_master.p_ctrl, 0x44, I2C_MASTER_ADDR_MODE_7BIT);\n  // Call I2C Write or Read to communicate with Device(0x44)\ng_i2c_master.p_api->write(…);\ng_i2c_master.p_api->read(…);"
+      },
+      {
+        "type": "text",
+        "content": "When communicating with multiple I2C slave devices on the same bus, it is necessary to switch the slave address to communicate. There are two ways to do this."
+      },
+      {
+        "type": "text",
+        "content": "(1) Use the shared bus function of the I2C Communication Device (rm_comms_i2c)"
+      },
+      {
+        "type": "text",
+        "content": "(2) Switch the slave address using the slaveAddressSet API of the I2C Master driver"
+      },
+      {
+        "type": "text",
+        "content": "The following steps describe each method."
+      },
+      {
+        "type": "text",
+        "content": "(1) Use the shared bus function of the I2C Communication Device (rm_comms_i2c)\n\nBy using the I2C Communication Device (rm_comms_i2c), the I2C master driver can communicate with multiple slave device via the I2C Shared bus. Either the r_iic_master driver or the r_sci_i2c driver can be used as the I2C master driver. Every instance of rm_comms_i2c has a 'Slave Address' setting in its properties, which can be configured independently. When an rm_comms_i2c instance communicates with a slave I2C device, the I2C Shared Bus switches to the respective slave device and communicates with it."
+      },
+      {
+        "type": "text",
+        "content": "When using an RTOS, rm_comms_i2c provides the following features:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/378830-1a.png",
+          "alt_text": "",
+          "width": "901",
+          "height": "559",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/a99864bca4f479357225dc1a3b28125b/images/ff0aac27a8295db8711e768439012d33.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Here is an example. In this case, the address of the g_comms_i2c_dvice0 instance is 0x44, and the address of the g_comms_i2c_device1 is 0x55."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/378830-2.png",
+          "alt_text": "",
+          "width": "780",
+          "height": "248",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/a99864bca4f479357225dc1a3b28125b/images/f29a51e936e6ae9513fd7a00975c96e5.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/378830-3.png",
+          "alt_text": "",
+          "width": "780",
+          "height": "238",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/a99864bca4f479357225dc1a3b28125b/images/d64868d36d44647fd2ee9e59f9fb9956.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Pseudo code to show how to use shared i2c bus."
+      },
+      {
+        "type": "text",
+        "content": "// Open Each device"
+      },
+      {
+        "type": "text",
+        "content": "// Open Each device"
+      },
+      {
+        "type": "text",
+        "content": "g_comms_i2c_device0.p_api->open(g_comms_i2c_device0.p_ctrl, g_comms_i2c_device0.p_cfg);"
+      },
+      {
+        "type": "text",
+        "content": "g_comms_i2c_device0.p_api->open(g_comms_i2c_device0.p_ctrl, g_comms_i2c_device0.p_cfg);"
+      },
+      {
+        "type": "text",
+        "content": "g_comms_i2c_device1.p_api->open(g_comms_i2c_device1.p_ctrl, g_comms_i2c_device1.p_cfg);"
+      },
+      {
+        "type": "text",
+        "content": "g_comms_i2c_device1.p_api->open(g_comms_i2c_device1.p_ctrl, g_comms_i2c_device1.p_cfg);"
+      },
+      {
+        "type": "text",
+        "content": "// Call I2C Communication Device Write or Read to communicate with Device(0x44)"
+      },
+      {
+        "type": "text",
+        "content": "// Call I2C Communication Device Write or Read to communicate with Device(0x44)"
+      },
+      {
+        "type": "text",
+        "content": "g_comms_i2c_device0.p_api->write(...);"
+      },
+      {
+        "type": "text",
+        "content": "g_comms_i2c_device0.p_api->write(...);"
+      },
+      {
+        "type": "text",
+        "content": "g_comms_i2c_device0.p_api->read(...);"
+      },
+      {
+        "type": "text",
+        "content": "g_comms_i2c_device0.p_api->read(...);"
+      },
+      {
+        "type": "text",
+        "content": "// Call I2C Communication Device Write or Read to communicate with Device(0x55)"
+      },
+      {
+        "type": "text",
+        "content": "// Call I2C Communication Device Write or Read to communicate with Device(0x55)"
+      },
+      {
+        "type": "text",
+        "content": "g_comms_i2c_device1.p_api->write(...);"
+      },
+      {
+        "type": "text",
+        "content": "g_comms_i2c_device1.p_api->write(...);"
+      },
+      {
+        "type": "text",
+        "content": "g_comms_i2c_device1.p_api->read(...);"
+      },
+      {
+        "type": "text",
+        "content": "g_comms_i2c_device1.p_api->read(...);"
+      },
+      {
+        "type": "text",
+        "content": "(2) Switch the slave address using the slaveAddressSet API of the I2C Master driver"
+      },
+      {
+        "type": "text",
+        "content": "This method creates one instance of the I2C master driver. The application then uses the slaveAddressSet API to switch the slave devices for communication. Here is an example where the addresses for the slave devices are 0x44 and 0x55."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/378830-4.png",
+          "alt_text": "",
+          "width": "445",
+          "height": "259",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/a99864bca4f479357225dc1a3b28125b/images/2e580bd593297ef469b5117b0538ee27.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The default slave address of the I2C master driver instance is set to 0x44 in this case."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/378830-5.png",
+          "alt_text": "",
+          "width": "571",
+          "height": "421",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/a99864bca4f479357225dc1a3b28125b/images/c6b896f74b9aca6fc83de3770c201369.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Pseudo code to show when to use the slaveAddressSet API."
+      },
+      {
+        "type": "text",
+        "content": "// Open"
+      },
+      {
+        "type": "text",
+        "content": "// Open"
+      },
+      {
+        "type": "text",
+        "content": "g_i2c_master.p_api->open(g_i2c_master.p_ctrl, g_i2c_master.p_cfg);"
+      },
+      {
+        "type": "text",
+        "content": "g_i2c_master.p_api->open(g_i2c_master.p_ctrl, g_i2c_master.p_cfg);"
+      },
+      {
+        "type": "text",
+        "content": "// Switch Slave address to 0x55"
+      },
+      {
+        "type": "text",
+        "content": "// Switch Slave address to 0x55"
+      },
+      {
+        "type": "text",
+        "content": "g_i2c_master.p_api->slaveAddressSet(g_i2c_master.p_ctrl, 0x55, I2C_MASTER_ADDR_MODE_7BIT);"
+      },
+      {
+        "type": "text",
+        "content": "g_i2c_master.p_api->slaveAddressSet(g_i2c_master.p_ctrl, 0x55, I2C_MASTER_ADDR_MODE_7BIT);"
+      },
+      {
+        "type": "text",
+        "content": "// Call I2C Write or Read to communicate with Device(0x55)"
+      },
+      {
+        "type": "text",
+        "content": "// Call I2C Write or Read to communicate with Device(0x55)"
+      },
+      {
+        "type": "text",
+        "content": "g_i2c_master.p_api->write(…);"
+      },
+      {
+        "type": "text",
+        "content": "g_i2c_master.p_api->write(…);"
+      },
+      {
+        "type": "text",
+        "content": "g_i2c_master.p_api->read(…);"
+      },
+      {
+        "type": "text",
+        "content": "g_i2c_master.p_api->read(…);"
+      },
+      {
+        "type": "text",
+        "content": "// Switch Slave address to 0x44"
+      },
+      {
+        "type": "text",
+        "content": "// Switch Slave address to 0x44"
+      },
+      {
+        "type": "text",
+        "content": "g_i2c_master.p_api->slaveAddressSet(g_i2c_master.p_ctrl, 0x44, I2C_MASTER_ADDR_MODE_7BIT);"
+      },
+      {
+        "type": "text",
+        "content": "g_i2c_master.p_api->slaveAddressSet(g_i2c_master.p_ctrl, 0x44, I2C_MASTER_ADDR_MODE_7BIT);"
+      },
+      {
+        "type": "text",
+        "content": "// Call I2C Write or Read to communicate with Device(0x44)"
+      },
+      {
+        "type": "text",
+        "content": "// Call I2C Write or Read to communicate with Device(0x44)"
+      },
+      {
+        "type": "text",
+        "content": "g_i2c_master.p_api->write(…);"
+      },
+      {
+        "type": "text",
+        "content": "g_i2c_master.p_api->write(…);"
+      },
+      {
+        "type": "text",
+        "content": "g_i2c_master.p_api->read(…);"
+      },
+      {
+        "type": "text",
+        "content": "g_i2c_master.p_api->read(…);"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/378830-1a.png",
+        "alt_text": "",
+        "width": "901",
+        "height": "559",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/a99864bca4f479357225dc1a3b28125b/images/ff0aac27a8295db8711e768439012d33.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/378830-2.png",
+        "alt_text": "",
+        "width": "780",
+        "height": "248",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/a99864bca4f479357225dc1a3b28125b/images/f29a51e936e6ae9513fd7a00975c96e5.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/378830-3.png",
+        "alt_text": "",
+        "width": "780",
+        "height": "238",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/a99864bca4f479357225dc1a3b28125b/images/d64868d36d44647fd2ee9e59f9fb9956.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/378830-4.png",
+        "alt_text": "",
+        "width": "445",
+        "height": "259",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/a99864bca4f479357225dc1a3b28125b/images/2e580bd593297ef469b5117b0538ee27.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/378830-5.png",
+        "alt_text": "",
+        "width": "571",
+        "height": "421",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/a99864bca4f479357225dc1a3b28125b/images/c6b896f74b9aca6fc83de3770c201369.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "// Open Each device\ng_comms_i2c_device0.p_api->open(g_comms_i2c_device0.p_ctrl, g_comms_i2c_device0.p_cfg);\ng_comms_i2c_device1.p_api->open(g_comms_i2c_device1.p_ctrl, g_comms_i2c_device1.p_cfg);\n  // Call I2C Communication Device Write or Read to communicate with Device(0x44)\ng_comms_i2c_device0.p_api->write(...);\ng_comms_i2c_device0.p_api->read(...);\n  // Call I2C Communication Device Write or Read to communicate with Device(0x55)\ng_comms_i2c_device1.p_api->write(...);\ng_comms_i2c_device1.p_api->read(...);"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "// Open\ng_i2c_master.p_api->open(g_i2c_master.p_ctrl, g_i2c_master.p_cfg);\n  // Switch Slave address to 0x55\ng_i2c_master.p_api->slaveAddressSet(g_i2c_master.p_ctrl, 0x55, I2C_MASTER_ADDR_MODE_7BIT);\n  // Call I2C Write or Read to communicate with Device(0x55)\ng_i2c_master.p_api->write(…);\ng_i2c_master.p_api->read(…);\n  // Switch Slave address to 0x44\ng_i2c_master.p_api->slaveAddressSet(g_i2c_master.p_ctrl, 0x44, I2C_MASTER_ADDR_MODE_7BIT);\n  // Call I2C Write or Read to communicate with Device(0x44)\ng_i2c_master.p_api->write(…);\ng_i2c_master.p_api->read(…);"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": []
+  }
+}

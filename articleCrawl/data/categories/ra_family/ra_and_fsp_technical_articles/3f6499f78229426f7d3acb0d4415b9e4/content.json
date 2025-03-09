@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21074267",
+    "title": "RA Family: Quick FSP 4.6.0 Labs: Available Labs",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:12:19.656715"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Introduction"
+      },
+      {
+        "type": "text",
+        "content": "Quick FSP 4.6.0 Labs use the familiar LED toggle (Blinky) function to demonstrate key techniques for developing with FSP version 4.6.0 and the e2 studio ISDE. Quick FSP Labs typically use Blinky to demonstrate new modules and their key features- such as timers, serial communications, low power, memory interface, USB, and Ethernet- while also introducing key tool capabilities for improving coding efficiency, speeding project debugging and other helpful tool oriented tricks and techniques."
+      },
+      {
+        "type": "text",
+        "content": "Quick FSP Labs include complete step by step instructions that make them easy to complete in only about 15 to 20 minutes. All you need to get started on your first Quick FSP Lab is an EK-RA6M3 or EK-RA6M4 Evaluation Kit, along with e2 studio and FSP installed on your PC. You can find instructions for obtaining these here:"
+      },
+      {
+        "type": "text",
+        "content": "EK-RA6M4 Kit Page: Here."
+      },
+      {
+        "type": "text",
+        "content": "EK-RA6M4 Ordering Information: Here."
+      },
+      {
+        "type": "text",
+        "content": "EK-RA6M3 Kit Page: Here."
+      },
+      {
+        "type": "text",
+        "content": "EK-RA6M3 Ordering Information: Here."
+      },
+      {
+        "type": "text",
+        "content": "FSP and e2 studio Installation: Can be found on the GitHub FSP site."
+      },
+      {
+        "type": "text",
+        "content": "Current Quick FSP Labs"
+      },
+      {
+        "type": "text",
+        "content": "Quick Labs targeted for FSP, e2 studio and the RA Family of MCUs are listed below:"
+      },
+      {
+        "type": "text",
+        "content": "Note: Labs in Bold have been converted to FSP 4.6.0 from previous versions of FSP. Others are in process and this page will be updated as they are completed."
+      },
+      {
+        "type": "text",
+        "content": "Introductory FSP Labs- provide the tools background needed for more complex labs."
+      },
+      {
+        "type": "text",
+        "content": "Advanced Quick FSP 1.3.0 Labs- build on the Introductory labs to cover more advanced topics related to timing related modules, tools and development techniques."
+      }
+    ],
+    "images": [],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": [
+      {
+        "text": "Here",
+        "url": "https://www.renesas.com/us/en/products/software-tools/boards-and-kits/eval-kits/ek-ra6m4.html#productInfo"
+      },
+      {
+        "text": "Here.",
+        "url": "https://www.renesas.com/us/en/products/software-tools/boards-and-kits/eval-kits/ek-ra6m4.html#orders"
+      },
+      {
+        "text": "Here",
+        "url": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/ra-cortex-m-mcus/ek-ra6m3-evaluation-kit-ra6m3-mcu-group"
+      },
+      {
+        "text": "Here.",
+        "url": "https://www.renesas.com/us/en/products/software-tools/boards-and-kits/eval-kits/ek-ra6m3.html#orders"
+      },
+      {
+        "text": "GitHub FSP site",
+        "url": "https://github.com/renesas/fsp"
+      },
+      {
+        "text": "Quick FSP 4.6.0 Introduction:",
+        "url": "https://en-support.renesas.com/knowledgeBase/21074286"
+      },
+      {
+        "text": "Quick FSP 4.6.0 Blinky From Scratch:",
+        "url": "https://en-support.renesas.com/knowledgeBase/21074329"
+      },
+      {
+        "text": "",
+        "url": "https://en-support.renesas.com/knowledgeBase/20135519"
+      },
+      {
+        "text": "Quick FSP 4.6.0 Export and Import:",
+        "url": "https://en-support.renesas.com/knowledgeBase/21074468"
+      },
+      {
+        "text": "Quick FSP 4.6.0 Using RTT for Printed Output:",
+        "url": "https://en-support.renesas.com/knowledgeBase/21079881"
+      },
+      {
+        "text": "",
+        "url": "https://en-support.renesas.com/knowledgeBase/20143328"
+      },
+      {
+        "text": "Quick FSP 4.6.0 Using Visual Expressions:",
+        "url": "https://en-support.renesas.com/knowledgeBase/21079941"
+      },
+      {
+        "text": "Quick FSP 4.6.0 Using the GPT Module Example Project and RTT Input:",
+        "url": "https://en-support.renesas.com/knowledgeBase/21083645"
+      },
+      {
+        "text": "Quick FSP 2.0.0 An Introduction to the FSP Configuration Editor:",
+        "url": "https://en-support.renesas.com/knowledgeBase/19773291"
+      },
+      {
+        "text": "Quick FSP 2.0.0 An Introduction to Developer Assistance:",
+        "url": "https://en-support.renesas.com/knowledgeBase/19775153"
+      },
+      {
+        "text": "Quick FSP 1.1.0 Create an RTC Blinky from Scratch:",
+        "url": "https://en-support.renesas.com/knowledgeBase/19110690"
+      },
+      {
+        "text": "Quick FSP 1.1.0 Create and Use a Static Library:",
+        "url": "https://en-support.renesas.com/knowledgeBase/19110827"
+      },
+      {
+        "text": "Quick FSP 1.1.0 Using the General PWM Timer to Fade an LED",
+        "url": "https://en-support.renesas.com/knowledgeBase/19252180"
+      },
+      {
+        "text": "Quick FSP 1.1.0 Using the GPT in Toggle Output Mode",
+        "url": "https://en-support.renesas.com/knowledgeBase/19252737"
+      }
+    ]
+  }
+}

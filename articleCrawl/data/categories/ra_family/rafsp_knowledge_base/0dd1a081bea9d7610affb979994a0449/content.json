@@ -1,0 +1,253 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20980154",
+    "title": "RA Family: ID Code protection with debugging and ALeRASE (Overview)",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:24:23.405639"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Some RA family MCUs have an ID Code protection function that prohibits programming via serial programming and on-chip debugging. This ID code protection function has the following four modes depending on the ID code setting. Refer to the links below for ID code authentication when connecting to the debugger and execution of the ALeRASE function in these four modes.\n  ID Code ID Code Authentication\nBit127 Bit126 Bit125 - Bit0\n(1)  Link  1 1 All bits are 1 Not required\n(2)  Link  1 1 At least one of bit is 0 Required\n(3)  Link  1 0 Don’t care Required\n(4)  Link  0 x Don’t care Always failed\n\n  ALeRASE function\ne2 studio RFP\nE2/E2 Lite J-Link\n(1) Available Not available (*2) Not available\n(2) Available Not available (*2) Available\n(3) Not available Not available Not available\n(4) Available (*1) Not available (*2) Not available\nNote 1: Depends on MCU. Refer to the hardware user’s manual as follows.\nRA2E2 (R01UH0919EJ0100):\nRA4E2 (R01UH0996EJ0110):\nNote 2: By using the J-Link script file in RA6M3_ALeRASE.zip uploaded on the forum, available in the article posted at the below link, users can execute ALeRASE on the J-Link commander.\nRA6M1/T1: Mass-erase not performed with ID code “ALeRASE”\n\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Some RA family MCUs have an ID Code protection function that prohibits programming via serial programming and on-chip debugging. This ID code protection function has the following four modes depending on the ID code setting. Refer to the links below for ID code authentication when connecting to the debugger and execution of the ALeRASE function in these four modes.\n  ID Code ID Code Authentication\nBit127 Bit126 Bit125 - Bit0\n(1)  Link  1 1 All bits are 1 Not required\n(2)  Link  1 1 At least one of bit is 0 Required\n(3)  Link  1 0 Don’t care Required\n(4)  Link  0 x Don’t care Always failed\n\n  ALeRASE function\ne2 studio RFP\nE2/E2 Lite J-Link\n(1) Available Not available (*2) Not available\n(2) Available Not available (*2) Available\n(3) Not available Not available Not available\n(4) Available (*1) Not available (*2) Not available\nNote 1: Depends on MCU. Refer to the hardware user’s manual as follows.\nRA2E2 (R01UH0919EJ0100):\nRA4E2 (R01UH0996EJ0110):\nNote 2: By using the J-Link script file in RA6M3_ALeRASE.zip uploaded on the forum, available in the article posted at the below link, users can execute ALeRASE on the J-Link commander.\nRA6M1/T1: Mass-erase not performed with ID code “ALeRASE”\n\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Some RA family MCUs have an ID Code protection function that prohibits programming via serial programming and on-chip debugging. This ID code protection function has the following four modes depending on the ID code setting. Refer to the links below for ID code authentication when connecting to the debugger and execution of the ALeRASE function in these four modes.\n  ID Code ID Code Authentication\nBit127 Bit126 Bit125 - Bit0\n(1)  Link  1 1 All bits are 1 Not required\n(2)  Link  1 1 At least one of bit is 0 Required\n(3)  Link  1 0 Don’t care Required\n(4)  Link  0 x Don’t care Always failed\n\n  ALeRASE function\ne2 studio RFP\nE2/E2 Lite J-Link\n(1) Available Not available (*2) Not available\n(2) Available Not available (*2) Available\n(3) Not available Not available Not available\n(4) Available (*1) Not available (*2) Not available\nNote 1: Depends on MCU. Refer to the hardware user’s manual as follows.\nRA2E2 (R01UH0919EJ0100):\nRA4E2 (R01UH0996EJ0110):\nNote 2: By using the J-Link script file in RA6M3_ALeRASE.zip uploaded on the forum, available in the article posted at the below link, users can execute ALeRASE on the J-Link commander.\nRA6M1/T1: Mass-erase not performed with ID code “ALeRASE”"
+      },
+      {
+        "type": "text",
+        "content": "Some RA family MCUs have an ID Code protection function that prohibits programming via serial programming and on-chip debugging. This ID code protection function has the following four modes depending on the ID code setting. Refer to the links below for ID code authentication when connecting to the debugger and execution of the ALeRASE function in these four modes."
+      },
+      {
+        "type": "text",
+        "content": "ID Code"
+      },
+      {
+        "type": "text",
+        "content": "ID Code Authentication"
+      },
+      {
+        "type": "text",
+        "content": "Bit127"
+      },
+      {
+        "type": "text",
+        "content": "Bit126"
+      },
+      {
+        "type": "text",
+        "content": "Bit125 - Bit0"
+      },
+      {
+        "type": "text",
+        "content": "ALeRASE function"
+      },
+      {
+        "type": "text",
+        "content": "e2 studio"
+      },
+      {
+        "type": "text",
+        "content": "RFP"
+      },
+      {
+        "type": "text",
+        "content": "E2/E2 Lite"
+      },
+      {
+        "type": "text",
+        "content": "J-Link"
+      },
+      {
+        "type": "text",
+        "content": "Note 1: Depends on MCU. Refer to the hardware user’s manual as follows."
+      },
+      {
+        "type": "text",
+        "content": "RA2E2 (R01UH0919EJ0100):"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372192.png",
+          "alt_text": "",
+          "width": "898",
+          "height": "226",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/0dd1a081bea9d7610affb979994a0449/images/f3fcb20ca71b749a986ad62df09e9a9c.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "RA4E2 (R01UH0996EJ0110):"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372192-2.png",
+          "alt_text": "",
+          "width": "898",
+          "height": "155",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/0dd1a081bea9d7610affb979994a0449/images/8af16c2e63e5df68aacbd6c6b897fe8e.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Note 2: By using the J-Link script file in RA6M3_ALeRASE.zip uploaded on the forum, available in the article posted at the below link, users can execute ALeRASE on the J-Link commander."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "RA and FSP"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372192.png",
+        "alt_text": "",
+        "width": "898",
+        "height": "226",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/0dd1a081bea9d7610affb979994a0449/images/f3fcb20ca71b749a986ad62df09e9a9c.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372192-2.png",
+        "alt_text": "",
+        "width": "898",
+        "height": "155",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/0dd1a081bea9d7610affb979994a0449/images/8af16c2e63e5df68aacbd6c6b897fe8e.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "",
+            "ID Code",
+            "ID Code Authentication"
+          ],
+          [
+            "Bit127",
+            "Bit126",
+            "Bit125 - Bit0"
+          ],
+          [
+            "(1)",
+            "Link",
+            "1",
+            "1",
+            "All bits are 1",
+            "Not required"
+          ],
+          [
+            "(2)",
+            "Link",
+            "1",
+            "1",
+            "At least one of bit is 0",
+            "Required"
+          ],
+          [
+            "(3)",
+            "Link",
+            "1",
+            "0",
+            "Don’t care",
+            "Required"
+          ],
+          [
+            "(4)",
+            "Link",
+            "0",
+            "x",
+            "Don’t care",
+            "Always failed"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "",
+            "ALeRASE function"
+          ],
+          [
+            "e2 studio",
+            "RFP"
+          ],
+          [
+            "E2/E2 Lite",
+            "J-Link"
+          ],
+          [
+            "(1)",
+            "Available",
+            "Not available (*2)",
+            "Not available"
+          ],
+          [
+            "(2)",
+            "Available",
+            "Not available (*2)",
+            "Available"
+          ],
+          [
+            "(3)",
+            "Not available",
+            "Not available",
+            "Not available"
+          ],
+          [
+            "(4)",
+            "Available (*1)",
+            "Not available (*2)",
+            "Not available"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": [
+      {
+        "text": "Link",
+        "url": "https://en-support.renesas.com/knowledgeBase/20980155"
+      },
+      {
+        "text": "Link",
+        "url": "https://en-support.renesas.com/knowledgeBase/20980156"
+      },
+      {
+        "text": "Link",
+        "url": "https://en-support.renesas.com/knowledgeBase/20980157"
+      },
+      {
+        "text": "Link",
+        "url": "https://en-support.renesas.com/knowledgeBase/20980158"
+      },
+      {
+        "text": "RA6M1/T1: Mass-erase not performed with ID code “ALeRASE”",
+        "url": "https://community.renesas.com/mcu-mpu/ra/f/forum/27774/ra6m1-t1-mass-erase-not-performed-with-id-code-alerase/94706#94706"
+      }
+    ]
+  }
+}

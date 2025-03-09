@@ -1,0 +1,6 @@
+{
+  "url": "https://en-support.renesas.com/knowledgeBase/20364146",
+  "title": "RH850/F1x: How can I code for an interrupt in F1K, for example, if a rising edge is detected, a GPIO must be set high?",
+  "last_updated": "2022-01-02",
+  "extracted_at": "2025-03-09T00:26:39.941204"
+}

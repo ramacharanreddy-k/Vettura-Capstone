@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21173999",
+    "title": "Application Accelerator Unit (AAU)",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:55:19.135869"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is Application Accelerator Unit (AAU)?\nAnswer:\nThis is dedicated arithmetic support hardware that reduces the software load of FOC (magnetic field oriented control) algorithm processing used for BLDC motor control and PI (proportional integral) algorithm processing used for DC/DC converter control.\nSuitable Products\nRL78/F23, RL78/F24"
+      },
+      {
+        "type": "text",
+        "content": "What is Application Accelerator Unit (AAU)?"
+      },
+      {
+        "type": "text",
+        "content": "What is Application Accelerator Unit (AAU)?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThis is dedicated arithmetic support hardware that reduces the software load of FOC (magnetic field oriented control) algorithm processing used for BLDC motor control and PI (proportional integral) algorithm processing used for DC/DC converter control.\nSuitable Products\nRL78/F23, RL78/F24"
+      },
+      {
+        "type": "text",
+        "content": "This is dedicated arithmetic support hardware that reduces the software load of FOC (magnetic field oriented control) algorithm processing used for BLDC motor control and PI (proportional integral) algorithm processing used for DC/DC converter control."
+      },
+      {
+        "type": "text",
+        "content": "This is dedicated arithmetic support hardware that reduces the software load of FOC (magnetic field oriented control) algorithm processing used for BLDC motor control and PI (proportional integral) algorithm processing used for DC/DC converter control."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/F23, RL78/F24"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/F23, RL78/F24"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/F23, RL78/F24"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21174007"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21174027"
+      }
+    ]
+  }
+}

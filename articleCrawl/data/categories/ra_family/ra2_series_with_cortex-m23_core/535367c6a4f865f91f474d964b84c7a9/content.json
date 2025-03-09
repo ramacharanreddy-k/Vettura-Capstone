@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/19668879",
+    "title": "RA2: Capacitive Touch Sensing Unit2",
+    "last_updated": "2023-08-03",
+    "extracted_at": "2025-03-08T23:31:46.367874"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the difference between CTSU and CTSU2?\nAnswer:\nCTSU2 offers the following major enhancements\nImproved noise immunity by multi-frequency measurement\nActive shielding for improved water resistance in the self-capacitance method.\nSimultaneous Parallel Scanning (CFC) support to shorten measurement time in mutual capacitance method (RA2L1 and RA2E1 only)\nSuitable Products\nRA2L1, RA2E1"
+      },
+      {
+        "type": "text",
+        "content": "What is the difference between CTSU and CTSU2?"
+      },
+      {
+        "type": "text",
+        "content": "What is the difference between CTSU and CTSU2?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nCTSU2 offers the following major enhancements\nImproved noise immunity by multi-frequency measurement\nActive shielding for improved water resistance in the self-capacitance method.\nSimultaneous Parallel Scanning (CFC) support to shorten measurement time in mutual capacitance method (RA2L1 and RA2E1 only)\nSuitable Products\nRA2L1, RA2E1"
+      },
+      {
+        "type": "text",
+        "content": "CTSU2 offers the following major enhancements\nImproved noise immunity by multi-frequency measurement\nActive shielding for improved water resistance in the self-capacitance method.\nSimultaneous Parallel Scanning (CFC) support to shorten measurement time in mutual capacitance method (RA2L1 and RA2E1 only)"
+      },
+      {
+        "type": "text",
+        "content": "CTSU2 offers the following major enhancements"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA2L1, RA2E1"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA2L1, RA2E1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA2L1, RA2E1"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/19668829"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/19668891"
+      }
+    ]
+  }
+}

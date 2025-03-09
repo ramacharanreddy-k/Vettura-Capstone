@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21305714",
+    "title": "What Part Numbers support boundary scan?",
+    "last_updated": "2024-08-04",
+    "extracted_at": "2025-03-09T00:07:05.646570"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat Part Numbers support boundary scan?\nAnswer:\nFor the part numbers that support boundary scan, refer to the \"Boundary Scan\" chapter of the User’s Manual: Hardware.\nBut there are part numbers in the same group that do not support boundary scan.\nThe BSDL files for part numbers that support boundary scan can be downloaded from the respective product pages.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "What Part Numbers support boundary scan?"
+      },
+      {
+        "type": "text",
+        "content": "What Part Numbers support boundary scan?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nFor the part numbers that support boundary scan, refer to the \"Boundary Scan\" chapter of the User’s Manual: Hardware.\nBut there are part numbers in the same group that do not support boundary scan.\nThe BSDL files for part numbers that support boundary scan can be downloaded from the respective product pages.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "For the part numbers that support boundary scan, refer to the \"Boundary Scan\" chapter of the User’s Manual: Hardware.\nBut there are part numbers in the same group that do not support boundary scan.\nThe BSDL files for part numbers that support boundary scan can be downloaded from the respective product pages."
+      },
+      {
+        "type": "text",
+        "content": "For the part numbers that support boundary scan, refer to the \"Boundary Scan\" chapter of the User’s Manual: Hardware.\nBut there are part numbers in the same group that do not support boundary scan.\nThe BSDL files for part numbers that support boundary scan can be downloaded from the respective product pages."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21305716"
+      }
+    ]
+  }
+}

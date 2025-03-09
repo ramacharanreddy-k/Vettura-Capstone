@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21175341",
+    "title": "RZ/G3S: PMIC",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:45:22.736151"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there a PMIC that can be used in combination with the RZ/G3S?\nAnswer:\nWe provide a PMIC (RAA215300) with a design optimized for the RZ/G3S. \nhttps://www.renesas.com/products/power-power-management/power-management-ics-pmic-and-pmus/raa215300-high-performance-9-channel-pmic-supporting-ddr-memory-built-charger-and-rtc \nPlease also refer to the example of a winning combination which combines the RAA215300 with the RZ/G3S.\nSuitable Products\nRZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "Is there a PMIC that can be used in combination with the RZ/G3S?"
+      },
+      {
+        "type": "text",
+        "content": "Is there a PMIC that can be used in combination with the RZ/G3S?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nWe provide a PMIC (RAA215300) with a design optimized for the RZ/G3S. \nhttps://www.renesas.com/products/power-power-management/power-management-ics-pmic-and-pmus/raa215300-high-performance-9-channel-pmic-supporting-ddr-memory-built-charger-and-rtc \nPlease also refer to the example of a winning combination which combines the RAA215300 with the RZ/G3S.\nSuitable Products\nRZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "We provide a PMIC (RAA215300) with a design optimized for the RZ/G3S. \nhttps://www.renesas.com/products/power-power-management/power-management-ics-pmic-and-pmus/raa215300-high-performance-9-channel-pmic-supporting-ddr-memory-built-charger-and-rtc \nPlease also refer to the example of a winning combination which combines the RAA215300 with the RZ/G3S."
+      },
+      {
+        "type": "text",
+        "content": "We provide a PMIC (RAA215300) with a design optimized for the RZ/G3S. \nhttps://www.renesas.com/products/power-power-management/power-management-ics-pmic-and-pmus/raa215300-high-performance-9-channel-pmic-supporting-ddr-memory-built-charger-and-rtc"
+      },
+      {
+        "type": "text",
+        "content": "Please also refer to the example of a winning combination which combines the RAA215300 with the RZ/G3S."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/G3S"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/G3S"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/products/power-power-management/power-management-ics-pmic-and-pmus/raa215300-high-performance-9-channel-pmic-supporting-ddr-memory-built-charger-and-rtc",
+        "url": "https://www.renesas.com/products/power-power-management/power-management-ics-pmic-and-pmus/raa215300-high-performance-9-channel-pmic-supporting-ddr-memory-built-charger-and-rtc"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21175349"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21175363"
+      }
+    ]
+  }
+}

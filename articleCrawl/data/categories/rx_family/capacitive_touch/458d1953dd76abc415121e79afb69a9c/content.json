@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18286175",
+    "title": "Why Doesn't the ON Judgment Occur When Touched?",
+    "last_updated": "2023-03-03",
+    "extracted_at": "2025-03-09T00:08:02.255959"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhy doesn't the ON judgment occur when touching the electrode?\nAnswer:\nThe threshold value may be set high.\nCheck the change in touch ONOFF on the \"Cap Touch(QE) Monitor\" of QE for Capacitive Touch and adjust the threshold.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Why doesn't the ON judgment occur when touching the electrode?"
+      },
+      {
+        "type": "text",
+        "content": "Why doesn't the ON judgment occur when touching the electrode?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe threshold value may be set high.\nCheck the change in touch ONOFF on the \"Cap Touch(QE) Monitor\" of QE for Capacitive Touch and adjust the threshold.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "The threshold value may be set high.\nCheck the change in touch ONOFF on the \"Cap Touch(QE) Monitor\" of QE for Capacitive Touch and adjust the threshold."
+      },
+      {
+        "type": "text",
+        "content": "The threshold value may be set high.\nCheck the change in touch ONOFF on the \"Cap Touch(QE) Monitor\" of QE for Capacitive Touch and adjust the threshold."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792808"
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21116870",
+    "title": "RA Family: Simple I2C (Using SCI_i2c) vs real I2C",
+    "last_updated": "2023-02-11",
+    "extracted_at": "2025-03-08T23:36:42.903278"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat are the differences between Simple I2C (Using SCI_i2c) and Real I2C?\nAnswer:\nThe Real IIC is the dedicated I2C communication module of the microcontroller with dedicated pin configuration and support higher speed.\nSimple I2C  is SCI based I2C. SCI is the serial communication interface module of the microcontroller in which one of the serial communication mode can be SCI_I2C with flexible pin configuration but with limited speed configuration.\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "What are the differences between Simple I2C (Using SCI_i2c) and Real I2C?"
+      },
+      {
+        "type": "text",
+        "content": "What are the differences between Simple I2C (Using SCI_i2c) and Real I2C?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe Real IIC is the dedicated I2C communication module of the microcontroller with dedicated pin configuration and support higher speed.\nSimple I2C  is SCI based I2C. SCI is the serial communication interface module of the microcontroller in which one of the serial communication mode can be SCI_I2C with flexible pin configuration but with limited speed configuration.\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "The Real IIC is the dedicated I2C communication module of the microcontroller with dedicated pin configuration and support higher speed.\nSimple I2C  is SCI based I2C. SCI is the serial communication interface module of the microcontroller in which one of the serial communication mode can be SCI_I2C with flexible pin configuration but with limited speed configuration."
+      },
+      {
+        "type": "text",
+        "content": "The Real IIC is the dedicated I2C communication module of the microcontroller with dedicated pin configuration and support higher speed."
+      },
+      {
+        "type": "text",
+        "content": "Simple I2C  is SCI based I2C. SCI is the serial communication interface module of the microcontroller in which one of the serial communication mode can be SCI_I2C with flexible pin configuration but with limited speed configuration."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": []
+  }
+}

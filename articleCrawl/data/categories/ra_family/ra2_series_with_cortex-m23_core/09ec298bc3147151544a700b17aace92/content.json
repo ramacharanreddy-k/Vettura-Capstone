@@ -1,0 +1,165 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21676626",
+    "title": "Using SCI Boot with RA2 and RFP.",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:31:57.397554"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "The RA2 Series have available the SCI boot mode. The SCI boot mode is a state where the on-chip flash memory routine (SCI boot program), stored in the boot area within the MCU is used. In this mode the host sends some commands to do some basic operations like programming, erasing the flash memory (code and data flash) etc."
+      },
+      {
+        "type": "text",
+        "content": "To put the MCU on this state you need to drive the MD pin (P201) to low level. For example, on EK-RA2L1 you need to close jumper J16."
+      },
+      {
+        "type": "text",
+        "content": "The MCU will enter the boot mode only when the MD pin is held low on release from reset state."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/c47dfab1-66e3-4e73-9898-8dbe7d42656a",
+          "alt_text": "",
+          "width": "685",
+          "height": "283",
+          "local_path": "data/categories/ra_family/ra2_series_with_cortex-m23_core/09ec298bc3147151544a700b17aace92/images/9804d5dcd04187b7ab818a6f3e807918.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "To use the SCI boot mode SCI channel 9 must be used (SCI9).  Below you can find the pins used to communicate with the device in boot mode through 2-Wire UART interface to make basic operations."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/a9556003-c40f-4b73-8002-9cbe6a6e0433",
+          "alt_text": "",
+          "width": "719",
+          "height": "125",
+          "local_path": "data/categories/ra_family/ra2_series_with_cortex-m23_core/09ec298bc3147151544a700b17aace92/images/53bb3b2b44b3ab27ef73c24b8648e414.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "To program the flash memory with Renesas Flash Programmer you need to use a USB to UART bridge and make the connections described below:"
+      },
+      {
+        "type": "text",
+        "content": "TXD (USB to UART bridge) ->RXD9 (P110)"
+      },
+      {
+        "type": "text",
+        "content": "RXD (USB to UART bridge) -> TXD9 (P109)"
+      },
+      {
+        "type": "text",
+        "content": "In Renesas Flash Programmer create a new project and set the Communication Settings as shown below:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/ac001779-54c0-450b-bfae-d5c65fc75ee3",
+          "alt_text": "",
+          "width": "614",
+          "height": "386",
+          "local_path": "data/categories/ra_family/ra2_series_with_cortex-m23_core/09ec298bc3147151544a700b17aace92/images/10b688a0258a8c93958b783457d9c8d8.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "And then you can select your image file to program the MCU, while being in boot mode through RFP with a USB to UART bridge only used."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/c2568103-4a77-4b67-a4f2-884d58592377",
+          "alt_text": "",
+          "width": "755",
+          "height": "811",
+          "local_path": "data/categories/ra_family/ra2_series_with_cortex-m23_core/09ec298bc3147151544a700b17aace92/images/a916005241c85fa3432720a0d82a0fba.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/cb9732f9-822b-4bde-904f-c4b4b46bc85b",
+          "alt_text": "",
+          "width": "754",
+          "height": "250",
+          "local_path": "data/categories/ra_family/ra2_series_with_cortex-m23_core/09ec298bc3147151544a700b17aace92/images/9903db08771cb3575f6a776b316255ae.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "You can download Renesas Flash Programmer and it's User's Manual from here:"
+      },
+      {
+        "type": "text",
+        "content": "https://www.renesas.com/en/software-tool/renesas-flash-programmer-programming-gui"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA2E1,RA2L1,RA2E2,RA2A1,RA2E3,RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "RA2E1,RA2L1,RA2E2,RA2A1,RA2E3,RA2A2"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/c47dfab1-66e3-4e73-9898-8dbe7d42656a",
+        "alt_text": "",
+        "width": "685",
+        "height": "283",
+        "local_path": "data/categories/ra_family/ra2_series_with_cortex-m23_core/09ec298bc3147151544a700b17aace92/images/9804d5dcd04187b7ab818a6f3e807918.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/a9556003-c40f-4b73-8002-9cbe6a6e0433",
+        "alt_text": "",
+        "width": "719",
+        "height": "125",
+        "local_path": "data/categories/ra_family/ra2_series_with_cortex-m23_core/09ec298bc3147151544a700b17aace92/images/53bb3b2b44b3ab27ef73c24b8648e414.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/ac001779-54c0-450b-bfae-d5c65fc75ee3",
+        "alt_text": "",
+        "width": "614",
+        "height": "386",
+        "local_path": "data/categories/ra_family/ra2_series_with_cortex-m23_core/09ec298bc3147151544a700b17aace92/images/10b688a0258a8c93958b783457d9c8d8.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/c2568103-4a77-4b67-a4f2-884d58592377",
+        "alt_text": "",
+        "width": "755",
+        "height": "811",
+        "local_path": "data/categories/ra_family/ra2_series_with_cortex-m23_core/09ec298bc3147151544a700b17aace92/images/a916005241c85fa3432720a0d82a0fba.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/cb9732f9-822b-4bde-904f-c4b4b46bc85b",
+        "alt_text": "",
+        "width": "754",
+        "height": "250",
+        "local_path": "data/categories/ra_family/ra2_series_with_cortex-m23_core/09ec298bc3147151544a700b17aace92/images/9903db08771cb3575f6a776b316255ae.png"
+      }
+    ],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": [
+      {
+        "text": "https://www.renesas.com/en/software-tool/renesas-flash-programmer-programming-gui",
+        "url": "https://www.renesas.com/en/software-tool/renesas-flash-programmer-programming-gui"
+      }
+    ]
+  }
+}

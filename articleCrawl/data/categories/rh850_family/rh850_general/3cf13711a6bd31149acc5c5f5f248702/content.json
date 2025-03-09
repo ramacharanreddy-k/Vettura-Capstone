@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21490047",
+    "title": "RH850: Programmer change from E1 to PG-FP6",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:28:30.258891"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWe have a programming production line using the E1 programmer. We are trying to move this script to use PG-FP6 programmer instead but all modules programmed with the PF-FP6 is failing on our test. We are using same programming scripts too. What can be the cause?\nAnswer:\nOne thing to check is default programming settings. RFP is using by default the 'minimum' programming that is parts of the Data Flash which are not present in the hex file will not be written. The option for the RFP is the shown in the screen shot:\n  For the PG-FP6 the default option is to write those data and this needs to be changed.\n  Suitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nWe have a programming production line using the E1 programmer. We are trying to move this script to use PG-FP6 programmer instead but all modules programmed with the PF-FP6 is failing on our test. We are using same programming scripts too. What can be the cause?\nAnswer:\nOne thing to check is default programming settings. RFP is using by default the 'minimum' programming that is parts of the Data Flash which are not present in the hex file will not be written. The option for the RFP is the shown in the screen shot:\n  For the PG-FP6 the default option is to write those data and this needs to be changed.\n  Suitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "We have a programming production line using the E1 programmer. We are trying to move this script to use PG-FP6 programmer instead but all modules programmed with the PF-FP6 is failing on our test. We are using same programming scripts too. What can be the cause?"
+      },
+      {
+        "type": "text",
+        "content": "We have a programming production line using the E1 programmer. We are trying to move this script to use PG-FP6 programmer instead but all modules programmed with the PF-FP6 is failing on our test. We are using same programming scripts too. What can be the cause?"
+      },
+      {
+        "type": "text",
+        "content": "We have a programming production line using the E1 programmer."
+      },
+      {
+        "type": "text",
+        "content": "We are trying to move this script to use PG-FP6 programmer instead but all modules programmed with the PF-FP6 is failing on our test. We are using same programming scripts too. What can be the cause?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nOne thing to check is default programming settings. RFP is using by default the 'minimum' programming that is parts of the Data Flash which are not present in the hex file will not be written. The option for the RFP is the shown in the screen shot:\n  For the PG-FP6 the default option is to write those data and this needs to be changed.\n  Suitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "One thing to check is default programming settings. RFP is using by default the 'minimum' programming that is parts of the Data Flash which are not present in the hex file will not be written. The option for the RFP is the shown in the screen shot:\n  For the PG-FP6 the default option is to write those data and this needs to be changed."
+      },
+      {
+        "type": "text",
+        "content": "One thing to check is default programming settings. RFP is using by default the 'minimum' programming that is parts of the Data Flash which are not present in the hex file will not be written. The option for the RFP is the shown in the screen shot:"
+      },
+      {
+        "type": "text",
+        "content": "One thing to check is default programming settings. RFP is using by default the 'minimum' programming that is parts of the Data Flash which are not present in the hex file will not be written. The option for the RFP is the shown in the screen shot:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/61982def-9dde-4a45-a1cf-9429420010c0",
+          "alt_text": "",
+          "width": "601",
+          "height": "648",
+          "local_path": "data/categories/rh850_family/rh850_general/3cf13711a6bd31149acc5c5f5f248702/images/09125fd2cf3a331544009492b477e5fc.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "For the PG-FP6 the default option is to write those data and this needs to be changed."
+      },
+      {
+        "type": "text",
+        "content": "For the PG-FP6 the default option is to write those data and this needs to be changed."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/34a0ba10-3405-498c-a40b-bc1bf6e2d596",
+          "alt_text": "A screenshot of a computerDescription automatically generated",
+          "width": "602",
+          "height": "404",
+          "local_path": "data/categories/rh850_family/rh850_general/3cf13711a6bd31149acc5c5f5f248702/images/60d23586801f542a79f7e1a162290526.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/61982def-9dde-4a45-a1cf-9429420010c0",
+        "alt_text": "",
+        "width": "601",
+        "height": "648",
+        "local_path": "data/categories/rh850_family/rh850_general/3cf13711a6bd31149acc5c5f5f248702/images/09125fd2cf3a331544009492b477e5fc.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/34a0ba10-3405-498c-a40b-bc1bf6e2d596",
+        "alt_text": "A screenshot of a computerDescription automatically generated",
+        "width": "602",
+        "height": "404",
+        "local_path": "data/categories/rh850_family/rh850_general/3cf13711a6bd31149acc5c5f5f248702/images/60d23586801f542a79f7e1a162290526.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850"
+    ],
+    "links": []
+  }
+}

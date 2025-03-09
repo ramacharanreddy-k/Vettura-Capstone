@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20940271",
+    "title": "A link error occurs due to insufficient internal RAM for some reason.",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:23:59.104920"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nA link error occurs due to insufficient internal RAM for some reason.\nFor example, in a use case where multiple windows are to be displayed on an on-board LCD by using the RX65N Envision Kit, I created the windows by using AppWizard (a GUI design tool for the emWin graphic middleware of Segger) and then built the windows by using e2 studio. At this time, a link error occurred. Why?\nAnswer:\nThis is probably due to RAM space being insufficient to allocate window data. \nIf an RX65N is used, the RAM space available is separated into two areas, Internal RAM (256 KB) and Extended Internal RAM (384 KB), and the addresses in these areas are not consecutive. \nAlso, in use cases where windows are displayed on an LCD, a large amount of space is consumed for frame buffers. Therefore, in these cases, it is very important to manage RAM usage and section allocation. By specifying the section settings so that Extended Internal RAM is used, you become able to fully use the space of both the Internal RAM (256 KB) and Extended Internal RAM (384 KB) areas.\nSuitable Products\nRX Family\n  日本語"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nA link error occurs due to insufficient internal RAM for some reason.\nFor example, in a use case where multiple windows are to be displayed on an on-board LCD by using the RX65N Envision Kit, I created the windows by using AppWizard (a GUI design tool for the emWin graphic middleware of Segger) and then built the windows by using e2 studio. At this time, a link error occurred. Why?\nAnswer:\nThis is probably due to RAM space being insufficient to allocate window data. \nIf an RX65N is used, the RAM space available is separated into two areas, Internal RAM (256 KB) and Extended Internal RAM (384 KB), and the addresses in these areas are not consecutive. \nAlso, in use cases where windows are displayed on an LCD, a large amount of space is consumed for frame buffers. Therefore, in these cases, it is very important to manage RAM usage and section allocation. By specifying the section settings so that Extended Internal RAM is used, you become able to fully use the space of both the Internal RAM (256 KB) and Extended Internal RAM (384 KB) areas.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "A link error occurs due to insufficient internal RAM for some reason.\nFor example, in a use case where multiple windows are to be displayed on an on-board LCD by using the RX65N Envision Kit, I created the windows by using AppWizard (a GUI design tool for the emWin graphic middleware of Segger) and then built the windows by using e2 studio. At this time, a link error occurred. Why?"
+      },
+      {
+        "type": "text",
+        "content": "A link error occurs due to insufficient internal RAM for some reason.\nFor example, in a use case where multiple windows are to be displayed on an on-board LCD by using the RX65N Envision Kit, I created the windows by using AppWizard (a GUI design tool for the emWin graphic middleware of Segger) and then built the windows by using e2 studio. At this time, a link error occurred. Why?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThis is probably due to RAM space being insufficient to allocate window data. \nIf an RX65N is used, the RAM space available is separated into two areas, Internal RAM (256 KB) and Extended Internal RAM (384 KB), and the addresses in these areas are not consecutive. \nAlso, in use cases where windows are displayed on an LCD, a large amount of space is consumed for frame buffers. Therefore, in these cases, it is very important to manage RAM usage and section allocation. By specifying the section settings so that Extended Internal RAM is used, you become able to fully use the space of both the Internal RAM (256 KB) and Extended Internal RAM (384 KB) areas.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "This is probably due to RAM space being insufficient to allocate window data. \nIf an RX65N is used, the RAM space available is separated into two areas, Internal RAM (256 KB) and Extended Internal RAM (384 KB), and the addresses in these areas are not consecutive. \nAlso, in use cases where windows are displayed on an LCD, a large amount of space is consumed for frame buffers. Therefore, in these cases, it is very important to manage RAM usage and section allocation. By specifying the section settings so that Extended Internal RAM is used, you become able to fully use the space of both the Internal RAM (256 KB) and Extended Internal RAM (384 KB) areas."
+      },
+      {
+        "type": "text",
+        "content": "This is probably due to RAM space being insufficient to allocate window data. \nIf an RX65N is used, the RAM space available is separated into two areas, Internal RAM (256 KB) and Extended Internal RAM (384 KB), and the addresses in these areas are not consecutive. \nAlso, in use cases where windows are displayed on an LCD, a large amount of space is consumed for frame buffers. Therefore, in these cases, it is very important to manage RAM usage and section allocation. By specifying the section settings so that Extended Internal RAM is used, you become able to fully use the space of both the Internal RAM (256 KB) and Extended Internal RAM (384 KB) areas."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370040.png",
+          "alt_text": "",
+          "width": "314",
+          "height": "440",
+          "local_path": "data/categories/rx_family/others/7d965eee5b1ea2fae1923366dc6abb60/images/bc0b61a5727812c674510d3fc75e9b79.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370040.png",
+        "alt_text": "",
+        "width": "314",
+        "height": "440",
+        "local_path": "data/categories/rx_family/others/7d965eee5b1ea2fae1923366dc6abb60/images/bc0b61a5727812c674510d3fc75e9b79.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20684878"
+      }
+    ]
+  }
+}

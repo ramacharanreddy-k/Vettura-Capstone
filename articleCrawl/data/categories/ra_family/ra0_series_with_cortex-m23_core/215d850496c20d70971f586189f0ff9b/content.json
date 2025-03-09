@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21287445",
+    "title": "RA0E1: Does the RA0 series integrate Arm® TrustZone® ?",
+    "last_updated": "2024-09-04",
+    "extracted_at": "2025-03-08T23:32:16.659735"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDoes the RA0 series integrate Arm® TrustZone® ?\nAnswer:\nNo. Arm® TrustZone® function is not available in the RA0 series.\nSuitable Products\nRA0E1"
+      },
+      {
+        "type": "text",
+        "content": "Does the RA0 series integrate Arm® TrustZone® ?"
+      },
+      {
+        "type": "text",
+        "content": "Does the RA0 series integrate Arm® TrustZone® ?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nNo. Arm® TrustZone® function is not available in the RA0 series.\nSuitable Products\nRA0E1"
+      },
+      {
+        "type": "text",
+        "content": "No. Arm® TrustZone® function is not available in the RA0 series."
+      },
+      {
+        "type": "text",
+        "content": "No. Arm® TrustZone® function is not available in the RA0 series."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA0E1"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA0E1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA0E1"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21287462"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21287473"
+      }
+    ]
+  }
+}

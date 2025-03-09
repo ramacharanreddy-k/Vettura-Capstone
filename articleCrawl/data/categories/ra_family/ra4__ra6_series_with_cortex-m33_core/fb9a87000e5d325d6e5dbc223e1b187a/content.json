@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/19623149",
+    "title": "RA Family: TrustZone",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:31:04.257727"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow easy can I use Arm TrustZone with the Renesas Configuration Tools?\nAnswer:\nRenesas has developed graphical configurators to ensure that TrustZone enabled project development flows naturally. Users can easily configure Secure and Non-Secure projects that include pin set up, drivers and middleware leaving them to concentrate on their application. The configurators are build into Renesas e2 studio supporting GCC, IAR Systems and Arm AC6 compiles as well as RA Smart Configurator for IAR Systems EWARM and Keil MDK IDEs.\n  Suitable Products\nRA4M2, RA4M3, RA6M4, RA6M5, RA4E1, RA6E1, RA4E2, RA6E2"
+      },
+      {
+        "type": "text",
+        "content": "How easy can I use Arm TrustZone with the Renesas Configuration Tools?"
+      },
+      {
+        "type": "text",
+        "content": "How easy can I use Arm TrustZone with the Renesas Configuration Tools?"
+      },
+      {
+        "type": "text",
+        "content": "How easy can I use Arm TrustZone with the Renesas Configuration Tools?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRenesas has developed graphical configurators to ensure that TrustZone enabled project development flows naturally. Users can easily configure Secure and Non-Secure projects that include pin set up, drivers and middleware leaving them to concentrate on their application. The configurators are build into Renesas e2 studio supporting GCC, IAR Systems and Arm AC6 compiles as well as RA Smart Configurator for IAR Systems EWARM and Keil MDK IDEs.\n  Suitable Products\nRA4M2, RA4M3, RA6M4, RA6M5, RA4E1, RA6E1, RA4E2, RA6E2"
+      },
+      {
+        "type": "text",
+        "content": "Renesas has developed graphical configurators to ensure that TrustZone enabled project development flows naturally. Users can easily configure Secure and Non-Secure projects that include pin set up, drivers and middleware leaving them to concentrate on their application. The configurators are build into Renesas e2 studio supporting GCC, IAR Systems and Arm AC6 compiles as well as RA Smart Configurator for IAR Systems EWARM and Keil MDK IDEs."
+      },
+      {
+        "type": "text",
+        "content": "Renesas has developed graphical configurators to ensure that TrustZone enabled project development flows naturally. Users can easily configure Secure and Non-Secure projects that include pin set up, drivers and middleware leaving them to concentrate on their application. The configurators are build into Renesas e2 studio supporting GCC, IAR Systems and Arm AC6 compiles as well as RA Smart Configurator for IAR Systems EWARM and Keil MDK IDEs."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA4M2, RA4M3, RA6M4, RA6M5, RA4E1, RA6E1, RA4E2, RA6E2"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA4M2, RA4M3, RA6M4, RA6M5, RA4E1, RA6E1, RA4E2, RA6E2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA4M2, RA4M3, RA6M4, RA6M5, RA4E1, RA6E1, RA4E2, RA6E2"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/19623142"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/19623154"
+      }
+    ]
+  }
+}

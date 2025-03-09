@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20554960",
+    "title": "RA Family: Windows System Commands Fail to Run from e2studio from the Build Steps Option in FSP 3.7.0 and Later",
+    "last_updated": "2022-10-06",
+    "extracted_at": "2025-03-08T23:11:55.741946"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Issue\nWindows Systems Commands don't run in FSP 3.7.0 and later (will fail), but Linux System Commands will run. \nExample of copy command failing:\nSolution:\nUse Linux commands instead. For example, Changing del => rm, and copy => cp should allow the build to complete without these error messages from the pre-build step.\n    e2studio\nFSP\nSource: RAP-1819"
+      },
+      {
+        "type": "text",
+        "content": "Issue\nWindows Systems Commands don't run in FSP 3.7.0 and later (will fail), but Linux System Commands will run. \nExample of copy command failing:\nSolution:\nUse Linux commands instead. For example, Changing del => rm, and copy => cp should allow the build to complete without these error messages from the pre-build step.\n    e2studio\nFSP\nSource: RAP-1819"
+      },
+      {
+        "type": "text",
+        "content": "Issue\nWindows Systems Commands don't run in FSP 3.7.0 and later (will fail), but Linux System Commands will run."
+      },
+      {
+        "type": "text",
+        "content": "Issue\nWindows Systems Commands don't run in FSP 3.7.0 and later (will fail), but Linux System Commands will run."
+      },
+      {
+        "type": "text",
+        "content": "Example of copy command failing:"
+      },
+      {
+        "type": "text",
+        "content": "Example of copy command failing:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/Failure.png",
+          "alt_text": "",
+          "width": "564",
+          "height": "319",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/a4d0626f190549bfa06956a8362711c3/images/62d3c1926a2e9d408c6c6bf3ffe992a9.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Solution:"
+      },
+      {
+        "type": "text",
+        "content": "Solution:"
+      },
+      {
+        "type": "text",
+        "content": "Solution:"
+      },
+      {
+        "type": "text",
+        "content": "Use Linux commands instead. For example, Changing del => rm, and copy => cp should allow the build to complete without these error messages from the pre-build step."
+      },
+      {
+        "type": "text",
+        "content": "Use Linux commands instead. For example, Changing del => rm, and copy => cp should allow the build to complete without these error messages from the pre-build step."
+      },
+      {
+        "type": "text",
+        "content": "Use Linux commands instead. For example, Changing del => rm, and copy => cp should allow the build to complete without these error messages from the pre-build step."
+      },
+      {
+        "type": "text",
+        "content": "Use Linux commands instead. For example, Changing del => rm, and copy => cp should allow the build to complete without these error messages from the pre-build step."
+      },
+      {
+        "type": "text",
+        "content": "Use Linux commands instead. For example, Changing del => rm, and copy => cp should allow the build to complete without these error messages from the pre-build step."
+      },
+      {
+        "type": "text",
+        "content": "e2studio\nFSP\nSource: RAP-1819"
+      },
+      {
+        "type": "text",
+        "content": "Source: RAP-1819"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/Failure.png",
+        "alt_text": "",
+        "width": "564",
+        "height": "319",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/a4d0626f190549bfa06956a8362711c3/images/62d3c1926a2e9d408c6c6bf3ffe992a9.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "e2studio"
+          ],
+          [
+            "FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "e2studio",
+      "FSP"
+    ],
+    "links": []
+  }
+}

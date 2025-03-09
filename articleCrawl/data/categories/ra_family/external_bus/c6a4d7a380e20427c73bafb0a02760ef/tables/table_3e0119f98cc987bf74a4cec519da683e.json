@@ -1,0 +1,33 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "Part Numbers",
+      "Density",
+      "Column address",
+      "SDADR.MXC[1:0]"
+    ],
+    [
+      "MT48LC4M16A2",
+      "64Mb (8MB)",
+      "A[7:0] (8bits)",
+      "0 0 : 8-bit shift"
+    ],
+    [
+      "MT48LC8M16A2",
+      "128Mb (16MB)",
+      "A[8:0] (9bits)",
+      "0 1 : 9-bit shift"
+    ],
+    [
+      "MT48LC16M16A2",
+      "256Mb (32MB)"
+    ],
+    [
+      "MT48LC32M16A2",
+      "512Mb (64MB)",
+      "A[9:0] (10bits)",
+      "1 0 : 10-bit shift"
+    ]
+  ]
+}

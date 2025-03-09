@@ -1,0 +1,189 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21727835",
+    "title": "RZ/V2H EVK - How to boot up from eMMC",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:51:38.757080"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nRZ/V2H EVK - How to boot up from eMMC ?\nAnswer:\nHardware : RZ/V2H EVK\nSoftware : AI SDK ver 5.00 (Release note)\nSteps to boot up from eMMC :\nAdjust the DIP switch on the CPU board to SCI download mode.\n\nSW1(ON) : 1, 3, 5\nSW2(ON) : 1, 2, 4\n\nDownload the flash writer (Flash_Writer_SCIF_RZV2H_DEV_INTERNAL_MEMORY.mot) to RZ/V2H, then program Arm trusted firmware (bl2_bp_emmc-rzv2h-evk-alpha.srec) via USB-CDC.\n\nSector number : 1\nProgram start address : 0x8101E00\n\n\n\nUse the“SUP” command to change uart baurate to 921.6Kbps, then programming b31 firmware + uboot (fip-rzv2h-evk-alpha.srec) via USB-CDC.\n\nSector number : 0x300\nProgram start address : 0x44000000\n\n\n\nUse the“EM_SECSD” command to set CSD attributes\n\nDeploy the SD card using Ubuntu “bmaptool”. Adjust the SD device (e.g., sda, sdb) based on your Linux machine.\n\nsudo bmaptool copy --bmap core-image-weston-rzv2h-evk-alpha.wic.bmap core-image-weston-rzv2h-evk-alpha.wic.gz /dev/sda\n\nPower off RZ/V2H, then adjust the DIP switch on the CPU board to boot from eMMC.\n\nSW1(ON) : 1, 3, 4, 5\nSW2(ON) : 1, 2, 4\n\nmmcblk1 is for SD card.\n\n\n\n“/” mount at SD card\n\n\n\nUse \"fdisk\" to partition the eMMC into two partitions, then deploy rootfs to eMMC.\n\nPower off RZ/V2H, Remove SD card, then set U-boot for eMMC boot.\n\nNow “/” mount at eMMC.\n\nNo SD card is mounted.\n\n\n\nSuitable Products\nRZ/V2H"
+      },
+      {
+        "type": "text",
+        "content": "RZ/V2H EVK - How to boot up from eMMC ?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nHardware : RZ/V2H EVK\nSoftware : AI SDK ver 5.00 (Release note)\nSteps to boot up from eMMC :\nAdjust the DIP switch on the CPU board to SCI download mode.\n\nSW1(ON) : 1, 3, 5\nSW2(ON) : 1, 2, 4\n\nDownload the flash writer (Flash_Writer_SCIF_RZV2H_DEV_INTERNAL_MEMORY.mot) to RZ/V2H, then program Arm trusted firmware (bl2_bp_emmc-rzv2h-evk-alpha.srec) via USB-CDC.\n\nSector number : 1\nProgram start address : 0x8101E00\n\n\n\nUse the“SUP” command to change uart baurate to 921.6Kbps, then programming b31 firmware + uboot (fip-rzv2h-evk-alpha.srec) via USB-CDC.\n\nSector number : 0x300\nProgram start address : 0x44000000\n\n\n\nUse the“EM_SECSD” command to set CSD attributes\n\nDeploy the SD card using Ubuntu “bmaptool”. Adjust the SD device (e.g., sda, sdb) based on your Linux machine.\n\nsudo bmaptool copy --bmap core-image-weston-rzv2h-evk-alpha.wic.bmap core-image-weston-rzv2h-evk-alpha.wic.gz /dev/sda\n\nPower off RZ/V2H, then adjust the DIP switch on the CPU board to boot from eMMC.\n\nSW1(ON) : 1, 3, 4, 5\nSW2(ON) : 1, 2, 4\n\nmmcblk1 is for SD card.\n\n\n\n“/” mount at SD card\n\n\n\nUse \"fdisk\" to partition the eMMC into two partitions, then deploy rootfs to eMMC.\n\nPower off RZ/V2H, Remove SD card, then set U-boot for eMMC boot.\n\nNow “/” mount at eMMC.\n\nNo SD card is mounted.\n\n\n\nSuitable Products\nRZ/V2H"
+      },
+      {
+        "type": "text",
+        "content": "Hardware : RZ/V2H EVK"
+      },
+      {
+        "type": "text",
+        "content": "Software : AI SDK ver 5.00 (Release note)"
+      },
+      {
+        "type": "text",
+        "content": "Steps to boot up from eMMC :"
+      },
+      {
+        "type": "text",
+        "content": "1"
+      },
+      {
+        "type": "text",
+        "content": "0x8101E00"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396690_1.png",
+          "alt_text": "",
+          "width": "273",
+          "height": "340",
+          "local_path": "data/categories/rz_family/rzv/752b5f2bc6e3c76bc4cdaf68e35306ee/images/8eec000bcbe2091cfc8c04653d5e9d78.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "0x300"
+      },
+      {
+        "type": "text",
+        "content": "0x44000000"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396690_2.png",
+          "alt_text": "",
+          "width": "374",
+          "height": "438",
+          "local_path": "data/categories/rz_family/rzv/752b5f2bc6e3c76bc4cdaf68e35306ee/images/e7783038faecfc033f17ad1ec58d5118.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396690_3.png",
+          "alt_text": "",
+          "width": "290",
+          "height": "146",
+          "local_path": "data/categories/rz_family/rzv/752b5f2bc6e3c76bc4cdaf68e35306ee/images/5a439f27b1fe1342ce6f05d5791e402d.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "sudo bmaptool copy --bmap core-image-weston-rzv2h-evk-alpha.wic.bmap core-image-weston-rzv2h-evk-alpha.wic.gz /dev/sda"
+      },
+      {
+        "type": "text",
+        "content": "4"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396690_4.png",
+          "alt_text": "",
+          "width": "432",
+          "height": "109",
+          "local_path": "data/categories/rz_family/rzv/752b5f2bc6e3c76bc4cdaf68e35306ee/images/2ceb717ff94f9f2ae4da02528a6e982a.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396690_5.png",
+          "alt_text": "",
+          "width": "556",
+          "height": "66",
+          "local_path": "data/categories/rz_family/rzv/752b5f2bc6e3c76bc4cdaf68e35306ee/images/48977d68d10456bdb52a476b0fc9450d.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396690_6.png",
+          "alt_text": "",
+          "width": "608",
+          "height": "212",
+          "local_path": "data/categories/rz_family/rzv/752b5f2bc6e3c76bc4cdaf68e35306ee/images/15cdfd9ebbae9de0b5d39f6bbe34f228.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V2H"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396690_1.png",
+        "alt_text": "",
+        "width": "273",
+        "height": "340",
+        "local_path": "data/categories/rz_family/rzv/752b5f2bc6e3c76bc4cdaf68e35306ee/images/8eec000bcbe2091cfc8c04653d5e9d78.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396690_2.png",
+        "alt_text": "",
+        "width": "374",
+        "height": "438",
+        "local_path": "data/categories/rz_family/rzv/752b5f2bc6e3c76bc4cdaf68e35306ee/images/e7783038faecfc033f17ad1ec58d5118.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396690_3.png",
+        "alt_text": "",
+        "width": "290",
+        "height": "146",
+        "local_path": "data/categories/rz_family/rzv/752b5f2bc6e3c76bc4cdaf68e35306ee/images/5a439f27b1fe1342ce6f05d5791e402d.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396690_4.png",
+        "alt_text": "",
+        "width": "432",
+        "height": "109",
+        "local_path": "data/categories/rz_family/rzv/752b5f2bc6e3c76bc4cdaf68e35306ee/images/2ceb717ff94f9f2ae4da02528a6e982a.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396690_5.png",
+        "alt_text": "",
+        "width": "556",
+        "height": "66",
+        "local_path": "data/categories/rz_family/rzv/752b5f2bc6e3c76bc4cdaf68e35306ee/images/48977d68d10456bdb52a476b0fc9450d.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396690_6.png",
+        "alt_text": "",
+        "width": "608",
+        "height": "212",
+        "local_path": "data/categories/rz_family/rzv/752b5f2bc6e3c76bc4cdaf68e35306ee/images/15cdfd9ebbae9de0b5d39f6bbe34f228.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V2H"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V2H"
+    ],
+    "links": [
+      {
+        "text": "Release note",
+        "url": "https://www.renesas.com/en/document/rln/rzv2h-ai-sdk-v500-release-note?srsltid=AfmBOoojJC4J4R4g02jbJXKhKPM3njfs71IwHEvkXJiLagsS_R13ik92"
+      }
+    ]
+  }
+}

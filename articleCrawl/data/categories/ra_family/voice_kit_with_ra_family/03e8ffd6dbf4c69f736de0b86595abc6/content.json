@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20536976",
+    "title": "RA Family: Do I need to use an external USB-to-UART converter to communicate with the microcontroller ?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:41:21.849499"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDo I need to use an external USB-to-UART converter to communicate with the microcontroller ?\nAnswer:\nNo, the J-Link OB chip on the VOICE kit provides USB-to-UART functionality alongside standard J-Link debugging capabilities.\nSuitable Products\nMCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+      },
+      {
+        "type": "text",
+        "content": "Do I need to use an external USB-to-UART converter to communicate with the microcontroller ?"
+      },
+      {
+        "type": "text",
+        "content": "Do I need to use an external USB-to-UART converter to communicate with the microcontroller ?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nNo, the J-Link OB chip on the VOICE kit provides USB-to-UART functionality alongside standard J-Link debugging capabilities.\nSuitable Products\nMCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+      },
+      {
+        "type": "text",
+        "content": "No, the J-Link OB chip on the VOICE kit provides USB-to-UART functionality alongside standard J-Link debugging capabilities."
+      },
+      {
+        "type": "text",
+        "content": "No, the J-Link OB chip on the VOICE kit provides USB-to-UART functionality alongside standard J-Link debugging capabilities."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nMCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "MCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "MCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20545071"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20545082"
+      }
+    ]
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20940282",
+    "title": "What is the relationship between the GLCDC color format and the output data format?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:24:26.255924"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the relationship between the GLCDC color format and the output data format?\nAnswer:\nThe color format is applied to frame buffers (that store image data to be input to GLCDC).\nSet the color format appropriate for the image to be displayed.\n●Direct color\nRGB (-888) (24bpp)\nARGB (8888) (32bpp)\nRGB (565) (16bpp)\nARGB (1555) (16bpp)\nARGB (4444) (16bpp\n●Index color#\nCLUT(8) (8bpp)\nCLUT(4) (4bpp)\nCLUT(1) (1bpp)\nYou can select one of the preceding eight formats.\n#: The data on the CLUT memory has the ARGB (8888) (32bpp) format.\nThe output data format is applied when data is output from GLCDC to an LCD.\nSpecify the settings in accordance with the LCD to be connected.\nRGB (888) (24bpp)\nRGB (666) (16bpp)\nRGB (565) (16bpp)\nYou can select one of the preceding three formats.\nIf the number of bits of the color format is larger than the number of bits of the output data format, the number of colors decreases accordingly.\nHowever, if the number of bits of the color format is smaller than the number of bits of the output data format, the number of colors does not increase.\nWhen you select the color format of the image to be displayed in accordance with the specifications of the LCD to be used, also take into account that the number of colors might decrease.\nIf conversion (reduction in the number of colors) from the color format to the output format occurs in GLCDC, by default, the low-order bits of each color are truncated. Adjust the colors in an optimal way by using adjustments such as brightness, contrast, and gamma compensation, as well as the rounding to the nearest even number (setting 0 for non-effective bits lower than effective bits) or 2x2 pattern dithering.\nFor details, see the chapter on the graphic LCD controller (GLCDC) in the hardware user's manual for the RX72N, RX65N, or RX651 group equipped with GLCDC.\nSuitable Products\nRX Family\n日本語"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the relationship between the GLCDC color format and the output data format?\nAnswer:\nThe color format is applied to frame buffers (that store image data to be input to GLCDC).\nSet the color format appropriate for the image to be displayed.\n●Direct color\nRGB (-888) (24bpp)\nARGB (8888) (32bpp)\nRGB (565) (16bpp)\nARGB (1555) (16bpp)\nARGB (4444) (16bpp\n●Index color#\nCLUT(8) (8bpp)\nCLUT(4) (4bpp)\nCLUT(1) (1bpp)\nYou can select one of the preceding eight formats.\n#: The data on the CLUT memory has the ARGB (8888) (32bpp) format.\nThe output data format is applied when data is output from GLCDC to an LCD.\nSpecify the settings in accordance with the LCD to be connected.\nRGB (888) (24bpp)\nRGB (666) (16bpp)\nRGB (565) (16bpp)\nYou can select one of the preceding three formats.\nIf the number of bits of the color format is larger than the number of bits of the output data format, the number of colors decreases accordingly.\nHowever, if the number of bits of the color format is smaller than the number of bits of the output data format, the number of colors does not increase.\nWhen you select the color format of the image to be displayed in accordance with the specifications of the LCD to be used, also take into account that the number of colors might decrease.\nIf conversion (reduction in the number of colors) from the color format to the output format occurs in GLCDC, by default, the low-order bits of each color are truncated. Adjust the colors in an optimal way by using adjustments such as brightness, contrast, and gamma compensation, as well as the rounding to the nearest even number (setting 0 for non-effective bits lower than effective bits) or 2x2 pattern dithering.\nFor details, see the chapter on the graphic LCD controller (GLCDC) in the hardware user's manual for the RX72N, RX65N, or RX651 group equipped with GLCDC.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "What is the relationship between the GLCDC color format and the output data format?"
+      },
+      {
+        "type": "text",
+        "content": "What is the relationship between the GLCDC color format and the output data format?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe color format is applied to frame buffers (that store image data to be input to GLCDC).\nSet the color format appropriate for the image to be displayed.\n●Direct color\nRGB (-888) (24bpp)\nARGB (8888) (32bpp)\nRGB (565) (16bpp)\nARGB (1555) (16bpp)\nARGB (4444) (16bpp\n●Index color#\nCLUT(8) (8bpp)\nCLUT(4) (4bpp)\nCLUT(1) (1bpp)\nYou can select one of the preceding eight formats.\n#: The data on the CLUT memory has the ARGB (8888) (32bpp) format.\nThe output data format is applied when data is output from GLCDC to an LCD.\nSpecify the settings in accordance with the LCD to be connected.\nRGB (888) (24bpp)\nRGB (666) (16bpp)\nRGB (565) (16bpp)\nYou can select one of the preceding three formats.\nIf the number of bits of the color format is larger than the number of bits of the output data format, the number of colors decreases accordingly.\nHowever, if the number of bits of the color format is smaller than the number of bits of the output data format, the number of colors does not increase.\nWhen you select the color format of the image to be displayed in accordance with the specifications of the LCD to be used, also take into account that the number of colors might decrease.\nIf conversion (reduction in the number of colors) from the color format to the output format occurs in GLCDC, by default, the low-order bits of each color are truncated. Adjust the colors in an optimal way by using adjustments such as brightness, contrast, and gamma compensation, as well as the rounding to the nearest even number (setting 0 for non-effective bits lower than effective bits) or 2x2 pattern dithering.\nFor details, see the chapter on the graphic LCD controller (GLCDC) in the hardware user's manual for the RX72N, RX65N, or RX651 group equipped with GLCDC.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "The color format is applied to frame buffers (that store image data to be input to GLCDC).\nSet the color format appropriate for the image to be displayed."
+      },
+      {
+        "type": "text",
+        "content": "●Direct color"
+      },
+      {
+        "type": "text",
+        "content": "●Index color#"
+      },
+      {
+        "type": "text",
+        "content": "You can select one of the preceding eight formats.\n#: The data on the CLUT memory has the ARGB (8888) (32bpp) format."
+      },
+      {
+        "type": "text",
+        "content": "The output data format is applied when data is output from GLCDC to an LCD.\nSpecify the settings in accordance with the LCD to be connected."
+      },
+      {
+        "type": "text",
+        "content": "You can select one of the preceding three formats."
+      },
+      {
+        "type": "text",
+        "content": "If the number of bits of the color format is larger than the number of bits of the output data format, the number of colors decreases accordingly.\nHowever, if the number of bits of the color format is smaller than the number of bits of the output data format, the number of colors does not increase."
+      },
+      {
+        "type": "text",
+        "content": "When you select the color format of the image to be displayed in accordance with the specifications of the LCD to be used, also take into account that the number of colors might decrease."
+      },
+      {
+        "type": "text",
+        "content": "If conversion (reduction in the number of colors) from the color format to the output format occurs in GLCDC, by default, the low-order bits of each color are truncated. Adjust the colors in an optimal way by using adjustments such as brightness, contrast, and gamma compensation, as well as the rounding to the nearest even number (setting 0 for non-effective bits lower than effective bits) or 2x2 pattern dithering."
+      },
+      {
+        "type": "text",
+        "content": "For details, see the chapter on the graphic LCD controller (GLCDC) in the hardware user's manual for the RX72N, RX65N, or RX651 group equipped with GLCDC."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20869574"
+      }
+    ]
+  }
+}

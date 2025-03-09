@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21106548",
+    "title": "Evaluation boards for RX23E-B",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:04:44.366507"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat boards/kits are suitable for evaluating the RX23E-B?\nAnswer:\nThe evaluation board for the RX23E-B sold by Renesas is the following RSSK for RX23E-B. \nRenesas Solution Starter Kit for RX23E-B (RSSK for RX23E-B)\nRSSK for RX23E-B includes the GUI-based tool QE for AFE, allowing you to begin evaluation of the AFE immediately without developing software. In addition, since we also provide application notes and sample programs using RSSK, you can also utilize them for application evaluation.\nSuitable Products\nRX23E-B"
+      },
+      {
+        "type": "text",
+        "content": "What boards/kits are suitable for evaluating the RX23E-B?"
+      },
+      {
+        "type": "text",
+        "content": "What boards/kits are suitable for evaluating the RX23E-B?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe evaluation board for the RX23E-B sold by Renesas is the following RSSK for RX23E-B. \nRenesas Solution Starter Kit for RX23E-B (RSSK for RX23E-B)\nRSSK for RX23E-B includes the GUI-based tool QE for AFE, allowing you to begin evaluation of the AFE immediately without developing software. In addition, since we also provide application notes and sample programs using RSSK, you can also utilize them for application evaluation.\nSuitable Products\nRX23E-B"
+      },
+      {
+        "type": "text",
+        "content": "The evaluation board for the RX23E-B sold by Renesas is the following RSSK for RX23E-B. \nRenesas Solution Starter Kit for RX23E-B (RSSK for RX23E-B)\nRSSK for RX23E-B includes the GUI-based tool QE for AFE, allowing you to begin evaluation of the AFE immediately without developing software. In addition, since we also provide application notes and sample programs using RSSK, you can also utilize them for application evaluation."
+      },
+      {
+        "type": "text",
+        "content": "The evaluation board for the RX23E-B sold by Renesas is the following RSSK for RX23E-B."
+      },
+      {
+        "type": "text",
+        "content": "Renesas Solution Starter Kit for RX23E-B (RSSK for RX23E-B)"
+      },
+      {
+        "type": "text",
+        "content": "RSSK for RX23E-B includes the GUI-based tool QE for AFE, allowing you to begin evaluation of the AFE immediately without developing software. In addition, since we also provide application notes and sample programs using RSSK, you can also utilize them for application evaluation."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX23E-B"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX23E-B"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX23E-B"
+    ],
+    "links": [
+      {
+        "text": "Renesas Solution Starter Kit for RX23E-B (RSSK for RX23E-B)",
+        "url": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rtk0es1001c00001bj-renesas-solution-starter-kit-rx23e-b"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21106553"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21106569"
+      }
+    ]
+  }
+}

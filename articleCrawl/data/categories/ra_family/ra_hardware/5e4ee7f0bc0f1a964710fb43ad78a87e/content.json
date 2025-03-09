@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21652589",
+    "title": "RA Family: Software delay time using NOP instruction is shorter than expected.",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:14:05.569766"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhen creating Software delay time by running multiple CPU NOP instructions, the generated delay time is shorter than estimated time (Cycle count of NOP operation×1 CPU clock period× Number of NOP instructions). Why is this?\nAnswer:\nIn the CPU which is supported by the RA Family MCU (Arm Cortex-M4, Arm Cortex-M23, Arm Cortex-M33, Arm Cortex-M85), the processor might remove the NOP instruction from the pipeline before it reaches the execution stage. This is coming from the CPU core design specification.\nTo create a small software delay, we recommend using R_BSP_SoftwareDelay() that is an API provided by FSP. If an accurate microsecond order delay is required, it is recommended using bsp_prv_software_dalay_loop() directly. Please refer to “MCU Board Support Package”> R_BSP_SoftwareDelay() API description page in FSP user’s manual for more details.\nhttps://renesas.github.io/fsp/group___b_s_p___m_c_u.html\nReference:\nArm Cortex-M4 Processor Devices Generic User Guide:\nhttps://developer.arm.com/documentation/dui0553\nArm Cortex-M23 Processor Devices Generic User Guide:\nhttps://developer.arm.com/documentation/dui1095\nArm Cortex-M33 Processor Devices Generic User Guide:\nhttps://developer.arm.com/documentation/100235\nArm Cortex-M85 Processor Devices Generic User Guide:\nhttps://developer.arm.com/documentation/101928\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "When creating Software delay time by running multiple CPU NOP instructions, the generated delay time is shorter than estimated time (Cycle count of NOP operation×1 CPU clock period× Number of NOP instructions). Why is this?"
+      },
+      {
+        "type": "text",
+        "content": "When creating Software delay time by running multiple CPU NOP instructions, the generated delay time is shorter than estimated time (Cycle count of NOP operation×1 CPU clock period× Number of NOP instructions). Why is this?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIn the CPU which is supported by the RA Family MCU (Arm Cortex-M4, Arm Cortex-M23, Arm Cortex-M33, Arm Cortex-M85), the processor might remove the NOP instruction from the pipeline before it reaches the execution stage. This is coming from the CPU core design specification.\nTo create a small software delay, we recommend using R_BSP_SoftwareDelay() that is an API provided by FSP. If an accurate microsecond order delay is required, it is recommended using bsp_prv_software_dalay_loop() directly. Please refer to “MCU Board Support Package”> R_BSP_SoftwareDelay() API description page in FSP user’s manual for more details.\nhttps://renesas.github.io/fsp/group___b_s_p___m_c_u.html\nReference:\nArm Cortex-M4 Processor Devices Generic User Guide:\nhttps://developer.arm.com/documentation/dui0553\nArm Cortex-M23 Processor Devices Generic User Guide:\nhttps://developer.arm.com/documentation/dui1095\nArm Cortex-M33 Processor Devices Generic User Guide:\nhttps://developer.arm.com/documentation/100235\nArm Cortex-M85 Processor Devices Generic User Guide:\nhttps://developer.arm.com/documentation/101928\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "In the CPU which is supported by the RA Family MCU (Arm Cortex-M4, Arm Cortex-M23, Arm Cortex-M33, Arm Cortex-M85), the processor might remove the NOP instruction from the pipeline before it reaches the execution stage. This is coming from the CPU core design specification.\nTo create a small software delay, we recommend using R_BSP_SoftwareDelay() that is an API provided by FSP. If an accurate microsecond order delay is required, it is recommended using bsp_prv_software_dalay_loop() directly. Please refer to “MCU Board Support Package”> R_BSP_SoftwareDelay() API description page in FSP user’s manual for more details.\nhttps://renesas.github.io/fsp/group___b_s_p___m_c_u.html\nReference:\nArm Cortex-M4 Processor Devices Generic User Guide:\nhttps://developer.arm.com/documentation/dui0553\nArm Cortex-M23 Processor Devices Generic User Guide:\nhttps://developer.arm.com/documentation/dui1095\nArm Cortex-M33 Processor Devices Generic User Guide:\nhttps://developer.arm.com/documentation/100235\nArm Cortex-M85 Processor Devices Generic User Guide:\nhttps://developer.arm.com/documentation/101928"
+      },
+      {
+        "type": "text",
+        "content": "In the CPU which is supported by the RA Family MCU (Arm Cortex-M4, Arm Cortex-M23, Arm Cortex-M33, Arm Cortex-M85), the processor might remove the NOP instruction from the pipeline before it reaches the execution stage. This is coming from the CPU core design specification."
+      },
+      {
+        "type": "text",
+        "content": "To create a small software delay, we recommend using R_BSP_SoftwareDelay() that is an API provided by FSP. If an accurate microsecond order delay is required, it is recommended using bsp_prv_software_dalay_loop() directly. Please refer to “MCU Board Support Package”> R_BSP_SoftwareDelay() API description page in FSP user’s manual for more details."
+      },
+      {
+        "type": "text",
+        "content": "https://renesas.github.io/fsp/group___b_s_p___m_c_u.html"
+      },
+      {
+        "type": "text",
+        "content": "Reference:"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "https://renesas.github.io/fsp/group___b_s_p___m_c_u.html",
+        "url": "https://jpn01.safelinks.protection.outlook.com/?url=https%3A%2F%2Frenesas.github.io%2Ffsp%2Fgroup___b_s_p___m_c_u.html&data=05%7C02%7Cyuka.masuo.ue%40renesas.com%7C04732d86cf6d4332c06108dbfbb192c9%7C53d82571da1947e49cb4625a166a4a2a%7C0%7C0%7C638380512319185090%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=I0fadACfpCWEYOBikcUsjqXA7siLA5%2FoA%2BwPWDLiY0o%3D&reserved=0"
+      },
+      {
+        "text": "https://developer.arm.com/documentation/dui0553",
+        "url": "https://jpn01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdeveloper.arm.com%2Fdocumentation%2Fdui0553&data=05%7C02%7Cyuka.masuo.ue%40renesas.com%7C04732d86cf6d4332c06108dbfbb192c9%7C53d82571da1947e49cb4625a166a4a2a%7C0%7C0%7C638380512319185090%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=CaUm5SuIjaE1vVVt8ALPzp6U7dyQgvuCWq8svIZjbPc%3D&reserved=0"
+      },
+      {
+        "text": "https://developer.arm.com/documentation/dui1095",
+        "url": "https://jpn01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdeveloper.arm.com%2Fdocumentation%2Fdui1095&data=05%7C02%7Cyuka.masuo.ue%40renesas.com%7C04732d86cf6d4332c06108dbfbb192c9%7C53d82571da1947e49cb4625a166a4a2a%7C0%7C0%7C638380512319185090%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=LvWil8X0ByB8JZwmvhknAS8BTRvs0zT3oJpZsTUgmqk%3D&reserved=0"
+      },
+      {
+        "text": "https://developer.arm.com/documentation/100235",
+        "url": "https://jpn01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdeveloper.arm.com%2Fdocumentation%2F100235&data=05%7C02%7Cyuka.masuo.ue%40renesas.com%7C04732d86cf6d4332c06108dbfbb192c9%7C53d82571da1947e49cb4625a166a4a2a%7C0%7C0%7C638380512319185090%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=G8H2B8ACVI13%2FOLohdG0hta5Ny8fS%2BubYp1P3Xjy%2BLE%3D&reserved=0"
+      },
+      {
+        "text": "https://developer.arm.com/documentation/101928",
+        "url": "https://jpn01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdeveloper.arm.com%2Fdocumentation%2F101928&data=05%7C02%7Cyuka.masuo.ue%40renesas.com%7C04732d86cf6d4332c06108dbfbb192c9%7C53d82571da1947e49cb4625a166a4a2a%7C0%7C0%7C638380512319341374%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=rQSV33mhBqE2dTS50VHQSOT0iyTnY6FeWBOt6wMJ0W4%3D&reserved=0"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21652590"
+      }
+    ]
+  }
+}

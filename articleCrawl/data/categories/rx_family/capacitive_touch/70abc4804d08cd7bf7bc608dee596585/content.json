@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18286168",
+    "title": "Is There a Way to Reduce Parasitic Capacitance?",
+    "last_updated": "2023-03-03",
+    "extracted_at": "2025-03-09T00:08:09.387243"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow can I suppress the parasitic capacitance of touch electrodes and touch wires?\nAnswer:\nMake sure that there is enough clearance between the touch electrodes and the wires and GND pattern.\nSpecific examples are shown below.\nIncrease the clearance between the touch electrodes and touch wires and GND pattern.\nMake GND pattern mesh-like rather than solid\nReduce the wiring width\nShorten the wiring length\nIf there is a GND pattern directly below the electrode pattern, widen the distance between the touch electrode pattern (TOP layers) and GND shielding (BOTTOM layers) (increase the board thickness)\nFor more information, refer to \"5. Self-capacitance Method Button Patterns and Characteristics Data\" in the Application Note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\".\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "How can I suppress the parasitic capacitance of touch electrodes and touch wires?"
+      },
+      {
+        "type": "text",
+        "content": "How can I suppress the parasitic capacitance of touch electrodes and touch wires?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nMake sure that there is enough clearance between the touch electrodes and the wires and GND pattern.\nSpecific examples are shown below.\nIncrease the clearance between the touch electrodes and touch wires and GND pattern.\nMake GND pattern mesh-like rather than solid\nReduce the wiring width\nShorten the wiring length\nIf there is a GND pattern directly below the electrode pattern, widen the distance between the touch electrode pattern (TOP layers) and GND shielding (BOTTOM layers) (increase the board thickness)\nFor more information, refer to \"5. Self-capacitance Method Button Patterns and Characteristics Data\" in the Application Note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\".\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Make sure that there is enough clearance between the touch electrodes and the wires and GND pattern.\nSpecific examples are shown below.\nIncrease the clearance between the touch electrodes and touch wires and GND pattern.\nMake GND pattern mesh-like rather than solid\nReduce the wiring width\nShorten the wiring length\nIf there is a GND pattern directly below the electrode pattern, widen the distance between the touch electrode pattern (TOP layers) and GND shielding (BOTTOM layers) (increase the board thickness)\nFor more information, refer to \"5. Self-capacitance Method Button Patterns and Characteristics Data\" in the Application Note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\"."
+      },
+      {
+        "type": "text",
+        "content": "Make sure that there is enough clearance between the touch electrodes and the wires and GND pattern."
+      },
+      {
+        "type": "text",
+        "content": "Specific examples are shown below."
+      },
+      {
+        "type": "text",
+        "content": "For more information, refer to \"5. Self-capacitance Method Button Patterns and Characteristics Data\" in the Application Note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\"."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792810"
+      }
+    ]
+  }
+}

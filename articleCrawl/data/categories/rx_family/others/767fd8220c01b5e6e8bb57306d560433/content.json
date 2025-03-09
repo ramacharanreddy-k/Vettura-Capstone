@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21246437",
+    "title": "The documentation for the USB driver is not helpful to specify descriptors.",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:23:27.060195"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nThe documentation for the USB driver is not helpful to specify descriptors.\nAnswer:\nFor details on how to specify descriptors, see the sample code on the following pages for reference:\n1. CDC class\n(1) If you use the RX200 series or RX100 series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-communication-device-class-driver-pcdc-usb-mini\n(2) If you use the RX700 series or RX600 series (other than RX63x or RX62x) of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-communication-device-class-driver-pcdc-communicate-usb\n(3) If you use the RX63x or RX62x series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-usb-peripheral-communication-device-class-driver-pcdc\n2. HID class\n(1) If you use the RX200 series or RX100 series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-human-interface-device-class-driver-phid-usb-mini\n(2) If you use the RX700 series or RX600 series (other than RX63x or RX62x) of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-human-interface-device-class-driver-phid-communicate\n(3) If you use the RX63x or RX62x series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-usb-peripheral-human-interface-device-class-driver\n3. MSC class\n(1) If you use the RX200 series or RX100 series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-using-usb-peripheral-mass-storage-class-driver-pmsc-usb-mini-firmware\n(2) If you use the RX700 series or RX600 series (other than RX63x or RX62x) of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-using-usb-peripheral-mass-storage-class-driver-pmsc-communicate-usb\n(3) If you use the RX63x or RX62x series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-usb-peripheral-mass-storage-class-driver-pmsc\nSee the demo_src\\r_usb_p<xxx>_descriptor.c files in the ZIP file available on the above pages.\n(For example, for the CDC class, see the “demo_src\\r_usb_pcdc_descriptor.c” file.)\nFor details on descriptors, see written USB standards.\nSuitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "The documentation for the USB driver is not helpful to specify descriptors."
+      },
+      {
+        "type": "text",
+        "content": "The documentation for the USB driver is not helpful to specify descriptors."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nFor details on how to specify descriptors, see the sample code on the following pages for reference:\n1. CDC class\n(1) If you use the RX200 series or RX100 series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-communication-device-class-driver-pcdc-usb-mini\n(2) If you use the RX700 series or RX600 series (other than RX63x or RX62x) of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-communication-device-class-driver-pcdc-communicate-usb\n(3) If you use the RX63x or RX62x series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-usb-peripheral-communication-device-class-driver-pcdc\n2. HID class\n(1) If you use the RX200 series or RX100 series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-human-interface-device-class-driver-phid-usb-mini\n(2) If you use the RX700 series or RX600 series (other than RX63x or RX62x) of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-human-interface-device-class-driver-phid-communicate\n(3) If you use the RX63x or RX62x series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-usb-peripheral-human-interface-device-class-driver\n3. MSC class\n(1) If you use the RX200 series or RX100 series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-using-usb-peripheral-mass-storage-class-driver-pmsc-usb-mini-firmware\n(2) If you use the RX700 series or RX600 series (other than RX63x or RX62x) of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-using-usb-peripheral-mass-storage-class-driver-pmsc-communicate-usb\n(3) If you use the RX63x or RX62x series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-usb-peripheral-mass-storage-class-driver-pmsc\nSee the demo_src\\r_usb_p<xxx>_descriptor.c files in the ZIP file available on the above pages.\n(For example, for the CDC class, see the “demo_src\\r_usb_pcdc_descriptor.c” file.)\nFor details on descriptors, see written USB standards.\nSuitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "For details on how to specify descriptors, see the sample code on the following pages for reference:\n1. CDC class\n(1) If you use the RX200 series or RX100 series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-communication-device-class-driver-pcdc-usb-mini\n(2) If you use the RX700 series or RX600 series (other than RX63x or RX62x) of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-communication-device-class-driver-pcdc-communicate-usb\n(3) If you use the RX63x or RX62x series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-usb-peripheral-communication-device-class-driver-pcdc\n2. HID class\n(1) If you use the RX200 series or RX100 series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-human-interface-device-class-driver-phid-usb-mini\n(2) If you use the RX700 series or RX600 series (other than RX63x or RX62x) of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-human-interface-device-class-driver-phid-communicate\n(3) If you use the RX63x or RX62x series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-usb-peripheral-human-interface-device-class-driver\n3. MSC class\n(1) If you use the RX200 series or RX100 series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-using-usb-peripheral-mass-storage-class-driver-pmsc-usb-mini-firmware\n(2) If you use the RX700 series or RX600 series (other than RX63x or RX62x) of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-using-usb-peripheral-mass-storage-class-driver-pmsc-communicate-usb\n(3) If you use the RX63x or RX62x series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-usb-peripheral-mass-storage-class-driver-pmsc\nSee the demo_src\\r_usb_p<xxx>_descriptor.c files in the ZIP file available on the above pages.\n(For example, for the CDC class, see the “demo_src\\r_usb_pcdc_descriptor.c” file.)\nFor details on descriptors, see written USB standards."
+      },
+      {
+        "type": "text",
+        "content": "For details on how to specify descriptors, see the sample code on the following pages for reference:"
+      },
+      {
+        "type": "text",
+        "content": "1. CDC class"
+      },
+      {
+        "type": "text",
+        "content": "(1) If you use the RX200 series or RX100 series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-communication-device-class-driver-pcdc-usb-mini"
+      },
+      {
+        "type": "text",
+        "content": "(2) If you use the RX700 series or RX600 series (other than RX63x or RX62x) of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-communication-device-class-driver-pcdc-communicate-usb"
+      },
+      {
+        "type": "text",
+        "content": "(3) If you use the RX63x or RX62x series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-usb-peripheral-communication-device-class-driver-pcdc"
+      },
+      {
+        "type": "text",
+        "content": "2. HID class"
+      },
+      {
+        "type": "text",
+        "content": "(1) If you use the RX200 series or RX100 series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-human-interface-device-class-driver-phid-usb-mini"
+      },
+      {
+        "type": "text",
+        "content": "(2) If you use the RX700 series or RX600 series (other than RX63x or RX62x) of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-human-interface-device-class-driver-phid-communicate"
+      },
+      {
+        "type": "text",
+        "content": "(3) If you use the RX63x or RX62x series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-usb-peripheral-human-interface-device-class-driver"
+      },
+      {
+        "type": "text",
+        "content": "3. MSC class"
+      },
+      {
+        "type": "text",
+        "content": "(1) If you use the RX200 series or RX100 series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-using-usb-peripheral-mass-storage-class-driver-pmsc-usb-mini-firmware"
+      },
+      {
+        "type": "text",
+        "content": "(2) If you use the RX700 series or RX600 series (other than RX63x or RX62x) of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-using-usb-peripheral-mass-storage-class-driver-pmsc-communicate-usb"
+      },
+      {
+        "type": "text",
+        "content": "(3) If you use the RX63x or RX62x series of an MCU, see the following:\nhttps://www.renesas.com/us/en/document/scd/rx-family-usb-peripheral-mass-storage-class-driver-pmsc"
+      },
+      {
+        "type": "text",
+        "content": "See the demo_src\\r_usb_p<xxx>_descriptor.c files in the ZIP file available on the above pages."
+      },
+      {
+        "type": "text",
+        "content": "(For example, for the CDC class, see the “demo_src\\r_usb_pcdc_descriptor.c” file.)"
+      },
+      {
+        "type": "text",
+        "content": "For details on descriptors, see written USB standards."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-communication-device-class-driver-pcdc-usb-mini",
+        "url": "https://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-communication-device-class-driver-pcdc-usb-mini"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-communication-device-class-driver-pcdc-communicate-usb",
+        "url": "https://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-communication-device-class-driver-pcdc-communicate-usb"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/document/scd/rx-family-usb-peripheral-communication-device-class-driver-pcdc",
+        "url": "https://www.renesas.com/us/en/document/scd/rx-family-usb-peripheral-communication-device-class-driver-pcdc"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-human-interface-device-class-driver-phid-usb-mini",
+        "url": "https://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-human-interface-device-class-driver-phid-usb-mini"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-human-interface-device-class-driver-phid-communicate",
+        "url": "https://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-usb-peripheral-human-interface-device-class-driver-phid-communicate"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/document/scd/rx-family-usb-peripheral-human-interface-device-class-driver",
+        "url": "https://www.renesas.com/us/en/document/scd/rx-family-usb-peripheral-human-interface-device-class-driver"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-using-usb-peripheral-mass-storage-class-driver-pmsc-usb-mini-firmware",
+        "url": "https://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-using-usb-peripheral-mass-storage-class-driver-pmsc-usb-mini-firmware"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-using-usb-peripheral-mass-storage-class-driver-pmsc-communicate-usb",
+        "url": "https://www.renesas.com/us/en/document/scd/rx-family-sample-program-using-using-usb-peripheral-mass-storage-class-driver-pmsc-communicate-usb"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/document/scd/rx-family-usb-peripheral-mass-storage-class-driver-pmsc",
+        "url": "https://www.renesas.com/us/en/document/scd/rx-family-usb-peripheral-mass-storage-class-driver-pmsc"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/19767232"
+      }
+    ]
+  }
+}

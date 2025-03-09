@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21715564",
+    "title": "RA Family: Useful resources for the first time in RA Family software development",
+    "last_updated": "2024-10-12",
+    "extracted_at": "2025-03-08T23:22:42.087226"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI'm developing RA family software for the first time, are there any materials I can use to learn the basics?\nAnswer:\nTo get started, please read the RA Family Beginner's Guide. This document explains the concepts of the RA family and the basics of development using the Flexible Software Package (FSP).\nRA Beginner's Guide\nFor more details, we have also prepared a \"Quick Start Curriculum\" that focuses on each function and development method. In this curriculum, you can learn the basics of development on the RA Family MCU through hands-on training using actual devices.\nRA and FSP Quick Start Curriculum\nIn addition, the RA Family Software & Tool Course has an introductory video on the RA family of development tools. The Renesas RA Family Video Library also includes videos and webinars on each device product, evaluation kit, and ecosystem solution.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "I'm developing RA family software for the first time, are there any materials I can use to learn the basics?"
+      },
+      {
+        "type": "text",
+        "content": "I'm developing RA family software for the first time, are there any materials I can use to learn the basics?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nTo get started, please read the RA Family Beginner's Guide. This document explains the concepts of the RA family and the basics of development using the Flexible Software Package (FSP).\nRA Beginner's Guide\nFor more details, we have also prepared a \"Quick Start Curriculum\" that focuses on each function and development method. In this curriculum, you can learn the basics of development on the RA Family MCU through hands-on training using actual devices.\nRA and FSP Quick Start Curriculum\nIn addition, the RA Family Software & Tool Course has an introductory video on the RA family of development tools. The Renesas RA Family Video Library also includes videos and webinars on each device product, evaluation kit, and ecosystem solution.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "To get started, please read the RA Family Beginner's Guide. This document explains the concepts of the RA family and the basics of development using the Flexible Software Package (FSP).\nRA Beginner's Guide\nFor more details, we have also prepared a \"Quick Start Curriculum\" that focuses on each function and development method. In this curriculum, you can learn the basics of development on the RA Family MCU through hands-on training using actual devices.\nRA and FSP Quick Start Curriculum\nIn addition, the RA Family Software & Tool Course has an introductory video on the RA family of development tools. The Renesas RA Family Video Library also includes videos and webinars on each device product, evaluation kit, and ecosystem solution.\nSuitable Products"
+      },
+      {
+        "type": "text",
+        "content": "To get started, please read the RA Family Beginner's Guide. This document explains the concepts of the RA family and the basics of development using the Flexible Software Package (FSP)."
+      },
+      {
+        "type": "text",
+        "content": "For more details, we have also prepared a \"Quick Start Curriculum\" that focuses on each function and development method. In this curriculum, you can learn the basics of development on the RA Family MCU through hands-on training using actual devices."
+      },
+      {
+        "type": "text",
+        "content": "In addition, the RA Family Software & Tool Course has an introductory video on the RA family of development tools. The Renesas RA Family Video Library also includes videos and webinars on each device product, evaluation kit, and ecosystem solution."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "RA Beginner's Guide",
+        "url": "https://en-support.renesas.com/knowledgeBase/20000101"
+      },
+      {
+        "text": "RA and FSP Quick Start Curriculum",
+        "url": "https://en-support.renesas.com/knowledgeBase/category/31087/subcategory/31655"
+      },
+      {
+        "text": "the RA Family Software & Tool Course",
+        "url": "https://www.renesas.com/en/software-tool/ra-software-tool-course#solution_development_learning"
+      },
+      {
+        "text": "Renesas RA Family Video Library",
+        "url": "https://www.renesas.com/en/products/microcontrollers-microprocessors/ra-cortex-m-mcus/ra-video-library"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21715569"
+      }
+    ]
+  }
+}

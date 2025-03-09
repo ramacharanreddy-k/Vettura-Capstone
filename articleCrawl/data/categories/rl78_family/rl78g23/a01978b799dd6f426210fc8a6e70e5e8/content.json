@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/19896896",
+    "title": "Are there any products with smaller memory capacity than RL78/G23?",
+    "last_updated": "2023-08-03",
+    "extracted_at": "2025-03-08T23:53:21.338514"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nAre there any products with smaller memory capacity than RL78/G23?\nAnswer:\nOf course, we have a product group called \"RL78/G22\" with a similar concept as RL78/G23 but smaller code flash memory of 64KB and less. Furthermore, we also have other RL78 product groups which have smaller memories than RL78/G23, but with different special features, peripherals, pin counts, etc.\nPlease refer to the following URL for details:\nRL78/G22 - General-Purpose Microcontrollers with Excellent Low-Power Performance and Rich Capacitive Touch Channels | Renesas\nRL78 Family Portfolio:\nRL78 Low Power 8 & 16-bit MCUs | Renesas\nSuitable Products\nRL78/G23, RL78/G22"
+      },
+      {
+        "type": "text",
+        "content": "Are there any products with smaller memory capacity than RL78/G23?"
+      },
+      {
+        "type": "text",
+        "content": "Are there any products with smaller memory capacity than RL78/G23?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nOf course, we have a product group called \"RL78/G22\" with a similar concept as RL78/G23 but smaller code flash memory of 64KB and less. Furthermore, we also have other RL78 product groups which have smaller memories than RL78/G23, but with different special features, peripherals, pin counts, etc.\nPlease refer to the following URL for details:\nRL78/G22 - General-Purpose Microcontrollers with Excellent Low-Power Performance and Rich Capacitive Touch Channels | Renesas\nRL78 Family Portfolio:\nRL78 Low Power 8 & 16-bit MCUs | Renesas\nSuitable Products\nRL78/G23, RL78/G22"
+      },
+      {
+        "type": "text",
+        "content": "Of course, we have a product group called \"RL78/G22\" with a similar concept as RL78/G23 but smaller code flash memory of 64KB and less. Furthermore, we also have other RL78 product groups which have smaller memories than RL78/G23, but with different special features, peripherals, pin counts, etc.\nPlease refer to the following URL for details:\nRL78/G22 - General-Purpose Microcontrollers with Excellent Low-Power Performance and Rich Capacitive Touch Channels | Renesas\nRL78 Family Portfolio:\nRL78 Low Power 8 & 16-bit MCUs | Renesas"
+      },
+      {
+        "type": "text",
+        "content": "Of course, we have a product group called \"RL78/G22\" with a similar concept as RL78/G23 but smaller code flash memory of 64KB and less. Furthermore, we also have other RL78 product groups which have smaller memories than RL78/G23, but with different special features, peripherals, pin counts, etc."
+      },
+      {
+        "type": "text",
+        "content": "Please refer to the following URL for details:\nRL78/G22 - General-Purpose Microcontrollers with Excellent Low-Power Performance and Rich Capacitive Touch Channels | Renesas"
+      },
+      {
+        "type": "text",
+        "content": "RL78 Family Portfolio:\nRL78 Low Power 8 & 16-bit MCUs | Renesas"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/G23, RL78/G22"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G23, RL78/G22"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G23, RL78/G22"
+    ],
+    "links": [
+      {
+        "text": "RL78/G22 - General-Purpose Microcontrollers with Excellent Low-Power Performance and Rich Capacitive Touch Channels | Renesas",
+        "url": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rl78-low-power-8-16-bit-mcus/rl78g22-general-purpose-microcontrollers-excellent-low-power-performance-and-rich-capacitive-touch-channels?_ga=2.58864362.637901769.1677460805-1123404510.1626054071&_gac=1.185715291.1677460816.CjwKCAiA9NGfBhBvEiwAq5vSyypZzRIa5IFQnjHakMCoo0cQ7o-oOjYdIMCv_Y1AKcTPvVCi13Ps3BoCD6cQAvD_BwE&_gl=1*f7togu*_ga*MTEyMzQwNDUxMC4xNjI2MDU0MDcx*_ga_D1706WVDQV*MTY3NzgwMjg4Ni41NjkuMS4xNjc3ODAyODk4LjAuMC4w"
+      },
+      {
+        "text": "RL78 Low Power 8 & 16-bit MCUs | Renesas",
+        "url": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rl78-low-power-8-16-bit-mcus"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/19896900"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/19896905"
+      }
+    ]
+  }
+}

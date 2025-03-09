@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20572379",
+    "title": "RZ/V2M: Points to note when using ISP Support Package",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:51:13.252791"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI do not perform AI inference with the RZ/V2M, but I wish to use the ISP and Multimedia features. \nIs there anything I should note when doing so?\nAnswer:\nEven if inference execution will not be performed, you should download the RZ/V2M DRP-AI Support Package and apply the patch.\nISP Support Package requires to apply the patch for DRP-AI Support Package, otherwise the patch applying for ISP Support Package is failed.\nSuitable Products\nRZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "I do not perform AI inference with the RZ/V2M, but I wish to use the ISP and Multimedia features. \nIs there anything I should note when doing so?"
+      },
+      {
+        "type": "text",
+        "content": "I do not perform AI inference with the RZ/V2M, but I wish to use the ISP and Multimedia features. \nIs there anything I should note when doing so?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nEven if inference execution will not be performed, you should download the RZ/V2M DRP-AI Support Package and apply the patch.\nISP Support Package requires to apply the patch for DRP-AI Support Package, otherwise the patch applying for ISP Support Package is failed.\nSuitable Products\nRZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "Even if inference execution will not be performed, you should download the RZ/V2M DRP-AI Support Package and apply the patch.\nISP Support Package requires to apply the patch for DRP-AI Support Package, otherwise the patch applying for ISP Support Package is failed."
+      },
+      {
+        "type": "text",
+        "content": "Even if inference execution will not be performed, you should download the RZ/V2M DRP-AI Support Package and apply the patch.\nISP Support Package requires to apply the patch for DRP-AI Support Package, otherwise the patch applying for ISP Support Package is failed."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V2M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V2M"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20572385"
+      }
+    ]
+  }
+}

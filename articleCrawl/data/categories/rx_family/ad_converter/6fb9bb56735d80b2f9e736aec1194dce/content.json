@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20939010",
+    "title": "Configuration Between digital power supply ground and analog power supply ground",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:06:39.249383"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs the digital power supply ground VSS of the microcomputer and the analog power supply ground AVSS0 and AVSS1 of the built-in A/D converter and D/A converter isolated?\nAnswer:\nIt is connected through a diode inside the microcontroller.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Is the digital power supply ground VSS of the microcomputer and the analog power supply ground AVSS0 and AVSS1 of the built-in A/D converter and D/A converter isolated?"
+      },
+      {
+        "type": "text",
+        "content": "Is the digital power supply ground VSS of the microcomputer and the analog power supply ground AVSS0 and AVSS1 of the built-in A/D converter and D/A converter isolated?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIt is connected through a diode inside the microcontroller.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "It is connected through a diode inside the microcontroller."
+      },
+      {
+        "type": "text",
+        "content": "It is connected through a diode inside the microcontroller."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20939011"
+      }
+    ]
+  }
+}

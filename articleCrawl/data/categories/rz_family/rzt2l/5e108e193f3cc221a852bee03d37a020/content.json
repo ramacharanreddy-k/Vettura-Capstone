@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20853183",
+    "title": "Can Ethernet and EtherCAT communication be used simultaneously with the RZ/T2L?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:49:54.602484"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan Ethernet and EtherCAT communication be used simultaneously with the RZ/T2L?\nAnswer:\nThe Ethernet and EtherCAT communication ports can be used simultaneously. \nEither three EtherCAT ports or two EtherCAT ports and one Ethernet port can be selected in the MDOCTRL settings. \nFor details, refer to the following items. \nRZ/T2L Group User’s Manual: Hardware (r01uh0985ej0100-rzt2l)\nTable 26.4 MAC-PHY interface mode\nSuitable Products\nRZ/T2L"
+      },
+      {
+        "type": "text",
+        "content": "Can Ethernet and EtherCAT communication be used simultaneously with the RZ/T2L?"
+      },
+      {
+        "type": "text",
+        "content": "Can Ethernet and EtherCAT communication be used simultaneously with the RZ/T2L?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe Ethernet and EtherCAT communication ports can be used simultaneously. \nEither three EtherCAT ports or two EtherCAT ports and one Ethernet port can be selected in the MDOCTRL settings. \nFor details, refer to the following items. \nRZ/T2L Group User’s Manual: Hardware (r01uh0985ej0100-rzt2l)\nTable 26.4 MAC-PHY interface mode\nSuitable Products\nRZ/T2L"
+      },
+      {
+        "type": "text",
+        "content": "The Ethernet and EtherCAT communication ports can be used simultaneously. \nEither three EtherCAT ports or two EtherCAT ports and one Ethernet port can be selected in the MDOCTRL settings. \nFor details, refer to the following items. \nRZ/T2L Group User’s Manual: Hardware (r01uh0985ej0100-rzt2l)\nTable 26.4 MAC-PHY interface mode"
+      },
+      {
+        "type": "text",
+        "content": "The Ethernet and EtherCAT communication ports can be used simultaneously. \nEither three EtherCAT ports or two EtherCAT ports and one Ethernet port can be selected in the MDOCTRL settings."
+      },
+      {
+        "type": "text",
+        "content": "For details, refer to the following items. \nRZ/T2L Group User’s Manual: Hardware (r01uh0985ej0100-rzt2l)"
+      },
+      {
+        "type": "text",
+        "content": "Table 26.4 MAC-PHY interface mode"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/T2L"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/T2L"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/T2L"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20797692"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20855826"
+      }
+    ]
+  }
+}

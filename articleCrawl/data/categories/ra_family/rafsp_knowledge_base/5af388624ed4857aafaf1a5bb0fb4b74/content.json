@@ -1,0 +1,225 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21104534",
+    "title": "RA Family: Storing AppWizard Resources in QSPI memory.",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:19:33.853589"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Introduction"
+      },
+      {
+        "type": "text",
+        "content": "It can be convenient to store information in a QSPI memory instead of using up valuable MCU memory. Graphics user interfaces, can often require significant amount of memory, so storing GUI data in QSPI memory can be advantageous. This article describes several important considerations and techniques useful when locating AppWizard generated data into QSPI memory."
+      },
+      {
+        "type": "text",
+        "content": "QSPI Memory Organization in FSP\nBefore you begin to add data to QSPI memory. It is important to understand where the QSPI is located within an FSP project."
+      },
+      {
+        "type": "text",
+        "content": "1. To view the memory organization, open the linker file fsp.ld included in script folder."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/b3b62147-12bc-4203-a87b-39eb646e7de2",
+          "alt_text": "",
+          "width": "430",
+          "height": "361",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/5af388624ed4857aafaf1a5bb0fb4b74/images/fb3e009774676c930ea3b4c84395c057.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "2. Click on “Memory” tab at the bottom of the editor area to populate the window:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/48fee599-62ef-4a57-9df3-e33a3132d6d1",
+          "alt_text": "",
+          "width": "619",
+          "height": "475",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/5af388624ed4857aafaf1a5bb0fb4b74/images/324824be9296e86d546bce0fafdfeb13.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "3. The exact value of QSPI_FLASH_START and QSPI_FLASH_LENGTH can be found in memory_regions.ld , which is generated in Debug folder."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/61eb674b-33d2-4c26-977e-ccdea44bce62",
+          "alt_text": "",
+          "width": "613",
+          "height": "474",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/5af388624ed4857aafaf1a5bb0fb4b74/images/bcf69ff1a24a382309b605a0278017e0.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Place AppWizard resources into QSPI flash."
+      },
+      {
+        "type": "text",
+        "content": "To locate data in QSPI memory, we need to edit the section of the QSPI Flash memory in the linker script. Follow along with the below steps to see how it is done."
+      },
+      {
+        "type": "text",
+        "content": "1.Open with text editor the linker script fsp.ld."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/86df6267-4b92-4a0e-b141-86e512a7f590",
+          "alt_text": "",
+          "width": "656",
+          "height": "583",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/5af388624ed4857aafaf1a5bb0fb4b74/images/f2fdf06faae57f90ae6d8372abaf2797.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "2. Figure out where the AppWizard resources are located."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/195b90a6-212a-4e7e-aa43-75c6a83074e3",
+          "alt_text": "",
+          "width": "437",
+          "height": "869",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/5af388624ed4857aafaf1a5bb0fb4b74/images/881916b6ed2401b59304e4784a9ea615.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "3. Edit the “.qspi_flash” section as shown below:"
+      },
+      {
+        "type": "text",
+        "content": "4. Also, it is necessary to initialize properly the QSPI memory in your project for more details check the example project provided."
+      },
+      {
+        "type": "text",
+        "content": "5.Don’t forget to perform Clean Project and then Build Project."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/d7b03944-f415-471c-88b2-c07489229130",
+          "alt_text": "",
+          "width": "796",
+          "height": "644",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/5af388624ed4857aafaf1a5bb0fb4b74/images/8f759893cb50c6480354847b9d7a4bdc.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Placing Individual Symbols to QSPI."
+      },
+      {
+        "type": "text",
+        "content": "To place data in the .qspi_flash section to flash it during programming, define them using the macro BSP_PLACE_IN_SECTION()."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/ddfe79c8-8e92-4369-b53e-fc16522dc29e",
+          "alt_text": "",
+          "width": "975",
+          "height": "237",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/5af388624ed4857aafaf1a5bb0fb4b74/images/a260d5805dccf892842e88c5ade86a8e.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "An example project for placing AppWizard resources on EK-RA6M3G is provided below."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/b3b62147-12bc-4203-a87b-39eb646e7de2",
+        "alt_text": "",
+        "width": "430",
+        "height": "361",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/5af388624ed4857aafaf1a5bb0fb4b74/images/fb3e009774676c930ea3b4c84395c057.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/48fee599-62ef-4a57-9df3-e33a3132d6d1",
+        "alt_text": "",
+        "width": "619",
+        "height": "475",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/5af388624ed4857aafaf1a5bb0fb4b74/images/324824be9296e86d546bce0fafdfeb13.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/61eb674b-33d2-4c26-977e-ccdea44bce62",
+        "alt_text": "",
+        "width": "613",
+        "height": "474",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/5af388624ed4857aafaf1a5bb0fb4b74/images/bcf69ff1a24a382309b605a0278017e0.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/86df6267-4b92-4a0e-b141-86e512a7f590",
+        "alt_text": "",
+        "width": "656",
+        "height": "583",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/5af388624ed4857aafaf1a5bb0fb4b74/images/f2fdf06faae57f90ae6d8372abaf2797.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/195b90a6-212a-4e7e-aa43-75c6a83074e3",
+        "alt_text": "",
+        "width": "437",
+        "height": "869",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/5af388624ed4857aafaf1a5bb0fb4b74/images/881916b6ed2401b59304e4784a9ea615.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/d7b03944-f415-471c-88b2-c07489229130",
+        "alt_text": "",
+        "width": "796",
+        "height": "644",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/5af388624ed4857aafaf1a5bb0fb4b74/images/8f759893cb50c6480354847b9d7a4bdc.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/ddfe79c8-8e92-4369-b53e-fc16522dc29e",
+        "alt_text": "",
+        "width": "975",
+        "height": "237",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/5af388624ed4857aafaf1a5bb0fb4b74/images/a260d5805dccf892842e88c5ade86a8e.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA,FSP,e2studio, RA6M3G"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA,FSP,e2studio, RA6M3G"
+    ],
+    "links": []
+  }
+}

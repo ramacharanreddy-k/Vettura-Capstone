@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21676054",
+    "title": "RZ/A1 Group: “FreeRTOS package is not found” error on e2 studio",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:42:59.671046"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhen I create a project for RZ/A1H, RZ/A1L, RZ/A1LC or RZ/A1LU with FreeRTOS selected, I get an error saying “FreeRTOS package is not found”.\nAnswer:\nEach FreeRTOS software packages can be downloaded in each FreeRTOS Software Package Web pages\nPlease refer to the Getting Started Guide on the Software Package page for how to import into the IDE\nRZ/A1H: https://www.renesas.com/en/software-tool/rza1h-freertos-software-package\nRZ/A1L, RZ/A1LC, RZ/A1LU: https://www.renesas.com/en/software-tool/rza1lu-freertos-software-package\nSuitable Products\nRZ/A1H, RZ/A1L, RZ/A1LC, RZ/A1LU"
+      },
+      {
+        "type": "text",
+        "content": "When I create a project for RZ/A1H, RZ/A1L, RZ/A1LC or RZ/A1LU with FreeRTOS selected, I get an error saying “FreeRTOS package is not found”."
+      },
+      {
+        "type": "text",
+        "content": "When I create a project for RZ/A1H, RZ/A1L, RZ/A1LC or RZ/A1LU with FreeRTOS selected, I get an error saying “FreeRTOS package is not found”."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nEach FreeRTOS software packages can be downloaded in each FreeRTOS Software Package Web pages\nPlease refer to the Getting Started Guide on the Software Package page for how to import into the IDE\nRZ/A1H: https://www.renesas.com/en/software-tool/rza1h-freertos-software-package\nRZ/A1L, RZ/A1LC, RZ/A1LU: https://www.renesas.com/en/software-tool/rza1lu-freertos-software-package\nSuitable Products\nRZ/A1H, RZ/A1L, RZ/A1LC, RZ/A1LU"
+      },
+      {
+        "type": "text",
+        "content": "Each FreeRTOS software packages can be downloaded in each FreeRTOS Software Package Web pages\nPlease refer to the Getting Started Guide on the Software Package page for how to import into the IDE\nRZ/A1H: https://www.renesas.com/en/software-tool/rza1h-freertos-software-package\nRZ/A1L, RZ/A1LC, RZ/A1LU: https://www.renesas.com/en/software-tool/rza1lu-freertos-software-package"
+      },
+      {
+        "type": "text",
+        "content": "Each FreeRTOS software packages can be downloaded in each FreeRTOS Software Package Web pages\nPlease refer to the Getting Started Guide on the Software Package page for how to import into the IDE"
+      },
+      {
+        "type": "text",
+        "content": "RZ/A1H: https://www.renesas.com/en/software-tool/rza1h-freertos-software-package\nRZ/A1L, RZ/A1LC, RZ/A1LU: https://www.renesas.com/en/software-tool/rza1lu-freertos-software-package"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A1H, RZ/A1L, RZ/A1LC, RZ/A1LU"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A1H, RZ/A1L, RZ/A1LC, RZ/A1LU"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A1H, RZ/A1L, RZ/A1LC, RZ/A1LU"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/en/software-tool/rza1h-freertos-software-package",
+        "url": "https://www.renesas.com/en/software-tool/rza1h-freertos-software-package"
+      },
+      {
+        "text": "https://www.renesas.com/en/software-tool/rza1lu-freertos-software-package",
+        "url": "https://www.renesas.com/en/software-tool/rza1lu-freertos-software-package"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21676052"
+      }
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21177411",
+    "title": "RA Family: How to change the settings in FreeRTOSConfig.h ?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:14:14.612953"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to change the settings in FreeRTOSConfig.h ?\nAnswer:\nThe FreeRTOS settings defined in FreeRTOSConfig.h can be changed in the thread properties as shown below. If you would like to add any additional macros to the FreeRTOSConfig.h file then add them to a new file and add that file to the \"Custom FreeRTOSConfig.h\" parameter in the configurator.\n  Suitable Products\nRA/FSP"
+      },
+      {
+        "type": "text",
+        "content": "How to change the settings in FreeRTOSConfig.h ?"
+      },
+      {
+        "type": "text",
+        "content": "How to change the settings in FreeRTOSConfig.h ?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe FreeRTOS settings defined in FreeRTOSConfig.h can be changed in the thread properties as shown below. If you would like to add any additional macros to the FreeRTOSConfig.h file then add them to a new file and add that file to the \"Custom FreeRTOSConfig.h\" parameter in the configurator.\n  Suitable Products\nRA/FSP"
+      },
+      {
+        "type": "text",
+        "content": "The FreeRTOS settings defined in FreeRTOSConfig.h can be changed in the thread properties as shown below. If you would like to add any additional macros to the FreeRTOSConfig.h file then add them to a new file and add that file to the \"Custom FreeRTOSConfig.h\" parameter in the configurator."
+      },
+      {
+        "type": "text",
+        "content": "The FreeRTOS settings defined in FreeRTOSConfig.h can be changed in the thread properties as shown below. If you would like to add any additional macros to the FreeRTOSConfig.h file then add them to a new file and add that file to the \"Custom FreeRTOSConfig.h\" parameter in the configurator."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380672.png",
+          "alt_text": "",
+          "width": "519",
+          "height": "725",
+          "local_path": "data/categories/ra_family/ra_hardware/1a335228fcd63ba0f4b90bdb286989ba/images/e8ec4e0b15b0412b79cd4a38091dbb77.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA/FSP"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380672.png",
+        "alt_text": "",
+        "width": "519",
+        "height": "725",
+        "local_path": "data/categories/ra_family/ra_hardware/1a335228fcd63ba0f4b90bdb286989ba/images/e8ec4e0b15b0412b79cd4a38091dbb77.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA/FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA/FSP"
+    ],
+    "links": []
+  }
+}

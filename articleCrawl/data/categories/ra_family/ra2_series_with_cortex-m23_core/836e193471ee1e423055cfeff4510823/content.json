@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21266844",
+    "title": "Security and Encryption function of RA2 Series",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:32:04.490438"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat kind of Security and Encryption functions are supported by RA2 Series?\nAnswer:\nRA2A1/RA2L1/RA2E1/RA2E2 supports AES hardware accelerator supporting ECB, CBC, CTR mode and TRNG (True Random Number Generator).\nRA2A2 supports AES hardware accelerator supporting ECB, CBC, CTR, GCM, CMAC, CCM mode and TRNG.\nSuitable Products\nRA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "What kind of Security and Encryption functions are supported by RA2 Series?"
+      },
+      {
+        "type": "text",
+        "content": "What kind of Security and Encryption functions are supported by RA2 Series?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRA2A1/RA2L1/RA2E1/RA2E2 supports AES hardware accelerator supporting ECB, CBC, CTR mode and TRNG (True Random Number Generator).\nRA2A2 supports AES hardware accelerator supporting ECB, CBC, CTR, GCM, CMAC, CCM mode and TRNG.\nSuitable Products\nRA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "RA2A1/RA2L1/RA2E1/RA2E2 supports AES hardware accelerator supporting ECB, CBC, CTR mode and TRNG (True Random Number Generator).\nRA2A2 supports AES hardware accelerator supporting ECB, CBC, CTR, GCM, CMAC, CCM mode and TRNG."
+      },
+      {
+        "type": "text",
+        "content": "RA2A1/RA2L1/RA2E1/RA2E2 supports AES hardware accelerator supporting ECB, CBC, CTR mode and TRNG (True Random Number Generator).\nRA2A2 supports AES hardware accelerator supporting ECB, CBC, CTR, GCM, CMAC, CCM mode and TRNG."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21266847"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21266850"
+      }
+    ]
+  }
+}

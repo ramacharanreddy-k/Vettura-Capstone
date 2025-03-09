@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20797537",
+    "title": "RA Family: How to set an arbitrary transfer rate in I2C",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:25:16.597307"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to set an arbitrary transfer rate in I2C\nAnswer:\nThe I2C transfer rate that can be set in the FSP configuration is \"Standard\", \"Fast-mode\", \"Fast-mode Plus\" (for compatible MCUs), and the register setting value corresponding to the selected rate is calculated. To set an arbitrary transfer rate, users must calculate the register values for the transfer rate and set the value to the registers. The method is described below. The setting method differs between the r_iic_master driver and the r_sci_i2c driver.\nFor r_i2c_master driver\n(1) Suppose the variables automatically generated in the configuration are:\nconst i2c_master_cfg_t g_i2c_master_cfg;\nconst iic_master_extended_cfg_t g_i2c_master_extend;\n(2) Declare variables that will be used to set an arbitrary transfer rate.\ni2c_master_cfg_t my_i2c_master_cfg;\niic_master_extended_cfg_t my_i2c_master_extend;\n(3) Copy the variables in (1) to the variables defined in (2)\nmemcpy(&my_i2c_master_extend, g_i2c_master_extend, sizeof(iic_master_extended_cfg_t));\nmemcpy(&my_i2c_master_cfg, g_i2c_master_cfg, sizeof(i2c_master_cfg_t));\n(4) Attach the pointer to my_i2c_master_extend to the configuration as follows:\nmy_i2c_master_cfg.p_extend = &my_i2c_master_extend;\n(5) Set values to my_i2c_master_extend to realize a desired transfer rate.\nmy_i2c_master_extend.clock_settings.brl_value = 15;\nmy_i2c_master_extend.clock_settings.brh_value = 16;\nmy_i2c_master_extend.clock_settings.cks_value = 4;\n(6) Open the r_i2c_master driver with my_i2c_master_cfg.\nerr = g_i2c_master.p_api->open(g_i2c_master.p_ctrl, &my_i2c_master_cfg);\nRefer to the chapter \"I2C Bus Interface (IIC)\" in the MCU User's Manual for the formula for calculating the transfer rate. For example, for RA6M3, it is located in \"36.2.16 I2C Bus Bit Rate High Register (ICBRH)\".\nFor r_sci_i2c driver\n(1) Suppose the variables automatically generated in the configuration are:\nconst i2c_master_cfg_t g_sci_i2c_master_cfg;\nconst sci_i2c_extended_cfg_t g_sci_i2c_master_cfg_extend;\n(2) Declare variables that will be used to set any transfer rate.\ni2c_master_cfg_t my_sci_i2c_master_cfg;\nsci_i2c_extended_cfg_t my_sci_i2c_master_cfg_extend;\n(3) Copy the variables in (1) to the variables defined in (2)\nmemcpy(&my_sci_i2c_master_cfg_extend, g_sci_i2c_master_cfg_extend, sizeof(sci_i2c_extended_cfg_t));\nmemcpy(&my_sci_i2c_master_cfg, g_sci_i2c_master_cfg, sizeof(i2c_master_cfg_t));\n(4) Set the address of my_sci_i2c_master_cfg_extend as follows:\nmy_sci_i2c_master_cfg.p_extend = &my_sci_i2c_master_cfg_extend;\n(5) Set my_sci_i2c_master_cfg_extend to a value that produces a desired transfer rate.\nmy_sci_i2c_master_cfg_extend.clock_settings.clk_divisor_value = 0,\nmy_sci_i2c_master_cfg_extend.clock_settings.brr_value = 22,\nmy_sci_i2c_master_cfg_extend.clock_settings.mddr_value = 157,\nmy_sci_i2c_master_cfg_extend.clock_settings.bitrate_modulation = true,\nmy_sci_i2c_master_cfg_extend.clock_settings.cycles_value = 31,\nmy_sci_i2c_master_cfg_extend.clock_settings.snfr_value = 1,\n(6) Open the r_i2c_master driver with my_i2c_master_cfg.\nerr = g_sci_i2c_master.p_api->open(g_sci_i2c_master.p_ctrl, &my_sci_i2c_master_cfg);\nPlease refer to the chapter \"Serial Communication Interface (SCI)\" in the MCU User's Manual for frequency calculation formulas. For example, for RA6M3, it is in \"34.2.17 Bit Rate Register (BRR)\" and \"34.2.18 Modulation Duty Register (MDDR)\".\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "How to set an arbitrary transfer rate in I2C"
+      },
+      {
+        "type": "text",
+        "content": "How to set an arbitrary transfer rate in I2C"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe I2C transfer rate that can be set in the FSP configuration is \"Standard\", \"Fast-mode\", \"Fast-mode Plus\" (for compatible MCUs), and the register setting value corresponding to the selected rate is calculated. To set an arbitrary transfer rate, users must calculate the register values for the transfer rate and set the value to the registers. The method is described below. The setting method differs between the r_iic_master driver and the r_sci_i2c driver.\nFor r_i2c_master driver\n(1) Suppose the variables automatically generated in the configuration are:\nconst i2c_master_cfg_t g_i2c_master_cfg;\nconst iic_master_extended_cfg_t g_i2c_master_extend;\n(2) Declare variables that will be used to set an arbitrary transfer rate.\ni2c_master_cfg_t my_i2c_master_cfg;\niic_master_extended_cfg_t my_i2c_master_extend;\n(3) Copy the variables in (1) to the variables defined in (2)\nmemcpy(&my_i2c_master_extend, g_i2c_master_extend, sizeof(iic_master_extended_cfg_t));\nmemcpy(&my_i2c_master_cfg, g_i2c_master_cfg, sizeof(i2c_master_cfg_t));\n(4) Attach the pointer to my_i2c_master_extend to the configuration as follows:\nmy_i2c_master_cfg.p_extend = &my_i2c_master_extend;\n(5) Set values to my_i2c_master_extend to realize a desired transfer rate.\nmy_i2c_master_extend.clock_settings.brl_value = 15;\nmy_i2c_master_extend.clock_settings.brh_value = 16;\nmy_i2c_master_extend.clock_settings.cks_value = 4;\n(6) Open the r_i2c_master driver with my_i2c_master_cfg.\nerr = g_i2c_master.p_api->open(g_i2c_master.p_ctrl, &my_i2c_master_cfg);\nRefer to the chapter \"I2C Bus Interface (IIC)\" in the MCU User's Manual for the formula for calculating the transfer rate. For example, for RA6M3, it is located in \"36.2.16 I2C Bus Bit Rate High Register (ICBRH)\".\nFor r_sci_i2c driver\n(1) Suppose the variables automatically generated in the configuration are:\nconst i2c_master_cfg_t g_sci_i2c_master_cfg;\nconst sci_i2c_extended_cfg_t g_sci_i2c_master_cfg_extend;\n(2) Declare variables that will be used to set any transfer rate.\ni2c_master_cfg_t my_sci_i2c_master_cfg;\nsci_i2c_extended_cfg_t my_sci_i2c_master_cfg_extend;\n(3) Copy the variables in (1) to the variables defined in (2)\nmemcpy(&my_sci_i2c_master_cfg_extend, g_sci_i2c_master_cfg_extend, sizeof(sci_i2c_extended_cfg_t));\nmemcpy(&my_sci_i2c_master_cfg, g_sci_i2c_master_cfg, sizeof(i2c_master_cfg_t));\n(4) Set the address of my_sci_i2c_master_cfg_extend as follows:\nmy_sci_i2c_master_cfg.p_extend = &my_sci_i2c_master_cfg_extend;\n(5) Set my_sci_i2c_master_cfg_extend to a value that produces a desired transfer rate.\nmy_sci_i2c_master_cfg_extend.clock_settings.clk_divisor_value = 0,\nmy_sci_i2c_master_cfg_extend.clock_settings.brr_value = 22,\nmy_sci_i2c_master_cfg_extend.clock_settings.mddr_value = 157,\nmy_sci_i2c_master_cfg_extend.clock_settings.bitrate_modulation = true,\nmy_sci_i2c_master_cfg_extend.clock_settings.cycles_value = 31,\nmy_sci_i2c_master_cfg_extend.clock_settings.snfr_value = 1,\n(6) Open the r_i2c_master driver with my_i2c_master_cfg.\nerr = g_sci_i2c_master.p_api->open(g_sci_i2c_master.p_ctrl, &my_sci_i2c_master_cfg);\nPlease refer to the chapter \"Serial Communication Interface (SCI)\" in the MCU User's Manual for frequency calculation formulas. For example, for RA6M3, it is in \"34.2.17 Bit Rate Register (BRR)\" and \"34.2.18 Modulation Duty Register (MDDR)\".\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "The I2C transfer rate that can be set in the FSP configuration is \"Standard\", \"Fast-mode\", \"Fast-mode Plus\" (for compatible MCUs), and the register setting value corresponding to the selected rate is calculated. To set an arbitrary transfer rate, users must calculate the register values for the transfer rate and set the value to the registers. The method is described below. The setting method differs between the r_iic_master driver and the r_sci_i2c driver.\nFor r_i2c_master driver\n(1) Suppose the variables automatically generated in the configuration are:\nconst i2c_master_cfg_t g_i2c_master_cfg;\nconst iic_master_extended_cfg_t g_i2c_master_extend;\n(2) Declare variables that will be used to set an arbitrary transfer rate.\ni2c_master_cfg_t my_i2c_master_cfg;\niic_master_extended_cfg_t my_i2c_master_extend;\n(3) Copy the variables in (1) to the variables defined in (2)\nmemcpy(&my_i2c_master_extend, g_i2c_master_extend, sizeof(iic_master_extended_cfg_t));\nmemcpy(&my_i2c_master_cfg, g_i2c_master_cfg, sizeof(i2c_master_cfg_t));\n(4) Attach the pointer to my_i2c_master_extend to the configuration as follows:\nmy_i2c_master_cfg.p_extend = &my_i2c_master_extend;\n(5) Set values to my_i2c_master_extend to realize a desired transfer rate.\nmy_i2c_master_extend.clock_settings.brl_value = 15;\nmy_i2c_master_extend.clock_settings.brh_value = 16;\nmy_i2c_master_extend.clock_settings.cks_value = 4;\n(6) Open the r_i2c_master driver with my_i2c_master_cfg.\nerr = g_i2c_master.p_api->open(g_i2c_master.p_ctrl, &my_i2c_master_cfg);\nRefer to the chapter \"I2C Bus Interface (IIC)\" in the MCU User's Manual for the formula for calculating the transfer rate. For example, for RA6M3, it is located in \"36.2.16 I2C Bus Bit Rate High Register (ICBRH)\".\nFor r_sci_i2c driver\n(1) Suppose the variables automatically generated in the configuration are:\nconst i2c_master_cfg_t g_sci_i2c_master_cfg;\nconst sci_i2c_extended_cfg_t g_sci_i2c_master_cfg_extend;\n(2) Declare variables that will be used to set any transfer rate.\ni2c_master_cfg_t my_sci_i2c_master_cfg;\nsci_i2c_extended_cfg_t my_sci_i2c_master_cfg_extend;\n(3) Copy the variables in (1) to the variables defined in (2)\nmemcpy(&my_sci_i2c_master_cfg_extend, g_sci_i2c_master_cfg_extend, sizeof(sci_i2c_extended_cfg_t));\nmemcpy(&my_sci_i2c_master_cfg, g_sci_i2c_master_cfg, sizeof(i2c_master_cfg_t));\n(4) Set the address of my_sci_i2c_master_cfg_extend as follows:\nmy_sci_i2c_master_cfg.p_extend = &my_sci_i2c_master_cfg_extend;\n(5) Set my_sci_i2c_master_cfg_extend to a value that produces a desired transfer rate.\nmy_sci_i2c_master_cfg_extend.clock_settings.clk_divisor_value = 0,\nmy_sci_i2c_master_cfg_extend.clock_settings.brr_value = 22,\nmy_sci_i2c_master_cfg_extend.clock_settings.mddr_value = 157,\nmy_sci_i2c_master_cfg_extend.clock_settings.bitrate_modulation = true,\nmy_sci_i2c_master_cfg_extend.clock_settings.cycles_value = 31,\nmy_sci_i2c_master_cfg_extend.clock_settings.snfr_value = 1,\n(6) Open the r_i2c_master driver with my_i2c_master_cfg.\nerr = g_sci_i2c_master.p_api->open(g_sci_i2c_master.p_ctrl, &my_sci_i2c_master_cfg);\nPlease refer to the chapter \"Serial Communication Interface (SCI)\" in the MCU User's Manual for frequency calculation formulas. For example, for RA6M3, it is in \"34.2.17 Bit Rate Register (BRR)\" and \"34.2.18 Modulation Duty Register (MDDR)\"."
+      },
+      {
+        "type": "text",
+        "content": "The I2C transfer rate that can be set in the FSP configuration is \"Standard\", \"Fast-mode\", \"Fast-mode Plus\" (for compatible MCUs), and the register setting value corresponding to the selected rate is calculated. To set an arbitrary transfer rate, users must calculate the register values for the transfer rate and set the value to the registers. The method is described below. The setting method differs between the r_iic_master driver and the r_sci_i2c driver."
+      },
+      {
+        "type": "text",
+        "content": "For r_i2c_master driver"
+      },
+      {
+        "type": "text",
+        "content": "(1) Suppose the variables automatically generated in the configuration are:"
+      },
+      {
+        "type": "text",
+        "content": "(2) Declare variables that will be used to set an arbitrary transfer rate."
+      },
+      {
+        "type": "text",
+        "content": "(3) Copy the variables in (1) to the variables defined in (2)"
+      },
+      {
+        "type": "text",
+        "content": "(4) Attach the pointer to my_i2c_master_extend to the configuration as follows:"
+      },
+      {
+        "type": "text",
+        "content": "(5) Set values to my_i2c_master_extend to realize a desired transfer rate."
+      },
+      {
+        "type": "text",
+        "content": "(6) Open the r_i2c_master driver with my_i2c_master_cfg."
+      },
+      {
+        "type": "text",
+        "content": "Refer to the chapter \"I2C Bus Interface (IIC)\" in the MCU User's Manual for the formula for calculating the transfer rate. For example, for RA6M3, it is located in \"36.2.16 I2C Bus Bit Rate High Register (ICBRH)\"."
+      },
+      {
+        "type": "text",
+        "content": "For r_sci_i2c driver"
+      },
+      {
+        "type": "text",
+        "content": "(1) Suppose the variables automatically generated in the configuration are:"
+      },
+      {
+        "type": "text",
+        "content": "(2) Declare variables that will be used to set any transfer rate."
+      },
+      {
+        "type": "text",
+        "content": "(3) Copy the variables in (1) to the variables defined in (2)"
+      },
+      {
+        "type": "text",
+        "content": "(4) Set the address of my_sci_i2c_master_cfg_extend as follows:"
+      },
+      {
+        "type": "text",
+        "content": "(5) Set my_sci_i2c_master_cfg_extend to a value that produces a desired transfer rate."
+      },
+      {
+        "type": "text",
+        "content": "(6) Open the r_i2c_master driver with my_i2c_master_cfg."
+      },
+      {
+        "type": "text",
+        "content": "Please refer to the chapter \"Serial Communication Interface (SCI)\" in the MCU User's Manual for frequency calculation formulas. For example, for RA6M3, it is in \"34.2.17 Bit Rate Register (BRR)\" and \"34.2.18 Modulation Duty Register (MDDR)\"."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20793402"
+      }
+    ]
+  }
+}

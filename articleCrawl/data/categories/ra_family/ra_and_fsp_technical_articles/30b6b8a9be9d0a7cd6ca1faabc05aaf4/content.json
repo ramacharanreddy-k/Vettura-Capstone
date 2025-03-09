@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20424068",
+    "title": "RA Family: Example of Composite USB PHID/PMSC Project for FSP 3.6.0",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:12:25.562781"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "The below attached project for FSP 3.6.0 and the EK-RA2A1 kit demonstrates the use of a composite USB HID/MSC project."
+      },
+      {
+        "type": "text",
+        "content": "It uses a PMSC RAM disc with some default settings (so it isn't optimized) but it enumerates on a Windows PC fine, so it does work with these settings."
+      },
+      {
+        "type": "text",
+        "content": "The descriptors for the device is given in the r_usb_phid_pmsc_desc riptor.c file in the src folder. This makes it easy to modify as needed for a specific application."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP\n  Source: https://renesasrulz.com/mcu-mpu-products/ra/f/forum/19481/composite-hid-msc-device-won-t-open/64256#64256"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP\n  Source: https://renesasrulz.com/mcu-mpu-products/ra/f/forum/19481/composite-hid-msc-device-won-t-open/64256#64256"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP\n  Source: https://renesasrulz.com/mcu-mpu-products/ra/f/forum/19481/composite-hid-msc-device-won-t-open/64256#64256"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP\n  Source: https://renesasrulz.com/mcu-mpu-products/ra/f/forum/19481/composite-hid-msc-device-won-t-open/64256#64256"
+      },
+      {
+        "type": "text",
+        "content": "Source: https://renesasrulz.com/mcu-mpu-products/ra/f/forum/19481/composite-hid-msc-device-won-t-open/64256#64256"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": [
+      {
+        "text": "https://renesasrulz.com/mcu-mpu-products/ra/f/forum/19481/composite-hid-msc-device-won-t-open/64256#64256",
+        "url": "https://renesasrulz.com/mcu-mpu-products/ra/f/forum/19481/composite-hid-msc-device-won-t-open/64256#64256"
+      }
+    ]
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/19668881",
+    "title": "RA2: Safety Functions",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:31:27.802685"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat kind of H/W safety feature s in RA2L1/RA2E1/RA2E2/RA2E3/RA2A2 ?\nAnswer:\nThe  RA2L1/RA2E1/RA2E2/RA2E3/RA2A2 has a number of safety functions that allow confirmation of normal operation.\n1. Error detection\nIndependent Watchdog timer (IWDT)\nFlash memory CRC calculation\nSRAM parity error detection\nSRAM ECC function (Available in only the RA2L1, RA2A1, RA2A2)\nMain oscillator stop detection (except RA2E2)\nSub and Main oscillator stop detection circuit for SDADC24 clock switch (Available for RA2A2)\n2. Memory Guard\nIllegal memory access\nFlash area protection\nSFR write protection\n3. Fault detection\nFrequency detection\nPort Output Enable for GPT\nA/D self-check test\nGPIO readback level detection\nClock Frequency Accuracy Measurement Circuit\nData Operation Circuit\nCustomers can use these functions to easily perform self-diagnostics on microcontrollers.\nSuitable Products\nRA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "What kind of H/W safety feature s in RA2L1/RA2E1/RA2E2/RA2E3/RA2A2 ?"
+      },
+      {
+        "type": "text",
+        "content": "What kind of H/W safety feature s in RA2L1/RA2E1/RA2E2/RA2E3/RA2A2 ?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe  RA2L1/RA2E1/RA2E2/RA2E3/RA2A2 has a number of safety functions that allow confirmation of normal operation.\n1. Error detection\nIndependent Watchdog timer (IWDT)\nFlash memory CRC calculation\nSRAM parity error detection\nSRAM ECC function (Available in only the RA2L1, RA2A1, RA2A2)\nMain oscillator stop detection (except RA2E2)\nSub and Main oscillator stop detection circuit for SDADC24 clock switch (Available for RA2A2)\n2. Memory Guard\nIllegal memory access\nFlash area protection\nSFR write protection\n3. Fault detection\nFrequency detection\nPort Output Enable for GPT\nA/D self-check test\nGPIO readback level detection\nClock Frequency Accuracy Measurement Circuit\nData Operation Circuit\nCustomers can use these functions to easily perform self-diagnostics on microcontrollers.\nSuitable Products\nRA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "The  RA2L1/RA2E1/RA2E2/RA2E3/RA2A2 has a number of safety functions that allow confirmation of normal operation.\n1. Error detection\nIndependent Watchdog timer (IWDT)\nFlash memory CRC calculation\nSRAM parity error detection\nSRAM ECC function (Available in only the RA2L1, RA2A1, RA2A2)\nMain oscillator stop detection (except RA2E2)\nSub and Main oscillator stop detection circuit for SDADC24 clock switch (Available for RA2A2)\n2. Memory Guard\nIllegal memory access\nFlash area protection\nSFR write protection\n3. Fault detection\nFrequency detection\nPort Output Enable for GPT\nA/D self-check test\nGPIO readback level detection\nClock Frequency Accuracy Measurement Circuit\nData Operation Circuit\nCustomers can use these functions to easily perform self-diagnostics on microcontrollers."
+      },
+      {
+        "type": "text",
+        "content": "The  RA2L1/RA2E1/RA2E2/RA2E3/RA2A2 has a number of safety functions that allow confirmation of normal operation."
+      },
+      {
+        "type": "text",
+        "content": "1. Error detection"
+      },
+      {
+        "type": "text",
+        "content": "2. Memory Guard"
+      },
+      {
+        "type": "text",
+        "content": "3. Fault detection"
+      },
+      {
+        "type": "text",
+        "content": "Customers can use these functions to easily perform self-diagnostics on microcontrollers."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/19668832"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/19668893"
+      }
+    ]
+  }
+}

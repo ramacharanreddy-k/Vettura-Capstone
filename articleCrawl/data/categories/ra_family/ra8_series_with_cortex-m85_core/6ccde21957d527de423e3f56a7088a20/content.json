@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21606620",
+    "title": "Building AI applications with RA8E1",
+    "last_updated": "2024-05-11",
+    "extracted_at": "2025-03-08T23:29:40.202384"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow can I develop Vision and Voice AI applications using the RA8E1 MCUs?\nAnswer:\nThe RA8E1 is based on the high performance Cortex-M85 core (CM85), running at 360MHz, capable of running compute intensive tasks such as neural network processing in AI/ML applications. The MCU also supports an 8bit Capture Engine Unit (CEU) parallel camera interface, a dedicated hardware module designed for efficient image data capture from various sources, including CMOS image sensors and video capture devices, that can be used for image/video data acquisition in vision AI applications and offloads the CPU from these tasks. The device also includes 1MB flash for smaller neural networks and up to 544KB of SRAM. In addition, it supports external memory interfaces such as an xSPI compliant Octal SPI interface and 16bit SDRAM interface for memory needs that exceed the on-chip memory. These features enable efficient development of low-power Vision AI applications. I2S interface is included on the RA8E1 that can be used for voice AI applications in combination with the powerful CM85 core for Neural network processing.\nSuitable Products\nRA8E1"
+      },
+      {
+        "type": "text",
+        "content": "How can I develop Vision and Voice AI applications using the RA8E1 MCUs?"
+      },
+      {
+        "type": "text",
+        "content": "How can I develop Vision and Voice AI applications using the RA8E1 MCUs?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RA8E1 is based on the high performance Cortex-M85 core (CM85), running at 360MHz, capable of running compute intensive tasks such as neural network processing in AI/ML applications. The MCU also supports an 8bit Capture Engine Unit (CEU) parallel camera interface, a dedicated hardware module designed for efficient image data capture from various sources, including CMOS image sensors and video capture devices, that can be used for image/video data acquisition in vision AI applications and offloads the CPU from these tasks. The device also includes 1MB flash for smaller neural networks and up to 544KB of SRAM. In addition, it supports external memory interfaces such as an xSPI compliant Octal SPI interface and 16bit SDRAM interface for memory needs that exceed the on-chip memory. These features enable efficient development of low-power Vision AI applications. I2S interface is included on the RA8E1 that can be used for voice AI applications in combination with the powerful CM85 core for Neural network processing.\nSuitable Products\nRA8E1"
+      },
+      {
+        "type": "text",
+        "content": "The RA8E1 is based on the high performance Cortex-M85 core (CM85), running at 360MHz, capable of running compute intensive tasks such as neural network processing in AI/ML applications. The MCU also supports an 8bit Capture Engine Unit (CEU) parallel camera interface, a dedicated hardware module designed for efficient image data capture from various sources, including CMOS image sensors and video capture devices, that can be used for image/video data acquisition in vision AI applications and offloads the CPU from these tasks. The device also includes 1MB flash for smaller neural networks and up to 544KB of SRAM. In addition, it supports external memory interfaces such as an xSPI compliant Octal SPI interface and 16bit SDRAM interface for memory needs that exceed the on-chip memory. These features enable efficient development of low-power Vision AI applications. I2S interface is included on the RA8E1 that can be used for voice AI applications in combination with the powerful CM85 core for Neural network processing."
+      },
+      {
+        "type": "text",
+        "content": "The RA8E1 is based on the high performance Cortex-M85 core (CM85), running at 360MHz, capable of running compute intensive tasks such as neural network processing in AI/ML applications. The MCU also supports an 8bit Capture Engine Unit (CEU) parallel camera interface, a dedicated hardware module designed for efficient image data capture from various sources, including CMOS image sensors and video capture devices, that can be used for image/video data acquisition in vision AI applications and offloads the CPU from these tasks. The device also includes 1MB flash for smaller neural networks and up to 544KB of SRAM. In addition, it supports external memory interfaces such as an xSPI compliant Octal SPI interface and 16bit SDRAM interface for memory needs that exceed the on-chip memory. These features enable efficient development of low-power Vision AI applications. I2S interface is included on the RA8E1 that can be used for voice AI applications in combination with the powerful CM85 core for Neural network processing."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA8E1"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA8E1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA8E1"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21606630"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21606640"
+      }
+    ]
+  }
+}

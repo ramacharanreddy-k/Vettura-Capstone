@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21490052",
+    "title": "RH850 G3K core SYSERR",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:26:42.212378"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI am using RH850 G3KH core. What is the difference between SYSERR  input and SYSERR Error input at instruction fetch? Why SYSERR input has more priority than SYSERR Error input at instruction fetch?\nAnswer:\nIn the realm of system errors, one might assume that instruction fetch errors should be given higher priority over other SYSERR causes. In reality, the priority is only important when multiple errors occur simultaneously, as it determines which exception is addressed first. As these FE-level exceptions do not care if a current (SYSERR) exception is finished, they may interrupt the (SYSERR) exception processing again (themselves). So, finally, both errors will force the CPU to enter an exception processing routine. It is implemented like described and cannot be changed. Notably, SYSERR caused by instruction fetch is “Resumable,” whereas others are “Terminating.” For more details, refer to the Software User’s Manual.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nI am using RH850 G3KH core. What is the difference between SYSERR  input and SYSERR Error input at instruction fetch? Why SYSERR input has more priority than SYSERR Error input at instruction fetch?\nAnswer:\nIn the realm of system errors, one might assume that instruction fetch errors should be given higher priority over other SYSERR causes. In reality, the priority is only important when multiple errors occur simultaneously, as it determines which exception is addressed first. As these FE-level exceptions do not care if a current (SYSERR) exception is finished, they may interrupt the (SYSERR) exception processing again (themselves). So, finally, both errors will force the CPU to enter an exception processing routine. It is implemented like described and cannot be changed. Notably, SYSERR caused by instruction fetch is “Resumable,” whereas others are “Terminating.” For more details, refer to the Software User’s Manual.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "I am using RH850 G3KH core. What is the difference between SYSERR  input and SYSERR Error input at instruction fetch? Why SYSERR input has more priority than SYSERR Error input at instruction fetch?"
+      },
+      {
+        "type": "text",
+        "content": "I am using RH850 G3KH core. What is the difference between SYSERR  input and SYSERR Error input at instruction fetch? Why SYSERR input has more priority than SYSERR Error input at instruction fetch?"
+      },
+      {
+        "type": "text",
+        "content": "I am using RH850 G3KH core. What is the difference between SYSERR  input and SYSERR Error input at instruction fetch? Why SYSERR input has more priority than SYSERR Error input at instruction fetch?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIn the realm of system errors, one might assume that instruction fetch errors should be given higher priority over other SYSERR causes. In reality, the priority is only important when multiple errors occur simultaneously, as it determines which exception is addressed first. As these FE-level exceptions do not care if a current (SYSERR) exception is finished, they may interrupt the (SYSERR) exception processing again (themselves). So, finally, both errors will force the CPU to enter an exception processing routine. It is implemented like described and cannot be changed. Notably, SYSERR caused by instruction fetch is “Resumable,” whereas others are “Terminating.” For more details, refer to the Software User’s Manual.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "In the realm of system errors, one might assume that instruction fetch errors should be given higher priority over other SYSERR causes. In reality, the priority is only important when multiple errors occur simultaneously, as it determines which exception is addressed first. As these FE-level exceptions do not care if a current (SYSERR) exception is finished, they may interrupt the (SYSERR) exception processing again (themselves). So, finally, both errors will force the CPU to enter an exception processing routine. It is implemented like described and cannot be changed. Notably, SYSERR caused by instruction fetch is “Resumable,” whereas others are “Terminating.” For more details, refer to the Software User’s Manual."
+      },
+      {
+        "type": "text",
+        "content": "In the realm of system errors, one might assume that instruction fetch errors should be given higher priority over other SYSERR causes. In reality, the priority is only important when multiple errors occur simultaneously, as it determines which exception is addressed first. As these FE-level exceptions do not care if a current (SYSERR) exception is finished, they may interrupt the (SYSERR) exception processing again (themselves). So, finally, both errors will force the CPU to enter an exception processing routine. It is implemented like described and cannot be changed. Notably, SYSERR caused by instruction fetch is “Resumable,” whereas others are “Terminating.” For more details, refer to the Software User’s Manual."
+      },
+      {
+        "type": "text",
+        "content": "In the realm of system errors, one might assume that instruction fetch errors should be given higher priority over other SYSERR causes. In reality, the priority is only important when multiple errors occur simultaneously, as it determines which exception is addressed first. As these FE-level exceptions do not care if a current (SYSERR) exception is finished, they may interrupt the (SYSERR) exception processing again (themselves). So, finally, both errors will force the CPU to enter an exception processing routine. It is implemented like described and cannot be changed."
+      },
+      {
+        "type": "text",
+        "content": "Notably, SYSERR caused by instruction fetch is “Resumable,” whereas others are “Terminating.” For more details, refer to the Software User’s Manual."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850"
+    ],
+    "links": []
+  }
+}

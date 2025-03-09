@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21116863",
+    "title": "Type of Flash used in RA MCUs",
+    "last_updated": "2023-02-11",
+    "extracted_at": "2025-03-08T23:36:06.235309"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat type of Flash is used in RA MCUs?\nAnswer:\nRenesas RA MCUs use two kinds of flash memory:\n1) MF3 Code Flash double access type. Two Code Flash are controlled at the same time. (64-bit I/O).\n2) RV40 Phase 2 .\nIn terms of register control and usage, MF4 is the same as MF3. So we currently have RV40F (proprietary) which is excellent for high flash density devices. MF3 / MF4 is excellent for low leakage / very low power consumption applications.\nMore information on Block configuration and similar topics is available here: https://www.renesas.com/us/en/document/apn/flash-memory-programming\n  Suitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "What type of Flash is used in RA MCUs?"
+      },
+      {
+        "type": "text",
+        "content": "What type of Flash is used in RA MCUs?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRenesas RA MCUs use two kinds of flash memory:\n1) MF3 Code Flash double access type. Two Code Flash are controlled at the same time. (64-bit I/O).\n2) RV40 Phase 2 .\nIn terms of register control and usage, MF4 is the same as MF3. So we currently have RV40F (proprietary) which is excellent for high flash density devices. MF3 / MF4 is excellent for low leakage / very low power consumption applications.\nMore information on Block configuration and similar topics is available here: https://www.renesas.com/us/en/document/apn/flash-memory-programming\n  Suitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "Renesas RA MCUs use two kinds of flash memory:\n1) MF3 Code Flash double access type. Two Code Flash are controlled at the same time. (64-bit I/O).\n2) RV40 Phase 2 .\nIn terms of register control and usage, MF4 is the same as MF3. So we currently have RV40F (proprietary) which is excellent for high flash density devices. MF3 / MF4 is excellent for low leakage / very low power consumption applications.\nMore information on Block configuration and similar topics is available here: https://www.renesas.com/us/en/document/apn/flash-memory-programming"
+      },
+      {
+        "type": "text",
+        "content": "Renesas RA MCUs use two kinds of flash memory:"
+      },
+      {
+        "type": "text",
+        "content": "1) MF3 Code Flash double access type. Two Code Flash are controlled at the same time. (64-bit I/O)."
+      },
+      {
+        "type": "text",
+        "content": "2) RV40 Phase 2 ."
+      },
+      {
+        "type": "text",
+        "content": "In terms of register control and usage, MF4 is the same as MF3. So we currently have RV40F (proprietary) which is excellent for high flash density devices. MF3 / MF4 is excellent for low leakage / very low power consumption applications."
+      },
+      {
+        "type": "text",
+        "content": "More information on Block configuration and similar topics is available here: https://www.renesas.com/us/en/document/apn/flash-memory-programming"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/us/en/document/apn/flash-memory-programming",
+        "url": "https://www.renesas.com/us/en/document/apn/flash-memory-programming"
+      }
+    ]
+  }
+}

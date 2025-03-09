@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20797666",
+    "title": "RZ/V2M: What is the difference between Linux BSP V1.2 and V1.3?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:51:10.975121"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWe are developing with Linux BSP V1.2.\nV1.3 has been released as the latest environment. Is it necessary to update to the latest environment? What is the difference?\nAnswer:\nPlease review the r01an5971ej0130-rzv2m-linux.pdf release notes.\nFor details, see the list of change differences between V1.2 and V1.3 in Section 6.\nSuitable Products\nRZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "We are developing with Linux BSP V1.2.\nV1.3 has been released as the latest environment. Is it necessary to update to the latest environment? What is the difference?"
+      },
+      {
+        "type": "text",
+        "content": "We are developing with Linux BSP V1.2.\nV1.3 has been released as the latest environment. Is it necessary to update to the latest environment? What is the difference?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nPlease review the r01an5971ej0130-rzv2m-linux.pdf release notes.\nFor details, see the list of change differences between V1.2 and V1.3 in Section 6.\nSuitable Products\nRZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "Please review the r01an5971ej0130-rzv2m-linux.pdf release notes.\nFor details, see the list of change differences between V1.2 and V1.3 in Section 6."
+      },
+      {
+        "type": "text",
+        "content": "Please review the r01an5971ej0130-rzv2m-linux.pdf release notes.\nFor details, see the list of change differences between V1.2 and V1.3 in Section 6."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V2M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V2M"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20797671"
+      }
+    ]
+  }
+}

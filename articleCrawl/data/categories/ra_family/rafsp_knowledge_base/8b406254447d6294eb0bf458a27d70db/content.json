@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/19427072",
+    "title": "RA Family: Creating a Custom Board Support Package (BSP) for FSP",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:21:09.388484"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Note that this article was written for FSP 1.1.0, but the process still works for FSP 3.7.0 and above."
+      },
+      {
+        "type": "text",
+        "content": "Introduction\nThis article describes steps for creating a new custom Board Support Pack (BSP) for Renesas RA Flexible Software Package (FSP).\nRequired Resources\nA PC running Microsoft® Windows® 10 with the following Renesas software installed:"
+      },
+      {
+        "type": "text",
+        "content": "Board Support Packs in FSP\nThe Board Support Pack (BSP) is a subset of the Flexible Software Package (FSP), and provides an interface for setting up FSP to work with selected MCUs and specific board HW designs. It is both MCU and board specific. The BSPs for the Renesas RA Evaluation kits are included in FSP packs, but users must create new BSPs for implementing their final products.\nFSP is CMSIS-compliant and is based on the CMSIS-core. Therefore, the board pack file structure is organized into folders containing the MCU and board specific CMSIS information and is represented as an XML-based pack description (PDSC) file as defined in the CMSIS standard (Keil, 2016). All these files are packed in a ZIP format (.zip).\nBSP Contents in FSP\nThe contents of the BSP are as follows:"
+      },
+      {
+        "type": "text",
+        "content": "For example, the Renesas.RA_board_ra6m3_ek.1.0.0.pack has files as shown below in Figure 1."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/6e33d791-e47b-4ec6-a7e8-c640838feb2b.png",
+          "alt_text": "Figure 1",
+          "width": "513",
+          "height": "369",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/8b406254447d6294eb0bf458a27d70db/images/dcee3dfea82ff061e5ae7bb86a413eb6.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Creating a Pack Based on an Existing Pack in FSP\nThe steps for creating a custom board pack from an existing RA board pack are given below.\nNote: All the steps are described for BSP version 1.0.0. To create a BSP of a different versions, replace ‘1.0.0’ in all the steps to the ‘Major.Minor.Patch’ version.\n1. Navigate to the \\internal\\projectgen\\ra\\Packs folder in the installed e2 studio or smart configurator (sc) as shown below. e2 studio and sc are installed in the RA folder by default. Board packs are listed in the packs folder as shown in Figure 1 above."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/609343a3-92f0-4dae-8e6d-6889104209ab.png",
+          "alt_text": "",
+          "width": "480",
+          "height": "155",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/8b406254447d6294eb0bf458a27d70db/images/64bdc742c0ccdec6ed21a86506420b5a.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "2. Find a pack with the same or similar device as the targeted MCU, such as ra6m1_ek, Renesas.RA_board_ra6m1_ek.1.0.0.pack.\n3. Pick a board name for the new custom board, such as ra6m1_custom_board. Make sure to use the same name throughout the process.\n4. Copy the board pack from step 3 and rename it with the new custom board name, such as ‘Renesas.RA_board_ra6m1_custom_board.1.0.0.pack’.\n5. Extract the contents of this new pack file from a file archive utility, such as 7zip.\n6. Replace the ‘RA6M1-EK.pincfg’ file with the new board name, ‘ra6m1_custom_board.pincfg’."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/492e6784-3cc9-4b18-993d-67b7b7e4cd78.png",
+          "alt_text": "",
+          "width": "494",
+          "height": "138",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/8b406254447d6294eb0bf458a27d70db/images/0f9a3479af7c9c1ab854d98fb4b35fa7.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "7. In the \\.module_descriptions folder, rename the XML files with the custom board name."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/af4c731f-f8ed-4191-86f6-dbe62fdfbd68.png",
+          "alt_text": "",
+          "width": "535",
+          "height": "150",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/8b406254447d6294eb0bf458a27d70db/images/827ca2fe9e3392c7c33d892c18f1816c.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "8. Modify the contents of XML files to replace all instances of the old board name with the new custom board name. Change ‘RA6M1-EK.pincfg’ in Renesas##BSP##Board##ra6m1_custom_board####1.0.0##configuration.xml file to ‘ra6m1_custom_board.pincfg’.\n9. Change all instances of ‘ra6m1ek’ to ‘custom_board’ in Renesas##BSP##Board##ra6m1_custom_board####1.0.0.xml file. Also, change the ‘device’ attribute from ‘R7FA6M1AD3CFP’ to new targeted device.\n10. In \\ra\\board folder, rename the ra6m1_ek folder to ra6m1_custom_board. Add the custom BSP files, such as board.h, board_init.c, and board_init.h to the folder.\n11. Rename the *.pdsc file in the root directory to the match the name of the BSP, ‘Renesas.RA_board_ra6m1_custom_board.1.0.0.pdsc’.\nNote: The name of the .pdsc file must be the same as the .pack file for the pack to be detected by the configurator.\n12. Modify the contents of the PDSC file:\n• Replace the board name with the new board name\n• Make sure there is a <file> element in the <component> for each file to be delivered as part of this pack.\n13. Modify the contents of toolingSupport.xml. Rename all instances of ra6m1_ek to ra6m1_custom_board and RA6M1-EK.pincfg to ra6m1_custom_board.pincfg.\n14. Select all files and folders, right click and create a zip file Renesas.RA_board_ra6m1_custom_board.1.0.0.zip\n15. Rename the .zip file to Renesas.RA_board_ra6m1_ custom_board.1.0.0.pack."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nFSP\nRA"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nFSP\nRA"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "FSP\nRA"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/6e33d791-e47b-4ec6-a7e8-c640838feb2b.png",
+        "alt_text": "Figure 1",
+        "width": "513",
+        "height": "369",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/8b406254447d6294eb0bf458a27d70db/images/dcee3dfea82ff061e5ae7bb86a413eb6.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/609343a3-92f0-4dae-8e6d-6889104209ab.png",
+        "alt_text": "",
+        "width": "480",
+        "height": "155",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/8b406254447d6294eb0bf458a27d70db/images/64bdc742c0ccdec6ed21a86506420b5a.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/492e6784-3cc9-4b18-993d-67b7b7e4cd78.png",
+        "alt_text": "",
+        "width": "494",
+        "height": "138",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/8b406254447d6294eb0bf458a27d70db/images/0f9a3479af7c9c1ab854d98fb4b35fa7.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/af4c731f-f8ed-4191-86f6-dbe62fdfbd68.png",
+        "alt_text": "",
+        "width": "535",
+        "height": "150",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/8b406254447d6294eb0bf458a27d70db/images/827ca2fe9e3392c7c33d892c18f1816c.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "FSP"
+          ],
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "FSP",
+      "RA"
+    ],
+    "links": []
+  }
+}

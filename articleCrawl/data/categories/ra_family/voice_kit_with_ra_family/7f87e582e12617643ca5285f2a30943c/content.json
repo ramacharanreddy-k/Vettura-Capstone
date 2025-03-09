@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20536973",
+    "title": "RA Family: Can I use this board with my own voice recognition software ?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:41:26.556446"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan I use this board with my own voice recognition software ?\nAnswer:\nYes. Please refer our Quick Start Guide in GitHub.\nSuitable Products\nMCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+      },
+      {
+        "type": "text",
+        "content": "Can I use this board with my own voice recognition software ?"
+      },
+      {
+        "type": "text",
+        "content": "Can I use this board with my own voice recognition software ?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes. Please refer our Quick Start Guide in GitHub.\nSuitable Products\nMCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+      },
+      {
+        "type": "text",
+        "content": "Yes. Please refer our Quick Start Guide in GitHub."
+      },
+      {
+        "type": "text",
+        "content": "Yes. Please refer our Quick Start Guide in GitHub."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nMCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "MCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "MCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+    ],
+    "links": [
+      {
+        "text": "GitHub",
+        "url": "https://github.com/renesas/aiot-ready"
+      },
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20545069"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20545080"
+      }
+    ]
+  }
+}

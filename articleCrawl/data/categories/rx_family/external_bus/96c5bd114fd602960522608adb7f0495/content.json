@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21810950",
+    "title": "RX Family: Why is one cycle of the CS signal negation period inserted even though the insertion of read recovery is disabled?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:13:40.609559"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDuring normal read operation on a separate bus, why is one cycle of the CS signal negation period inserted even though the insertion of read recovery cycles is disabled?\nAnswer:\nDuring normal read operation on a separate bus, if CSnWCR2.CSROFF[2:0] = 000b, a one-cycle bus access disable period (CS negation period) is inserted even if no read recovery cycle is inserted.\nThis is because when CSnWCR2.CSROFF[2:0] = 000b, the next bus access can start one cycle after “Tend” in the diagram below.\nThe following explains the operation using the example of \"Figure 16.19 Bus Timing (Normal-Read Operation)\" in the \"RX64M Group User's Manual: Hardware\" as an example.\n[CSnWCR2.CSROFF[2:0] setting and next bus access start timing]\nNote 1 in the diagram shows that when CSnWCR2.CSROFF[2:0] = 000b, a one-cycle bus access disable period (CS negation period) is inserted after \"Tend\" in the diagram.\nFurthermore, when CSnWCR2.CSROFF[2:0] = 001b, \"Tn1\" is inserted in the diagram, the next bus access can begin.\nIn other words, if CSnWCR2.CSROFF[2:0] = 000b or CSnWCR2.CSROFF[2:0] = 001b, in both cases the next bus access can start one cycle after \"Tend\".\n[Regarding Separate Bus Read Recovery Cycle when CSnWCR2.CSROFF[2:0]=000b]\nWhen not inserting Separate Bus Read Recovery Cycle\nAs explained above, when CSnWCR2.CSROFF[2:0] = 000b, a one-cycle bus access disable period (CS negation period) is inserted after \"Tend.\" When inserting N cycles (1 or more) of Separate Bus Read Recovery Cycle\nWhen CSnWCR2.CSROFF[2:0] = 000b, the bus access disable period of 1 cycle according to Note 1 in the above figure is ensured by the N cycles set for the read recovery cycle, so an N-cycle CS negate period is inserted.\n[Separate Bus Read Recovery Cycle for when CSnWCR2.CSROFF[2:0] >= 001b]\nIf CSnWCR2.CSROFF[2:0] >= 001b, a read recovery cycle is inserted starting with the next cycle from Tn1 to Tnm.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "During normal read operation on a separate bus, why is one cycle of the CS signal negation period inserted even though the insertion of read recovery cycles is disabled?"
+      },
+      {
+        "type": "text",
+        "content": "During normal read operation on a separate bus, why is one cycle of the CS signal negation period inserted even though the insertion of read recovery cycles is disabled?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nDuring normal read operation on a separate bus, if CSnWCR2.CSROFF[2:0] = 000b, a one-cycle bus access disable period (CS negation period) is inserted even if no read recovery cycle is inserted.\nThis is because when CSnWCR2.CSROFF[2:0] = 000b, the next bus access can start one cycle after “Tend” in the diagram below.\nThe following explains the operation using the example of \"Figure 16.19 Bus Timing (Normal-Read Operation)\" in the \"RX64M Group User's Manual: Hardware\" as an example.\n[CSnWCR2.CSROFF[2:0] setting and next bus access start timing]\nNote 1 in the diagram shows that when CSnWCR2.CSROFF[2:0] = 000b, a one-cycle bus access disable period (CS negation period) is inserted after \"Tend\" in the diagram.\nFurthermore, when CSnWCR2.CSROFF[2:0] = 001b, \"Tn1\" is inserted in the diagram, the next bus access can begin.\nIn other words, if CSnWCR2.CSROFF[2:0] = 000b or CSnWCR2.CSROFF[2:0] = 001b, in both cases the next bus access can start one cycle after \"Tend\".\n[Regarding Separate Bus Read Recovery Cycle when CSnWCR2.CSROFF[2:0]=000b]\nWhen not inserting Separate Bus Read Recovery Cycle\nAs explained above, when CSnWCR2.CSROFF[2:0] = 000b, a one-cycle bus access disable period (CS negation period) is inserted after \"Tend.\" When inserting N cycles (1 or more) of Separate Bus Read Recovery Cycle\nWhen CSnWCR2.CSROFF[2:0] = 000b, the bus access disable period of 1 cycle according to Note 1 in the above figure is ensured by the N cycles set for the read recovery cycle, so an N-cycle CS negate period is inserted.\n[Separate Bus Read Recovery Cycle for when CSnWCR2.CSROFF[2:0] >= 001b]\nIf CSnWCR2.CSROFF[2:0] >= 001b, a read recovery cycle is inserted starting with the next cycle from Tn1 to Tnm.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "During normal read operation on a separate bus, if CSnWCR2.CSROFF[2:0] = 000b, a one-cycle bus access disable period (CS negation period) is inserted even if no read recovery cycle is inserted.\nThis is because when CSnWCR2.CSROFF[2:0] = 000b, the next bus access can start one cycle after “Tend” in the diagram below.\nThe following explains the operation using the example of \"Figure 16.19 Bus Timing (Normal-Read Operation)\" in the \"RX64M Group User's Manual: Hardware\" as an example.\n[CSnWCR2.CSROFF[2:0] setting and next bus access start timing]\nNote 1 in the diagram shows that when CSnWCR2.CSROFF[2:0] = 000b, a one-cycle bus access disable period (CS negation period) is inserted after \"Tend\" in the diagram.\nFurthermore, when CSnWCR2.CSROFF[2:0] = 001b, \"Tn1\" is inserted in the diagram, the next bus access can begin.\nIn other words, if CSnWCR2.CSROFF[2:0] = 000b or CSnWCR2.CSROFF[2:0] = 001b, in both cases the next bus access can start one cycle after \"Tend\".\n[Regarding Separate Bus Read Recovery Cycle when CSnWCR2.CSROFF[2:0]=000b]\nWhen not inserting Separate Bus Read Recovery Cycle\nAs explained above, when CSnWCR2.CSROFF[2:0] = 000b, a one-cycle bus access disable period (CS negation period) is inserted after \"Tend.\" When inserting N cycles (1 or more) of Separate Bus Read Recovery Cycle\nWhen CSnWCR2.CSROFF[2:0] = 000b, the bus access disable period of 1 cycle according to Note 1 in the above figure is ensured by the N cycles set for the read recovery cycle, so an N-cycle CS negate period is inserted.\n[Separate Bus Read Recovery Cycle for when CSnWCR2.CSROFF[2:0] >= 001b]\nIf CSnWCR2.CSROFF[2:0] >= 001b, a read recovery cycle is inserted starting with the next cycle from Tn1 to Tnm."
+      },
+      {
+        "type": "text",
+        "content": "During normal read operation on a separate bus, if CSnWCR2.CSROFF[2:0] = 000b, a one-cycle bus access disable period (CS negation period) is inserted even if no read recovery cycle is inserted."
+      },
+      {
+        "type": "text",
+        "content": "This is because when CSnWCR2.CSROFF[2:0] = 000b, the next bus access can start one cycle after “Tend” in the diagram below."
+      },
+      {
+        "type": "text",
+        "content": "The following explains the operation using the example of \"Figure 16.19 Bus Timing (Normal-Read Operation)\" in the \"RX64M Group User's Manual: Hardware\" as an example."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399859a.png",
+          "alt_text": "",
+          "width": "863",
+          "height": "519",
+          "local_path": "data/categories/rx_family/external_bus/96c5bd114fd602960522608adb7f0495/images/74f890308b8213a5e46e8fb52f29d0c9.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "[CSnWCR2.CSROFF[2:0] setting and next bus access start timing]"
+      },
+      {
+        "type": "text",
+        "content": "Note 1 in the diagram shows that when CSnWCR2.CSROFF[2:0] = 000b, a one-cycle bus access disable period (CS negation period) is inserted after \"Tend\" in the diagram."
+      },
+      {
+        "type": "text",
+        "content": "Furthermore, when CSnWCR2.CSROFF[2:0] = 001b, \"Tn1\" is inserted in the diagram, the next bus access can begin."
+      },
+      {
+        "type": "text",
+        "content": "In other words, if CSnWCR2.CSROFF[2:0] = 000b or CSnWCR2.CSROFF[2:0] = 001b, in both cases the next bus access can start one cycle after \"Tend\"."
+      },
+      {
+        "type": "text",
+        "content": "[Regarding Separate Bus Read Recovery Cycle when CSnWCR2.CSROFF[2:0]=000b]"
+      },
+      {
+        "type": "text",
+        "content": "When not inserting Separate Bus Read Recovery Cycle"
+      },
+      {
+        "type": "text",
+        "content": "As explained above, when CSnWCR2.CSROFF[2:0] = 000b, a one-cycle bus access disable period (CS negation period) is inserted after \"Tend.\" When inserting N cycles (1 or more) of Separate Bus Read Recovery Cycle"
+      },
+      {
+        "type": "text",
+        "content": "When CSnWCR2.CSROFF[2:0] = 000b, the bus access disable period of 1 cycle according to Note 1 in the above figure is ensured by the N cycles set for the read recovery cycle, so an N-cycle CS negate period is inserted."
+      },
+      {
+        "type": "text",
+        "content": "[Separate Bus Read Recovery Cycle for when CSnWCR2.CSROFF[2:0] >= 001b]"
+      },
+      {
+        "type": "text",
+        "content": "If CSnWCR2.CSROFF[2:0] >= 001b, a read recovery cycle is inserted starting with the next cycle from Tn1 to Tnm."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399859a.png",
+        "alt_text": "",
+        "width": "863",
+        "height": "519",
+        "local_path": "data/categories/rx_family/external_bus/96c5bd114fd602960522608adb7f0495/images/74f890308b8213a5e46e8fb52f29d0c9.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21810954"
+      }
+    ]
+  }
+}

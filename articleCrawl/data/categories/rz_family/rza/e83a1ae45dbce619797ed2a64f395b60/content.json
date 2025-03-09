@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21149200",
+    "title": "RZ/A1 Group: Secure function",
+    "last_updated": "2023-01-12",
+    "extracted_at": "2025-03-08T23:43:16.527508"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDoes the RZ/A1 group have a secure function?\nAnswer:\nThe RZ/A1 group does not have a built-in secure function as hardware.\nHowever, we have free and non-warranty Crypto Library as software, which can be provided via our sales representatives.\nSuitable Products\nRZ/A1H, RZ/A1M, RZ/A1L, RZ/A1LU, RZ/A1LC"
+      },
+      {
+        "type": "text",
+        "content": "Does the RZ/A1 group have a secure function?"
+      },
+      {
+        "type": "text",
+        "content": "Does the RZ/A1 group have a secure function?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RZ/A1 group does not have a built-in secure function as hardware.\nHowever, we have free and non-warranty Crypto Library as software, which can be provided via our sales representatives.\nSuitable Products\nRZ/A1H, RZ/A1M, RZ/A1L, RZ/A1LU, RZ/A1LC"
+      },
+      {
+        "type": "text",
+        "content": "The RZ/A1 group does not have a built-in secure function as hardware.\nHowever, we have free and non-warranty Crypto Library as software, which can be provided via our sales representatives."
+      },
+      {
+        "type": "text",
+        "content": "The RZ/A1 group does not have a built-in secure function as hardware.\nHowever, we have free and non-warranty Crypto Library as software, which can be provided via our sales representatives."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A1H, RZ/A1M, RZ/A1L, RZ/A1LU, RZ/A1LC"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A1H, RZ/A1M, RZ/A1L, RZ/A1LU, RZ/A1LC"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A1H, RZ/A1M, RZ/A1L, RZ/A1LU, RZ/A1LC"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21149207"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21149208"
+      }
+    ]
+  }
+}

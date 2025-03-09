@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21789660",
+    "title": "RA Family: How to generate self-signed x509 certificate using MbedTLS stack",
+    "last_updated": "2025-04-02",
+    "extracted_at": "2025-03-08T23:22:24.686098"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Answer:\nThe attached sample reference application generates an RSA self-signed x509 certificate by leveraging FSP middleware MbedTLS stack and RSIP IP of RA on the EK-RA8M1 board.\nBelow are the list of operations that can be verified using the sample application -\nThe Sample application basically utilizes the MbedTLS stack with the underlying SCE as RSIP to generate the RSA 3K bits pair of keys and can also generate the 2K bits pair of keys by defining RSA_2048_BITS_KEY macro in the file “crypto_ep.h”. This application can be further explored to generate 4K keys pair as well in the RA8.\nIt utilizes the MbedTLS “x509write_crt” feature to generate a self-signed certificate in PEM or DER format by defining MBEDTLS_X509_FORMAT_PEM or MBEDTLS_X509_FORMAT_DER respectively in the function “gen_certificates” of the file “create_cert.c”.\nIt utilizes the MbedTLS “x509_cert” feature to parse the certificate in PEM or DER format and display basic parameter in the RTT Viewer as can be seen below –\nExample DER certificate in RTT viewer –\nExample PEM certificate in RTT viewer –\nTo verify the generated PEM certificate, just copy the raw PEM data to online tool (example - https://certlogik.com/decoder/) to parse the certificate.\nExample of PEM certificates decode via online tool –\nDetails of sample project:\nBoard:             EK-RA8M1\nFSP:                v5.5.0 or later\nIDE:                 e2studio - 2024-07 (24.7.0) or later\nCompiler:        GCC - 12.2.1.arm-12-mpacbti-34 or later\nSuitable Products\nRA8M1, RA8D1, RA8T1"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe attached sample reference application generates an RSA self-signed x509 certificate by leveraging FSP middleware MbedTLS stack and RSIP IP of RA on the EK-RA8M1 board.\nBelow are the list of operations that can be verified using the sample application -\nThe Sample application basically utilizes the MbedTLS stack with the underlying SCE as RSIP to generate the RSA 3K bits pair of keys and can also generate the 2K bits pair of keys by defining RSA_2048_BITS_KEY macro in the file “crypto_ep.h”. This application can be further explored to generate 4K keys pair as well in the RA8.\nIt utilizes the MbedTLS “x509write_crt” feature to generate a self-signed certificate in PEM or DER format by defining MBEDTLS_X509_FORMAT_PEM or MBEDTLS_X509_FORMAT_DER respectively in the function “gen_certificates” of the file “create_cert.c”.\nIt utilizes the MbedTLS “x509_cert” feature to parse the certificate in PEM or DER format and display basic parameter in the RTT Viewer as can be seen below –\nExample DER certificate in RTT viewer –\nExample PEM certificate in RTT viewer –\nTo verify the generated PEM certificate, just copy the raw PEM data to online tool (example - https://certlogik.com/decoder/) to parse the certificate.\nExample of PEM certificates decode via online tool –\nDetails of sample project:\nBoard:             EK-RA8M1\nFSP:                v5.5.0 or later\nIDE:                 e2studio - 2024-07 (24.7.0) or later\nCompiler:        GCC - 12.2.1.arm-12-mpacbti-34 or later\nSuitable Products\nRA8M1, RA8D1, RA8T1"
+      },
+      {
+        "type": "text",
+        "content": "The attached sample reference application generates an RSA self-signed x509 certificate by leveraging FSP middleware MbedTLS stack and RSIP IP of RA on the EK-RA8M1 board.\nBelow are the list of operations that can be verified using the sample application -\nThe Sample application basically utilizes the MbedTLS stack with the underlying SCE as RSIP to generate the RSA 3K bits pair of keys and can also generate the 2K bits pair of keys by defining RSA_2048_BITS_KEY macro in the file “crypto_ep.h”. This application can be further explored to generate 4K keys pair as well in the RA8.\nIt utilizes the MbedTLS “x509write_crt” feature to generate a self-signed certificate in PEM or DER format by defining MBEDTLS_X509_FORMAT_PEM or MBEDTLS_X509_FORMAT_DER respectively in the function “gen_certificates” of the file “create_cert.c”.\nIt utilizes the MbedTLS “x509_cert” feature to parse the certificate in PEM or DER format and display basic parameter in the RTT Viewer as can be seen below –\nExample DER certificate in RTT viewer –\nExample PEM certificate in RTT viewer –\nTo verify the generated PEM certificate, just copy the raw PEM data to online tool (example - https://certlogik.com/decoder/) to parse the certificate.\nExample of PEM certificates decode via online tool –\nDetails of sample project:\nBoard:             EK-RA8M1\nFSP:                v5.5.0 or later\nIDE:                 e2studio - 2024-07 (24.7.0) or later\nCompiler:        GCC - 12.2.1.arm-12-mpacbti-34 or later"
+      },
+      {
+        "type": "text",
+        "content": "The attached sample reference application generates an RSA self-signed x509 certificate by leveraging FSP middleware MbedTLS stack and RSIP IP of RA on the EK-RA8M1 board."
+      },
+      {
+        "type": "text",
+        "content": "Below are the list of operations that can be verified using the sample application -"
+      },
+      {
+        "type": "text",
+        "content": "Example DER certificate in RTT viewer –"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399050_1.png",
+          "alt_text": "",
+          "width": "564",
+          "height": "443",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/19ceb21a03c55ecaf0dd56dbe4f4b506/images/2290ce30b1d74b28d71b47a7ca70055d.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Example PEM certificate in RTT viewer –"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399050_2.png",
+          "alt_text": "",
+          "width": "541",
+          "height": "574",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/19ceb21a03c55ecaf0dd56dbe4f4b506/images/bd789e7e1d26a94e2e1bd4e1b44909b6.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Example of PEM certificates decode via online tool –"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399050_3.png",
+          "alt_text": "",
+          "width": "355",
+          "height": "766",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/19ceb21a03c55ecaf0dd56dbe4f4b506/images/dbd22d9341284afa7554c16209833ccd.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Details of sample project:"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA8M1, RA8D1, RA8T1"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399050_1.png",
+        "alt_text": "",
+        "width": "564",
+        "height": "443",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/19ceb21a03c55ecaf0dd56dbe4f4b506/images/2290ce30b1d74b28d71b47a7ca70055d.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399050_2.png",
+        "alt_text": "",
+        "width": "541",
+        "height": "574",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/19ceb21a03c55ecaf0dd56dbe4f4b506/images/bd789e7e1d26a94e2e1bd4e1b44909b6.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399050_3.png",
+        "alt_text": "",
+        "width": "355",
+        "height": "766",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/19ceb21a03c55ecaf0dd56dbe4f4b506/images/dbd22d9341284afa7554c16209833ccd.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA8M1, RA8D1, RA8T1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA8M1, RA8D1, RA8T1"
+    ],
+    "links": [
+      {
+        "text": "Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21789664"
+      }
+    ]
+  }
+}

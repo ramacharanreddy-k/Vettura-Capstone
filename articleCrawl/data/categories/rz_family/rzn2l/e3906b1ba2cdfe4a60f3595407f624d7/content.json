@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20612317",
+    "title": "RZ/N2L: What input voltage is acceptable for VCC1833?",
+    "last_updated": "2022-09-08",
+    "extracted_at": "2025-03-08T23:46:43.799319"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat input voltage is acceptable for VCC1833?\nAnswer:\nThe RZ/N2L has five independent power supply domains (VCC1833_0 to VCC1833_4) for the Ethernet interfaces and xSPI interfaces, and you can supply voltages separately for each of the domains. \nEthernet interfaces (target power supply domains: VCC1833_0, VCC1833_1, and VCC1833_2)\nThe supply voltage differs depending on the interface to be used for the connection with the PHY. \nRGMII: 1.8 V\nRMII/MII: 3.3 V\nPlease be careful because voltages other than the above are not supported.\n\nxSPI interfaces (target power supply domains: VCC1833_3 and VCC1833_4)\nYou can supply 1.8 V or 3.3 V for connections with external devices, but the maximum operating frequency differs depending on the selected voltage.\nFor 1.8 V: 133 MHz (SDR), 100 MHz (DDR)\nFor 3.3 V: 75 MHz (SDR, DDR)\nNote: In case of the 121-pin package, VCC1833_0, VCC1833_3, and VCC1833_4 must be fixed to 3.3 V.\nSuitable Products\nRZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "What input voltage is acceptable for VCC1833?"
+      },
+      {
+        "type": "text",
+        "content": "What input voltage is acceptable for VCC1833?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RZ/N2L has five independent power supply domains (VCC1833_0 to VCC1833_4) for the Ethernet interfaces and xSPI interfaces, and you can supply voltages separately for each of the domains. \nEthernet interfaces (target power supply domains: VCC1833_0, VCC1833_1, and VCC1833_2)\nThe supply voltage differs depending on the interface to be used for the connection with the PHY. \nRGMII: 1.8 V\nRMII/MII: 3.3 V\nPlease be careful because voltages other than the above are not supported.\n\nxSPI interfaces (target power supply domains: VCC1833_3 and VCC1833_4)\nYou can supply 1.8 V or 3.3 V for connections with external devices, but the maximum operating frequency differs depending on the selected voltage.\nFor 1.8 V: 133 MHz (SDR), 100 MHz (DDR)\nFor 3.3 V: 75 MHz (SDR, DDR)\nNote: In case of the 121-pin package, VCC1833_0, VCC1833_3, and VCC1833_4 must be fixed to 3.3 V.\nSuitable Products\nRZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "The RZ/N2L has five independent power supply domains (VCC1833_0 to VCC1833_4) for the Ethernet interfaces and xSPI interfaces, and you can supply voltages separately for each of the domains. \nEthernet interfaces (target power supply domains: VCC1833_0, VCC1833_1, and VCC1833_2)\nThe supply voltage differs depending on the interface to be used for the connection with the PHY. \nRGMII: 1.8 V\nRMII/MII: 3.3 V\nPlease be careful because voltages other than the above are not supported.\n\nxSPI interfaces (target power supply domains: VCC1833_3 and VCC1833_4)\nYou can supply 1.8 V or 3.3 V for connections with external devices, but the maximum operating frequency differs depending on the selected voltage.\nFor 1.8 V: 133 MHz (SDR), 100 MHz (DDR)\nFor 3.3 V: 75 MHz (SDR, DDR)\nNote: In case of the 121-pin package, VCC1833_0, VCC1833_3, and VCC1833_4 must be fixed to 3.3 V.\nSuitable Products"
+      },
+      {
+        "type": "text",
+        "content": "The RZ/N2L has five independent power supply domains (VCC1833_0 to VCC1833_4) for the Ethernet interfaces and xSPI interfaces, and you can supply voltages separately for each of the domains."
+      },
+      {
+        "type": "text",
+        "content": "Note: In case of the 121-pin package, VCC1833_0, VCC1833_3, and VCC1833_4 must be fixed to 3.3 V."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/N2L"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/N2L"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20612298"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20612336"
+      }
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20572381",
+    "title": "RZ/V2M: How about Micron LPDDR4 Memory Connection Results?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:51:15.602706"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan we use 4GByte LPDDR4 \"MT53E1G32D2FW-046 WT:A\" provided by Micron?\nAnswer:\nThe connection for MT53E1G32D2FW-046 WT:A is checked by Renesas.\nIf you want to use the EVK software as it is, make the pin connections the same as for EVK.\nWhen you want to swap the pin, please refer to the documentation and Application Note, and modify it by yourself.\nSuitable Products\nRZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "Can we use 4GByte LPDDR4 \"MT53E1G32D2FW-046 WT:A\" provided by Micron?"
+      },
+      {
+        "type": "text",
+        "content": "Can we use 4GByte LPDDR4 \"MT53E1G32D2FW-046 WT:A\" provided by Micron?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe connection for MT53E1G32D2FW-046 WT:A is checked by Renesas.\nIf you want to use the EVK software as it is, make the pin connections the same as for EVK.\nWhen you want to swap the pin, please refer to the documentation and Application Note, and modify it by yourself.\nSuitable Products\nRZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "The connection for MT53E1G32D2FW-046 WT:A is checked by Renesas.\nIf you want to use the EVK software as it is, make the pin connections the same as for EVK.\nWhen you want to swap the pin, please refer to the documentation and Application Note, and modify it by yourself."
+      },
+      {
+        "type": "text",
+        "content": "The connection for MT53E1G32D2FW-046 WT:A is checked by Renesas.\nIf you want to use the EVK software as it is, make the pin connections the same as for EVK.\nWhen you want to swap the pin, please refer to the documentation and Application Note, and modify it by yourself."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V2M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V2M"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20574343"
+      }
+    ]
+  }
+}

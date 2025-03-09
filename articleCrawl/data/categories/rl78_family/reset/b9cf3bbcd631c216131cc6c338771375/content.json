@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/16980151",
+    "title": "Is the operating current value at reset the same as the current value at STOP mode?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:00:45.670564"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs the current flowing through VDD almost the same as in STOP mode when reset pin is fixed to low level?"
+      },
+      {
+        "type": "text",
+        "content": "Is the current flowing through VDD almost the same as in STOP mode when reset pin is fixed to low level?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes, RL78 product has almost the same operating current as STOP mode. In addition, no through-current flows during reset.\n\nSuitable Products\nRL78 Family"
+      },
+      {
+        "type": "text",
+        "content": "Yes, RL78 product has almost the same operating current as STOP mode. In addition, no through-current flows during reset."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78 Family"
+      },
+      {
+        "type": "text",
+        "content": "[Tags]   FAQNo:1003697,   JFAQNo:1002741,   MPU/MCU Peripherals,   Pin,   Power Save,   Reset,   RL78 Family"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78 Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78 Family"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17794025"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/17807979"
+      }
+    ]
+  }
+}

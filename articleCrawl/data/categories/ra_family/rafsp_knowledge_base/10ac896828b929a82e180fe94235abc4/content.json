@@ -1,0 +1,683 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20980158",
+    "title": "RA Family: ID code protection (in case of protection enabled with Bit127=0)",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:24:29.252672"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to set the ID Code to enable protection and disable authentication, and how to connect a debugger or programmer in that case?\nAnswer:\nCaution: If the MCU is protected by this manner, and cannot execute ALeRASE commands, the device will not be able to write with debugger or programmer anymore.\nHow to set the ID code\nThis setting is not available in the FSP configurator. It is enabled by adding the definition of BSP_ID_CODE_PERMANENTLY_LOCKED in the C Preprocessor setting as shown below.\n\nThe value of the ID code in the OSIS register\nIn the following, to make it easier to understand the relationship between the ID code value and the OSIS register, the ID code is color-coded each 4 bytes, such as “00112233445566778899AABBCCDDEEFF”. The ID code is set as all 00h in  ra_cfg/fsp_cfg/bsp/bsp_mcu_family_cfg.h as shown below.\n/*\n ID Code\n Note: To permanently lock and disable the debug interface define the BSP_ID_CODE_PERMANENTLY_LOCKED in the compiler settings.\n WARNING: This will disable debug access to the part and cannot be reversed by a debug probe.\n */\n#if defined(BSP_ID_CODE_PERMANENTLY_LOCKED)\n            #define BSP_CFG_ID_CODE_LONG_1 (0x00000000)\n            #define BSP_CFG_ID_CODE_LONG_2 (0x00000000)\n            #define BSP_CFG_ID_CODE_LONG_3 (0x00000000)\n            #define BSP_CFG_ID_CODE_LONG_4 (0x00000000)\n            #else\n/* ID CODE: 00112233445566778899AABBCCDDEEbf */\n#define BSP_CFG_ID_CODE_LONG_1 (0x33221100)\n#define BSP_CFG_ID_CODE_LONG_2 (0x77665544)\n#define BSP_CFG_ID_CODE_LONG_3 (0xBBAA9988)\n#define BSP_CFG_ID_CODE_LONG_4 (0xbfEEDDCC)\n#endif\n\nThe ID code is generated in the program image file as shown below. It defers as follows depending on the address of the OSIS register :\nIn case of RA2L1:\nS3150101001800000000FFFFFFFF00000000FFFFFFFFD8\nS3110101002800000000FFFFFFFF00000000C8\n\nIn case of RA6M3:\nS3150100A15000000000000000000000000000000000F8\n\nIn case of RA4E2:\nS3150100A1200000000000000000000000000000000028\n\nDebugger connection in e2 studio (ID code authentication)\nSince ID code authentication always mismatches, an authentication error dialog is displayed as shown below.\nIn case of J-Link:\n\nIn case of E2 / E2 Lite:\n\nDebugger connection in e2 studio (with ALeRASE execution)\nIn the case of E2 or E2 Lite, even if you set ALeRASE ID (FFFFFFFFFFFFFFFFFF45534152654C41) to the ID code, the erase process is not performed. As shown in the dialog below, you will see that the process of erasing all flash memory has failed. In case of J-Link, erasure is not executed.\n\nOn the MCUs which ALeRASE is available in this mode (*1), you can erase the entire internal flash ROM by setting the ALeRASE ID (FFFFFFFFFFFFFFFFFF45534152654C41) to the ID code. It cannot be used when using J-Link debugger. If the program image to be loaded is set, the image will be loaded after the ALeRASE execution.\n \n*1: \"RA2A1 Group, RA2L1 Group, RA2E1 Group, RA4M1 Group, RA4W1 Group, RA6M1 Group, RA6M2 Group, RA6M3 Group, RA6T1 Group, Note on ALeRASE command” (TN-RA*-A0014A/E)\nConnection by RFP (with ID code authentication)\nSince the ID code authentication always mismatches, a connection failure error is displayed as follows.\n\nConnection by RFP (with ALeRASE execution)\nEven if you set the ALeRASE code (414C6552415345FFFFFFFFFFFFFFFFFF), the execution of ALeRASE fails as shown below.\n\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "How to set the ID Code to enable protection and disable authentication, and how to connect a debugger or programmer in that case?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nCaution: If the MCU is protected by this manner, and cannot execute ALeRASE commands, the device will not be able to write with debugger or programmer anymore.\nHow to set the ID code\nThis setting is not available in the FSP configurator. It is enabled by adding the definition of BSP_ID_CODE_PERMANENTLY_LOCKED in the C Preprocessor setting as shown below.\n\nThe value of the ID code in the OSIS register\nIn the following, to make it easier to understand the relationship between the ID code value and the OSIS register, the ID code is color-coded each 4 bytes, such as “00112233445566778899AABBCCDDEEFF”. The ID code is set as all 00h in  ra_cfg/fsp_cfg/bsp/bsp_mcu_family_cfg.h as shown below.\n/*\n ID Code\n Note: To permanently lock and disable the debug interface define the BSP_ID_CODE_PERMANENTLY_LOCKED in the compiler settings.\n WARNING: This will disable debug access to the part and cannot be reversed by a debug probe.\n */\n#if defined(BSP_ID_CODE_PERMANENTLY_LOCKED)\n            #define BSP_CFG_ID_CODE_LONG_1 (0x00000000)\n            #define BSP_CFG_ID_CODE_LONG_2 (0x00000000)\n            #define BSP_CFG_ID_CODE_LONG_3 (0x00000000)\n            #define BSP_CFG_ID_CODE_LONG_4 (0x00000000)\n            #else\n/* ID CODE: 00112233445566778899AABBCCDDEEbf */\n#define BSP_CFG_ID_CODE_LONG_1 (0x33221100)\n#define BSP_CFG_ID_CODE_LONG_2 (0x77665544)\n#define BSP_CFG_ID_CODE_LONG_3 (0xBBAA9988)\n#define BSP_CFG_ID_CODE_LONG_4 (0xbfEEDDCC)\n#endif\n\nThe ID code is generated in the program image file as shown below. It defers as follows depending on the address of the OSIS register :\nIn case of RA2L1:\nS3150101001800000000FFFFFFFF00000000FFFFFFFFD8\nS3110101002800000000FFFFFFFF00000000C8\n\nIn case of RA6M3:\nS3150100A15000000000000000000000000000000000F8\n\nIn case of RA4E2:\nS3150100A1200000000000000000000000000000000028\n\nDebugger connection in e2 studio (ID code authentication)\nSince ID code authentication always mismatches, an authentication error dialog is displayed as shown below.\nIn case of J-Link:\n\nIn case of E2 / E2 Lite:\n\nDebugger connection in e2 studio (with ALeRASE execution)\nIn the case of E2 or E2 Lite, even if you set ALeRASE ID (FFFFFFFFFFFFFFFFFF45534152654C41) to the ID code, the erase process is not performed. As shown in the dialog below, you will see that the process of erasing all flash memory has failed. In case of J-Link, erasure is not executed.\n\nOn the MCUs which ALeRASE is available in this mode (*1), you can erase the entire internal flash ROM by setting the ALeRASE ID (FFFFFFFFFFFFFFFFFF45534152654C41) to the ID code. It cannot be used when using J-Link debugger. If the program image to be loaded is set, the image will be loaded after the ALeRASE execution.\n \n*1: \"RA2A1 Group, RA2L1 Group, RA2E1 Group, RA4M1 Group, RA4W1 Group, RA6M1 Group, RA6M2 Group, RA6M3 Group, RA6T1 Group, Note on ALeRASE command” (TN-RA*-A0014A/E)\nConnection by RFP (with ID code authentication)\nSince the ID code authentication always mismatches, a connection failure error is displayed as follows.\n\nConnection by RFP (with ALeRASE execution)\nEven if you set the ALeRASE code (414C6552415345FFFFFFFFFFFFFFFFFF), the execution of ALeRASE fails as shown below.\n\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Caution: If the MCU is protected by this manner, and cannot execute ALeRASE commands, the device will not be able to write with debugger or programmer anymore.\nHow to set the ID code\nThis setting is not available in the FSP configurator. It is enabled by adding the definition of BSP_ID_CODE_PERMANENTLY_LOCKED in the C Preprocessor setting as shown below.\n\nThe value of the ID code in the OSIS register\nIn the following, to make it easier to understand the relationship between the ID code value and the OSIS register, the ID code is color-coded each 4 bytes, such as “00112233445566778899AABBCCDDEEFF”. The ID code is set as all 00h in  ra_cfg/fsp_cfg/bsp/bsp_mcu_family_cfg.h as shown below.\n/*\n ID Code\n Note: To permanently lock and disable the debug interface define the BSP_ID_CODE_PERMANENTLY_LOCKED in the compiler settings.\n WARNING: This will disable debug access to the part and cannot be reversed by a debug probe.\n */\n#if defined(BSP_ID_CODE_PERMANENTLY_LOCKED)\n            #define BSP_CFG_ID_CODE_LONG_1 (0x00000000)\n            #define BSP_CFG_ID_CODE_LONG_2 (0x00000000)\n            #define BSP_CFG_ID_CODE_LONG_3 (0x00000000)\n            #define BSP_CFG_ID_CODE_LONG_4 (0x00000000)\n            #else\n/* ID CODE: 00112233445566778899AABBCCDDEEbf */\n#define BSP_CFG_ID_CODE_LONG_1 (0x33221100)\n#define BSP_CFG_ID_CODE_LONG_2 (0x77665544)\n#define BSP_CFG_ID_CODE_LONG_3 (0xBBAA9988)\n#define BSP_CFG_ID_CODE_LONG_4 (0xbfEEDDCC)\n#endif\n\nThe ID code is generated in the program image file as shown below. It defers as follows depending on the address of the OSIS register :\nIn case of RA2L1:\nS3150101001800000000FFFFFFFF00000000FFFFFFFFD8\nS3110101002800000000FFFFFFFF00000000C8\n\nIn case of RA6M3:\nS3150100A15000000000000000000000000000000000F8\n\nIn case of RA4E2:\nS3150100A1200000000000000000000000000000000028\n\nDebugger connection in e2 studio (ID code authentication)\nSince ID code authentication always mismatches, an authentication error dialog is displayed as shown below.\nIn case of J-Link:\n\nIn case of E2 / E2 Lite:\n\nDebugger connection in e2 studio (with ALeRASE execution)\nIn the case of E2 or E2 Lite, even if you set ALeRASE ID (FFFFFFFFFFFFFFFFFF45534152654C41) to the ID code, the erase process is not performed. As shown in the dialog below, you will see that the process of erasing all flash memory has failed. In case of J-Link, erasure is not executed.\n\nOn the MCUs which ALeRASE is available in this mode (*1), you can erase the entire internal flash ROM by setting the ALeRASE ID (FFFFFFFFFFFFFFFFFF45534152654C41) to the ID code. It cannot be used when using J-Link debugger. If the program image to be loaded is set, the image will be loaded after the ALeRASE execution.\n \n*1: \"RA2A1 Group, RA2L1 Group, RA2E1 Group, RA4M1 Group, RA4W1 Group, RA6M1 Group, RA6M2 Group, RA6M3 Group, RA6T1 Group, Note on ALeRASE command” (TN-RA*-A0014A/E)\nConnection by RFP (with ID code authentication)\nSince the ID code authentication always mismatches, a connection failure error is displayed as follows.\n\nConnection by RFP (with ALeRASE execution)\nEven if you set the ALeRASE code (414C6552415345FFFFFFFFFFFFFFFFFF), the execution of ALeRASE fails as shown below."
+      },
+      {
+        "type": "text",
+        "content": "Caution: If the MCU is protected by this manner, and cannot execute ALeRASE commands, the device will not be able to write with debugger or programmer anymore."
+      },
+      {
+        "type": "text",
+        "content": "Caution: If the MCU is protected by this manner, and cannot execute ALeRASE commands, the device will not be able to write with debugger or programmer anymore."
+      },
+      {
+        "type": "text",
+        "content": "How to set the ID code"
+      },
+      {
+        "type": "text",
+        "content": "How to set the ID code"
+      },
+      {
+        "type": "text",
+        "content": "This setting is not available in the FSP configurator. It is enabled by adding the definition of BSP_ID_CODE_PERMANENTLY_LOCKED in the C Preprocessor setting as shown below."
+      },
+      {
+        "type": "text",
+        "content": "This setting is not available in the FSP configurator. It is enabled by adding the definition of BSP_ID_CODE_PERMANENTLY_LOCKED in the C Preprocessor setting as shown below."
+      },
+      {
+        "type": "text",
+        "content": "BSP_ID_CODE_PERMANENTLY_LOCKED"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372196.png",
+          "alt_text": "",
+          "width": "818",
+          "height": "421",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/10ac896828b929a82e180fe94235abc4/images/917aab28b4420ae2c907ff1d61b797f5.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The value of the ID code in the OSIS register"
+      },
+      {
+        "type": "text",
+        "content": "The value of the ID code in the OSIS register"
+      },
+      {
+        "type": "text",
+        "content": "In the following, to make it easier to understand the relationship between the ID code value and the OSIS register, the ID code is color-coded each 4 bytes, such as “00112233445566778899AABBCCDDEEFF”. The ID code is set as all 00h in  ra_cfg/fsp_cfg/bsp/bsp_mcu_family_cfg.h as shown below."
+      },
+      {
+        "type": "text",
+        "content": "In the following, to make it easier to understand the relationship between the ID code value and the OSIS register, the ID code is color-coded each 4 bytes, such as “00112233445566778899AABBCCDDEEFF”. The ID code is set as all 00h in  ra_cfg/fsp_cfg/bsp/bsp_mcu_family_cfg.h as shown below."
+      },
+      {
+        "type": "text",
+        "content": "00112233"
+      },
+      {
+        "type": "text",
+        "content": "44556677"
+      },
+      {
+        "type": "text",
+        "content": "8899AABB"
+      },
+      {
+        "type": "text",
+        "content": "CCDDEEFF"
+      },
+      {
+        "type": "text",
+        "content": "/*\n ID Code\n Note: To permanently lock and disable the debug interface define the BSP_ID_CODE_PERMANENTLY_LOCKED in the compiler settings.\n WARNING: This will disable debug access to the part and cannot be reversed by a debug probe.\n */\n#if defined(BSP_ID_CODE_PERMANENTLY_LOCKED)\n            #define BSP_CFG_ID_CODE_LONG_1 (0x00000000)\n            #define BSP_CFG_ID_CODE_LONG_2 (0x00000000)\n            #define BSP_CFG_ID_CODE_LONG_3 (0x00000000)\n            #define BSP_CFG_ID_CODE_LONG_4 (0x00000000)\n            #else"
+      },
+      {
+        "type": "text",
+        "content": "/*"
+      },
+      {
+        "type": "text",
+        "content": "ID Code"
+      },
+      {
+        "type": "text",
+        "content": "Note: To permanently lock and disable the debug interface define the BSP_ID_CODE_PERMANENTLY_LOCKED in the compiler settings."
+      },
+      {
+        "type": "text",
+        "content": "WARNING: This will disable debug access to the part and cannot be reversed by a debug probe."
+      },
+      {
+        "type": "text",
+        "content": "WARNING: This will disable debug access to the part and cannot be reversed by a debug probe."
+      },
+      {
+        "type": "text",
+        "content": "*/"
+      },
+      {
+        "type": "text",
+        "content": "#if defined(BSP_ID_CODE_PERMANENTLY_LOCKED)"
+      },
+      {
+        "type": "text",
+        "content": "#define BSP_CFG_ID_CODE_LONG_1 (0x00000000)"
+      },
+      {
+        "type": "text",
+        "content": "#define BSP_CFG_ID_CODE_LONG_1 (0x"
+      },
+      {
+        "type": "text",
+        "content": "00000000"
+      },
+      {
+        "type": "text",
+        "content": ")"
+      },
+      {
+        "type": "text",
+        "content": "#define BSP_CFG_ID_CODE_LONG_2 (0x00000000)"
+      },
+      {
+        "type": "text",
+        "content": "#define BSP_CFG_ID_CODE_LONG_2 (0x"
+      },
+      {
+        "type": "text",
+        "content": "00000000"
+      },
+      {
+        "type": "text",
+        "content": ")"
+      },
+      {
+        "type": "text",
+        "content": "#define BSP_CFG_ID_CODE_LONG_3 (0x00000000)"
+      },
+      {
+        "type": "text",
+        "content": "#define BSP_CFG_ID_CODE_LONG_3 (0x"
+      },
+      {
+        "type": "text",
+        "content": "00000000"
+      },
+      {
+        "type": "text",
+        "content": ")"
+      },
+      {
+        "type": "text",
+        "content": "#define BSP_CFG_ID_CODE_LONG_4 (0x00000000)"
+      },
+      {
+        "type": "text",
+        "content": "#define BSP_CFG_ID_CODE_LONG_4 (0x"
+      },
+      {
+        "type": "text",
+        "content": "00000000"
+      },
+      {
+        "type": "text",
+        "content": ")"
+      },
+      {
+        "type": "text",
+        "content": "#else"
+      },
+      {
+        "type": "text",
+        "content": "/* ID CODE: 00112233445566778899AABBCCDDEEbf */\n#define BSP_CFG_ID_CODE_LONG_1 (0x33221100)\n#define BSP_CFG_ID_CODE_LONG_2 (0x77665544)\n#define BSP_CFG_ID_CODE_LONG_3 (0xBBAA9988)\n#define BSP_CFG_ID_CODE_LONG_4 (0xbfEEDDCC)"
+      },
+      {
+        "type": "text",
+        "content": "/* ID CODE: 00112233445566778899AABBCCDDEEbf */"
+      },
+      {
+        "type": "text",
+        "content": "#define BSP_CFG_ID_CODE_LONG_1 (0x33221100)"
+      },
+      {
+        "type": "text",
+        "content": "#define BSP_CFG_ID_CODE_LONG_2 (0x77665544)"
+      },
+      {
+        "type": "text",
+        "content": "#define BSP_CFG_ID_CODE_LONG_3 (0xBBAA9988)"
+      },
+      {
+        "type": "text",
+        "content": "#define BSP_CFG_ID_CODE_LONG_4 (0xbfEEDDCC)"
+      },
+      {
+        "type": "text",
+        "content": "#endif"
+      },
+      {
+        "type": "text",
+        "content": "#endif"
+      },
+      {
+        "type": "text",
+        "content": "The ID code is generated in the program image file as shown below. It defers as follows depending on the address of the OSIS register :"
+      },
+      {
+        "type": "text",
+        "content": "The ID code is generated in the program image file as shown below."
+      },
+      {
+        "type": "text",
+        "content": "It defers as follows depending on the address of the OSIS register :"
+      },
+      {
+        "type": "text",
+        "content": "In case of RA2L1:"
+      },
+      {
+        "type": "text",
+        "content": "In case of RA2L1:"
+      },
+      {
+        "type": "text",
+        "content": "S3150101001800000000FFFFFFFF00000000FFFFFFFFD8\nS3110101002800000000FFFFFFFF00000000C8"
+      },
+      {
+        "type": "text",
+        "content": "S3150101001800000000FFFFFFFF00000000FFFFFFFFD8"
+      },
+      {
+        "type": "text",
+        "content": "S31501010018"
+      },
+      {
+        "type": "text",
+        "content": "00000000"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "00000000"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFFD8"
+      },
+      {
+        "type": "text",
+        "content": "S3110101002800000000FFFFFFFF00000000C8"
+      },
+      {
+        "type": "text",
+        "content": "S31101010028"
+      },
+      {
+        "type": "text",
+        "content": "00000000"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "00000000"
+      },
+      {
+        "type": "text",
+        "content": "C8"
+      },
+      {
+        "type": "text",
+        "content": "In case of RA6M3:"
+      },
+      {
+        "type": "text",
+        "content": "In case of RA6M3:"
+      },
+      {
+        "type": "text",
+        "content": "S3150100A15000000000000000000000000000000000F8"
+      },
+      {
+        "type": "text",
+        "content": "S3150100A15000000000000000000000000000000000F8"
+      },
+      {
+        "type": "text",
+        "content": "S3150100A150"
+      },
+      {
+        "type": "text",
+        "content": "00000000"
+      },
+      {
+        "type": "text",
+        "content": "00000000"
+      },
+      {
+        "type": "text",
+        "content": "00000000"
+      },
+      {
+        "type": "text",
+        "content": "00000000"
+      },
+      {
+        "type": "text",
+        "content": "F8"
+      },
+      {
+        "type": "text",
+        "content": "In case of RA4E2:"
+      },
+      {
+        "type": "text",
+        "content": "In case of RA4E2:"
+      },
+      {
+        "type": "text",
+        "content": "S3150100A1200000000000000000000000000000000028"
+      },
+      {
+        "type": "text",
+        "content": "S3150100A1200000000000000000000000000000000028"
+      },
+      {
+        "type": "text",
+        "content": "S3150100A120"
+      },
+      {
+        "type": "text",
+        "content": "00000000"
+      },
+      {
+        "type": "text",
+        "content": "00000000"
+      },
+      {
+        "type": "text",
+        "content": "00000000"
+      },
+      {
+        "type": "text",
+        "content": "00000000"
+      },
+      {
+        "type": "text",
+        "content": "28"
+      },
+      {
+        "type": "text",
+        "content": "Debugger connection in e2 studio (ID code authentication)"
+      },
+      {
+        "type": "text",
+        "content": "Debugger connection in e2 studio (ID code authentication)"
+      },
+      {
+        "type": "text",
+        "content": "Since ID code authentication always mismatches, an authentication error dialog is displayed as shown below."
+      },
+      {
+        "type": "text",
+        "content": "Since ID code authentication always mismatches, an authentication error dialog is displayed as shown below."
+      },
+      {
+        "type": "text",
+        "content": "In case of J-Link:"
+      },
+      {
+        "type": "text",
+        "content": "In case of J-Link:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372196-2.png",
+          "alt_text": "",
+          "width": "407",
+          "height": "339",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/10ac896828b929a82e180fe94235abc4/images/92b941204089dc9a89be81f639e897b9.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "In case of E2 / E2 Lite:"
+      },
+      {
+        "type": "text",
+        "content": "In case of E2 / E2 Lite:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372196-3.png",
+          "alt_text": "",
+          "width": "408",
+          "height": "148",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/10ac896828b929a82e180fe94235abc4/images/67dc4ef70e8fcf05c7e316962407377d.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Debugger connection in e2 studio (with ALeRASE execution)"
+      },
+      {
+        "type": "text",
+        "content": "Debugger connection in e2 studio (with ALeRASE execution)"
+      },
+      {
+        "type": "text",
+        "content": "In the case of E2 or E2 Lite, even if you set ALeRASE ID (FFFFFFFFFFFFFFFFFF45534152654C41) to the ID code, the erase process is not performed. As shown in the dialog below, you will see that the process of erasing all flash memory has failed. In case of J-Link, erasure is not executed."
+      },
+      {
+        "type": "text",
+        "content": "In the case of E2 or E2 Lite, even if you set ALeRASE ID (FFFFFFFFFFFFFFFFFF45534152654C41) to the ID code, the erase process is not performed. As shown in the dialog below, you will see that the process of erasing all flash memory has failed. In case of J-Link, erasure is not executed."
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFFFFFFFFFFFF45534152654C41"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372196-4.png",
+          "alt_text": "",
+          "width": "404",
+          "height": "151",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/10ac896828b929a82e180fe94235abc4/images/28b387332674ea54f1c83e2a5de9a2c6.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "On the MCUs which ALeRASE is available in this mode (*1), you can erase the entire internal flash ROM by setting the ALeRASE ID (FFFFFFFFFFFFFFFFFF45534152654C41) to the ID code. It cannot be used when using J-Link debugger. If the program image to be loaded is set, the image will be loaded after the ALeRASE execution."
+      },
+      {
+        "type": "text",
+        "content": "On the MCUs which ALeRASE is available in this mode (*1), you can erase the entire internal flash ROM by setting the ALeRASE ID (FFFFFFFFFFFFFFFFFF45534152654C41) to the ID code. It cannot be used when using J-Link debugger. If the program image to be loaded is set, the image will be loaded after the ALeRASE execution."
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFFFFFFFFFFFF45534152654C41"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372196-5.png",
+          "alt_text": "",
+          "width": "651",
+          "height": "228",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/10ac896828b929a82e180fe94235abc4/images/3b53be40f9ad9b91c7fcac55e580d9ab.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372196-6.png",
+          "alt_text": "",
+          "width": "495",
+          "height": "378",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/10ac896828b929a82e180fe94235abc4/images/a1c6a50c20807d83810931e82a20f53e.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "*1: \"RA2A1 Group, RA2L1 Group, RA2E1 Group, RA4M1 Group, RA4W1 Group, RA6M1 Group, RA6M2 Group, RA6M3 Group, RA6T1 Group, Note on ALeRASE command” (TN-RA*-A0014A/E)"
+      },
+      {
+        "type": "text",
+        "content": "*1: \"RA2A1 Group, RA2L1 Group, RA2E1 Group, RA4M1 Group, RA4W1 Group, RA6M1 Group, RA6M2 Group, RA6M3 Group, RA6T1 Group, Note on ALeRASE command” (TN-RA*-A0014A/E)"
+      },
+      {
+        "type": "text",
+        "content": "Connection by RFP (with ID code authentication)"
+      },
+      {
+        "type": "text",
+        "content": "Connection by RFP (with ID code authentication)"
+      },
+      {
+        "type": "text",
+        "content": "Since the ID code authentication always mismatches, a connection failure error is displayed as follows."
+      },
+      {
+        "type": "text",
+        "content": "Since the ID code authentication always mismatches, a connection failure error is displayed as follows."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372196-7.png",
+          "alt_text": "",
+          "width": "604",
+          "height": "212",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/10ac896828b929a82e180fe94235abc4/images/1801211fb7c9ff75f297b7f3e511b6d4.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Connection by RFP (with ALeRASE execution)"
+      },
+      {
+        "type": "text",
+        "content": "Connection by RFP (with ALeRASE execution)"
+      },
+      {
+        "type": "text",
+        "content": "Even if you set the ALeRASE code (414C6552415345FFFFFFFFFFFFFFFFFF), the execution of ALeRASE fails as shown below."
+      },
+      {
+        "type": "text",
+        "content": "Even if you set the ALeRASE code (414C6552415345FFFFFFFFFFFFFFFFFF), the execution of ALeRASE fails as shown below."
+      },
+      {
+        "type": "text",
+        "content": "414C6552415345FFFFFFFFFFFFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "),"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372196-8.png",
+          "alt_text": "",
+          "width": "601",
+          "height": "300",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/10ac896828b929a82e180fe94235abc4/images/977ad1a02a8b575729a1cd648baaa147.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "RA and FSP"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372196.png",
+        "alt_text": "",
+        "width": "818",
+        "height": "421",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/10ac896828b929a82e180fe94235abc4/images/917aab28b4420ae2c907ff1d61b797f5.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372196-2.png",
+        "alt_text": "",
+        "width": "407",
+        "height": "339",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/10ac896828b929a82e180fe94235abc4/images/92b941204089dc9a89be81f639e897b9.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372196-3.png",
+        "alt_text": "",
+        "width": "408",
+        "height": "148",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/10ac896828b929a82e180fe94235abc4/images/67dc4ef70e8fcf05c7e316962407377d.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372196-4.png",
+        "alt_text": "",
+        "width": "404",
+        "height": "151",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/10ac896828b929a82e180fe94235abc4/images/28b387332674ea54f1c83e2a5de9a2c6.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372196-5.png",
+        "alt_text": "",
+        "width": "651",
+        "height": "228",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/10ac896828b929a82e180fe94235abc4/images/3b53be40f9ad9b91c7fcac55e580d9ab.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372196-6.png",
+        "alt_text": "",
+        "width": "495",
+        "height": "378",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/10ac896828b929a82e180fe94235abc4/images/a1c6a50c20807d83810931e82a20f53e.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372196-7.png",
+        "alt_text": "",
+        "width": "604",
+        "height": "212",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/10ac896828b929a82e180fe94235abc4/images/1801211fb7c9ff75f297b7f3e511b6d4.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372196-8.png",
+        "alt_text": "",
+        "width": "601",
+        "height": "300",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/10ac896828b929a82e180fe94235abc4/images/977ad1a02a8b575729a1cd648baaa147.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "/*\n ID Code\n Note: To permanently lock and disable the debug interface define the BSP_ID_CODE_PERMANENTLY_LOCKED in the compiler settings.\n WARNING: This will disable debug access to the part and cannot be reversed by a debug probe.\n */\n#if defined(BSP_ID_CODE_PERMANENTLY_LOCKED)\n            #define BSP_CFG_ID_CODE_LONG_1 (0x00000000)\n            #define BSP_CFG_ID_CODE_LONG_2 (0x00000000)\n            #define BSP_CFG_ID_CODE_LONG_3 (0x00000000)\n            #define BSP_CFG_ID_CODE_LONG_4 (0x00000000)\n            #else\n/* ID CODE: 00112233445566778899AABBCCDDEEbf */\n#define BSP_CFG_ID_CODE_LONG_1 (0x33221100)\n#define BSP_CFG_ID_CODE_LONG_2 (0x77665544)\n#define BSP_CFG_ID_CODE_LONG_3 (0xBBAA9988)\n#define BSP_CFG_ID_CODE_LONG_4 (0xbfEEDDCC)\n#endif"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "S3150101001800000000FFFFFFFF00000000FFFFFFFFD8\nS3110101002800000000FFFFFFFF00000000C8"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "S3150100A15000000000000000000000000000000000F8"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "S3150100A1200000000000000000000000000000000028"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": [
+      {
+        "text": "\"RA2A1 Group, RA2L1 Group, RA2E1 Group, RA4M1 Group, RA4W1 Group, RA6M1 Group, RA6M2 Group, RA6M3 Group, RA6T1 Group, Note on ALeRASE command” (TN-RA*-A0014A/E)",
+        "url": "https://www.renesas.com/us/en/document/tcu/ra2a1-group-ra2l1-group-ra2e1-group-ra4m1-group-ra4w1-group-ra6m1-group-ra6m2-group-ra6m3-group"
+      }
+    ]
+  }
+}

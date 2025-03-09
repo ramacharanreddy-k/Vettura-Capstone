@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21789662",
+    "title": "RA0E1: When I create a RA0E1 project and change the optimization option to none (-O0), an error occurs during compilation",
+    "last_updated": "2025-04-02",
+    "extracted_at": "2025-03-08T23:22:30.731699"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhen creating a RA0E1 project and changing the optimization option to None (-O0), there is an error during compilation. If the optimization option is changed to any other optimization option, there is no error during compilation.\nAnswer:\nCurrently, the RA0E1 uses \"Fill gap\" and \"Optimize aggressively for size (-Oz)\" by default to optimize code size. According to the FSP manual, there is a section of code flash between the end of the vector table (near the beginning of the flash) and the ROM register (address 0x400). When the \"Fill Flash Gap\" option is selected to \"Fill gap\", the pre-selected setup function will be filled in this area to reduce the amount of the Code Flash used by the FSP. Therefore, when the user changes the optimization option to \"None (-O0)\", the compiled content of the function will occupy a larger Flash space, which will exceed the gap area, resulting in a compilation error.\nTo avoid this, the user can disable gap filling by changing the \"Fill Flash Gap\" setting to \"Do not fill gap\" in the BSP properties.\nAppendix: For the meaning of \"Fill Flash Gap\", please refer to the content in the FSP manual as follows:\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "When creating a RA0E1 project and changing the optimization option to None (-O0), there is an error during compilation. If the optimization option is changed to any other optimization option, there is no error during compilation."
+      },
+      {
+        "type": "text",
+        "content": "When creating a RA0E1 project and changing the optimization option to None (-O0), there is an error during compilation. If the optimization option is changed to any other optimization option, there is no error during compilation."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nCurrently, the RA0E1 uses \"Fill gap\" and \"Optimize aggressively for size (-Oz)\" by default to optimize code size. According to the FSP manual, there is a section of code flash between the end of the vector table (near the beginning of the flash) and the ROM register (address 0x400). When the \"Fill Flash Gap\" option is selected to \"Fill gap\", the pre-selected setup function will be filled in this area to reduce the amount of the Code Flash used by the FSP. Therefore, when the user changes the optimization option to \"None (-O0)\", the compiled content of the function will occupy a larger Flash space, which will exceed the gap area, resulting in a compilation error.\nTo avoid this, the user can disable gap filling by changing the \"Fill Flash Gap\" setting to \"Do not fill gap\" in the BSP properties.\nAppendix: For the meaning of \"Fill Flash Gap\", please refer to the content in the FSP manual as follows:\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "Currently, the RA0E1 uses \"Fill gap\" and \"Optimize aggressively for size (-Oz)\" by default to optimize code size. According to the FSP manual, there is a section of code flash between the end of the vector table (near the beginning of the flash) and the ROM register (address 0x400). When the \"Fill Flash Gap\" option is selected to \"Fill gap\", the pre-selected setup function will be filled in this area to reduce the amount of the Code Flash used by the FSP. Therefore, when the user changes the optimization option to \"None (-O0)\", the compiled content of the function will occupy a larger Flash space, which will exceed the gap area, resulting in a compilation error.\nTo avoid this, the user can disable gap filling by changing the \"Fill Flash Gap\" setting to \"Do not fill gap\" in the BSP properties.\nAppendix: For the meaning of \"Fill Flash Gap\", please refer to the content in the FSP manual as follows:"
+      },
+      {
+        "type": "text",
+        "content": "Currently, the RA0E1 uses \"Fill gap\" and \"Optimize aggressively for size (-Oz)\" by default to optimize code size. According to the FSP manual, there is a section of code flash between the end of the vector table (near the beginning of the flash) and the ROM register (address 0x400). When the \"Fill Flash Gap\" option is selected to \"Fill gap\", the pre-selected setup function will be filled in this area to reduce the amount of the Code Flash used by the FSP. Therefore, when the user changes the optimization option to \"None (-O0)\", the compiled content of the function will occupy a larger Flash space, which will exceed the gap area, resulting in a compilation error."
+      },
+      {
+        "type": "text",
+        "content": "To avoid this, the user can disable gap filling by changing the \"Fill Flash Gap\" setting to \"Do not fill gap\" in the BSP properties."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399052_1.png",
+          "alt_text": "",
+          "width": "543",
+          "height": "259",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/1e8081c528d379f61c9dd5652c68a2d8/images/f38a5a98a38add192f308b9fb6a3c235.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Appendix: For the meaning of \"Fill Flash Gap\", please refer to the content in the FSP manual as follows:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399052_2a.png",
+          "alt_text": "",
+          "width": "800",
+          "height": "179",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/1e8081c528d379f61c9dd5652c68a2d8/images/bab6ca49ea558cbfc644566873843096.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Chinese"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399052_1.png",
+        "alt_text": "",
+        "width": "543",
+        "height": "259",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/1e8081c528d379f61c9dd5652c68a2d8/images/f38a5a98a38add192f308b9fb6a3c235.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399052_2a.png",
+        "alt_text": "",
+        "width": "800",
+        "height": "179",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/1e8081c528d379f61c9dd5652c68a2d8/images/bab6ca49ea558cbfc644566873843096.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": [
+      {
+        "text": "Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21591865"
+      }
+    ]
+  }
+}

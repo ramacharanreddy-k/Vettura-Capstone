@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20982678",
+    "title": "RZ/G: Use of Evaluation Board Kit and partner boards depending on the purposes",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:43:58.515377"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow should a Renesas Evaluation Board Kit and partner boards be used depending on the purposes?\nAnswer:\nPlease use a Renesas Evaluation Board Kit for initial evaluation of customers' products. The Verified Linux Package provided by Renesas is developed and maintained using VK as the base so evaluation on maintained software is enabled. However, Renesas Evaluation Board Kits cannot be mass-produced in a state where they are incorporated as part of a set for customers. \nIf you are planning incorporation into a set for customers, please consider a mass production-ready partner board. As partner boards, boards with various functions and installed devices in various sizes and shapes are available.\nSuitable Products\nRZ/G2L, RZ/G2LC, RZ/G2UL, RZ/Five"
+      },
+      {
+        "type": "text",
+        "content": "How should a Renesas Evaluation Board Kit and partner boards be used depending on the purposes?"
+      },
+      {
+        "type": "text",
+        "content": "How should a Renesas Evaluation Board Kit and partner boards be used depending on the purposes?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nPlease use a Renesas Evaluation Board Kit for initial evaluation of customers' products. The Verified Linux Package provided by Renesas is developed and maintained using VK as the base so evaluation on maintained software is enabled. However, Renesas Evaluation Board Kits cannot be mass-produced in a state where they are incorporated as part of a set for customers. \nIf you are planning incorporation into a set for customers, please consider a mass production-ready partner board. As partner boards, boards with various functions and installed devices in various sizes and shapes are available.\nSuitable Products\nRZ/G2L, RZ/G2LC, RZ/G2UL, RZ/Five"
+      },
+      {
+        "type": "text",
+        "content": "Please use a Renesas Evaluation Board Kit for initial evaluation of customers' products. The Verified Linux Package provided by Renesas is developed and maintained using VK as the base so evaluation on maintained software is enabled. However, Renesas Evaluation Board Kits cannot be mass-produced in a state where they are incorporated as part of a set for customers. \nIf you are planning incorporation into a set for customers, please consider a mass production-ready partner board. As partner boards, boards with various functions and installed devices in various sizes and shapes are available."
+      },
+      {
+        "type": "text",
+        "content": "Please use a Renesas Evaluation Board Kit for initial evaluation of customers' products. The Verified Linux Package provided by Renesas is developed and maintained using VK as the base so evaluation on maintained software is enabled. However, Renesas Evaluation Board Kits cannot be mass-produced in a state where they are incorporated as part of a set for customers. \nIf you are planning incorporation into a set for customers, please consider a mass production-ready partner board. As partner boards, boards with various functions and installed devices in various sizes and shapes are available."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/G2L, RZ/G2LC, RZ/G2UL, RZ/Five"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/G2L, RZ/G2LC, RZ/G2UL, RZ/Five"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/G2L, RZ/G2LC, RZ/G2UL, RZ/Five"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20982683"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20982688"
+      }
+    ]
+  }
+}

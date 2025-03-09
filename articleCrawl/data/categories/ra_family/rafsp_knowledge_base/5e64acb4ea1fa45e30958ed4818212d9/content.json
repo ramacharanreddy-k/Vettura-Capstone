@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21727832",
+    "title": "RA family: RTC does not work properly even if power is supplied from the VBATT pin",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:23:00.162745"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nAfter turning off the VCC power of the MCU with power supplied to the VBATT pin, the power is turned on again to the VCC power supply, but the timer count of the RTC does not work properly. What can I do to correct this?\nAnswer:\nPlease refer to the Usage Notes on the RTC driver description page of the FSP User's Manual.\nIn case of warm start or a hard reset (when VBATT powers RTC in case of power loss), user \nmight not want to reinitialize the clock source after reset. In this case, disable the Set \nSource Clock in Open property for RTC and call R_RTC_ClockSourceSet() only when RTC \nclock source needs to be set. Application should check for the reset type and should \naccordingly call the R_RTC_ClockSourceSet().\n\nAs described in this explanation, you need to set the ‘Set Source Clock in Open’ property of the RTC driver to disable. This will prevent the R_RTC_Open function from reconfiguring the RTC clock source. The user application should be implemented to execute the R_RTC_ClockSourceSet function only when initializing the RTC.\nIn an application, one method to determine whether the RTC has been initialized is to use the VBATT backup register, which retains its value when power is supplied to the VBATT pin. By storing a specific magic number in this register, you can decide whether to execute the R_RTC_ClockSourceSet function based on the stored state. If the magic number is present in the register at startup, it indicates that power supply and operation of the RTC have been maintained, and thus the R_RTC_ClockSourceSet function should not be executed.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "After turning off the VCC power of the MCU with power supplied to the VBATT pin, the power is turned on again to the VCC power supply, but the timer count of the RTC does not work properly. What can I do to correct this?"
+      },
+      {
+        "type": "text",
+        "content": "After turning off the VCC power of the MCU with power supplied to the VBATT pin, the power is turned on again to the VCC power supply, but the timer count of the RTC does not work properly. What can I do to correct this?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nPlease refer to the Usage Notes on the RTC driver description page of the FSP User's Manual.\nIn case of warm start or a hard reset (when VBATT powers RTC in case of power loss), user \nmight not want to reinitialize the clock source after reset. In this case, disable the Set \nSource Clock in Open property for RTC and call R_RTC_ClockSourceSet() only when RTC \nclock source needs to be set. Application should check for the reset type and should \naccordingly call the R_RTC_ClockSourceSet().\n\nAs described in this explanation, you need to set the ‘Set Source Clock in Open’ property of the RTC driver to disable. This will prevent the R_RTC_Open function from reconfiguring the RTC clock source. The user application should be implemented to execute the R_RTC_ClockSourceSet function only when initializing the RTC.\nIn an application, one method to determine whether the RTC has been initialized is to use the VBATT backup register, which retains its value when power is supplied to the VBATT pin. By storing a specific magic number in this register, you can decide whether to execute the R_RTC_ClockSourceSet function based on the stored state. If the magic number is present in the register at startup, it indicates that power supply and operation of the RTC have been maintained, and thus the R_RTC_ClockSourceSet function should not be executed.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "Please refer to the Usage Notes on the RTC driver description page of the FSP User's Manual.\nIn case of warm start or a hard reset (when VBATT powers RTC in case of power loss), user \nmight not want to reinitialize the clock source after reset. In this case, disable the Set \nSource Clock in Open property for RTC and call R_RTC_ClockSourceSet() only when RTC \nclock source needs to be set. Application should check for the reset type and should \naccordingly call the R_RTC_ClockSourceSet().\n\nAs described in this explanation, you need to set the ‘Set Source Clock in Open’ property of the RTC driver to disable. This will prevent the R_RTC_Open function from reconfiguring the RTC clock source. The user application should be implemented to execute the R_RTC_ClockSourceSet function only when initializing the RTC.\nIn an application, one method to determine whether the RTC has been initialized is to use the VBATT backup register, which retains its value when power is supplied to the VBATT pin. By storing a specific magic number in this register, you can decide whether to execute the R_RTC_ClockSourceSet function based on the stored state. If the magic number is present in the register at startup, it indicates that power supply and operation of the RTC have been maintained, and thus the R_RTC_ClockSourceSet function should not be executed."
+      },
+      {
+        "type": "text",
+        "content": "Please refer to the Usage Notes on the RTC driver description page of the FSP User's Manual."
+      },
+      {
+        "type": "text",
+        "content": "As described in this explanation, you need to set the ‘Set Source Clock in Open’ property of the RTC driver to disable. This will prevent the R_RTC_Open function from reconfiguring the RTC clock source. The user application should be implemented to execute the R_RTC_ClockSourceSet function only when initializing the RTC."
+      },
+      {
+        "type": "text",
+        "content": "In an application, one method to determine whether the RTC has been initialized is to use the VBATT backup register, which retains its value when power is supplied to the VBATT pin. By storing a specific magic number in this register, you can decide whether to execute the R_RTC_ClockSourceSet function based on the stored state. If the magic number is present in the register at startup, it indicates that power supply and operation of the RTC have been maintained, and thus the R_RTC_ClockSourceSet function should not be executed."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "In case of warm start or a hard reset (when VBATT powers RTC in case of power loss), user \nmight not want to reinitialize the clock source after reset. In this case, disable the Set \nSource Clock in Open property for RTC and call R_RTC_ClockSourceSet() only when RTC \nclock source needs to be set. Application should check for the reset type and should \naccordingly call the R_RTC_ClockSourceSet()."
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21727844"
+      }
+    ]
+  }
+}

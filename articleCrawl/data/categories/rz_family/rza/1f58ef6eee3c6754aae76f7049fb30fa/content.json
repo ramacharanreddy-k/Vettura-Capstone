@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21016342",
+    "title": "RZ/A1 Group: Clock input selection",
+    "last_updated": "2023-08-08",
+    "extracted_at": "2025-03-08T23:43:23.548394"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs the USB operation clock input selection (SYSCFG0 register UCKSEL) independent of the clock input selection by the MD_CLK pin setting?\nAnswer:\nUSB operation clock input selection (SYSCFG0 register UCKSEL) and clock input selection by MD_CLK pin setting are independent.\nFor example,\nSelect clock mode 0 with MD_CLK=0 and input 12MHz to EXTAL\nSet UCKSEL=0 and input 48MHz clock to USB_X1\nWith this setting, the source of the system clock and the source of the USB operation clock can be set separately.\nSuitable Products\nRZ/A1L, RZ/A1LU, RZ/A1LC\nRZ/A1H, RZ/A1M"
+      },
+      {
+        "type": "text",
+        "content": "Is the USB operation clock input selection (SYSCFG0 register UCKSEL) independent of the clock input selection by the MD_CLK pin setting?"
+      },
+      {
+        "type": "text",
+        "content": "Is the USB operation clock input selection (SYSCFG0 register UCKSEL) independent of the clock input selection by the MD_CLK pin setting?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nUSB operation clock input selection (SYSCFG0 register UCKSEL) and clock input selection by MD_CLK pin setting are independent.\nFor example,\nSelect clock mode 0 with MD_CLK=0 and input 12MHz to EXTAL\nSet UCKSEL=0 and input 48MHz clock to USB_X1\nWith this setting, the source of the system clock and the source of the USB operation clock can be set separately.\nSuitable Products\nRZ/A1L, RZ/A1LU, RZ/A1LC\nRZ/A1H, RZ/A1M"
+      },
+      {
+        "type": "text",
+        "content": "USB operation clock input selection (SYSCFG0 register UCKSEL) and clock input selection by MD_CLK pin setting are independent.\nFor example,\nSelect clock mode 0 with MD_CLK=0 and input 12MHz to EXTAL\nSet UCKSEL=0 and input 48MHz clock to USB_X1\nWith this setting, the source of the system clock and the source of the USB operation clock can be set separately."
+      },
+      {
+        "type": "text",
+        "content": "USB operation clock input selection (SYSCFG0 register UCKSEL) and clock input selection by MD_CLK pin setting are independent.\nFor example,"
+      },
+      {
+        "type": "text",
+        "content": "With this setting, the source of the system clock and the source of the USB operation clock can be set separately."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A1L, RZ/A1LU, RZ/A1LC\nRZ/A1H, RZ/A1M"
+      },
+      {
+        "type": "text",
+        "content": "RZ/A1L, RZ/A1LU, RZ/A1LC\nRZ/A1H, RZ/A1M"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A1L, RZ/A1LU, RZ/A1LC\nRZ/A1H, RZ/A1M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A1L, RZ/A1LU, RZ/A1LC\nRZ/A1H, RZ/A1M"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21016343"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21016345"
+      }
+    ]
+  }
+}

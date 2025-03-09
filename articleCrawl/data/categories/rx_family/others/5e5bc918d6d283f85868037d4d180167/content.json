@@ -1,0 +1,167 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20940278",
+    "title": "How should I configure frame buffers when using emWin with RX family? Where are frame buffers secured?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:23:18.538511"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow should I configure frame buffers when using emWin with RX family? Where are frame buffers secured?\nAnswer:\nIn the emWin FIT module, frame buffers are not secured as areas. The user must specify the first address of free space in the Internal RAM or Extended Internal RAM area.\nTherefore, the size of frame buffers is not included in the buffer size set with [Work area size for GUI] (size of the buffer used by emWin). Also, frame buffers are not included in section B, section R, and heap area. Note that frame buffers are just free space from the viewpoint of compiler, and therefore their sizes are not applied to the Memory Usage view and other components of e2 studio.\nIf you use QE for Display, you can set frame buffers in the following location.\nemWin FIT Module Settings:\nNote: The address of frame buffer 1 is linked to the setting of the start address of the frame buffer in the GLCDC FIT module. To change the address, go to the GLCDC FIT module settings.\nGLCDC FIT Module Settings:\n  Note: The starting address setting of the frame buffer is linked to the address of frame buffer 1 in the emWin FIT module. If you want to change the address of frame buffer 1 in the emWin FIT module, change this starting address setting of frame buffer.\nSuitable Products\nRX Family\n  日本語"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nHow should I configure frame buffers when using emWin with RX family? Where are frame buffers secured?\nAnswer:\nIn the emWin FIT module, frame buffers are not secured as areas. The user must specify the first address of free space in the Internal RAM or Extended Internal RAM area.\nTherefore, the size of frame buffers is not included in the buffer size set with [Work area size for GUI] (size of the buffer used by emWin). Also, frame buffers are not included in section B, section R, and heap area. Note that frame buffers are just free space from the viewpoint of compiler, and therefore their sizes are not applied to the Memory Usage view and other components of e2 studio.\nIf you use QE for Display, you can set frame buffers in the following location.\nemWin FIT Module Settings:\nNote: The address of frame buffer 1 is linked to the setting of the start address of the frame buffer in the GLCDC FIT module. To change the address, go to the GLCDC FIT module settings.\nGLCDC FIT Module Settings:\n  Note: The starting address setting of the frame buffer is linked to the address of frame buffer 1 in the emWin FIT module. If you want to change the address of frame buffer 1 in the emWin FIT module, change this starting address setting of frame buffer.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "How should I configure frame buffers when using emWin with RX family? Where are frame buffers secured?"
+      },
+      {
+        "type": "text",
+        "content": "How should I configure frame buffers when using emWin with RX family? Where are frame buffers secured?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIn the emWin FIT module, frame buffers are not secured as areas. The user must specify the first address of free space in the Internal RAM or Extended Internal RAM area.\nTherefore, the size of frame buffers is not included in the buffer size set with [Work area size for GUI] (size of the buffer used by emWin). Also, frame buffers are not included in section B, section R, and heap area. Note that frame buffers are just free space from the viewpoint of compiler, and therefore their sizes are not applied to the Memory Usage view and other components of e2 studio.\nIf you use QE for Display, you can set frame buffers in the following location.\nemWin FIT Module Settings:\nNote: The address of frame buffer 1 is linked to the setting of the start address of the frame buffer in the GLCDC FIT module. To change the address, go to the GLCDC FIT module settings.\nGLCDC FIT Module Settings:\n  Note: The starting address setting of the frame buffer is linked to the address of frame buffer 1 in the emWin FIT module. If you want to change the address of frame buffer 1 in the emWin FIT module, change this starting address setting of frame buffer.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "In the emWin FIT module, frame buffers are not secured as areas. The user must specify the first address of free space in the Internal RAM or Extended Internal RAM area.\nTherefore, the size of frame buffers is not included in the buffer size set with [Work area size for GUI] (size of the buffer used by emWin). Also, frame buffers are not included in section B, section R, and heap area. Note that frame buffers are just free space from the viewpoint of compiler, and therefore their sizes are not applied to the Memory Usage view and other components of e2 studio.\nIf you use QE for Display, you can set frame buffers in the following location.\nemWin FIT Module Settings:\nNote: The address of frame buffer 1 is linked to the setting of the start address of the frame buffer in the GLCDC FIT module. To change the address, go to the GLCDC FIT module settings.\nGLCDC FIT Module Settings:\n  Note: The starting address setting of the frame buffer is linked to the address of frame buffer 1 in the emWin FIT module. If you want to change the address of frame buffer 1 in the emWin FIT module, change this starting address setting of frame buffer."
+      },
+      {
+        "type": "text",
+        "content": "In the emWin FIT module, frame buffers are not secured as areas. The user must specify the first address of free space in the Internal RAM or Extended Internal RAM area."
+      },
+      {
+        "type": "text",
+        "content": "Therefore, the size of frame buffers is not included in the buffer size set with [Work area size for GUI] (size of the buffer used by emWin). Also, frame buffers are not included in section B, section R, and heap area. Note that frame buffers are just free space from the viewpoint of compiler, and therefore their sizes are not applied to the Memory Usage view and other components of e2 studio."
+      },
+      {
+        "type": "text",
+        "content": "If you use QE for Display, you can set frame buffers in the following location."
+      },
+      {
+        "type": "text",
+        "content": "emWin FIT Module Settings:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370047.png",
+          "alt_text": "",
+          "width": "364",
+          "height": "592",
+          "local_path": "data/categories/rx_family/others/5e5bc918d6d283f85868037d4d180167/images/b27433509fd2a4ca01dd585107531e80.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370047-2.png",
+          "alt_text": "",
+          "width": "835",
+          "height": "703",
+          "local_path": "data/categories/rx_family/others/5e5bc918d6d283f85868037d4d180167/images/ebe6d8707bb5afc67f836cb783939e3b.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Note: The address of frame buffer 1 is linked to the setting of the start address of the frame buffer in the GLCDC FIT module. To change the address, go to the GLCDC FIT module settings."
+      },
+      {
+        "type": "text",
+        "content": "GLCDC FIT Module Settings:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370047-3.png",
+          "alt_text": "",
+          "width": "332",
+          "height": "549",
+          "local_path": "data/categories/rx_family/others/5e5bc918d6d283f85868037d4d180167/images/691876c97c7bd58f8bd2e7fc3ad38aa2.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370047-4.png",
+          "alt_text": "",
+          "width": "728",
+          "height": "767",
+          "local_path": "data/categories/rx_family/others/5e5bc918d6d283f85868037d4d180167/images/03a54a7159f31e4505be0df3634ffcba.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Note: The starting address setting of the frame buffer is linked to the address of frame buffer 1 in the emWin FIT module. If you want to change the address of frame buffer 1 in the emWin FIT module, change this starting address setting of frame buffer."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370047.png",
+        "alt_text": "",
+        "width": "364",
+        "height": "592",
+        "local_path": "data/categories/rx_family/others/5e5bc918d6d283f85868037d4d180167/images/b27433509fd2a4ca01dd585107531e80.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370047-2.png",
+        "alt_text": "",
+        "width": "835",
+        "height": "703",
+        "local_path": "data/categories/rx_family/others/5e5bc918d6d283f85868037d4d180167/images/ebe6d8707bb5afc67f836cb783939e3b.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370047-3.png",
+        "alt_text": "",
+        "width": "332",
+        "height": "549",
+        "local_path": "data/categories/rx_family/others/5e5bc918d6d283f85868037d4d180167/images/691876c97c7bd58f8bd2e7fc3ad38aa2.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370047-4.png",
+        "alt_text": "",
+        "width": "728",
+        "height": "767",
+        "local_path": "data/categories/rx_family/others/5e5bc918d6d283f85868037d4d180167/images/03a54a7159f31e4505be0df3634ffcba.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20857262"
+      }
+    ]
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20498707",
+    "title": "Production Configuration for RA MCUs with srec_cat and Renesas Flash Programmer",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:25:22.998290"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Often product developers find themselves in a position where application configuration parameters need to be uniquely programmed into a MCU’s memory. To do so, often firmware is created which is flashed into the MCU which is responsible for the acquisition of the needed application configuration parameters. MAC addresses, IP Addresses, SSID Names, Passwords, Public/Private keys, etc. are examples of application configuration parameters. The issue with an approach where the firmware handles acquisition of the ACPs is the need to create auxiliary code which adds limited value to the main application. This in turn leads to additional test efforts, and longer development times."
+      },
+      {
+        "type": "text",
+        "content": "A way to avoid such issues is to modularize your application and store the ACPs as a blob of structured binary data located in a fixed location in memory. So when your application starts, it is able to access the fixed location, read the data in a fixed manner, and adjust the mode of operation."
+      },
+      {
+        "type": "text",
+        "content": "When you have achieved such modularization, you can segment your application in to two parts:"
+      },
+      {
+        "type": "text",
+        "content": "Your ACP data can then be converted into a S-Record file and programmed into the fixed memory location."
+      },
+      {
+        "type": "text",
+        "content": "Let’s look at an example where a certificate is part of the ACP and needs to be programmed into the Data Flash Address of a RA6M4 MCU."
+      },
+      {
+        "type": "text",
+        "content": "The certificate above is stored into a file called sample.pem."
+      },
+      {
+        "type": "text",
+        "content": "Use srec_cat to convert this into a srecord file."
+      },
+      {
+        "type": "text",
+        "content": "srec_cat sample.pem -Binary -offset 0x08000000 -output dstfile.srec -obs=16 -data-only"
+      },
+      {
+        "type": "text",
+        "content": "srec_cat sample.pem -Binary -offset 0x08000000 -output dstfile.srec -obs=16 -data-only"
+      },
+      {
+        "type": "text",
+        "content": "The above command treats sample.pem as a binary to be programmed at address 0x08000000 using an output block size of 16 bytes. This is the main data you want to load to the RA6M4 using the Renesas Flash Programmer. But you will find that RFP fails to program the device."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/1ad727f9-84cb-49ff-9ae7-e2888f390b35.png",
+          "alt_text": "",
+          "width": "603",
+          "height": "648",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/22d51b554b6047c545f82565e4d5f950/images/02443a476d5136bbfbcff6480f708278.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "This is mainly due to a malformed srec file. You need a header and a start address to pass through RFP’s checklist for a S-record file. So, we adjust the options of srec_cat."
+      },
+      {
+        "type": "text",
+        "content": "srec_cat sample.pem -Binary -offset 0x08000000 -fill 0xFF 0x08000000 0x08002000 -header=dstfile.srec -output dstfile.srec -obs=16 -start-address 0x00000000"
+      },
+      {
+        "type": "text",
+        "content": "srec_cat sample.pem -Binary -offset 0x08000000 -fill 0xFF 0x08000000 0x08002000 -header=dstfile.srec -output dstfile.srec -obs=16 -start-address 0x00000000"
+      },
+      {
+        "type": "text",
+        "content": "Let’s breakdown the new command options used in the command above."
+      },
+      {
+        "type": "text",
+        "content": "-fill value minimum maximum ensures that any missing data between the minimum and maximum address range is filled with value i.e. 0xFF. You should adjust the value of the maximum based on the block erase size of the memory region being programmed."
+      },
+      {
+        "type": "text",
+        "content": "-header=string places the string at the start of the srec file using the S0 Record field. Typically, this is the name of the file."
+      },
+      {
+        "type": "text",
+        "content": "-start-address 0x00000000 places an Execution Start Address towards the end."
+      },
+      {
+        "type": "text",
+        "content": "When you pass the output file to RFP, it should be able to program the RA6M4 MCU. Note, you may have to power cycle the MCU after each RFP operation."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/f4a6e61d-3490-4d45-845d-31443f81fac6.png",
+          "alt_text": "",
+          "width": "438",
+          "height": "472",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/22d51b554b6047c545f82565e4d5f950/images/c84dab45df9c417f6739b2346626f5fc.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Finally, to confirm the values programmed, you can use RFP’s Target Device > Read Memory functionality and compare it against what was written."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/34758dd0-e5ae-4b42-81e5-92a0c021a3ae.png",
+          "alt_text": "",
+          "width": "449",
+          "height": "294",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/22d51b554b6047c545f82565e4d5f950/images/c4bfaa06a0496ddc64b5510c5f4ae90f.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "As you can see, data matches, but the header and some other record fields may not."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/cfe667c9-7179-4d46-9f26-905182ebe824.png",
+          "alt_text": "",
+          "width": "809",
+          "height": "184",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/22d51b554b6047c545f82565e4d5f950/images/f27c45f011f90adcf9c272d5739ffecb.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "This will now allow you to create unique ACP data srec files for each MCU you intend to program. Next to program both the main application and ACP srec file combinations, you can use the rfp-cli.exe command to program multiple files."
+      },
+      {
+        "type": "text",
+        "content": "First you need to erase the entire chip:"
+      },
+      {
+        "type": "text",
+        "content": "\"c:\\Program Files (x86)\\Renesas Electronics\\Programming Tools\\Renesas Flash Programmer V3.09\\rfp-cli.exe\" -d RA -port COM6 -erase-chip"
+      },
+      {
+        "type": "text",
+        "content": "\"c:\\Program Files (x86)\\Renesas Electronics\\Programming Tools\\Renesas Flash Programmer V3.09\\rfp-cli.exe\" -d RA -port COM6 -erase-chip"
+      },
+      {
+        "type": "text",
+        "content": "To program both files over USB/SCI Boot mode, first add the Boot Mode Jumper, and then ensure the device is enumerated as a COM port. Finally, use the command below:"
+      },
+      {
+        "type": "text",
+        "content": "\"c:\\Program Files (x86)\\Renesas Electronics\\Programming Tools\\Renesas Flash Programmer V3.09\\rfp-cli.exe\" -d RA -port COM6 -a \"C:\\Users\\a5087427\\Downloads\\ek_ra6m4_blinky.srec\" \"C:\\Users\\a5087427\\Downloads\\dstfile.srec\""
+      },
+      {
+        "type": "text",
+        "content": "\"c:\\Program Files (x86)\\Renesas Electronics\\Programming Tools\\Renesas Flash Programmer V3.09\\rfp-cli.exe\" -d RA -port COM6 -a \"C:\\Users\\a5087427\\Downloads\\ek_ra6m4_blinky.srec\" \"C:\\Users\\a5087427\\Downloads\\dstfile.srec\""
+      },
+      {
+        "type": "text",
+        "content": "A successful operation will output:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/ff8f90bd-118c-4386-b5ec-b7112fad3fdb.png",
+          "alt_text": "",
+          "width": "715",
+          "height": "447",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/22d51b554b6047c545f82565e4d5f950/images/ccde583e8942470ea175c24655233bd0.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "You can confirm the contents by reading memory from RFP or by removing the Boot mode jumper and allowing normal operation of the MCU."
+      },
+      {
+        "type": "text",
+        "content": "References:"
+      },
+      {
+        "type": "text",
+        "content": "R20AN0547 - Renesas Flash Programmer - Usage from the Command Line"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/1ad727f9-84cb-49ff-9ae7-e2888f390b35.png",
+        "alt_text": "",
+        "width": "603",
+        "height": "648",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/22d51b554b6047c545f82565e4d5f950/images/02443a476d5136bbfbcff6480f708278.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/f4a6e61d-3490-4d45-845d-31443f81fac6.png",
+        "alt_text": "",
+        "width": "438",
+        "height": "472",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/22d51b554b6047c545f82565e4d5f950/images/c84dab45df9c417f6739b2346626f5fc.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/34758dd0-e5ae-4b42-81e5-92a0c021a3ae.png",
+        "alt_text": "",
+        "width": "449",
+        "height": "294",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/22d51b554b6047c545f82565e4d5f950/images/c4bfaa06a0496ddc64b5510c5f4ae90f.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/cfe667c9-7179-4d46-9f26-905182ebe824.png",
+        "alt_text": "",
+        "width": "809",
+        "height": "184",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/22d51b554b6047c545f82565e4d5f950/images/f27c45f011f90adcf9c272d5739ffecb.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/ff8f90bd-118c-4386-b5ec-b7112fad3fdb.png",
+        "alt_text": "",
+        "width": "715",
+        "height": "447",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/22d51b554b6047c545f82565e4d5f950/images/ccde583e8942470ea175c24655233bd0.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": []
+  }
+}

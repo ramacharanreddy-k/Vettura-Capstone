@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20789820",
+    "title": "Differences between RZ/A1H and RZ/A1M",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:43:39.987850"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs the only difference between RZ/A1M and RZ/A1H the capacity of internal RAM?\nAre the others the same, including the arrangement(layout) of each functional block?\nAnswer:\nThe block layout and wiring inside the LSI are different between RZ/A1H and RZ/A1M.\nHowever, as indicated in the user's manual common to both RZ/A1H and RZ/A1M, differences in internal structure do not appear as differences in product specifications, including electrical characteristics.\nAlso note that there are differences in the BANK configuration of the internal RAM in addition to its capacity.\nRegarding the difference in BANK configuration, please refer to the user's manual common to RZ/A1H and RZ/A1M.\nSuitable Products\nRZ/A1H, RZ/A1M"
+      },
+      {
+        "type": "text",
+        "content": "Is the only difference between RZ/A1M and RZ/A1H the capacity of internal RAM?\nAre the others the same, including the arrangement(layout) of each functional block?"
+      },
+      {
+        "type": "text",
+        "content": "Is the only difference between RZ/A1M and RZ/A1H the capacity of internal RAM?\nAre the others the same, including the arrangement(layout) of each functional block?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe block layout and wiring inside the LSI are different between RZ/A1H and RZ/A1M.\nHowever, as indicated in the user's manual common to both RZ/A1H and RZ/A1M, differences in internal structure do not appear as differences in product specifications, including electrical characteristics.\nAlso note that there are differences in the BANK configuration of the internal RAM in addition to its capacity.\nRegarding the difference in BANK configuration, please refer to the user's manual common to RZ/A1H and RZ/A1M.\nSuitable Products\nRZ/A1H, RZ/A1M"
+      },
+      {
+        "type": "text",
+        "content": "The block layout and wiring inside the LSI are different between RZ/A1H and RZ/A1M.\nHowever, as indicated in the user's manual common to both RZ/A1H and RZ/A1M, differences in internal structure do not appear as differences in product specifications, including electrical characteristics.\nAlso note that there are differences in the BANK configuration of the internal RAM in addition to its capacity.\nRegarding the difference in BANK configuration, please refer to the user's manual common to RZ/A1H and RZ/A1M."
+      },
+      {
+        "type": "text",
+        "content": "The block layout and wiring inside the LSI are different between RZ/A1H and RZ/A1M.\nHowever, as indicated in the user's manual common to both RZ/A1H and RZ/A1M, differences in internal structure do not appear as differences in product specifications, including electrical characteristics.\nAlso note that there are differences in the BANK configuration of the internal RAM in addition to its capacity.\nRegarding the difference in BANK configuration, please refer to the user's manual common to RZ/A1H and RZ/A1M."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A1H, RZ/A1M"
+      },
+      {
+        "type": "text",
+        "content": "RZ/A1H, RZ/A1M"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A1H, RZ/A1M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A1H, RZ/A1M"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20789834"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20789847"
+      }
+    ]
+  }
+}

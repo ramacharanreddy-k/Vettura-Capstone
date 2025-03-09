@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20350410",
+    "title": "RZ/V2L: PMIC",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:51:22.511587"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there a PMIC that can be used in combination with the RZ/V2L, RZ/G2L and RZ/G2LC?\nAnswer:\nWe provide a PMIC (RAA215300) with a design optimized for the RZ/V2L. \nhttps://www.renesas.com/products/power-power-management/power-management-ics-pmic-and-pmus/raa215300-high-performance-9-channel-pmic-supporting-ddr-memory-built-charger-and-rtc\nPlease also refer to the example of a winning combination which combines the RAA215300 with the RZ/V2L,  RZ/G2L and RZ/G2LC. \nhttps://www.renesas.com/application/high-performance-computing/hmi-som-ai-accelerator?utm_campaign=power_pmic_raa215300&utm_source=press_release&utm_medium=press_release&utm_content=hmi_som_module_wc\nSuitable Products\nRZ/V2L"
+      },
+      {
+        "type": "text",
+        "content": "Is there a PMIC that can be used in combination with the RZ/V2L, RZ/G2L and RZ/G2LC?"
+      },
+      {
+        "type": "text",
+        "content": "Is there a PMIC that can be used in combination with the RZ/V2L, RZ/G2L and RZ/G2LC?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nWe provide a PMIC (RAA215300) with a design optimized for the RZ/V2L. \nhttps://www.renesas.com/products/power-power-management/power-management-ics-pmic-and-pmus/raa215300-high-performance-9-channel-pmic-supporting-ddr-memory-built-charger-and-rtc\nPlease also refer to the example of a winning combination which combines the RAA215300 with the RZ/V2L,  RZ/G2L and RZ/G2LC. \nhttps://www.renesas.com/application/high-performance-computing/hmi-som-ai-accelerator?utm_campaign=power_pmic_raa215300&utm_source=press_release&utm_medium=press_release&utm_content=hmi_som_module_wc\nSuitable Products\nRZ/V2L"
+      },
+      {
+        "type": "text",
+        "content": "We provide a PMIC (RAA215300) with a design optimized for the RZ/V2L. \nhttps://www.renesas.com/products/power-power-management/power-management-ics-pmic-and-pmus/raa215300-high-performance-9-channel-pmic-supporting-ddr-memory-built-charger-and-rtc\nPlease also refer to the example of a winning combination which combines the RAA215300 with the RZ/V2L,  RZ/G2L and RZ/G2LC. \nhttps://www.renesas.com/application/high-performance-computing/hmi-som-ai-accelerator?utm_campaign=power_pmic_raa215300&utm_source=press_release&utm_medium=press_release&utm_content=hmi_som_module_wc"
+      },
+      {
+        "type": "text",
+        "content": "We provide a PMIC (RAA215300) with a design optimized for the RZ/V2L. \nhttps://www.renesas.com/products/power-power-management/power-management-ics-pmic-and-pmus/raa215300-high-performance-9-channel-pmic-supporting-ddr-memory-built-charger-and-rtc\nPlease also refer to the example of a winning combination which combines the RAA215300 with the RZ/V2L,  RZ/G2L and RZ/G2LC. \nhttps://www.renesas.com/application/high-performance-computing/hmi-som-ai-accelerator?utm_campaign=power_pmic_raa215300&utm_source=press_release&utm_medium=press_release&utm_content=hmi_som_module_wc"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V2L"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V2L"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V2L"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/products/power-power-management/power-management-ics-pmic-and-pmus/raa215300-high-performance-9-channel-pmic-supporting-ddr-memory-built-charger-and-rtc",
+        "url": "https://www.renesas.com/products/power-power-management/power-management-ics-pmic-and-pmus/raa215300-high-performance-9-channel-pmic-supporting-ddr-memory-built-charger-and-rtc"
+      },
+      {
+        "text": "https://www.renesas.com/application/high-performance-computing/hmi-som-ai-accelerator?utm_campaign=power_pmic_raa215300&utm_source=press_release&utm_medium=press_release&utm_content=hmi_som_module_wc",
+        "url": "https://www.renesas.com/application/high-performance-computing/hmi-som-ai-accelerator?utm_campaign=power_pmic_raa215300&utm_source=press_release&utm_medium=press_release&utm_content=hmi_som_module_wc"
+      },
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20350431"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20350433"
+      }
+    ]
+  }
+}

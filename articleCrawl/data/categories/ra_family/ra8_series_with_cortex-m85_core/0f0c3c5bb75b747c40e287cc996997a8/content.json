@@ -1,0 +1,167 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21143964",
+    "title": "External memory types supported with RA8 Series MCUs",
+    "last_updated": "2024-05-11",
+    "extracted_at": "2025-03-08T23:29:23.960411"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan the RA8 Series MCUs support HyperFlash and HyperRAM devices?\nAnswer:\nRA8 Series MCUs support xSPI compliant Octal SPI (OSPI) interface with support for Execute-In-Place and Decryption-on-the-fly (DOTF). The OSPI interface is compliant with JEDEC standard JESD251 (Profile 1.0 and 2.0), JESD251-1 and JESD252.\nThe RA8 Series is compatible with all flash devices that are JESD251 standard compliant and support both Octal Flash & Octal RAM and HyperFlash & HyperRAM devices that are compatible with the Infineon HyperBus specification. RA8 xSPI guarantees operation with JESD251 (xSPI for Non-Volatile Memory) compliant memory.\nThe RA8 series MCUs have been tested and are confirmed to be compatible with these memory P/Ns.\n  Supplier Part Number Compatible with RA8x1 [Y/N]\nOctal / Hyper RAM JSC JSC28SSU8AGDY  Y\nAP Memory APS6408L-3OC  In progress \nISSI IS66WVO8M8DALL/BLL In progress\nCypress S27KL0641 Y\nOctal / Hyper Flash Infineon S28HS512TGABHI01 Y\nISSI IS25LX032/64/128\nIS25WX032/64/128 Y\nY\nMacronix MX25LM51245G Y\nMacronix MX25UW51245G Y\nCypress S26KL512S Y\nMicron (XccelaFlash) MT25QL128ABA\nMT35XL512ABA Y\nY\nCypress S25FS512S Y\nMacronix MX25R1635F Y\n  Suitable Products\nRA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+      },
+      {
+        "type": "text",
+        "content": "Can the RA8 Series MCUs support HyperFlash and HyperRAM devices?"
+      },
+      {
+        "type": "text",
+        "content": "Can the RA8 Series MCUs support HyperFlash and HyperRAM devices?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRA8 Series MCUs support xSPI compliant Octal SPI (OSPI) interface with support for Execute-In-Place and Decryption-on-the-fly (DOTF). The OSPI interface is compliant with JEDEC standard JESD251 (Profile 1.0 and 2.0), JESD251-1 and JESD252.\nThe RA8 Series is compatible with all flash devices that are JESD251 standard compliant and support both Octal Flash & Octal RAM and HyperFlash & HyperRAM devices that are compatible with the Infineon HyperBus specification. RA8 xSPI guarantees operation with JESD251 (xSPI for Non-Volatile Memory) compliant memory.\nThe RA8 series MCUs have been tested and are confirmed to be compatible with these memory P/Ns.\n  Supplier Part Number Compatible with RA8x1 [Y/N]\nOctal / Hyper RAM JSC JSC28SSU8AGDY  Y\nAP Memory APS6408L-3OC  In progress \nISSI IS66WVO8M8DALL/BLL In progress\nCypress S27KL0641 Y\nOctal / Hyper Flash Infineon S28HS512TGABHI01 Y\nISSI IS25LX032/64/128\nIS25WX032/64/128 Y\nY\nMacronix MX25LM51245G Y\nMacronix MX25UW51245G Y\nCypress S26KL512S Y\nMicron (XccelaFlash) MT25QL128ABA\nMT35XL512ABA Y\nY\nCypress S25FS512S Y\nMacronix MX25R1635F Y\n  Suitable Products\nRA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+      },
+      {
+        "type": "text",
+        "content": "RA8 Series MCUs support xSPI compliant Octal SPI (OSPI) interface with support for Execute-In-Place and Decryption-on-the-fly (DOTF). The OSPI interface is compliant with JEDEC standard JESD251 (Profile 1.0 and 2.0), JESD251-1 and JESD252.\nThe RA8 Series is compatible with all flash devices that are JESD251 standard compliant and support both Octal Flash & Octal RAM and HyperFlash & HyperRAM devices that are compatible with the Infineon HyperBus specification. RA8 xSPI guarantees operation with JESD251 (xSPI for Non-Volatile Memory) compliant memory.\nThe RA8 series MCUs have been tested and are confirmed to be compatible with these memory P/Ns.\n  Supplier Part Number Compatible with RA8x1 [Y/N]\nOctal / Hyper RAM JSC JSC28SSU8AGDY  Y\nAP Memory APS6408L-3OC  In progress \nISSI IS66WVO8M8DALL/BLL In progress\nCypress S27KL0641 Y\nOctal / Hyper Flash Infineon S28HS512TGABHI01 Y\nISSI IS25LX032/64/128\nIS25WX032/64/128 Y\nY\nMacronix MX25LM51245G Y\nMacronix MX25UW51245G Y\nCypress S26KL512S Y\nMicron (XccelaFlash) MT25QL128ABA\nMT35XL512ABA Y\nY\nCypress S25FS512S Y\nMacronix MX25R1635F Y\n  Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA8 Series MCUs support xSPI compliant Octal SPI (OSPI) interface with support for Execute-In-Place and Decryption-on-the-fly (DOTF). The OSPI interface is compliant with JEDEC standard JESD251 (Profile 1.0 and 2.0), JESD251-1 and JESD252."
+      },
+      {
+        "type": "text",
+        "content": "The RA8 Series is compatible with all flash devices that are JESD251 standard compliant and support both Octal Flash & Octal RAM and HyperFlash & HyperRAM devices that are compatible with the Infineon HyperBus specification. RA8 xSPI guarantees operation with JESD251 (xSPI for Non-Volatile Memory) compliant memory."
+      },
+      {
+        "type": "text",
+        "content": "The RA8 series MCUs have been tested and are confirmed to be compatible with these memory P/Ns."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+      },
+      {
+        "type": "text",
+        "content": "RA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "",
+            "Supplier",
+            "Part Number",
+            "Compatible with RA8x1 [Y/N]"
+          ],
+          [
+            "Octal / Hyper RAM",
+            "JSC",
+            "JSC28SSU8AGDY",
+            "Y"
+          ],
+          [
+            "AP Memory",
+            "APS6408L-3OC",
+            "In progress"
+          ],
+          [
+            "ISSI",
+            "IS66WVO8M8DALL/BLL",
+            "In progress"
+          ],
+          [
+            "Cypress",
+            "S27KL0641",
+            "Y"
+          ],
+          [
+            "Octal / Hyper Flash",
+            "Infineon",
+            "S28HS512TGABHI01",
+            "Y"
+          ],
+          [
+            "ISSI",
+            "IS25LX032/64/128\nIS25WX032/64/128",
+            "Y\nY"
+          ],
+          [
+            "Macronix",
+            "MX25LM51245G",
+            "Y"
+          ],
+          [
+            "Macronix",
+            "MX25UW51245G",
+            "Y"
+          ],
+          [
+            "Cypress",
+            "S26KL512S",
+            "Y"
+          ],
+          [
+            "Micron (XccelaFlash)",
+            "MT25QL128ABA\nMT35XL512ABA",
+            "Y\nY"
+          ],
+          [
+            "Cypress",
+            "S25FS512S",
+            "Y"
+          ],
+          [
+            "Macronix",
+            "MX25R1635F",
+            "Y"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21143967"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21143970"
+      }
+    ]
+  }
+}

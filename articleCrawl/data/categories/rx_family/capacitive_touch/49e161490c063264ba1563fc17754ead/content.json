@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18286065",
+    "title": "Are There Any Caveats for Using Mutual Capacity Method?",
+    "last_updated": "2023-02-03",
+    "extracted_at": "2025-03-09T00:08:44.543101"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nAre there any recommended patterns or precautions for patterning on the PCB when using the mutual capacitance method?\nAnswer:\nPlease use the following guidelines when designing the spacing between TX/RX patterning, touch electrodes, touch wiring, etc.\nBasically, separating TX/RX patterning and electrodes from other circuits and wiring with 5mm or more will prevent any influence from parasitic capacitance.\nAlso, when wiring TX and RX in an area where there is a possibility that a finger or metal may come into contact with the panel surface etc., design in spaces that are wider than the width of the finger, metal etc.\nFor details on TX, RX patterning, relationship of overlay panel thickness, etc., refer to application note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\".\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Are there any recommended patterns or precautions for patterning on the PCB when using the mutual capacitance method?"
+      },
+      {
+        "type": "text",
+        "content": "Are there any recommended patterns or precautions for patterning on the PCB when using the mutual capacitance method?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nPlease use the following guidelines when designing the spacing between TX/RX patterning, touch electrodes, touch wiring, etc.\nBasically, separating TX/RX patterning and electrodes from other circuits and wiring with 5mm or more will prevent any influence from parasitic capacitance.\nAlso, when wiring TX and RX in an area where there is a possibility that a finger or metal may come into contact with the panel surface etc., design in spaces that are wider than the width of the finger, metal etc.\nFor details on TX, RX patterning, relationship of overlay panel thickness, etc., refer to application note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\".\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Please use the following guidelines when designing the spacing between TX/RX patterning, touch electrodes, touch wiring, etc.\nBasically, separating TX/RX patterning and electrodes from other circuits and wiring with 5mm or more will prevent any influence from parasitic capacitance.\nAlso, when wiring TX and RX in an area where there is a possibility that a finger or metal may come into contact with the panel surface etc., design in spaces that are wider than the width of the finger, metal etc.\nFor details on TX, RX patterning, relationship of overlay panel thickness, etc., refer to application note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\"."
+      },
+      {
+        "type": "text",
+        "content": "Please use the following guidelines when designing the spacing between TX/RX patterning, touch electrodes, touch wiring, etc.\nBasically, separating TX/RX patterning and electrodes from other circuits and wiring with 5mm or more will prevent any influence from parasitic capacitance.\nAlso, when wiring TX and RX in an area where there is a possibility that a finger or metal may come into contact with the panel surface etc., design in spaces that are wider than the width of the finger, metal etc."
+      },
+      {
+        "type": "text",
+        "content": "For details on TX, RX patterning, relationship of overlay panel thickness, etc., refer to application note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\"."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792847"
+      }
+    ]
+  }
+}

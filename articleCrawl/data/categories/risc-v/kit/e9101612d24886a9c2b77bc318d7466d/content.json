@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20626304",
+    "title": "What is the voltage range for the kit power supply?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:25:15.046931"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the voltage range for the kit power supply?\nAnswer:\nThe kit supports 20VDC to 48VDC supply voltage out of the box.\nSuitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "What is the voltage range for the kit power supply?"
+      },
+      {
+        "type": "text",
+        "content": "What is the voltage range for the kit power supply?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe kit supports 20VDC to 48VDC supply voltage out of the box.\nSuitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "The kit supports 20VDC to 48VDC supply voltage out of the box."
+      },
+      {
+        "type": "text",
+        "content": "The kit supports 20VDC to 48VDC supply voltage out of the box."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RISC-V ASSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RISC-V ASSP"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20626324"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20628065"
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21745547",
+    "title": "RX Family: what are the available resources for AES encryption/decryption support and the corresponding licenses",
+    "last_updated": "2024-07-01",
+    "extracted_at": "2025-03-09T00:20:03.915245"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Answer:\nAES (Advanced Encryption Standard) is a common option for users who want to have faster encryption/decryption process and support symmetric key cryptography. RX MCU devices can support AES (128-/256-bit) ECB/CBC operation through either the software-based implementation or RX Trusted Secure IP. This article intends to identify the corresponding technical resources on Renesas website based on the RX MCU group.\nFor the RX MCU groups *1 *2 which support Trusted Secure IP or Trusted Secure IP-Lite:\n\nIt’s highly recommended to use its Trusted Secure IP for the encryption key installation, so the key data can’t be accessed externally. In addition, the RX MCU with Trusted Secure IP complies with international security standards, NIST *3 FIPS *4 140-2 Level 3 CMVP *5 certification.\n\nUsers can refer to RX Family Trusted Secure IP Driver to understand the functionality and how to use the provided APIs for the AES (128-/256-bit) cryptographic algorithms. As the driver is provided free of charge, the software license agreement is provided along with the package.\n\n*1. RX MCU group with Trusted Secure IP: RX65N, RX651 group, RX72M group, RX72N group\n*2. RX MCU group with Trusted Secure IP-Lite: RX231 group, RX23W group, RX26T group, RX66T group, RX72T group\n*3. NIST: National Institute of Standards and Technology\n*4. FIPS: Federal Information Processing Standards\n*5. CMVP: Cryptographic Module Validation Program\n\nFor the RX MCU group without Trusted Secure IP or Trusted Secure IP-Lite:\n\nIf the selected RX MCU does not support either TSIP or TSIP-Lite, users can adopt the RX AES software library, which is designed in dedicated efficient processing with the RX, for the AES (128-/256-bit) cryptographic algorithms. In addition, the AES Encryption/Decryption with this library has been verified using the test pattern provided by NIST, and the corresponding user license agreement is provided here. For more details, user can search the “RX Family AES Library Firmware Integration Technology” on the Renesas website.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nAES (Advanced Encryption Standard) is a common option for users who want to have faster encryption/decryption process and support symmetric key cryptography. RX MCU devices can support AES (128-/256-bit) ECB/CBC operation through either the software-based implementation or RX Trusted Secure IP. This article intends to identify the corresponding technical resources on Renesas website based on the RX MCU group.\nFor the RX MCU groups *1 *2 which support Trusted Secure IP or Trusted Secure IP-Lite:\n\nIt’s highly recommended to use its Trusted Secure IP for the encryption key installation, so the key data can’t be accessed externally. In addition, the RX MCU with Trusted Secure IP complies with international security standards, NIST *3 FIPS *4 140-2 Level 3 CMVP *5 certification.\n\nUsers can refer to RX Family Trusted Secure IP Driver to understand the functionality and how to use the provided APIs for the AES (128-/256-bit) cryptographic algorithms. As the driver is provided free of charge, the software license agreement is provided along with the package.\n\n*1. RX MCU group with Trusted Secure IP: RX65N, RX651 group, RX72M group, RX72N group\n*2. RX MCU group with Trusted Secure IP-Lite: RX231 group, RX23W group, RX26T group, RX66T group, RX72T group\n*3. NIST: National Institute of Standards and Technology\n*4. FIPS: Federal Information Processing Standards\n*5. CMVP: Cryptographic Module Validation Program\n\nFor the RX MCU group without Trusted Secure IP or Trusted Secure IP-Lite:\n\nIf the selected RX MCU does not support either TSIP or TSIP-Lite, users can adopt the RX AES software library, which is designed in dedicated efficient processing with the RX, for the AES (128-/256-bit) cryptographic algorithms. In addition, the AES Encryption/Decryption with this library has been verified using the test pattern provided by NIST, and the corresponding user license agreement is provided here. For more details, user can search the “RX Family AES Library Firmware Integration Technology” on the Renesas website.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "AES (Advanced Encryption Standard) is a common option for users who want to have faster encryption/decryption process and support symmetric key cryptography. RX MCU devices can support AES (128-/256-bit) ECB/CBC operation through either the software-based implementation or RX Trusted Secure IP. This article intends to identify the corresponding technical resources on Renesas website based on the RX MCU group.\nFor the RX MCU groups *1 *2 which support Trusted Secure IP or Trusted Secure IP-Lite:\n\nIt’s highly recommended to use its Trusted Secure IP for the encryption key installation, so the key data can’t be accessed externally. In addition, the RX MCU with Trusted Secure IP complies with international security standards, NIST *3 FIPS *4 140-2 Level 3 CMVP *5 certification.\n\nUsers can refer to RX Family Trusted Secure IP Driver to understand the functionality and how to use the provided APIs for the AES (128-/256-bit) cryptographic algorithms. As the driver is provided free of charge, the software license agreement is provided along with the package.\n\n*1. RX MCU group with Trusted Secure IP: RX65N, RX651 group, RX72M group, RX72N group\n*2. RX MCU group with Trusted Secure IP-Lite: RX231 group, RX23W group, RX26T group, RX66T group, RX72T group\n*3. NIST: National Institute of Standards and Technology\n*4. FIPS: Federal Information Processing Standards\n*5. CMVP: Cryptographic Module Validation Program\n\nFor the RX MCU group without Trusted Secure IP or Trusted Secure IP-Lite:\n\nIf the selected RX MCU does not support either TSIP or TSIP-Lite, users can adopt the RX AES software library, which is designed in dedicated efficient processing with the RX, for the AES (128-/256-bit) cryptographic algorithms. In addition, the AES Encryption/Decryption with this library has been verified using the test pattern provided by NIST, and the corresponding user license agreement is provided here. For more details, user can search the “RX Family AES Library Firmware Integration Technology” on the Renesas website."
+      },
+      {
+        "type": "text",
+        "content": "AES (Advanced Encryption Standard) is a common option for users who want to have faster encryption/decryption process and support symmetric key cryptography. RX MCU devices can support AES (128-/256-bit) ECB/CBC operation through either the software-based implementation or RX Trusted Secure IP. This article intends to identify the corresponding technical resources on Renesas website based on the RX MCU group."
+      },
+      {
+        "type": "text",
+        "content": "*1 *2"
+      },
+      {
+        "type": "text",
+        "content": "*3"
+      },
+      {
+        "type": "text",
+        "content": "*4"
+      },
+      {
+        "type": "text",
+        "content": "*5"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "RX Family Trusted Secure IP Driver",
+        "url": "https://www.renesas.com/software-tool/trusted-secure-ip-driver"
+      },
+      {
+        "text": "here",
+        "url": "https://www.renesas.com/document/oth/disclaimer002"
+      },
+      {
+        "text": "search the “RX Family AES Library Firmware Integration Technology” on the Renesas website",
+        "url": "https://www.renesas.com/search?keywords=RX%20Family%20AES%20Library%20Firmware%20Integration%20Technology"
+      }
+    ]
+  }
+}

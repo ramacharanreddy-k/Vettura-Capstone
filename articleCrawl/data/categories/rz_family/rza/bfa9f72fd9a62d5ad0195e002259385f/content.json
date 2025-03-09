@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20789816",
+    "title": "RZ/A1 group with/without secure function",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:43:30.685802"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDoes the RZ/A1 group support secure function?\nAnswer:\nRZ/A1 group does not support secure function. If secure function is need , please consider RZ/A2M.\nSuitable Products\nRZ/A1 Group"
+      },
+      {
+        "type": "text",
+        "content": "Does the RZ/A1 group support secure function?"
+      },
+      {
+        "type": "text",
+        "content": "Does the RZ/A1 group support secure function?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRZ/A1 group does not support secure function. If secure function is need , please consider RZ/A2M.\nSuitable Products\nRZ/A1 Group"
+      },
+      {
+        "type": "text",
+        "content": "RZ/A1 group does not support secure function. If secure function is need , please consider RZ/A2M."
+      },
+      {
+        "type": "text",
+        "content": "RZ/A1 group does not support secure function. If secure function is need , please consider RZ/A2M."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A1 Group"
+      },
+      {
+        "type": "text",
+        "content": "RZ/A1 Group"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A1 Group"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A1 Group"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20789830"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20789843"
+      }
+    ]
+  }
+}

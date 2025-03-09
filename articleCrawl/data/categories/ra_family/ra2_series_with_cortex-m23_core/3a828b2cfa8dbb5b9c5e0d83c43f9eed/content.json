@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21124675",
+    "title": "RA2: Safety Standard for IEC60730/60335",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:31:25.465754"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDoes RA2 Series support IEC60730/60335?\nAnswer:\nRA2 Series provides Application note and self test library how to use flexible sample software routines to assist with compliance with IEC60730 class B safety standards\nSuitable Products\nRA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "Does RA2 Series support IEC60730/60335?"
+      },
+      {
+        "type": "text",
+        "content": "Does RA2 Series support IEC60730/60335?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRA2 Series provides Application note and self test library how to use flexible sample software routines to assist with compliance with IEC60730 class B safety standards\nSuitable Products\nRA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "RA2 Series provides Application note and self test library how to use flexible sample software routines to assist with compliance with IEC60730 class B safety standards"
+      },
+      {
+        "type": "text",
+        "content": "RA2 Series provides Application note and self test library how to use flexible sample software routines to assist with compliance with IEC60730 class B safety standards"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21141942"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21141947"
+      }
+    ]
+  }
+}

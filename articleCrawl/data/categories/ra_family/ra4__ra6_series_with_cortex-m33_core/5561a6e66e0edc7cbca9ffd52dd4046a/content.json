@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21671949",
+    "title": "RA4E2, RA6E2: Is it possible to set the TrustZone boundaries runtime?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:30:48.616301"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Is it possible to set the TrustZone boundaries runtime?"
+      },
+      {
+        "type": "text",
+        "content": "In general for most RA MCUs, that are using a Cortex-M33 core the TrustZone boundaries cannot be changed in the firmware. And the MCUs need to be placed in either SCI or USB boot mode. However for the new E-devices like RA4E2 and RA6E2 the Trustzone boundaries can be set runtime by writing to the following registers:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/4486d149-5fab-4e98-900e-e79d44c2f282",
+          "alt_text": "",
+          "width": "742",
+          "height": "436",
+          "local_path": "data/categories/ra_family/ra4__ra6_series_with_cortex-m33_core/5561a6e66e0edc7cbca9ffd52dd4046a/images/cf217399d110bbb321daa81472775099.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Resources:"
+      },
+      {
+        "type": "text",
+        "content": "RA4E2 Group User's Manual: Hardware"
+      },
+      {
+        "type": "text",
+        "content": "RA6E2 Group User's Manual: Hardware"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA4E2,RA6E2"
+      },
+      {
+        "type": "text",
+        "content": "RA4E2,RA6E2"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/4486d149-5fab-4e98-900e-e79d44c2f282",
+        "alt_text": "",
+        "width": "742",
+        "height": "436",
+        "local_path": "data/categories/ra_family/ra4__ra6_series_with_cortex-m33_core/5561a6e66e0edc7cbca9ffd52dd4046a/images/cf217399d110bbb321daa81472775099.png"
+      }
+    ],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": [
+      {
+        "text": "RA4E2 Group User's Manual: Hardware",
+        "url": "https://www.renesas.com/en/document/mah/ra4e2-group-users-manual-hardware?r=25411256"
+      },
+      {
+        "text": "RA6E2 Group User's Manual: Hardware",
+        "url": "https://www.renesas.com/en/document/mah/ra6e2-group-users-manual-hardware?r=25411266"
+      }
+    ]
+  }
+}

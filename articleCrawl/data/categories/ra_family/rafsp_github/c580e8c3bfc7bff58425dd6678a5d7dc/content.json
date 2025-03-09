@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21676790",
+    "title": "Where can I find Application Projects for RA Family and FSP?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:28:57.865074"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Where can I find Application Projects for RA Family and FSP?"
+      },
+      {
+        "type": "text",
+        "content": "You can find example projects for RA devices and FSP in our official github repo here:"
+      },
+      {
+        "type": "text",
+        "content": "https://github.com/renesas/ra-fsp-examples/tree/master"
+      },
+      {
+        "type": "text",
+        "content": "In application_projects folder you will find the sample code available of our Application Notes."
+      },
+      {
+        "type": "text",
+        "content": "In example_projects folder you will find example projects for almost all the Evaluation Kits and Fast Prototyping Boards available."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA Family, FSP"
+      },
+      {
+        "type": "text",
+        "content": "RA Family, FSP"
+      }
+    ],
+    "images": [],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": [
+      {
+        "text": "https://github.com/renesas/ra-fsp-examples/tree/master",
+        "url": "https://github.com/renesas/ra-fsp-examples/tree/master"
+      }
+    ]
+  }
+}

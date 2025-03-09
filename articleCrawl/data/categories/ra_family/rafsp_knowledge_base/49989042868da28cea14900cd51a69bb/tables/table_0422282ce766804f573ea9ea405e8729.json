@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "const timer_cfg_t g_timer0_cfg =\n{ .mode = TIMER_MODE_PERIODIC,\n/* Actual period: 0.01048576 seconds. Actual duty: 50%. */.period_counts = (uint32_t) 0x10000,\n.duty_cycle_counts = 0x8000, .source_div = (timer_source_div_t) 3, .channel = 0, .p_callback = callback_agt0,\n...\n}"
+    ]
+  ]
+}

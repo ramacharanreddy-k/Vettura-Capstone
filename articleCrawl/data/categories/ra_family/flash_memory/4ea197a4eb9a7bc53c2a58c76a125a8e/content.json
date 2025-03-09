@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21116864",
+    "title": "RA Family: Flash programming information",
+    "last_updated": "2023-02-11",
+    "extracted_at": "2025-03-08T23:35:57.186111"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat Flash programming information is available for RA MCUs and where can I find it?\nAnswer:\nThis document https://www.renesas.com/us/en/search?keywords=R01AN5367 covers the RA2A1, RA4M1, RA4W1, RA6M1, RA6T1, RA6M2 and RA6M3 MCUs, as the HW user's manuals for those device don't have the flash programming information included in them (there are no register descriptions of the flash controller). \nFor the RA2E1, RA2L1, RA2E2, and the CM33 based RA devices), the flash programming information (flash controller register descriptions, and self-programming flow charts) is included in the HW user's manuals for each device, so there is no need for a separate flash programming document.\n  Suitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "What Flash programming information is available for RA MCUs and where can I find it?"
+      },
+      {
+        "type": "text",
+        "content": "What Flash programming information is available for RA MCUs and where can I find it?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThis document https://www.renesas.com/us/en/search?keywords=R01AN5367 covers the RA2A1, RA4M1, RA4W1, RA6M1, RA6T1, RA6M2 and RA6M3 MCUs, as the HW user's manuals for those device don't have the flash programming information included in them (there are no register descriptions of the flash controller). \nFor the RA2E1, RA2L1, RA2E2, and the CM33 based RA devices), the flash programming information (flash controller register descriptions, and self-programming flow charts) is included in the HW user's manuals for each device, so there is no need for a separate flash programming document.\n  Suitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "This document https://www.renesas.com/us/en/search?keywords=R01AN5367 covers the RA2A1, RA4M1, RA4W1, RA6M1, RA6T1, RA6M2 and RA6M3 MCUs, as the HW user's manuals for those device don't have the flash programming information included in them (there are no register descriptions of the flash controller). \nFor the RA2E1, RA2L1, RA2E2, and the CM33 based RA devices), the flash programming information (flash controller register descriptions, and self-programming flow charts) is included in the HW user's manuals for each device, so there is no need for a separate flash programming document."
+      },
+      {
+        "type": "text",
+        "content": "This document https://www.renesas.com/us/en/search?keywords=R01AN5367 covers the RA2A1, RA4M1, RA4W1, RA6M1, RA6T1, RA6M2 and RA6M3 MCUs, as the HW user's manuals for those device don't have the flash programming information included in them (there are no register descriptions of the flash controller)."
+      },
+      {
+        "type": "text",
+        "content": "For the RA2E1, RA2L1, RA2E2, and the CM33 based RA devices), the flash programming information (flash controller register descriptions, and self-programming flow charts) is included in the HW user's manuals for each device, so there is no need for a separate flash programming document."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/us/en/search?keywords=R01AN5367",
+        "url": "https://www.renesas.com/us/en/search?keywords=R01AN5367"
+      }
+    ]
+  }
+}

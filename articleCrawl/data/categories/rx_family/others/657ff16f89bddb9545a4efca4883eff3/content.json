@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20940272",
+    "title": "There is a parameter that sets the offset to the next line in the GLCDC input image settings. How does this parameter affect the functionality?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:24:01.445086"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nThere is a parameter that sets the offset to the next line in the GLCDC input image settings. How does this parameter affect the functionality?\nAnswer:\nThe offset here means the interval of lines in a frame buffer. This parameter specifies the number of bytes on each line from which data is to be read when an image is stored on a frame buffer.\nFor example, for a frame buffer that stores an image with a width of 480 pixels and a data format of 16 bits (such as RGB565 format), the value you set for this parameter is 960 as calculated from the following expression: 480 x 2 bytes (= 16 bits).\nBecause the offset specifies the line interval, if you set 0 for this parameter, the system continues to read only the first line.\nFor details, refer to the description of a case where macro lines are not in use (1 macro line = 1 line) in “47.1.3 Frame buffer format” in the “User's Manual: Hardware”.\nNote that the value to be specified for this parameter must be a multiple of 64 (bytes). Therefore, for a frame buffer that stores an image with a width of 480 pixels and a data format of 8 bits (such as CLUT8 format), you need to specify 512 because 480 is not a multiple of 64 (480 x 1 byte / 64 = 7.5). In such a case, there must be a redundant area in the frame buffer.\nSee also “5.5 When Macro Line Offset Restrictions Cannot Be Followed” in the following application note.\nRX Family Graphic LCD Controller Module Using Firmware Integration Technology (R01AN3609)\n  Suitable Products\nRX Family\n  日本語"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nThere is a parameter that sets the offset to the next line in the GLCDC input image settings. How does this parameter affect the functionality?\nAnswer:\nThe offset here means the interval of lines in a frame buffer. This parameter specifies the number of bytes on each line from which data is to be read when an image is stored on a frame buffer.\nFor example, for a frame buffer that stores an image with a width of 480 pixels and a data format of 16 bits (such as RGB565 format), the value you set for this parameter is 960 as calculated from the following expression: 480 x 2 bytes (= 16 bits).\nBecause the offset specifies the line interval, if you set 0 for this parameter, the system continues to read only the first line.\nFor details, refer to the description of a case where macro lines are not in use (1 macro line = 1 line) in “47.1.3 Frame buffer format” in the “User's Manual: Hardware”.\nNote that the value to be specified for this parameter must be a multiple of 64 (bytes). Therefore, for a frame buffer that stores an image with a width of 480 pixels and a data format of 8 bits (such as CLUT8 format), you need to specify 512 because 480 is not a multiple of 64 (480 x 1 byte / 64 = 7.5). In such a case, there must be a redundant area in the frame buffer.\nSee also “5.5 When Macro Line Offset Restrictions Cannot Be Followed” in the following application note.\nRX Family Graphic LCD Controller Module Using Firmware Integration Technology (R01AN3609)\n  Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "There is a parameter that sets the offset to the next line in the GLCDC input image settings. How does this parameter affect the functionality?"
+      },
+      {
+        "type": "text",
+        "content": "There is a parameter that sets the offset to the next line in the GLCDC input image settings. How does this parameter affect the functionality?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe offset here means the interval of lines in a frame buffer. This parameter specifies the number of bytes on each line from which data is to be read when an image is stored on a frame buffer.\nFor example, for a frame buffer that stores an image with a width of 480 pixels and a data format of 16 bits (such as RGB565 format), the value you set for this parameter is 960 as calculated from the following expression: 480 x 2 bytes (= 16 bits).\nBecause the offset specifies the line interval, if you set 0 for this parameter, the system continues to read only the first line.\nFor details, refer to the description of a case where macro lines are not in use (1 macro line = 1 line) in “47.1.3 Frame buffer format” in the “User's Manual: Hardware”.\nNote that the value to be specified for this parameter must be a multiple of 64 (bytes). Therefore, for a frame buffer that stores an image with a width of 480 pixels and a data format of 8 bits (such as CLUT8 format), you need to specify 512 because 480 is not a multiple of 64 (480 x 1 byte / 64 = 7.5). In such a case, there must be a redundant area in the frame buffer.\nSee also “5.5 When Macro Line Offset Restrictions Cannot Be Followed” in the following application note.\nRX Family Graphic LCD Controller Module Using Firmware Integration Technology (R01AN3609)\n  Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "The offset here means the interval of lines in a frame buffer. This parameter specifies the number of bytes on each line from which data is to be read when an image is stored on a frame buffer.\nFor example, for a frame buffer that stores an image with a width of 480 pixels and a data format of 16 bits (such as RGB565 format), the value you set for this parameter is 960 as calculated from the following expression: 480 x 2 bytes (= 16 bits).\nBecause the offset specifies the line interval, if you set 0 for this parameter, the system continues to read only the first line.\nFor details, refer to the description of a case where macro lines are not in use (1 macro line = 1 line) in “47.1.3 Frame buffer format” in the “User's Manual: Hardware”.\nNote that the value to be specified for this parameter must be a multiple of 64 (bytes). Therefore, for a frame buffer that stores an image with a width of 480 pixels and a data format of 8 bits (such as CLUT8 format), you need to specify 512 because 480 is not a multiple of 64 (480 x 1 byte / 64 = 7.5). In such a case, there must be a redundant area in the frame buffer.\nSee also “5.5 When Macro Line Offset Restrictions Cannot Be Followed” in the following application note.\nRX Family Graphic LCD Controller Module Using Firmware Integration Technology (R01AN3609)"
+      },
+      {
+        "type": "text",
+        "content": "The offset here means the interval of lines in a frame buffer. This parameter specifies the number of bytes on each line from which data is to be read when an image is stored on a frame buffer.\nFor example, for a frame buffer that stores an image with a width of 480 pixels and a data format of 16 bits (such as RGB565 format), the value you set for this parameter is 960 as calculated from the following expression: 480 x 2 bytes (= 16 bits)."
+      },
+      {
+        "type": "text",
+        "content": "Because the offset specifies the line interval, if you set 0 for this parameter, the system continues to read only the first line."
+      },
+      {
+        "type": "text",
+        "content": "For details, refer to the description of a case where macro lines are not in use (1 macro line = 1 line) in “47.1.3 Frame buffer format” in the “User's Manual: Hardware”."
+      },
+      {
+        "type": "text",
+        "content": "Note that the value to be specified for this parameter must be a multiple of 64 (bytes). Therefore, for a frame buffer that stores an image with a width of 480 pixels and a data format of 8 bits (such as CLUT8 format), you need to specify 512 because 480 is not a multiple of 64 (480 x 1 byte / 64 = 7.5). In such a case, there must be a redundant area in the frame buffer.\nSee also “5.5 When Macro Line Offset Restrictions Cannot Be Followed” in the following application note."
+      },
+      {
+        "type": "text",
+        "content": "RX Family Graphic LCD Controller Module Using Firmware Integration Technology (R01AN3609)"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "RX Family Graphic LCD Controller Module Using Firmware Integration Technology (R01AN3609)",
+        "url": "https://www.renesas.com/us/en/search?keywords=R01AN3609"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20684879"
+      }
+    ]
+  }
+}

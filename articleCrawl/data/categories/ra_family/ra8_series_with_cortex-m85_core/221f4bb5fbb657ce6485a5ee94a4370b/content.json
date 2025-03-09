@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21606624",
+    "title": "RA8E2 Evaluation Kit, Software and Development Tools",
+    "last_updated": "2024-05-11",
+    "extracted_at": "2025-03-08T23:29:47.164838"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat software and development/evaluation tools are available for the RA8E2 Group MCUs?\nAnswer:\nThe RA8 Series MCUs are supported by a comprehensive solution with Flexible Software Package (FSP), evaluation kits, development tools and cloud, graphics and motor control solutions.\nThe FSP enables faster application development (bare metal or using RTOS) by providing all the infrastructure software needed for application development, including multiple RTOS, BSP, peripheral drivers, middleware, connectivity, networking and security stacks as well as reference software to build complex AI, motor control and graphics solutions. It allows customers to integrate their own legacy code and choice of RTOS with FSP, thus providing full flexibility in application development.\nThe Renesas solution also includes comprehensive development tools including integrated development environment, compilers, debug tools and programmers from Renesas as well as other ecosystem partners. Pin/function and TrustZone configurators ease development.\nThe Evaluation Kits provide an efficient platform for application development by exposing all the functionality of the device on one platform and allowing debug capability for code development. The RA8E2 kit includes an LCD display to support graphics application development.(RA8E2 EK Part Number: RTK7EKA8E2S01001BE)\nSuitable Products\nRA8E2"
+      },
+      {
+        "type": "text",
+        "content": "What software and development/evaluation tools are available for the RA8E2 Group MCUs?"
+      },
+      {
+        "type": "text",
+        "content": "What software and development/evaluation tools are available for the RA8E2 Group MCUs?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RA8 Series MCUs are supported by a comprehensive solution with Flexible Software Package (FSP), evaluation kits, development tools and cloud, graphics and motor control solutions.\nThe FSP enables faster application development (bare metal or using RTOS) by providing all the infrastructure software needed for application development, including multiple RTOS, BSP, peripheral drivers, middleware, connectivity, networking and security stacks as well as reference software to build complex AI, motor control and graphics solutions. It allows customers to integrate their own legacy code and choice of RTOS with FSP, thus providing full flexibility in application development.\nThe Renesas solution also includes comprehensive development tools including integrated development environment, compilers, debug tools and programmers from Renesas as well as other ecosystem partners. Pin/function and TrustZone configurators ease development.\nThe Evaluation Kits provide an efficient platform for application development by exposing all the functionality of the device on one platform and allowing debug capability for code development. The RA8E2 kit includes an LCD display to support graphics application development.(RA8E2 EK Part Number: RTK7EKA8E2S01001BE)\nSuitable Products\nRA8E2"
+      },
+      {
+        "type": "text",
+        "content": "The RA8 Series MCUs are supported by a comprehensive solution with Flexible Software Package (FSP), evaluation kits, development tools and cloud, graphics and motor control solutions.\nThe FSP enables faster application development (bare metal or using RTOS) by providing all the infrastructure software needed for application development, including multiple RTOS, BSP, peripheral drivers, middleware, connectivity, networking and security stacks as well as reference software to build complex AI, motor control and graphics solutions. It allows customers to integrate their own legacy code and choice of RTOS with FSP, thus providing full flexibility in application development.\nThe Renesas solution also includes comprehensive development tools including integrated development environment, compilers, debug tools and programmers from Renesas as well as other ecosystem partners. Pin/function and TrustZone configurators ease development.\nThe Evaluation Kits provide an efficient platform for application development by exposing all the functionality of the device on one platform and allowing debug capability for code development. The RA8E2 kit includes an LCD display to support graphics application development.(RA8E2 EK Part Number: RTK7EKA8E2S01001BE)"
+      },
+      {
+        "type": "text",
+        "content": "The RA8 Series MCUs are supported by a comprehensive solution with Flexible Software Package (FSP), evaluation kits, development tools and cloud, graphics and motor control solutions."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA8E2"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA8E2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA8E2"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21606634"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21606644"
+      }
+    ]
+  }
+}

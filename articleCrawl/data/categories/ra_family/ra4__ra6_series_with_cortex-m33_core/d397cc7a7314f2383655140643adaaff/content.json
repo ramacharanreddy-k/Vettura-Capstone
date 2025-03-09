@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21763413",
+    "title": "Using external memory with RA4L1 MCUs",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:30:27.788956"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow can I use external memory with the RA4L1, if the application code exceeds the 512KB available on-chip?\nAnswer:\nRA4L1 MCUs support Quad SPI interface with support for Execute-In-Place (XIP). Should the code size exceed the size of on-chip memory, users have the option of using external flash connected to the Quad SPI interface, and executing the code directly from external flash. They also have the option of bringing the code into internal flash or SRAM and executing from internal memory.\nSuitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "How can I use external memory with the RA4L1, if the application code exceeds the 512KB available on-chip?"
+      },
+      {
+        "type": "text",
+        "content": "How can I use external memory with the RA4L1, if the application code exceeds the 512KB available on-chip?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRA4L1 MCUs support Quad SPI interface with support for Execute-In-Place (XIP). Should the code size exceed the size of on-chip memory, users have the option of using external flash connected to the Quad SPI interface, and executing the code directly from external flash. They also have the option of bringing the code into internal flash or SRAM and executing from internal memory.\nSuitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "RA4L1 MCUs support Quad SPI interface with support for Execute-In-Place (XIP). Should the code size exceed the size of on-chip memory, users have the option of using external flash connected to the Quad SPI interface, and executing the code directly from external flash. They also have the option of bringing the code into internal flash or SRAM and executing from internal memory."
+      },
+      {
+        "type": "text",
+        "content": "RA4L1 MCUs support Quad SPI interface with support for Execute-In-Place (XIP). Should the code size exceed the size of on-chip memory, users have the option of using external flash connected to the Quad SPI interface, and executing the code directly from external flash. They also have the option of bringing the code into internal flash or SRAM and executing from internal memory."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "Japanese Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA4L1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA4L1"
+    ],
+    "links": [
+      {
+        "text": "Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21763458"
+      },
+      {
+        "text": "Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21763470"
+      }
+    ]
+  }
+}

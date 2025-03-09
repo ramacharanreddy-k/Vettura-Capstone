@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21671335",
+    "title": "RL78 F13/14/15 electrical characteristics",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:58:33.182333"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI am using RL78 F13 family device I would like to ask about the high-speed on-chip oscillator accuracy. The datasheet value is +-3% for the grade K (up to 125°C). I would like to know a graph with the dependence of the temperature and accuracy of the oscillator.\nAnswer:\nPlease check the following application: [RL78/F13/F14/F15 Electrical Characteristics Reference Value Quick Viewer | Renesas|https://www.renesas.com/us/en/document/oth/rl78f13f14f15-electrical-characteristics-reference-value-quick-viewer].\nThis is available on the document section of the product landing page.\n  This should show the variation across the temperature range. These are typical values and all the samples are not guaranteed to be in the range in the graph. Additionally as this is typical temperature behavior, max limit the datasheet values should be used for design even if the limits will normally not be reached.\nSuitable Products\nRL78"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nI am using RL78 F13 family device I would like to ask about the high-speed on-chip oscillator accuracy. The datasheet value is +-3% for the grade K (up to 125°C). I would like to know a graph with the dependence of the temperature and accuracy of the oscillator.\nAnswer:\nPlease check the following application: [RL78/F13/F14/F15 Electrical Characteristics Reference Value Quick Viewer | Renesas|https://www.renesas.com/us/en/document/oth/rl78f13f14f15-electrical-characteristics-reference-value-quick-viewer].\nThis is available on the document section of the product landing page.\n  This should show the variation across the temperature range. These are typical values and all the samples are not guaranteed to be in the range in the graph. Additionally as this is typical temperature behavior, max limit the datasheet values should be used for design even if the limits will normally not be reached.\nSuitable Products\nRL78"
+      },
+      {
+        "type": "text",
+        "content": "I am using RL78 F13 family device I would like to ask about the high-speed on-chip oscillator accuracy. The datasheet value is +-3% for the grade K (up to 125°C). I would like to know a graph with the dependence of the temperature and accuracy of the oscillator."
+      },
+      {
+        "type": "text",
+        "content": "I am using RL78 F13 family device I would like to ask about the high-speed on-chip oscillator accuracy. The datasheet value is +-3% for the grade K (up to 125°C). I would like to know a graph with the dependence of the temperature and accuracy of the oscillator."
+      },
+      {
+        "type": "text",
+        "content": "I am using RL78 F13 family device I would like to ask about the high-speed on-chip oscillator accuracy. The datasheet value is +-3% for the grade K (up to 125°C). I would like to know a graph with the dependence of the temperature and accuracy of the oscillator."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nPlease check the following application: [RL78/F13/F14/F15 Electrical Characteristics Reference Value Quick Viewer | Renesas|https://www.renesas.com/us/en/document/oth/rl78f13f14f15-electrical-characteristics-reference-value-quick-viewer].\nThis is available on the document section of the product landing page.\n  This should show the variation across the temperature range. These are typical values and all the samples are not guaranteed to be in the range in the graph. Additionally as this is typical temperature behavior, max limit the datasheet values should be used for design even if the limits will normally not be reached.\nSuitable Products\nRL78"
+      },
+      {
+        "type": "text",
+        "content": "Please check the following application: [RL78/F13/F14/F15 Electrical Characteristics Reference Value Quick Viewer | Renesas|https://www.renesas.com/us/en/document/oth/rl78f13f14f15-electrical-characteristics-reference-value-quick-viewer].\nThis is available on the document section of the product landing page.\n  This should show the variation across the temperature range. These are typical values and all the samples are not guaranteed to be in the range in the graph. Additionally as this is typical temperature behavior, max limit the datasheet values should be used for design even if the limits will normally not be reached."
+      },
+      {
+        "type": "text",
+        "content": "Please check the following application: [RL78/F13/F14/F15 Electrical Characteristics Reference Value Quick Viewer | Renesas|https://www.renesas.com/us/en/document/oth/rl78f13f14f15-electrical-characteristics-reference-value-quick-viewer]."
+      },
+      {
+        "type": "text",
+        "content": "Please check the following application: [RL78/F13/F14/F15 Electrical Characteristics Reference Value Quick Viewer | Renesas|https://www.renesas.com/us/en/document/oth/rl78f13f14f15-electrical-characteristics-reference-value-quick-viewer]."
+      },
+      {
+        "type": "text",
+        "content": "This is available on the document section of the product landing page."
+      },
+      {
+        "type": "text",
+        "content": "This is available on the document section of the product landing page."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/18e75f39-cb6c-4e34-9578-17a7fd287ac1",
+          "alt_text": "A screen shot of a graphDescription automatically generated",
+          "width": "601",
+          "height": "381",
+          "local_path": "data/categories/rl78_family/electrical_characteristics/07ef99b5d7a7eaabf982c5966ea3dade/images/6b82dcbba8fc503dfae2e2b7964c843e.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "This should show the variation across the temperature range. These are typical values and all the samples are not guaranteed to be in the range in the graph. Additionally as this is typical temperature behavior, max limit the datasheet values should be used for design even if the limits will normally not be reached."
+      },
+      {
+        "type": "text",
+        "content": "This should show the variation across the temperature range."
+      },
+      {
+        "type": "text",
+        "content": "These are typical values and all the samples are not guaranteed to be in the range in the graph. Additionally as this is typical temperature behavior, max limit the datasheet values should be used for design even if the limits will normally not be reached."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/18e75f39-cb6c-4e34-9578-17a7fd287ac1",
+        "alt_text": "A screen shot of a graphDescription automatically generated",
+        "width": "601",
+        "height": "381",
+        "local_path": "data/categories/rl78_family/electrical_characteristics/07ef99b5d7a7eaabf982c5966ea3dade/images/6b82dcbba8fc503dfae2e2b7964c843e.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/us/en/document/oth/rl78f13f14f15-electrical-characteristics-reference-value-quick-viewer",
+        "url": "https://www.renesas.com/us/en/document/oth/rl78f13f14f15-electrical-characteristics-reference-value-quick-viewer"
+      }
+    ]
+  }
+}

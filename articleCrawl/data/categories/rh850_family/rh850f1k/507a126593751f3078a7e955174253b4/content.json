@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21225575",
+    "title": "RH850/F1K Crypto library RSA Algorithm",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:27:03.714039"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDoes Renesas RH850 ICUS block support RSA algorithm ? Does Renesas provide any software library to support RSA algorithm ?\nAnswer:\nThe devices feature the ICU-S which is only doing symmetric AES operations. For RSA there is no hardware support. Renesas do not offer a SW library. But there are some 3rd parties (Vektor, Elektrobit) which offer such a library.\n  Suitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nDoes Renesas RH850 ICUS block support RSA algorithm ? Does Renesas provide any software library to support RSA algorithm ?\nAnswer:\nThe devices feature the ICU-S which is only doing symmetric AES operations. For RSA there is no hardware support. Renesas do not offer a SW library. But there are some 3rd parties (Vektor, Elektrobit) which offer such a library.\n  Suitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "Does Renesas RH850 ICUS block support RSA algorithm ? Does Renesas provide any software library to support RSA algorithm ?"
+      },
+      {
+        "type": "text",
+        "content": "Does Renesas RH850 ICUS block support RSA algorithm ? Does Renesas provide any software library to support RSA algorithm ?"
+      },
+      {
+        "type": "text",
+        "content": "Does Renesas RH850 ICUS block support RSA algorithm ? Does Renesas provide any software library to support RSA algorithm ?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe devices feature the ICU-S which is only doing symmetric AES operations. For RSA there is no hardware support. Renesas do not offer a SW library. But there are some 3rd parties (Vektor, Elektrobit) which offer such a library.\n  Suitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "The devices feature the ICU-S which is only doing symmetric AES operations. For RSA there is no hardware support. Renesas do not offer a SW library. But there are some 3rd parties (Vektor, Elektrobit) which offer such a library."
+      },
+      {
+        "type": "text",
+        "content": "The devices feature the ICU-S which is only doing symmetric AES operations. For RSA there is no hardware support. Renesas do not offer a SW library. But there are some 3rd parties (Vektor, Elektrobit) which offer such a library."
+      },
+      {
+        "type": "text",
+        "content": "The devices feature the ICU-S which is only doing symmetric AES operations. For RSA there is no hardware support. Renesas do not offer a SW library. But there are some 3rd parties (Vektor, Elektrobit) which offer such a library."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850"
+    ],
+    "links": []
+  }
+}

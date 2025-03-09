@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "void __assert_func (const char * file, int line, const char * func, const char * expr)\n{\n    FSP_PARAMETER_NOT_USED(file);\n    FSP_PARAMETER_NOT_USED(line);\n    FSP_PARAMETER_NOT_USED(func);\n    FSP_PARAMETER_NOT_USED(expr);\n    R_PORT1->PCNTR3 = 0x00000001;    // LED3(R):ON\n    __BKPT(0);\n    while (1)\n    {\n        /* Do nothing. */\n    }\n}"
+    ]
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20839477",
+    "title": "RZ/N2L cannot access EEPROM on the RZ/N2L RSK board. What could be the cause?",
+    "last_updated": "2023-07-02",
+    "extracted_at": "2025-03-08T23:46:46.086587"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nRZ/N2L cannot access EEPROM on the RZ/N2L RSK board. What could be the cause?\nAnswer:\nThere are two types of EEPROM sizes: 16kbit and 32kbit. Please refer to the following and configure the software settings according to the EEPROM size.\n[RZ/N2L RSK board]\nSerial No. of boards with 16kbit: 241783~241882, 243167~243266\nSerial No. for boards with 32kbit: other than above\nRefer to the following page.\nhttps://www.renesas.com/us/en/document/tnn/notes-renesas-starter-kit-rzn2l-differences-eeprom-size?r=1622401\nSuitable Products\nRZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "RZ/N2L cannot access EEPROM on the RZ/N2L RSK board. What could be the cause?"
+      },
+      {
+        "type": "text",
+        "content": "RZ/N2L cannot access EEPROM on the RZ/N2L RSK board. What could be the cause?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThere are two types of EEPROM sizes: 16kbit and 32kbit. Please refer to the following and configure the software settings according to the EEPROM size.\n[RZ/N2L RSK board]\nSerial No. of boards with 16kbit: 241783~241882, 243167~243266\nSerial No. for boards with 32kbit: other than above\nRefer to the following page.\nhttps://www.renesas.com/us/en/document/tnn/notes-renesas-starter-kit-rzn2l-differences-eeprom-size?r=1622401\nSuitable Products\nRZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "There are two types of EEPROM sizes: 16kbit and 32kbit. Please refer to the following and configure the software settings according to the EEPROM size.\n[RZ/N2L RSK board]\nSerial No. of boards with 16kbit: 241783~241882, 243167~243266\nSerial No. for boards with 32kbit: other than above\nRefer to the following page.\nhttps://www.renesas.com/us/en/document/tnn/notes-renesas-starter-kit-rzn2l-differences-eeprom-size?r=1622401"
+      },
+      {
+        "type": "text",
+        "content": "There are two types of EEPROM sizes: 16kbit and 32kbit. Please refer to the following and configure the software settings according to the EEPROM size."
+      },
+      {
+        "type": "text",
+        "content": "[RZ/N2L RSK board]"
+      },
+      {
+        "type": "text",
+        "content": "Serial No. of boards with 16kbit: 241783~241882, 243167~243266\nSerial No. for boards with 32kbit: other than above"
+      },
+      {
+        "type": "text",
+        "content": "Refer to the following page.\nhttps://www.renesas.com/us/en/document/tnn/notes-renesas-starter-kit-rzn2l-differences-eeprom-size?r=1622401"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/N2L"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/N2L"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/us/en/document/tnn/notes-renesas-starter-kit-rzn2l-differences-eeprom-size?r=1622401",
+        "url": "https://www.renesas.com/us/en/document/tnn/notes-renesas-starter-kit-rzn2l-differences-eeprom-size?r=1622401"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20836715"
+      }
+    ]
+  }
+}

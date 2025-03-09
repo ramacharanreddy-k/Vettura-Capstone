@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21727828",
+    "title": "RA Family: How to connect external SRAM?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:35:47.570411"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI plan to connect external SRAM by using CS area controller (CSC) of the RA6 MCU.\nWhat should I do with the following items when selecting Renesas' RMLV1616A (16Mbit) as the target memory,\na) How to connect the address lines between RA MCU and SRAM.\nb) How to select “write access mode” (single-write strobe mode / byte strobe mode)  about CSCnMOD register in RA MCU.\nFigure 1: Pin Assignment of RMLV1616A (48pin TSOP)\nAnswer:\nThe target SRAM is available in two bus widths: 1M words × 16 bits / 2M words × 8 bits.\n(1) Data width is 16bits (Word mode):\nBYTE# pin of the SRAM is pulled-up to H level to set it to word mode.\nThe address of RMLV1616 is a word (1 word = 16 bits) address which is 20 lines from A0 to A19.\nOn the other hand, RA MCU uses byte address. For this reason, the address lines of the two devices are connected with an offset.\n\nRA MCU A20 — SRAM A19\nRA MCU A19 — SRAM A18\n        ...\nRA MCU A2 — SRAM A1\nRA MCU A1 — SRAM A0\n\nIn this configuration, the A-1 pin on the SRAM is not connected to the address signal of RA MCU. The A-1 pin is used as DQ15 on the 16-bit data bus.\n\nThe write access mode of RA MCU is selected as \"single-write strobe mode\".\nConnect the BC0/BC1 pins of RA MCU to the byte selection pins LB#/UB# on the SRAM, respectively.\nFigure 2: Word mode connection\n(2) Data width is 8bits (Byte mode):\nBYTE# pin of the SRAM is pulled-down to L level to set it to byte mode.\nThe address of RMLV1616 is a word (1 word = 16 bits) address which is 21 lines from A-1 to A19.\nOn the other hand, RA MCU uses byte address. For this reason, the address lines of the two devices are connected with an offset.\n\nRA MCU A20 — SRAM A19\nRA MCU A19 — SRAM A18\n       ...\nRA MCU A2 — SRAM A1\nRA MCU A1 — SRAM A0\nRA MCU A0 — SRAM A-1\n\nIn this configuration, the A-1 pin on the SRAM is connected to A0 pin of RA MCU.\n\nThe write access mode of RA MCU is selected as \"byte strobe mode\".\nThe BC0 pin of RA MCU is used as the address A0 pin.\nBC1 pin and D[15-8] pins of the RA MCU are not used for this connection. These can be used as a pin for functions other than CSC.\nLB#/UB# pins and DQ[14-8] pins of SRAM are not used for this connection. It is recommended to pull it up on the substrate.\n\nFigure 3: Byte mode connection\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "I plan to connect external SRAM by using CS area controller (CSC) of the RA6 MCU.\nWhat should I do with the following items when selecting Renesas' RMLV1616A (16Mbit) as the target memory,\na) How to connect the address lines between RA MCU and SRAM.\nb) How to select “write access mode” (single-write strobe mode / byte strobe mode)  about CSCnMOD register in RA MCU.\nFigure 1: Pin Assignment of RMLV1616A (48pin TSOP)"
+      },
+      {
+        "type": "text",
+        "content": "I plan to connect external SRAM by using CS area controller (CSC) of the RA6 MCU."
+      },
+      {
+        "type": "text",
+        "content": "What should I do with the following items when selecting Renesas' RMLV1616A (16Mbit) as the target memory,"
+      },
+      {
+        "type": "text",
+        "content": "a) How to connect the address lines between RA MCU and SRAM.\nb) How to select “write access mode” (single-write strobe mode / byte strobe mode)  about CSCnMOD register in RA MCU."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396684_1.png",
+          "alt_text": "",
+          "width": "775",
+          "height": "494",
+          "local_path": "data/categories/ra_family/external_bus/b5c043ca694caf48ad22adcac1ba8f3b/images/75594f616ee0e23434fa2e553830bae5.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 1: Pin Assignment of RMLV1616A (48pin TSOP)"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe target SRAM is available in two bus widths: 1M words × 16 bits / 2M words × 8 bits.\n(1) Data width is 16bits (Word mode):\nBYTE# pin of the SRAM is pulled-up to H level to set it to word mode.\nThe address of RMLV1616 is a word (1 word = 16 bits) address which is 20 lines from A0 to A19.\nOn the other hand, RA MCU uses byte address. For this reason, the address lines of the two devices are connected with an offset.\n\nRA MCU A20 — SRAM A19\nRA MCU A19 — SRAM A18\n        ...\nRA MCU A2 — SRAM A1\nRA MCU A1 — SRAM A0\n\nIn this configuration, the A-1 pin on the SRAM is not connected to the address signal of RA MCU. The A-1 pin is used as DQ15 on the 16-bit data bus.\n\nThe write access mode of RA MCU is selected as \"single-write strobe mode\".\nConnect the BC0/BC1 pins of RA MCU to the byte selection pins LB#/UB# on the SRAM, respectively.\nFigure 2: Word mode connection\n(2) Data width is 8bits (Byte mode):\nBYTE# pin of the SRAM is pulled-down to L level to set it to byte mode.\nThe address of RMLV1616 is a word (1 word = 16 bits) address which is 21 lines from A-1 to A19.\nOn the other hand, RA MCU uses byte address. For this reason, the address lines of the two devices are connected with an offset.\n\nRA MCU A20 — SRAM A19\nRA MCU A19 — SRAM A18\n       ...\nRA MCU A2 — SRAM A1\nRA MCU A1 — SRAM A0\nRA MCU A0 — SRAM A-1\n\nIn this configuration, the A-1 pin on the SRAM is connected to A0 pin of RA MCU.\n\nThe write access mode of RA MCU is selected as \"byte strobe mode\".\nThe BC0 pin of RA MCU is used as the address A0 pin.\nBC1 pin and D[15-8] pins of the RA MCU are not used for this connection. These can be used as a pin for functions other than CSC.\nLB#/UB# pins and DQ[14-8] pins of SRAM are not used for this connection. It is recommended to pull it up on the substrate.\n\nFigure 3: Byte mode connection\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "The target SRAM is available in two bus widths: 1M words × 16 bits / 2M words × 8 bits."
+      },
+      {
+        "type": "text",
+        "content": "(1) Data width is 16bits (Word mode):"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396684_2.png",
+          "alt_text": "",
+          "width": "567",
+          "height": "383",
+          "local_path": "data/categories/ra_family/external_bus/b5c043ca694caf48ad22adcac1ba8f3b/images/c372b7c25b771bc307ac27decd6be46f.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 2: Word mode connection"
+      },
+      {
+        "type": "text",
+        "content": "(2) Data width is 8bits (Byte mode):"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396684_3.png",
+          "alt_text": "",
+          "width": "670",
+          "height": "448",
+          "local_path": "data/categories/ra_family/external_bus/b5c043ca694caf48ad22adcac1ba8f3b/images/1928f52af349ef0851525ebde8dd594f.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 3: Byte mode connection"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396684_1.png",
+        "alt_text": "",
+        "width": "775",
+        "height": "494",
+        "local_path": "data/categories/ra_family/external_bus/b5c043ca694caf48ad22adcac1ba8f3b/images/75594f616ee0e23434fa2e553830bae5.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396684_2.png",
+        "alt_text": "",
+        "width": "567",
+        "height": "383",
+        "local_path": "data/categories/ra_family/external_bus/b5c043ca694caf48ad22adcac1ba8f3b/images/c372b7c25b771bc307ac27decd6be46f.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396684_3.png",
+        "alt_text": "",
+        "width": "670",
+        "height": "448",
+        "local_path": "data/categories/ra_family/external_bus/b5c043ca694caf48ad22adcac1ba8f3b/images/1928f52af349ef0851525ebde8dd594f.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21727841"
+      }
+    ]
+  }
+}

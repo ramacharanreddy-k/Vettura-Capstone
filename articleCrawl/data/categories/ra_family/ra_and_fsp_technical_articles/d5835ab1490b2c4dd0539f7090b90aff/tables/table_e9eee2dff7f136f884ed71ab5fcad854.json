@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "static void _cbTopWin(WM_MESSAGE * pMsg) {\nGUI_MEMDEV_Handle hMem;\n    switch (pMsg->MsgId) {\n    case WM_PAINT:\n      hMem  = GUI_MEMDEV_CreateFixed(0, 0, 100, 100, GUI_MEMDEV_HASTRANS, GUI_MEMDEV_APILIST_32, GUI_COLOR_CONV_888);\n      GUI_MEMDEV_Select(hMem);\n      GUI_SetColor(GUI_BLACK);\n      for(uint32_t i=0; i<100; i++){\n        GUI_DrawPixel(i, i);\n      }\n      GUI_MEMDEV_CopyToLCD(hMem);\n      GUI_MEMDEV_Delete(hMem);\n      GUI_MEMDEV_Select(0);\n      break;\n    default:\n      WM_DefaultProc(pMsg);\n      break;\n  }\n}\n  void cbID_SCREEN_00(WM_MESSAGE * pMsg) {\n  WM_HWIN  hWin;\n    switch (pMsg->MsgId) {\n    case WM_INIT_DIALOG:\n      hWin = WM_CreateWindowAsChild(0, 0, 100, 100, WM_HBKWIN, (WM_CF_HASTRANS|WM_CF_SHOW), _cbTopWin, 0);\n      WM_SetStayOnTop(hWin, 1);\n      break;\n}\n}"
+    ]
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20474167",
+    "title": "EK-RA2L1 Schematic Missing Connections",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:13:34.765892"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "The schematics for the EK-RA2L1 is missing some connections, inserted below in red and green. The connections are on the board, juts not included in the schematic. These will be updated in the next revision of the schematic."
+      },
+      {
+        "type": "text",
+        "content": "The schematics for the EK-RA2L1 is missing some connections, inserted below in red and green. The connections are on the board, juts not included in the schematic. These will be updated in the next revision of the schematic."
+      },
+      {
+        "type": "text",
+        "content": "The schematics for the EK-RA2L1 is missing some connections, inserted below in red and green. The connections are on the board, juts not included in the schematic. These will be updated in the next revision of the schematic."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/e7f73640-7c5d-453c-93a5-98c6fe299659.png",
+          "alt_text": "",
+          "width": "799",
+          "height": "645",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/4d6dbe65e1eb7337da226e43afacc605/images/083c4e170953cc97124aa6a22dbfa4fa.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA/FSP"
+      },
+      {
+        "type": "text",
+        "content": "Source:   Ticket 349162"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/e7f73640-7c5d-453c-93a5-98c6fe299659.png",
+        "alt_text": "",
+        "width": "799",
+        "height": "645",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/4d6dbe65e1eb7337da226e43afacc605/images/083c4e170953cc97124aa6a22dbfa4fa.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA/FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA/FSP"
+    ],
+    "links": []
+  }
+}

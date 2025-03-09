@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20655746",
+    "title": "RZ/A3UL: Direct execution from Octal Flash",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:42:41.209632"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDoes it support running code in Octal SPI Flash directly?\nAnswer:\nYes it dose support XIP.\nSuitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Does it support running code in Octal SPI Flash directly?"
+      },
+      {
+        "type": "text",
+        "content": "Does it support running code in Octal SPI Flash directly?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes it dose support XIP.\nSuitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Yes it dose support XIP."
+      },
+      {
+        "type": "text",
+        "content": "Yes it dose support XIP."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A3UL"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A3UL"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20655734"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20655752"
+      }
+    ]
+  }
+}

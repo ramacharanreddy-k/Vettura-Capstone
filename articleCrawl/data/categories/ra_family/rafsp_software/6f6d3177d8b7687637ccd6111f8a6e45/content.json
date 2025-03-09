@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21690669",
+    "title": "RA Family: How to change SCI_UART parameters runtime-FSP",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:16:28.204358"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "In some cases it is required inside the application to change the SCI_UART parameters runtime. Users can do this in FSP by declaring a new configuration structure variable, that will contain the new desired settings and then re-initialize UART with the new settings. This should be done of course after de-initializing the UART before."
+      },
+      {
+        "type": "text",
+        "content": "In some cases it is required inside the application to change the SCI_UART parameters runtime. Users can do this in FSP by declaring a new configuration structure variable, that will contain the new desired settings and then re-initialize UART with the new settings. This should be done of course after de-initializing the UART before."
+      },
+      {
+        "type": "text",
+        "content": "The code inside the application should look like this:"
+      },
+      {
+        "type": "text",
+        "content": "The code inside the application should look like this:"
+      },
+      {
+        "type": "text",
+        "content": "As example, a project developed in FSP 5.6.0 and EK-RA6M3 is attached in which the UART channel is changed runtime, by using only one UART instance in the application project."
+      },
+      {
+        "type": "text",
+        "content": "As example, a project developed in FSP 5.6.0 and EK-RA6M3 is attached in which the UART channel is changed runtime, by using only one UART instance in the application project."
+      },
+      {
+        "type": "text",
+        "content": "With the same way a new configuration structure is declared to hold the new configurations for SCI9. And inside the project as soon as UART instance is de-initialized for SCI0 by calling the close() API, the UART instance re-initializes by calling the open() API and passing now as second argument a pointer to the new configuration structure containing the new settings."
+      },
+      {
+        "type": "text",
+        "content": "With the same way a new configuration structure is declared to hold the new configurations for SCI9. And inside the project as soon as UART instance is de-initialized for SCI0 by calling the close() API, the UART instance re-initializes by calling the open() API and passing now as second argument a pointer to the new configuration structure containing the new settings."
+      },
+      {
+        "type": "text",
+        "content": "To change UART channel runtime and use only one instance it is also important to add in Interrupts Tab these events related with these interrupts, so that UART peripheral will work properly."
+      },
+      {
+        "type": "text",
+        "content": "To change UART channel runtime and use only one instance it is also important to add in Interrupts Tab these events related with these interrupts, so that UART peripheral will work properly."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/fda1e9b5-32c2-435c-8639-19e1f6ee97d6",
+          "alt_text": "",
+          "width": "800",
+          "height": "391",
+          "local_path": "data/categories/ra_family/rafsp_software/6f6d3177d8b7687637ccd6111f8a6e45/images/d4396d5c501a2cc392d19f63ead65e46.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "And the example is initially transmitting 10 test messages through UART SCI0 (Pins:TXD:P411,RXD:P410) and the rest of the messages are transmitted through UART SCI9 (Pins: TXD:P203, RXD:P202)."
+      },
+      {
+        "type": "text",
+        "content": "And the example is initially transmitting 10 test messages through UART SCI0 (Pins:TXD:P411,RXD:P410) and the rest of the messages are transmitted through UART SCI9 (Pins: TXD:P203, RXD:P202)."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/6d944761-a891-43ad-9fc6-c5aaa8996b6e",
+          "alt_text": "",
+          "width": "779",
+          "height": "502",
+          "local_path": "data/categories/ra_family/rafsp_software/6f6d3177d8b7687637ccd6111f8a6e45/images/f8674810b4b278e8c70e8208754d1f92.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "For further details check the project sci_uart_change_parameters_runtime.zip attached."
+      },
+      {
+        "type": "text",
+        "content": "For further details check the project sci_uart_change_parameters_runtime.zip attached."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA Family, FSP"
+      },
+      {
+        "type": "text",
+        "content": "RA Family, FSP"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/fda1e9b5-32c2-435c-8639-19e1f6ee97d6",
+        "alt_text": "",
+        "width": "800",
+        "height": "391",
+        "local_path": "data/categories/ra_family/rafsp_software/6f6d3177d8b7687637ccd6111f8a6e45/images/d4396d5c501a2cc392d19f63ead65e46.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/6d944761-a891-43ad-9fc6-c5aaa8996b6e",
+        "alt_text": "",
+        "width": "779",
+        "height": "502",
+        "local_path": "data/categories/ra_family/rafsp_software/6f6d3177d8b7687637ccd6111f8a6e45/images/f8674810b4b278e8c70e8208754d1f92.png"
+      }
+    ],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": []
+  }
+}

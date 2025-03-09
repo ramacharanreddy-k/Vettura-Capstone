@@ -1,0 +1,160 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21652595",
+    "title": "RA Family: How to enable debug logging for USB driver",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:23:15.881018"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Answer:\nFSP's USB driver is equipped with a debug log output function to check the execution status of the driver's internal program (e.g., enumeration status and event information). You can enable the debug output of the USB driver by defining the USB_DEBUG_ON with compiler options as shown below.\nThe output destination is implemented in the r_usb_basic_define.h file to execute the printf function of the standard library by default. If you want to change this to a different destination, edit the USB_PRINTFn macro definition in the r_usb_basic_define.h file or redefine the _write function in the User Application code.\nTo output the debug log with the SEGGER J-Link RTT function, define the _write function as follows.\nint _write(int file, char *ptr, int len)\n{\n     FSP_PARAMETER_NOT_USED(file);\n     int    ret;\n          ret = (int)SEGGER_RTT_Write(0, ptr, (unsigned int)len);\n          return ret;\n}\n  Notes:\nEnabling this feature may reduce the processing, execution, and performance of the USB driver.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nFSP's USB driver is equipped with a debug log output function to check the execution status of the driver's internal program (e.g., enumeration status and event information). You can enable the debug output of the USB driver by defining the USB_DEBUG_ON with compiler options as shown below.\nThe output destination is implemented in the r_usb_basic_define.h file to execute the printf function of the standard library by default. If you want to change this to a different destination, edit the USB_PRINTFn macro definition in the r_usb_basic_define.h file or redefine the _write function in the User Application code.\nTo output the debug log with the SEGGER J-Link RTT function, define the _write function as follows.\nint _write(int file, char *ptr, int len)\n{\n     FSP_PARAMETER_NOT_USED(file);\n     int    ret;\n          ret = (int)SEGGER_RTT_Write(0, ptr, (unsigned int)len);\n          return ret;\n}\n  Notes:\nEnabling this feature may reduce the processing, execution, and performance of the USB driver.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "FSP's USB driver is equipped with a debug log output function to check the execution status of the driver's internal program (e.g., enumeration status and event information). You can enable the debug output of the USB driver by defining the USB_DEBUG_ON with compiler options as shown below.\nThe output destination is implemented in the r_usb_basic_define.h file to execute the printf function of the standard library by default. If you want to change this to a different destination, edit the USB_PRINTFn macro definition in the r_usb_basic_define.h file or redefine the _write function in the User Application code.\nTo output the debug log with the SEGGER J-Link RTT function, define the _write function as follows.\nint _write(int file, char *ptr, int len)\n{\n     FSP_PARAMETER_NOT_USED(file);\n     int    ret;\n          ret = (int)SEGGER_RTT_Write(0, ptr, (unsigned int)len);\n          return ret;\n}\n  Notes:\nEnabling this feature may reduce the processing, execution, and performance of the USB driver."
+      },
+      {
+        "type": "text",
+        "content": "FSP's USB driver is equipped with a debug log output function to check the execution status of the driver's internal program (e.g., enumeration status and event information). You can enable the debug output of the USB driver by defining the USB_DEBUG_ON with compiler options as shown below."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/394689.png",
+          "alt_text": "",
+          "width": "642",
+          "height": "309",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/dace1a997b96e94b9219abf318eb3463/images/f7d94c41c5a86cc8baed51846d34dba4.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The output destination is implemented in the r_usb_basic_define.h file to execute the printf function of the standard library by default. If you want to change this to a different destination, edit the USB_PRINTFn macro definition in the r_usb_basic_define.h file or redefine the _write function in the User Application code."
+      },
+      {
+        "type": "text",
+        "content": "To output the debug log with the SEGGER J-Link RTT function, define the _write function as follows."
+      },
+      {
+        "type": "text",
+        "content": "int _write(int file, char *ptr, int len)"
+      },
+      {
+        "type": "text",
+        "content": "int _write(int file, char *ptr, int len)"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "FSP_PARAMETER_NOT_USED(file);"
+      },
+      {
+        "type": "text",
+        "content": "FSP_PARAMETER_NOT_USED(file);"
+      },
+      {
+        "type": "text",
+        "content": "int    ret;"
+      },
+      {
+        "type": "text",
+        "content": "int    ret;"
+      },
+      {
+        "type": "text",
+        "content": "ret = (int)SEGGER_RTT_Write(0, ptr, (unsigned int)len);"
+      },
+      {
+        "type": "text",
+        "content": "ret = (int)SEGGER_RTT_Write(0, ptr, (unsigned int)len);"
+      },
+      {
+        "type": "text",
+        "content": "return ret;"
+      },
+      {
+        "type": "text",
+        "content": "return ret;"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "Notes:"
+      },
+      {
+        "type": "text",
+        "content": "Enabling this feature may reduce the processing, execution, and performance of the USB driver."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/394689.png",
+        "alt_text": "",
+        "width": "642",
+        "height": "309",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/dace1a997b96e94b9219abf318eb3463/images/f7d94c41c5a86cc8baed51846d34dba4.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "int _write(int file, char *ptr, int len)\n{\n     FSP_PARAMETER_NOT_USED(file);\n     int    ret;\n          ret = (int)SEGGER_RTT_Write(0, ptr, (unsigned int)len);\n          return ret;\n}"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21652600"
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20797516",
+    "title": "RA Family: How to map a function into the memory section on SRAM",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:25:14.175816"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to map a function into the memory section on SRAM\nAnswer:\nThe linker script provided in FSP defines the “.code_in_ram” section that is the memory space mapped in SRAM. The code block mapped in this section will be copied to SRAM by SystemInit() that is executed during the startup. To place a function in the “.code_in_ram” section, FSP driver code is a good example to understand the implementation. The below code example is of the flash driver (r_flash_hp.c) in FSP.\nstatic fsp_err_t flash_hp_pe_mode_exit() PLACE_IN_RAM_SECTION;\nHere, PALCE_IN_RAM_SECTION is defined as follows in the Flash Driver header file (r_flash_hp.h).\n#if defined(__ICCARM__)\n  #pragma section=\".code_in_ram\"\n #endif\n #if defined(__ARMCC_VERSION) || defined(__GNUC__)\n  #define PLACE_IN_RAM_SECTION    __attribute__((noinline)) BSP_PLACE_IN_SECTION(\".code_in_ram\")\n #else\n  #define PLACE_IN_RAM_SECTION    BSP_PLACE_IN_SECTION(\".code_in_ram\")\n #endif\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "How to map a function into the memory section on SRAM"
+      },
+      {
+        "type": "text",
+        "content": "How to map a function into the memory section on SRAM"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe linker script provided in FSP defines the “.code_in_ram” section that is the memory space mapped in SRAM. The code block mapped in this section will be copied to SRAM by SystemInit() that is executed during the startup. To place a function in the “.code_in_ram” section, FSP driver code is a good example to understand the implementation. The below code example is of the flash driver (r_flash_hp.c) in FSP.\nstatic fsp_err_t flash_hp_pe_mode_exit() PLACE_IN_RAM_SECTION;\nHere, PALCE_IN_RAM_SECTION is defined as follows in the Flash Driver header file (r_flash_hp.h).\n#if defined(__ICCARM__)\n  #pragma section=\".code_in_ram\"\n #endif\n #if defined(__ARMCC_VERSION) || defined(__GNUC__)\n  #define PLACE_IN_RAM_SECTION    __attribute__((noinline)) BSP_PLACE_IN_SECTION(\".code_in_ram\")\n #else\n  #define PLACE_IN_RAM_SECTION    BSP_PLACE_IN_SECTION(\".code_in_ram\")\n #endif\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "The linker script provided in FSP defines the “.code_in_ram” section that is the memory space mapped in SRAM. The code block mapped in this section will be copied to SRAM by SystemInit() that is executed during the startup. To place a function in the “.code_in_ram” section, FSP driver code is a good example to understand the implementation. The below code example is of the flash driver (r_flash_hp.c) in FSP.\nstatic fsp_err_t flash_hp_pe_mode_exit() PLACE_IN_RAM_SECTION;\nHere, PALCE_IN_RAM_SECTION is defined as follows in the Flash Driver header file (r_flash_hp.h).\n#if defined(__ICCARM__)\n  #pragma section=\".code_in_ram\"\n #endif\n #if defined(__ARMCC_VERSION) || defined(__GNUC__)\n  #define PLACE_IN_RAM_SECTION    __attribute__((noinline)) BSP_PLACE_IN_SECTION(\".code_in_ram\")\n #else\n  #define PLACE_IN_RAM_SECTION    BSP_PLACE_IN_SECTION(\".code_in_ram\")\n #endif\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "The linker script provided in FSP defines the “.code_in_ram” section that is the memory space mapped in SRAM. The code block mapped in this section will be copied to SRAM by SystemInit() that is executed during the startup. To place a function in the “.code_in_ram” section, FSP driver code is a good example to understand the implementation. The below code example is of the flash driver (r_flash_hp.c) in FSP."
+      },
+      {
+        "type": "text",
+        "content": "static fsp_err_t flash_hp_pe_mode_exit() PLACE_IN_RAM_SECTION;"
+      },
+      {
+        "type": "text",
+        "content": "Here, PALCE_IN_RAM_SECTION is defined as follows in the Flash Driver header file (r_flash_hp.h)."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20793391"
+      }
+    ]
+  }
+}

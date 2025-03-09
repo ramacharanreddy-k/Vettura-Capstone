@@ -1,0 +1,189 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20824902",
+    "title": "Touch development with the RL78 microcontroller",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:57:07.644181"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow is touch development performed with the RL78 microcontroller?\nAlso, please tell me about tuning and parameter adjustment.\nAnswer:\nWe offer “QE for Capacitive Touch” as a touch development support tool.\nQE for Capacitive Touch can be used to perform the initial setting and sensitivity adjustment of the touch interface required for touch development.\nQE for Capacitive Touch is available as a plug-in used in the e2 studio integrated development environment and as a standalone version that operates independently. It can be used in the “e2 studio” Renesas Electronics development environment or in “CS+”.\nFigure: QE for Capacitive Touch development screen\nWhen using e2 studio for development, please refer to this document.\nhttps://www.renesas.com/document/apn/rl78-family-using-qe-and-sis-develop-capacitive-touch-applications?r=1170071\nThe above setting methods are also explained in a video.\nhttps://www.renesas.com/video/qe-capacitive-touch-tutorial-settings-rl78\nhttps://www.renesas.com/video/qe-capacitive-touch-tutorial-tuning-rl78\nhttps://www.renesas.com/video/qe-capacitive-touch-tutorial-serial-monitoring-rl78\nWhen using CS+ for development, please refer to this document.\nhttps://www.renesas.com/document/apn/rl78-family-using-standalone-version-qe-develop-capacitive-touch-applications-rev100?r=1170071\nRefer to the following application note for information on parameters used when monitoring touch functionality in QE for Capacitive Touch.\nhttps://www.renesas.com/document/apn/rl78-family-touch-module-software-integration-system?r=1521766\nClick here to install e2 studio:\nhttps://www.renesas.com/software-tool/e2studio-information-rl78-family\nClick here to install CS+:\nhttps://www.renesas.com/software-tool/cs\n*When using CS+, please also install Smart Configurator:\nhttps://www.renesas.com/software-tool/rl78-smart-configurator#overview\nClick here to install QE for Capacitive Touch:\nhttps://www.renesas.com/software-tool/qe-capacitive-touch-development-assistance-tool-capacitive-touch-sensors#download\nSuitable Products\nRL78/G22, RL78/G23"
+      },
+      {
+        "type": "text",
+        "content": "How is touch development performed with the RL78 microcontroller?\nAlso, please tell me about tuning and parameter adjustment."
+      },
+      {
+        "type": "text",
+        "content": "How is touch development performed with the RL78 microcontroller?\nAlso, please tell me about tuning and parameter adjustment."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nWe offer “QE for Capacitive Touch” as a touch development support tool.\nQE for Capacitive Touch can be used to perform the initial setting and sensitivity adjustment of the touch interface required for touch development.\nQE for Capacitive Touch is available as a plug-in used in the e2 studio integrated development environment and as a standalone version that operates independently. It can be used in the “e2 studio” Renesas Electronics development environment or in “CS+”.\nFigure: QE for Capacitive Touch development screen\nWhen using e2 studio for development, please refer to this document.\nhttps://www.renesas.com/document/apn/rl78-family-using-qe-and-sis-develop-capacitive-touch-applications?r=1170071\nThe above setting methods are also explained in a video.\nhttps://www.renesas.com/video/qe-capacitive-touch-tutorial-settings-rl78\nhttps://www.renesas.com/video/qe-capacitive-touch-tutorial-tuning-rl78\nhttps://www.renesas.com/video/qe-capacitive-touch-tutorial-serial-monitoring-rl78\nWhen using CS+ for development, please refer to this document.\nhttps://www.renesas.com/document/apn/rl78-family-using-standalone-version-qe-develop-capacitive-touch-applications-rev100?r=1170071\nRefer to the following application note for information on parameters used when monitoring touch functionality in QE for Capacitive Touch.\nhttps://www.renesas.com/document/apn/rl78-family-touch-module-software-integration-system?r=1521766\nClick here to install e2 studio:\nhttps://www.renesas.com/software-tool/e2studio-information-rl78-family\nClick here to install CS+:\nhttps://www.renesas.com/software-tool/cs\n*When using CS+, please also install Smart Configurator:\nhttps://www.renesas.com/software-tool/rl78-smart-configurator#overview\nClick here to install QE for Capacitive Touch:\nhttps://www.renesas.com/software-tool/qe-capacitive-touch-development-assistance-tool-capacitive-touch-sensors#download\nSuitable Products\nRL78/G22, RL78/G23"
+      },
+      {
+        "type": "text",
+        "content": "We offer “QE for Capacitive Touch” as a touch development support tool.\nQE for Capacitive Touch can be used to perform the initial setting and sensitivity adjustment of the touch interface required for touch development.\nQE for Capacitive Touch is available as a plug-in used in the e2 studio integrated development environment and as a standalone version that operates independently. It can be used in the “e2 studio” Renesas Electronics development environment or in “CS+”.\nFigure: QE for Capacitive Touch development screen\nWhen using e2 studio for development, please refer to this document.\nhttps://www.renesas.com/document/apn/rl78-family-using-qe-and-sis-develop-capacitive-touch-applications?r=1170071\nThe above setting methods are also explained in a video.\nhttps://www.renesas.com/video/qe-capacitive-touch-tutorial-settings-rl78\nhttps://www.renesas.com/video/qe-capacitive-touch-tutorial-tuning-rl78\nhttps://www.renesas.com/video/qe-capacitive-touch-tutorial-serial-monitoring-rl78\nWhen using CS+ for development, please refer to this document.\nhttps://www.renesas.com/document/apn/rl78-family-using-standalone-version-qe-develop-capacitive-touch-applications-rev100?r=1170071\nRefer to the following application note for information on parameters used when monitoring touch functionality in QE for Capacitive Touch.\nhttps://www.renesas.com/document/apn/rl78-family-touch-module-software-integration-system?r=1521766\nClick here to install e2 studio:\nhttps://www.renesas.com/software-tool/e2studio-information-rl78-family\nClick here to install CS+:\nhttps://www.renesas.com/software-tool/cs\n*When using CS+, please also install Smart Configurator:\nhttps://www.renesas.com/software-tool/rl78-smart-configurator#overview\nClick here to install QE for Capacitive Touch:\nhttps://www.renesas.com/software-tool/qe-capacitive-touch-development-assistance-tool-capacitive-touch-sensors#download"
+      },
+      {
+        "type": "text",
+        "content": "We offer “QE for Capacitive Touch” as a touch development support tool.\nQE for Capacitive Touch can be used to perform the initial setting and sensitivity adjustment of the touch interface required for touch development.\nQE for Capacitive Touch is available as a plug-in used in the e2 studio integrated development environment and as a standalone version that operates independently. It can be used in the “e2 studio” Renesas Electronics development environment or in “CS+”."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/364006-1.png",
+          "alt_text": "",
+          "width": "809",
+          "height": "368",
+          "local_path": "data/categories/rl78_family/capacitive_touch/e33237919facfaf9a388fa69e3bb087a/images/c635af90f3a2a9ef29a16d1c45b5b9b4.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/364006-2.png",
+          "alt_text": "",
+          "width": "950",
+          "height": "648",
+          "local_path": "data/categories/rl78_family/capacitive_touch/e33237919facfaf9a388fa69e3bb087a/images/8487d97fd42112e2f1e8e27800637883.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure: QE for Capacitive Touch development screen"
+      },
+      {
+        "type": "text",
+        "content": "When using e2 studio for development, please refer to this document.\nhttps://www.renesas.com/document/apn/rl78-family-using-qe-and-sis-develop-capacitive-touch-applications?r=1170071"
+      },
+      {
+        "type": "text",
+        "content": "The above setting methods are also explained in a video.\nhttps://www.renesas.com/video/qe-capacitive-touch-tutorial-settings-rl78\nhttps://www.renesas.com/video/qe-capacitive-touch-tutorial-tuning-rl78\nhttps://www.renesas.com/video/qe-capacitive-touch-tutorial-serial-monitoring-rl78"
+      },
+      {
+        "type": "text",
+        "content": "When using CS+ for development, please refer to this document.\nhttps://www.renesas.com/document/apn/rl78-family-using-standalone-version-qe-develop-capacitive-touch-applications-rev100?r=1170071"
+      },
+      {
+        "type": "text",
+        "content": "Refer to the following application note for information on parameters used when monitoring touch functionality in QE for Capacitive Touch.\nhttps://www.renesas.com/document/apn/rl78-family-touch-module-software-integration-system?r=1521766"
+      },
+      {
+        "type": "text",
+        "content": "Click here to install e2 studio:\nhttps://www.renesas.com/software-tool/e2studio-information-rl78-family"
+      },
+      {
+        "type": "text",
+        "content": "Click here to install CS+:\nhttps://www.renesas.com/software-tool/cs"
+      },
+      {
+        "type": "text",
+        "content": "*When using CS+, please also install Smart Configurator:\nhttps://www.renesas.com/software-tool/rl78-smart-configurator#overview"
+      },
+      {
+        "type": "text",
+        "content": "Click here to install QE for Capacitive Touch:\nhttps://www.renesas.com/software-tool/qe-capacitive-touch-development-assistance-tool-capacitive-touch-sensors#download"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/G22, RL78/G23"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/364006-1.png",
+        "alt_text": "",
+        "width": "809",
+        "height": "368",
+        "local_path": "data/categories/rl78_family/capacitive_touch/e33237919facfaf9a388fa69e3bb087a/images/c635af90f3a2a9ef29a16d1c45b5b9b4.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/364006-2.png",
+        "alt_text": "",
+        "width": "950",
+        "height": "648",
+        "local_path": "data/categories/rl78_family/capacitive_touch/e33237919facfaf9a388fa69e3bb087a/images/8487d97fd42112e2f1e8e27800637883.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G22, RL78/G23"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G22, RL78/G23"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/document/apn/rl78-family-using-qe-and-sis-develop-capacitive-touch-applications?r=1170071",
+        "url": "https://www.renesas.com/document/apn/rl78-family-using-qe-and-sis-develop-capacitive-touch-applications?r=1170071"
+      },
+      {
+        "text": "https://www.renesas.com/video/qe-capacitive-touch-tutorial-settings-rl78",
+        "url": "https://www.renesas.com/video/qe-capacitive-touch-tutorial-settings-rl78"
+      },
+      {
+        "text": "https://www.renesas.com/video/qe-capacitive-touch-tutorial-tuning-rl78",
+        "url": "https://www.renesas.com/video/qe-capacitive-touch-tutorial-tuning-rl78"
+      },
+      {
+        "text": "https://www.renesas.com/video/qe-capacitive-touch-tutorial-serial-monitoring-rl78",
+        "url": "https://www.renesas.com/video/qe-capacitive-touch-tutorial-serial-monitoring-rl78"
+      },
+      {
+        "text": "https://www.renesas.com/document/apn/rl78-family-using-standalone-version-qe-develop-capacitive-touch-applications-rev100?r=1170071",
+        "url": "https://www.renesas.com/document/apn/rl78-family-using-standalone-version-qe-develop-capacitive-touch-applications-rev100?r=1170071"
+      },
+      {
+        "text": "https://www.renesas.com/document/apn/rl78-family-touch-module-software-integration-system?r=1521766",
+        "url": "https://www.renesas.com/document/apn/rl78-family-touch-module-software-integration-system?r=1521766"
+      },
+      {
+        "text": "https://www.renesas.com/software-tool/e2studio-information-rl78-family",
+        "url": "https://www.renesas.com/software-tool/e2studio-information-rl78-family"
+      },
+      {
+        "text": "https://www.renesas.com/software-tool/cs",
+        "url": "https://www.renesas.com/software-tool/cs"
+      },
+      {
+        "text": "https://www.renesas.com/software-tool/rl78-smart-configurator#overview",
+        "url": "https://www.renesas.com/software-tool/rl78-smart-configurator#overview"
+      },
+      {
+        "text": "https://www.renesas.com/software-tool/qe-capacitive-touch-development-assistance-tool-capacitive-touch-sensors#download",
+        "url": "https://www.renesas.com/software-tool/qe-capacitive-touch-development-assistance-tool-capacitive-touch-sensors#download"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20824908"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20824913"
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20590546",
+    "title": "RZ/A3UL: PMIC",
+    "last_updated": "2022-04-08",
+    "extracted_at": "2025-03-08T23:42:25.121821"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there a PMIC that can be used in combination with the RZ/A3UL?\nAnswer:\nWe provide a PMIC (DA9062) with a design optimized for the RZ/A3UL. \nhttps://www.renesas.com/products/power-power-management/multi-channel-power-management-ics-pmics/ssdsoc-power-management-ics-pmic-and-pmus/da9062-designed-applications-requiring-85\nSuitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Is there a PMIC that can be used in combination with the RZ/A3UL?"
+      },
+      {
+        "type": "text",
+        "content": "Is there a PMIC that can be used in combination with the RZ/A3UL?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nWe provide a PMIC (DA9062) with a design optimized for the RZ/A3UL. \nhttps://www.renesas.com/products/power-power-management/multi-channel-power-management-ics-pmics/ssdsoc-power-management-ics-pmic-and-pmus/da9062-designed-applications-requiring-85\nSuitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "We provide a PMIC (DA9062) with a design optimized for the RZ/A3UL. \nhttps://www.renesas.com/products/power-power-management/multi-channel-power-management-ics-pmics/ssdsoc-power-management-ics-pmic-and-pmus/da9062-designed-applications-requiring-85"
+      },
+      {
+        "type": "text",
+        "content": "We provide a PMIC (DA9062) with a design optimized for the RZ/A3UL. \nhttps://www.renesas.com/products/power-power-management/multi-channel-power-management-ics-pmics/ssdsoc-power-management-ics-pmic-and-pmus/da9062-designed-applications-requiring-85"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A3UL"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A3UL"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/products/power-power-management/multi-channel-power-management-ics-pmics/ssdsoc-power-management-ics-pmic-and-pmus/da9062-designed-applications-requiring-85",
+        "url": "https://www.renesas.com/products/power-power-management/multi-channel-power-management-ics-pmics/ssdsoc-power-management-ics-pmic-and-pmus/da9062-designed-applications-requiring-85"
+      },
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20590554"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20590562"
+      }
+    ]
+  }
+}

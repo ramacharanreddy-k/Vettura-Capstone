@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21671339",
+    "title": "RH850 U2A SVR parameter error",
+    "last_updated": "2024-07-11",
+    "extracted_at": "2025-03-09T00:28:11.964430"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nUnable to connect the E2 to MCU RH850 U2A16 using Renesas Flash Programmer\nI see the error (E3000105): The device is not responding when I am tryng connect the debugger using Renesas Flash Programmer.\nAnd when I try with CS+ I found this error Set the SVR parameter (E0617024)\nAnswer:\nTry disabling the Set SVR Parameter option on the debug tool connect settings option and see if you are able to connect to the device.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "Unable to connect the E2 to MCU RH850 U2A16 using Renesas Flash Programmer\nI see the error (E3000105): The device is not responding when I am tryng connect the debugger using Renesas Flash Programmer.\nAnd when I try with CS+ I found this error Set the SVR parameter (E0617024)"
+      },
+      {
+        "type": "text",
+        "content": "Unable to connect the E2 to MCU RH850 U2A16 using Renesas Flash Programmer\nI see the error (E3000105): The device is not responding when I am tryng connect the debugger using Renesas Flash Programmer."
+      },
+      {
+        "type": "text",
+        "content": "Unable to connect the E2 to MCU RH850 U2A16 using Renesas Flash Programmer\nI see the error (E3000105): The device is not responding when I am tryng connect the debugger using Renesas Flash Programmer."
+      },
+      {
+        "type": "text",
+        "content": "And when I try with CS+ I found this error Set the SVR parameter (E0617024)"
+      },
+      {
+        "type": "text",
+        "content": "And when I try with CS+ I found this error Set the SVR parameter (E0617024)"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nTry disabling the Set SVR Parameter option on the debug tool connect settings option and see if you are able to connect to the device.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "Try disabling the Set SVR Parameter option on the debug tool connect settings option and see if you are able to connect to the device."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/4bea3964-e40f-4a73-b355-a87501c5eac5",
+          "alt_text": "",
+          "width": "815",
+          "height": "442",
+          "local_path": "data/categories/rh850_family/rh850u2a/37f0da015a74510a0e8d600cb61be3b8/images/f273ab6a6e14ea080c010b8041f75572.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Try disabling the Set SVR Parameter option on the debug tool connect settings option and see if you are able to connect to the device."
+      },
+      {
+        "type": "text",
+        "content": "Try disabling the Set SVR Parameter option on the debug tool connect settings option and see if you are able to connect to the device."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/4bea3964-e40f-4a73-b355-a87501c5eac5",
+        "alt_text": "",
+        "width": "815",
+        "height": "442",
+        "local_path": "data/categories/rh850_family/rh850u2a/37f0da015a74510a0e8d600cb61be3b8/images/f273ab6a6e14ea080c010b8041f75572.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850"
+    ],
+    "links": []
+  }
+}

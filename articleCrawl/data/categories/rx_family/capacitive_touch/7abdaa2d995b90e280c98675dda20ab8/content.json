@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18286120",
+    "title": "Can FPC Be Used for Electrode Wiring?",
+    "last_updated": "2023-02-03",
+    "extracted_at": "2025-03-09T00:08:32.733973"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan FPC (Flexible Printed Circuit) be used for electrode wiring?\nAnswer:\nYes.\nThe pattern design should follow the application note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\" in the same way as PCB.\nAs a precaution, be sure to set sufficient clearance to prevent contact with other devices.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Can FPC (Flexible Printed Circuit) be used for electrode wiring?"
+      },
+      {
+        "type": "text",
+        "content": "Can FPC (Flexible Printed Circuit) be used for electrode wiring?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes.\nThe pattern design should follow the application note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\" in the same way as PCB.\nAs a precaution, be sure to set sufficient clearance to prevent contact with other devices.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Yes.\nThe pattern design should follow the application note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\" in the same way as PCB.\nAs a precaution, be sure to set sufficient clearance to prevent contact with other devices."
+      },
+      {
+        "type": "text",
+        "content": "Yes."
+      },
+      {
+        "type": "text",
+        "content": "The pattern design should follow the application note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\" in the same way as PCB.\nAs a precaution, be sure to set sufficient clearance to prevent contact with other devices."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792831"
+      }
+    ]
+  }
+}

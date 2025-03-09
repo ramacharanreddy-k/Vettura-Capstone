@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21671815",
+    "title": "RA Family: How to handle the RES# pin on a custom board?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:13:44.722972"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "How to handle the RES# pin on a custom board?"
+      },
+      {
+        "type": "text",
+        "content": "The RES# pin is an active low pin. This means that when this pin is driven low, all processing is aborted and the MCU enters a reset state. So, this pin needs to be pulled-up. To reset the MCU while it is running, hold the #RES pin to low for the specified reset pulse width. Refer to Reset Timing section of the Electrical Characteristics chapter of the Hardware Manual for more detailed timing requirements."
+      },
+      {
+        "type": "text",
+        "content": "There is no need to connect an external capacitor on the RES# line because the POR circuit holds it low internally for a good reset and a minimum reset pulse is required to initiate this process."
+      },
+      {
+        "type": "text",
+        "content": "If using a manual reset button, there is no need to de-bounce it. Don't fit a capacitor on the reset line, since there is a risk that the device will fail and won't come out from reset state. Whether this happens is largely dependent on the power system design and this phenomenon does not happen in every design."
+      },
+      {
+        "type": "text",
+        "content": "There is no need to create a delayed rising edge on RESET pin with an external RC circuit."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA Family"
+      },
+      {
+        "type": "text",
+        "content": "RA Family"
+      }
+    ],
+    "images": [],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": []
+  }
+}

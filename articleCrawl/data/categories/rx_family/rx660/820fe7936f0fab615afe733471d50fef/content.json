@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20590529",
+    "title": "Product information and development environment",
+    "last_updated": "2022-02-08",
+    "extracted_at": "2025-03-09T00:02:59.282484"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nPlease tell me where to find product information and development environment and other information for the RX660.\nAnswer:\nRefer to the details about the RX660 group from the RX family webpage. \nFor in-depth technical information, please refer to the user’s manual and data sheet. \nRX660 Group Product information\nRX660 Group User’s Manual: Hardware (R01UH0937)\nRX660 Group Data Sheet (R01DS0393)\nC/C++ Compiler Package CC-RX V3 for RX Family\nIntegrated Development Environment e2 studio – Eclipse Based Integrated Development Environment\nIntegrated Development Environment CS+ – Renesas Original Integrated Development Environment\nSmart Configurator\nRX Driver Package\nReal-time OS RI600PX for RX Family\nOn-chip Debug Emulators (E2Lite, E2)\nFlash Programmer\nFlash Memory Programmer\nSuitable Products\nRX660"
+      },
+      {
+        "type": "text",
+        "content": "Please tell me where to find product information and development environment and other information for the RX660."
+      },
+      {
+        "type": "text",
+        "content": "Please tell me where to find product information and development environment and other information for the RX660."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRefer to the details about the RX660 group from the RX family webpage. \nFor in-depth technical information, please refer to the user’s manual and data sheet. \nRX660 Group Product information\nRX660 Group User’s Manual: Hardware (R01UH0937)\nRX660 Group Data Sheet (R01DS0393)\nC/C++ Compiler Package CC-RX V3 for RX Family\nIntegrated Development Environment e2 studio – Eclipse Based Integrated Development Environment\nIntegrated Development Environment CS+ – Renesas Original Integrated Development Environment\nSmart Configurator\nRX Driver Package\nReal-time OS RI600PX for RX Family\nOn-chip Debug Emulators (E2Lite, E2)\nFlash Programmer\nFlash Memory Programmer\nSuitable Products\nRX660"
+      },
+      {
+        "type": "text",
+        "content": "Refer to the details about the RX660 group from the RX family webpage. \nFor in-depth technical information, please refer to the user’s manual and data sheet. \nRX660 Group Product information\nRX660 Group User’s Manual: Hardware (R01UH0937)\nRX660 Group Data Sheet (R01DS0393)\nC/C++ Compiler Package CC-RX V3 for RX Family\nIntegrated Development Environment e2 studio – Eclipse Based Integrated Development Environment\nIntegrated Development Environment CS+ – Renesas Original Integrated Development Environment\nSmart Configurator\nRX Driver Package\nReal-time OS RI600PX for RX Family\nOn-chip Debug Emulators (E2Lite, E2)\nFlash Programmer\nFlash Memory Programmer"
+      },
+      {
+        "type": "text",
+        "content": "Refer to the details about the RX660 group from the RX family webpage. \nFor in-depth technical information, please refer to the user’s manual and data sheet."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX660"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX660"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX660"
+    ],
+    "links": [
+      {
+        "text": "RX660 Group Product information",
+        "url": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx660-32-bit-microcontrollers-high-performance-and-excellent-noise-tolerance-5v-power-supply"
+      },
+      {
+        "text": "RX660 Group User’s Manual: Hardware (R01UH0937)",
+        "url": "https://www.renesas.com/us/en/document/mah/rx660-group-users-manual-hardware?r=1618106"
+      },
+      {
+        "text": "RX660 Group Data Sheet (R01DS0393)",
+        "url": "https://www.renesas.com/us/en/document/dst/rx660-group-datasheet?r=1618106"
+      },
+      {
+        "text": "C/C++ Compiler Package CC-RX V3 for RX Family",
+        "url": "https://www.renesas.com/rx_c"
+      },
+      {
+        "text": "Integrated Development Environment e2 studio – Eclipse Based Integrated Development Environment",
+        "url": "https://www.renesas.com/e2studio"
+      },
+      {
+        "text": "Integrated Development Environment CS+ – Renesas Original Integrated Development Environment",
+        "url": "https://www.renesas.com/cs+"
+      },
+      {
+        "text": "Smart Configurator",
+        "url": "https://www.renesas.com/smart-configurator"
+      },
+      {
+        "text": "RX Driver Package",
+        "url": "https://www.renesas.com/rdp"
+      },
+      {
+        "text": "Real-time OS RI600PX for RX Family",
+        "url": "https://www.renesas.com/ri600v4"
+      },
+      {
+        "text": "On-chip Debug Emulators (E2Lite, E2)",
+        "url": "https://www.renesas.com/ocd"
+      },
+      {
+        "text": "Flash Programmer",
+        "url": "https://www.renesas.com/rfp"
+      },
+      {
+        "text": "Flash Memory Programmer",
+        "url": "https://www.renesas.com/pg-fp6"
+      },
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20590534"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20590540"
+      }
+    ]
+  }
+}

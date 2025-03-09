@@ -1,0 +1,171 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21671697",
+    "title": "How to handle the MD pin, when using E2 or E2 Lite emulators on a custom RA2 board?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:14:03.238606"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "How to handle the MD pin, when using E2 or E2 Lite emulators on a custom RA2 board?"
+      },
+      {
+        "type": "text",
+        "content": "The RA2 devices use a Cortex-M23 core and they do not support DLM transitions or Trustzone. So, there is no need to connect the MD pin to SWCLK/TCK/MD in order to be able to drive it to low to change the device lifecycle state or set the TrustZone Boundaries."
+      },
+      {
+        "type": "text",
+        "content": "Also the MD pin is by default pulled-up, since the initial value of PFS register for P201 is 0x00000010 which means that PCR bit is set to 1."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/ae80fe49-a8dc-4c21-8476-82fe823ad8cb",
+          "alt_text": "",
+          "width": "751",
+          "height": "556",
+          "local_path": "data/categories/ra_family/ra_hardware/1a278ce457f18fabab435b5c64477aab/images/660acab83bb2e3e7b33dbf64ae4daa1c.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "And there is no need to add also an external pull-up resistor."
+      },
+      {
+        "type": "text",
+        "content": "In case you want to place the MCU to SCI boot mode (the MD pin needs to be driven low) the recommended circuit for MD pin is:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/61e7cab5-77a2-4f16-a677-b5169fbce31f",
+          "alt_text": "",
+          "width": "691",
+          "height": "219",
+          "local_path": "data/categories/ra_family/ra_hardware/1a278ce457f18fabab435b5c64477aab/images/d42c2b1ec85e8abccf4dda62110b7c83.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Open-circuit: MD pin (P201) is high level and the MCU is in Single-chip mode (for debugging)."
+      },
+      {
+        "type": "text",
+        "content": "Short-Circuit: MD pin (P201) is low level and MCU will enter SCI boot mode after reset state (#RES pin released)."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/20d48fb3-9d79-4deb-a338-38bb0b66b58b",
+          "alt_text": "",
+          "width": "703",
+          "height": "291",
+          "local_path": "data/categories/ra_family/ra_hardware/1a278ce457f18fabab435b5c64477aab/images/65700b0b2b0d955c40e99cea7a5bea94.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Resources:"
+      },
+      {
+        "type": "text",
+        "content": "RA2E1 Group User's Manual: Hardware"
+      },
+      {
+        "type": "text",
+        "content": "RA2L1 Group User's Manual: Hardware"
+      },
+      {
+        "type": "text",
+        "content": "RA2E2 Group User's Manual: Hardware"
+      },
+      {
+        "type": "text",
+        "content": "RA2A1 Group User's Manual: Hardware"
+      },
+      {
+        "type": "text",
+        "content": "RA2E3 Group User's Manual: Hardware"
+      },
+      {
+        "type": "text",
+        "content": "RA2A2 Group User's Manual: Hardware"
+      },
+      {
+        "type": "text",
+        "content": "E2 Emulator, E2 Emulator Lite Additional Document for User’s Manual (Notes on Connection of RA Devices)"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA2E1,RA2L1,RA2E2,RA2A1,RA2E3,RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "RA2E1,RA2L1,RA2E2,RA2A1,RA2E3,RA2A2"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/ae80fe49-a8dc-4c21-8476-82fe823ad8cb",
+        "alt_text": "",
+        "width": "751",
+        "height": "556",
+        "local_path": "data/categories/ra_family/ra_hardware/1a278ce457f18fabab435b5c64477aab/images/660acab83bb2e3e7b33dbf64ae4daa1c.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/61e7cab5-77a2-4f16-a677-b5169fbce31f",
+        "alt_text": "",
+        "width": "691",
+        "height": "219",
+        "local_path": "data/categories/ra_family/ra_hardware/1a278ce457f18fabab435b5c64477aab/images/d42c2b1ec85e8abccf4dda62110b7c83.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/20d48fb3-9d79-4deb-a338-38bb0b66b58b",
+        "alt_text": "",
+        "width": "703",
+        "height": "291",
+        "local_path": "data/categories/ra_family/ra_hardware/1a278ce457f18fabab435b5c64477aab/images/65700b0b2b0d955c40e99cea7a5bea94.png"
+      }
+    ],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": [
+      {
+        "text": "RA2E1 Group User's Manual: Hardware",
+        "url": "https://www.renesas.com/en/document/man/ra2e1-group-users-manual-hardware?r=1469021"
+      },
+      {
+        "text": "RA2L1 Group User's Manual: Hardware",
+        "url": "https://www.renesas.com/en/document/mah/ra2l1-group-users-manual-hardware?r=1398061"
+      },
+      {
+        "text": "RA2E2 Group User's Manual: Hardware",
+        "url": "https://www.renesas.com/en/document/mah/ra2e2-group-users-manual-hardware?r=1532431"
+      },
+      {
+        "text": "RA2A1 Group User's Manual: Hardware",
+        "url": "https://www.renesas.com/en/document/mah/renesas-ra2a1-group-users-manual-hardware?r=1054141"
+      },
+      {
+        "text": "RA2E3 Group User's Manual: Hardware",
+        "url": "https://www.renesas.com/en/document/mah/ra2e3-group-users-manual-hardware?r=25450551"
+      },
+      {
+        "text": "RA2A2 Group User's Manual: Hardware",
+        "url": "https://www.renesas.com/en/document/mah/ra2a2-group-users-manual-hardware?r=25523966"
+      },
+      {
+        "text": "E2 Emulator, E2 Emulator Lite Additional Document for User’s Manual (Notes on Connection of RA Devices)",
+        "url": "https://www.renesas.com/en/document/mat/e2-emulator-e2-emulator-lite-additional-document-users-manual-notes-connection-ra-devices?r=488806"
+      }
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21177416",
+    "title": "RA Family: How to change the QSPI flash memory pin settings when using J-Link?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:23:49.812098"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to change the QSPI flash memory pin settings when using J-Link?\nAnswer:\nAfter connecting the target board by using J-Link, start the J-Link Control Panel. The J-Link Web control panel will open in your browser. Change the External QSPI flash pins in the flash menu as shown below.\nSuitable Products\nRA/FSP"
+      },
+      {
+        "type": "text",
+        "content": "How to change the QSPI flash memory pin settings when using J-Link?"
+      },
+      {
+        "type": "text",
+        "content": "How to change the QSPI flash memory pin settings when using J-Link?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nAfter connecting the target board by using J-Link, start the J-Link Control Panel. The J-Link Web control panel will open in your browser. Change the External QSPI flash pins in the flash menu as shown below.\nSuitable Products\nRA/FSP"
+      },
+      {
+        "type": "text",
+        "content": "After connecting the target board by using J-Link, start the J-Link Control Panel. The J-Link Web control panel will open in your browser. Change the External QSPI flash pins in the flash menu as shown below."
+      },
+      {
+        "type": "text",
+        "content": "After connecting the target board by using J-Link, start the J-Link Control Panel. The J-Link Web control panel will open in your browser. Change the External QSPI flash pins in the flash menu as shown below."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380676-1.png",
+          "alt_text": "",
+          "width": "325",
+          "height": "329",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/d4911ae109dcb672b6288191a7fb62ce/images/d6816c97df5fb8d42c699c323f1e1352.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380676-2.png",
+          "alt_text": "",
+          "width": "900",
+          "height": "270",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/d4911ae109dcb672b6288191a7fb62ce/images/5f548d10f7040c146bf84a1cf50e8f55.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA/FSP"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380676-1.png",
+        "alt_text": "",
+        "width": "325",
+        "height": "329",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/d4911ae109dcb672b6288191a7fb62ce/images/d6816c97df5fb8d42c699c323f1e1352.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380676-2.png",
+        "alt_text": "",
+        "width": "900",
+        "height": "270",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/d4911ae109dcb672b6288191a7fb62ce/images/5f548d10f7040c146bf84a1cf50e8f55.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA/FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA/FSP"
+    ],
+    "links": []
+  }
+}

@@ -1,0 +1,314 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20540134",
+    "title": "EDMAC operation issue possible on custom RA6E1/M4/M5 board",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:13:11.022517"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Issues\n1) Even though the Ethernet Link is up successfully, the RA6E1/M4/M5 device may not respond to the ICMP echo request (PING). \n2) Even though the Ethernet Link is up successfully, no signal is output through MII/RMII TXDs pins of MCU.\n  Description:\nThe ETHERC (Ethernet MAC Controller) is connected to the EDMAC (Ethernet DMA Controller) so data can be transferred without using the CPU. However, for the MCU with EDMAC and TrustZone support, the EDMAC peripheral can only be configured with the non-secure attribute, which is described by the Peripheral Security Attribution section in the User’s Manual. Therefore, the EDMAC on these target devices always requires the non-secure buffers in non-secure attributed RAM area.  Without satisfying this condition, the Ethernet operation will encounter a memory address error, since the address that the EDMAC tried to use for the transfer is invalid. This issue can be indicated by the Address Error (ADE) flag in EDMAC Status Register and the TrustZone Filter Error Status (TZFST) Flag in NMISR. Followed by this error, for Ethernet frame reception, the receive frame counter overflow (EESR.RFCOF = 1) error of will be received. For Ethernet frame transmission, the operation FSP R_ETHER_Write() will return the transmit buffer full error. \n  Solution:\nIn the RA Flat (secure) project, the default linker file for Renesas FSP (fsp.ld, as shown in Figure 1 below) reserves a ns_buffer section (as shown in Figure 2 below) in non-secure region of RAM for placing the Ethernet buffer. Therefore, the RA serial boot interface (SCI/USB Boot Mode) needs to be available on the customer’s board in order to program the IDAU register to setup the Renesas RA TrustZone boundaries, which allocate the proper size of non-secure memory partition to RAM. For debugging the flat project, the user needs to confirm that the external debug probe supports the serial boot connection and interaction on the RA6E1/M4/M5, and the TrustZone secure/non-secure boundaries of the debugger connection settings must be set (as seen below in Figure 3).\nFor the hardware connection design of the external debug probe, the P110/RXD9, P109/TXD9, MD, RES pins from MCU are required except on the SWD interface. If the user’s external debug probe hardware does not support the serial boot connection, the user can utilize the RFP (Renesas Flash Programmer) to program the IDAU register through the RA serial boot interface as well (below Figure 4 as an example).\n      Figure 1 - Snippet code from the fsp.ld file \n    Figure 2 - Snippet code from the ra_gen/common_data.c \n \n   Figure 3 – Debugger Connection Settings- TrustZone secure/non-secure boundaries, Yes\n \n  Figure 4 – Setup TrustZone Partition via RFP- Boundary Settings\n  EDMAC\nFSP"
+      },
+      {
+        "type": "text",
+        "content": "Issues\n1) Even though the Ethernet Link is up successfully, the RA6E1/M4/M5 device may not respond to the ICMP echo request (PING). \n2) Even though the Ethernet Link is up successfully, no signal is output through MII/RMII TXDs pins of MCU.\n  Description:\nThe ETHERC (Ethernet MAC Controller) is connected to the EDMAC (Ethernet DMA Controller) so data can be transferred without using the CPU. However, for the MCU with EDMAC and TrustZone support, the EDMAC peripheral can only be configured with the non-secure attribute, which is described by the Peripheral Security Attribution section in the User’s Manual. Therefore, the EDMAC on these target devices always requires the non-secure buffers in non-secure attributed RAM area.  Without satisfying this condition, the Ethernet operation will encounter a memory address error, since the address that the EDMAC tried to use for the transfer is invalid. This issue can be indicated by the Address Error (ADE) flag in EDMAC Status Register and the TrustZone Filter Error Status (TZFST) Flag in NMISR. Followed by this error, for Ethernet frame reception, the receive frame counter overflow (EESR.RFCOF = 1) error of will be received. For Ethernet frame transmission, the operation FSP R_ETHER_Write() will return the transmit buffer full error. \n  Solution:\nIn the RA Flat (secure) project, the default linker file for Renesas FSP (fsp.ld, as shown in Figure 1 below) reserves a ns_buffer section (as shown in Figure 2 below) in non-secure region of RAM for placing the Ethernet buffer. Therefore, the RA serial boot interface (SCI/USB Boot Mode) needs to be available on the customer’s board in order to program the IDAU register to setup the Renesas RA TrustZone boundaries, which allocate the proper size of non-secure memory partition to RAM. For debugging the flat project, the user needs to confirm that the external debug probe supports the serial boot connection and interaction on the RA6E1/M4/M5, and the TrustZone secure/non-secure boundaries of the debugger connection settings must be set (as seen below in Figure 3).\nFor the hardware connection design of the external debug probe, the P110/RXD9, P109/TXD9, MD, RES pins from MCU are required except on the SWD interface. If the user’s external debug probe hardware does not support the serial boot connection, the user can utilize the RFP (Renesas Flash Programmer) to program the IDAU register through the RA serial boot interface as well (below Figure 4 as an example).\n      Figure 1 - Snippet code from the fsp.ld file \n    Figure 2 - Snippet code from the ra_gen/common_data.c \n \n   Figure 3 – Debugger Connection Settings- TrustZone secure/non-secure boundaries, Yes\n \n  Figure 4 – Setup TrustZone Partition via RFP- Boundary Settings\n  EDMAC\nFSP"
+      },
+      {
+        "type": "text",
+        "content": "Issues\n1) Even though the Ethernet Link is up successfully, the RA6E1/M4/M5 device may not respond to the ICMP echo request (PING). \n2) Even though the Ethernet Link is up successfully, no signal is output through MII/RMII TXDs pins of MCU."
+      },
+      {
+        "type": "text",
+        "content": "Issues\n1) Even though the Ethernet Link is up successfully, the RA6E1/M4/M5 device may not respond to the ICMP echo request (PING). \n2) Even though the Ethernet Link is up successfully, no signal is output through MII/RMII TXDs pins of MCU."
+      },
+      {
+        "type": "text",
+        "content": "Description:"
+      },
+      {
+        "type": "text",
+        "content": "Description:"
+      },
+      {
+        "type": "text",
+        "content": "Description:"
+      },
+      {
+        "type": "text",
+        "content": "The ETHERC (Ethernet MAC Controller) is connected to the EDMAC (Ethernet DMA Controller) so data can be transferred without using the CPU. However, for the MCU with EDMAC and TrustZone support, the EDMAC peripheral can only be configured with the non-secure attribute, which is described by the Peripheral Security Attribution section in the User’s Manual. Therefore, the EDMAC on these target devices always requires the non-secure buffers in non-secure attributed RAM area.  Without satisfying this condition, the Ethernet operation will encounter a memory address error, since the address that the EDMAC tried to use for the transfer is invalid. This issue can be indicated by the Address Error (ADE) flag in EDMAC Status Register and the TrustZone Filter Error Status (TZFST) Flag in NMISR. Followed by this error, for Ethernet frame reception, the receive frame counter overflow (EESR.RFCOF = 1) error of will be received. For Ethernet frame transmission, the operation FSP R_ETHER_Write() will return the transmit buffer full error."
+      },
+      {
+        "type": "text",
+        "content": "The ETHERC (Ethernet MAC Controller) is connected to the EDMAC (Ethernet DMA Controller) so data can be transferred without using the CPU. However, for the MCU with EDMAC and TrustZone support, the EDMAC peripheral can only be configured with the non-secure attribute, which is described by the Peripheral Security Attribution section in the User’s Manual. Therefore, the EDMAC on these target devices always requires the non-secure buffers in non-secure attributed RAM area.  Without satisfying this condition, the Ethernet operation will encounter a memory address error, since the address that the EDMAC tried to use for the transfer is invalid. This issue can be indicated by the Address Error (ADE) flag in EDMAC Status Register and the TrustZone Filter Error Status (TZFST) Flag in NMISR. Followed by this error, for Ethernet frame reception, the receive frame counter overflow (EESR.RFCOF = 1) error of will be received. For Ethernet frame transmission, the operation FSP R_ETHER_Write() will return the transmit buffer full error."
+      },
+      {
+        "type": "text",
+        "content": "The ETHERC (Ethernet MAC Controller) is connected to the EDMAC (Ethernet DMA Controller) so data can be transferred without using the CPU. However, for the MCU with EDMAC and TrustZone support, the EDMAC peripheral can only be configured with the non-secure attribute, which is described by the Peripheral Security Attribution section in the User’s Manual. Therefore, the EDMAC on these target devices always requires the non-secure buffers in non-secure attributed RAM area.  Without satisfying this condition, the Ethernet operation will encounter a memory address error, since the address that the EDMAC tried to use for the transfer is invalid. This issue can be indicated by the Address Error (ADE) flag in EDMAC Status Register and the TrustZone Filter Error Status (TZFST) Flag in NMISR. Followed by this error, for Ethernet frame reception, the receive frame counter overflow (EESR.RFCOF = 1) error of will be received. For Ethernet frame transmission, the operation FSP R_ETHER_Write() will return the transmit buffer full error."
+      },
+      {
+        "type": "text",
+        "content": "The ETHERC (Ethernet MAC Controller) is connected to the EDMAC (Ethernet DMA Controller) so data can be transferred without using the CPU. However, for the MCU with EDMAC and TrustZone support, the EDMAC peripheral can only be configured with the non-secure attribute, which is described by the Peripheral Security Attribution section in the User’s Manual. Therefore, the EDMAC on these target devices always requires the non-secure buffers in non-secure attributed RAM area.  Without satisfying this condition, the Ethernet operation will encounter a memory address error, since the address that the EDMAC tried to use for the transfer is invalid. This issue can be indicated by the Address Error (ADE) flag in EDMAC Status Register and the TrustZone Filter Error Status (TZFST) Flag in NMISR. Followed by this error, for Ethernet frame reception, the receive frame counter overflow (EESR.RFCOF = 1) error of will be received. For Ethernet frame transmission, the operation FSP R_ETHER_Write() will return the transmit buffer full error."
+      },
+      {
+        "type": "text",
+        "content": "receive frame counter overflow (EESR.RFCOF = 1)"
+      },
+      {
+        "type": "text",
+        "content": "receive frame counter overflow (EESR.RFCOF = 1)"
+      },
+      {
+        "type": "text",
+        "content": "receive frame counter overflow (EESR.RFCOF = 1)"
+      },
+      {
+        "type": "text",
+        "content": "transmit buffer full"
+      },
+      {
+        "type": "text",
+        "content": "transmit buffer full"
+      },
+      {
+        "type": "text",
+        "content": "transmit buffer full"
+      },
+      {
+        "type": "text",
+        "content": "Solution:"
+      },
+      {
+        "type": "text",
+        "content": "Solution:"
+      },
+      {
+        "type": "text",
+        "content": "Solution:"
+      },
+      {
+        "type": "text",
+        "content": "In the RA Flat (secure) project, the default linker file for Renesas FSP (fsp.ld, as shown in Figure 1 below) reserves a ns_buffer section (as shown in Figure 2 below) in non-secure region of RAM for placing the Ethernet buffer. Therefore, the RA serial boot interface (SCI/USB Boot Mode) needs to be available on the customer’s board in order to program the IDAU register to setup the Renesas RA TrustZone boundaries, which allocate the proper size of non-secure memory partition to RAM. For debugging the flat project, the user needs to confirm that the external debug probe supports the serial boot connection and interaction on the RA6E1/M4/M5, and the TrustZone secure/non-secure boundaries of the debugger connection settings must be set (as seen below in Figure 3)."
+      },
+      {
+        "type": "text",
+        "content": "In the RA Flat (secure) project, the default linker file for Renesas FSP (fsp.ld, as shown in Figure 1 below) reserves a ns_buffer section (as shown in Figure 2 below) in non-secure region of RAM for placing the Ethernet buffer. Therefore, the RA serial boot interface (SCI/USB Boot Mode) needs to be available on the customer’s board in order to program the IDAU register to setup the Renesas RA TrustZone boundaries, which allocate the proper size of non-secure memory partition to RAM. For debugging the flat project, the user needs to confirm that the external debug probe supports the serial boot connection and interaction on the RA6E1/M4/M5, and the TrustZone secure/non-secure boundaries of the debugger connection settings must be set (as seen below in Figure 3)."
+      },
+      {
+        "type": "text",
+        "content": "In the RA Flat (secure) project, the default linker file for Renesas FSP (fsp.ld, as shown in Figure 1 below) reserves a ns_buffer section (as shown in Figure 2 below) in non-secure region of RAM for placing the Ethernet buffer. Therefore, the RA serial boot interface (SCI/USB Boot Mode) needs to be available on the customer’s board in order to program the IDAU register to setup the Renesas RA TrustZone boundaries, which allocate the proper size of non-secure memory partition to RAM. For debugging the flat project, the user needs to confirm that the external debug probe supports the serial boot connection and interaction on the RA6E1/M4/M5, and the TrustZone secure/non-secure boundaries of the debugger connection settings must be set (as seen below in Figure 3)."
+      },
+      {
+        "type": "text",
+        "content": "In the RA Flat (secure) project, the default linker file for Renesas FSP (fsp.ld, as shown in Figure 1 below) reserves a ns_buffer section (as shown in Figure 2 below) in non-secure region of RAM for placing the Ethernet buffer. Therefore, the RA serial boot interface (SCI/USB Boot Mode) needs to be available on the customer’s board in order to program the IDAU register to setup the Renesas RA TrustZone boundaries, which allocate the proper size of non-secure memory partition to RAM. For debugging the flat project, the user needs to confirm that the external debug probe supports the serial boot connection and interaction on the RA6E1/M4/M5, and the TrustZone secure/non-secure boundaries of the debugger connection settings must be set (as seen below in Figure 3)."
+      },
+      {
+        "type": "text",
+        "content": "For the hardware connection design of the external debug probe, the P110/RXD9, P109/TXD9, MD, RES pins from MCU are required except on the SWD interface. If the user’s external debug probe hardware does not support the serial boot connection, the user can utilize the RFP (Renesas Flash Programmer) to program the IDAU register through the RA serial boot interface as well (below Figure 4 as an example)."
+      },
+      {
+        "type": "text",
+        "content": "For the hardware connection design of the external debug probe, the P110/RXD9, P109/TXD9, MD, RES pins from MCU are required except on the SWD interface. If the user’s external debug probe hardware does not support the serial boot connection, the user can utilize the RFP (Renesas Flash Programmer) to program the IDAU register through the RA serial boot interface as well (below Figure 4 as an example)."
+      },
+      {
+        "type": "text",
+        "content": "For the hardware connection design of the external debug probe, the P110/RXD9, P109/TXD9, MD, RES pins from MCU are required except on the SWD interface. If the user’s external debug probe hardware does not support the serial boot connection, the user can utilize the RFP (Renesas Flash Programmer) to program the IDAU register through the RA serial boot interface as well (below Figure 4 as an example)."
+      },
+      {
+        "type": "text",
+        "content": "For the hardware connection design of the external debug probe, the P110/RXD9, P109/TXD9, MD, RES pins from MCU are required except on the SWD interface. If the user’s external debug probe hardware does not support the serial boot connection, the user can utilize the RFP (Renesas Flash Programmer) to program the IDAU register through the RA serial boot interface as well (below Figure 4 as an example)."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/5dca055c-0c80-48de-81c5-f8e32da72cbf.png",
+          "alt_text": "TextDescription automatically generated",
+          "width": "601",
+          "height": "118",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/552055185b9e9f12bcf6895e2ab92511/images/cc80e2638fda428468acd962f5837319.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 1 - Snippet code from the fsp.ld file"
+      },
+      {
+        "type": "text",
+        "content": "Figure 1 - Snippet code from the fsp.ld file"
+      },
+      {
+        "type": "text",
+        "content": "Figure 1 - Snippet code from the fsp.ld file"
+      },
+      {
+        "type": "text",
+        "content": "Figure 1 - Snippet code from the"
+      },
+      {
+        "type": "text",
+        "content": "fsp.ld"
+      },
+      {
+        "type": "text",
+        "content": "file"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/1f0f4031-a044-48cc-bc89-6ac54111b8a5.png",
+          "alt_text": "",
+          "width": "601",
+          "height": "95",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/552055185b9e9f12bcf6895e2ab92511/images/cf1a104003a42ffa58d4fd192578ab52.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 2 - Snippet code from the ra_gen/common_data.c"
+      },
+      {
+        "type": "text",
+        "content": "Figure 2 - Snippet code from the ra_gen/common_data.c"
+      },
+      {
+        "type": "text",
+        "content": "Figure 2 - Snippet code from the ra_gen/common_data.c"
+      },
+      {
+        "type": "text",
+        "content": "Figure 2 - Snippet code from the"
+      },
+      {
+        "type": "text",
+        "content": "ra_gen"
+      },
+      {
+        "type": "text",
+        "content": "/"
+      },
+      {
+        "type": "text",
+        "content": "common_data.c"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/978078d0-5579-4670-b607-9aefd372726e.png",
+          "alt_text": "Graphical user interface, applicationDescription automatically generated",
+          "width": "448",
+          "height": "444",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/552055185b9e9f12bcf6895e2ab92511/images/ec75bac187c5db1c36be76ae6a27618d.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 3 – Debugger Connection Settings- TrustZone secure/non-secure boundaries, Yes"
+      },
+      {
+        "type": "text",
+        "content": "Figure 3 – Debugger Connection Settings- TrustZone secure/non-secure boundaries, Yes"
+      },
+      {
+        "type": "text",
+        "content": "Figure 3 – Debugger Connection Settings- TrustZone secure/non-secure boundaries, Yes"
+      },
+      {
+        "type": "text",
+        "content": "Figure 3 – Debugger Connection Settings- TrustZone secure/non-secure boundaries, Yes"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/4c01859b-fcf6-4d62-9b61-098e5383ee10.png",
+          "alt_text": "グラフィカル ユーザー インターフェイス, アプリケーション自動的に生成された説明",
+          "width": "516",
+          "height": "238",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/552055185b9e9f12bcf6895e2ab92511/images/3fb8645eaba201fccd554a58753fd051.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 4 – Setup TrustZone Partition via RFP- Boundary Settings"
+      },
+      {
+        "type": "text",
+        "content": "Figure 4 – Setup TrustZone Partition via RFP- Boundary Settings"
+      },
+      {
+        "type": "text",
+        "content": "Figure 4 – Setup TrustZone Partition via RFP- Boundary Settings"
+      },
+      {
+        "type": "text",
+        "content": "Figure 4 –"
+      },
+      {
+        "type": "text",
+        "content": "Setup"
+      },
+      {
+        "type": "text",
+        "content": "TrustZone Partition"
+      },
+      {
+        "type": "text",
+        "content": "via RFP- Boundary Settings"
+      },
+      {
+        "type": "text",
+        "content": "EDMAC\nFSP"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/5dca055c-0c80-48de-81c5-f8e32da72cbf.png",
+        "alt_text": "TextDescription automatically generated",
+        "width": "601",
+        "height": "118",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/552055185b9e9f12bcf6895e2ab92511/images/cc80e2638fda428468acd962f5837319.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/1f0f4031-a044-48cc-bc89-6ac54111b8a5.png",
+        "alt_text": "",
+        "width": "601",
+        "height": "95",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/552055185b9e9f12bcf6895e2ab92511/images/cf1a104003a42ffa58d4fd192578ab52.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/978078d0-5579-4670-b607-9aefd372726e.png",
+        "alt_text": "Graphical user interface, applicationDescription automatically generated",
+        "width": "448",
+        "height": "444",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/552055185b9e9f12bcf6895e2ab92511/images/ec75bac187c5db1c36be76ae6a27618d.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/4c01859b-fcf6-4d62-9b61-098e5383ee10.png",
+        "alt_text": "グラフィカル ユーザー インターフェイス, アプリケーション自動的に生成された説明",
+        "width": "516",
+        "height": "238",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/552055185b9e9f12bcf6895e2ab92511/images/3fb8645eaba201fccd554a58753fd051.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "EDMAC"
+          ],
+          [
+            "FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "EDMAC",
+      "FSP"
+    ],
+    "links": []
+  }
+}

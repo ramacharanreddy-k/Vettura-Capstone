@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21810980",
+    "title": "RA Family: If the finger contacts with the touch electrode at the time of power-on, the touch judgment will not be performed as expected afterwards.",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:34:36.153583"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIf the finger contacts with the touch electrode at the time of power-on, the touch judgment will not be performed as expected afterwards. Why does this happen?\nAnswer:\nIn the RA Family FSP CTSU Driver, in order to suppress false detection caused by fluctuations in parasitic capacitance that depends on the product usage environment, after MCU reset and performing the open function, initial offset tuning is performed in several repetitions of R_CSTU_ScanStart() and R_CTSU_DataGet() or　several repetitions of RM_TOUCH_ScanStart() and RM_TOUCH_DataGet(). If you touch the electrodes during this initial offset tuning period, it will affect the touch judgment behavior afterwards. \nIn initial offset tuning, the amount of offset current is adjusted so that the measured count value without contact approaches the target value. This offset current is intended to control the count value due to the parasitic capacitance. The measured count value at the time of completion of the initial offset tuning is set as a reference value, and the touch ON/OFF is determined by the amount of change from this reference value.\nIf you touch the electrode during initial offset tuning, the offset current is adjusted so that the increase in capacitance caused by the finger contact is removed, and the measured count value with contact is set as the reference value. Since the measured count value required to be judged to be touch ON is higher with theself-capacitance method and lower with the mutual capacitance method by a threshold value than this reference value, if the reference value is set to the measured count value with contact, the amount of change from the reference value exceeds this threshold even if the finger connected the electrodes.\nSince the reference value is readjusted by the drift correction function at intervals specified at the time of touch OFF judgment, touch ON/OFF judgment may be possible after a certain period of time has elapsed.\nFor details on offset current and drift correction, refer to the application note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Introduction Guide\" (R30AN0424).\nhttps://www.renesas.com/en/document/apn/capacitive-sensor-microcontrollers-ctsu-capacitive-touch-introduction-guide\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "If the finger contacts with the touch electrode at the time of power-on, the touch judgment will not be performed as expected afterwards. Why does this happen?"
+      },
+      {
+        "type": "text",
+        "content": "If the finger contacts with the touch electrode at the time of power-on, the touch judgment will not be performed as expected afterwards. Why does this happen?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIn the RA Family FSP CTSU Driver, in order to suppress false detection caused by fluctuations in parasitic capacitance that depends on the product usage environment, after MCU reset and performing the open function, initial offset tuning is performed in several repetitions of R_CSTU_ScanStart() and R_CTSU_DataGet() or　several repetitions of RM_TOUCH_ScanStart() and RM_TOUCH_DataGet(). If you touch the electrodes during this initial offset tuning period, it will affect the touch judgment behavior afterwards. \nIn initial offset tuning, the amount of offset current is adjusted so that the measured count value without contact approaches the target value. This offset current is intended to control the count value due to the parasitic capacitance. The measured count value at the time of completion of the initial offset tuning is set as a reference value, and the touch ON/OFF is determined by the amount of change from this reference value.\nIf you touch the electrode during initial offset tuning, the offset current is adjusted so that the increase in capacitance caused by the finger contact is removed, and the measured count value with contact is set as the reference value. Since the measured count value required to be judged to be touch ON is higher with theself-capacitance method and lower with the mutual capacitance method by a threshold value than this reference value, if the reference value is set to the measured count value with contact, the amount of change from the reference value exceeds this threshold even if the finger connected the electrodes.\nSince the reference value is readjusted by the drift correction function at intervals specified at the time of touch OFF judgment, touch ON/OFF judgment may be possible after a certain period of time has elapsed.\nFor details on offset current and drift correction, refer to the application note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Introduction Guide\" (R30AN0424).\nhttps://www.renesas.com/en/document/apn/capacitive-sensor-microcontrollers-ctsu-capacitive-touch-introduction-guide\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "In the RA Family FSP CTSU Driver, in order to suppress false detection caused by fluctuations in parasitic capacitance that depends on the product usage environment, after MCU reset and performing the open function, initial offset tuning is performed in several repetitions of R_CSTU_ScanStart() and R_CTSU_DataGet() or　several repetitions of RM_TOUCH_ScanStart() and RM_TOUCH_DataGet(). If you touch the electrodes during this initial offset tuning period, it will affect the touch judgment behavior afterwards. \nIn initial offset tuning, the amount of offset current is adjusted so that the measured count value without contact approaches the target value. This offset current is intended to control the count value due to the parasitic capacitance. The measured count value at the time of completion of the initial offset tuning is set as a reference value, and the touch ON/OFF is determined by the amount of change from this reference value.\nIf you touch the electrode during initial offset tuning, the offset current is adjusted so that the increase in capacitance caused by the finger contact is removed, and the measured count value with contact is set as the reference value. Since the measured count value required to be judged to be touch ON is higher with theself-capacitance method and lower with the mutual capacitance method by a threshold value than this reference value, if the reference value is set to the measured count value with contact, the amount of change from the reference value exceeds this threshold even if the finger connected the electrodes.\nSince the reference value is readjusted by the drift correction function at intervals specified at the time of touch OFF judgment, touch ON/OFF judgment may be possible after a certain period of time has elapsed.\nFor details on offset current and drift correction, refer to the application note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Introduction Guide\" (R30AN0424).\nhttps://www.renesas.com/en/document/apn/capacitive-sensor-microcontrollers-ctsu-capacitive-touch-introduction-guide"
+      },
+      {
+        "type": "text",
+        "content": "In the RA Family FSP CTSU Driver, in order to suppress false detection caused by fluctuations in parasitic capacitance that depends on the product usage environment, after MCU reset and performing the open function, initial offset tuning is performed in several repetitions of R_CSTU_ScanStart() and R_CTSU_DataGet() or　several repetitions of RM_TOUCH_ScanStart() and RM_TOUCH_DataGet(). If you touch the electrodes during this initial offset tuning period, it will affect the touch judgment behavior afterwards."
+      },
+      {
+        "type": "text",
+        "content": "In initial offset tuning, the amount of offset current is adjusted so that the measured count value without contact approaches the target value. This offset current is intended to control the count value due to the parasitic capacitance. The measured count value at the time of completion of the initial offset tuning is set as a reference value, and the touch ON/OFF is determined by the amount of change from this reference value."
+      },
+      {
+        "type": "text",
+        "content": "If you touch the electrode during initial offset tuning, the offset current is adjusted so that the increase in capacitance caused by the finger contact is removed, and the measured count value with contact is set as the reference value. Since the measured count value required to be judged to be touch ON is higher with theself-capacitance method and lower with the mutual capacitance method by a threshold value than this reference value, if the reference value is set to the measured count value with contact, the amount of change from the reference value exceeds this threshold even if the finger connected the electrodes."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399871.png",
+          "alt_text": "",
+          "width": "900",
+          "height": "470",
+          "local_path": "data/categories/ra_family/capacitive_touch/26e99d82d80f5b7e37a867cc08724ba0/images/2c67f540edc8a2bebd924a5ae2ff41bc.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Since the reference value is readjusted by the drift correction function at intervals specified at the time of touch OFF judgment, touch ON/OFF judgment may be possible after a certain period of time has elapsed."
+      },
+      {
+        "type": "text",
+        "content": "For details on offset current and drift correction, refer to the application note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Introduction Guide\" (R30AN0424)."
+      },
+      {
+        "type": "text",
+        "content": "https://www.renesas.com/en/document/apn/capacitive-sensor-microcontrollers-ctsu-capacitive-touch-introduction-guide"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399871.png",
+        "alt_text": "",
+        "width": "900",
+        "height": "470",
+        "local_path": "data/categories/ra_family/capacitive_touch/26e99d82d80f5b7e37a867cc08724ba0/images/2c67f540edc8a2bebd924a5ae2ff41bc.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/en/document/apn/capacitive-sensor-microcontrollers-ctsu-capacitive-touch-introduction-guide",
+        "url": "https://www.renesas.com/en/document/apn/capacitive-sensor-microcontrollers-ctsu-capacitive-touch-introduction-guide"
+      },
+      {
+        "text": "Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21733825"
+      }
+    ]
+  }
+}

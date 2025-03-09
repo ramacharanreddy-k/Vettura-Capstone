@@ -1,0 +1,110 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21246415",
+    "title": "Because a command for a flash rewrite program cannot be issued, programming or erasure is not completed normally.",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:23:43.716772"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI created flash rewrite programs by referring to the user's manual. However, programming and erasure are not completed normally because the commands cannot be issued.\nAnswer:\nNote the following two points:\n1. Declare the pointer variables for issuing commands as volatile.\nIf volatile declarations are missing, optimization by the compiler may omit programming of commands, preventing the commands from being issued correctly.\n2. Beware the size of the pointer variable for issuing a command.\nFor program commands and configuration commands, program data must be written in words.\n   Example of the case where a program command is issued to a code flash (when an RX65N group product is used and the program size is 128 bytes):\n  [Variable declaration]\n   volatile uint8_t * faci_cmd_byte;     /* Pointer variable for writing in bytes */\n   volatile uint16_t * faci_cmd_word;  /* Pointer variable for writing in words */\n [Example procedure for command issuance]\n  /* Address of the FACI command issuance area (0x007E0000) is set */ faci_cmd_byte = (uint8_t *)0x007E0000; faci_cmd_word = (uint16_t *)0x007E0000;\n  *faci_cmd_byte = 0xE8; // Program command\n  *faci_cmd_byte = 0x40; // Size of data programmed in the code flash (128 bytes)\n for( loop = 0 ; loop < 64 ; loop++)\n{\n    *faci_cmd_word = <program-data>[loop];\n  }\n *faci_cmd_byte = 0xD0; // Start of the command\nNote 1:\nThe above program example includes only the code that issues a command.\nWhen you actually use a program command, see the applicable flowchart in the user's manual.\nNote 2:\nThe program size differs depending on the device. For details, see the user's manual.\n  Suitable Products\nRX600 series, RX700 series, \nRX210 group, RX220 group, RX21A group"
+      },
+      {
+        "type": "text",
+        "content": "I created flash rewrite programs by referring to the user's manual. However, programming and erasure are not completed normally because the commands cannot be issued."
+      },
+      {
+        "type": "text",
+        "content": "I created flash rewrite programs by referring to the user's manual. However, programming and erasure are not completed normally because the commands cannot be issued."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nNote the following two points:\n1. Declare the pointer variables for issuing commands as volatile.\nIf volatile declarations are missing, optimization by the compiler may omit programming of commands, preventing the commands from being issued correctly.\n2. Beware the size of the pointer variable for issuing a command.\nFor program commands and configuration commands, program data must be written in words.\n   Example of the case where a program command is issued to a code flash (when an RX65N group product is used and the program size is 128 bytes):\n  [Variable declaration]\n   volatile uint8_t * faci_cmd_byte;     /* Pointer variable for writing in bytes */\n   volatile uint16_t * faci_cmd_word;  /* Pointer variable for writing in words */\n [Example procedure for command issuance]\n  /* Address of the FACI command issuance area (0x007E0000) is set */ faci_cmd_byte = (uint8_t *)0x007E0000; faci_cmd_word = (uint16_t *)0x007E0000;\n  *faci_cmd_byte = 0xE8; // Program command\n  *faci_cmd_byte = 0x40; // Size of data programmed in the code flash (128 bytes)\n for( loop = 0 ; loop < 64 ; loop++)\n{\n    *faci_cmd_word = <program-data>[loop];\n  }\n *faci_cmd_byte = 0xD0; // Start of the command\nNote 1:\nThe above program example includes only the code that issues a command.\nWhen you actually use a program command, see the applicable flowchart in the user's manual.\nNote 2:\nThe program size differs depending on the device. For details, see the user's manual.\n  Suitable Products\nRX600 series, RX700 series, \nRX210 group, RX220 group, RX21A group"
+      },
+      {
+        "type": "text",
+        "content": "Note the following two points:\n1. Declare the pointer variables for issuing commands as volatile.\nIf volatile declarations are missing, optimization by the compiler may omit programming of commands, preventing the commands from being issued correctly.\n2. Beware the size of the pointer variable for issuing a command.\nFor program commands and configuration commands, program data must be written in words.\n   Example of the case where a program command is issued to a code flash (when an RX65N group product is used and the program size is 128 bytes):\n  [Variable declaration]\n   volatile uint8_t * faci_cmd_byte;     /* Pointer variable for writing in bytes */\n   volatile uint16_t * faci_cmd_word;  /* Pointer variable for writing in words */\n [Example procedure for command issuance]\n  /* Address of the FACI command issuance area (0x007E0000) is set */ faci_cmd_byte = (uint8_t *)0x007E0000; faci_cmd_word = (uint16_t *)0x007E0000;\n  *faci_cmd_byte = 0xE8; // Program command\n  *faci_cmd_byte = 0x40; // Size of data programmed in the code flash (128 bytes)\n for( loop = 0 ; loop < 64 ; loop++)\n{\n    *faci_cmd_word = <program-data>[loop];\n  }\n *faci_cmd_byte = 0xD0; // Start of the command\nNote 1:\nThe above program example includes only the code that issues a command.\nWhen you actually use a program command, see the applicable flowchart in the user's manual.\nNote 2:\nThe program size differs depending on the device. For details, see the user's manual."
+      },
+      {
+        "type": "text",
+        "content": "Note the following two points:"
+      },
+      {
+        "type": "text",
+        "content": "1. Declare the pointer variables for issuing commands as volatile.\nIf volatile declarations are missing, optimization by the compiler may omit programming of commands, preventing the commands from being issued correctly."
+      },
+      {
+        "type": "text",
+        "content": "2. Beware the size of the pointer variable for issuing a command.\nFor program commands and configuration commands, program data must be written in words."
+      },
+      {
+        "type": "text",
+        "content": "Example of the case where a program command is issued to a code flash (when an RX65N group product is used and the program size is 128 bytes):"
+      },
+      {
+        "type": "text",
+        "content": "[Variable declaration]\n   volatile uint8_t * faci_cmd_byte;     /* Pointer variable for writing in bytes */\n   volatile uint16_t * faci_cmd_word;  /* Pointer variable for writing in words */"
+      },
+      {
+        "type": "text",
+        "content": "[Example procedure for command issuance]\n  /* Address of the FACI command issuance area (0x007E0000) is set */ faci_cmd_byte = (uint8_t *)0x007E0000; faci_cmd_word = (uint16_t *)0x007E0000;"
+      },
+      {
+        "type": "text",
+        "content": "*faci_cmd_byte = 0xE8; // Program command\n  *faci_cmd_byte = 0x40; // Size of data programmed in the code flash (128 bytes)"
+      },
+      {
+        "type": "text",
+        "content": "for( loop = 0 ; loop < 64 ; loop++)\n{\n    *faci_cmd_word = <program-data>[loop];\n  }"
+      },
+      {
+        "type": "text",
+        "content": "*faci_cmd_byte = 0xD0; // Start of the command"
+      },
+      {
+        "type": "text",
+        "content": "Note 1:\nThe above program example includes only the code that issues a command.\nWhen you actually use a program command, see the applicable flowchart in the user's manual."
+      },
+      {
+        "type": "text",
+        "content": "Note 2:\nThe program size differs depending on the device. For details, see the user's manual."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX600 series, RX700 series, \nRX210 group, RX220 group, RX21A group"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX600 series, RX700 series, \nRX210 group, RX220 group, RX21A group"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX600 series, RX700 series, \nRX210 group, RX220 group, RX21A group"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20409536"
+      }
+    ]
+  }
+}

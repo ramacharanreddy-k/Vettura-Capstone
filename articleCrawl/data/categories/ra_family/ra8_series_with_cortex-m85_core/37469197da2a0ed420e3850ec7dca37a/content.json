@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21088662",
+    "title": "RA8: Using Helium with the CM85 core",
+    "last_updated": "2024-05-11",
+    "extracted_at": "2025-03-08T23:29:09.527061"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow can I use Helium to accelerate my DSP or AI/ML task?\nAnswer:\nThe Cortex-M85 core based on the Arm v8.1-M architecture brings Helium (Arm MVE) to the RA8 series, for acceleration of DSP and AI/ML tasks. CMSIS-NN and DSP libraries, with full support for Helium are available now and should be linked into the project in order to enable Helium Intrinsics. Additionally, users need to use Helium enabled compilers such as AC6 and LLVM to get Helium auto-vectorization support. Most common compilers including Arm AC6, LLVM, IAR and Gcc now support Helium.\nSuitable Products\nRA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+      },
+      {
+        "type": "text",
+        "content": "How can I use Helium to accelerate my DSP or AI/ML task?"
+      },
+      {
+        "type": "text",
+        "content": "How can I use Helium to accelerate my DSP or AI/ML task?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe Cortex-M85 core based on the Arm v8.1-M architecture brings Helium (Arm MVE) to the RA8 series, for acceleration of DSP and AI/ML tasks. CMSIS-NN and DSP libraries, with full support for Helium are available now and should be linked into the project in order to enable Helium Intrinsics. Additionally, users need to use Helium enabled compilers such as AC6 and LLVM to get Helium auto-vectorization support. Most common compilers including Arm AC6, LLVM, IAR and Gcc now support Helium.\nSuitable Products\nRA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+      },
+      {
+        "type": "text",
+        "content": "The Cortex-M85 core based on the Arm v8.1-M architecture brings Helium (Arm MVE) to the RA8 series, for acceleration of DSP and AI/ML tasks. CMSIS-NN and DSP libraries, with full support for Helium are available now and should be linked into the project in order to enable Helium Intrinsics. Additionally, users need to use Helium enabled compilers such as AC6 and LLVM to get Helium auto-vectorization support. Most common compilers including Arm AC6, LLVM, IAR and Gcc now support Helium."
+      },
+      {
+        "type": "text",
+        "content": "The Cortex-M85 core based on the Arm v8.1-M architecture brings Helium (Arm MVE) to the RA8 series, for acceleration of DSP and AI/ML tasks. CMSIS-NN and DSP libraries, with full support for Helium are available now and should be linked into the project in order to enable Helium Intrinsics. Additionally, users need to use Helium enabled compilers such as AC6 and LLVM to get Helium auto-vectorization support. Most common compilers including Arm AC6, LLVM, IAR and Gcc now support Helium."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21088720"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21088734"
+      }
+    ]
+  }
+}

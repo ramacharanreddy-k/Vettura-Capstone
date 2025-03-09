@@ -1,0 +1,216 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21172753",
+    "title": "RA Family: How to use the Debug Out function of J-Link OB on EK (Evaluation Kit)",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:20:33.441941"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to use the Debug Out function of J-Link OB on EK (Evaluation Kit)\nAnswer:\nRenesas has equipped each EK (Evaluation Kit) for RA MCUs, such as EK-RA2E1, EK-RA2E2, EK-RA2L1, EK-RA2A1, etcEK-RA4M1、EK-RA4M2、EK-RA4M3、EK-RA4W1、EK-RA6M1、EK-RA6M2, EK-RA6M3, EK-RA6M4, EK-RA6M5, etc., all EKs come with J-Link OB (On-Board Debugger), which means that the user can evaluate, debug, and test the MCU with only one USB cable, eliminating the need for a separate J-Link emulator. Most of these EKs have the J-Link OB's Debug Out function, which means that the J-Link OB (On-Board Debugger) on the board can be used to debug not only the MCU on the board, but also the customer's RA target board through the Debug OB function. However, some EKs do not support this function, such as EK-RA2A1, EK-RA4M1, EK-RA6M1, EK-RA6M2, etc.\nIt is important to emphasize that this on-board debugger is officially provided by Renesas, and the firmware can be updated with the update of the SEGGER tool.\nIn this article, EK-RA6M3 is used as an example to describe the specific implementation method.\nRefer to the schematic diagram of EK-RA6M3:\nJ29 can be used with J8 and J9 to achieve the Debug Out function, J9 does not connect to the jumper cap[WM1] [MM2] , and J8 connects to Pin2 and Pin3.\nTo connect the customer target board, use the following pins of the J29:\nJ29 Customer Targets Board\nPin6 P108/SWDIO\nPin8 P300/SWCLK\nPin2 P110/RXD9\nPin4 P109/TXD9\nJ8 Customer Targets Board\nPin1 RESET\n  Annotation:\nThese pins are all 2.0 pitch.\nTo control the MD pin of the RA with J-Link OB, connect Pin 8 of J29 to the MD/P201 pin of the target board chip at the same time.\nSince the above pins do not have GND pins, it is also necessary to connect the GND of the user board to the GND on the EK board. The following pins can be used with double-row pins: Pin30 for J1, Pin39 for J2, Pin39 for J3, Pin39 for J4.\nIf the customer's target board needs power from the EK-RA6M3, please note that there are two options: 3.3V or 5V.\nThe following pins on J1, J2, J3, and J4 can be used to power the customer's target board:\n3.3V 5V\nJ1: Pin 36 J1: Pin 40\nJ2: Pin 1  \nJ3: Pin 1  \nJ4: Pin 1  \n  Suitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "How to use the Debug Out function of J-Link OB on EK (Evaluation Kit)"
+      },
+      {
+        "type": "text",
+        "content": "How to use the Debug Out function of J-Link OB on EK (Evaluation Kit)"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRenesas has equipped each EK (Evaluation Kit) for RA MCUs, such as EK-RA2E1, EK-RA2E2, EK-RA2L1, EK-RA2A1, etcEK-RA4M1、EK-RA4M2、EK-RA4M3、EK-RA4W1、EK-RA6M1、EK-RA6M2, EK-RA6M3, EK-RA6M4, EK-RA6M5, etc., all EKs come with J-Link OB (On-Board Debugger), which means that the user can evaluate, debug, and test the MCU with only one USB cable, eliminating the need for a separate J-Link emulator. Most of these EKs have the J-Link OB's Debug Out function, which means that the J-Link OB (On-Board Debugger) on the board can be used to debug not only the MCU on the board, but also the customer's RA target board through the Debug OB function. However, some EKs do not support this function, such as EK-RA2A1, EK-RA4M1, EK-RA6M1, EK-RA6M2, etc.\nIt is important to emphasize that this on-board debugger is officially provided by Renesas, and the firmware can be updated with the update of the SEGGER tool.\nIn this article, EK-RA6M3 is used as an example to describe the specific implementation method.\nRefer to the schematic diagram of EK-RA6M3:\nJ29 can be used with J8 and J9 to achieve the Debug Out function, J9 does not connect to the jumper cap[WM1] [MM2] , and J8 connects to Pin2 and Pin3.\nTo connect the customer target board, use the following pins of the J29:\nJ29 Customer Targets Board\nPin6 P108/SWDIO\nPin8 P300/SWCLK\nPin2 P110/RXD9\nPin4 P109/TXD9\nJ8 Customer Targets Board\nPin1 RESET\n  Annotation:\nThese pins are all 2.0 pitch.\nTo control the MD pin of the RA with J-Link OB, connect Pin 8 of J29 to the MD/P201 pin of the target board chip at the same time.\nSince the above pins do not have GND pins, it is also necessary to connect the GND of the user board to the GND on the EK board. The following pins can be used with double-row pins: Pin30 for J1, Pin39 for J2, Pin39 for J3, Pin39 for J4.\nIf the customer's target board needs power from the EK-RA6M3, please note that there are two options: 3.3V or 5V.\nThe following pins on J1, J2, J3, and J4 can be used to power the customer's target board:\n3.3V 5V\nJ1: Pin 36 J1: Pin 40\nJ2: Pin 1  \nJ3: Pin 1  \nJ4: Pin 1  \n  Suitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "Renesas has equipped each EK (Evaluation Kit) for RA MCUs, such as EK-RA2E1, EK-RA2E2, EK-RA2L1, EK-RA2A1, etcEK-RA4M1、EK-RA4M2、EK-RA4M3、EK-RA4W1、EK-RA6M1、EK-RA6M2, EK-RA6M3, EK-RA6M4, EK-RA6M5, etc., all EKs come with J-Link OB (On-Board Debugger), which means that the user can evaluate, debug, and test the MCU with only one USB cable, eliminating the need for a separate J-Link emulator. Most of these EKs have the J-Link OB's Debug Out function, which means that the J-Link OB (On-Board Debugger) on the board can be used to debug not only the MCU on the board, but also the customer's RA target board through the Debug OB function. However, some EKs do not support this function, such as EK-RA2A1, EK-RA4M1, EK-RA6M1, EK-RA6M2, etc."
+      },
+      {
+        "type": "text",
+        "content": "It is important to emphasize that this on-board debugger is officially provided by Renesas, and the firmware can be updated with the update of the SEGGER tool."
+      },
+      {
+        "type": "text",
+        "content": "In this article, EK-RA6M3 is used as an example to describe the specific implementation method."
+      },
+      {
+        "type": "text",
+        "content": "Refer to the schematic diagram of EK-RA6M3:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380476-1d.png",
+          "alt_text": "",
+          "width": "689",
+          "height": "289",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/a99bdc1c2932b067ff371ba2aeedfe12/images/d04f7b2a50278e8a71083c1281a886da.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380476-2b.png",
+          "alt_text": "",
+          "width": "456",
+          "height": "272",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/a99bdc1c2932b067ff371ba2aeedfe12/images/d33da1157bd9149b1155edbfb98e466d.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "J29 can be used with J8 and J9 to achieve the Debug Out function, J9 does not connect to the jumper cap[WM1] [MM2] , and J8 connects to Pin2 and Pin3."
+      },
+      {
+        "type": "text",
+        "content": "To connect the customer target board, use the following pins of the J29:"
+      },
+      {
+        "type": "text",
+        "content": "Annotation:"
+      },
+      {
+        "type": "text",
+        "content": "These pins are all 2.0 pitch."
+      },
+      {
+        "type": "text",
+        "content": "To control the MD pin of the RA with J-Link OB, connect Pin 8 of J29 to the MD/P201 pin of the target board chip at the same time."
+      },
+      {
+        "type": "text",
+        "content": "Since the above pins do not have GND pins, it is also necessary to connect the GND of the user board to the GND on the EK board. The following pins can be used with double-row pins: Pin30 for J1, Pin39 for J2, Pin39 for J3, Pin39 for J4."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380476-3b.png",
+          "alt_text": "",
+          "width": "899",
+          "height": "552",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/a99bdc1c2932b067ff371ba2aeedfe12/images/a566c3b8770512310391ff5eade85f34.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "If the customer's target board needs power from the EK-RA6M3, please note that there are two options: 3.3V or 5V."
+      },
+      {
+        "type": "text",
+        "content": "The following pins on J1, J2, J3, and J4 can be used to power the customer's target board:"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380476-1d.png",
+        "alt_text": "",
+        "width": "689",
+        "height": "289",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/a99bdc1c2932b067ff371ba2aeedfe12/images/d04f7b2a50278e8a71083c1281a886da.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380476-2b.png",
+        "alt_text": "",
+        "width": "456",
+        "height": "272",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/a99bdc1c2932b067ff371ba2aeedfe12/images/d33da1157bd9149b1155edbfb98e466d.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380476-3b.png",
+        "alt_text": "",
+        "width": "899",
+        "height": "552",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/a99bdc1c2932b067ff371ba2aeedfe12/images/a566c3b8770512310391ff5eade85f34.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "J29",
+            "Customer Targets Board"
+          ],
+          [
+            "Pin6",
+            "P108/SWDIO"
+          ],
+          [
+            "Pin8",
+            "P300/SWCLK"
+          ],
+          [
+            "Pin2",
+            "P110/RXD9"
+          ],
+          [
+            "Pin4",
+            "P109/TXD9"
+          ],
+          [
+            "J8",
+            "Customer Targets Board"
+          ],
+          [
+            "Pin1",
+            "RESET"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "3.3V",
+            "5V"
+          ],
+          [
+            "J1: Pin 36",
+            "J1: Pin 40"
+          ],
+          [
+            "J2: Pin 1",
+            ""
+          ],
+          [
+            "J3: Pin 1",
+            ""
+          ],
+          [
+            "J4: Pin 1",
+            ""
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": [
+      {
+        "text": "[WM1]",
+        "url": "https://en-support.renesas.com/#_msocom_1"
+      },
+      {
+        "text": "[MM2]",
+        "url": "https://en-support.renesas.com/#_msocom_2"
+      }
+    ]
+  }
+}

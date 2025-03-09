@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20641575",
+    "title": "RA Family: Using FreeRTOS+FAT on a Bare Metal Project",
+    "last_updated": "2022-10-08",
+    "extracted_at": "2025-03-08T23:12:01.547413"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "You can use FreeRTOS+FAT without FreeRTOS by following the below setup steps, which are also well described in RA FSP Documentation.\n1.    Copy “ra/fsp/src/rm_freertos_plus_fat/FreeRTOSConfigMinimal.h” to one of your project include paths and rename it “FreeRTOSConfig.h”.\n2.    Update the Malloc function to malloc and the Free function to free in the Common configuration of FreeRTOS+FAT as seen below.\n \n3.    Implement the detection of media insertion because the media must be inserted before calling the RM_FREERTOS_PLUS_FAT_MediaInit(). \na.    If the Block Media USB is used in the Bare Metal, the low-level USB driver does not pass the USB event to the block media framework through the internal “rm_block_media_usb_callback”. Therefore, user application needs to poll the R_USB_EventGet() function to obtain the status of USB media insertion.\nb.    If the Block Media SDMMC is used, the media insertion event will be notified through the preassigned callback function of FreeRTOS+FAT Port. Therefore, user application can just wait for the event of RM_FREERTOS_PLUS_FAT_EVENT_MEDIA_INSERTED notified by the callback before starting the media initialization.\nSample Project – using FreeRTOS+FAT with Block Media on USB in a Bare Metal project\nFSP version: 3.8.0\nUsed Kit: EK-RA6M3\nSetup: Connect USB pendrive to J11, Connect J12 Pin1-Pin2, Remove jumper from J15.\n   Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "You can use FreeRTOS+FAT without FreeRTOS by following the below setup steps, which are also well described in RA FSP Documentation.\n1.    Copy “ra/fsp/src/rm_freertos_plus_fat/FreeRTOSConfigMinimal.h” to one of your project include paths and rename it “FreeRTOSConfig.h”.\n2.    Update the Malloc function to malloc and the Free function to free in the Common configuration of FreeRTOS+FAT as seen below.\n \n3.    Implement the detection of media insertion because the media must be inserted before calling the RM_FREERTOS_PLUS_FAT_MediaInit(). \na.    If the Block Media USB is used in the Bare Metal, the low-level USB driver does not pass the USB event to the block media framework through the internal “rm_block_media_usb_callback”. Therefore, user application needs to poll the R_USB_EventGet() function to obtain the status of USB media insertion.\nb.    If the Block Media SDMMC is used, the media insertion event will be notified through the preassigned callback function of FreeRTOS+FAT Port. Therefore, user application can just wait for the event of RM_FREERTOS_PLUS_FAT_EVENT_MEDIA_INSERTED notified by the callback before starting the media initialization."
+      },
+      {
+        "type": "text",
+        "content": "RA FSP Documentation."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/962a55ab-20bc-4a36-8dc9-8620b76d3131.png",
+          "alt_text": "",
+          "width": "540",
+          "height": "270",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/1f395323acb85fc02d0067c02e2ffdcd/images/bd5f82dccf6a2eb827c53ee34f68d8a3.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Sample Project – using FreeRTOS+FAT with Block Media on USB in a Bare Metal project\nFSP version: 3.8.0\nUsed Kit: EK-RA6M3\nSetup: Connect USB pendrive to J11, Connect J12 Pin1-Pin2, Remove jumper from J15."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA/FSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Source:"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/962a55ab-20bc-4a36-8dc9-8620b76d3131.png",
+        "alt_text": "",
+        "width": "540",
+        "height": "270",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/1f395323acb85fc02d0067c02e2ffdcd/images/bd5f82dccf6a2eb827c53ee34f68d8a3.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA/FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA/FSP"
+    ],
+    "links": [
+      {
+        "text": "RA FSP Documentation",
+        "url": "https://renesas.github.io/fsp/group___r_m___f_r_e_e_r_t_o_s___p_l_u_s___f_a_t.html"
+      },
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20746327"
+      }
+    ]
+  }
+}

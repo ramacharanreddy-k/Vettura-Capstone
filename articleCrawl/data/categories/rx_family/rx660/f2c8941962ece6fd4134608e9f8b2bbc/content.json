@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20590530",
+    "title": "Pin compatibility",
+    "last_updated": "2022-02-08",
+    "extracted_at": "2025-03-09T00:03:01.567068"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there pin compatibility between the RX660 and other RX series?\nAnswer:\nThere is pin compatibility with RX general-purpose product series such as RX210 and RX651. For 100-pin and 144-pin (except for RX140) in particular, the hardware can be replaced easily because there is full pin compatibility.\nSuitable Products\nRX660"
+      },
+      {
+        "type": "text",
+        "content": "Is there pin compatibility between the RX660 and other RX series?"
+      },
+      {
+        "type": "text",
+        "content": "Is there pin compatibility between the RX660 and other RX series?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThere is pin compatibility with RX general-purpose product series such as RX210 and RX651. For 100-pin and 144-pin (except for RX140) in particular, the hardware can be replaced easily because there is full pin compatibility.\nSuitable Products\nRX660"
+      },
+      {
+        "type": "text",
+        "content": "There is pin compatibility with RX general-purpose product series such as RX210 and RX651. For 100-pin and 144-pin (except for RX140) in particular, the hardware can be replaced easily because there is full pin compatibility."
+      },
+      {
+        "type": "text",
+        "content": "There is pin compatibility with RX general-purpose product series such as RX210 and RX651. For 100-pin and 144-pin (except for RX140) in particular, the hardware can be replaced easily because there is full pin compatibility."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX660"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX660"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX660"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20590535"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20590541"
+      }
+    ]
+  }
+}

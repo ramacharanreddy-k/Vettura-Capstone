@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20572383",
+    "title": "RZ/V2M: Can I change the drive output for DDR signals?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:51:17.860201"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan I change the strength of the drive output \"Ron\" for LPDDR4 signals.\nAnswer:\nThe value \"Ron\" cannot change.\nSuitable Products\nRZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "Can I change the strength of the drive output \"Ron\" for LPDDR4 signals."
+      },
+      {
+        "type": "text",
+        "content": "Can I change the strength of the drive output \"Ron\" for LPDDR4 signals."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe value \"Ron\" cannot change.\nSuitable Products\nRZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "The value \"Ron\" cannot change."
+      },
+      {
+        "type": "text",
+        "content": "The value \"Ron\" cannot change."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V2M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V2M"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20574345"
+      }
+    ]
+  }
+}

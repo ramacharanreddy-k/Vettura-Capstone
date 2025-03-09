@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21287448",
+    "title": "RA0E1: Lower system power consumption",
+    "last_updated": "2024-09-04",
+    "extracted_at": "2025-03-08T23:32:37.702960"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhy is the RA0E1 suitable for battery applications?\nAnswer:\nThe RA0E1 delivers lower operating current  and  standby current with quick wake up time. In SNOOZE mode the CPU is in the standby state while A/D conversion and serial communication are enabled, and the CPU is activated only when required. This mode is excellent for battery-powered systems as it greatly increases battery life.\nSuitable Products\nRA0E1"
+      },
+      {
+        "type": "text",
+        "content": "Why is the RA0E1 suitable for battery applications?"
+      },
+      {
+        "type": "text",
+        "content": "Why is the RA0E1 suitable for battery applications?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RA0E1 delivers lower operating current  and  standby current with quick wake up time. In SNOOZE mode the CPU is in the standby state while A/D conversion and serial communication are enabled, and the CPU is activated only when required. This mode is excellent for battery-powered systems as it greatly increases battery life.\nSuitable Products\nRA0E1"
+      },
+      {
+        "type": "text",
+        "content": "The RA0E1 delivers lower operating current  and  standby current with quick wake up time. In SNOOZE mode the CPU is in the standby state while A/D conversion and serial communication are enabled, and the CPU is activated only when required. This mode is excellent for battery-powered systems as it greatly increases battery life."
+      },
+      {
+        "type": "text",
+        "content": "The RA0E1 delivers lower operating current  and  standby current with quick wake up time. In SNOOZE mode the CPU is in the standby state while A/D conversion and serial communication are enabled, and the CPU is activated only when required. This mode is excellent for battery-powered systems as it greatly increases battery life."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA0E1"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA0E1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA0E1"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21287464"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21287475"
+      }
+    ]
+  }
+}

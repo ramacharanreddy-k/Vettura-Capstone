@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20936545",
+    "title": "Does the RA6M5 support SPI mode for OctaRAM? Or only DOPI mode?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:37:35.801025"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDoes the RA6M5 support SPI mode for OctaRAM? Or only DOPI mode?\nAnswer:\nThe RA6M4/M5 OSPI controller only support DOPI mode for OctaRAM.\nSuitable Products\nRA6M4, RA6M5\n  日本語"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nDoes the RA6M5 support SPI mode for OctaRAM? Or only DOPI mode?\nAnswer:\nThe RA6M4/M5 OSPI controller only support DOPI mode for OctaRAM.\nSuitable Products\nRA6M4, RA6M5"
+      },
+      {
+        "type": "text",
+        "content": "Does the RA6M5 support SPI mode for OctaRAM? Or only DOPI mode?"
+      },
+      {
+        "type": "text",
+        "content": "Does the RA6M5 support SPI mode for OctaRAM? Or only DOPI mode?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RA6M4/M5 OSPI controller only support DOPI mode for OctaRAM.\nSuitable Products\nRA6M4, RA6M5"
+      },
+      {
+        "type": "text",
+        "content": "The RA6M4/M5 OSPI controller only support DOPI mode for OctaRAM."
+      },
+      {
+        "type": "text",
+        "content": "The RA6M4/M5 OSPI controller only support DOPI mode for OctaRAM."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA6M4, RA6M5"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA6M4, RA6M5"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA6M4, RA6M5"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20936549"
+      }
+    ]
+  }
+}

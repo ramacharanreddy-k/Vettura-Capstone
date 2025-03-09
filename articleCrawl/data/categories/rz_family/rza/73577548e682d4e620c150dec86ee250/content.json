@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21149206",
+    "title": "RZ/A1 Group, RZ/A2M: Buffer memory for camera input and LCD output",
+    "last_updated": "2023-01-12",
+    "extracted_at": "2025-03-08T23:43:21.233726"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs it OK to place the buffer memory for camera input and LCD output in external RAM?\nAnswer:\nPlacement in external RAM is not recommended. Buffer memory for camera input and LCD output should be placed in internal RAM.\nSuitable Products\nRZ/A1H, RZ/A1M, RZ/A1L, RZ/A1LU, RZ/A1LC, RZ/A2M"
+      },
+      {
+        "type": "text",
+        "content": "Is it OK to place the buffer memory for camera input and LCD output in external RAM?"
+      },
+      {
+        "type": "text",
+        "content": "Is it OK to place the buffer memory for camera input and LCD output in external RAM?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nPlacement in external RAM is not recommended. Buffer memory for camera input and LCD output should be placed in internal RAM.\nSuitable Products\nRZ/A1H, RZ/A1M, RZ/A1L, RZ/A1LU, RZ/A1LC, RZ/A2M"
+      },
+      {
+        "type": "text",
+        "content": "Placement in external RAM is not recommended. Buffer memory for camera input and LCD output should be placed in internal RAM."
+      },
+      {
+        "type": "text",
+        "content": "Placement in external RAM is not recommended. Buffer memory for camera input and LCD output should be placed in internal RAM."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A1H, RZ/A1M, RZ/A1L, RZ/A1LU, RZ/A1LC, RZ/A2M"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A1H, RZ/A1M, RZ/A1L, RZ/A1LU, RZ/A1LC, RZ/A2M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A1H, RZ/A1M, RZ/A1L, RZ/A1LU, RZ/A1LC, RZ/A2M"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21149267"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21149271"
+      }
+    ]
+  }
+}

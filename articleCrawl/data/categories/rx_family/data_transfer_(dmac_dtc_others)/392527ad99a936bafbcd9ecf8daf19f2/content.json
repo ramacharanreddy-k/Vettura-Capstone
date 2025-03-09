@@ -1,0 +1,179 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21419422",
+    "title": "RX Family: How to set up multiple trigger sources on DTC using Code Generator driver",
+    "last_updated": "2024-04-06",
+    "extracted_at": "2025-03-09T00:12:20.007831"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow do I set up the Data Transfer Controller (DTC) for the several trigger sources by using code generator driver?\nAnswer:\nTo use DTC with multiple trigger sources, set up the DTC Code Generator driver as follows:\n(1) Add as many DTC drivers to the “Component” tab of the Smart Configurator as the number of trigger sources.\nExample: Select the two trigger sources\n\nNote:\nAt this time, the default trigger source is selected.\nThen each driver shows an error icon on the bottom left of the driver.\nPlease remove this error applying step 2 and 3.\n(2) Select a different \"Activation source\" trigger source for each DTC driver and make other settings as needed.\n(3) All the settings in “Base setting” tab must remain the same for all DTC driver instances.\nIf you change some settings on this \"Base setting\" tab, you will need to apply the same settings to the \"Base setting\" tabs of other DTC drivers as well.\nPlease refer to more information including use case from the following application note and sample code:\n“RX Family How to Change Transfer Data Length During RSPI Communication Using a DTC Rev.1.00”\nhttps://www.renesas.com/search?keywords=R01AN7238\nSuitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "How do I set up the Data Transfer Controller (DTC) for the several trigger sources by using code generator driver?"
+      },
+      {
+        "type": "text",
+        "content": "How do I set up the Data Transfer Controller (DTC) for the several trigger sources by using code generator driver?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nTo use DTC with multiple trigger sources, set up the DTC Code Generator driver as follows:\n(1) Add as many DTC drivers to the “Component” tab of the Smart Configurator as the number of trigger sources.\nExample: Select the two trigger sources\n\nNote:\nAt this time, the default trigger source is selected.\nThen each driver shows an error icon on the bottom left of the driver.\nPlease remove this error applying step 2 and 3.\n(2) Select a different \"Activation source\" trigger source for each DTC driver and make other settings as needed.\n(3) All the settings in “Base setting” tab must remain the same for all DTC driver instances.\nIf you change some settings on this \"Base setting\" tab, you will need to apply the same settings to the \"Base setting\" tabs of other DTC drivers as well.\nPlease refer to more information including use case from the following application note and sample code:\n“RX Family How to Change Transfer Data Length During RSPI Communication Using a DTC Rev.1.00”\nhttps://www.renesas.com/search?keywords=R01AN7238\nSuitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "To use DTC with multiple trigger sources, set up the DTC Code Generator driver as follows:\n(1) Add as many DTC drivers to the “Component” tab of the Smart Configurator as the number of trigger sources.\nExample: Select the two trigger sources\n\nNote:\nAt this time, the default trigger source is selected.\nThen each driver shows an error icon on the bottom left of the driver.\nPlease remove this error applying step 2 and 3.\n(2) Select a different \"Activation source\" trigger source for each DTC driver and make other settings as needed.\n(3) All the settings in “Base setting” tab must remain the same for all DTC driver instances.\nIf you change some settings on this \"Base setting\" tab, you will need to apply the same settings to the \"Base setting\" tabs of other DTC drivers as well.\nPlease refer to more information including use case from the following application note and sample code:\n“RX Family How to Change Transfer Data Length During RSPI Communication Using a DTC Rev.1.00”\nhttps://www.renesas.com/search?keywords=R01AN7238"
+      },
+      {
+        "type": "text",
+        "content": "To use DTC with multiple trigger sources, set up the DTC Code Generator driver as follows:"
+      },
+      {
+        "type": "text",
+        "content": "(1) Add as many DTC drivers to the “Component” tab of the Smart Configurator as the number of trigger sources."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/388317-1.png",
+          "alt_text": "",
+          "width": "483",
+          "height": "518",
+          "local_path": "data/categories/rx_family/data_transfer_(dmac_dtc_others)/392527ad99a936bafbcd9ecf8daf19f2/images/70ec38a11eacde77f39d4a2e9ab4a685.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Example: Select the two trigger sources"
+      },
+      {
+        "type": "text",
+        "content": "Note:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/388317-2.png",
+          "alt_text": "",
+          "width": "510",
+          "height": "351",
+          "local_path": "data/categories/rx_family/data_transfer_(dmac_dtc_others)/392527ad99a936bafbcd9ecf8daf19f2/images/8d9db0816448d6aef52e25a5a6440363.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "At this time, the default trigger source is selected.\nThen each driver shows an error icon on the bottom left of the driver.\nPlease remove this error applying step 2 and 3."
+      },
+      {
+        "type": "text",
+        "content": "(2) Select a different \"Activation source\" trigger source for each DTC driver and make other settings as needed."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/388317-3.png",
+          "alt_text": "",
+          "width": "841",
+          "height": "481",
+          "local_path": "data/categories/rx_family/data_transfer_(dmac_dtc_others)/392527ad99a936bafbcd9ecf8daf19f2/images/38a51ae57dc7c588e03594f35c88dd01.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "(3) All the settings in “Base setting” tab must remain the same for all DTC driver instances."
+      },
+      {
+        "type": "text",
+        "content": "If you change some settings on this \"Base setting\" tab, you will need to apply the same settings to the \"Base setting\" tabs of other DTC drivers as well."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/388317-4.png",
+          "alt_text": "",
+          "width": "827",
+          "height": "437",
+          "local_path": "data/categories/rx_family/data_transfer_(dmac_dtc_others)/392527ad99a936bafbcd9ecf8daf19f2/images/db82a79e1a94ed77cf22d776e0135a4f.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Please refer to more information including use case from the following application note and sample code:"
+      },
+      {
+        "type": "text",
+        "content": "“RX Family How to Change Transfer Data Length During RSPI Communication Using a DTC Rev.1.00”\nhttps://www.renesas.com/search?keywords=R01AN7238"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/388317-1.png",
+        "alt_text": "",
+        "width": "483",
+        "height": "518",
+        "local_path": "data/categories/rx_family/data_transfer_(dmac_dtc_others)/392527ad99a936bafbcd9ecf8daf19f2/images/70ec38a11eacde77f39d4a2e9ab4a685.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/388317-2.png",
+        "alt_text": "",
+        "width": "510",
+        "height": "351",
+        "local_path": "data/categories/rx_family/data_transfer_(dmac_dtc_others)/392527ad99a936bafbcd9ecf8daf19f2/images/8d9db0816448d6aef52e25a5a6440363.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/388317-3.png",
+        "alt_text": "",
+        "width": "841",
+        "height": "481",
+        "local_path": "data/categories/rx_family/data_transfer_(dmac_dtc_others)/392527ad99a936bafbcd9ecf8daf19f2/images/38a51ae57dc7c588e03594f35c88dd01.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/388317-4.png",
+        "alt_text": "",
+        "width": "827",
+        "height": "437",
+        "local_path": "data/categories/rx_family/data_transfer_(dmac_dtc_others)/392527ad99a936bafbcd9ecf8daf19f2/images/db82a79e1a94ed77cf22d776e0135a4f.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/search?keywords=R01AN7238",
+        "url": "https://www.renesas.com/search?keywords=R01AN7238"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21419399"
+      }
+    ]
+  }
+}

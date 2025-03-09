@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21056466",
+    "title": "RA Family: How to generate a complementary/push-pull PWM signal",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:40:02.135823"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to generate a complementary/push-pull PWM signal\nAnswer:\nThe GPT (general purpose timer – r_gpt) module can be used to generate complementary/push-pull PWM signals.\nThe below reference example configuration generates two complementary PWM signals with a 10Khz frequency-\nGPT mode and frequency:\n\n\nPin state configuration:\n\n\nThe timer output pins generate two complementary PWM signal waveforms of 10Khz as shown below:\n\n\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "How to generate a complementary/push-pull PWM signal"
+      },
+      {
+        "type": "text",
+        "content": "How to generate a complementary/push-pull PWM signal"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe GPT (general purpose timer – r_gpt) module can be used to generate complementary/push-pull PWM signals.\nThe below reference example configuration generates two complementary PWM signals with a 10Khz frequency-\nGPT mode and frequency:\n\n\nPin state configuration:\n\n\nThe timer output pins generate two complementary PWM signal waveforms of 10Khz as shown below:\n\n\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "The GPT (general purpose timer – r_gpt) module can be used to generate complementary/push-pull PWM signals.\nThe below reference example configuration generates two complementary PWM signals with a 10Khz frequency-\nGPT mode and frequency:\n\n\nPin state configuration:\n\n\nThe timer output pins generate two complementary PWM signal waveforms of 10Khz as shown below:"
+      },
+      {
+        "type": "text",
+        "content": "The GPT (general purpose timer – r_gpt) module can be used to generate complementary/push-pull PWM signals."
+      },
+      {
+        "type": "text",
+        "content": "The below reference example configuration generates two complementary PWM signals with a 10Khz frequency-"
+      },
+      {
+        "type": "text",
+        "content": "GPT mode and frequency:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/375180-1.png",
+          "alt_text": "",
+          "width": "630",
+          "height": "107",
+          "local_path": "data/categories/ra_family/timer/313b8db3b3234df44b7220c593992b46/images/7477eea50361ae67d2bcadddead125f1.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Pin state configuration:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/375180-2.png",
+          "alt_text": "",
+          "width": "853",
+          "height": "492",
+          "local_path": "data/categories/ra_family/timer/313b8db3b3234df44b7220c593992b46/images/f199977cc2d2e4201f97b19da6005402.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The timer output pins generate two complementary PWM signal waveforms of 10Khz as shown below:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/375180-3.png",
+          "alt_text": "",
+          "width": "1385",
+          "height": "167",
+          "local_path": "data/categories/ra_family/timer/313b8db3b3234df44b7220c593992b46/images/de6adabfc9961d3aed9d336b477b9927.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/375180-1.png",
+        "alt_text": "",
+        "width": "630",
+        "height": "107",
+        "local_path": "data/categories/ra_family/timer/313b8db3b3234df44b7220c593992b46/images/7477eea50361ae67d2bcadddead125f1.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/375180-2.png",
+        "alt_text": "",
+        "width": "853",
+        "height": "492",
+        "local_path": "data/categories/ra_family/timer/313b8db3b3234df44b7220c593992b46/images/f199977cc2d2e4201f97b19da6005402.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/375180-3.png",
+        "alt_text": "",
+        "width": "1385",
+        "height": "167",
+        "local_path": "data/categories/ra_family/timer/313b8db3b3234df44b7220c593992b46/images/de6adabfc9961d3aed9d336b477b9927.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": []
+  }
+}

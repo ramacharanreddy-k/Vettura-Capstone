@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20844763",
+    "title": "RA4E2, RA6E2: Small package with USB interface",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:30:36.933272"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nLooking for a small package MCU that supports the USB interface.\nAnswer:\nThe RA4E2 and RA6E2 support a 4 mm x 4 mm 36-pin BGA package and so are the smallest RA MCUs that support the USB 2.0 full-speed interface.\nSuitable Products\nRA4E2, RA6E2"
+      },
+      {
+        "type": "text",
+        "content": "Looking for a small package MCU that supports the USB interface."
+      },
+      {
+        "type": "text",
+        "content": "Looking for a small package MCU that supports the USB interface."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RA4E2 and RA6E2 support a 4 mm x 4 mm 36-pin BGA package and so are the smallest RA MCUs that support the USB 2.0 full-speed interface.\nSuitable Products\nRA4E2, RA6E2"
+      },
+      {
+        "type": "text",
+        "content": "The RA4E2 and RA6E2 support a 4 mm x 4 mm 36-pin BGA package and so are the smallest RA MCUs that support the USB 2.0 full-speed interface."
+      },
+      {
+        "type": "text",
+        "content": "The RA4E2 and RA6E2 support a 4 mm x 4 mm 36-pin BGA package and so are the smallest RA MCUs that support the USB 2.0 full-speed interface."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA4E2, RA6E2"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA4E2, RA6E2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA4E2, RA6E2"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20844788"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20844791"
+      }
+    ]
+  }
+}

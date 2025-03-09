@@ -1,0 +1,372 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20980155",
+    "title": "RA Family: ID code protection (in case of protection disabled)",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:24:32.770805"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to set the ID Code to disable ID code protection, and how to connect a debugger or programmer in that case?\nAnswer:\nHow to set the ID code\nIn the FSP configurator, set the “ID Code Mode” to “Unlocked (Ignore ID)” in the BSP property as shown below. In this case, “ID code (32 Hex Characters)” is ignored.\nThe value of the ID code in the OSIS register\nIn the following, to make it easier to understand the relationship between the ID code value and the OSIS register, the ID code is color-coded each 4 bytes, such as  “00112233445566778899AABBCCDDEEFF”.\nThis setting is output to ra_cfg/fsp_cfg/bsp/bsp_mcu_family_cfg.h as shown below. You can see that the ID code is set as all FFh.\n/* ID CODE: FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF */\n#define BSP_CFG_ID_CODE_LONG_1 (0xFFFFFFFF)\n#define BSP_CFG_ID_CODE_LONG_2 (0xFFFFFFFF)\n#define BSP_CFG_ID_CODE_LONG_3 (0xFFFFFFFF)\n#define BSP_CFG_ID_CODE_LONG_4 (0xffFFFFFF)\n\nThe ID code is generated in the program image file as shown below. It defers as follows depending on the address of the OSIS register:\nIn case of RA2L1:\nS31501010018FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE0\nS31101010028FFFFFFFFFFFFFFFFFFFFFFFFD0\n\nIn case of RA6M3:\nS3150100A150FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF08\n\nIn case of RA4E2:\nS3150100A120FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF38\n\nDebugger connection in e2 studio (ID code authentication)\nNo ID code setting is required in the debug configuration.\nDebugger connection in e2 studio (with ALeRASE execution)\nIn case of E2 or E2 Lite, you can erase the entire internal flash ROM by setting ALeRASE ID code (FFFFFFFFFFFFFFFFFF45534152654C41) to the ID Code.  It cannot be used when using J-Link. If the program image to be loaded is set, the image will be loaded after the ALeRASE execution.\nConnection by RFP (with ID code authentication)\nThere is no need to set the ID code in the connection settings.\nConnection by RFP (with ALeRASE execution)\nALeRASE is not available.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "How to set the ID Code to disable ID code protection, and how to connect a debugger or programmer in that case?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nHow to set the ID code\nIn the FSP configurator, set the “ID Code Mode” to “Unlocked (Ignore ID)” in the BSP property as shown below. In this case, “ID code (32 Hex Characters)” is ignored.\nThe value of the ID code in the OSIS register\nIn the following, to make it easier to understand the relationship between the ID code value and the OSIS register, the ID code is color-coded each 4 bytes, such as  “00112233445566778899AABBCCDDEEFF”.\nThis setting is output to ra_cfg/fsp_cfg/bsp/bsp_mcu_family_cfg.h as shown below. You can see that the ID code is set as all FFh.\n/* ID CODE: FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF */\n#define BSP_CFG_ID_CODE_LONG_1 (0xFFFFFFFF)\n#define BSP_CFG_ID_CODE_LONG_2 (0xFFFFFFFF)\n#define BSP_CFG_ID_CODE_LONG_3 (0xFFFFFFFF)\n#define BSP_CFG_ID_CODE_LONG_4 (0xffFFFFFF)\n\nThe ID code is generated in the program image file as shown below. It defers as follows depending on the address of the OSIS register:\nIn case of RA2L1:\nS31501010018FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE0\nS31101010028FFFFFFFFFFFFFFFFFFFFFFFFD0\n\nIn case of RA6M3:\nS3150100A150FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF08\n\nIn case of RA4E2:\nS3150100A120FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF38\n\nDebugger connection in e2 studio (ID code authentication)\nNo ID code setting is required in the debug configuration.\nDebugger connection in e2 studio (with ALeRASE execution)\nIn case of E2 or E2 Lite, you can erase the entire internal flash ROM by setting ALeRASE ID code (FFFFFFFFFFFFFFFFFF45534152654C41) to the ID Code.  It cannot be used when using J-Link. If the program image to be loaded is set, the image will be loaded after the ALeRASE execution.\nConnection by RFP (with ID code authentication)\nThere is no need to set the ID code in the connection settings.\nConnection by RFP (with ALeRASE execution)\nALeRASE is not available.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "How to set the ID code\nIn the FSP configurator, set the “ID Code Mode” to “Unlocked (Ignore ID)” in the BSP property as shown below. In this case, “ID code (32 Hex Characters)” is ignored.\nThe value of the ID code in the OSIS register\nIn the following, to make it easier to understand the relationship between the ID code value and the OSIS register, the ID code is color-coded each 4 bytes, such as  “00112233445566778899AABBCCDDEEFF”.\nThis setting is output to ra_cfg/fsp_cfg/bsp/bsp_mcu_family_cfg.h as shown below. You can see that the ID code is set as all FFh.\n/* ID CODE: FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF */\n#define BSP_CFG_ID_CODE_LONG_1 (0xFFFFFFFF)\n#define BSP_CFG_ID_CODE_LONG_2 (0xFFFFFFFF)\n#define BSP_CFG_ID_CODE_LONG_3 (0xFFFFFFFF)\n#define BSP_CFG_ID_CODE_LONG_4 (0xffFFFFFF)\n\nThe ID code is generated in the program image file as shown below. It defers as follows depending on the address of the OSIS register:\nIn case of RA2L1:\nS31501010018FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE0\nS31101010028FFFFFFFFFFFFFFFFFFFFFFFFD0\n\nIn case of RA6M3:\nS3150100A150FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF08\n\nIn case of RA4E2:\nS3150100A120FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF38\n\nDebugger connection in e2 studio (ID code authentication)\nNo ID code setting is required in the debug configuration.\nDebugger connection in e2 studio (with ALeRASE execution)\nIn case of E2 or E2 Lite, you can erase the entire internal flash ROM by setting ALeRASE ID code (FFFFFFFFFFFFFFFFFF45534152654C41) to the ID Code.  It cannot be used when using J-Link. If the program image to be loaded is set, the image will be loaded after the ALeRASE execution.\nConnection by RFP (with ID code authentication)\nThere is no need to set the ID code in the connection settings.\nConnection by RFP (with ALeRASE execution)\nALeRASE is not available."
+      },
+      {
+        "type": "text",
+        "content": "How to set the ID code"
+      },
+      {
+        "type": "text",
+        "content": "In the FSP configurator, set the “ID Code Mode” to “Unlocked (Ignore ID)” in the BSP property as shown below. In this case, “ID code (32 Hex Characters)” is ignored."
+      },
+      {
+        "type": "text",
+        "content": "“ID code (32 Hex Characters)”"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372193.png",
+          "alt_text": "",
+          "width": "428",
+          "height": "38",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/103fafbd04829dc8390f1a027b7c548b/images/d17c6db86d4fa2c0a218d21ce110ff0e.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The value of the ID code in the OSIS register"
+      },
+      {
+        "type": "text",
+        "content": "In the following, to make it easier to understand the relationship between the ID code value and the OSIS register, the ID code is color-coded each 4 bytes, such as  “00112233445566778899AABBCCDDEEFF”."
+      },
+      {
+        "type": "text",
+        "content": "00112233"
+      },
+      {
+        "type": "text",
+        "content": "44556677"
+      },
+      {
+        "type": "text",
+        "content": "8899AABB"
+      },
+      {
+        "type": "text",
+        "content": "CCDDEEFF"
+      },
+      {
+        "type": "text",
+        "content": "This setting is output to ra_cfg/fsp_cfg/bsp/bsp_mcu_family_cfg.h as shown below. You can see that the ID code is set as all FFh."
+      },
+      {
+        "type": "text",
+        "content": "/* ID CODE: FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF */\n#define BSP_CFG_ID_CODE_LONG_1 (0xFFFFFFFF)\n#define BSP_CFG_ID_CODE_LONG_2 (0xFFFFFFFF)\n#define BSP_CFG_ID_CODE_LONG_3 (0xFFFFFFFF)\n#define BSP_CFG_ID_CODE_LONG_4 (0xffFFFFFF)"
+      },
+      {
+        "type": "text",
+        "content": "/* ID CODE: FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF */"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "#define BSP_CFG_ID_CODE_LONG_1 (0xFFFFFFFF)"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "#define BSP_CFG_ID_CODE_LONG_2 (0xFFFFFFFF)"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "#define BSP_CFG_ID_CODE_LONG_3 (0xFFFFFFFF)"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "#define BSP_CFG_ID_CODE_LONG_4 (0xffFFFFFF)"
+      },
+      {
+        "type": "text",
+        "content": "ffFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "The ID code is generated in the program image file as shown below. It defers as follows depending on the address of the OSIS register:"
+      },
+      {
+        "type": "text",
+        "content": "In case of RA2L1:"
+      },
+      {
+        "type": "text",
+        "content": "S31501010018FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE0\nS31101010028FFFFFFFFFFFFFFFFFFFFFFFFD0"
+      },
+      {
+        "type": "text",
+        "content": "S31501010018FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE0"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "S31101010028FFFFFFFFFFFFFFFFFFFFFFFFD0"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "In case of RA6M3:"
+      },
+      {
+        "type": "text",
+        "content": "S3150100A150FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF08"
+      },
+      {
+        "type": "text",
+        "content": "S3150100A150"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "08"
+      },
+      {
+        "type": "text",
+        "content": "In case of RA4E2:"
+      },
+      {
+        "type": "text",
+        "content": "S3150100A120FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF38"
+      },
+      {
+        "type": "text",
+        "content": "S3150100A120"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "38"
+      },
+      {
+        "type": "text",
+        "content": "Debugger connection in e2 studio (ID code authentication)"
+      },
+      {
+        "type": "text",
+        "content": "No ID code setting is required in the debug configuration."
+      },
+      {
+        "type": "text",
+        "content": "Debugger connection in e2 studio (with ALeRASE execution)"
+      },
+      {
+        "type": "text",
+        "content": "In case of E2 or E2 Lite, you can erase the entire internal flash ROM by setting ALeRASE ID code (FFFFFFFFFFFFFFFFFF45534152654C41) to the ID Code.  It cannot be used when using J-Link. If the program image to be loaded is set, the image will be loaded after the ALeRASE execution."
+      },
+      {
+        "type": "text",
+        "content": "("
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFFFFFFFFFFFF45534152654C41"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFF"
+      },
+      {
+        "type": "text",
+        "content": "FF455341"
+      },
+      {
+        "type": "text",
+        "content": "52654C41"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372193-2.png",
+          "alt_text": "",
+          "width": "651",
+          "height": "228",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/103fafbd04829dc8390f1a027b7c548b/images/1f7dae96e4b4badaca4d402626b96f0c.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Connection by RFP (with ID code authentication)"
+      },
+      {
+        "type": "text",
+        "content": "There is no need to set the ID code in the connection settings."
+      },
+      {
+        "type": "text",
+        "content": "Connection by RFP (with ALeRASE execution)"
+      },
+      {
+        "type": "text",
+        "content": "ALeRASE is not available."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "RA and FSP"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372193.png",
+        "alt_text": "",
+        "width": "428",
+        "height": "38",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/103fafbd04829dc8390f1a027b7c548b/images/d17c6db86d4fa2c0a218d21ce110ff0e.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372193-2.png",
+        "alt_text": "",
+        "width": "651",
+        "height": "228",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/103fafbd04829dc8390f1a027b7c548b/images/1f7dae96e4b4badaca4d402626b96f0c.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "/* ID CODE: FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF */\n#define BSP_CFG_ID_CODE_LONG_1 (0xFFFFFFFF)\n#define BSP_CFG_ID_CODE_LONG_2 (0xFFFFFFFF)\n#define BSP_CFG_ID_CODE_LONG_3 (0xFFFFFFFF)\n#define BSP_CFG_ID_CODE_LONG_4 (0xffFFFFFF)"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "S31501010018FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE0\nS31101010028FFFFFFFFFFFFFFFFFFFFFFFFD0"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "S3150100A150FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF08"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "S3150100A120FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF38"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": []
+  }
+}

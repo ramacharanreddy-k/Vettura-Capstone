@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21733881",
+    "title": "Display of memory usage for RZ/T, RZ/N FSP project",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:52:34.541431"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nPlease tell me how to check the memory usage of RZ/T, RZ/N FSP project in e2 studio.\nAnswer:\nThe memory usage can be checked at Smart Bundle view.\nIt appears when you double-click on the bundle file({project name}/Debug/{project name}.sbd), which is created when you build the project.\nOpen the Memories tab of Smart Bundle view to see the memory placement and size for each core.\nSections that do not exist in FSP GCC linker script({project name}/script/fsp_XXXX.ld) will not be displayed. To add a new section, add the definition of ddsc symbols(__ddsc*_START and __ddsc*_END) to linker script.\nImplementation Example）Add xSPI0_CS0 section\nSECTIONS\n{\n    ...Omission of intermediate part...\n    .xspi : AT (xSPI0_CS0_SPACE_PRV_START)\n    {\n        xspi_start = .;\n        KEEP(*(.xspi))\n        xspi_end = .;\n    } > xSPI0_CS0_SPACE\n}\n    ...Omission of intermediate part...\n__ddsc_xSPI0_CS0_SPACE_START = ORIGIN(xSPI0_CS0_SPACE);\n__ddsc_xSPI0_CS0_SPACE_END = xspi_end;\nSuitable Products\nRZ/T2M, RZ/T2L, RZ/T2ME, RZ/T2H, RZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "Please tell me how to check the memory usage of RZ/T, RZ/N FSP project in e2 studio."
+      },
+      {
+        "type": "text",
+        "content": "Please tell me how to check the memory usage of RZ/T, RZ/N FSP project in e2 studio."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe memory usage can be checked at Smart Bundle view.\nIt appears when you double-click on the bundle file({project name}/Debug/{project name}.sbd), which is created when you build the project.\nOpen the Memories tab of Smart Bundle view to see the memory placement and size for each core.\nSections that do not exist in FSP GCC linker script({project name}/script/fsp_XXXX.ld) will not be displayed. To add a new section, add the definition of ddsc symbols(__ddsc*_START and __ddsc*_END) to linker script.\nImplementation Example）Add xSPI0_CS0 section\nSECTIONS\n{\n    ...Omission of intermediate part...\n    .xspi : AT (xSPI0_CS0_SPACE_PRV_START)\n    {\n        xspi_start = .;\n        KEEP(*(.xspi))\n        xspi_end = .;\n    } > xSPI0_CS0_SPACE\n}\n    ...Omission of intermediate part...\n__ddsc_xSPI0_CS0_SPACE_START = ORIGIN(xSPI0_CS0_SPACE);\n__ddsc_xSPI0_CS0_SPACE_END = xspi_end;\nSuitable Products\nRZ/T2M, RZ/T2L, RZ/T2ME, RZ/T2H, RZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "The memory usage can be checked at Smart Bundle view.\nIt appears when you double-click on the bundle file({project name}/Debug/{project name}.sbd), which is created when you build the project.\nOpen the Memories tab of Smart Bundle view to see the memory placement and size for each core.\nSections that do not exist in FSP GCC linker script({project name}/script/fsp_XXXX.ld) will not be displayed. To add a new section, add the definition of ddsc symbols(__ddsc*_START and __ddsc*_END) to linker script.\nImplementation Example）Add xSPI0_CS0 section\nSECTIONS\n{\n    ...Omission of intermediate part...\n    .xspi : AT (xSPI0_CS0_SPACE_PRV_START)\n    {\n        xspi_start = .;\n        KEEP(*(.xspi))\n        xspi_end = .;\n    } > xSPI0_CS0_SPACE\n}\n    ...Omission of intermediate part...\n__ddsc_xSPI0_CS0_SPACE_START = ORIGIN(xSPI0_CS0_SPACE);\n__ddsc_xSPI0_CS0_SPACE_END = xspi_end;"
+      },
+      {
+        "type": "text",
+        "content": "The memory usage can be checked at Smart Bundle view.\nIt appears when you double-click on the bundle file({project name}/Debug/{project name}.sbd), which is created when you build the project."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/03_01_smart_bundle.png",
+          "alt_text": "",
+          "width": "800",
+          "height": "449",
+          "local_path": "data/categories/rz_family/rzt2_rzn2_fsp/88e6db58570d269662afcaa0397a468c/images/e78d60a443ff4ae54ccd889f90529a85.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Open the Memories tab of Smart Bundle view to see the memory placement and size for each core."
+      },
+      {
+        "type": "text",
+        "content": "Sections that do not exist in FSP GCC linker script({project name}/script/fsp_XXXX.ld) will not be displayed. To add a new section, add the definition of ddsc symbols(__ddsc*_START and __ddsc*_END) to linker script."
+      },
+      {
+        "type": "text",
+        "content": "Implementation Example）Add xSPI0_CS0 section\nSECTIONS\n{\n    ...Omission of intermediate part...\n    .xspi : AT (xSPI0_CS0_SPACE_PRV_START)\n    {\n        xspi_start = .;\n        KEEP(*(.xspi))\n        xspi_end = .;\n    } > xSPI0_CS0_SPACE\n}\n    ...Omission of intermediate part...\n__ddsc_xSPI0_CS0_SPACE_START = ORIGIN(xSPI0_CS0_SPACE);\n__ddsc_xSPI0_CS0_SPACE_END = xspi_end;"
+      },
+      {
+        "type": "text",
+        "content": ".xspi : AT (xSPI0_CS0_SPACE_PRV_START)"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "xspi_start = .;"
+      },
+      {
+        "type": "text",
+        "content": "KEEP(*(.xspi))"
+      },
+      {
+        "type": "text",
+        "content": "xspi_end = .;"
+      },
+      {
+        "type": "text",
+        "content": "} > xSPI0_CS0_SPACE"
+      },
+      {
+        "type": "text",
+        "content": "__ddsc_xSPI0_CS0_SPACE_START = ORIGIN(xSPI0_CS0_SPACE);"
+      },
+      {
+        "type": "text",
+        "content": "__ddsc_xSPI0_CS0_SPACE_END = xspi_end;"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/03_02_memory_linker.png",
+          "alt_text": "",
+          "width": "800",
+          "height": "387",
+          "local_path": "data/categories/rz_family/rzt2_rzn2_fsp/88e6db58570d269662afcaa0397a468c/images/0678de88cbeb0a31325be1dcbf94ef04.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/T2M, RZ/T2L, RZ/T2ME, RZ/T2H, RZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/03_01_smart_bundle.png",
+        "alt_text": "",
+        "width": "800",
+        "height": "449",
+        "local_path": "data/categories/rz_family/rzt2_rzn2_fsp/88e6db58570d269662afcaa0397a468c/images/e78d60a443ff4ae54ccd889f90529a85.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/03_02_memory_linker.png",
+        "alt_text": "",
+        "width": "800",
+        "height": "387",
+        "local_path": "data/categories/rz_family/rzt2_rzn2_fsp/88e6db58570d269662afcaa0397a468c/images/0678de88cbeb0a31325be1dcbf94ef04.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/T2M, RZ/T2L, RZ/T2ME, RZ/T2H, RZ/N2L"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/T2M, RZ/T2L, RZ/T2ME, RZ/T2H, RZ/N2L"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21733887"
+      }
+    ]
+  }
+}

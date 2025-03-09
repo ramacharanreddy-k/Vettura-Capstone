@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21659671",
+    "title": "RA Family: What is the difference between DTC and DMAC?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:13:47.038553"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the difference between DTC and DMAC?\n  Answer:\nThe DTC and DMAC are peripherals that can be found on a range of RA MCUs. They both serve the purpose of transferring data to and from memory and peripherals, without the CPU involving.\n  The DTC requires a moderate amount of RAM. Specifically the DTC stores transfer information (e.g.  source address, destination address, length of each transfer etc.) in RAM, whereas the DMAC has dedicated registers to store all transfer information. \n  So when transfers are configured for more than one activation source, the DTC must fetch the transfer info from RAM on each interrupt. And this can cause a higher latency between transfers. Thus the DMAC is considered to be faster then the DTC.\n    Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "What is the difference between DTC and DMAC?"
+      },
+      {
+        "type": "text",
+        "content": "The DTC and DMAC are peripherals that can be found on a range of RA MCUs. They both serve the purpose of transferring data to and from memory and peripherals, without the CPU involving."
+      },
+      {
+        "type": "text",
+        "content": "The DTC requires a moderate amount of RAM. Specifically the DTC stores transfer information (e.g.  source address, destination address, length of each transfer etc.) in RAM, whereas the DMAC has dedicated registers to store all transfer information."
+      },
+      {
+        "type": "text",
+        "content": "So when transfers are configured for more than one activation source, the DTC must fetch the transfer info from RAM on each interrupt. And this can cause a higher latency between transfers. Thus the DMAC is considered to be faster then the DTC."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA Family"
+      },
+      {
+        "type": "text",
+        "content": "RA Family"
+      }
+    ],
+    "images": [],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": []
+  }
+}

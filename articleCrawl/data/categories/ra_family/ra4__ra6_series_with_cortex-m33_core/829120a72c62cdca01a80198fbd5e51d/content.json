@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21763414",
+    "title": "Memory Options available with the RA4L1 MCUs",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:30:25.498617"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat memory options do the RA4L1 MCUs support for demanding applications with larger memory needs?\nAnswer:\nTo support the diverse and demanding application needs, the RA4L1 Group MCUs support multiple internal memory options.\n256 or 512k dual bank embedded flash with 8 Kbytes of Dataflash providing an area of memory idea for data storage with a higher write / erase count\nQuad SPI memory interface with Execute-In-Place, which can be used in Quad or single SPI mode to access external flash or RAM memory. Two memory devices can be attached to the QSPI interface using chip selects.\nSuitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "What memory options do the RA4L1 MCUs support for demanding applications with larger memory needs?"
+      },
+      {
+        "type": "text",
+        "content": "What memory options do the RA4L1 MCUs support for demanding applications with larger memory needs?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nTo support the diverse and demanding application needs, the RA4L1 Group MCUs support multiple internal memory options.\n256 or 512k dual bank embedded flash with 8 Kbytes of Dataflash providing an area of memory idea for data storage with a higher write / erase count\nQuad SPI memory interface with Execute-In-Place, which can be used in Quad or single SPI mode to access external flash or RAM memory. Two memory devices can be attached to the QSPI interface using chip selects.\nSuitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "To support the diverse and demanding application needs, the RA4L1 Group MCUs support multiple internal memory options.\n256 or 512k dual bank embedded flash with 8 Kbytes of Dataflash providing an area of memory idea for data storage with a higher write / erase count\nQuad SPI memory interface with Execute-In-Place, which can be used in Quad or single SPI mode to access external flash or RAM memory. Two memory devices can be attached to the QSPI interface using chip selects."
+      },
+      {
+        "type": "text",
+        "content": "To support the diverse and demanding application needs, the RA4L1 Group MCUs support multiple internal memory options."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "Japanese Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA4L1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA4L1"
+    ],
+    "links": [
+      {
+        "text": "Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21763460"
+      },
+      {
+        "text": "Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21763472"
+      }
+    ]
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21634939",
+    "title": "RX Family: How to configure the software configurable interrupt in the Smart Configurator?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:23:12.081498"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nEnabling an interrupt (software configurable) on a peripheral results in an error in the smart configurator. How can I fix this issue?\nAnswer:\nSome RX MCU peripherals use only fixed interrupt vectors, while some others also use software configurable interrupt vectors. If you use a software configurable interrupt and only configure the \"Component tab\", you will get the following error:\nExample for GTCIU2 setting:\nTo resolve this error, you must configure additional interrupt settings in the “Interrupt tab”.\nAs shown in the figure below, you need to select the interrupt from the corresponding interrupt vector group, INTA or INTB.\nPlease also refer to the \"User Manual: Hardware\" of each product to determine whether the interrupt belongs to INTA or INTB.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Enabling an interrupt (software configurable) on a peripheral results in an error in the smart configurator. How can I fix this issue?"
+      },
+      {
+        "type": "text",
+        "content": "Enabling an interrupt (software configurable) on a peripheral results in an error in the smart configurator. How can I fix this issue?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nSome RX MCU peripherals use only fixed interrupt vectors, while some others also use software configurable interrupt vectors. If you use a software configurable interrupt and only configure the \"Component tab\", you will get the following error:\nExample for GTCIU2 setting:\nTo resolve this error, you must configure additional interrupt settings in the “Interrupt tab”.\nAs shown in the figure below, you need to select the interrupt from the corresponding interrupt vector group, INTA or INTB.\nPlease also refer to the \"User Manual: Hardware\" of each product to determine whether the interrupt belongs to INTA or INTB.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Some RX MCU peripherals use only fixed interrupt vectors, while some others also use software configurable interrupt vectors. If you use a software configurable interrupt and only configure the \"Component tab\", you will get the following error:\nExample for GTCIU2 setting:\nTo resolve this error, you must configure additional interrupt settings in the “Interrupt tab”.\nAs shown in the figure below, you need to select the interrupt from the corresponding interrupt vector group, INTA or INTB.\nPlease also refer to the \"User Manual: Hardware\" of each product to determine whether the interrupt belongs to INTA or INTB."
+      },
+      {
+        "type": "text",
+        "content": "Some RX MCU peripherals use only fixed interrupt vectors, while some others also use software configurable interrupt vectors. If you use a software configurable interrupt and only configure the \"Component tab\", you will get the following error:"
+      },
+      {
+        "type": "text",
+        "content": "Example for GTCIU2 setting:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/394223-1.png",
+          "alt_text": "",
+          "width": "989",
+          "height": "499",
+          "local_path": "data/categories/rx_family/others/15b8c3770d2ad86ca65ea35992eef21e/images/41f4c059480f96c6a721c90f2f416caa.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "To resolve this error, you must configure additional interrupt settings in the “Interrupt tab”."
+      },
+      {
+        "type": "text",
+        "content": "As shown in the figure below, you need to select the interrupt from the corresponding interrupt vector group, INTA or INTB."
+      },
+      {
+        "type": "text",
+        "content": "Please also refer to the \"User Manual: Hardware\" of each product to determine whether the interrupt belongs to INTA or INTB."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/394223-2.png",
+          "alt_text": "",
+          "width": "1025",
+          "height": "601",
+          "local_path": "data/categories/rx_family/others/15b8c3770d2ad86ca65ea35992eef21e/images/3ceb03b38c7e310a9541757368c67e29.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/394223-1.png",
+        "alt_text": "",
+        "width": "989",
+        "height": "499",
+        "local_path": "data/categories/rx_family/others/15b8c3770d2ad86ca65ea35992eef21e/images/41f4c059480f96c6a721c90f2f416caa.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/394223-2.png",
+        "alt_text": "",
+        "width": "1025",
+        "height": "601",
+        "local_path": "data/categories/rx_family/others/15b8c3770d2ad86ca65ea35992eef21e/images/3ceb03b38c7e310a9541757368c67e29.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21634940"
+      }
+    ]
+  }
+}

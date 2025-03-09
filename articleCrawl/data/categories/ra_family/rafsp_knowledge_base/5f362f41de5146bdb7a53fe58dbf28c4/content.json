@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21652593",
+    "title": "RA Family: Why does the actual IIC transfer rate differ from the rate defined in the configurator?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:23:12.934662"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhy does the actual IIC transfer rate differ from the rate defined in the configurator?\nAnswer:\nThe FSP r_iic_master driver calculates the following register values so that they are close to the transfer rate (Rate), including the Rise Time and Fall Time set in the configurator.\nBit Rate High-Level Period (ICBRH.BRH)\nBit Rate Low-Level Period (ICBRL.BRL)\nInternal Reference Clock Select (ICMR1.CKS)\nThe calculated values can be confirmed in ra_gen/hal_data.c as follows.\nconst iic_master_extended_cfg_t g_i2c_master0_extend =\n{\n(omitted)\n/* Actual calculated bitrate: 394997. Actual calculated duty cycle: 49%. */\n .clock_settings.brl_value = 24,\n .clock_settings.brh_value = 23,\n .clock_settings.cks_value = 0,\n(omitted)\n};\n  The Rise Time and Fall Time vary depending on the pull-up resistance of the external connection, the wiring characteristics, and other factors. To get close to the desired IIC transfer rate, observe the Rise Time and Fall Time of the SCL clock that is actually output with an oscilloscope, etc., and set the results in the configurator.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "Why does the actual IIC transfer rate differ from the rate defined in the configurator?"
+      },
+      {
+        "type": "text",
+        "content": "Why does the actual IIC transfer rate differ from the rate defined in the configurator?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe FSP r_iic_master driver calculates the following register values so that they are close to the transfer rate (Rate), including the Rise Time and Fall Time set in the configurator.\nBit Rate High-Level Period (ICBRH.BRH)\nBit Rate Low-Level Period (ICBRL.BRL)\nInternal Reference Clock Select (ICMR1.CKS)\nThe calculated values can be confirmed in ra_gen/hal_data.c as follows.\nconst iic_master_extended_cfg_t g_i2c_master0_extend =\n{\n(omitted)\n/* Actual calculated bitrate: 394997. Actual calculated duty cycle: 49%. */\n .clock_settings.brl_value = 24,\n .clock_settings.brh_value = 23,\n .clock_settings.cks_value = 0,\n(omitted)\n};\n  The Rise Time and Fall Time vary depending on the pull-up resistance of the external connection, the wiring characteristics, and other factors. To get close to the desired IIC transfer rate, observe the Rise Time and Fall Time of the SCL clock that is actually output with an oscilloscope, etc., and set the results in the configurator.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "The FSP r_iic_master driver calculates the following register values so that they are close to the transfer rate (Rate), including the Rise Time and Fall Time set in the configurator.\nBit Rate High-Level Period (ICBRH.BRH)\nBit Rate Low-Level Period (ICBRL.BRL)\nInternal Reference Clock Select (ICMR1.CKS)\nThe calculated values can be confirmed in ra_gen/hal_data.c as follows.\nconst iic_master_extended_cfg_t g_i2c_master0_extend =\n{\n(omitted)\n/* Actual calculated bitrate: 394997. Actual calculated duty cycle: 49%. */\n .clock_settings.brl_value = 24,\n .clock_settings.brh_value = 23,\n .clock_settings.cks_value = 0,\n(omitted)\n};\n  The Rise Time and Fall Time vary depending on the pull-up resistance of the external connection, the wiring characteristics, and other factors. To get close to the desired IIC transfer rate, observe the Rise Time and Fall Time of the SCL clock that is actually output with an oscilloscope, etc., and set the results in the configurator."
+      },
+      {
+        "type": "text",
+        "content": "The FSP r_iic_master driver calculates the following register values so that they are close to the transfer rate (Rate), including the Rise Time and Fall Time set in the configurator."
+      },
+      {
+        "type": "text",
+        "content": "The calculated values can be confirmed in ra_gen/hal_data.c as follows."
+      },
+      {
+        "type": "text",
+        "content": "const iic_master_extended_cfg_t g_i2c_master0_extend =\n{"
+      },
+      {
+        "type": "text",
+        "content": "const"
+      },
+      {
+        "type": "text",
+        "content": "iic_master_extended_cfg_t"
+      },
+      {
+        "type": "text",
+        "content": "g_i2c_master0_extend ="
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "(omitted)\n/* Actual calculated bitrate: 394997. Actual calculated duty cycle: 49%. */\n .clock_settings.brl_value = 24,\n .clock_settings.brh_value = 23,\n .clock_settings.cks_value = 0,\n(omitted)"
+      },
+      {
+        "type": "text",
+        "content": "(omitted)"
+      },
+      {
+        "type": "text",
+        "content": "/* Actual calculated bitrate: 394997. Actual calculated duty cycle: 49%. */"
+      },
+      {
+        "type": "text",
+        "content": ".clock_settings.brl_value = 24"
+      },
+      {
+        "type": "text",
+        "content": ","
+      },
+      {
+        "type": "text",
+        "content": ".clock_settings.brh_value = 23,"
+      },
+      {
+        "type": "text",
+        "content": ".clock_settings.cks_value = 0,"
+      },
+      {
+        "type": "text",
+        "content": "(omitted)"
+      },
+      {
+        "type": "text",
+        "content": "};"
+      },
+      {
+        "type": "text",
+        "content": "};"
+      },
+      {
+        "type": "text",
+        "content": "The Rise Time and Fall Time vary depending on the pull-up resistance of the external connection, the wiring characteristics, and other factors. To get close to the desired IIC transfer rate, observe the Rise Time and Fall Time of the SCL clock that is actually output with an oscilloscope, etc., and set the results in the configurator."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/394688.png",
+          "alt_text": "",
+          "width": "438",
+          "height": "359",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/5f362f41de5146bdb7a53fe58dbf28c4/images/3a67e70c85b65e0c7dd7a29df378e88a.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/394688.png",
+        "alt_text": "",
+        "width": "438",
+        "height": "359",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/5f362f41de5146bdb7a53fe58dbf28c4/images/3a67e70c85b65e0c7dd7a29df378e88a.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "const iic_master_extended_cfg_t g_i2c_master0_extend =\n{\n(omitted)\n/* Actual calculated bitrate: 394997. Actual calculated duty cycle: 49%. */\n .clock_settings.brl_value = 24,\n .clock_settings.brh_value = 23,\n .clock_settings.cks_value = 0,\n(omitted)\n};"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21652599"
+      }
+    ]
+  }
+}

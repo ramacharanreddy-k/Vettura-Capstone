@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20260299",
+    "title": "RA-T Series : Accelerator",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:33:06.275405"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat are the features of the accelerator installed in RA-T Series?\nAnswer:\nRA6T2 is equipped with two hardware accelerators specialized for motor control. By leaving what was calculated by the CPU to the accelerator, it is possible to speed up the calculation and reduce the CPU load. It makes it easy to add new functions that add value and parallel processing like non-real-time tasks.\nRA4T1 and RA6T3 are equipped with the same Trigonometric Function unit (TFU) as RA6T2.\nThe first is the \"Trigonometric Function unit (TFU)\".\nThis executes trigonometric function operations such as sin and cos at high speed, with high accuracy, and with little fluctuation. In particular, the effect of shortening the calculation time of the current loop calculation process can be expected. Also, compared to the look-up table method, it is not necessary to set a table in ROM, and the ROM size can be reduced.\nThe other is the \"IIR filter\".\nAs the name implies, this is an IIR filter accelerator.\nHigh-order IIR operations are possible, and it is used in speed / position control blocks to shorten processing time.\nSuitable Products\nRA6T2, RA4T1, RA6T3"
+      },
+      {
+        "type": "text",
+        "content": "What are the features of the accelerator installed in RA-T Series?"
+      },
+      {
+        "type": "text",
+        "content": "What are the features of the accelerator installed in RA-T Series?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRA6T2 is equipped with two hardware accelerators specialized for motor control. By leaving what was calculated by the CPU to the accelerator, it is possible to speed up the calculation and reduce the CPU load. It makes it easy to add new functions that add value and parallel processing like non-real-time tasks.\nRA4T1 and RA6T3 are equipped with the same Trigonometric Function unit (TFU) as RA6T2.\nThe first is the \"Trigonometric Function unit (TFU)\".\nThis executes trigonometric function operations such as sin and cos at high speed, with high accuracy, and with little fluctuation. In particular, the effect of shortening the calculation time of the current loop calculation process can be expected. Also, compared to the look-up table method, it is not necessary to set a table in ROM, and the ROM size can be reduced.\nThe other is the \"IIR filter\".\nAs the name implies, this is an IIR filter accelerator.\nHigh-order IIR operations are possible, and it is used in speed / position control blocks to shorten processing time.\nSuitable Products\nRA6T2, RA4T1, RA6T3"
+      },
+      {
+        "type": "text",
+        "content": "RA6T2 is equipped with two hardware accelerators specialized for motor control. By leaving what was calculated by the CPU to the accelerator, it is possible to speed up the calculation and reduce the CPU load. It makes it easy to add new functions that add value and parallel processing like non-real-time tasks.\nRA4T1 and RA6T3 are equipped with the same Trigonometric Function unit (TFU) as RA6T2.\nThe first is the \"Trigonometric Function unit (TFU)\".\nThis executes trigonometric function operations such as sin and cos at high speed, with high accuracy, and with little fluctuation. In particular, the effect of shortening the calculation time of the current loop calculation process can be expected. Also, compared to the look-up table method, it is not necessary to set a table in ROM, and the ROM size can be reduced.\nThe other is the \"IIR filter\".\nAs the name implies, this is an IIR filter accelerator.\nHigh-order IIR operations are possible, and it is used in speed / position control blocks to shorten processing time."
+      },
+      {
+        "type": "text",
+        "content": "RA6T2 is equipped with two hardware accelerators specialized for motor control. By leaving what was calculated by the CPU to the accelerator, it is possible to speed up the calculation and reduce the CPU load. It makes it easy to add new functions that add value and parallel processing like non-real-time tasks.\nRA4T1 and RA6T3 are equipped with the same Trigonometric Function unit (TFU) as RA6T2."
+      },
+      {
+        "type": "text",
+        "content": "The first is the \"Trigonometric Function unit (TFU)\".\nThis executes trigonometric function operations such as sin and cos at high speed, with high accuracy, and with little fluctuation. In particular, the effect of shortening the calculation time of the current loop calculation process can be expected. Also, compared to the look-up table method, it is not necessary to set a table in ROM, and the ROM size can be reduced."
+      },
+      {
+        "type": "text",
+        "content": "The other is the \"IIR filter\".\nAs the name implies, this is an IIR filter accelerator.\nHigh-order IIR operations are possible, and it is used in speed / position control blocks to shorten processing time."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA6T2, RA4T1, RA6T3"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA6T2, RA4T1, RA6T3"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA6T2, RA4T1, RA6T3"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20260304"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20260308"
+      }
+    ]
+  }
+}

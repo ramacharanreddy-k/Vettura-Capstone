@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20855742",
+    "title": "Kit: Can the application data memory be expanded?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:26:04.985379"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan the application data memory be expanded?\nAnswer:\nYes, a QSPI external flash memory expansion is provided to store additional audio and application data. Usage of this memory is subject to the specific implementation; our development partners can support you to provide an appropriate solution.\nSuitable Products\nRISC-V Voice ASSP"
+      },
+      {
+        "type": "text",
+        "content": "Can the application data memory be expanded?"
+      },
+      {
+        "type": "text",
+        "content": "Can the application data memory be expanded?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes, a QSPI external flash memory expansion is provided to store additional audio and application data. Usage of this memory is subject to the specific implementation; our development partners can support you to provide an appropriate solution.\nSuitable Products\nRISC-V Voice ASSP"
+      },
+      {
+        "type": "text",
+        "content": "Yes, a QSPI external flash memory expansion is provided to store additional audio and application data. Usage of this memory is subject to the specific implementation; our development partners can support you to provide an appropriate solution."
+      },
+      {
+        "type": "text",
+        "content": "Yes, a QSPI external flash memory expansion is provided to store additional audio and application data. Usage of this memory is subject to the specific implementation; our development partners can support you to provide an appropriate solution."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRISC-V Voice ASSP"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RISC-V Voice ASSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RISC-V Voice ASSP"
+    ],
+    "links": []
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21763409",
+    "title": "Lower power features on the RA4L1 MCUs",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:30:11.436364"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat low power features on the RA4L1 Group MCUs will help me reduce my overall power consumption?\nAnswer:\nRA4L1 MCU's integrate new low power features and multiple low power modes to improve power efficiency, even when operating at the highest speeds. The RA4L1 support a wide range of external and internal clock sources which can be selected to provide the optimum performance and lowest power consumption at any time. A wide variety of low power modes allow the power consumption to be optimized for particular conditions, with clocks ranging from 32 kHz to 80 MHz. Many of the peripherals on the RA4L1, such as the timers, the ADC, the RTC , the Low Power Uarts and many others have been optimized for low power operation and so can be configured to consume the minimal amount of power for any application.\nSuitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "What low power features on the RA4L1 Group MCUs will help me reduce my overall power consumption?"
+      },
+      {
+        "type": "text",
+        "content": "What low power features on the RA4L1 Group MCUs will help me reduce my overall power consumption?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRA4L1 MCU's integrate new low power features and multiple low power modes to improve power efficiency, even when operating at the highest speeds. The RA4L1 support a wide range of external and internal clock sources which can be selected to provide the optimum performance and lowest power consumption at any time. A wide variety of low power modes allow the power consumption to be optimized for particular conditions, with clocks ranging from 32 kHz to 80 MHz. Many of the peripherals on the RA4L1, such as the timers, the ADC, the RTC , the Low Power Uarts and many others have been optimized for low power operation and so can be configured to consume the minimal amount of power for any application.\nSuitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "RA4L1 MCU's integrate new low power features and multiple low power modes to improve power efficiency, even when operating at the highest speeds. The RA4L1 support a wide range of external and internal clock sources which can be selected to provide the optimum performance and lowest power consumption at any time. A wide variety of low power modes allow the power consumption to be optimized for particular conditions, with clocks ranging from 32 kHz to 80 MHz. Many of the peripherals on the RA4L1, such as the timers, the ADC, the RTC , the Low Power Uarts and many others have been optimized for low power operation and so can be configured to consume the minimal amount of power for any application."
+      },
+      {
+        "type": "text",
+        "content": "RA4L1 MCU's integrate new low power features and multiple low power modes to improve power efficiency, even when operating at the highest speeds. The RA4L1 support a wide range of external and internal clock sources which can be selected to provide the optimum performance and lowest power consumption at any time. A wide variety of low power modes allow the power consumption to be optimized for particular conditions, with clocks ranging from 32 kHz to 80 MHz. Many of the peripherals on the RA4L1, such as the timers, the ADC, the RTC , the Low Power Uarts and many others have been optimized for low power operation and so can be configured to consume the minimal amount of power for any application."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "Japanese Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA4L1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA4L1"
+    ],
+    "links": [
+      {
+        "text": "Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21763453"
+      },
+      {
+        "text": "Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21763465"
+      }
+    ]
+  }
+}

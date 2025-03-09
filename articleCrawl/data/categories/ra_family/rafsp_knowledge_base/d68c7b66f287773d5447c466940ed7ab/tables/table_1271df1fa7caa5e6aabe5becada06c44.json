@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "void fsp_error_log(fsp_err_t err, const char * file, int32_t line)\n{\n    SEGGER_RTT_printf(0, \"Error (%x): %s (%d)\\r\\n\", err, file, line);\n}"
+    ]
+  ]
+}

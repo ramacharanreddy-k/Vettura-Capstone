@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21177413",
+    "title": "RA Family: Is there any tool to create ADPCM data that can be decoded with the ADPCM Decoder in FSP?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:23:44.419412"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there any tool to create ADPCM data that can be decoded with the ADPCM Decoder in FSP?\nAnswer:\nYou can find the ADPCM tool in the sample code of “RX62N Group ADPCM Audio Compression Record and Playback (R01AN0698)”. This tool can convert WAVE data to PCM data, and can convert WAVE data to ADPCM data. See \"9. Single File Audio Format Conversion GUI\" in the application note.\n  Suitable Products\nRA/FSP"
+      },
+      {
+        "type": "text",
+        "content": "Is there any tool to create ADPCM data that can be decoded with the ADPCM Decoder in FSP?"
+      },
+      {
+        "type": "text",
+        "content": "Is there any tool to create ADPCM data that can be decoded with the ADPCM Decoder in FSP?"
+      },
+      {
+        "type": "text",
+        "content": "Is there any tool to create ADPCM data that can be decoded with the ADPCM Decoder in FSP?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYou can find the ADPCM tool in the sample code of “RX62N Group ADPCM Audio Compression Record and Playback (R01AN0698)”. This tool can convert WAVE data to PCM data, and can convert WAVE data to ADPCM data. See \"9. Single File Audio Format Conversion GUI\" in the application note.\n  Suitable Products\nRA/FSP"
+      },
+      {
+        "type": "text",
+        "content": "You can find the ADPCM tool in the sample code of “RX62N Group ADPCM Audio Compression Record and Playback (R01AN0698)”. This tool can convert WAVE data to PCM data, and can convert WAVE data to ADPCM data. See \"9. Single File Audio Format Conversion GUI\" in the application note."
+      },
+      {
+        "type": "text",
+        "content": "You can find the ADPCM tool in the sample code of “RX62N Group ADPCM Audio Compression Record and Playback (R01AN0698)”. This tool can convert WAVE data to PCM data, and can convert WAVE data to ADPCM data. See \"9. Single File Audio Format Conversion GUI\" in the application note."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380673.png",
+          "alt_text": "",
+          "width": "223",
+          "height": "331",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/4d17671567f62cc5962bcb0d85084af8/images/cbfb37090cb812b1d09214a4e80fcb59.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA/FSP"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380673.png",
+        "alt_text": "",
+        "width": "223",
+        "height": "331",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/4d17671567f62cc5962bcb0d85084af8/images/cbfb37090cb812b1d09214a4e80fcb59.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA/FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA/FSP"
+    ],
+    "links": []
+  }
+}

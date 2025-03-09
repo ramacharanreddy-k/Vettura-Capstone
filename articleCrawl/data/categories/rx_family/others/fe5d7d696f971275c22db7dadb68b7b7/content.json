@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21246448",
+    "title": "Purposes of the specified-line detection interrupt (VPOS) and graphic n underflow detection (n = 1, 2) interrupts (GR1UF and GR2UF)",
+    "last_updated": "2024-06-03",
+    "extracted_at": "2025-03-09T00:23:29.506912"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat are the purposes of the specified-line detection interrupt (VPOS) and graphic n underflow detection (n = 1, 2) interrupts (GR1UF and GR2UF)?\nAnswer:\nSpecified-line detection interrupt (VPOS):\nThis interrupt occurs when the HS (horizontal synchronization) signal of a specified line is asserted.\nYou can understand the drawing completion timing by specifying the last line of the screen.\n\nGraphic n underflow detection (n = 1,2) interrupts (GR1UF and GR2UF):\nThese interrupts are used to categorize errors.\n  Suitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "What are the purposes of the specified-line detection interrupt (VPOS) and graphic n underflow detection (n = 1, 2) interrupts (GR1UF and GR2UF)?"
+      },
+      {
+        "type": "text",
+        "content": "What are the purposes of the specified-line detection interrupt (VPOS) and graphic n underflow detection (n = 1, 2) interrupts (GR1UF and GR2UF)?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nSpecified-line detection interrupt (VPOS):\nThis interrupt occurs when the HS (horizontal synchronization) signal of a specified line is asserted.\nYou can understand the drawing completion timing by specifying the last line of the screen.\n\nGraphic n underflow detection (n = 1,2) interrupts (GR1UF and GR2UF):\nThese interrupts are used to categorize errors.\n  Suitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "Specified-line detection interrupt (VPOS):\nThis interrupt occurs when the HS (horizontal synchronization) signal of a specified line is asserted.\nYou can understand the drawing completion timing by specifying the last line of the screen.\n\nGraphic n underflow detection (n = 1,2) interrupts (GR1UF and GR2UF):\nThese interrupts are used to categorize errors."
+      },
+      {
+        "type": "text",
+        "content": "Specified-line detection interrupt (VPOS):\nThis interrupt occurs when the HS (horizontal synchronization) signal of a specified line is asserted.\nYou can understand the drawing completion timing by specifying the last line of the screen."
+      },
+      {
+        "type": "text",
+        "content": "Graphic n underflow detection (n = 1,2) interrupts (GR1UF and GR2UF):\nThese interrupts are used to categorize errors."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20684880"
+      }
+    ]
+  }
+}

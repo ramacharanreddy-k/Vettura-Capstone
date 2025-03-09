@@ -1,0 +1,26 @@
+{
+    "base_url": "https://en-support.renesas.com/knowledgeBase",
+    "wait_time": 5,
+    "max_retries": 3,
+    "timeout": 30,
+    "download_timeout": 60,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    "headers": {
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5"
+    },
+    "selenium": {
+        "headless": true,
+        "arguments": [
+            "--no-sandbox",
+            "--disable-dev-shm-usage",
+            "--disable-gpu",
+            "--disable-extensions"
+        ]
+    },
+    "directories": {
+        "base_dir": "data",
+        "logs_dir": "logs",
+        "categories_dir": "data/categories"
+    }
+}

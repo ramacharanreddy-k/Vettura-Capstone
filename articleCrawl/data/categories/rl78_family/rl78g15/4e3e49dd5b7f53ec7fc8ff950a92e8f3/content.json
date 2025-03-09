@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20765773",
+    "title": "Compatibility of RL78/G15 with existing products",
+    "last_updated": "2023-12-01",
+    "extracted_at": "2025-03-08T23:54:14.169308"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nAre the pin assignments of RL78/G15 compatible with existing products?\nAnswer:\nRL78/G15 (10-pin, 16-pin) has pin compatibility with RL78/G10 (10-pin, 16-pin). The same functions are assigned to the same pins. \nRL78/G15 (20-pin) is essentially pin compatible with RL78/G12 (20-pin), except for three pins, namely, ANI, TOOLTxD, and TOOLRxD, that are different.\nSuitable Products\nRL78/G15"
+      },
+      {
+        "type": "text",
+        "content": "Are the pin assignments of RL78/G15 compatible with existing products?"
+      },
+      {
+        "type": "text",
+        "content": "Are the pin assignments of RL78/G15 compatible with existing products?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRL78/G15 (10-pin, 16-pin) has pin compatibility with RL78/G10 (10-pin, 16-pin). The same functions are assigned to the same pins. \nRL78/G15 (20-pin) is essentially pin compatible with RL78/G12 (20-pin), except for three pins, namely, ANI, TOOLTxD, and TOOLRxD, that are different.\nSuitable Products\nRL78/G15"
+      },
+      {
+        "type": "text",
+        "content": "RL78/G15 (10-pin, 16-pin) has pin compatibility with RL78/G10 (10-pin, 16-pin). The same functions are assigned to the same pins. \nRL78/G15 (20-pin) is essentially pin compatible with RL78/G12 (20-pin), except for three pins, namely, ANI, TOOLTxD, and TOOLRxD, that are different."
+      },
+      {
+        "type": "text",
+        "content": "RL78/G15 (10-pin, 16-pin) has pin compatibility with RL78/G10 (10-pin, 16-pin). The same functions are assigned to the same pins. \nRL78/G15 (20-pin) is essentially pin compatible with RL78/G12 (20-pin), except for three pins, namely, ANI, TOOLTxD, and TOOLRxD, that are different."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/G15"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G15"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G15"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20765767"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20765779"
+      }
+    ]
+  }
+}

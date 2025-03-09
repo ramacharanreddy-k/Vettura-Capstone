@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21130245",
+    "title": "Maximum current output to drive a motor using 'RH850/F1KM-S1 Starter Kit’",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:27:32.006050"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nPlease provide the maximum current output (that can be supplied for motor control) by Y-ASK-RH850F1KM-S1-V3\nAnswer:\nThe maximum current when using power supply via power jack  is 0.5 A. if the power jack is used to power the motor control part of the board, an e-fuse will limit the current to ~ 400mA.\nThere are possibilities to use other power supply for motor (VBAT)  in this case you need to consider correct setting of jumper J22 and J13.\nJ13 MOT_VDD selector - BAT: 5.3V-18V external supply \nJ22 VBAT selector\nIn this case eFuse (IC3 TPS25921) will be excluded from motor driver schematic and you need to take care of current limit not to destroy development kit.  \nAlso need to consider current trough T1, T2, T3, T4, T5, T6, T7 not to exceed their recommended current.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nPlease provide the maximum current output (that can be supplied for motor control) by Y-ASK-RH850F1KM-S1-V3\nAnswer:\nThe maximum current when using power supply via power jack  is 0.5 A. if the power jack is used to power the motor control part of the board, an e-fuse will limit the current to ~ 400mA.\nThere are possibilities to use other power supply for motor (VBAT)  in this case you need to consider correct setting of jumper J22 and J13.\nJ13 MOT_VDD selector - BAT: 5.3V-18V external supply \nJ22 VBAT selector\nIn this case eFuse (IC3 TPS25921) will be excluded from motor driver schematic and you need to take care of current limit not to destroy development kit.  \nAlso need to consider current trough T1, T2, T3, T4, T5, T6, T7 not to exceed their recommended current.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "Please provide the maximum current output (that can be supplied for motor control) by Y-ASK-RH850F1KM-S1-V3"
+      },
+      {
+        "type": "text",
+        "content": "Please provide the maximum current output (that can be supplied for motor control) by Y-ASK-RH850F1KM-S1-V3"
+      },
+      {
+        "type": "text",
+        "content": "Please provide the maximum current output (that can be supplied for motor control) by Y-ASK-RH850F1KM-S1-V3"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe maximum current when using power supply via power jack  is 0.5 A. if the power jack is used to power the motor control part of the board, an e-fuse will limit the current to ~ 400mA.\nThere are possibilities to use other power supply for motor (VBAT)  in this case you need to consider correct setting of jumper J22 and J13.\nJ13 MOT_VDD selector - BAT: 5.3V-18V external supply \nJ22 VBAT selector\nIn this case eFuse (IC3 TPS25921) will be excluded from motor driver schematic and you need to take care of current limit not to destroy development kit.  \nAlso need to consider current trough T1, T2, T3, T4, T5, T6, T7 not to exceed their recommended current.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "The maximum current when using power supply via power jack  is 0.5 A. if the power jack is used to power the motor control part of the board, an e-fuse will limit the current to ~ 400mA.\nThere are possibilities to use other power supply for motor (VBAT)  in this case you need to consider correct setting of jumper J22 and J13.\nJ13 MOT_VDD selector - BAT: 5.3V-18V external supply \nJ22 VBAT selector\nIn this case eFuse (IC3 TPS25921) will be excluded from motor driver schematic and you need to take care of current limit not to destroy development kit.  \nAlso need to consider current trough T1, T2, T3, T4, T5, T6, T7 not to exceed their recommended current."
+      },
+      {
+        "type": "text",
+        "content": "The maximum current when using power supply via power jack  is 0.5 A. if the power jack is used to power the motor control part of the board, an e-fuse will limit the current to ~ 400mA."
+      },
+      {
+        "type": "text",
+        "content": "The maximum current when using power supply via power jack  is 0.5 A."
+      },
+      {
+        "type": "text",
+        "content": "if the power jack is used to power the motor control part of the board, an e-fuse will limit the current to ~ 400mA."
+      },
+      {
+        "type": "text",
+        "content": "There are possibilities to use other power supply for motor (VBAT)  in this case you need to consider correct setting of jumper J22 and J13."
+      },
+      {
+        "type": "text",
+        "content": "There are possibilities to use other power supply for motor (VBAT)  in this case you need to consider correct setting of jumper J22 and J13."
+      },
+      {
+        "type": "text",
+        "content": "J13 MOT_VDD selector - BAT: 5.3V-18V external supply"
+      },
+      {
+        "type": "text",
+        "content": "J13 MOT_VDD selector - BAT: 5.3V-18V external supply"
+      },
+      {
+        "type": "text",
+        "content": "J22 VBAT selector"
+      },
+      {
+        "type": "text",
+        "content": "J22 VBAT selector"
+      },
+      {
+        "type": "text",
+        "content": "In this case eFuse (IC3 TPS25921) will be excluded from motor driver schematic and you need to take care of current limit not to destroy development kit."
+      },
+      {
+        "type": "text",
+        "content": "In this case eFuse (IC3 TPS25921) will be excluded from motor driver schematic and you need to take care of current limit not to destroy development kit."
+      },
+      {
+        "type": "text",
+        "content": "Also need to consider current trough T1, T2, T3, T4, T5, T6, T7 not to exceed their recommended current."
+      },
+      {
+        "type": "text",
+        "content": "Also need to consider current trough T1, T2, T3, T4, T5, T6, T7 not to exceed their recommended current."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850"
+    ],
+    "links": []
+  }
+}

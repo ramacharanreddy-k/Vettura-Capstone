@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20522559",
+    "title": "RA and FSP Curriculum: I-001 Introduction to the RA MCU Family",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:11:43.233943"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "This introductory curriculum course is a presentation that introduces you to the RA MCU Family and the associated FSP development tool flow. This is a helpful pre-requisite to the follow-on hands-on lab courses and provides the needed background on RA MCU and FSP features.\nI-001 Introduction to RA MCU Family- a deep dive technical presentation that provides needed background on RA devices including: RA Family lineup and roadmap, target applications, ARM specific features, Renesas specific peripherals, development tools and available support.  \n  The PDF is attached below. Note that the 072122 version is for FSP 3.6.0 and the 092122 version is for FSP 4.0.0.\n  All Introductory RA and FSP courses are listed here.\n  Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "This introductory curriculum course is a presentation that introduces you to the RA MCU Family and the associated FSP development tool flow. This is a helpful pre-requisite to the follow-on hands-on lab courses and provides the needed background on RA MCU and FSP features.\nI-001 Introduction to RA MCU Family- a deep dive technical presentation that provides needed background on RA devices including: RA Family lineup and roadmap, target applications, ARM specific features, Renesas specific peripherals, development tools and available support.  \n  The PDF is attached below. Note that the 072122 version is for FSP 3.6.0 and the 092122 version is for FSP 4.0.0.\n  All Introductory RA and FSP courses are listed here.\n  Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "This introductory curriculum course is a presentation that introduces you to the RA MCU Family and the associated FSP development tool flow. This is a helpful pre-requisite to the follow-on hands-on lab courses and provides the needed background on RA MCU and FSP features."
+      },
+      {
+        "type": "text",
+        "content": "I-001 Introduction to RA MCU Family- a deep dive technical presentation that provides needed background on RA devices including: RA Family lineup and roadmap, target applications, ARM specific features, Renesas specific peripherals, development tools and available support."
+      },
+      {
+        "type": "text",
+        "content": "I-001 Introduction to RA MCU Family- a deep dive technical presentation that provides needed background on RA devices including: RA Family lineup and roadmap, target applications, ARM specific features, Renesas specific peripherals, development tools and available support."
+      },
+      {
+        "type": "text",
+        "content": "I-001 Introduction to RA MCU Family-"
+      },
+      {
+        "type": "text",
+        "content": "a deep dive technical presentation that provides needed background on RA devices including: RA Family lineup and roadmap, target applications, ARM specific features, Renesas specific peripherals, development tools and available support."
+      },
+      {
+        "type": "text",
+        "content": "The PDF is attached below. Note that the 072122 version is for FSP 3.6.0 and the 092122 version is for FSP 4.0.0."
+      },
+      {
+        "type": "text",
+        "content": "All Introductory RA and FSP courses are listed here."
+      },
+      {
+        "type": "text",
+        "content": "Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA MCU"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA MCU"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA MCU"
+      },
+      {
+        "type": "text",
+        "content": "Source:    NA"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA MCU"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA MCU"
+    ],
+    "links": [
+      {
+        "text": "here",
+        "url": "https://en-support.renesas.com/knowledgeBase/20522329"
+      }
+    ]
+  }
+}

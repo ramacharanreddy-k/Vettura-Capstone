@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20797631",
+    "title": "RA Family: The input pin level and the level indicated by the GPIO register do not match",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:24:50.972493"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nThe input pin level and the level indicated by the GPIO register do not match\nAnswer:\nSome I/O pins may require initialization depending on the relationship with other functions assigned to the pins. For example, in the case of RA4M2, P402, P403, P404 can function as RTC input or AGT input function being enabled by VBTICTLR setting in addition to the I/O port configuration. As the VBTICTLR register setting is not initialized by reset, be careful that those pins will not be initialized to be input pins automatically by reset. In typical FSP-based projects, the register is initialized by R_IOPORT_Open() that is called in R_BSP_WarmStart(); therefore, you don’t need to take care of the register initialization. However, if you don't use the initialization code provided in FSP, you need to handle the register initialization by yourself.\n  Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "The input pin level and the level indicated by the GPIO register do not match"
+      },
+      {
+        "type": "text",
+        "content": "The input pin level and the level indicated by the GPIO register do not match"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nSome I/O pins may require initialization depending on the relationship with other functions assigned to the pins. For example, in the case of RA4M2, P402, P403, P404 can function as RTC input or AGT input function being enabled by VBTICTLR setting in addition to the I/O port configuration. As the VBTICTLR register setting is not initialized by reset, be careful that those pins will not be initialized to be input pins automatically by reset. In typical FSP-based projects, the register is initialized by R_IOPORT_Open() that is called in R_BSP_WarmStart(); therefore, you don’t need to take care of the register initialization. However, if you don't use the initialization code provided in FSP, you need to handle the register initialization by yourself.\n  Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Some I/O pins may require initialization depending on the relationship with other functions assigned to the pins. For example, in the case of RA4M2, P402, P403, P404 can function as RTC input or AGT input function being enabled by VBTICTLR setting in addition to the I/O port configuration. As the VBTICTLR register setting is not initialized by reset, be careful that those pins will not be initialized to be input pins automatically by reset. In typical FSP-based projects, the register is initialized by R_IOPORT_Open() that is called in R_BSP_WarmStart(); therefore, you don’t need to take care of the register initialization. However, if you don't use the initialization code provided in FSP, you need to handle the register initialization by yourself.\n  Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Some I/O pins may require initialization depending on the relationship with other functions assigned to the pins. For example, in the case of RA4M2, P402, P403, P404 can function as RTC input or AGT input function being enabled by VBTICTLR setting in addition to the I/O port configuration. As the VBTICTLR register setting is not initialized by reset, be careful that those pins will not be initialized to be input pins automatically by reset. In typical FSP-based projects, the register is initialized by R_IOPORT_Open() that is called in R_BSP_WarmStart(); therefore, you don’t need to take care of the register initialization. However, if you don't use the initialization code provided in FSP, you need to handle the register initialization by yourself."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/362887.png",
+          "alt_text": "",
+          "width": "675",
+          "height": "665",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/dc6375c87e892c02b82496f5573a59eb/images/0699ccd2c9c8fc887b16383a9d5dec58.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/362887.png",
+        "alt_text": "",
+        "width": "675",
+        "height": "665",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/dc6375c87e892c02b82496f5573a59eb/images/0699ccd2c9c8fc887b16383a9d5dec58.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20796091"
+      }
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20364154",
+    "title": "What level of security/cryptography is offered within the RH850 F1Kx series?",
+    "last_updated": "2022-01-02",
+    "extracted_at": "2025-03-09T00:26:47.025745"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat level of security/cryptography is offered within the RH850 F1Kx series?\nAnswer:\nRH850 F1Kx → ICU-S Secure Hardware Extension\nRH850 F1KM-S1 → ICU-S Secure Hardware Extension\nRH850 F1KM-S2 → ICU-M (EVITA MID)\nRH850 F1KM-S4 → ICU-M (EVITA MID)\nRH850 F1KH-D8 → ICU-MH (EVITA FULL)\n  Suitable Products\nRH850/F1x"
+      },
+      {
+        "type": "text",
+        "content": "What level of security/cryptography is offered within the RH850 F1Kx series?"
+      },
+      {
+        "type": "text",
+        "content": "What level of security/cryptography is offered within the RH850 F1Kx series?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRH850 F1Kx → ICU-S Secure Hardware Extension\nRH850 F1KM-S1 → ICU-S Secure Hardware Extension\nRH850 F1KM-S2 → ICU-M (EVITA MID)\nRH850 F1KM-S4 → ICU-M (EVITA MID)\nRH850 F1KH-D8 → ICU-MH (EVITA FULL)\n  Suitable Products\nRH850/F1x"
+      },
+      {
+        "type": "text",
+        "content": "RH850 F1Kx → ICU-S Secure Hardware Extension\nRH850 F1KM-S1 → ICU-S Secure Hardware Extension\nRH850 F1KM-S2 → ICU-M (EVITA MID)\nRH850 F1KM-S4 → ICU-M (EVITA MID)\nRH850 F1KH-D8 → ICU-MH (EVITA FULL)"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850/F1x"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850 F1Kx",
+            "→",
+            "ICU-S Secure Hardware Extension"
+          ],
+          [
+            "RH850 F1KM-S1",
+            "→",
+            "ICU-S Secure Hardware Extension"
+          ],
+          [
+            "RH850 F1KM-S2",
+            "→",
+            "ICU-M (EVITA MID)"
+          ],
+          [
+            "RH850 F1KM-S4",
+            "→",
+            "ICU-M (EVITA MID)"
+          ],
+          [
+            "RH850 F1KH-D8",
+            "→",
+            "ICU-MH (EVITA FULL)"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850/F1x"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850/F1x"
+    ],
+    "links": []
+  }
+}

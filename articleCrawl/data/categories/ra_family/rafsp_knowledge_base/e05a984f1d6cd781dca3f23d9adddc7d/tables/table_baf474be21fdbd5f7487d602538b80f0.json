@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "/* ID CODE: 00112233445566778899AABBCCDDEEff */\n#define BSP_CFG_ID_CODE_LONG_1 (0x33221100)\n#define BSP_CFG_ID_CODE_LONG_2 (0x77665544)\n#define BSP_CFG_ID_CODE_LONG_3 (0xBBAA9988)\n#define BSP_CFG_ID_CODE_LONG_4 (0xffEEDDCC)"
+    ]
+  ]
+}

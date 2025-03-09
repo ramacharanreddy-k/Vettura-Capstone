@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21132842",
+    "title": "RA Family: Using CLKOUT to check if the external clock is working properly",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:24:10.036692"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Overview:\nSome RA MCU series provide a CLKOUT pin/function to send the input or internal clock to an output pin. The CLKOUT function is sometimes overlooked as simply supplying a clock to an external IC, but it can also be used to check whether the external clock works as expected.\nSome use cases include:\nProbing the XCIN/XCOUT pins often attenuates the 32.768 KHz external clock (SUBCLK, SOSC) signal and stops oscillating, so CLKOUT can be used to check the frequency or continuity of the 32.768 KHz external clock.\nSometimes the MOSC (XTAL) clock introduces an external RC filter circuit to reduce the EMI noise caused by the MOSC. The CLKOUT pin can be used to verify how the sinewave-like MOSC clock input is recognized by the MCU.\nDescription:\nThe procedure to enable CLKOUT in e2 studio is described below. This is an example of using SUBCLK as a clock source on the EK-RA6M4 board, but this is generally applicable to other MCUs as well.\n“Clocks” configuration\n1. Set the clock source for CLKOUT.\n2. Set the divider for CLKOUT.\n  “Pins” configuration\n1. Select the pin to use as the CLKOUT pin in CGC peripheral.\n2. If necessary, change the drive capacity, pull up, output type, etc. of the CLKOUT pin.\n  Test:\nSimply “Generate Project Content” and run the code without adding/editing code. During the startup process (\"SystemInit\"), CLKOUT is enabled, and a square wave output can be seen from the CLKOUT pin as shown below.\n  Suitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "Some RA MCU series provide a CLKOUT pin/function to send the input or internal clock to an output pin. The CLKOUT function is sometimes overlooked as simply supplying a clock to an external IC, but it can also be used to check whether the external clock works as expected.\nSome use cases include:\nProbing the XCIN/XCOUT pins often attenuates the 32.768 KHz external clock (SUBCLK, SOSC) signal and stops oscillating, so CLKOUT can be used to check the frequency or continuity of the 32.768 KHz external clock.\nSometimes the MOSC (XTAL) clock introduces an external RC filter circuit to reduce the EMI noise caused by the MOSC. The CLKOUT pin can be used to verify how the sinewave-like MOSC clock input is recognized by the MCU."
+      },
+      {
+        "type": "text",
+        "content": "Some RA MCU series provide a CLKOUT pin/function to send the input or internal clock to an output pin. The CLKOUT function is sometimes overlooked as simply supplying a clock to an external IC, but it can also be used to check whether the external clock works as expected."
+      },
+      {
+        "type": "text",
+        "content": "Some use cases include:"
+      },
+      {
+        "type": "text",
+        "content": "Description:\nThe procedure to enable CLKOUT in e2 studio is described below. This is an example of using SUBCLK as a clock source on the EK-RA6M4 board, but this is generally applicable to other MCUs as well.\n“Clocks” configuration\n1. Set the clock source for CLKOUT.\n2. Set the divider for CLKOUT.\n  “Pins” configuration\n1. Select the pin to use as the CLKOUT pin in CGC peripheral.\n2. If necessary, change the drive capacity, pull up, output type, etc. of the CLKOUT pin.\n  Test:\nSimply “Generate Project Content” and run the code without adding/editing code. During the startup process (\"SystemInit\"), CLKOUT is enabled, and a square wave output can be seen from the CLKOUT pin as shown below.\n  Suitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "The procedure to enable CLKOUT in e2 studio is described below. This is an example of using SUBCLK as a clock source on the EK-RA6M4 board, but this is generally applicable to other MCUs as well.\n“Clocks” configuration\n1. Set the clock source for CLKOUT.\n2. Set the divider for CLKOUT.\n  “Pins” configuration\n1. Select the pin to use as the CLKOUT pin in CGC peripheral.\n2. If necessary, change the drive capacity, pull up, output type, etc. of the CLKOUT pin.\n  Test:\nSimply “Generate Project Content” and run the code without adding/editing code. During the startup process (\"SystemInit\"), CLKOUT is enabled, and a square wave output can be seen from the CLKOUT pin as shown below."
+      },
+      {
+        "type": "text",
+        "content": "The procedure to enable CLKOUT in e2 studio is described below. This is an example of using SUBCLK as a clock source on the EK-RA6M4 board, but this is generally applicable to other MCUs as well."
+      },
+      {
+        "type": "text",
+        "content": "“Clocks” configuration"
+      },
+      {
+        "type": "text",
+        "content": "1. Set the clock source for CLKOUT.\n2. Set the divider for CLKOUT."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/378829-1.png",
+          "alt_text": "",
+          "width": "921",
+          "height": "632",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/74b1913a749d3918a42ec334b062b43a/images/60f300b1cb538a165d18b3f268b4c019.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "“Pins” configuration"
+      },
+      {
+        "type": "text",
+        "content": "1. Select the pin to use as the CLKOUT pin in CGC peripheral.\n2. If necessary, change the drive capacity, pull up, output type, etc. of the CLKOUT pin."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/378829-2.png",
+          "alt_text": "",
+          "width": "921",
+          "height": "687",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/74b1913a749d3918a42ec334b062b43a/images/f26958db61359f960f0cd667fca2ae1d.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/378829-3.png",
+          "alt_text": "",
+          "width": "922",
+          "height": "690",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/74b1913a749d3918a42ec334b062b43a/images/f1728bd1d2cd7a5c6ae4b68fd6e93384.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Simply “Generate Project Content” and run the code without adding/editing code. During the startup process (\"SystemInit\"), CLKOUT is enabled, and a square wave output can be seen from the CLKOUT pin as shown below."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/378829-4.png",
+          "alt_text": "",
+          "width": "640",
+          "height": "480",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/74b1913a749d3918a42ec334b062b43a/images/e3bee845bdbe9416c7539f6434659cac.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/378829-1.png",
+        "alt_text": "",
+        "width": "921",
+        "height": "632",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/74b1913a749d3918a42ec334b062b43a/images/60f300b1cb538a165d18b3f268b4c019.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/378829-2.png",
+        "alt_text": "",
+        "width": "921",
+        "height": "687",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/74b1913a749d3918a42ec334b062b43a/images/f26958db61359f960f0cd667fca2ae1d.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/378829-3.png",
+        "alt_text": "",
+        "width": "922",
+        "height": "690",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/74b1913a749d3918a42ec334b062b43a/images/f1728bd1d2cd7a5c6ae4b68fd6e93384.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/378829-4.png",
+        "alt_text": "",
+        "width": "640",
+        "height": "480",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/74b1913a749d3918a42ec334b062b43a/images/e3bee845bdbe9416c7539f6434659cac.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21373861",
+    "title": "RZ/G2L, RZ/G3S: How to increase Flash Writer transfer speed",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:45:18.091852"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI am using Flash Writer with the Evaluation Board Kit connected to a PC via SCIF.\nIs there a way to increase the Flash Writer transfer speed from 115200 bps?\nAnswer:\nIt is possible to change the default (115200 bps) to a higher speed (921600 bps) using the \"SUP\" command.\nFor detailed instructions, see \"2.1.2.4. Writing the Bootloader\" in the following document.\nRZ/G2L\nhttps://www.renesas.com/us/en/document/qsg/rzg2l-evaluation-board-kit-quick-start-guide?r=1518686\nRZ/G3S\nhttps://www.renesas.com/us/en/document/gde/rzg3s-evaluation-board-kit-quick-start-guide?r=25458596\nSuitable Products\nRZ/G2L, RZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "I am using Flash Writer with the Evaluation Board Kit connected to a PC via SCIF.\nIs there a way to increase the Flash Writer transfer speed from 115200 bps?"
+      },
+      {
+        "type": "text",
+        "content": "I am using Flash Writer with the Evaluation Board Kit connected to a PC via SCIF.\nIs there a way to increase the Flash Writer transfer speed from 115200 bps?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIt is possible to change the default (115200 bps) to a higher speed (921600 bps) using the \"SUP\" command.\nFor detailed instructions, see \"2.1.2.4. Writing the Bootloader\" in the following document.\nRZ/G2L\nhttps://www.renesas.com/us/en/document/qsg/rzg2l-evaluation-board-kit-quick-start-guide?r=1518686\nRZ/G3S\nhttps://www.renesas.com/us/en/document/gde/rzg3s-evaluation-board-kit-quick-start-guide?r=25458596\nSuitable Products\nRZ/G2L, RZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "It is possible to change the default (115200 bps) to a higher speed (921600 bps) using the \"SUP\" command.\nFor detailed instructions, see \"2.1.2.4. Writing the Bootloader\" in the following document.\nRZ/G2L\nhttps://www.renesas.com/us/en/document/qsg/rzg2l-evaluation-board-kit-quick-start-guide?r=1518686\nRZ/G3S\nhttps://www.renesas.com/us/en/document/gde/rzg3s-evaluation-board-kit-quick-start-guide?r=25458596"
+      },
+      {
+        "type": "text",
+        "content": "It is possible to change the default (115200 bps) to a higher speed (921600 bps) using the \"SUP\" command.\nFor detailed instructions, see \"2.1.2.4. Writing the Bootloader\" in the following document."
+      },
+      {
+        "type": "text",
+        "content": "RZ/G2L\nhttps://www.renesas.com/us/en/document/qsg/rzg2l-evaluation-board-kit-quick-start-guide?r=1518686"
+      },
+      {
+        "type": "text",
+        "content": "RZ/G3S\nhttps://www.renesas.com/us/en/document/gde/rzg3s-evaluation-board-kit-quick-start-guide?r=25458596"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/G2L, RZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/G2L, RZ/G3S"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/G2L, RZ/G3S"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/us/en/document/qsg/rzg2l-evaluation-board-kit-quick-start-guide?r=1518686",
+        "url": "https://www.renesas.com/us/en/document/qsg/rzg2l-evaluation-board-kit-quick-start-guide?r=1518686"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/document/gde/rzg3s-evaluation-board-kit-quick-start-guide?r=25458596",
+        "url": "https://www.renesas.com/us/en/document/gde/rzg3s-evaluation-board-kit-quick-start-guide?r=25458596"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21373864"
+      }
+    ]
+  }
+}

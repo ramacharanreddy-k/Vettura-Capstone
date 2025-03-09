@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20590552",
+    "title": "Can Quad SPI flash memory and Octal-SPI RAM be connected to the RZ/A3UL?",
+    "last_updated": "2022-04-08",
+    "extracted_at": "2025-03-08T23:42:29.785403"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan Quad SPI flash memory and Octal-SPI RAM be connected to the RZ/A3UL?\nAnswer:\nThe SPI Multi I/O BUS controller (QSPI connection controller) and Octal-SPI memory controller (connects Octal-SPI RAM) of the RZ/A3UL are exclusive control due to the pin configuration so they cannot be used at the same time. Consequently, when connecting QSPI flash memory, connect DDR3L/4 memory as the RAM memory.\nSuitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Can Quad SPI flash memory and Octal-SPI RAM be connected to the RZ/A3UL?"
+      },
+      {
+        "type": "text",
+        "content": "Can Quad SPI flash memory and Octal-SPI RAM be connected to the RZ/A3UL?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe SPI Multi I/O BUS controller (QSPI connection controller) and Octal-SPI memory controller (connects Octal-SPI RAM) of the RZ/A3UL are exclusive control due to the pin configuration so they cannot be used at the same time. Consequently, when connecting QSPI flash memory, connect DDR3L/4 memory as the RAM memory.\nSuitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "The SPI Multi I/O BUS controller (QSPI connection controller) and Octal-SPI memory controller (connects Octal-SPI RAM) of the RZ/A3UL are exclusive control due to the pin configuration so they cannot be used at the same time. Consequently, when connecting QSPI flash memory, connect DDR3L/4 memory as the RAM memory."
+      },
+      {
+        "type": "text",
+        "content": "The SPI Multi I/O BUS controller (QSPI connection controller) and Octal-SPI memory controller (connects Octal-SPI RAM) of the RZ/A3UL are exclusive control due to the pin configuration so they cannot be used at the same time. Consequently, when connecting QSPI flash memory, connect DDR3L/4 memory as the RAM memory."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A3UL"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A3UL"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20590560"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20590569"
+      }
+    ]
+  }
+}

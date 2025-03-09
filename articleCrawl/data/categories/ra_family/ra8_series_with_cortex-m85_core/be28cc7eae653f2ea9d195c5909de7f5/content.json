@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21088660",
+    "title": "RA8: Support for high compute DSP or AI/ML applications",
+    "last_updated": "2024-05-11",
+    "extracted_at": "2025-03-08T23:29:11.795283"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow do the RA8 Series MCUs meet the needs of high compute DSP and AI/ML applications?\nAnswer:\nRenesas has introduced the RA8 Series, the industry’s first 32-bit microcontroller (MCU) series based on the new Arm® Cortex®-M85 (CM85) core, delivering breakthrough performance of over 6.3 CoreMarks/MHz, and fully deterministic, low latency, real-time operation that addresses the customers’ most demanding application needs. The new Arm CM85 core, with the Arm v8.1m architecture and a 7-stage superscalar pipeline, is the highest performance Cortex-M core in the industry and introduces Helium, the M-Profile Vector Extension (MVE) that enables an unprecedented 4x acceleration in DSP and AI/ML tasks vs. the older Cortex-M7 core. \nWith their high performance enabled by the Arm Cortex-M85 core and Helium, the new RA8 MCU devices bridge the gap between MCUs and MPUs and enable complex and compute intensive applications without having to switch to an MPU, all while providing the lower power consumption and ease of use of an MCU.\nSuitable Products\nRA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+      },
+      {
+        "type": "text",
+        "content": "How do the RA8 Series MCUs meet the needs of high compute DSP and AI/ML applications?"
+      },
+      {
+        "type": "text",
+        "content": "How do the RA8 Series MCUs meet the needs of high compute DSP and AI/ML applications?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRenesas has introduced the RA8 Series, the industry’s first 32-bit microcontroller (MCU) series based on the new Arm® Cortex®-M85 (CM85) core, delivering breakthrough performance of over 6.3 CoreMarks/MHz, and fully deterministic, low latency, real-time operation that addresses the customers’ most demanding application needs. The new Arm CM85 core, with the Arm v8.1m architecture and a 7-stage superscalar pipeline, is the highest performance Cortex-M core in the industry and introduces Helium, the M-Profile Vector Extension (MVE) that enables an unprecedented 4x acceleration in DSP and AI/ML tasks vs. the older Cortex-M7 core. \nWith their high performance enabled by the Arm Cortex-M85 core and Helium, the new RA8 MCU devices bridge the gap between MCUs and MPUs and enable complex and compute intensive applications without having to switch to an MPU, all while providing the lower power consumption and ease of use of an MCU.\nSuitable Products\nRA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+      },
+      {
+        "type": "text",
+        "content": "Renesas has introduced the RA8 Series, the industry’s first 32-bit microcontroller (MCU) series based on the new Arm® Cortex®-M85 (CM85) core, delivering breakthrough performance of over 6.3 CoreMarks/MHz, and fully deterministic, low latency, real-time operation that addresses the customers’ most demanding application needs. The new Arm CM85 core, with the Arm v8.1m architecture and a 7-stage superscalar pipeline, is the highest performance Cortex-M core in the industry and introduces Helium, the M-Profile Vector Extension (MVE) that enables an unprecedented 4x acceleration in DSP and AI/ML tasks vs. the older Cortex-M7 core. \nWith their high performance enabled by the Arm Cortex-M85 core and Helium, the new RA8 MCU devices bridge the gap between MCUs and MPUs and enable complex and compute intensive applications without having to switch to an MPU, all while providing the lower power consumption and ease of use of an MCU."
+      },
+      {
+        "type": "text",
+        "content": "Renesas has introduced the RA8 Series, the industry’s first 32-bit microcontroller (MCU) series based on the new Arm® Cortex®-M85 (CM85) core, delivering breakthrough performance of over 6.3 CoreMarks/MHz, and fully deterministic, low latency, real-time operation that addresses the customers’ most demanding application needs. The new Arm CM85 core, with the Arm v8.1m architecture and a 7-stage superscalar pipeline, is the highest performance Cortex-M core in the industry and introduces Helium, the M-Profile Vector Extension (MVE) that enables an unprecedented 4x acceleration in DSP and AI/ML tasks vs. the older Cortex-M7 core. \nWith their high performance enabled by the Arm Cortex-M85 core and Helium, the new RA8 MCU devices bridge the gap between MCUs and MPUs and enable complex and compute intensive applications without having to switch to an MPU, all while providing the lower power consumption and ease of use of an MCU."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA8M1, RA8D1, RA8T1, RA8E1, RA8E2"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21088718"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21088732"
+      }
+    ]
+  }
+}

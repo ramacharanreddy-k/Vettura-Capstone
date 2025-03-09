@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/19375553",
+    "title": "Creating an RA Project with ARM Compiler 6.16 and earlier in e2 studio",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:13:19.126301"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "The below description applies to AC 6.16 and earlier. Refer to the companion post for AC 6.17 here: https://en-support.renesas.com/knowledgeBase/20370421"
+      },
+      {
+        "type": "text",
+        "content": "e2 studio does not include the ARM Compiler 6 (AC6) toolchain by default."
+      },
+      {
+        "type": "text",
+        "content": "Below are the steps for integrating AC6 into e2 studio and creating an RA project with the toolchain."
+      },
+      {
+        "type": "text",
+        "content": "Note:"
+      },
+      {
+        "type": "text",
+        "content": "Steps 1 through 8 describe the process for integrating ARM Compiler 6 into e2 studio."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/6b339dbf-bdb7-4743-9559-ec0414c5f696.png",
+          "alt_text": "",
+          "width": "482",
+          "height": "390",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/d28631ef91309bdcdab1f7dd0b4a008c/images/232ddb68ddc5fe243d3439f6e84bed45.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/bdc69fde-adb2-4ddf-aec7-266f3eeb7be2.png",
+          "alt_text": "",
+          "width": "565",
+          "height": "341",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/d28631ef91309bdcdab1f7dd0b4a008c/images/0f2b051816dad05fe9785a26b8d466f7.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/227b1d70-da2b-4e00-bdd7-af7ed6697376.png",
+          "alt_text": "",
+          "width": "515",
+          "height": "439",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/d28631ef91309bdcdab1f7dd0b4a008c/images/9df5102781467045e2a2847ba4b6a0ea.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/95d605d0-7aca-4708-ab2e-ca28293ed6b5.png",
+          "alt_text": "",
+          "width": "479",
+          "height": "387",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/d28631ef91309bdcdab1f7dd0b4a008c/images/bf7123f9a9bd52008ba75969136ddbb4.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/bb2bd4e2-4c50-4d4d-8456-c2862027868b.png",
+          "alt_text": "",
+          "width": "567",
+          "height": "141",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/d28631ef91309bdcdab1f7dd0b4a008c/images/bdbe3da6ef764cad9bc33441f64c3fe9.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "9. When creating a new RA C/C++ project, select ARM Compiler 6 included in the Toolchains section."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/8bc65750-fb2c-4910-8a0f-bc6a87035294.png",
+          "alt_text": "",
+          "width": "626",
+          "height": "229",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/d28631ef91309bdcdab1f7dd0b4a008c/images/5b34313a8ed1a3089b78a13673ac61cd.png"
+        }
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/6b339dbf-bdb7-4743-9559-ec0414c5f696.png",
+        "alt_text": "",
+        "width": "482",
+        "height": "390",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/d28631ef91309bdcdab1f7dd0b4a008c/images/232ddb68ddc5fe243d3439f6e84bed45.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/bdc69fde-adb2-4ddf-aec7-266f3eeb7be2.png",
+        "alt_text": "",
+        "width": "565",
+        "height": "341",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/d28631ef91309bdcdab1f7dd0b4a008c/images/0f2b051816dad05fe9785a26b8d466f7.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/227b1d70-da2b-4e00-bdd7-af7ed6697376.png",
+        "alt_text": "",
+        "width": "515",
+        "height": "439",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/d28631ef91309bdcdab1f7dd0b4a008c/images/9df5102781467045e2a2847ba4b6a0ea.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/95d605d0-7aca-4708-ab2e-ca28293ed6b5.png",
+        "alt_text": "",
+        "width": "479",
+        "height": "387",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/d28631ef91309bdcdab1f7dd0b4a008c/images/bf7123f9a9bd52008ba75969136ddbb4.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/bb2bd4e2-4c50-4d4d-8456-c2862027868b.png",
+        "alt_text": "",
+        "width": "567",
+        "height": "141",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/d28631ef91309bdcdab1f7dd0b4a008c/images/bdbe3da6ef764cad9bc33441f64c3fe9.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/8bc65750-fb2c-4910-8a0f-bc6a87035294.png",
+        "alt_text": "",
+        "width": "626",
+        "height": "229",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/d28631ef91309bdcdab1f7dd0b4a008c/images/5b34313a8ed1a3089b78a13673ac61cd.png"
+      }
+    ],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": [
+      {
+        "text": "https://en-support.renesas.com/knowledgeBase/20370421",
+        "url": "https://en-support.renesas.com/knowledgeBase/20370421"
+      },
+      {
+        "text": "https://developer.arm.com/tools-and-software/embedded/arm-compiler/downloads/version-6",
+        "url": "https://developer.arm.com/tools-and-software/embedded/arm-compiler/downloads/version-6"
+      }
+    ]
+  }
+}

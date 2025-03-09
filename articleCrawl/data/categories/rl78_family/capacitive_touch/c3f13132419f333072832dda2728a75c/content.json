@@ -1,0 +1,305 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20824904",
+    "title": "Information on RL78 microcontroller touch development",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:57:01.953910"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nAre there any documents, sample code, or videos available for reference in RL78 microcontroller touch development?\nAnswer:\nWe have made some useful documents, sample code, and videos available.\nPlease check the following table.\nCategory Objectives Format URL\nDevelopment process Use e2 studio for development Document RL78 Family Using QE and SIS to Develop Capacitive Touch Applications (R01AN5512)\nUse CS+ for development Document RL78 Family Using the standalone version of QE to Develop Capacitive Touch Applications (R01AN6574)\nSample code\nI would like sample code that uses touch evaluation boards. Sample code RL78/G23 Capacitive Touch Evaluation System Sample Code - Sample Code\nDocument RL78/G23 Capacitive Touch Evaluation System Sample Code (R12AN0119)\nSample code RL78/G22 Capacitive Touch Evaluation System Sample Code\nDocument RL78/G22 Capacitive Touch Evaluation System Sample Code (R01AN6803)\nI would like to know the development procedure using FPB and I need the sample code. Sample code RL78 Family Using QE (standalone ver.) to Develop Touch Applications for FPB board\nDocument RL78 Family Using QE (standalone ver.) to Develop Touch Applications for FPB board (R01AN6741)\nLow power operation I would like to know how to use the SNOOZE function of touch. Sample code RL78 Family RL78/G23 Capacitive Touch Low Power Guide (SNOOZE function) - Sample Code\nDocument RL78 Family RL78/G23 Capacitive Touch Low Power Guide (SNOOZE function)(R01AN5886)\nI would like to measure touch with SNOOZE mode sequencer (SMS) on RL78/G23. Document RL78/G23 Group RL78/G23 Capacitive Touch Low Power Guide (SMS function) (R01AN6670)\nI would like to measure touch using SNOOZE mode sequencer (SMS) and MEC function on RL78/G22. Document RL78/G22 Capacitive Touch Low Power Guide (SMS / MEC function) (R01AN6847)\nDevelopment tool I would like an overview of QE for Capacitive Touch. Official website QE for Capacitive Touch: Development Assistance Tool for Capacitive Touch Sensors\nVideo Getting Started with QE for Capacitive Touch for RL78\nI would like to see a video explaining how to use QE for Capacitive Touch. Video QE for Capacitive Touch Tutorial: Settings for RL78\nQE for Capacitive Touch Tutorial: Tuning for RL78\nQE for Capacitive Touch Tutorial: Serial Monitoring for RL78\nTechnical documentation I would like to know more about the CTSU. Document Capacitive Sensor Microcontrollers CTSU Capacitive Touch Introduction Guide (R30AN0424)\nRL78 Family TOUCH Module Software Integration System (R11AN0485)\nRL78 Family CTSU Module Software Integration System (R11AN0484)\nHardware I would like to know how to design touch electrodes. Document Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\nI would like to know how to design touch electrodes. RL78 Family Capacitive Touch Sensing Unit (CTSU2L) Operation Explanation (R01AN5744)\nDemo I would like to know about water-resistant touch buttons. Video Self-capacitance Waterproof Touch Button Solution\nDocument RL78/G23 Self-capacitance Waterproof Touch Button Demo Sample Software (R01AN6117)\nI would like to know about QE for Capacitive Touch -3D gesture recognition. Video e-AI × 3D Gesture Recognition - QE for Capacitive Touch\nSuitable Products\nRL78/G22, RL78/G23"
+      },
+      {
+        "type": "text",
+        "content": "Are there any documents, sample code, or videos available for reference in RL78 microcontroller touch development?"
+      },
+      {
+        "type": "text",
+        "content": "Are there any documents, sample code, or videos available for reference in RL78 microcontroller touch development?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nWe have made some useful documents, sample code, and videos available.\nPlease check the following table.\nCategory Objectives Format URL\nDevelopment process Use e2 studio for development Document RL78 Family Using QE and SIS to Develop Capacitive Touch Applications (R01AN5512)\nUse CS+ for development Document RL78 Family Using the standalone version of QE to Develop Capacitive Touch Applications (R01AN6574)\nSample code\nI would like sample code that uses touch evaluation boards. Sample code RL78/G23 Capacitive Touch Evaluation System Sample Code - Sample Code\nDocument RL78/G23 Capacitive Touch Evaluation System Sample Code (R12AN0119)\nSample code RL78/G22 Capacitive Touch Evaluation System Sample Code\nDocument RL78/G22 Capacitive Touch Evaluation System Sample Code (R01AN6803)\nI would like to know the development procedure using FPB and I need the sample code. Sample code RL78 Family Using QE (standalone ver.) to Develop Touch Applications for FPB board\nDocument RL78 Family Using QE (standalone ver.) to Develop Touch Applications for FPB board (R01AN6741)\nLow power operation I would like to know how to use the SNOOZE function of touch. Sample code RL78 Family RL78/G23 Capacitive Touch Low Power Guide (SNOOZE function) - Sample Code\nDocument RL78 Family RL78/G23 Capacitive Touch Low Power Guide (SNOOZE function)(R01AN5886)\nI would like to measure touch with SNOOZE mode sequencer (SMS) on RL78/G23. Document RL78/G23 Group RL78/G23 Capacitive Touch Low Power Guide (SMS function) (R01AN6670)\nI would like to measure touch using SNOOZE mode sequencer (SMS) and MEC function on RL78/G22. Document RL78/G22 Capacitive Touch Low Power Guide (SMS / MEC function) (R01AN6847)\nDevelopment tool I would like an overview of QE for Capacitive Touch. Official website QE for Capacitive Touch: Development Assistance Tool for Capacitive Touch Sensors\nVideo Getting Started with QE for Capacitive Touch for RL78\nI would like to see a video explaining how to use QE for Capacitive Touch. Video QE for Capacitive Touch Tutorial: Settings for RL78\nQE for Capacitive Touch Tutorial: Tuning for RL78\nQE for Capacitive Touch Tutorial: Serial Monitoring for RL78\nTechnical documentation I would like to know more about the CTSU. Document Capacitive Sensor Microcontrollers CTSU Capacitive Touch Introduction Guide (R30AN0424)\nRL78 Family TOUCH Module Software Integration System (R11AN0485)\nRL78 Family CTSU Module Software Integration System (R11AN0484)\nHardware I would like to know how to design touch electrodes. Document Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\nI would like to know how to design touch electrodes. RL78 Family Capacitive Touch Sensing Unit (CTSU2L) Operation Explanation (R01AN5744)\nDemo I would like to know about water-resistant touch buttons. Video Self-capacitance Waterproof Touch Button Solution\nDocument RL78/G23 Self-capacitance Waterproof Touch Button Demo Sample Software (R01AN6117)\nI would like to know about QE for Capacitive Touch -3D gesture recognition. Video e-AI × 3D Gesture Recognition - QE for Capacitive Touch\nSuitable Products\nRL78/G22, RL78/G23"
+      },
+      {
+        "type": "text",
+        "content": "We have made some useful documents, sample code, and videos available.\nPlease check the following table.\nCategory Objectives Format URL\nDevelopment process Use e2 studio for development Document RL78 Family Using QE and SIS to Develop Capacitive Touch Applications (R01AN5512)\nUse CS+ for development Document RL78 Family Using the standalone version of QE to Develop Capacitive Touch Applications (R01AN6574)\nSample code\nI would like sample code that uses touch evaluation boards. Sample code RL78/G23 Capacitive Touch Evaluation System Sample Code - Sample Code\nDocument RL78/G23 Capacitive Touch Evaluation System Sample Code (R12AN0119)\nSample code RL78/G22 Capacitive Touch Evaluation System Sample Code\nDocument RL78/G22 Capacitive Touch Evaluation System Sample Code (R01AN6803)\nI would like to know the development procedure using FPB and I need the sample code. Sample code RL78 Family Using QE (standalone ver.) to Develop Touch Applications for FPB board\nDocument RL78 Family Using QE (standalone ver.) to Develop Touch Applications for FPB board (R01AN6741)\nLow power operation I would like to know how to use the SNOOZE function of touch. Sample code RL78 Family RL78/G23 Capacitive Touch Low Power Guide (SNOOZE function) - Sample Code\nDocument RL78 Family RL78/G23 Capacitive Touch Low Power Guide (SNOOZE function)(R01AN5886)\nI would like to measure touch with SNOOZE mode sequencer (SMS) on RL78/G23. Document RL78/G23 Group RL78/G23 Capacitive Touch Low Power Guide (SMS function) (R01AN6670)\nI would like to measure touch using SNOOZE mode sequencer (SMS) and MEC function on RL78/G22. Document RL78/G22 Capacitive Touch Low Power Guide (SMS / MEC function) (R01AN6847)\nDevelopment tool I would like an overview of QE for Capacitive Touch. Official website QE for Capacitive Touch: Development Assistance Tool for Capacitive Touch Sensors\nVideo Getting Started with QE for Capacitive Touch for RL78\nI would like to see a video explaining how to use QE for Capacitive Touch. Video QE for Capacitive Touch Tutorial: Settings for RL78\nQE for Capacitive Touch Tutorial: Tuning for RL78\nQE for Capacitive Touch Tutorial: Serial Monitoring for RL78\nTechnical documentation I would like to know more about the CTSU. Document Capacitive Sensor Microcontrollers CTSU Capacitive Touch Introduction Guide (R30AN0424)\nRL78 Family TOUCH Module Software Integration System (R11AN0485)\nRL78 Family CTSU Module Software Integration System (R11AN0484)\nHardware I would like to know how to design touch electrodes. Document Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\nI would like to know how to design touch electrodes. RL78 Family Capacitive Touch Sensing Unit (CTSU2L) Operation Explanation (R01AN5744)\nDemo I would like to know about water-resistant touch buttons. Video Self-capacitance Waterproof Touch Button Solution\nDocument RL78/G23 Self-capacitance Waterproof Touch Button Demo Sample Software (R01AN6117)\nI would like to know about QE for Capacitive Touch -3D gesture recognition. Video e-AI × 3D Gesture Recognition - QE for Capacitive Touch"
+      },
+      {
+        "type": "text",
+        "content": "We have made some useful documents, sample code, and videos available.\nPlease check the following table."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/G22, RL78/G23"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "Category",
+            "Objectives",
+            "Format",
+            "URL"
+          ],
+          [
+            "Development process",
+            "Use e2 studio for development",
+            "Document",
+            "RL78 Family Using QE and SIS to Develop Capacitive Touch Applications (R01AN5512)"
+          ],
+          [
+            "Use CS+ for development",
+            "Document",
+            "RL78 Family Using the standalone version of QE to Develop Capacitive Touch Applications (R01AN6574)"
+          ],
+          [
+            "Sample code",
+            "I would like sample code that uses touch evaluation boards.",
+            "Sample code",
+            "RL78/G23 Capacitive Touch Evaluation System Sample Code - Sample Code"
+          ],
+          [
+            "Document",
+            "RL78/G23 Capacitive Touch Evaluation System Sample Code (R12AN0119)"
+          ],
+          [
+            "Sample code",
+            "RL78/G22 Capacitive Touch Evaluation System Sample Code"
+          ],
+          [
+            "Document",
+            "RL78/G22 Capacitive Touch Evaluation System Sample Code (R01AN6803)"
+          ],
+          [
+            "I would like to know the development procedure using FPB and I need the sample code.",
+            "Sample code",
+            "RL78 Family Using QE (standalone ver.) to Develop Touch Applications for FPB board"
+          ],
+          [
+            "Document",
+            "RL78 Family Using QE (standalone ver.) to Develop Touch Applications for FPB board (R01AN6741)"
+          ],
+          [
+            "Low power operation",
+            "I would like to know how to use the SNOOZE function of touch.",
+            "Sample code",
+            "RL78 Family RL78/G23 Capacitive Touch Low Power Guide (SNOOZE function) - Sample Code"
+          ],
+          [
+            "Document",
+            "RL78 Family RL78/G23 Capacitive Touch Low Power Guide (SNOOZE function)(R01AN5886)"
+          ],
+          [
+            "I would like to measure touch with SNOOZE mode sequencer (SMS) on RL78/G23.",
+            "Document",
+            "RL78/G23 Group RL78/G23 Capacitive Touch Low Power Guide (SMS function) (R01AN6670)"
+          ],
+          [
+            "I would like to measure touch using SNOOZE mode sequencer (SMS) and MEC function on RL78/G22.",
+            "Document",
+            "RL78/G22 Capacitive Touch Low Power Guide (SMS / MEC function) (R01AN6847)"
+          ],
+          [
+            "Development tool",
+            "I would like an overview of QE for Capacitive Touch.",
+            "Official website",
+            "QE for Capacitive Touch: Development Assistance Tool for Capacitive Touch Sensors"
+          ],
+          [
+            "Video",
+            "Getting Started with QE for Capacitive Touch for RL78"
+          ],
+          [
+            "I would like to see a video explaining how to use QE for Capacitive Touch.",
+            "Video",
+            "QE for Capacitive Touch Tutorial: Settings for RL78"
+          ],
+          [
+            "QE for Capacitive Touch Tutorial: Tuning for RL78"
+          ],
+          [
+            "QE for Capacitive Touch Tutorial: Serial Monitoring for RL78"
+          ],
+          [
+            "Technical documentation",
+            "I would like to know more about the CTSU.",
+            "Document",
+            "Capacitive Sensor Microcontrollers CTSU Capacitive Touch Introduction Guide (R30AN0424)"
+          ],
+          [
+            "RL78 Family TOUCH Module Software Integration System (R11AN0485)"
+          ],
+          [
+            "RL78 Family CTSU Module Software Integration System (R11AN0484)"
+          ],
+          [
+            "Hardware",
+            "I would like to know how to design touch electrodes.",
+            "Document",
+            "Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)"
+          ],
+          [
+            "I would like to know how to design touch electrodes.",
+            "RL78 Family Capacitive Touch Sensing Unit (CTSU2L) Operation Explanation (R01AN5744)"
+          ],
+          [
+            "Demo",
+            "I would like to know about water-resistant touch buttons.",
+            "Video",
+            "Self-capacitance Waterproof Touch Button Solution"
+          ],
+          [
+            "Document",
+            "RL78/G23 Self-capacitance Waterproof Touch Button Demo Sample Software (R01AN6117)"
+          ],
+          [
+            "I would like to know about QE for Capacitive Touch -3D gesture recognition.",
+            "Video",
+            "e-AI × 3D Gesture Recognition - QE for Capacitive Touch"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G22, RL78/G23"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G22, RL78/G23"
+    ],
+    "links": [
+      {
+        "text": "RL78 Family Using QE and SIS to Develop Capacitive Touch Applications (R01AN5512)",
+        "url": "https://www.renesas.com/us/en/document/apn/rl78-family-using-qe-and-sis-develop-capacitive-touch-applications"
+      },
+      {
+        "text": "RL78 Family Using the standalone version of QE to Develop Capacitive Touch Applications (R01AN6574)",
+        "url": "https://www.renesas.com/us/en/document/apn/rl78-family-using-standalone-version-qe-develop-capacitive-touch-applications-rev100"
+      },
+      {
+        "text": "RL78/G23 Capacitive Touch Evaluation System Sample Code - Sample Code",
+        "url": "https://www.renesas.com/us/en/document/scd/rl78g23-capacitive-touch-evaluation-system-sample-code-rev100-sample-code?r=1521766"
+      },
+      {
+        "text": "RL78/G23 Capacitive Touch Evaluation System Sample Code (R12AN0119)",
+        "url": "https://www.renesas.com/us/en/document/apn/rl78g23-capacitive-touch-evaluation-system-sample-code-rev100?r=1521766"
+      },
+      {
+        "text": "RL78/G22 Capacitive Touch Evaluation System Sample Code",
+        "url": "https://www.renesas.com/us/en/document/scd/rl78g22-capacitive-touch-evaluation-system-sample-code-rev100"
+      },
+      {
+        "text": "RL78/G22 Capacitive Touch Evaluation System Sample Code (R01AN6803)",
+        "url": "https://www.renesas.com/us/en/document/apn/rl78g22-capacitive-touch-evaluation-system-sample-code-rev100?language=en&r=25408646"
+      },
+      {
+        "text": "RL78 Family Using QE (standalone ver.) to Develop Touch Applications for FPB board",
+        "url": "https://www.renesas.com/us/en/document/scd/rl78-family-using-qe-standalone-ver-develop-touch-applications-fpb-board-rev100?r=25408646"
+      },
+      {
+        "text": "RL78 Family Using QE (standalone ver.) to Develop Touch Applications for FPB board (R01AN6741)",
+        "url": "https://www.renesas.com/us/en/document/apn/rl78-family-using-qe-standalone-ver-develop-touch-applications-fpb-board-rev100?language=en&r=25408646"
+      },
+      {
+        "text": "RL78 Family RL78/G23 Capacitive Touch Low Power Guide (SNOOZE function) - Sample Code",
+        "url": "https://www.renesas.com/us/en/document/scd/rl78-family-rl78g23-capacitive-touch-low-power-guide-snooze-function-rev100-sample-code?language=en"
+      },
+      {
+        "text": "RL78 Family RL78/G23 Capacitive Touch Low Power Guide (SNOOZE function)(R01AN5886)",
+        "url": "https://www.renesas.com/us/en/document/apn/rl78-family-rl78g23-capacitive-touch-low-power-guide-snooze-function-rev100?r=1521766"
+      },
+      {
+        "text": "RL78/G23 Group RL78/G23 Capacitive Touch Low Power Guide (SMS function) (R01AN6670)",
+        "url": "https://www.renesas.com/us/en/document/apn/rl78g23-group-rl78g23-capacitive-touch-low-power-guide-sms-function-rev100"
+      },
+      {
+        "text": "RL78/G22 Capacitive Touch Low Power Guide (SMS / MEC function) (R01AN6847)",
+        "url": "https://www.renesas.com/us/en/document/apn/rl78g22-capacitive-touch-low-power-guide-sms-mec-function?r=25408646"
+      },
+      {
+        "text": "QE for Capacitive Touch: Development Assistance Tool for Capacitive Touch Sensors",
+        "url": "https://www.renesas.com/software-tool/qe-capacitive-touch-development-assistance-tool-capacitive-touch-sensors"
+      },
+      {
+        "text": "Getting Started with QE for Capacitive Touch for RL78",
+        "url": "https://www.renesas.com/video/getting-started-qe-capacitive-touch-rl78"
+      },
+      {
+        "text": "QE for Capacitive Touch Tutorial: Settings for RL78",
+        "url": "https://www.renesas.com/video/qe-capacitive-touch-tutorial-settings-rl78"
+      },
+      {
+        "text": "QE for Capacitive Touch Tutorial: Tuning for RL78",
+        "url": "https://www.renesas.com/video/qe-capacitive-touch-tutorial-tuning-rl78"
+      },
+      {
+        "text": "QE for Capacitive Touch Tutorial: Serial Monitoring for RL78",
+        "url": "https://www.renesas.com/video/qe-capacitive-touch-tutorial-serial-monitoring-rl78"
+      },
+      {
+        "text": "Capacitive Sensor Microcontrollers CTSU Capacitive Touch Introduction Guide (R30AN0424)",
+        "url": "https://www.renesas.com/us/en/document/apn/capacitive-sensor-microcontrollers-ctsu-capacitive-touch-introduction-guide?r=25408646"
+      },
+      {
+        "text": "RL78 Family TOUCH Module Software Integration System (R11AN0485)",
+        "url": "https://www.renesas.com/document/apn/rl78-family-touch-module-software-integration-system?r=1521766"
+      },
+      {
+        "text": "RL78 Family CTSU Module Software Integration System (R11AN0484)",
+        "url": "https://www.renesas.com/document/apn/rl78-family-ctsu-module-software-integration-system?r=1521766"
+      },
+      {
+        "text": "Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)",
+        "url": "https://www.renesas.com/us/en/document/apn/capacitive-sensor-microcontrollers-ctsu-capacitive-touch-electrode-design-guide?r=1521766"
+      },
+      {
+        "text": "RL78 Family Capacitive Touch Sensing Unit (CTSU2L) Operation Explanation (R01AN5744)",
+        "url": "https://www.renesas.com/us/en/document/apn/rl78-family-capacitive-touch-sensing-unit-ctsu2l-operation-expalanation?r=1521766"
+      },
+      {
+        "text": "Self-capacitance Waterproof Touch Button Solution",
+        "url": "https://www.renesas.com/video/self-capacitance-waterproof-touch-button-solution"
+      },
+      {
+        "text": "RL78/G23 Self-capacitance Waterproof Touch Button Demo Sample Software (R01AN6117)",
+        "url": "https://www.renesas.com/us/en/document/apn/rl78g23-self-capacitance-waterproof-touch-button-demo-sample-software-rev100?r=1521766"
+      },
+      {
+        "text": "e-AI × 3D Gesture Recognition - QE for Capacitive Touch",
+        "url": "https://www.renesas.com/us/en/software-tool/qe-capacitive-touch-3d-gesture-recognition-feature#videos_training"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20824910"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20824915"
+      }
+    ]
+  }
+}

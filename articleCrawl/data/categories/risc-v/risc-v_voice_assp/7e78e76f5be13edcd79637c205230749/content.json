@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20855745",
+    "title": "Solution and tools: Is there any example software that can be used to test the solution?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:26:11.809972"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there any example software that can be used to test the solution?\nAnswer:\nThe software for the motor control application is delivered as pre-programmed application within the evaluation kit. Please contact your Renesas sales representative or our development partner for more information. \nSuitable Products\nRISC-V Voice ASSP"
+      },
+      {
+        "type": "text",
+        "content": "Is there any example software that can be used to test the solution?"
+      },
+      {
+        "type": "text",
+        "content": "Is there any example software that can be used to test the solution?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe software for the motor control application is delivered as pre-programmed application within the evaluation kit. Please contact your Renesas sales representative or our development partner for more information. \nSuitable Products\nRISC-V Voice ASSP"
+      },
+      {
+        "type": "text",
+        "content": "The software for the motor control application is delivered as pre-programmed application within the evaluation kit. Please contact your Renesas sales representative or our development partner for more information."
+      },
+      {
+        "type": "text",
+        "content": "The software for the motor control application is delivered as pre-programmed application within the evaluation kit. Please contact your Renesas sales representative or our development partner for more information."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRISC-V Voice ASSP"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RISC-V Voice ASSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RISC-V Voice ASSP"
+    ],
+    "links": []
+  }
+}

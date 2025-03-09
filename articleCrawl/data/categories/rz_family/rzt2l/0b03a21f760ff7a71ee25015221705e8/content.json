@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20853185",
+    "title": "Can the encoder interfaces of the RZ/T2L be used with 2 channels?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:49:56.890101"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan the encoder interfaces of the RZ/T2L be used with 2 channels?\nAnswer:\nYes. It is possible to use 2 channels by combining each of the EnDat2.2, BiSS®-C, HIPERFACE DSL, FA-CODER®, and A-formatTM encoders.\nSuitable Products\nRZ/T2L"
+      },
+      {
+        "type": "text",
+        "content": "Can the encoder interfaces of the RZ/T2L be used with 2 channels?"
+      },
+      {
+        "type": "text",
+        "content": "Can the encoder interfaces of the RZ/T2L be used with 2 channels?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes. It is possible to use 2 channels by combining each of the EnDat2.2, BiSS®-C, HIPERFACE DSL, FA-CODER®, and A-formatTM encoders.\nSuitable Products\nRZ/T2L"
+      },
+      {
+        "type": "text",
+        "content": "Yes. It is possible to use 2 channels by combining each of the EnDat2.2, BiSS®-C, HIPERFACE DSL, FA-CODER®, and A-formatTM encoders."
+      },
+      {
+        "type": "text",
+        "content": "Yes. It is possible to use 2 channels by combining each of the EnDat2.2, BiSS®-C, HIPERFACE DSL, FA-CODER®, and A-formatTM encoders."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/T2L"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/T2L"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/T2L"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20853103"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20855823"
+      }
+    ]
+  }
+}

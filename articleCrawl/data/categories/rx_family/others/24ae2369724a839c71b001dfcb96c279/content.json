@@ -1,0 +1,172 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20940281",
+    "title": "I am using a custom board and LCD. No window appears and the LCD does not respond to touch operations.",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:24:23.782681"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI am using a custom board and LCD. No window appears and the LCD does not respond to touch operations.\nAnswer:\nDid you complete the pin settings?\nIf you select [Custom board] when creating a project, you must use the Smart Configurator to specify the settings for the pins that will be used for peripherals.\n• Properties of each FIT module in the [Components] tab\nSelect the check boxes of the pins to be used.\n• Peripherals in the [Pins] tab\nFor each pin, click [Pin Assignment], and then select the pin to be assigned.\n• For GLCDC (r_glcdc_rx)\n    Suitable Products\nRX Family\n  日本語"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nI am using a custom board and LCD. No window appears and the LCD does not respond to touch operations.\nAnswer:\nDid you complete the pin settings?\nIf you select [Custom board] when creating a project, you must use the Smart Configurator to specify the settings for the pins that will be used for peripherals.\n• Properties of each FIT module in the [Components] tab\nSelect the check boxes of the pins to be used.\n• Peripherals in the [Pins] tab\nFor each pin, click [Pin Assignment], and then select the pin to be assigned.\n• For GLCDC (r_glcdc_rx)\n    Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "I am using a custom board and LCD. No window appears and the LCD does not respond to touch operations."
+      },
+      {
+        "type": "text",
+        "content": "I am using a custom board and LCD. No window appears and the LCD does not respond to touch operations."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nDid you complete the pin settings?\nIf you select [Custom board] when creating a project, you must use the Smart Configurator to specify the settings for the pins that will be used for peripherals.\n• Properties of each FIT module in the [Components] tab\nSelect the check boxes of the pins to be used.\n• Peripherals in the [Pins] tab\nFor each pin, click [Pin Assignment], and then select the pin to be assigned.\n• For GLCDC (r_glcdc_rx)\n    Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Did you complete the pin settings?\nIf you select [Custom board] when creating a project, you must use the Smart Configurator to specify the settings for the pins that will be used for peripherals.\n• Properties of each FIT module in the [Components] tab\nSelect the check boxes of the pins to be used.\n• Peripherals in the [Pins] tab\nFor each pin, click [Pin Assignment], and then select the pin to be assigned.\n• For GLCDC (r_glcdc_rx)"
+      },
+      {
+        "type": "text",
+        "content": "Did you complete the pin settings?\nIf you select [Custom board] when creating a project, you must use the Smart Configurator to specify the settings for the pins that will be used for peripherals."
+      },
+      {
+        "type": "text",
+        "content": "• Properties of each FIT module in the [Components] tab\nSelect the check boxes of the pins to be used."
+      },
+      {
+        "type": "text",
+        "content": "• Peripherals in the [Pins] tab\nFor each pin, click [Pin Assignment], and then select the pin to be assigned."
+      },
+      {
+        "type": "text",
+        "content": "• For GLCDC (r_glcdc_rx)"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370050.png",
+          "alt_text": "",
+          "width": "857",
+          "height": "693",
+          "local_path": "data/categories/rx_family/others/24ae2369724a839c71b001dfcb96c279/images/c2ef01d20c3a4384c8ea21660576743e.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370050-2.png",
+          "alt_text": "",
+          "width": "857",
+          "height": "715",
+          "local_path": "data/categories/rx_family/others/24ae2369724a839c71b001dfcb96c279/images/03bf9495f310eadc6f82d5469dc82805.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370050-3.png",
+          "alt_text": "",
+          "width": "563",
+          "height": "34",
+          "local_path": "data/categories/rx_family/others/24ae2369724a839c71b001dfcb96c279/images/2b6ce40dd1978753f5da261c4d7d4086.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370050-4.png",
+          "alt_text": "",
+          "width": "850",
+          "height": "656",
+          "local_path": "data/categories/rx_family/others/24ae2369724a839c71b001dfcb96c279/images/ce3c68f6064a9f48d481166a92659f42.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370050-5.png",
+          "alt_text": "",
+          "width": "848",
+          "height": "769",
+          "local_path": "data/categories/rx_family/others/24ae2369724a839c71b001dfcb96c279/images/7b1f4044af6c6c7c0d5c73f879cc29b2.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370050.png",
+        "alt_text": "",
+        "width": "857",
+        "height": "693",
+        "local_path": "data/categories/rx_family/others/24ae2369724a839c71b001dfcb96c279/images/c2ef01d20c3a4384c8ea21660576743e.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370050-2.png",
+        "alt_text": "",
+        "width": "857",
+        "height": "715",
+        "local_path": "data/categories/rx_family/others/24ae2369724a839c71b001dfcb96c279/images/03bf9495f310eadc6f82d5469dc82805.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370050-3.png",
+        "alt_text": "",
+        "width": "563",
+        "height": "34",
+        "local_path": "data/categories/rx_family/others/24ae2369724a839c71b001dfcb96c279/images/2b6ce40dd1978753f5da261c4d7d4086.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370050-4.png",
+        "alt_text": "",
+        "width": "850",
+        "height": "656",
+        "local_path": "data/categories/rx_family/others/24ae2369724a839c71b001dfcb96c279/images/ce3c68f6064a9f48d481166a92659f42.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370050-5.png",
+        "alt_text": "",
+        "width": "848",
+        "height": "769",
+        "local_path": "data/categories/rx_family/others/24ae2369724a839c71b001dfcb96c279/images/7b1f4044af6c6c7c0d5c73f879cc29b2.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20857265"
+      }
+    ]
+  }
+}

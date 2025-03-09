@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20538803",
+    "title": "RA2E2: R_IIC_B_SLAVE_Open() does not return an error if slave address is in the range of reserved addresses.",
+    "last_updated": "2020-10-04",
+    "extracted_at": "2025-03-08T23:13:06.784054"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Issue:\nThe RA2E2: R_IIC_B_SLAVE_Open() API does not return an error if the slave address is in the range of reserved addresses. The slave addresses is restricted by the driver to the range specified in the Phillips I2C-bus specification (https://www.nxp.com/docs/en/user-guide/UM10204.pdf page 16 3.1.12 Reserved addresses). If an address is used that is in the restricted range,  the driver for the RA2E2 doesn't report an error.\nWorkaround:\nWhen using the RA2E2 and the R_IIC_B_SLAVE_Open() API, don't use an address within the restricted range- address of the form 0000 XXX or 1111 XXX .\n  Suitable Products\nRA2E2\nFSP\nSourced from: 350147"
+      },
+      {
+        "type": "text",
+        "content": "Issue:\nThe RA2E2: R_IIC_B_SLAVE_Open() API does not return an error if the slave address is in the range of reserved addresses. The slave addresses is restricted by the driver to the range specified in the Phillips I2C-bus specification (https://www.nxp.com/docs/en/user-guide/UM10204.pdf page 16 3.1.12 Reserved addresses). If an address is used that is in the restricted range,  the driver for the RA2E2 doesn't report an error.\nWorkaround:\nWhen using the RA2E2 and the R_IIC_B_SLAVE_Open() API, don't use an address within the restricted range- address of the form 0000 XXX or 1111 XXX .\n  Suitable Products\nRA2E2\nFSP\nSourced from: 350147"
+      },
+      {
+        "type": "text",
+        "content": "Issue:\nThe RA2E2: R_IIC_B_SLAVE_Open() API does not return an error if the slave address is in the range of reserved addresses. The slave addresses is restricted by the driver to the range specified in the Phillips I2C-bus specification (https://www.nxp.com/docs/en/user-guide/UM10204.pdf page 16 3.1.12 Reserved addresses). If an address is used that is in the restricted range,  the driver for the RA2E2 doesn't report an error.\nWorkaround:\nWhen using the RA2E2 and the R_IIC_B_SLAVE_Open() API, don't use an address within the restricted range- address of the form 0000 XXX or 1111 XXX .\n  Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "Issue:\nThe RA2E2: R_IIC_B_SLAVE_Open() API does not return an error if the slave address is in the range of reserved addresses. The slave addresses is restricted by the driver to the range specified in the Phillips I2C-bus specification (https://www.nxp.com/docs/en/user-guide/UM10204.pdf page 16 3.1.12 Reserved addresses). If an address is used that is in the restricted range,  the driver for the RA2E2 doesn't report an error."
+      },
+      {
+        "type": "text",
+        "content": "Issue:\nThe RA2E2: R_IIC_B_SLAVE_Open() API does not return an error if the slave address is in the range of reserved addresses. The slave addresses is restricted by the driver to the range specified in the Phillips I2C-bus specification (https://www.nxp.com/docs/en/user-guide/UM10204.pdf page 16 3.1.12 Reserved addresses). If an address is used that is in the restricted range,  the driver for the RA2E2 doesn't report an error."
+      },
+      {
+        "type": "text",
+        "content": "Workaround:\nWhen using the RA2E2 and the R_IIC_B_SLAVE_Open() API, don't use an address within the restricted range- address of the form 0000 XXX or 1111 XXX ."
+      },
+      {
+        "type": "text",
+        "content": "Workaround:"
+      },
+      {
+        "type": "text",
+        "content": "When using the RA2E2 and the R_IIC_B_SLAVE_Open() API, don't use an address within the restricted range- address of the form 0000 XXX or 1111 XXX ."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA2E2\nFSP\nSourced from: 350147"
+      },
+      {
+        "type": "text",
+        "content": "Sourced from: 350147"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA2E2"
+          ],
+          [
+            "FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [
+      {
+        "type": "pdf",
+        "text": "https://www.nxp.com/docs/en/user-guide/UM10204.pdf",
+        "url": "https://www.nxp.com/docs/en/user-guide/UM10204.pdf"
+      }
+    ],
+    "related_products": [
+      "RA2E2",
+      "FSP"
+    ],
+    "links": []
+  }
+}

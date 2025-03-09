@@ -1,0 +1,252 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21727829",
+    "title": "RA Family: Necessity of connecting capacitors for analog power supplies and reference voltage pins",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:34:03.982410"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIn the RA MCU User’s Manual: Hardware, the following explanation of capacitor connection is required. If the ADC or DAC in the RA MCU is not used, is it necessary to connect capacitors to the following pins?\n(1) Analog power pins: between AVCC0 and AVSS0\n(2) Analog reference voltage pins: between VREFH0 and VREFL0\n(3) Analog reference voltage pins: between VREFH and VREFL\nAnswer:\nIf you don’t utilize the ADCs and DACs inside the RA MCU, you don’t need some of the bypass capacitors specified for the analog power pins.\nThe capacitors for each analog power supply pin are used for the following purposes. Please refer to this information and judge whether or not the target capacitor is necessary.\nbetween AVCC0 and AVSS0\nA 0.1μF capacitor is always required. This capacitor is used not only a bypass capacitor for ADC or DAC but also the bypass capacitor for Port0 IO power supply. The capacitors shown as *1 in the above figure are not required if ADC/DAC is not used. These capacitors are used when there is a need to improve the quality of the MCU's internal analog circuitry.\nbetween VREFH0 and VREFL0\nThe capacitor shown as *1 in the above figure and the 0.1uF capacitor are not required if the ADC (Unit 0) is not in use. Capacitors are used when it is necessary to improve the quality of the analog circuitry inside the MCU\nbetween VREFH and VREFL\nThe capacitor shown as *1 in the above figure and the 0.1uF capacitor are not required if the ADC (Unit 1) or DAC is not in use. Capacitors are used when it is necessary to improve the quality of the analog circuitry inside the MCU.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "In the RA MCU User’s Manual: Hardware, the following explanation of capacitor connection is required. If the ADC or DAC in the RA MCU is not used, is it necessary to connect capacitors to the following pins?\n(1) Analog power pins: between AVCC0 and AVSS0\n(2) Analog reference voltage pins: between VREFH0 and VREFL0\n(3) Analog reference voltage pins: between VREFH and VREFL"
+      },
+      {
+        "type": "text",
+        "content": "In the RA MCU User’s Manual: Hardware, the following explanation of capacitor connection is required. If the ADC or DAC in the RA MCU is not used, is it necessary to connect capacitors to the following pins?"
+      },
+      {
+        "type": "text",
+        "content": "(1) Analog power pins: between AVCC0 and AVSS0"
+      },
+      {
+        "type": "text",
+        "content": "(1) Analog power pins: between AVCC0 and AVSS0"
+      },
+      {
+        "type": "text",
+        "content": "(1) Analog power pins: between"
+      },
+      {
+        "type": "text",
+        "content": "AVCC0"
+      },
+      {
+        "type": "text",
+        "content": "and"
+      },
+      {
+        "type": "text",
+        "content": "AVSS0"
+      },
+      {
+        "type": "text",
+        "content": "(2) Analog reference voltage pins: between VREFH0 and VREFL0"
+      },
+      {
+        "type": "text",
+        "content": "(2) Analog reference voltage pins: between VREFH0 and VREFL0"
+      },
+      {
+        "type": "text",
+        "content": "(2) Analog reference voltage pins: between"
+      },
+      {
+        "type": "text",
+        "content": "VREFH0"
+      },
+      {
+        "type": "text",
+        "content": "and"
+      },
+      {
+        "type": "text",
+        "content": "VREFL0"
+      },
+      {
+        "type": "text",
+        "content": "(3) Analog reference voltage pins: between VREFH and VREFL"
+      },
+      {
+        "type": "text",
+        "content": "(3) Analog reference voltage pins: between VREFH and VREFL"
+      },
+      {
+        "type": "text",
+        "content": "(3)"
+      },
+      {
+        "type": "text",
+        "content": "Analog reference voltage pins: between"
+      },
+      {
+        "type": "text",
+        "content": "VREFH"
+      },
+      {
+        "type": "text",
+        "content": "and"
+      },
+      {
+        "type": "text",
+        "content": "VREFL"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396685.png",
+          "alt_text": "",
+          "width": "878",
+          "height": "616",
+          "local_path": "data/categories/ra_family/ad_converter/ec8377046d706760bccb9769c339b0b2/images/11951266f8acbc9564a59338c81a8045.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIf you don’t utilize the ADCs and DACs inside the RA MCU, you don’t need some of the bypass capacitors specified for the analog power pins.\nThe capacitors for each analog power supply pin are used for the following purposes. Please refer to this information and judge whether or not the target capacitor is necessary.\nbetween AVCC0 and AVSS0\nA 0.1μF capacitor is always required. This capacitor is used not only a bypass capacitor for ADC or DAC but also the bypass capacitor for Port0 IO power supply. The capacitors shown as *1 in the above figure are not required if ADC/DAC is not used. These capacitors are used when there is a need to improve the quality of the MCU's internal analog circuitry.\nbetween VREFH0 and VREFL0\nThe capacitor shown as *1 in the above figure and the 0.1uF capacitor are not required if the ADC (Unit 0) is not in use. Capacitors are used when it is necessary to improve the quality of the analog circuitry inside the MCU\nbetween VREFH and VREFL\nThe capacitor shown as *1 in the above figure and the 0.1uF capacitor are not required if the ADC (Unit 1) or DAC is not in use. Capacitors are used when it is necessary to improve the quality of the analog circuitry inside the MCU.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "If you don’t utilize the ADCs and DACs inside the RA MCU, you don’t need some of the bypass capacitors specified for the analog power pins.\nThe capacitors for each analog power supply pin are used for the following purposes. Please refer to this information and judge whether or not the target capacitor is necessary.\nbetween AVCC0 and AVSS0\nA 0.1μF capacitor is always required. This capacitor is used not only a bypass capacitor for ADC or DAC but also the bypass capacitor for Port0 IO power supply. The capacitors shown as *1 in the above figure are not required if ADC/DAC is not used. These capacitors are used when there is a need to improve the quality of the MCU's internal analog circuitry.\nbetween VREFH0 and VREFL0\nThe capacitor shown as *1 in the above figure and the 0.1uF capacitor are not required if the ADC (Unit 0) is not in use. Capacitors are used when it is necessary to improve the quality of the analog circuitry inside the MCU\nbetween VREFH and VREFL\nThe capacitor shown as *1 in the above figure and the 0.1uF capacitor are not required if the ADC (Unit 1) or DAC is not in use. Capacitors are used when it is necessary to improve the quality of the analog circuitry inside the MCU."
+      },
+      {
+        "type": "text",
+        "content": "If you don’t utilize the ADCs and DACs inside the RA MCU, you don’t need some of the bypass capacitors specified for the analog power pins.\nThe capacitors for each analog power supply pin are used for the following purposes. Please refer to this information and judge whether or not the target capacitor is necessary."
+      },
+      {
+        "type": "text",
+        "content": "If you don’t utilize the ADCs and DACs inside the RA MCU, you don’t need some of the bypass capacitors specified for the analog power pins.\nThe capacitors for each analog power supply pin are used for the following purposes. Please refer to this information and judge whether or not the target capacitor is necessary."
+      },
+      {
+        "type": "text",
+        "content": "If you don’t utilize the ADCs and DACs inside the RA MCU, you don’t need some of the bypass capacitors specified for the analog power pins.\nThe capacitors for each analog power supply pin are used for the following purposes. Please refer to this information and judge whether or not the target capacitor is necessary."
+      },
+      {
+        "type": "text",
+        "content": "between AVCC0 and AVSS0\nA 0.1μF capacitor is always required. This capacitor is used not only a bypass capacitor for ADC or DAC but also the bypass capacitor for Port0 IO power supply. The capacitors shown as *1 in the above figure are not required if ADC/DAC is not used. These capacitors are used when there is a need to improve the quality of the MCU's internal analog circuitry."
+      },
+      {
+        "type": "text",
+        "content": "between"
+      },
+      {
+        "type": "text",
+        "content": "AVCC0"
+      },
+      {
+        "type": "text",
+        "content": "and"
+      },
+      {
+        "type": "text",
+        "content": "AVSS0"
+      },
+      {
+        "type": "text",
+        "content": "μ"
+      },
+      {
+        "type": "text",
+        "content": "F capacitor is always required. This capacitor is used not only a bypass capacitor for ADC or DAC but also the bypass capacitor for Port0 IO power supply. The capacitors"
+      },
+      {
+        "type": "text",
+        "content": "*"
+      },
+      {
+        "type": "text",
+        "content": "are not required"
+      },
+      {
+        "type": "text",
+        "content": "if ADC/DAC is not used. These capacitors are used when there is a need to improve the quality of the MCU's internal analog circuitry."
+      },
+      {
+        "type": "text",
+        "content": "between VREFH0 and VREFL0\nThe capacitor shown as *1 in the above figure and the 0.1uF capacitor are not required if the ADC (Unit 0) is not in use. Capacitors are used when it is necessary to improve the quality of the analog circuitry inside the MCU"
+      },
+      {
+        "type": "text",
+        "content": "between"
+      },
+      {
+        "type": "text",
+        "content": "VREFH0"
+      },
+      {
+        "type": "text",
+        "content": "and"
+      },
+      {
+        "type": "text",
+        "content": "VREFL0"
+      },
+      {
+        "type": "text",
+        "content": "between VREFH and VREFL\nThe capacitor shown as *1 in the above figure and the 0.1uF capacitor are not required if the ADC (Unit 1) or DAC is not in use. Capacitors are used when it is necessary to improve the quality of the analog circuitry inside the MCU."
+      },
+      {
+        "type": "text",
+        "content": "between"
+      },
+      {
+        "type": "text",
+        "content": "VREFH"
+      },
+      {
+        "type": "text",
+        "content": "and"
+      },
+      {
+        "type": "text",
+        "content": "VREFL"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396685.png",
+        "alt_text": "",
+        "width": "878",
+        "height": "616",
+        "local_path": "data/categories/ra_family/ad_converter/ec8377046d706760bccb9769c339b0b2/images/11951266f8acbc9564a59338c81a8045.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21727842"
+      }
+    ]
+  }
+}

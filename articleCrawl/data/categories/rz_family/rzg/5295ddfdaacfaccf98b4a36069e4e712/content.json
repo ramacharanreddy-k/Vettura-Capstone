@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21175347",
+    "title": "RZ/G3S: Transitions between states",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:45:25.073594"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nAbout how long does Linux fast recovery take?\nAnswer:\nIt is possible to transition from the AWO mode or VBATT mode to the ALL_ON mode while the power of the DDR I/O is in the on state. In this case, recovery into Linux takes place rapidly because the data on the DDR is stored. \nThe time for the Linux Kernel to start up after the recovery trigger is about 0.1 sec. The initialization time of the Linux Kernel differs depending on the settings of the kernel, but it is about 0.3 sec. when the settings are minimal. The recovery time needs to be verified with the actual system because it is dependent on the system configuration.\nSuitable Products\nRZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "About how long does Linux fast recovery take?"
+      },
+      {
+        "type": "text",
+        "content": "About how long does Linux fast recovery take?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIt is possible to transition from the AWO mode or VBATT mode to the ALL_ON mode while the power of the DDR I/O is in the on state. In this case, recovery into Linux takes place rapidly because the data on the DDR is stored. \nThe time for the Linux Kernel to start up after the recovery trigger is about 0.1 sec. The initialization time of the Linux Kernel differs depending on the settings of the kernel, but it is about 0.3 sec. when the settings are minimal. The recovery time needs to be verified with the actual system because it is dependent on the system configuration.\nSuitable Products\nRZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "It is possible to transition from the AWO mode or VBATT mode to the ALL_ON mode while the power of the DDR I/O is in the on state. In this case, recovery into Linux takes place rapidly because the data on the DDR is stored. \nThe time for the Linux Kernel to start up after the recovery trigger is about 0.1 sec. The initialization time of the Linux Kernel differs depending on the settings of the kernel, but it is about 0.3 sec. when the settings are minimal. The recovery time needs to be verified with the actual system because it is dependent on the system configuration."
+      },
+      {
+        "type": "text",
+        "content": "It is possible to transition from the AWO mode or VBATT mode to the ALL_ON mode while the power of the DDR I/O is in the on state. In this case, recovery into Linux takes place rapidly because the data on the DDR is stored."
+      },
+      {
+        "type": "text",
+        "content": "The time for the Linux Kernel to start up after the recovery trigger is about 0.1 sec. The initialization time of the Linux Kernel differs depending on the settings of the kernel, but it is about 0.3 sec. when the settings are minimal. The recovery time needs to be verified with the actual system because it is dependent on the system configuration."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/G3S"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/G3S"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21175361"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21175369"
+      }
+    ]
+  }
+}

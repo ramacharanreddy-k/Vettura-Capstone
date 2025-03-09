@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20918712",
+    "title": "Features of RX26T",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:05:51.568334"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat are the features of the RX26T?\nAnswer:\nThe RX26T includes  peripherals and  functions that enable an operating frequency of 120 MHz, an RXv3 core, flash ROM up to 512 KB, RAM up to 64 KB, and multiple motors with PFC control.\nThe key features are detailed below.\nExceptional real-time performance: Featuring the RXv3 core offering the highest level of computing performance and 120-MHz flash memory access.\n5V power supply support: Ensures high noise resistance and dynamic range of analog inputs.\nTwo-motors, three-shunt sensorless vector control and PFC control: The timer function supports 120-MHz PWM (2 channels of three-phase complementary + 2 channels of single-phase complementary) while analog functionality includes a three-unit 12-bit A/D converter and a two-unit, three-channel simultaneous sample & hold circuit\nCustomer board miniaturization/BOM reduction: Featuring a lineup of small form-factor QFN packages (HWQFN: 7x7 mm) equipped with the HOCO high-precision (± 1% @ -20 to 105°C), high-speed on-chip oscillator, a data flash unit, a PGA programmable gain amplifier, and comparator .\nSecure firmware updates: Equipped with dual-bank flash memory and BGO/SWAP that enable FW update without having to stop the system. This product also features Trusted Secure IP-Lite for easy encryption of communication.\nHigh-speed communication: Supports CAN FD and I3C Basic next-generation communication standards\nRX26T: 32-bit Microcontroller Optimized for Dual-Motor and PFC Control\nSuitable Products\nRX26T"
+      },
+      {
+        "type": "text",
+        "content": "What are the features of the RX26T?"
+      },
+      {
+        "type": "text",
+        "content": "What are the features of the RX26T?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RX26T includes  peripherals and  functions that enable an operating frequency of 120 MHz, an RXv3 core, flash ROM up to 512 KB, RAM up to 64 KB, and multiple motors with PFC control.\nThe key features are detailed below.\nExceptional real-time performance: Featuring the RXv3 core offering the highest level of computing performance and 120-MHz flash memory access.\n5V power supply support: Ensures high noise resistance and dynamic range of analog inputs.\nTwo-motors, three-shunt sensorless vector control and PFC control: The timer function supports 120-MHz PWM (2 channels of three-phase complementary + 2 channels of single-phase complementary) while analog functionality includes a three-unit 12-bit A/D converter and a two-unit, three-channel simultaneous sample & hold circuit\nCustomer board miniaturization/BOM reduction: Featuring a lineup of small form-factor QFN packages (HWQFN: 7x7 mm) equipped with the HOCO high-precision (± 1% @ -20 to 105°C), high-speed on-chip oscillator, a data flash unit, a PGA programmable gain amplifier, and comparator .\nSecure firmware updates: Equipped with dual-bank flash memory and BGO/SWAP that enable FW update without having to stop the system. This product also features Trusted Secure IP-Lite for easy encryption of communication.\nHigh-speed communication: Supports CAN FD and I3C Basic next-generation communication standards\nRX26T: 32-bit Microcontroller Optimized for Dual-Motor and PFC Control\nSuitable Products\nRX26T"
+      },
+      {
+        "type": "text",
+        "content": "The RX26T includes  peripherals and  functions that enable an operating frequency of 120 MHz, an RXv3 core, flash ROM up to 512 KB, RAM up to 64 KB, and multiple motors with PFC control.\nThe key features are detailed below.\nExceptional real-time performance: Featuring the RXv3 core offering the highest level of computing performance and 120-MHz flash memory access.\n5V power supply support: Ensures high noise resistance and dynamic range of analog inputs.\nTwo-motors, three-shunt sensorless vector control and PFC control: The timer function supports 120-MHz PWM (2 channels of three-phase complementary + 2 channels of single-phase complementary) while analog functionality includes a three-unit 12-bit A/D converter and a two-unit, three-channel simultaneous sample & hold circuit\nCustomer board miniaturization/BOM reduction: Featuring a lineup of small form-factor QFN packages (HWQFN: 7x7 mm) equipped with the HOCO high-precision (± 1% @ -20 to 105°C), high-speed on-chip oscillator, a data flash unit, a PGA programmable gain amplifier, and comparator .\nSecure firmware updates: Equipped with dual-bank flash memory and BGO/SWAP that enable FW update without having to stop the system. This product also features Trusted Secure IP-Lite for easy encryption of communication.\nHigh-speed communication: Supports CAN FD and I3C Basic next-generation communication standards\nRX26T: 32-bit Microcontroller Optimized for Dual-Motor and PFC Control"
+      },
+      {
+        "type": "text",
+        "content": "The RX26T includes  peripherals and  functions that enable an operating frequency of 120 MHz, an RXv3 core, flash ROM up to 512 KB, RAM up to 64 KB, and multiple motors with PFC control."
+      },
+      {
+        "type": "text",
+        "content": "The key features are detailed below."
+      },
+      {
+        "type": "text",
+        "content": "RX26T: 32-bit Microcontroller Optimized for Dual-Motor and PFC Control"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX26T"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX26T"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX26T"
+    ],
+    "links": [
+      {
+        "text": "RX26T: 32-bit Microcontroller Optimized for Dual-Motor and PFC Control",
+        "url": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx26t-32-bit-microcontroller-optimized-dual-motor-and-pfc-control"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20918713"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20918714"
+      }
+    ]
+  }
+}

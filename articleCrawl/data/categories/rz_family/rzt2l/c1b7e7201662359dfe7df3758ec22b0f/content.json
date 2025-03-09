@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20853186",
+    "title": "RZ/T2L: How should I handle unused pins?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:49:52.238229"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow should I handle unused pins?\nAnswer:\nBe careful because the handling differs depending on the pin. \nHandle the unused pins in reference to the following items. \nRZ/T2L Group User’s Manual: Hardware (r01uh0985ej0100-rzt2l)\n16.5 Handling of Unused Pins\nTable 16.24 Handling of unused pins\nSuitable Products\nRZ/T2L"
+      },
+      {
+        "type": "text",
+        "content": "How should I handle unused pins?"
+      },
+      {
+        "type": "text",
+        "content": "How should I handle unused pins?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nBe careful because the handling differs depending on the pin. \nHandle the unused pins in reference to the following items. \nRZ/T2L Group User’s Manual: Hardware (r01uh0985ej0100-rzt2l)\n16.5 Handling of Unused Pins\nTable 16.24 Handling of unused pins\nSuitable Products\nRZ/T2L"
+      },
+      {
+        "type": "text",
+        "content": "Be careful because the handling differs depending on the pin. \nHandle the unused pins in reference to the following items. \nRZ/T2L Group User’s Manual: Hardware (r01uh0985ej0100-rzt2l)\n16.5 Handling of Unused Pins\nTable 16.24 Handling of unused pins"
+      },
+      {
+        "type": "text",
+        "content": "Be careful because the handling differs depending on the pin."
+      },
+      {
+        "type": "text",
+        "content": "Handle the unused pins in reference to the following items. \nRZ/T2L Group User’s Manual: Hardware (r01uh0985ej0100-rzt2l)"
+      },
+      {
+        "type": "text",
+        "content": "16.5 Handling of Unused Pins\nTable 16.24 Handling of unused pins"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/T2L"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/T2L"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/T2L"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20853104"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20855824"
+      }
+    ]
+  }
+}

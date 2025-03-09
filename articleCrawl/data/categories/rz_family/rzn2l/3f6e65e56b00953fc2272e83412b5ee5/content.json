@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20612318",
+    "title": "RZ/N2L: What is the maximum communication speed when the serial host interface is used?",
+    "last_updated": "2022-09-08",
+    "extracted_at": "2025-03-08T23:46:41.403448"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the maximum communication speed when the serial host interface is used?\nAnswer:\nThe maximum clock frequency is 40 MHz. The data width can be selected from 1, 4, and 8 bits. DDR operation is not supported.\nSuitable Products\nRZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "What is the maximum communication speed when the serial host interface is used?"
+      },
+      {
+        "type": "text",
+        "content": "What is the maximum communication speed when the serial host interface is used?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe maximum clock frequency is 40 MHz. The data width can be selected from 1, 4, and 8 bits. DDR operation is not supported.\nSuitable Products\nRZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "The maximum clock frequency is 40 MHz. The data width can be selected from 1, 4, and 8 bits. DDR operation is not supported."
+      },
+      {
+        "type": "text",
+        "content": "The maximum clock frequency is 40 MHz. The data width can be selected from 1, 4, and 8 bits. DDR operation is not supported."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/N2L"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/N2L"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20612299"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20612337"
+      }
+    ]
+  }
+}

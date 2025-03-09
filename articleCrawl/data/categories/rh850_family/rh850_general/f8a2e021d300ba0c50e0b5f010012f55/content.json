@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21814376",
+    "title": "Which IDE to use for RH850 devices ?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:28:19.400121"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Last updated: 19/02/2025"
+      },
+      {
+        "type": "text",
+        "content": "Which IDE to use for RH850 devices ?"
+      },
+      {
+        "type": "text",
+        "content": "The selection of IDE depends on your personal preference and which compiler are you using."
+      },
+      {
+        "type": "text",
+        "content": "If you are using the GHS compiler, it is recommended to use also the GHS MULTI IDE. Alternatively you can use e² studio or Renesas CS+ IDE."
+      },
+      {
+        "type": "text",
+        "content": "If you are using the Renesas CC-RH compiler you can choose between e² studio and CS+."
+      },
+      {
+        "type": "text",
+        "content": "If you are using the IAR compiler, it is recommended to use the IAR Embedded Workbench. Alternatively you can use e2 studio."
+      }
+    ],
+    "images": [],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": [
+      {
+        "text": "e² studio",
+        "url": "https://www.renesas.com/en/software-tool/e-studio?srsltid=AfmBOorL5JEzUjUtPOkCJi6V-efo2bsK4nLKpzDw6XP__OSo2JfLhCmg"
+      },
+      {
+        "text": "CS+",
+        "url": "https://www.renesas.com/en/software-tool/cs?srsltid=AfmBOopSeLXoMRgE66dTJRXGDMITxqaCGJS8OGXOIN9tGYOviVuUk06V"
+      }
+    ]
+  }
+}

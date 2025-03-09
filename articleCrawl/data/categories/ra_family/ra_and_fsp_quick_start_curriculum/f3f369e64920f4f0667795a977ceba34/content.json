@@ -1,0 +1,294 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20522329",
+    "title": "RA and FSP Curriculum: Introductory Courses",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:11:36.094234"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Curriculum courses assist a new user of the RA MCU Family and the FSP tool flow to become an efficient and knowledgeable developer in record time. These courses are do it yourself presentations and labs and are designed to be taken at your own pace- a section at a time or all at once."
+      },
+      {
+        "type": "text",
+        "content": "Presentation and lab sections usually take less than 15min to complete and the full course will cover all the key pieces to help you master the course topic. Below is a list of the Introductory courses. Just click on the title to be taken to the Knowledge Base article that hosts the material."
+      },
+      {
+        "type": "text",
+        "content": "I-001 Introduction to RA MCU Family- a deep dive technical presentation that provides needed background on RA devices including: RA Family lineup and roadmap, target applications, ARM specific features, Renesas specific peripherals, development tools and available support."
+      },
+      {
+        "type": "text",
+        "content": "I-001 Introduction to RA MCU Family- a deep dive technical presentation that provides needed background on RA devices including: RA Family lineup and roadmap, target applications, ARM specific features, Renesas specific peripherals, development tools and available support."
+      },
+      {
+        "type": "text",
+        "content": "I-001 Introduction to RA MCU Family-"
+      },
+      {
+        "type": "text",
+        "content": "a deep dive technical presentation that provides needed background on RA devices including: RA Family lineup and roadmap, target applications, ARM specific features, Renesas specific peripherals, development tools and available support."
+      },
+      {
+        "type": "text",
+        "content": "I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone)- a step by step PPT hands-on lab using FSP and the EK-RA6M4 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects."
+      },
+      {
+        "type": "text",
+        "content": "I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone)- a step by step PPT hands-on lab using FSP and the EK-RA6M4 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects."
+      },
+      {
+        "type": "text",
+        "content": "I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone)-"
+      },
+      {
+        "type": "text",
+        "content": "a step by step PPT hands-on lab using FSP and the EK-RA6M4 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Non-Trustzone projects."
+      },
+      {
+        "type": "text",
+        "content": "I-002B Fundamentals of FSP Presentation and Lab (Trustzone)- a step by step PPT hands-on lab using FSP and the EK-RA6M4 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Trustzone projects and includes an introduction to Trustzone and an overview of FSP Trustzone tools."
+      },
+      {
+        "type": "text",
+        "content": "I-002B Fundamentals of FSP Presentation and Lab (Trustzone)- a step by step PPT hands-on lab using FSP and the EK-RA6M4 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Trustzone projects and includes an introduction to Trustzone and an overview of FSP Trustzone tools."
+      },
+      {
+        "type": "text",
+        "content": "I-002B Fundamentals of FSP Presentation and Lab (Trustzone)-"
+      },
+      {
+        "type": "text",
+        "content": "a step by step PPT hands-on lab using FSP and the EK-RA6M4 kit. It introduces FSP including components, RTOS, Middleware, sources, example projects and documentation. The labs section provides a hands-on introduction to using the FSP configurator, each of the configuration tabs, adding modules, building, and debugging. This version is for Trustzone projects and includes an introduction to Trustzone and an overview of FSP Trustzone tools."
+      },
+      {
+        "type": "text",
+        "content": "I-003 Introduction to FSP FreeRTOS- an overview presentation covering the key features of FreeRTOS and a hands-on lab using FSP and the EK-RA6M4 kit. The lab illustrates the FSP implementation of key RTOS elements such as: threads/tasks, priorities, task handles, task properties, message queues, interrupts and semaphores, queues and interrupts, mutexes and priority inversion, and event groups."
+      },
+      {
+        "type": "text",
+        "content": "I-003 Introduction to FSP FreeRTOS- an overview presentation covering the key features of FreeRTOS and a hands-on lab using FSP and the EK-RA6M4 kit. The lab illustrates the FSP implementation of key RTOS elements such as: threads/tasks, priorities, task handles, task properties, message queues, interrupts and semaphores, queues and interrupts, mutexes and priority inversion, and event groups."
+      },
+      {
+        "type": "text",
+        "content": "I-003 Introduction to FSP FreeRTOS-"
+      },
+      {
+        "type": "text",
+        "content": "an overview presentation covering the key features of FreeRTOS and a hands-on lab using FSP and the EK-RA6M4 kit. The lab illustrates the FSP implementation of key RTOS elements such as: threads/tasks, priorities, task handles, task properties, message queues, interrupts and semaphores, queues and interrupts, mutexes and priority inversion, and event groups."
+      },
+      {
+        "type": "text",
+        "content": "I-004 Introduction to FSP Azure RTOS ThreadX- an overview presentation covering the key features of Azure RTOS ThreadX and a hands-on lab using FSP and the EK-RA4M4 kit. The lab illustrates the FSP implementation of key RTOS elements such as: threads, priorities, thread handles, thread properties, message queues, interrupts and semaphores, event chaining, mutexes, priority inversion, and inheritance, event flags and thread synchronization."
+      },
+      {
+        "type": "text",
+        "content": "I-004 Introduction to FSP Azure RTOS ThreadX- an overview presentation covering the key features of Azure RTOS ThreadX and a hands-on lab using FSP and the EK-RA4M4 kit. The lab illustrates the FSP implementation of key RTOS elements such as: threads, priorities, thread handles, thread properties, message queues, interrupts and semaphores, event chaining, mutexes, priority inversion, and inheritance, event flags and thread synchronization."
+      },
+      {
+        "type": "text",
+        "content": "I-004 Introduction to FSP Azure RTOS ThreadX-"
+      },
+      {
+        "type": "text",
+        "content": "an overview presentation covering the key features of Azure RTOS ThreadX and a hands-on lab using FSP and the EK-RA4M4 kit. The lab illustrates the FSP implementation of key RTOS elements such as: threads, priorities, thread handles, thread properties, message queues, interrupts and semaphores, event chaining, mutexes, priority inversion, and inheritance, event flags and thread synchronization."
+      },
+      {
+        "type": "text",
+        "content": "I-005 Introduction to Keil MDK for RA- an overview presentation covering the key topics needed to select target devices and boards, create and use projects, include and configure project modules, and debug a simple project. The presentation includes a step-by-step process that shows the student how to install, create a project, compile and debug a design."
+      },
+      {
+        "type": "text",
+        "content": "I-005 Introduction to Keil MDK for RA- an overview presentation covering the key topics needed to select target devices and boards, create and use projects, include and configure project modules, and debug a simple project. The presentation includes a step-by-step process that shows the student how to install, create a project, compile and debug a design."
+      },
+      {
+        "type": "text",
+        "content": "I-005 Introduction to Keil MDK for RA- an overview presentation covering the key topics needed to select target devices and boards, create and use projects, include and configure project modules, and debug a simple project. The presentation includes a step-by-step process that shows the student how to install, create a project, compile and debug a design."
+      },
+      {
+        "type": "text",
+        "content": "I-005 Introduction to Keil MDK for RA- an overview presentation covering the key topics needed to select target devices and boards, create and use projects, include and configure project modules, and debug a simple project. The presentation includes a step-by-step process that shows the student how to install, create a project, compile and debug a design."
+      },
+      {
+        "type": "text",
+        "content": "I-005 Introduction to Keil MDK for RA-"
+      },
+      {
+        "type": "text",
+        "content": "an overview presentation covering the key topics needed to select target devices and boards, create and use projects, include and configure project modules, and debug a simple project. The presentation includes a step-by-step process that shows the student how to install, create a project, compile and debug a design."
+      },
+      {
+        "type": "text",
+        "content": "I-006 Introduction to IAR and EWARM for RA- an overview presentation covering the key topics needed to select target devices and boards, create and use projects, include and configure project modules, and debug a simple project. The presentation includes a step-by-step process that shows the student how to install, create a project, compile and debug a design."
+      },
+      {
+        "type": "text",
+        "content": "I-006 Introduction to IAR and EWARM for RA- an overview presentation covering the key topics needed to select target devices and boards, create and use projects, include and configure project modules, and debug a simple project. The presentation includes a step-by-step process that shows the student how to install, create a project, compile and debug a design."
+      },
+      {
+        "type": "text",
+        "content": "I-006 Introduction to IAR and EWARM for RA- an overview presentation covering the key topics needed to select target devices and boards, create and use projects, include and configure project modules, and debug a simple project. The presentation includes a step-by-step process that shows the student how to install, create a project, compile and debug a design."
+      },
+      {
+        "type": "text",
+        "content": "I-006 Introduction to IAR and EWARM for RA- an overview presentation covering the key topics needed to select target devices and boards, create and use projects, include and configure project modules, and debug a simple project. The presentation includes a step-by-step process that shows the student how to install, create a project, compile and debug a design."
+      },
+      {
+        "type": "text",
+        "content": "I-006 Introduction to IAR and EWARM for RA- an overview presentation covering the key topics needed to select target devices and boards, create and use projects, include and configure project modules, and debug a simple project. The presentation includes a step-by-step process that shows the student how to install, create a project, compile and debug a design."
+      },
+      {
+        "type": "text",
+        "content": "I-007 Introduction to MCUboot for RA and FSP- an overview presentation covers the key topics needed to understand and use the MCUboot capability for RA and FSP. The associated lab shows all the key steps needed to create a boot project and use it with a simple application program."
+      },
+      {
+        "type": "text",
+        "content": "I-007 Introduction to MCUboot for RA and FSP- an overview presentation covers the key topics needed to understand and use the MCUboot capability for RA and FSP. The associated lab shows all the key steps needed to create a boot project and use it with a simple application program."
+      },
+      {
+        "type": "text",
+        "content": "I-007 Introduction to MCUboot for RA and FSP- an overview presentation covers the key topics needed to understand and use the MCUboot capability for RA and FSP. The associated lab shows all the key steps needed to create a boot project and use it with a simple application program."
+      },
+      {
+        "type": "text",
+        "content": "I-007 Introduction to MCUboot for RA and FSP- an overview presentation covers the key topics needed to understand and use the MCUboot capability for RA and FSP. The associated lab shows all the key steps needed to create a boot project and use it with a simple application program."
+      },
+      {
+        "type": "text",
+        "content": "I-008 Introduction to Debugging for RA and FSP- an overview presentation provides a quick introduction to Renesas MCUs, Kits and Tools. An overview of debugging is provided as an introduction to the hands-on lab that details key debugging techniques and flows for RA and FSP. The lab uses FSP 4.0.0 and the EK-RA6M4 kit."
+      },
+      {
+        "type": "text",
+        "content": "I-008 Introduction to Debugging for RA and FSP- an overview presentation provides a quick introduction to Renesas MCUs, Kits and Tools. An overview of debugging is provided as an introduction to the hands-on lab that details key debugging techniques and flows for RA and FSP. The lab uses FSP 4.0.0 and the EK-RA6M4 kit."
+      },
+      {
+        "type": "text",
+        "content": "I-008 Introduction to Debugging for RA and FSP- an overview presentation provides a quick introduction to Renesas MCUs, Kits and Tools. An overview of debugging is provided as an introduction to the hands-on lab that details key debugging techniques and flows for RA and FSP. The lab uses FSP 4.0.0 and the EK-RA6M4 kit."
+      },
+      {
+        "type": "text",
+        "content": "I-008 Introduction to Debugging for RA and FSP- an overview presentation provides a quick introduction to Renesas MCUs, Kits and Tools. An overview of debugging is provided as an introduction to the hands-on lab that details key debugging techniques and flows for RA and FSP. The lab uses FSP 4.0.0 and the EK-RA6M4 kit."
+      },
+      {
+        "type": "text",
+        "content": "overview presentation provides a quick introduction to Renesas MCUs, Kits and Tools. An overview of debugging is provided as an introduction to the hands-on lab that details key debugging techniques and flows for RA and FSP. The lab uses FSP 4.0.0 and the EK-RA6M4 kit"
+      },
+      {
+        "type": "text",
+        "content": "I-009 Introduction to Security for RA and FSP- an overview presentation provides a quick introduction to security technology, use cases and capabilities of RA and FSP with a focus on security key creation, installation, use and the use of Renesas tools in the creation of user keys (optional advanced section). The lab uses FSP 4.0.0 and the EK-RA6M4 kit."
+      },
+      {
+        "type": "text",
+        "content": "I-009 Introduction to Security for RA and FSP- an overview presentation provides a quick introduction to security technology, use cases and capabilities of RA and FSP with a focus on security key creation, installation, use and the use of Renesas tools in the creation of user keys (optional advanced section). The lab uses FSP 4.0.0 and the EK-RA6M4 kit."
+      },
+      {
+        "type": "text",
+        "content": "I-009 Introduction to Security for RA and FSP- an overview presentation provides a quick introduction to security technology, use cases and capabilities of RA and FSP with a focus on security key creation, installation, use and the use of Renesas tools in the creation of user keys (optional advanced section). The lab uses FSP 4.0.0 and the EK-RA6M4 kit."
+      },
+      {
+        "type": "text",
+        "content": "I-009 Introduction to Security for RA and FSP- an overview presentation provides a quick introduction to security technology, use cases and capabilities of RA and FSP with a focus on security key creation, installation, use and the use of Renesas tools in the creation of user keys (optional advanced section). The lab uses FSP 4.0.0 and the EK-RA6M4 kit."
+      },
+      {
+        "type": "text",
+        "content": "an overview presentation provides a quick introduction to security technology, use cases and capabilities of RA and FSP with a focus on security key creation, installation, use and the use of Renesas tools in the creation of user keys (optional advanced section). The lab uses FSP 4.0.0 and the EK-RA6M4 kit"
+      },
+      {
+        "type": "text",
+        "content": "Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA MCU"
+      },
+      {
+        "type": "text",
+        "content": "RA MCU"
+      },
+      {
+        "type": "text",
+        "content": "RA MCU"
+      },
+      {
+        "type": "text",
+        "content": "Source:    NA"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA MCU"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA MCU"
+    ],
+    "links": [
+      {
+        "text": "I-001 Introduction to RA MCU Family",
+        "url": "https://en-support.renesas.com/knowledgeBase/20522559"
+      },
+      {
+        "text": "I-002A Fundamentals of FSP Presentation and Lab (Non-Trustzone)",
+        "url": "https://en-support.renesas.com/knowledgeBase/20522676"
+      },
+      {
+        "text": "I-002B Fundamentals of FSP Presentation and Lab (Trustzone)",
+        "url": "https://en-support.renesas.com/knowledgeBase/20522688"
+      },
+      {
+        "text": "I-003 Introduction to FSP FreeRTOS",
+        "url": "https://en-support.renesas.com/knowledgeBase/20522699"
+      },
+      {
+        "text": "I-004 Introduction to FSP Azure RTOS ThreadX",
+        "url": "https://en-support.renesas.com/knowledgeBase/20522751"
+      },
+      {
+        "text": "I-005 Introduction to Keil MDK for RA",
+        "url": "https://en-support.renesas.com/knowledgeBase/20749953"
+      },
+      {
+        "text": "I-006 Introduction to IAR and EWARM for RA",
+        "url": "https://en-support.renesas.com/knowledgeBase/20749926"
+      },
+      {
+        "text": "I-007 Introduction to MCUboot for RA and FSP",
+        "url": "https://en-support.renesas.com/knowledgeBase/20773940"
+      },
+      {
+        "text": "I-008 Introduction to Debugging for RA and FSP",
+        "url": "https://en-support.renesas.com/knowledgeBase/20780396"
+      },
+      {
+        "text": "I-009 Introduction to Security for RA and FSP",
+        "url": "https://en-support.renesas.com/knowledgeBase/20780566"
+      }
+    ]
+  }
+}

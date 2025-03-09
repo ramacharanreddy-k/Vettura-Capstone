@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20590550",
+    "title": "OctaFlash connection of RZ/A3UL",
+    "last_updated": "2022-04-08",
+    "extracted_at": "2025-03-08T23:42:52.798006"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there anything to be careful about when connecting Octal-SPI flash memory to the RZ/A3UL?\nAnswer:\nConfirm the connectivity of the flash memory to be used with its manufacturer. \nNote also that multiple flash memory devices cannot be connected to the RZ/A3UL because it has 1 channel (4-bit).\nSuitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Is there anything to be careful about when connecting Octal-SPI flash memory to the RZ/A3UL?"
+      },
+      {
+        "type": "text",
+        "content": "Is there anything to be careful about when connecting Octal-SPI flash memory to the RZ/A3UL?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nConfirm the connectivity of the flash memory to be used with its manufacturer. \nNote also that multiple flash memory devices cannot be connected to the RZ/A3UL because it has 1 channel (4-bit).\nSuitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Confirm the connectivity of the flash memory to be used with its manufacturer. \nNote also that multiple flash memory devices cannot be connected to the RZ/A3UL because it has 1 channel (4-bit)."
+      },
+      {
+        "type": "text",
+        "content": "Confirm the connectivity of the flash memory to be used with its manufacturer. \nNote also that multiple flash memory devices cannot be connected to the RZ/A3UL because it has 1 channel (4-bit)."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A3UL"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A3UL"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A3UL"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20590558"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20590567"
+      }
+    ]
+  }
+}

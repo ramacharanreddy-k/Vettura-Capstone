@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21062252",
+    "title": "Flexible Application Accelerator (FAA)",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:52:49.003974"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is a Flexible Application Accelerator (FAA)?\nAnswer:\nA co-processor that can operate independently of the CPU at high speed, and can improve various processing speeds such as inverter control, encryption, sensing, and arithmetic processing by parallel processing with the CPU. For specific arithmetic processing, it can execute faster than 32-bit DSPs and MCUs.\nSuitable Products\nRL78/G24"
+      },
+      {
+        "type": "text",
+        "content": "What is a Flexible Application Accelerator (FAA)?"
+      },
+      {
+        "type": "text",
+        "content": "What is a Flexible Application Accelerator (FAA)?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nA co-processor that can operate independently of the CPU at high speed, and can improve various processing speeds such as inverter control, encryption, sensing, and arithmetic processing by parallel processing with the CPU. For specific arithmetic processing, it can execute faster than 32-bit DSPs and MCUs.\nSuitable Products\nRL78/G24"
+      },
+      {
+        "type": "text",
+        "content": "A co-processor that can operate independently of the CPU at high speed, and can improve various processing speeds such as inverter control, encryption, sensing, and arithmetic processing by parallel processing with the CPU. For specific arithmetic processing, it can execute faster than 32-bit DSPs and MCUs."
+      },
+      {
+        "type": "text",
+        "content": "A co-processor that can operate independently of the CPU at high speed, and can improve various processing speeds such as inverter control, encryption, sensing, and arithmetic processing by parallel processing with the CPU. For specific arithmetic processing, it can execute faster than 32-bit DSPs and MCUs."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/G24"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G24"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G24"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21062259"
+      }
+    ]
+  }
+}

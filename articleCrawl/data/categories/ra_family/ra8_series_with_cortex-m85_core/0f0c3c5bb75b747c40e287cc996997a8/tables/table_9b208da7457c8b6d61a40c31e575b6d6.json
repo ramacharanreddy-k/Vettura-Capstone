@@ -1,0 +1,73 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "",
+      "Supplier",
+      "Part Number",
+      "Compatible with RA8x1 [Y/N]"
+    ],
+    [
+      "Octal / Hyper RAM",
+      "JSC",
+      "JSC28SSU8AGDY",
+      "Y"
+    ],
+    [
+      "AP Memory",
+      "APS6408L-3OC",
+      "In progress"
+    ],
+    [
+      "ISSI",
+      "IS66WVO8M8DALL/BLL",
+      "In progress"
+    ],
+    [
+      "Cypress",
+      "S27KL0641",
+      "Y"
+    ],
+    [
+      "Octal / Hyper Flash",
+      "Infineon",
+      "S28HS512TGABHI01",
+      "Y"
+    ],
+    [
+      "ISSI",
+      "IS25LX032/64/128\nIS25WX032/64/128",
+      "Y\nY"
+    ],
+    [
+      "Macronix",
+      "MX25LM51245G",
+      "Y"
+    ],
+    [
+      "Macronix",
+      "MX25UW51245G",
+      "Y"
+    ],
+    [
+      "Cypress",
+      "S26KL512S",
+      "Y"
+    ],
+    [
+      "Micron (XccelaFlash)",
+      "MT25QL128ABA\nMT35XL512ABA",
+      "Y\nY"
+    ],
+    [
+      "Cypress",
+      "S25FS512S",
+      "Y"
+    ],
+    [
+      "Macronix",
+      "MX25R1635F",
+      "Y"
+    ]
+  ]
+}

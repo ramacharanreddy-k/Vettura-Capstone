@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20797656",
+    "title": "RZ/V2L: Execution error happen when running DRP-AI sample application",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:50:59.448457"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nSample Application (e.g. app_tinyyolov2_cam) included in DRP-AI Support Package does not work and output error message below.\n[ERROR] Failed to initialize Camera.\nAnswer:\nWhen apply RZ/V2L ISP Support Package after applying RZ/V2L DRP-AI Support Package to RZ/V2L Linux Package, some of sample applications in RZ/V2L DRP-AI Support Package become unusable. Please refere following document for more detail.\nhttps://www.renesas.com/document/oth/rzv2l-isp-support-package-note-caution\nSuitable Products\nRZ/V2L"
+      },
+      {
+        "type": "text",
+        "content": "Sample Application (e.g. app_tinyyolov2_cam) included in DRP-AI Support Package does not work and output error message below.\n[ERROR] Failed to initialize Camera."
+      },
+      {
+        "type": "text",
+        "content": "Sample Application (e.g. app_tinyyolov2_cam) included in DRP-AI Support Package does not work and output error message below.\n[ERROR] Failed to initialize Camera."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nWhen apply RZ/V2L ISP Support Package after applying RZ/V2L DRP-AI Support Package to RZ/V2L Linux Package, some of sample applications in RZ/V2L DRP-AI Support Package become unusable. Please refere following document for more detail.\nhttps://www.renesas.com/document/oth/rzv2l-isp-support-package-note-caution\nSuitable Products\nRZ/V2L"
+      },
+      {
+        "type": "text",
+        "content": "When apply RZ/V2L ISP Support Package after applying RZ/V2L DRP-AI Support Package to RZ/V2L Linux Package, some of sample applications in RZ/V2L DRP-AI Support Package become unusable. Please refere following document for more detail.\nhttps://www.renesas.com/document/oth/rzv2l-isp-support-package-note-caution"
+      },
+      {
+        "type": "text",
+        "content": "When apply RZ/V2L ISP Support Package after applying RZ/V2L DRP-AI Support Package to RZ/V2L Linux Package, some of sample applications in RZ/V2L DRP-AI Support Package become unusable. Please refere following document for more detail."
+      },
+      {
+        "type": "text",
+        "content": "https://www.renesas.com/document/oth/rzv2l-isp-support-package-note-caution"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V2L"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V2L"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V2L"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/document/oth/rzv2l-isp-support-package-note-caution",
+        "url": "https://www.renesas.com/document/oth/rzv2l-isp-support-package-note-caution"
+      },
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20797657"
+      }
+    ]
+  }
+}

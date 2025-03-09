@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18826702",
+    "title": "Can the embedded USB run without an external oscillator on RA Family MCU Groups?",
+    "last_updated": "2022-01-04",
+    "extracted_at": "2025-03-08T23:13:32.078840"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan the embedded USB run without an external oscillator on RA Family MCU Groups?"
+      },
+      {
+        "type": "text",
+        "content": "Can the embedded USB run without an external oscillator on RA Family MCU Groups?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RA4M1 Group has the ability to operate a full speed USB interface in function mode (device mode) without the need for an external crystal and associated circuitry. It accomplishes this by driving the USB peripheral from the internal HOCO (High-speed on-chip oscillator) running at 48MHz and continuously adjusting the trim automatically, by referencing the arrival of SOF (start-of-frame) packets from the USB host. To do this the RA4M1 MCU must be configured in two ways:\n# First, Set the HOCO to run at 48MHz and configure the Clock Src to be the HOCO.\n# Second, Set the USBCLKSEL bit in the USBCKCR register.\nFor the RA6M1, RA6M2, and RA6M3 groups, if the target device has an external 32.768kHz (± 50ppm) crystal unit, the USB full speed module can be operated by modifying the HOCO clock with FLL.\nFor details refer to TECHNICAL UPDATE \"RA6M1 Group, RA6M2 Group, RA6M3 Group, RA6T1 Group, enhancement of HOCO accuracy with FLL\"."
+      },
+      {
+        "type": "text",
+        "content": "The RA4M1 Group has the ability to operate a full speed USB interface in function mode (device mode) without the need for an external crystal and associated circuitry. It accomplishes this by driving the USB peripheral from the internal HOCO (High-speed on-chip oscillator) running at 48MHz and continuously adjusting the trim automatically, by referencing the arrival of SOF (start-of-frame) packets from the USB host. To do this the RA4M1 MCU must be configured in two ways:\n# First, Set the HOCO to run at 48MHz and configure the Clock Src to be the HOCO.\n# Second, Set the USBCLKSEL bit in the USBCKCR register.\nFor the RA6M1, RA6M2, and RA6M3 groups, if the target device has an external 32.768kHz (± 50ppm) crystal unit, the USB full speed module can be operated by modifying the HOCO clock with FLL.\nFor details refer to TECHNICAL UPDATE \"RA6M1 Group, RA6M2 Group, RA6M3 Group, RA6T1 Group, enhancement of HOCO accuracy with FLL\"."
+      },
+      {
+        "type": "text",
+        "content": "The RA4M1 Group has the ability to operate a full speed USB interface in function mode (device mode) without the need for an external crystal and associated circuitry. It accomplishes this by driving the USB peripheral from the internal HOCO (High-speed on-chip oscillator) running at 48MHz and continuously adjusting the trim automatically, by referencing the arrival of SOF (start-of-frame) packets from the USB host. To do this the RA4M1 MCU must be configured in two ways:\n# First, Set the HOCO to run at 48MHz and configure the Clock Src to be the HOCO.\n# Second, Set the USBCLKSEL bit in the USBCKCR register.\nFor the RA6M1, RA6M2, and RA6M3 groups, if the target device has an external 32.768kHz (± 50ppm) crystal unit, the USB full speed module can be operated by modifying the HOCO clock with FLL.\nFor details refer to TECHNICAL UPDATE \"RA6M1 Group, RA6M2 Group, RA6M3 Group, RA6T1 Group, enhancement of HOCO accuracy with FLL\"."
+      },
+      {
+        "type": "text",
+        "content": "The RA4M1 Group has the ability to operate a full speed USB interface in function mode (device mode) without the need for an external crystal and associated circuitry. It accomplishes this by driving the USB peripheral from the internal HOCO (High-speed on-chip oscillator) running at 48MHz and continuously adjusting the trim automatically, by referencing the arrival of SOF (start-of-frame) packets from the USB host. To do this the RA4M1 MCU must be configured in two ways:\n# First, Set the HOCO to run at 48MHz and configure the Clock Src to be the HOCO.\n# Second, Set the USBCLKSEL bit in the USBCKCR register."
+      },
+      {
+        "type": "text",
+        "content": "For the RA6M1, RA6M2, and RA6M3 groups, if the target device has an external 32.768kHz (± 50ppm) crystal unit, the USB full speed module can be operated by modifying the HOCO clock with FLL."
+      },
+      {
+        "type": "text",
+        "content": "For details refer to TECHNICAL UPDATE \"RA6M1 Group, RA6M2 Group, RA6M3 Group, RA6T1 Group, enhancement of HOCO accuracy with FLL\"."
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": [
+      {
+        "text": "RA6M1 Group, RA6M2 Group, RA6M3 Group, RA6T1 Group, enhancement of HOCO accuracy with FLL",
+        "url": "https://www.renesas.com/document/tcu/ra6m1-group-ra6m2-group-ra6m3-group-ra6t1-group-enhancement-hoco-accuracy-fll?language=en"
+      },
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/18826765"
+      }
+    ]
+  }
+}

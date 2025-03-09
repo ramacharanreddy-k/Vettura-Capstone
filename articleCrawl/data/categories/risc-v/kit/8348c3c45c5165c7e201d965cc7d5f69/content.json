@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21584038",
+    "title": "Using IAR RISC-V tools to work with the Renesas R9A02G021 Fast Prototyping Board",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:25:10.431117"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow do I configure the IAR RISC-V tools to work with the Renesas R9A02G021 Fast Prototyping Board.\nAnswer:\nThe Fast Prototyping board has the onboard JLINK so you will have to use the Segger JLINK GDB Server to this setup.\nConfiguration options in IAR Embedded Work Bench\n    The entry for the TCP/IP Address or hostname[.port] is different that what you expect this entry is using the localhost,port (using a comma to separate the two.)\n    Launch the Segger Jlink GDB Server and configure as shown below\nOnce configured make sure the board is connected to your computer and launch the application by clicking OK.\nThis Dialog box should appear.  You can select the option to stay on top if you want but it is not needed.\n  Suitable Products\nR9A02G021"
+      },
+      {
+        "type": "text",
+        "content": "How do I configure the IAR RISC-V tools to work with the Renesas R9A02G021 Fast Prototyping Board."
+      },
+      {
+        "type": "text",
+        "content": "How do I configure the IAR RISC-V tools to work with the Renesas R9A02G021 Fast Prototyping Board."
+      },
+      {
+        "type": "text",
+        "content": "How do I configure the IAR RISC-V tools to work with the Renesas R9A02G021 Fast Prototyping Board."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe Fast Prototyping board has the onboard JLINK so you will have to use the Segger JLINK GDB Server to this setup.\nConfiguration options in IAR Embedded Work Bench\n    The entry for the TCP/IP Address or hostname[.port] is different that what you expect this entry is using the localhost,port (using a comma to separate the two.)\n    Launch the Segger Jlink GDB Server and configure as shown below\nOnce configured make sure the board is connected to your computer and launch the application by clicking OK.\nThis Dialog box should appear.  You can select the option to stay on top if you want but it is not needed.\n  Suitable Products\nR9A02G021"
+      },
+      {
+        "type": "text",
+        "content": "The Fast Prototyping board has the onboard JLINK so you will have to use the Segger JLINK GDB Server to this setup.\nConfiguration options in IAR Embedded Work Bench\n    The entry for the TCP/IP Address or hostname[.port] is different that what you expect this entry is using the localhost,port (using a comma to separate the two.)\n    Launch the Segger Jlink GDB Server and configure as shown below\nOnce configured make sure the board is connected to your computer and launch the application by clicking OK.\nThis Dialog box should appear.  You can select the option to stay on top if you want but it is not needed."
+      },
+      {
+        "type": "text",
+        "content": "The Fast Prototyping board has the onboard JLINK so you will have to use the Segger JLINK GDB Server to this setup."
+      },
+      {
+        "type": "text",
+        "content": "Configuration options in IAR Embedded Work Bench"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/87e06e80-b3ec-4a00-95ca-02d91a64d4a1",
+          "alt_text": "A screenshot of a computerDescription automatically generated",
+          "width": "591",
+          "height": "528",
+          "local_path": "data/categories/risc-v/kit/8348c3c45c5165c7e201d965cc7d5f69/images/d72ba0492484bb30df711d27bd8d49e8.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The entry for the TCP/IP Address or hostname[.port] is different that what you expect this entry is using the localhost,port (using a comma to separate the two.)"
+      },
+      {
+        "type": "text",
+        "content": "localhost,port"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/c88c4500-3cde-40d8-a956-d3609e859ab1",
+          "alt_text": "A screenshot of a computerDescription automatically generated",
+          "width": "571",
+          "height": "523",
+          "local_path": "data/categories/risc-v/kit/8348c3c45c5165c7e201d965cc7d5f69/images/e3f015e8a2eff7728aad666b59482550.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Launch the Segger Jlink GDB Server and configure as shown below"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/18dca140-ccf9-43f9-ac41-3031899ca7cb",
+          "alt_text": "",
+          "width": "361",
+          "height": "939",
+          "local_path": "data/categories/risc-v/kit/8348c3c45c5165c7e201d965cc7d5f69/images/6a74d6cb21fca802623285b86e9ad2d3.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Once configured make sure the board is connected to your computer and launch the application by clicking OK."
+      },
+      {
+        "type": "text",
+        "content": "This Dialog box should appear.  You can select the option to stay on top if you want but it is not needed."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nR9A02G021"
+      },
+      {
+        "type": "text",
+        "content": "R9A02G021"
+      },
+      {
+        "type": "text",
+        "content": "??? ??"
+      },
+      {
+        "type": "text",
+        "content": "???"
+      },
+      {
+        "type": "text",
+        "content": "??"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/87e06e80-b3ec-4a00-95ca-02d91a64d4a1",
+        "alt_text": "A screenshot of a computerDescription automatically generated",
+        "width": "591",
+        "height": "528",
+        "local_path": "data/categories/risc-v/kit/8348c3c45c5165c7e201d965cc7d5f69/images/d72ba0492484bb30df711d27bd8d49e8.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/c88c4500-3cde-40d8-a956-d3609e859ab1",
+        "alt_text": "A screenshot of a computerDescription automatically generated",
+        "width": "571",
+        "height": "523",
+        "local_path": "data/categories/risc-v/kit/8348c3c45c5165c7e201d965cc7d5f69/images/e3f015e8a2eff7728aad666b59482550.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/18dca140-ccf9-43f9-ac41-3031899ca7cb",
+        "alt_text": "",
+        "width": "361",
+        "height": "939",
+        "local_path": "data/categories/risc-v/kit/8348c3c45c5165c7e201d965cc7d5f69/images/6a74d6cb21fca802623285b86e9ad2d3.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "R9A02G021"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "R9A02G021"
+    ],
+    "links": [
+      {
+        "text": "???",
+        "url": "https://ja-support.renesas.com/knowledgeBase/YYYYYYYY"
+      },
+      {
+        "text": "??",
+        "url": "https://zh-support.renesas.com/knowledgeBase/ZZZZZZZZ"
+      }
+    ]
+  }
+}

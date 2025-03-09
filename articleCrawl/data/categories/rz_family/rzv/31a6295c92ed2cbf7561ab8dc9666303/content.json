@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20352687",
+    "title": "RZ/V: Inference execution with DRP-AI",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:50:47.519476"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nA trained AI model is available. \nWhat is a good way to perform inference execution with the DRP-AI using this model?\nAnswer:\nConvert your AI model to the ONNX format. Then, use DRP-AI Translator to convert it to a binary file to operate with the DRP-AI. For the sequence flow, refer to the documents provided with the DRP-AI Support Package. \nDRP-AI Translator can be downloaded from the Renesas website. \nhttps://www.renesas.com/document/swo/drp-ai-translator-v160?language=en&r=1526446\nSuitable Products\nRZ/V2L, RZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "A trained AI model is available. \nWhat is a good way to perform inference execution with the DRP-AI using this model?"
+      },
+      {
+        "type": "text",
+        "content": "A trained AI model is available. \nWhat is a good way to perform inference execution with the DRP-AI using this model?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nConvert your AI model to the ONNX format. Then, use DRP-AI Translator to convert it to a binary file to operate with the DRP-AI. For the sequence flow, refer to the documents provided with the DRP-AI Support Package. \nDRP-AI Translator can be downloaded from the Renesas website. \nhttps://www.renesas.com/document/swo/drp-ai-translator-v160?language=en&r=1526446\nSuitable Products\nRZ/V2L, RZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "Convert your AI model to the ONNX format. Then, use DRP-AI Translator to convert it to a binary file to operate with the DRP-AI. For the sequence flow, refer to the documents provided with the DRP-AI Support Package. \nDRP-AI Translator can be downloaded from the Renesas website. \nhttps://www.renesas.com/document/swo/drp-ai-translator-v160?language=en&r=1526446"
+      },
+      {
+        "type": "text",
+        "content": "Convert your AI model to the ONNX format. Then, use DRP-AI Translator to convert it to a binary file to operate with the DRP-AI. For the sequence flow, refer to the documents provided with the DRP-AI Support Package. \nDRP-AI Translator can be downloaded from the Renesas website. \nhttps://www.renesas.com/document/swo/drp-ai-translator-v160?language=en&r=1526446"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V2L, RZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V2L, RZ/V2M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V2L, RZ/V2M"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/document/swo/drp-ai-translator-v160?language=en&r=1526446",
+        "url": "https://www.renesas.com/document/swo/drp-ai-translator-v160?language=en&r=1526446"
+      },
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20352673"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20352697"
+      }
+    ]
+  }
+}

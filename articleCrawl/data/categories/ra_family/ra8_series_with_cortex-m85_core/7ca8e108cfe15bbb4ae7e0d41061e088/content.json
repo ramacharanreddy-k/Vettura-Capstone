@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21088666",
+    "title": "Secure Boot with RA Series MCUs",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:29:56.673285"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the secure boot mechanism with FSBL on RA8 Series devices?\nAnswer:\nOn RA8 Series devices, the first stage boot loader (FSBL) is programmed into the on-chip immutable memory, which along with the injected OEM root key, provides a strong hardware based root of trust and is the basis of the chain of trust. On reset, the secure boot process starts in immutable memory and the FSBL authenticates the firmware image for the next stage (which could be the Renesas second stage bootloader or the customer's own bootloader) and code execution starts only when the the image has been authenticated and the integrity has been verified. The Renesas secure boot solution provides the flexibility to either do a full authentication with HMAC-SHA256, use a simpler CRC validation or completely bypass this secure boot.\nSuitable Products\nRA8M1, RA8D1, RA8T1"
+      },
+      {
+        "type": "text",
+        "content": "What is the secure boot mechanism with FSBL on RA8 Series devices?"
+      },
+      {
+        "type": "text",
+        "content": "What is the secure boot mechanism with FSBL on RA8 Series devices?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nOn RA8 Series devices, the first stage boot loader (FSBL) is programmed into the on-chip immutable memory, which along with the injected OEM root key, provides a strong hardware based root of trust and is the basis of the chain of trust. On reset, the secure boot process starts in immutable memory and the FSBL authenticates the firmware image for the next stage (which could be the Renesas second stage bootloader or the customer's own bootloader) and code execution starts only when the the image has been authenticated and the integrity has been verified. The Renesas secure boot solution provides the flexibility to either do a full authentication with HMAC-SHA256, use a simpler CRC validation or completely bypass this secure boot.\nSuitable Products\nRA8M1, RA8D1, RA8T1"
+      },
+      {
+        "type": "text",
+        "content": "On RA8 Series devices, the first stage boot loader (FSBL) is programmed into the on-chip immutable memory, which along with the injected OEM root key, provides a strong hardware based root of trust and is the basis of the chain of trust. On reset, the secure boot process starts in immutable memory and the FSBL authenticates the firmware image for the next stage (which could be the Renesas second stage bootloader or the customer's own bootloader) and code execution starts only when the the image has been authenticated and the integrity has been verified. The Renesas secure boot solution provides the flexibility to either do a full authentication with HMAC-SHA256, use a simpler CRC validation or completely bypass this secure boot."
+      },
+      {
+        "type": "text",
+        "content": "On RA8 Series devices, the first stage boot loader (FSBL) is programmed into the on-chip immutable memory, which along with the injected OEM root key, provides a strong hardware based root of trust and is the basis of the chain of trust. On reset, the secure boot process starts in immutable memory and the FSBL authenticates the firmware image for the next stage (which could be the Renesas second stage bootloader or the customer's own bootloader) and code execution starts only when the the image has been authenticated and the integrity has been verified. The Renesas secure boot solution provides the flexibility to either do a full authentication with HMAC-SHA256, use a simpler CRC validation or completely bypass this secure boot."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA8M1, RA8D1, RA8T1"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA8M1, RA8D1, RA8T1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA8M1, RA8D1, RA8T1"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21088726"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21088738"
+      }
+    ]
+  }
+}

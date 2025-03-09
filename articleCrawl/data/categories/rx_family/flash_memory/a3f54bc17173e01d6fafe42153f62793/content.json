@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21676062",
+    "title": "RX Family: Why is a data flash memory whose value after erasure is 0xFF judged as blank even if 0xFF is written to it?",
+    "last_updated": "2024-12-11",
+    "extracted_at": "2025-03-09T00:14:24.429871"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhen 0xFF is written to the data flash, which has a value of 0xFF after erase, the target address is in a blank state when blank check is performed. Is this written correctly?\nAnswer:\nFor data flash for which the value after erase is 0xFF, it is not possible to determine with blank check whether a write is being performed or not, as the value after erase is the same as the value after erase even if 0xFF is written.\nTherefore, if the read data is 0xFF, and you want to determine whether the area is blank after an erase or whether 0xFF has been written to it, do not write 0xFF, but use the value after the erase (0xFF) as is.\nThis allows you to determine that addresses from which 0xFF can be read are areas that have not been written to after an erase.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "When 0xFF is written to the data flash, which has a value of 0xFF after erase, the target address is in a blank state when blank check is performed. Is this written correctly?"
+      },
+      {
+        "type": "text",
+        "content": "When 0xFF is written to the data flash, which has a value of 0xFF after erase, the target address is in a blank state when blank check is performed. Is this written correctly?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nFor data flash for which the value after erase is 0xFF, it is not possible to determine with blank check whether a write is being performed or not, as the value after erase is the same as the value after erase even if 0xFF is written.\nTherefore, if the read data is 0xFF, and you want to determine whether the area is blank after an erase or whether 0xFF has been written to it, do not write 0xFF, but use the value after the erase (0xFF) as is.\nThis allows you to determine that addresses from which 0xFF can be read are areas that have not been written to after an erase.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "For data flash for which the value after erase is 0xFF, it is not possible to determine with blank check whether a write is being performed or not, as the value after erase is the same as the value after erase even if 0xFF is written.\nTherefore, if the read data is 0xFF, and you want to determine whether the area is blank after an erase or whether 0xFF has been written to it, do not write 0xFF, but use the value after the erase (0xFF) as is.\nThis allows you to determine that addresses from which 0xFF can be read are areas that have not been written to after an erase."
+      },
+      {
+        "type": "text",
+        "content": "For data flash for which the value after erase is 0xFF, it is not possible to determine with blank check whether a write is being performed or not, as the value after erase is the same as the value after erase even if 0xFF is written.\nTherefore, if the read data is 0xFF, and you want to determine whether the area is blank after an erase or whether 0xFF has been written to it, do not write 0xFF, but use the value after the erase (0xFF) as is.\nThis allows you to determine that addresses from which 0xFF can be read are areas that have not been written to after an erase."
+      },
+      {
+        "type": "text",
+        "content": "For data flash for which the value after erase is 0xFF, it is not possible to determine with blank check whether a write is being performed or not, as the value after erase is the same as the value after erase even if 0xFF is written."
+      },
+      {
+        "type": "text",
+        "content": "Therefore, if the read data is 0xFF, and you want to determine whether the area is blank after an erase or whether 0xFF has been written to it, do not write 0xFF, but use the value after the erase (0xFF) as is."
+      },
+      {
+        "type": "text",
+        "content": "This allows you to determine that addresses from which 0xFF can be read are areas that have not been written to after an erase."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21676065"
+      }
+    ]
+  }
+}

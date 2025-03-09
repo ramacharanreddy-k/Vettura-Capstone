@@ -1,0 +1,188 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20628005",
+    "title": "RA Family: How to Change the MTB (Micro Trace Buffer) settings with J-Link",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:12:23.205697"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Description"
+      },
+      {
+        "type": "text",
+        "content": "For MCUs with ARM® CoreSight ™ MTB (Micro Trace buffer) such as RA2E1, the MTB buffer may be mapped to the beginning of the SRAM area. When a user application uses the same SRAM area, it doesn’t work. To avoid this issue, the memory allocation of the MTB buffer can be changed as follows."
+      },
+      {
+        "type": "text",
+        "content": "int ConfigTargetSettings(void)"
+      },
+      {
+        "type": "text",
+        "content": "int ConfigTargetSettings(void)"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "JLINK_ExecCommand(\"CORESIGHT_SetMTBBufUseAddr=0x20007C00\");"
+      },
+      {
+        "type": "text",
+        "content": "JLINK_ExecCommand(\"CORESIGHT_SetMTBBufUseAddr=0x20007C00\");"
+      },
+      {
+        "type": "text",
+        "content": "JLINK_ExecCommand(\"CORESIGHT_SetMTBBufUsageSize=0x400\");"
+      },
+      {
+        "type": "text",
+        "content": "JLINK_ExecCommand(\"CORESIGHT_SetMTBBufUsageSize=0x400\");"
+      },
+      {
+        "type": "text",
+        "content": "return 0;"
+      },
+      {
+        "type": "text",
+        "content": "return 0;"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/c5043a1d-2c04-47d8-a84d-ae7fa88f0c40.png",
+          "alt_text": "",
+          "width": "602",
+          "height": "203",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/1d9a13eb4bdb064b0985c6fd7c73b1da/images/68b7b4380ddffb498fdc789aa5884c11.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "T4F68 003:353.246   MTB: Starting trace using 0x400 bytes buffer @ 0x20007C00"
+      },
+      {
+        "type": "text",
+        "content": "T4F68 003:353.246   MTB: Starting trace using 0x400 bytes buffer @ 0x20007C00"
+      },
+      {
+        "type": "text",
+        "content": "The file location of JLinkLogOverride.log can be confirmed on the J-Link Control Panel. For Windows machines, select the J-Link Control Panel from the Start Menu, and find the “Log file:” in the Settings menu."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/cc0243d4-ca02-4014-8471-1d940b0b17df.png",
+          "alt_text": "",
+          "width": "319",
+          "height": "113",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/1d9a13eb4bdb064b0985c6fd7c73b1da/images/f10168b0924a154d3c1818010a711358.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/5df8786d-5138-406a-ad2c-c4e6a513d71b.png",
+          "alt_text": "",
+          "width": "602",
+          "height": "209",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/1d9a13eb4bdb064b0985c6fd7c73b1da/images/9aa5189bcd34a429292a73669fc6bdf6.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "FSP, J-Link\nRA"
+      },
+      {
+        "type": "text",
+        "content": "FSP, J-Link\nRA"
+      },
+      {
+        "type": "text",
+        "content": "FSP, J-Link\nRA"
+      },
+      {
+        "type": "text",
+        "content": "Source:"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/c5043a1d-2c04-47d8-a84d-ae7fa88f0c40.png",
+        "alt_text": "",
+        "width": "602",
+        "height": "203",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/1d9a13eb4bdb064b0985c6fd7c73b1da/images/68b7b4380ddffb498fdc789aa5884c11.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/cc0243d4-ca02-4014-8471-1d940b0b17df.png",
+        "alt_text": "",
+        "width": "319",
+        "height": "113",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/1d9a13eb4bdb064b0985c6fd7c73b1da/images/f10168b0924a154d3c1818010a711358.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/5df8786d-5138-406a-ad2c-c4e6a513d71b.png",
+        "alt_text": "",
+        "width": "602",
+        "height": "209",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/1d9a13eb4bdb064b0985c6fd7c73b1da/images/9aa5189bcd34a429292a73669fc6bdf6.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "int ConfigTargetSettings(void)\n{\nJLINK_ExecCommand(\"CORESIGHT_SetMTBBufUseAddr=0x20007C00\");\nJLINK_ExecCommand(\"CORESIGHT_SetMTBBufUsageSize=0x400\");\nreturn 0;\n}"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "T4F68 003:353.246   MTB: Starting trace using 0x400 bytes buffer @ 0x20007C00"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "FSP, J-Link"
+          ],
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": []
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21698321",
+    "title": "RA Family: Failed to jump from boot loader program to application program",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:22:47.904533"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nOn a system that uses a boot loader, I have created my own boot program and tried to jump from this program to the user application, but the application does not work as expected. (For example, an error occurs and the application stops at the Default_Handler of the exception handling function.)\nAnswer:\nIn a system that uses a boot loader, when jumping between applications with different program configurations and execution areas, such as the boot loader and the user application, it is necessary to disable the stack pointer overflow check function and update the vector table address in advance.\nThe RA family of FSPs provides MCUboot as a bootloader solution, and the code that jumps from the boot program to the user application is built in. If you are developing your own boot program, you can refer to this source code.\nPlease refer to the processing of the RM_MCUBOOT_PORT_BootApp functions in the MCUboot source file fsp/src/rm_mcuboot_port/rm_mcuboot_port.c. The function performs the following processing as described in the comment.\nClean up internal flash driver\nNote: FSP's MCUboot bootloader program accesses the internal flash and external flash, so the flash driver termination process is executed here. If there are any other modules used, it is desirable to complete the closing process in advance.\nSet the applications vector table\nDisable MSP monitoring\nSet SP and branch to PC\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "On a system that uses a boot loader, I have created my own boot program and tried to jump from this program to the user application, but the application does not work as expected. (For example, an error occurs and the application stops at the Default_Handler of the exception handling function.)"
+      },
+      {
+        "type": "text",
+        "content": "On a system that uses a boot loader, I have created my own boot program and tried to jump from this program to the user application, but the application does not work as expected. (For example, an error occurs and the application stops at the Default_Handler of the exception handling function.)"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIn a system that uses a boot loader, when jumping between applications with different program configurations and execution areas, such as the boot loader and the user application, it is necessary to disable the stack pointer overflow check function and update the vector table address in advance.\nThe RA family of FSPs provides MCUboot as a bootloader solution, and the code that jumps from the boot program to the user application is built in. If you are developing your own boot program, you can refer to this source code.\nPlease refer to the processing of the RM_MCUBOOT_PORT_BootApp functions in the MCUboot source file fsp/src/rm_mcuboot_port/rm_mcuboot_port.c. The function performs the following processing as described in the comment.\nClean up internal flash driver\nNote: FSP's MCUboot bootloader program accesses the internal flash and external flash, so the flash driver termination process is executed here. If there are any other modules used, it is desirable to complete the closing process in advance.\nSet the applications vector table\nDisable MSP monitoring\nSet SP and branch to PC\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "In a system that uses a boot loader, when jumping between applications with different program configurations and execution areas, such as the boot loader and the user application, it is necessary to disable the stack pointer overflow check function and update the vector table address in advance.\nThe RA family of FSPs provides MCUboot as a bootloader solution, and the code that jumps from the boot program to the user application is built in. If you are developing your own boot program, you can refer to this source code.\nPlease refer to the processing of the RM_MCUBOOT_PORT_BootApp functions in the MCUboot source file fsp/src/rm_mcuboot_port/rm_mcuboot_port.c. The function performs the following processing as described in the comment.\nClean up internal flash driver\nNote: FSP's MCUboot bootloader program accesses the internal flash and external flash, so the flash driver termination process is executed here. If there are any other modules used, it is desirable to complete the closing process in advance.\nSet the applications vector table\nDisable MSP monitoring\nSet SP and branch to PC"
+      },
+      {
+        "type": "text",
+        "content": "In a system that uses a boot loader, when jumping between applications with different program configurations and execution areas, such as the boot loader and the user application, it is necessary to disable the stack pointer overflow check function and update the vector table address in advance."
+      },
+      {
+        "type": "text",
+        "content": "The RA family of FSPs provides MCUboot as a bootloader solution, and the code that jumps from the boot program to the user application is built in. If you are developing your own boot program, you can refer to this source code."
+      },
+      {
+        "type": "text",
+        "content": "Please refer to the processing of the RM_MCUBOOT_PORT_BootApp functions in the MCUboot source file fsp/src/rm_mcuboot_port/rm_mcuboot_port.c. The function performs the following processing as described in the comment."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21698340"
+      }
+    ]
+  }
+}

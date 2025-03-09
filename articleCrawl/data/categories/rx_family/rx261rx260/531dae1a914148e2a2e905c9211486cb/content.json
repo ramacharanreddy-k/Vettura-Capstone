@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21566495",
+    "title": "Capacitive touch sensing unit (CTSU2SL) of RX261 and RX260",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:04:08.047688"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat are the benefits of the capacitive touch sensing unit (CTSU2SL)?\nAnswer:\nThe third generation capacitive touch sensing unit (CTSU2SL) offers improved noise immunity, water resistance, and low power consumption functions compared with the previous generation capacitive touch sensing unit (CTSU), so it can achieve excellent operability under various conditions.\nThe noise immunity of the Capacitive Touch Evaluation System for RX261 meets requirements equivalent to IEC 61000 4-3 level 4 and 4-6 level 3. Furthermore, the active shield function improves water resistance by reducing the amount of change in capacitance caused by water getting on touch electrodes. In addition, by using the automatic judgement function and MEC (Multiple Electrode Connection) function, it is possible to reduce power consumption in applications that require intermittent operation.\nThese features allow the RX261 and RX260 to support a wider range of applications and operating environments compared with previous products.\nSuitable Products\nRX261, RX260"
+      },
+      {
+        "type": "text",
+        "content": "What are the benefits of the capacitive touch sensing unit (CTSU2SL)?"
+      },
+      {
+        "type": "text",
+        "content": "What are the benefits of the capacitive touch sensing unit (CTSU2SL)?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe third generation capacitive touch sensing unit (CTSU2SL) offers improved noise immunity, water resistance, and low power consumption functions compared with the previous generation capacitive touch sensing unit (CTSU), so it can achieve excellent operability under various conditions.\nThe noise immunity of the Capacitive Touch Evaluation System for RX261 meets requirements equivalent to IEC 61000 4-3 level 4 and 4-6 level 3. Furthermore, the active shield function improves water resistance by reducing the amount of change in capacitance caused by water getting on touch electrodes. In addition, by using the automatic judgement function and MEC (Multiple Electrode Connection) function, it is possible to reduce power consumption in applications that require intermittent operation.\nThese features allow the RX261 and RX260 to support a wider range of applications and operating environments compared with previous products.\nSuitable Products\nRX261, RX260"
+      },
+      {
+        "type": "text",
+        "content": "The third generation capacitive touch sensing unit (CTSU2SL) offers improved noise immunity, water resistance, and low power consumption functions compared with the previous generation capacitive touch sensing unit (CTSU), so it can achieve excellent operability under various conditions.\nThe noise immunity of the Capacitive Touch Evaluation System for RX261 meets requirements equivalent to IEC 61000 4-3 level 4 and 4-6 level 3. Furthermore, the active shield function improves water resistance by reducing the amount of change in capacitance caused by water getting on touch electrodes. In addition, by using the automatic judgement function and MEC (Multiple Electrode Connection) function, it is possible to reduce power consumption in applications that require intermittent operation.\nThese features allow the RX261 and RX260 to support a wider range of applications and operating environments compared with previous products."
+      },
+      {
+        "type": "text",
+        "content": "The third generation capacitive touch sensing unit (CTSU2SL) offers improved noise immunity, water resistance, and low power consumption functions compared with the previous generation capacitive touch sensing unit (CTSU), so it can achieve excellent operability under various conditions."
+      },
+      {
+        "type": "text",
+        "content": "The noise immunity of the Capacitive Touch Evaluation System for RX261 meets requirements equivalent to IEC 61000 4-3 level 4 and 4-6 level 3. Furthermore, the active shield function improves water resistance by reducing the amount of change in capacitance caused by water getting on touch electrodes. In addition, by using the automatic judgement function and MEC (Multiple Electrode Connection) function, it is possible to reduce power consumption in applications that require intermittent operation.\nThese features allow the RX261 and RX260 to support a wider range of applications and operating environments compared with previous products."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX261, RX260"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX261, RX260"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX261, RX260"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21566490"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21566499"
+      }
+    ]
+  }
+}

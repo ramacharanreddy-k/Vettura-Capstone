@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18287518",
+    "title": "Why Does It Take Time to Touch From Being Touched?",
+    "last_updated": "2023-03-03",
+    "extracted_at": "2025-03-09T00:07:57.557156"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhy does it take some time for the detection of a touch (ON judgment) after touching the electrode?\nAnswer:\nIf the drift correction interval is short, the reference value will fluctuate before the finger touches the electrode, and sufficient fluctuation in the measured value for touch ON judgment may not be obtained.\nIn this case, it may be improved by adjusting the drift correction interval longer.\nOr the number of consecutive match measurements set by the positive noise filter may be large.\nON is judged after ON is reached for the number of times set as the number of consecutive coincidence measurements.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Why does it take some time for the detection of a touch (ON judgment) after touching the electrode?"
+      },
+      {
+        "type": "text",
+        "content": "Why does it take some time for the detection of a touch (ON judgment) after touching the electrode?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIf the drift correction interval is short, the reference value will fluctuate before the finger touches the electrode, and sufficient fluctuation in the measured value for touch ON judgment may not be obtained.\nIn this case, it may be improved by adjusting the drift correction interval longer.\nOr the number of consecutive match measurements set by the positive noise filter may be large.\nON is judged after ON is reached for the number of times set as the number of consecutive coincidence measurements.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "If the drift correction interval is short, the reference value will fluctuate before the finger touches the electrode, and sufficient fluctuation in the measured value for touch ON judgment may not be obtained.\nIn this case, it may be improved by adjusting the drift correction interval longer.\nOr the number of consecutive match measurements set by the positive noise filter may be large.\nON is judged after ON is reached for the number of times set as the number of consecutive coincidence measurements."
+      },
+      {
+        "type": "text",
+        "content": "If the drift correction interval is short, the reference value will fluctuate before the finger touches the electrode, and sufficient fluctuation in the measured value for touch ON judgment may not be obtained.\nIn this case, it may be improved by adjusting the drift correction interval longer.\nOr the number of consecutive match measurements set by the positive noise filter may be large.\nON is judged after ON is reached for the number of times set as the number of consecutive coincidence measurements."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792806"
+      }
+    ]
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21763415",
+    "title": "Termination of unused pins on the RA4L1 MCU",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:30:23.148054"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat should I do with unused pins on the RA4L1?\nAnswer:\nP200/NMI if not used should be connected to VCC through a resistor (pulling up).\nP212/EXTAL When the main clock oscillator is not used, set the MOSCCR.MOSTP bit to 1 (general port P212). When this pin is not used as port P212, configure it in the same way as ports 1 to 8.\nP213/XTAL When the main clock oscillator is not used, set the MOSCCR.MOSTP bit to 1 (general port P213). When the external clock is input to the EXTAL pin, the XTAL pin functions as P213. When this pin is not used as port P213, configure it in the same way as ports 1 to 8.\nP215/XCIN When the sub-clock oscillator is not used, set the SOSCCR.SOSTP bit to 1 (general port P215). When this pin is not used as port P215, configure it in the same way as ports 1 to 8.\nP214/XCOUT When the sub-clock oscillator is not used, set the SOSCCR.SOSTP bit to 1 (general port P214). When this pin is not used as port P214, configure it in the same way as ports 1 to 8.\nP0xx If the direction is set to input (PCNTR1.PDRn = 0), connect the associated pin to AVCC0 (pulled up) through a resistor or to AVSS0 (pulled down) through a resistor.\nor If the direction is set to output (PCNTR1.PDRn = 1), keep pin open.\nP1x to P8x If the direction is set to input (PCNTR1.PDRn = 0), connect the associated pin to VCC (pulled up) through a resistor or to VSS (pulled down) through a resistor or If the direction is set to output (PCNTR1.PDRn = 1), keep pin open.\nVREFH0 Connect to AVCC0\nVREFL0 Connect to AVSS0\nSuitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "What should I do with unused pins on the RA4L1?"
+      },
+      {
+        "type": "text",
+        "content": "What should I do with unused pins on the RA4L1?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nP200/NMI if not used should be connected to VCC through a resistor (pulling up).\nP212/EXTAL When the main clock oscillator is not used, set the MOSCCR.MOSTP bit to 1 (general port P212). When this pin is not used as port P212, configure it in the same way as ports 1 to 8.\nP213/XTAL When the main clock oscillator is not used, set the MOSCCR.MOSTP bit to 1 (general port P213). When the external clock is input to the EXTAL pin, the XTAL pin functions as P213. When this pin is not used as port P213, configure it in the same way as ports 1 to 8.\nP215/XCIN When the sub-clock oscillator is not used, set the SOSCCR.SOSTP bit to 1 (general port P215). When this pin is not used as port P215, configure it in the same way as ports 1 to 8.\nP214/XCOUT When the sub-clock oscillator is not used, set the SOSCCR.SOSTP bit to 1 (general port P214). When this pin is not used as port P214, configure it in the same way as ports 1 to 8.\nP0xx If the direction is set to input (PCNTR1.PDRn = 0), connect the associated pin to AVCC0 (pulled up) through a resistor or to AVSS0 (pulled down) through a resistor.\nor If the direction is set to output (PCNTR1.PDRn = 1), keep pin open.\nP1x to P8x If the direction is set to input (PCNTR1.PDRn = 0), connect the associated pin to VCC (pulled up) through a resistor or to VSS (pulled down) through a resistor or If the direction is set to output (PCNTR1.PDRn = 1), keep pin open.\nVREFH0 Connect to AVCC0\nVREFL0 Connect to AVSS0\nSuitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "P200/NMI if not used should be connected to VCC through a resistor (pulling up).\nP212/EXTAL When the main clock oscillator is not used, set the MOSCCR.MOSTP bit to 1 (general port P212). When this pin is not used as port P212, configure it in the same way as ports 1 to 8.\nP213/XTAL When the main clock oscillator is not used, set the MOSCCR.MOSTP bit to 1 (general port P213). When the external clock is input to the EXTAL pin, the XTAL pin functions as P213. When this pin is not used as port P213, configure it in the same way as ports 1 to 8.\nP215/XCIN When the sub-clock oscillator is not used, set the SOSCCR.SOSTP bit to 1 (general port P215). When this pin is not used as port P215, configure it in the same way as ports 1 to 8.\nP214/XCOUT When the sub-clock oscillator is not used, set the SOSCCR.SOSTP bit to 1 (general port P214). When this pin is not used as port P214, configure it in the same way as ports 1 to 8.\nP0xx If the direction is set to input (PCNTR1.PDRn = 0), connect the associated pin to AVCC0 (pulled up) through a resistor or to AVSS0 (pulled down) through a resistor.\nor If the direction is set to output (PCNTR1.PDRn = 1), keep pin open.\nP1x to P8x If the direction is set to input (PCNTR1.PDRn = 0), connect the associated pin to VCC (pulled up) through a resistor or to VSS (pulled down) through a resistor or If the direction is set to output (PCNTR1.PDRn = 1), keep pin open.\nVREFH0 Connect to AVCC0\nVREFL0 Connect to AVSS0"
+      },
+      {
+        "type": "text",
+        "content": "P200/NMI if not used should be connected to VCC through a resistor (pulling up)."
+      },
+      {
+        "type": "text",
+        "content": "P212/EXTAL When the main clock oscillator is not used, set the MOSCCR.MOSTP bit to 1 (general port P212). When this pin is not used as port P212, configure it in the same way as ports 1 to 8."
+      },
+      {
+        "type": "text",
+        "content": "P213/XTAL When the main clock oscillator is not used, set the MOSCCR.MOSTP bit to 1 (general port P213). When the external clock is input to the EXTAL pin, the XTAL pin functions as P213. When this pin is not used as port P213, configure it in the same way as ports 1 to 8."
+      },
+      {
+        "type": "text",
+        "content": "P215/XCIN When the sub-clock oscillator is not used, set the SOSCCR.SOSTP bit to 1 (general port P215). When this pin is not used as port P215, configure it in the same way as ports 1 to 8."
+      },
+      {
+        "type": "text",
+        "content": "P214/XCOUT When the sub-clock oscillator is not used, set the SOSCCR.SOSTP bit to 1 (general port P214). When this pin is not used as port P214, configure it in the same way as ports 1 to 8."
+      },
+      {
+        "type": "text",
+        "content": "P0xx If the direction is set to input (PCNTR1.PDRn = 0), connect the associated pin to AVCC0 (pulled up) through a resistor or to AVSS0 (pulled down) through a resistor.\nor If the direction is set to output (PCNTR1.PDRn = 1), keep pin open."
+      },
+      {
+        "type": "text",
+        "content": "P1x to P8x If the direction is set to input (PCNTR1.PDRn = 0), connect the associated pin to VCC (pulled up) through a resistor or to VSS (pulled down) through a resistor or If the direction is set to output (PCNTR1.PDRn = 1), keep pin open."
+      },
+      {
+        "type": "text",
+        "content": "VREFH0 Connect to AVCC0"
+      },
+      {
+        "type": "text",
+        "content": "VREFL0 Connect to AVSS0"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "Japanese Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA4L1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA4L1"
+    ],
+    "links": [
+      {
+        "text": "Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21763461"
+      },
+      {
+        "text": "Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21763473"
+      }
+    ]
+  }
+}

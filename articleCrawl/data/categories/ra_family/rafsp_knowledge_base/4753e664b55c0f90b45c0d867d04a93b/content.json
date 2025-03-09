@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21698324",
+    "title": "RA Family: Precautions when entering and exiting the low-power state in RA8",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:22:55.465369"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIn the RA8 user's manual, there is a description of \"Notes on transitioning to or canceling low power state\". What should I do if I use FSP?\nAnswer:\nIn the RA8 MCU, it is necessary to insert a certain period of NOP operation wait [MM1] [KK2] (no execution) during the transition and return to the low-power mode. The FSP contains functions corresponding to the source files ra/fsp/src/bsp/mcu/all/bsp_clocks.c of the MCU Board Support Package (BSP).\nProcessing when transitioning to low power consumption mode: bsp_prv_clock_prepare_pre_sleep ()\nProcessing when resuming from low power consumption mode: bsp_prv_clock_prepare_post_sleep ()\nThese functions are called internally by r_lpm driver's R_LPM_LowPowerModeEnter functions, so no additional processing is required when using them to perform low-power transitions.\nHowever, if you do not use a r_lpm driver and perform the low-power mode transition in your application's own code, implement it in a way that meets the guidelines in the device's user's manual.  If necessary, you can use the above BSP functions.\nNote: bsp_prv_clock_prepare_pre_sleep() and bsp_prv_clock_prepare_post_sleep() can be disabled in the BSP tab of the Configurator (Clocks -> Sleep Mode Entry and Exit Delays) ( Default: Enabled).\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "In the RA8 user's manual, there is a description of \"Notes on transitioning to or canceling low power state\". What should I do if I use FSP?"
+      },
+      {
+        "type": "text",
+        "content": "In the RA8 user's manual, there is a description of \"Notes on transitioning to or canceling low power state\". What should I do if I use FSP?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIn the RA8 MCU, it is necessary to insert a certain period of NOP operation wait [MM1] [KK2] (no execution) during the transition and return to the low-power mode. The FSP contains functions corresponding to the source files ra/fsp/src/bsp/mcu/all/bsp_clocks.c of the MCU Board Support Package (BSP).\nProcessing when transitioning to low power consumption mode: bsp_prv_clock_prepare_pre_sleep ()\nProcessing when resuming from low power consumption mode: bsp_prv_clock_prepare_post_sleep ()\nThese functions are called internally by r_lpm driver's R_LPM_LowPowerModeEnter functions, so no additional processing is required when using them to perform low-power transitions.\nHowever, if you do not use a r_lpm driver and perform the low-power mode transition in your application's own code, implement it in a way that meets the guidelines in the device's user's manual.  If necessary, you can use the above BSP functions.\nNote: bsp_prv_clock_prepare_pre_sleep() and bsp_prv_clock_prepare_post_sleep() can be disabled in the BSP tab of the Configurator (Clocks -> Sleep Mode Entry and Exit Delays) ( Default: Enabled).\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "In the RA8 MCU, it is necessary to insert a certain period of NOP operation wait [MM1] [KK2] (no execution) during the transition and return to the low-power mode. The FSP contains functions corresponding to the source files ra/fsp/src/bsp/mcu/all/bsp_clocks.c of the MCU Board Support Package (BSP).\nProcessing when transitioning to low power consumption mode: bsp_prv_clock_prepare_pre_sleep ()\nProcessing when resuming from low power consumption mode: bsp_prv_clock_prepare_post_sleep ()\nThese functions are called internally by r_lpm driver's R_LPM_LowPowerModeEnter functions, so no additional processing is required when using them to perform low-power transitions.\nHowever, if you do not use a r_lpm driver and perform the low-power mode transition in your application's own code, implement it in a way that meets the guidelines in the device's user's manual.  If necessary, you can use the above BSP functions.\nNote: bsp_prv_clock_prepare_pre_sleep() and bsp_prv_clock_prepare_post_sleep() can be disabled in the BSP tab of the Configurator (Clocks -> Sleep Mode Entry and Exit Delays) ( Default: Enabled)."
+      },
+      {
+        "type": "text",
+        "content": "In the RA8 MCU, it is necessary to insert a certain period of NOP operation wait [MM1] [KK2] (no execution) during the transition and return to the low-power mode. The FSP contains functions corresponding to the source files ra/fsp/src/bsp/mcu/all/bsp_clocks.c of the MCU Board Support Package (BSP)."
+      },
+      {
+        "type": "text",
+        "content": "These functions are called internally by r_lpm driver's R_LPM_LowPowerModeEnter functions, so no additional processing is required when using them to perform low-power transitions."
+      },
+      {
+        "type": "text",
+        "content": "However, if you do not use a r_lpm driver and perform the low-power mode transition in your application's own code, implement it in a way that meets the guidelines in the device's user's manual.  If necessary, you can use the above BSP functions."
+      },
+      {
+        "type": "text",
+        "content": "Note: bsp_prv_clock_prepare_pre_sleep() and bsp_prv_clock_prepare_post_sleep() can be disabled in the BSP tab of the Configurator (Clocks -> Sleep Mode Entry and Exit Delays) ( Default: Enabled)."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/395871.png",
+          "alt_text": "",
+          "width": "439",
+          "height": "115",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/4753e664b55c0f90b45c0d867d04a93b/images/5b586fe81a17d9097fea0607f9bc66a8.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/395871.png",
+        "alt_text": "",
+        "width": "439",
+        "height": "115",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/4753e664b55c0f90b45c0d867d04a93b/images/5b586fe81a17d9097fea0607f9bc66a8.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "[MM1]",
+        "url": "https://en-support.renesas.com/#_msocom_1"
+      },
+      {
+        "text": "[KK2]",
+        "url": "https://en-support.renesas.com/#_msocom_2"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21698343"
+      }
+    ]
+  }
+}

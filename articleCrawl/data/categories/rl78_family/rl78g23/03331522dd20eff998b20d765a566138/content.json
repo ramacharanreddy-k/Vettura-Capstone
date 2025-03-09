@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21757166",
+    "title": "How to create a project from scratch to use the Renesas Flash Driver RL78 Type 01 on RL78/G2x devices ?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:53:16.252267"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to create a project from scratch to use the Renesas Flash Driver RL78 Type 01 on RL78/G2x devices ?\n  Answer:"
+      },
+      {
+        "type": "text",
+        "content": "How to create a project from scratch to use the Renesas Flash Driver RL78 Type 01 on RL78/G2x devices ?"
+      },
+      {
+        "type": "text",
+        "content": "How to create a project from scratch to use the Renesas Flash Driver RL78 Type 01 on RL78/G2x devices ?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:"
+      },
+      {
+        "type": "text",
+        "content": "To create a project from scratch to use the Renesas Flash Driver RL78 Type 01 on RL78/G2x devices, do the following steps:"
+      },
+      {
+        "type": "text",
+        "content": "1) Add the r_rfd_rl78_t01_dataflash and r_rfd_rl78_t01_common components on the Smart Configurator:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/c1b3d1f0-6a30-422f-8ee0-9400fc5b0e9a",
+          "alt_text": "",
+          "width": "602",
+          "height": "850",
+          "local_path": "data/categories/rl78_family/rl78g23/03331522dd20eff998b20d765a566138/images/4db65c38cf33c645f83de180a80b6f68.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "2) Set the following option to enable the data flash access:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/447e0cdb-192f-4478-9c58-0e4badb46e22",
+          "alt_text": "",
+          "width": "1104",
+          "height": "624",
+          "local_path": "data/categories/rl78_family/rl78g23/03331522dd20eff998b20d765a566138/images/b681e3b990a3229d9da87b1e55c3e3ad.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "3) Add the following sections in ROM and RAM memory which will be used by the Renesas Flash Driver RL78 Type 01."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/daf8a149-fe68-4a2e-9c56-21cc3091a947",
+          "alt_text": "",
+          "width": "980",
+          "height": "910",
+          "local_path": "data/categories/rl78_family/rl78g23/03331522dd20eff998b20d765a566138/images/3494f51a5c7fb14e874b6f956a4af8f7.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "4) Add the following -rom option for RFD_DATA_n section which will be copied into RAM."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/c2a7f023-4239-439e-b579-845a24b53a73",
+          "alt_text": "",
+          "width": "980",
+          "height": "910",
+          "local_path": "data/categories/rl78_family/rl78g23/03331522dd20eff998b20d765a566138/images/0f07395cc8db5f719f760ab76668e528.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "5) Refer to the attached project for RL78/G23 FPB 64-pin board on how to add code to initialize the flash library and perform the basic data flash operations (blank check/erase/write)."
+      },
+      {
+        "type": "text",
+        "content": "You can find all information for the Renesas Flash Driver RL78 Type 01 User's Manual for RL78/G2x on the user's manual:"
+      },
+      {
+        "type": "text",
+        "content": "https://www.renesas.com/en/document/man/renesas-flash-driver-rl78-type-01-users-manual-rl78g23"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RL78/G23"
+      },
+      {
+        "type": "text",
+        "content": "RL78/G23"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/c1b3d1f0-6a30-422f-8ee0-9400fc5b0e9a",
+        "alt_text": "",
+        "width": "602",
+        "height": "850",
+        "local_path": "data/categories/rl78_family/rl78g23/03331522dd20eff998b20d765a566138/images/4db65c38cf33c645f83de180a80b6f68.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/447e0cdb-192f-4478-9c58-0e4badb46e22",
+        "alt_text": "",
+        "width": "1104",
+        "height": "624",
+        "local_path": "data/categories/rl78_family/rl78g23/03331522dd20eff998b20d765a566138/images/b681e3b990a3229d9da87b1e55c3e3ad.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/daf8a149-fe68-4a2e-9c56-21cc3091a947",
+        "alt_text": "",
+        "width": "980",
+        "height": "910",
+        "local_path": "data/categories/rl78_family/rl78g23/03331522dd20eff998b20d765a566138/images/3494f51a5c7fb14e874b6f956a4af8f7.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/c2a7f023-4239-439e-b579-845a24b53a73",
+        "alt_text": "",
+        "width": "980",
+        "height": "910",
+        "local_path": "data/categories/rl78_family/rl78g23/03331522dd20eff998b20d765a566138/images/0f07395cc8db5f719f760ab76668e528.png"
+      }
+    ],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": [
+      {
+        "text": "https://www.renesas.com/en/document/man/renesas-flash-driver-rl78-type-01-users-manual-rl78g23",
+        "url": "https://www.renesas.com/en/document/man/renesas-flash-driver-rl78-type-01-users-manual-rl78g23"
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20949437",
+    "title": "Feature and performance upgrade from RH850/F1K",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:27:18.329435"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat are differences between RH850/F1KM-S2 and F1K?\nAnswer:\nThere are several features and performance from RH850/F1K to F1KM-S2 even they have the same 2MB code flash size. The max. CPU clock is increased from 120MHz on F1K to 240MHz on F1KM-S4. Instead of ICUS on F1K, F1KM-S2 has ICUM. Data flash is increased from 64KB to 128KB. Additional 64KB RAM is also available on F1KM-S2.\nSuitable Products\nRH850/F1Kx"
+      },
+      {
+        "type": "text",
+        "content": "What are differences between RH850/F1KM-S2 and F1K?"
+      },
+      {
+        "type": "text",
+        "content": "What are differences between RH850/F1KM-S2 and F1K?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThere are several features and performance from RH850/F1K to F1KM-S2 even they have the same 2MB code flash size. The max. CPU clock is increased from 120MHz on F1K to 240MHz on F1KM-S4. Instead of ICUS on F1K, F1KM-S2 has ICUM. Data flash is increased from 64KB to 128KB. Additional 64KB RAM is also available on F1KM-S2.\nSuitable Products\nRH850/F1Kx"
+      },
+      {
+        "type": "text",
+        "content": "There are several features and performance from RH850/F1K to F1KM-S2 even they have the same 2MB code flash size. The max. CPU clock is increased from 120MHz on F1K to 240MHz on F1KM-S4. Instead of ICUS on F1K, F1KM-S2 has ICUM. Data flash is increased from 64KB to 128KB. Additional 64KB RAM is also available on F1KM-S2."
+      },
+      {
+        "type": "text",
+        "content": "There are several features and performance from RH850/F1K to F1KM-S2 even they have the same 2MB code flash size. The max. CPU clock is increased from 120MHz on F1K to 240MHz on F1KM-S4. Instead of ICUS on F1K, F1KM-S2 has ICUM. Data flash is increased from 64KB to 128KB. Additional 64KB RAM is also available on F1KM-S2."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850/F1Kx"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850/F1Kx"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850/F1Kx"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20949438"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20949440"
+      }
+    ]
+  }
+}

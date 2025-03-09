@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18286159",
+    "title": "Is There Any Caveat in Changing the Drive Pulse Frequency?",
+    "last_updated": "2023-02-03",
+    "extracted_at": "2025-03-09T00:08:14.119139"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there any concern regarding changing the frequency of the Measurement drive pulse frequency?\nAnswer:\nChanging the pulse frequency of measurement driving may cause insufficient charging and discharging, resulting in unstable measurement results.\nQE for Capacitive Touch is automatically adjusted by measuring the parasitic capacitance of the wires based on the limit resistor (damping resistor) and automatically setting the pulse frequency of the measurement drive that can be charged and discharged sufficiently.\nThe recommended value is the result of the automatic adjustment, but when changing the value, please evaluate it carefully by the user.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Is there any concern regarding changing the frequency of the Measurement drive pulse frequency?"
+      },
+      {
+        "type": "text",
+        "content": "Is there any concern regarding changing the frequency of the Measurement drive pulse frequency?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nChanging the pulse frequency of measurement driving may cause insufficient charging and discharging, resulting in unstable measurement results.\nQE for Capacitive Touch is automatically adjusted by measuring the parasitic capacitance of the wires based on the limit resistor (damping resistor) and automatically setting the pulse frequency of the measurement drive that can be charged and discharged sufficiently.\nThe recommended value is the result of the automatic adjustment, but when changing the value, please evaluate it carefully by the user.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Changing the pulse frequency of measurement driving may cause insufficient charging and discharging, resulting in unstable measurement results.\nQE for Capacitive Touch is automatically adjusted by measuring the parasitic capacitance of the wires based on the limit resistor (damping resistor) and automatically setting the pulse frequency of the measurement drive that can be charged and discharged sufficiently.\nThe recommended value is the result of the automatic adjustment, but when changing the value, please evaluate it carefully by the user."
+      },
+      {
+        "type": "text",
+        "content": "Changing the pulse frequency of measurement driving may cause insufficient charging and discharging, resulting in unstable measurement results."
+      },
+      {
+        "type": "text",
+        "content": "QE for Capacitive Touch is automatically adjusted by measuring the parasitic capacitance of the wires based on the limit resistor (damping resistor) and automatically setting the pulse frequency of the measurement drive that can be charged and discharged sufficiently.\nThe recommended value is the result of the automatic adjustment, but when changing the value, please evaluate it carefully by the user."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792816"
+      }
+    ]
+  }
+}

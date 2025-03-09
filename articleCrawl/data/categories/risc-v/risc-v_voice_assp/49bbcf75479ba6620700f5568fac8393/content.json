@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20855738",
+    "title": "Kit: What type of microphones are supported by the solution kit?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:25:58.151959"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat type of microphones are supported by the solution kit?\nAnswer:\nThe evaluation kit supports out of the box PDM mems microphones, analog microphones, and digital microphones with an I2S interface. The first two types are pre-assembled on the kit for easy evaluation, the latter is not mounted but a placeholder on the PCB is provided for user selection.\nSuitable Products\nRISC-V Voice ASSP"
+      },
+      {
+        "type": "text",
+        "content": "What type of microphones are supported by the solution kit?"
+      },
+      {
+        "type": "text",
+        "content": "What type of microphones are supported by the solution kit?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe evaluation kit supports out of the box PDM mems microphones, analog microphones, and digital microphones with an I2S interface. The first two types are pre-assembled on the kit for easy evaluation, the latter is not mounted but a placeholder on the PCB is provided for user selection.\nSuitable Products\nRISC-V Voice ASSP"
+      },
+      {
+        "type": "text",
+        "content": "The evaluation kit supports out of the box PDM mems microphones, analog microphones, and digital microphones with an I2S interface. The first two types are pre-assembled on the kit for easy evaluation, the latter is not mounted but a placeholder on the PCB is provided for user selection."
+      },
+      {
+        "type": "text",
+        "content": "The evaluation kit supports out of the box PDM mems microphones, analog microphones, and digital microphones with an I2S interface. The first two types are pre-assembled on the kit for easy evaluation, the latter is not mounted but a placeholder on the PCB is provided for user selection."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRISC-V Voice ASSP"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RISC-V Voice ASSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RISC-V Voice ASSP"
+    ],
+    "links": []
+  }
+}

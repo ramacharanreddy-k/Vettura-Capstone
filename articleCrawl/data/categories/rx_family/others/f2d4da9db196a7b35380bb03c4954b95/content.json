@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21245138",
+    "title": "If a PHY-LSI connected to the EtherC/EDMAC port of an RX microcontroller suddenly stops responding, how does phy_read() behave and how should the application behave?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:23:51.031849"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIf a PHY-LSI connected to the EtherC/EDMAC port of an RX microcontroller suddenly stops responding, how does phy_read() behave and how should the application behave? \nAnswer:\nIf the PHY-LSI stops responding, 0xffff is read as the 16-bit value from the MDC/MDIO that is performing clock synchronous serial communication. Therefore, if phy_read() returns 0xffff, call R_ETHER_Close() to stop the Ethernet communication. \nSuitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "If a PHY-LSI connected to the EtherC/EDMAC port of an RX microcontroller suddenly stops responding, how does phy_read() behave and how should the application behave?"
+      },
+      {
+        "type": "text",
+        "content": "If a PHY-LSI connected to the EtherC/EDMAC port of an RX microcontroller suddenly stops responding, how does phy_read() behave and how should the application behave?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIf the PHY-LSI stops responding, 0xffff is read as the 16-bit value from the MDC/MDIO that is performing clock synchronous serial communication. Therefore, if phy_read() returns 0xffff, call R_ETHER_Close() to stop the Ethernet communication. \nSuitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "If the PHY-LSI stops responding, 0xffff is read as the 16-bit value from the MDC/MDIO that is performing clock synchronous serial communication. Therefore, if phy_read() returns 0xffff, call R_ETHER_Close() to stop the Ethernet communication."
+      },
+      {
+        "type": "text",
+        "content": "If the PHY-LSI stops responding, 0xffff is read as the 16-bit value from the MDC/MDIO that is performing clock synchronous serial communication. Therefore, if phy_read() returns 0xffff, call R_ETHER_Close() to stop the Ethernet communication."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20162654"
+      }
+    ]
+  }
+}

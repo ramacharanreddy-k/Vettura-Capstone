@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20788289",
+    "title": "RL78 Family microcontrollers with minimal power consumption",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:53:46.029267"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat are RL78 Family microcontrollers with minimal power consumption?\nAnswer:\nThe RL78/G22.\nPower consumption is among the lowest in the industry at 37.5 µA in CPU RUN mode and 0.20 µA in STOP mode.\n  Suitable Products\nRL78/G22"
+      },
+      {
+        "type": "text",
+        "content": "What are RL78 Family microcontrollers with minimal power consumption?"
+      },
+      {
+        "type": "text",
+        "content": "What are RL78 Family microcontrollers with minimal power consumption?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RL78/G22.\nPower consumption is among the lowest in the industry at 37.5 µA in CPU RUN mode and 0.20 µA in STOP mode.\n  Suitable Products\nRL78/G22"
+      },
+      {
+        "type": "text",
+        "content": "The RL78/G22.\nPower consumption is among the lowest in the industry at 37.5 µA in CPU RUN mode and 0.20 µA in STOP mode.\n  Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "The RL78/G22.\nPower consumption is among the lowest in the industry at 37.5 µA in CPU RUN mode and 0.20 µA in STOP mode."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/362380.png",
+          "alt_text": "",
+          "width": "865",
+          "height": "387",
+          "local_path": "data/categories/rl78_family/rl78g22/1e7a6124b197aac1b88db40dfb0d8be2/images/3a08ea13a8a3ef188c0538de5c9d16a4.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RL78/G22"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/362380.png",
+        "alt_text": "",
+        "width": "865",
+        "height": "387",
+        "local_path": "data/categories/rl78_family/rl78g22/1e7a6124b197aac1b88db40dfb0d8be2/images/3a08ea13a8a3ef188c0538de5c9d16a4.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G22"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G22"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20788292"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20788293"
+      }
+    ]
+  }
+}

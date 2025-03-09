@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21172752",
+    "title": "How to Debug Code from a Specified Address in Renesas RA MCUs - Keil",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:24:01.942895"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to Debug Code from a Specified Address in Renesas RA MCUs - Keil\nAnswer:\nFor Arm chips, the starting address 0 is required to start placing the initial stack pointer, reset vector table, and other necessary content, so if the 0 address is full FFh, the code cannot be debugged.\nTo debug the code from the specified address, you can respecify the address offsets (Initial stack pointer and Initial program counter) required for MCU operation in the IDE. In this article, we will use Keil as an example.\n1. Linker script file (code writing phase).\nModify the linker script, taking the memory_regions.scat file as an example. Change theFLASH_START value and seen below. The basic offset address is 0 by default when the code is compiled, and it is changed to the target offset address of the application as required, such as 0x4000. Recompile the project, check the generated rec file or MOT file, and make sure that the file starts at 0x4000.\n2. Debug Configuration Settings (Code Debugging Phase)\nIn Keil settings, first change the Linker > R/O Base to 0x4000.\nSave the following as a *.ini file (for example, app_0x4000.ini) and place it in the script folder in the Project directory.\n\nFUNC void Setup (void)\n{\n    SP = _RDWORD(0x00004000);           // Setup Stack Pointer\n    PC = _RDWORD(0x00004004);           // Setup Program Counter\n    _WDWORD(0xE000ED08, 0x00004000);    // Setup Vector Table Offset Register\n}\n\nLOAD Objects\\RA4M2_TE_app.axf INCREMENTAL   // Download\nSetup();                                    // Setup for Running\n  Point to the *.ini file in the following image.\nThe debugging effect is shown in the following figure, and when the code jumps to the main() function, the address is at 0x4b7c.\n Suitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "How to Debug Code from a Specified Address in Renesas RA MCUs - Keil"
+      },
+      {
+        "type": "text",
+        "content": "How to Debug Code from a Specified Address in Renesas RA MCUs - Keil"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nFor Arm chips, the starting address 0 is required to start placing the initial stack pointer, reset vector table, and other necessary content, so if the 0 address is full FFh, the code cannot be debugged.\nTo debug the code from the specified address, you can respecify the address offsets (Initial stack pointer and Initial program counter) required for MCU operation in the IDE. In this article, we will use Keil as an example.\n1. Linker script file (code writing phase).\nModify the linker script, taking the memory_regions.scat file as an example. Change theFLASH_START value and seen below. The basic offset address is 0 by default when the code is compiled, and it is changed to the target offset address of the application as required, such as 0x4000. Recompile the project, check the generated rec file or MOT file, and make sure that the file starts at 0x4000.\n2. Debug Configuration Settings (Code Debugging Phase)\nIn Keil settings, first change the Linker > R/O Base to 0x4000.\nSave the following as a *.ini file (for example, app_0x4000.ini) and place it in the script folder in the Project directory.\n\nFUNC void Setup (void)\n{\n    SP = _RDWORD(0x00004000);           // Setup Stack Pointer\n    PC = _RDWORD(0x00004004);           // Setup Program Counter\n    _WDWORD(0xE000ED08, 0x00004000);    // Setup Vector Table Offset Register\n}\n\nLOAD Objects\\RA4M2_TE_app.axf INCREMENTAL   // Download\nSetup();                                    // Setup for Running\n  Point to the *.ini file in the following image.\nThe debugging effect is shown in the following figure, and when the code jumps to the main() function, the address is at 0x4b7c.\n Suitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "For Arm chips, the starting address 0 is required to start placing the initial stack pointer, reset vector table, and other necessary content, so if the 0 address is full FFh, the code cannot be debugged."
+      },
+      {
+        "type": "text",
+        "content": "To debug the code from the specified address, you can respecify the address offsets (Initial stack pointer and Initial program counter) required for MCU operation in the IDE. In this article, we will use Keil as an example."
+      },
+      {
+        "type": "text",
+        "content": "1. Linker script file (code writing phase)."
+      },
+      {
+        "type": "text",
+        "content": "Modify the linker script, taking the memory_regions.scat file as an example. Change theFLASH_START value and seen below. The basic offset address is 0 by default when the code is compiled, and it is changed to the target offset address of the application as required, such as 0x4000. Recompile the project, check the generated rec file or MOT file, and make sure that the file starts at 0x4000."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380475-1.png",
+          "alt_text": "",
+          "width": "564",
+          "height": "311",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/d6dec3c07b526ecc237a5c7f026ce410/images/d521c0dfda3c12a355932ae5458780b8.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "2. Debug Configuration Settings (Code Debugging Phase)"
+      },
+      {
+        "type": "text",
+        "content": "In Keil settings, first change the Linker > R/O Base to 0x4000."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380475-2a.png",
+          "alt_text": "",
+          "width": "558",
+          "height": "421",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/d6dec3c07b526ecc237a5c7f026ce410/images/19ef5e588bdf6c0bf87980e87232cfd1.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Save the following as a *.ini file (for example, app_0x4000.ini) and place it in the script folder in the Project directory."
+      },
+      {
+        "type": "text",
+        "content": "FUNC void Setup (void)\n{\n    SP = _RDWORD(0x00004000);           // Setup Stack Pointer\n    PC = _RDWORD(0x00004004);           // Setup Program Counter\n    _WDWORD(0xE000ED08, 0x00004000);    // Setup Vector Table Offset Register\n}\n\nLOAD Objects\\RA4M2_TE_app.axf INCREMENTAL   // Download\nSetup();                                    // Setup for Running"
+      },
+      {
+        "type": "text",
+        "content": "Point to the *.ini file in the following image."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380475-3.png",
+          "alt_text": "",
+          "width": "558",
+          "height": "419",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/d6dec3c07b526ecc237a5c7f026ce410/images/09c1ba968000ac056e1655fd056a269b.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The debugging effect is shown in the following figure, and when the code jumps to the main() function, the address is at 0x4b7c."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380475-4c.png",
+          "alt_text": "",
+          "width": "1151",
+          "height": "636",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/d6dec3c07b526ecc237a5c7f026ce410/images/8f79736b75ed2293a93c3e8e3f0121d8.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380475-1.png",
+        "alt_text": "",
+        "width": "564",
+        "height": "311",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/d6dec3c07b526ecc237a5c7f026ce410/images/d521c0dfda3c12a355932ae5458780b8.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380475-2a.png",
+        "alt_text": "",
+        "width": "558",
+        "height": "421",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/d6dec3c07b526ecc237a5c7f026ce410/images/19ef5e588bdf6c0bf87980e87232cfd1.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380475-3.png",
+        "alt_text": "",
+        "width": "558",
+        "height": "419",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/d6dec3c07b526ecc237a5c7f026ce410/images/09c1ba968000ac056e1655fd056a269b.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380475-4c.png",
+        "alt_text": "",
+        "width": "1151",
+        "height": "636",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/d6dec3c07b526ecc237a5c7f026ce410/images/8f79736b75ed2293a93c3e8e3f0121d8.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": []
+  }
+}

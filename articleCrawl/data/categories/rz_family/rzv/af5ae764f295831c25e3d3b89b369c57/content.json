@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20978993",
+    "title": "RZ/V: Free AI Application Overview",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:52:09.597274"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIn what format are the free AI applications provided?\nWill the AI-Model be provided, or will it be provided in a trained state?\nAlso, will the AI application be provided in source code or binary form?\nAnswer:\nFree AI Applications provides the source code, pre-build application binary and pre-trained AI model objects, which allow you to select the application from various use cases, and run it on the board immediately.\nSuitable Products\nRZ/V"
+      },
+      {
+        "type": "text",
+        "content": "In what format are the free AI applications provided?\nWill the AI-Model be provided, or will it be provided in a trained state?\nAlso, will the AI application be provided in source code or binary form?"
+      },
+      {
+        "type": "text",
+        "content": "In what format are the free AI applications provided?\nWill the AI-Model be provided, or will it be provided in a trained state?\nAlso, will the AI application be provided in source code or binary form?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nFree AI Applications provides the source code, pre-build application binary and pre-trained AI model objects, which allow you to select the application from various use cases, and run it on the board immediately.\nSuitable Products\nRZ/V"
+      },
+      {
+        "type": "text",
+        "content": "Free AI Applications provides the source code, pre-build application binary and pre-trained AI model objects, which allow you to select the application from various use cases, and run it on the board immediately."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20978990"
+      }
+    ]
+  }
+}

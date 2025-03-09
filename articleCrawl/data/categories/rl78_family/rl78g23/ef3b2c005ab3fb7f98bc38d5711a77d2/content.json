@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20824905",
+    "title": "Differences between the RL78/G23, RL78/G22, and RL78/G13",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:53:26.646466"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat are the differences between the RL78/G23, RL78/G22, and RL78/G13?\nAnswer:\nDifferences in functions and lineups are shown in the figure below. The RL78/G23 and RL78/G22 are new generation series in the RL78 Family and utilize new development processes to achieve low power consumption. In addition, they are equipped with new functions such as capacitive touch sensors and Event Link Controllers. The RL78/G22 features many touch channels, and has the lowest power consumption of any product in the RL78 Family.\nAdditionally, the RL78 Family lineup has been expanded with the RL78/G23, which is offered with a large-capacity ROM package of up to 768 KB, and the RL78/G22, which is available with a minimum 16-pin package.\nFigure 1: Function comparison table\nFigure 2: Lineup comparison table\nSuitable Products\nRL78/G22, RL78/G23, RL78/G13"
+      },
+      {
+        "type": "text",
+        "content": "What are the differences between the RL78/G23, RL78/G22, and RL78/G13?"
+      },
+      {
+        "type": "text",
+        "content": "What are the differences between the RL78/G23, RL78/G22, and RL78/G13?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nDifferences in functions and lineups are shown in the figure below. The RL78/G23 and RL78/G22 are new generation series in the RL78 Family and utilize new development processes to achieve low power consumption. In addition, they are equipped with new functions such as capacitive touch sensors and Event Link Controllers. The RL78/G22 features many touch channels, and has the lowest power consumption of any product in the RL78 Family.\nAdditionally, the RL78 Family lineup has been expanded with the RL78/G23, which is offered with a large-capacity ROM package of up to 768 KB, and the RL78/G22, which is available with a minimum 16-pin package.\nFigure 1: Function comparison table\nFigure 2: Lineup comparison table\nSuitable Products\nRL78/G22, RL78/G23, RL78/G13"
+      },
+      {
+        "type": "text",
+        "content": "Differences in functions and lineups are shown in the figure below. The RL78/G23 and RL78/G22 are new generation series in the RL78 Family and utilize new development processes to achieve low power consumption. In addition, they are equipped with new functions such as capacitive touch sensors and Event Link Controllers. The RL78/G22 features many touch channels, and has the lowest power consumption of any product in the RL78 Family.\nAdditionally, the RL78 Family lineup has been expanded with the RL78/G23, which is offered with a large-capacity ROM package of up to 768 KB, and the RL78/G22, which is available with a minimum 16-pin package.\nFigure 1: Function comparison table\nFigure 2: Lineup comparison table"
+      },
+      {
+        "type": "text",
+        "content": "Differences in functions and lineups are shown in the figure below. The RL78/G23 and RL78/G22 are new generation series in the RL78 Family and utilize new development processes to achieve low power consumption. In addition, they are equipped with new functions such as capacitive touch sensors and Event Link Controllers. The RL78/G22 features many touch channels, and has the lowest power consumption of any product in the RL78 Family."
+      },
+      {
+        "type": "text",
+        "content": "Additionally, the RL78 Family lineup has been expanded with the RL78/G23, which is offered with a large-capacity ROM package of up to 768 KB, and the RL78/G22, which is available with a minimum 16-pin package."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/363999-1.png",
+          "alt_text": "",
+          "width": "950",
+          "height": "706",
+          "local_path": "data/categories/rl78_family/rl78g23/ef3b2c005ab3fb7f98bc38d5711a77d2/images/56f5968fd6a5e60c1aeccec79a8123af.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 1: Function comparison table"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/363999-2.png",
+          "alt_text": "",
+          "width": "950",
+          "height": "372",
+          "local_path": "data/categories/rl78_family/rl78g23/ef3b2c005ab3fb7f98bc38d5711a77d2/images/08b19e328398d685a16c3c67fe507025.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 2: Lineup comparison table"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/G22, RL78/G23, RL78/G13"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/363999-1.png",
+        "alt_text": "",
+        "width": "950",
+        "height": "706",
+        "local_path": "data/categories/rl78_family/rl78g23/ef3b2c005ab3fb7f98bc38d5711a77d2/images/56f5968fd6a5e60c1aeccec79a8123af.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/363999-2.png",
+        "alt_text": "",
+        "width": "950",
+        "height": "372",
+        "local_path": "data/categories/rl78_family/rl78g23/ef3b2c005ab3fb7f98bc38d5711a77d2/images/08b19e328398d685a16c3c67fe507025.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G22, RL78/G23, RL78/G13"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G22, RL78/G23, RL78/G13"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20824911"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20824916"
+      }
+    ]
+  }
+}

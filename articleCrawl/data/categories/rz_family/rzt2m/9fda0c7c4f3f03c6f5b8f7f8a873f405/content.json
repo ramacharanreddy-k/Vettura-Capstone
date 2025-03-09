@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20483525",
+    "title": "Can the encoder interface of the RZ/T2M be used with two channels?",
+    "last_updated": "2022-07-06",
+    "extracted_at": "2025-03-08T23:50:17.068620"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan the encoder interface of the RZ/T2M be used with two channels?\nAnswer:\nYes. Two channels can be used by combining with each of the EnDat2.2, BiSS®-C, HIPERFACE DSL, FA-CODER®, and A-formatTM encoders.\nSuitable Products\nRZ/T2M"
+      },
+      {
+        "type": "text",
+        "content": "Can the encoder interface of the RZ/T2M be used with two channels?"
+      },
+      {
+        "type": "text",
+        "content": "Can the encoder interface of the RZ/T2M be used with two channels?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes. Two channels can be used by combining with each of the EnDat2.2, BiSS®-C, HIPERFACE DSL, FA-CODER®, and A-formatTM encoders.\nSuitable Products\nRZ/T2M"
+      },
+      {
+        "type": "text",
+        "content": "Yes. Two channels can be used by combining with each of the EnDat2.2, BiSS®-C, HIPERFACE DSL, FA-CODER®, and A-formatTM encoders."
+      },
+      {
+        "type": "text",
+        "content": "Yes. Two channels can be used by combining with each of the EnDat2.2, BiSS®-C, HIPERFACE DSL, FA-CODER®, and A-formatTM encoders."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/T2M"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/T2M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/T2M"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20483531"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20483537"
+      }
+    ]
+  }
+}

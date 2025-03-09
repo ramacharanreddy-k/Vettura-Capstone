@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20855730",
+    "title": "Device: How can I program the device in production?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:25:53.574963"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow can I program the device in production?\nAnswer:\nThe device has a serial programming interface that can be used to store any defined application parameters (related to the specific voice recognition keywords, or any other configurable settings) into the device memory.\nSuitable Products\nRISC-V Voice ASSP"
+      },
+      {
+        "type": "text",
+        "content": "How can I program the device in production?"
+      },
+      {
+        "type": "text",
+        "content": "How can I program the device in production?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe device has a serial programming interface that can be used to store any defined application parameters (related to the specific voice recognition keywords, or any other configurable settings) into the device memory.\nSuitable Products\nRISC-V Voice ASSP"
+      },
+      {
+        "type": "text",
+        "content": "The device has a serial programming interface that can be used to store any defined application parameters (related to the specific voice recognition keywords, or any other configurable settings) into the device memory."
+      },
+      {
+        "type": "text",
+        "content": "The device has a serial programming interface that can be used to store any defined application parameters (related to the specific voice recognition keywords, or any other configurable settings) into the device memory."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRISC-V Voice ASSP"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RISC-V Voice ASSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RISC-V Voice ASSP"
+    ],
+    "links": []
+  }
+}

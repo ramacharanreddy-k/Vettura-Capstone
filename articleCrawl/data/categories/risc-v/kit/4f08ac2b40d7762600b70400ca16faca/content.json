@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20626303",
+    "title": "What type of motors can be supported by the solution kit?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:25:12.708760"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat type of motors can be supported by the solution kit?\nAnswer:\nThe evaluation kit supports 3-phase Permanent Magnet Synchronous (PMSM, PMAC, BLAC) and 3-phase Brushless DC (BLDC) motors. It was tested with motor types NANOTEC DB42S03 or DB42M03, 24VDC, 4000 RPM or type MB57GA240.\nSuitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "What type of motors can be supported by the solution kit?"
+      },
+      {
+        "type": "text",
+        "content": "What type of motors can be supported by the solution kit?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe evaluation kit supports 3-phase Permanent Magnet Synchronous (PMSM, PMAC, BLAC) and 3-phase Brushless DC (BLDC) motors. It was tested with motor types NANOTEC DB42S03 or DB42M03, 24VDC, 4000 RPM or type MB57GA240.\nSuitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "The evaluation kit supports 3-phase Permanent Magnet Synchronous (PMSM, PMAC, BLAC) and 3-phase Brushless DC (BLDC) motors. It was tested with motor types NANOTEC DB42S03 or DB42M03, 24VDC, 4000 RPM or type MB57GA240."
+      },
+      {
+        "type": "text",
+        "content": "The evaluation kit supports 3-phase Permanent Magnet Synchronous (PMSM, PMAC, BLAC) and 3-phase Brushless DC (BLDC) motors. It was tested with motor types NANOTEC DB42S03 or DB42M03, 24VDC, 4000 RPM or type MB57GA240."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RISC-V ASSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RISC-V ASSP"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20626322"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20628063"
+      }
+    ]
+  }
+}

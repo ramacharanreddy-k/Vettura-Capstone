@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21464792",
+    "title": "RA Family: What is the difference between Voice Kit and AI Kit?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:41:10.200362"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the difference between Voice Kit and AI Kit?\nAnswer:\nRenesas is focusing on three AI/ML technology pillars: Realtime Analytics(sensing), Voice, and Vision. Both kits are released to cover those pillars.\nVoice Kit: Voice\nAI Kit: Realtime Analytics and Vision\nSuitable Products\nRA8M1"
+      },
+      {
+        "type": "text",
+        "content": "What is the difference between Voice Kit and AI Kit?"
+      },
+      {
+        "type": "text",
+        "content": "What is the difference between Voice Kit and AI Kit?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRenesas is focusing on three AI/ML technology pillars: Realtime Analytics(sensing), Voice, and Vision. Both kits are released to cover those pillars.\nVoice Kit: Voice\nAI Kit: Realtime Analytics and Vision\nSuitable Products\nRA8M1"
+      },
+      {
+        "type": "text",
+        "content": "Renesas is focusing on three AI/ML technology pillars: Realtime Analytics(sensing), Voice, and Vision. Both kits are released to cover those pillars.\nVoice Kit: Voice\nAI Kit: Realtime Analytics and Vision"
+      },
+      {
+        "type": "text",
+        "content": "Renesas is focusing on three AI/ML technology pillars: Realtime Analytics(sensing), Voice, and Vision. Both kits are released to cover those pillars."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA8M1"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA8M1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA8M1"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21464805"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21464813"
+      }
+    ]
+  }
+}

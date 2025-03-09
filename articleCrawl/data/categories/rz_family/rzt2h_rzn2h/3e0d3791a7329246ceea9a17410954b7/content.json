@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21681480",
+    "title": "RZ/T2H, RZ/N2H: LPDDR4 Interfaces",
+    "last_updated": "2025-07-02",
+    "extracted_at": "2025-03-08T23:49:24.829801"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDoes compatibility with LPDDR4 mean that DDR4 is also supported? Also, is there any documentation on PCB design for LPDDR4?\nAnswer:\nNo, DDR4 is not supported.\nFor information on PCB design, refer to the available PCB Design Guide for LPDDR4 (R01AN7268EJ0100) and PCB Verification Guide for LPDDR4 (R01AN7260EJ0100).\nSuitable Products\nRZ/T2H, RZ/N2H"
+      },
+      {
+        "type": "text",
+        "content": "Does compatibility with LPDDR4 mean that DDR4 is also supported? Also, is there any documentation on PCB design for LPDDR4?"
+      },
+      {
+        "type": "text",
+        "content": "Does compatibility with LPDDR4 mean that DDR4 is also supported? Also, is there any documentation on PCB design for LPDDR4?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nNo, DDR4 is not supported.\nFor information on PCB design, refer to the available PCB Design Guide for LPDDR4 (R01AN7268EJ0100) and PCB Verification Guide for LPDDR4 (R01AN7260EJ0100).\nSuitable Products\nRZ/T2H, RZ/N2H"
+      },
+      {
+        "type": "text",
+        "content": "No, DDR4 is not supported.\nFor information on PCB design, refer to the available PCB Design Guide for LPDDR4 (R01AN7268EJ0100) and PCB Verification Guide for LPDDR4 (R01AN7260EJ0100)."
+      },
+      {
+        "type": "text",
+        "content": "No, DDR4 is not supported."
+      },
+      {
+        "type": "text",
+        "content": "For information on PCB design, refer to the available PCB Design Guide for LPDDR4 (R01AN7268EJ0100) and PCB Verification Guide for LPDDR4 (R01AN7260EJ0100)."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/T2H, RZ/N2H"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/T2H, RZ/N2H"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/T2H, RZ/N2H"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21662844"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21685997"
+      }
+    ]
+  }
+}

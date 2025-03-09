@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20612315",
+    "title": "I think the RZ/N2L can support three ports for EtherCAT, but are there any specifications such as which communication ports to use for IN/OUT?",
+    "last_updated": "2022-09-08",
+    "extracted_at": "2025-03-08T23:46:52.470682"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI think the RZ/N2L can support three ports for EtherCAT, but are there any specifications such as which communication ports to use for IN/OUT?\nAnswer:\nPort 0 of the integrated EtherCAT controller is for IN, and the remaining ports are for OUT. Typically the ETH0 port of RZ/N2L corresponds to IN, but alternatively the ETH2 port of RZ/N2L may correspond to IN. The assignment is selected by the MODCTRL register.\nSuitable Products\nRZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "I think the RZ/N2L can support three ports for EtherCAT, but are there any specifications such as which communication ports to use for IN/OUT?"
+      },
+      {
+        "type": "text",
+        "content": "I think the RZ/N2L can support three ports for EtherCAT, but are there any specifications such as which communication ports to use for IN/OUT?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nPort 0 of the integrated EtherCAT controller is for IN, and the remaining ports are for OUT. Typically the ETH0 port of RZ/N2L corresponds to IN, but alternatively the ETH2 port of RZ/N2L may correspond to IN. The assignment is selected by the MODCTRL register.\nSuitable Products\nRZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "Port 0 of the integrated EtherCAT controller is for IN, and the remaining ports are for OUT. Typically the ETH0 port of RZ/N2L corresponds to IN, but alternatively the ETH2 port of RZ/N2L may correspond to IN. The assignment is selected by the MODCTRL register."
+      },
+      {
+        "type": "text",
+        "content": "Port 0 of the integrated EtherCAT controller is for IN, and the remaining ports are for OUT. Typically the ETH0 port of RZ/N2L corresponds to IN, but alternatively the ETH2 port of RZ/N2L may correspond to IN. The assignment is selected by the MODCTRL register."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/N2L"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/N2L"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20612296"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20612334"
+      }
+    ]
+  }
+}

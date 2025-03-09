@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21153498",
+    "title": "RL78 Replace an L Grade device with K Grade device.",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:55:26.471860"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs it possible to replace and RL78 F12 L Grade (-40 deg C to 105 deg C) with a K Grade(-40 deg to 125 deg C) device. My system is working on 32 MHz.\nAnswer:\nIt is not allowed to run a K Grade product with 32MHz, because the specification of the K Grade devices is only up to 24MHz.\nMeans when running such a device at 32MHz, the operation is outside the specification. Furthermore, this max frequency is stored inside the device. And if the customer is using our selfprogramming library (Selflib) of dataflash libraries like FDL or EEL T01 or T02 this maximum frequency will be checked inside the library. If it does not fit the lib cannot be used and generates an error in the initialization routine.\nSuitable Products\nRL78"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nIs it possible to replace and RL78 F12 L Grade (-40 deg C to 105 deg C) with a K Grade(-40 deg to 125 deg C) device. My system is working on 32 MHz.\nAnswer:\nIt is not allowed to run a K Grade product with 32MHz, because the specification of the K Grade devices is only up to 24MHz.\nMeans when running such a device at 32MHz, the operation is outside the specification. Furthermore, this max frequency is stored inside the device. And if the customer is using our selfprogramming library (Selflib) of dataflash libraries like FDL or EEL T01 or T02 this maximum frequency will be checked inside the library. If it does not fit the lib cannot be used and generates an error in the initialization routine.\nSuitable Products\nRL78"
+      },
+      {
+        "type": "text",
+        "content": "Is it possible to replace and RL78 F12 L Grade (-40 deg C to 105 deg C) with a K Grade(-40 deg to 125 deg C) device. My system is working on 32 MHz."
+      },
+      {
+        "type": "text",
+        "content": "Is it possible to replace and RL78 F12 L Grade (-40 deg C to 105 deg C) with a K Grade(-40 deg to 125 deg C) device. My system is working on 32 MHz."
+      },
+      {
+        "type": "text",
+        "content": "Is it possible to replace and RL78 F12 L Grade (-40 deg C to 105 deg C) with a K Grade(-40 deg to 125 deg C) device. My system is working on 32 MHz."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIt is not allowed to run a K Grade product with 32MHz, because the specification of the K Grade devices is only up to 24MHz.\nMeans when running such a device at 32MHz, the operation is outside the specification. Furthermore, this max frequency is stored inside the device. And if the customer is using our selfprogramming library (Selflib) of dataflash libraries like FDL or EEL T01 or T02 this maximum frequency will be checked inside the library. If it does not fit the lib cannot be used and generates an error in the initialization routine.\nSuitable Products\nRL78"
+      },
+      {
+        "type": "text",
+        "content": "It is not allowed to run a K Grade product with 32MHz, because the specification of the K Grade devices is only up to 24MHz.\nMeans when running such a device at 32MHz, the operation is outside the specification. Furthermore, this max frequency is stored inside the device. And if the customer is using our selfprogramming library (Selflib) of dataflash libraries like FDL or EEL T01 or T02 this maximum frequency will be checked inside the library. If it does not fit the lib cannot be used and generates an error in the initialization routine."
+      },
+      {
+        "type": "text",
+        "content": "It is not allowed to run a K Grade product with 32MHz, because the specification of the K Grade devices is only up to 24MHz."
+      },
+      {
+        "type": "text",
+        "content": "It is not allowed to run a K Grade product with 32MHz, because the specification of the K Grade devices is only up to 24MHz."
+      },
+      {
+        "type": "text",
+        "content": "Means when running such a device at 32MHz, the operation is outside the specification. Furthermore, this max frequency is stored inside the device. And if the customer is using our selfprogramming library (Selflib) of dataflash libraries like FDL or EEL T01 or T02 this maximum frequency will be checked inside the library. If it does not fit the lib cannot be used and generates an error in the initialization routine."
+      },
+      {
+        "type": "text",
+        "content": "Means when running such a device at 32MHz, the operation is outside the specification."
+      },
+      {
+        "type": "text",
+        "content": "Furthermore, this max frequency is stored inside the device. And if the customer is using our selfprogramming library (Selflib) of dataflash libraries like FDL or EEL T01 or T02 this maximum frequency will be checked inside the library. If it does not fit the lib cannot be used and generates an error in the initialization routine."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78"
+    ],
+    "links": []
+  }
+}

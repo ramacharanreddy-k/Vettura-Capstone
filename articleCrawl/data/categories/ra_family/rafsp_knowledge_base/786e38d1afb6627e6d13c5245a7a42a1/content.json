@@ -1,0 +1,268 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21094312",
+    "title": "RA Family: How to remap execution address",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:20:41.126991"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "How to remap the execution address of an application?"
+      },
+      {
+        "type": "text",
+        "content": "To change the start address, of the application in Code Flash, we should edit the linker script fsp.ld and create in folder Debug a new script like memory_regions.ld."
+      },
+      {
+        "type": "text",
+        "content": "We assume that we want our application to start from address 0x0000_4000 instead of  the default address which is 0x0000_0000."
+      },
+      {
+        "type": "text",
+        "content": "In this example we are using RA6M4. The specific MCU has Code Flash size equal to 1MB, which corresponds to FLASH_LENGTH = 0x10_0000."
+      },
+      {
+        "type": "text",
+        "content": "FLASH_START address and FLASH_LENGTH can be found in memory_regions.ld script generated in Debug Folder of the project:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/68f6906b-a61b-4ecd-b073-9e0d905e4f57",
+          "alt_text": "",
+          "width": "320",
+          "height": "380",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/786e38d1afb6627e6d13c5245a7a42a1/images/4d0ed07b3d162a9082e3747fa1a6feef.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/369dc41f-cdb5-4867-b7eb-1128104f1d1d",
+          "alt_text": "",
+          "width": "0",
+          "height": "0",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/786e38d1afb6627e6d13c5245a7a42a1/images/96022d5e30256f44099d0f8a9bf36133.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "In order to change the start address of our application we should follow these steps:"
+      },
+      {
+        "type": "text",
+        "content": "1) We should go in Debug folder and create a new script called user_regions.ld, this script will now include the new start address for Code Flash memory and"
+      },
+      {
+        "type": "text",
+        "content": "the new length. The new length can be calculated like this: new_flash_length = old_flash_length – new_flash_start_address."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/b25030c9-0316-413b-ba5a-f65800244582",
+          "alt_text": "",
+          "width": "0",
+          "height": "0",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/786e38d1afb6627e6d13c5245a7a42a1/images/a12fc3526b1af203aa0c63ebc2e04329.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/c429935a-3f43-4b14-a6c4-ac39cef1e5e1",
+          "alt_text": "",
+          "width": "0",
+          "height": "0",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/786e38d1afb6627e6d13c5245a7a42a1/images/82b23f25d1ff272dcd3e5106184d5b1c.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "2) Then we should modify the linker script fsp.ld to include the new user_regions.ld instead of memory_regions.ld."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/62929e7b-e1b4-48f1-b397-00e5af70429e",
+          "alt_text": "",
+          "width": "1193",
+          "height": "741",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/786e38d1afb6627e6d13c5245a7a42a1/images/01447c0b0028633049197b1573bf1613.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "4) Next step is to go to Debug Configurations of the project, select Startup and go to Run Commands to set the Program Counter and the Initial Stack pointer registers."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/2991e28d-440b-419b-8b5c-c4d9aad77f6d",
+          "alt_text": "",
+          "width": "868",
+          "height": "448",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/786e38d1afb6627e6d13c5245a7a42a1/images/1b1c5782246eb5255555ae899fb84abc.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/0a3bf757-349e-4b9f-b42d-3add06f0b2d9",
+          "alt_text": "",
+          "width": "1036",
+          "height": "695",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/786e38d1afb6627e6d13c5245a7a42a1/images/e042428b3919943dda496a2b516cac55.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "5)  Perform Clean Project and then Build Project."
+      },
+      {
+        "type": "text",
+        "content": "6) Make sure you have previously erased the code flash and then launch a debug session to load and run your application."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/b6ddede6-93ab-454b-a682-d8786e2c992a",
+          "alt_text": "",
+          "width": "782",
+          "height": "387",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/786e38d1afb6627e6d13c5245a7a42a1/images/f2e5c5a78325ec5888bd9807acf499bf.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Press Resume twice:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/9703b8b4-fdc7-4f55-8dcc-1152a13cb929",
+          "alt_text": "",
+          "width": "1304",
+          "height": "510",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/786e38d1afb6627e6d13c5245a7a42a1/images/3e698a09312b11228783afe5e12f41c8.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "And this is it, we have our application up and running from the start address we selected."
+      },
+      {
+        "type": "text",
+        "content": "Below you will find some readings of code flash, showing that our application is starting from address 0x0000_4000 instead of 0x0000_00000."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/6cb5d2ab-006d-4b2f-92c7-265ec0d054a5",
+          "alt_text": "",
+          "width": "879",
+          "height": "710",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/786e38d1afb6627e6d13c5245a7a42a1/images/be90c517b5fb851c583e835bfd7b2e62.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA , FSP, e2studio"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/68f6906b-a61b-4ecd-b073-9e0d905e4f57",
+        "alt_text": "",
+        "width": "320",
+        "height": "380",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/786e38d1afb6627e6d13c5245a7a42a1/images/4d0ed07b3d162a9082e3747fa1a6feef.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/369dc41f-cdb5-4867-b7eb-1128104f1d1d",
+        "alt_text": "",
+        "width": "0",
+        "height": "0",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/786e38d1afb6627e6d13c5245a7a42a1/images/96022d5e30256f44099d0f8a9bf36133.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/b25030c9-0316-413b-ba5a-f65800244582",
+        "alt_text": "",
+        "width": "0",
+        "height": "0",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/786e38d1afb6627e6d13c5245a7a42a1/images/a12fc3526b1af203aa0c63ebc2e04329.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/c429935a-3f43-4b14-a6c4-ac39cef1e5e1",
+        "alt_text": "",
+        "width": "0",
+        "height": "0",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/786e38d1afb6627e6d13c5245a7a42a1/images/82b23f25d1ff272dcd3e5106184d5b1c.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/62929e7b-e1b4-48f1-b397-00e5af70429e",
+        "alt_text": "",
+        "width": "1193",
+        "height": "741",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/786e38d1afb6627e6d13c5245a7a42a1/images/01447c0b0028633049197b1573bf1613.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/2991e28d-440b-419b-8b5c-c4d9aad77f6d",
+        "alt_text": "",
+        "width": "868",
+        "height": "448",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/786e38d1afb6627e6d13c5245a7a42a1/images/1b1c5782246eb5255555ae899fb84abc.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/0a3bf757-349e-4b9f-b42d-3add06f0b2d9",
+        "alt_text": "",
+        "width": "1036",
+        "height": "695",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/786e38d1afb6627e6d13c5245a7a42a1/images/e042428b3919943dda496a2b516cac55.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/b6ddede6-93ab-454b-a682-d8786e2c992a",
+        "alt_text": "",
+        "width": "782",
+        "height": "387",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/786e38d1afb6627e6d13c5245a7a42a1/images/f2e5c5a78325ec5888bd9807acf499bf.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/9703b8b4-fdc7-4f55-8dcc-1152a13cb929",
+        "alt_text": "",
+        "width": "1304",
+        "height": "510",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/786e38d1afb6627e6d13c5245a7a42a1/images/3e698a09312b11228783afe5e12f41c8.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/6cb5d2ab-006d-4b2f-92c7-265ec0d054a5",
+        "alt_text": "",
+        "width": "879",
+        "height": "710",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/786e38d1afb6627e6d13c5245a7a42a1/images/be90c517b5fb851c583e835bfd7b2e62.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA , FSP, e2studio"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA , FSP, e2studio"
+    ],
+    "links": []
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20425857",
+    "title": "RA Family: Determining Header Size in Flash Layout Configuration with MCUboot for FSP",
+    "last_updated": "2024-09-09",
+    "extracted_at": "2025-03-08T23:23:28.218316"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "In the application boot process, the MCUboot bootloader will configure the Vector Table Offset Register (VTOR) for vector table relocation based on the image header size, since the vector table is located after the image header. Therefore, the setting of the image header size needs to consider the required minimum configuration of device VTOR and the required alignment for the number of interrupt sources used by the NVIC. The criteria of minimum image header size for each RA device category can be referred to as below.\nRA Devices The number of configurable interrupts / exceptions\n(not including the first 16 Exceptions from Reset to SYSTICK) Minimum image header size\nGroup 1 16 (0) - 64 (48) Note1 0x100\nGroup 2 16 (0) - 128 (112) Note1 0x200\nGroup 3 16 (0) - 32 (16) 0x80\n33 (17) - 64 (48) 0x100\n65 (49) - 128 (112) Note1 0x200\n  Note 1: Maximum interrupts number depends on MCU device specification. Please refer to MCU’s hardware user’s manual.\nGroup 1: Arm Cortex-M23 core devices\n            RA2E1, RA2E2, RA2E3, RA2L1, RA2A1\nGroup 2: Arm Cortex-M23 core devices\n            RA0E1, RA2A2\nGroup 3: Arm Cortex-M4, Arm Cortex-M33, and Arm Cortex-M85 core devices\n            RA4M1, RA4M2, RA4M3, RA4E1, RA4E2, RA4W1, RA4T1\n            RA6M1, RA6M2, RA6M3, RA6M4, RA6M5, RA6E1, RA6E2, RA6T1, RA6T2, RA6T3\n            RA8M1, RA8D1, RA8T1\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "In the application boot process, the MCUboot bootloader will configure the Vector Table Offset Register (VTOR) for vector table relocation based on the image header size, since the vector table is located after the image header. Therefore, the setting of the image header size needs to consider the required minimum configuration of device VTOR and the required alignment for the number of interrupt sources used by the NVIC. The criteria of minimum image header size for each RA device category can be referred to as below.\nRA Devices The number of configurable interrupts / exceptions\n(not including the first 16 Exceptions from Reset to SYSTICK) Minimum image header size\nGroup 1 16 (0) - 64 (48) Note1 0x100\nGroup 2 16 (0) - 128 (112) Note1 0x200\nGroup 3 16 (0) - 32 (16) 0x80\n33 (17) - 64 (48) 0x100\n65 (49) - 128 (112) Note1 0x200\n  Note 1: Maximum interrupts number depends on MCU device specification. Please refer to MCU’s hardware user’s manual.\nGroup 1: Arm Cortex-M23 core devices\n            RA2E1, RA2E2, RA2E3, RA2L1, RA2A1\nGroup 2: Arm Cortex-M23 core devices\n            RA0E1, RA2A2\nGroup 3: Arm Cortex-M4, Arm Cortex-M33, and Arm Cortex-M85 core devices\n            RA4M1, RA4M2, RA4M3, RA4E1, RA4E2, RA4W1, RA4T1\n            RA6M1, RA6M2, RA6M3, RA6M4, RA6M5, RA6E1, RA6E2, RA6T1, RA6T2, RA6T3\n            RA8M1, RA8D1, RA8T1\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "In the application boot process, the MCUboot bootloader will configure the Vector Table Offset Register (VTOR) for vector table relocation based on the image header size, since the vector table is located after the image header. Therefore, the setting of the image header size needs to consider the required minimum configuration of device VTOR and the required alignment for the number of interrupt sources used by the NVIC. The criteria of minimum image header size for each RA device category can be referred to as below.\nRA Devices The number of configurable interrupts / exceptions\n(not including the first 16 Exceptions from Reset to SYSTICK) Minimum image header size\nGroup 1 16 (0) - 64 (48) Note1 0x100\nGroup 2 16 (0) - 128 (112) Note1 0x200\nGroup 3 16 (0) - 32 (16) 0x80\n33 (17) - 64 (48) 0x100\n65 (49) - 128 (112) Note1 0x200\n  Note 1: Maximum interrupts number depends on MCU device specification. Please refer to MCU’s hardware user’s manual.\nGroup 1: Arm Cortex-M23 core devices\n            RA2E1, RA2E2, RA2E3, RA2L1, RA2A1\nGroup 2: Arm Cortex-M23 core devices\n            RA0E1, RA2A2\nGroup 3: Arm Cortex-M4, Arm Cortex-M33, and Arm Cortex-M85 core devices\n            RA4M1, RA4M2, RA4M3, RA4E1, RA4E2, RA4W1, RA4T1\n            RA6M1, RA6M2, RA6M3, RA6M4, RA6M5, RA6E1, RA6E2, RA6T1, RA6T2, RA6T3\n            RA8M1, RA8D1, RA8T1\nSuitable Products"
+      },
+      {
+        "type": "text",
+        "content": "In the application boot process, the MCUboot bootloader will configure the Vector Table Offset Register (VTOR) for vector table relocation based on the image header size, since the vector table is located after the image header. Therefore, the setting of the image header size needs to consider the required minimum configuration of device VTOR and the required alignment for the number of interrupt sources used by the NVIC. The criteria of minimum image header size for each RA device category can be referred to as below."
+      },
+      {
+        "type": "text",
+        "content": "Note 1: Maximum interrupts number depends on MCU device specification. Please refer to MCU’s hardware user’s manual."
+      },
+      {
+        "type": "text",
+        "content": "Group 1: Arm Cortex-M23 core devices\n            RA2E1, RA2E2, RA2E3, RA2L1, RA2A1"
+      },
+      {
+        "type": "text",
+        "content": "Group 2: Arm Cortex-M23 core devices\n            RA0E1, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "Group 3: Arm Cortex-M4, Arm Cortex-M33, and Arm Cortex-M85 core devices\n            RA4M1, RA4M2, RA4M3, RA4E1, RA4E2, RA4W1, RA4T1\n            RA6M1, RA6M2, RA6M3, RA6M4, RA6M5, RA6E1, RA6E2, RA6T1, RA6T2, RA6T3\n            RA8M1, RA8D1, RA8T1"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Devices",
+            "The number of configurable interrupts / exceptions\n(not including the first 16 Exceptions from Reset to SYSTICK)",
+            "Minimum image header size"
+          ],
+          [
+            "Group 1",
+            "16 (0) - 64 (48) Note1",
+            "0x100"
+          ],
+          [
+            "Group 2",
+            "16 (0) - 128 (112) Note1",
+            "0x200"
+          ],
+          [
+            "Group 3",
+            "16 (0) - 32 (16)",
+            "0x80"
+          ],
+          [
+            "33 (17) - 64 (48)",
+            "0x100"
+          ],
+          [
+            "65 (49) - 128 (112) Note1",
+            "0x200"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20431077"
+      }
+    ]
+  }
+}

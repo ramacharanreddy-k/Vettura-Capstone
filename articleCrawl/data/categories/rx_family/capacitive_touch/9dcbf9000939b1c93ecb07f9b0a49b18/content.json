@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18286163",
+    "title": "Is the Limiter Resistance Value Limited?",
+    "last_updated": "2023-07-03",
+    "extracted_at": "2025-03-09T00:07:20.000915"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs the Limiter Resistance Value Limited?\nAnswer:\nQE for Capacitive Touch allows selection from 10~1000Ω.\nThe limiting resistor (damping resistor) is recommended to be 560Ω.\nPlease set the total resistance of electrode and wiring within 2kΩ.\nFor details, please refer to \"2.1 Outline of Design Recommendations\" in the application note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\".\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Is the Limiter Resistance Value Limited?"
+      },
+      {
+        "type": "text",
+        "content": "Is the Limiter Resistance Value Limited?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nQE for Capacitive Touch allows selection from 10~1000Ω.\nThe limiting resistor (damping resistor) is recommended to be 560Ω.\nPlease set the total resistance of electrode and wiring within 2kΩ.\nFor details, please refer to \"2.1 Outline of Design Recommendations\" in the application note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\".\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "QE for Capacitive Touch allows selection from 10~1000Ω.\nThe limiting resistor (damping resistor) is recommended to be 560Ω.\nPlease set the total resistance of electrode and wiring within 2kΩ.\nFor details, please refer to \"2.1 Outline of Design Recommendations\" in the application note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\"."
+      },
+      {
+        "type": "text",
+        "content": "QE for Capacitive Touch allows selection from 10~1000Ω."
+      },
+      {
+        "type": "text",
+        "content": "The limiting resistor (damping resistor) is recommended to be 560Ω.\nPlease set the total resistance of electrode and wiring within 2kΩ."
+      },
+      {
+        "type": "text",
+        "content": "For details, please refer to \"2.1 Outline of Design Recommendations\" in the application note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\"."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792813"
+      }
+    ]
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21678358",
+    "title": "Using USB Boot with RA and RFP",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:23:04.541448"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Some RA devices have available the USB boot mode. The USB boot mode is a state where the on-chip flash memory routine (USB boot program), stored in the boot area within the MCU is used."
+      },
+      {
+        "type": "text",
+        "content": "In this mode the on-chip flash, including the code and data flash memory, can be modified from outside the MCU by using USB."
+      },
+      {
+        "type": "text",
+        "content": "To put the MCU on this state you need to drive the MD pin (P201) to low level. The example on this FAQ uses the EK-RA4M2. To drive the MD pin to low on EK-RA4M2 you need to close jumper J16."
+      },
+      {
+        "type": "text",
+        "content": "The MCU will start in USB boot mode, if the MD pin is held low on release from reset state."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/898121dd-e0d3-4121-b422-c98cd8dd434f",
+          "alt_text": "",
+          "width": "687",
+          "height": "284",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/b81ba8ce217ee3a82fe49074afa7a178/images/ef8fed64e0402a6014add2a65043aec3.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "To use the USB boot mode the USB Full Speed Port, must be used. On EK-RA4M2 you need to:"
+      },
+      {
+        "type": "text",
+        "content": "Press the reset button and as soon as you release the button the MCU will start in USB boot mode."
+      },
+      {
+        "type": "text",
+        "content": "In device manager you should see a COM port recognized as RA USB Boot CDC."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/26aabd82-2cee-4649-a319-339abdd24930",
+          "alt_text": "",
+          "width": "228",
+          "height": "42",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/b81ba8ce217ee3a82fe49074afa7a178/images/634062737dc677a0544c409a10ebf216.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "In Renesas Flash Programmer create a new project and in Communication Settings select the COM port recognized as shown below:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/fc451c20-0452-487c-ace1-a3451bf20406",
+          "alt_text": "",
+          "width": "492",
+          "height": "309",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/b81ba8ce217ee3a82fe49074afa7a178/images/9cbf530cd478a4ebca53a63fd65a981c.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "And then you can select your image file to program the MCU, while being in boot mode through RFP using the USB Full Speed."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/c5dcaf2e-2684-49ee-995a-26b1c097826d",
+          "alt_text": "",
+          "width": "605",
+          "height": "649",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/b81ba8ce217ee3a82fe49074afa7a178/images/eb2a879b1c90cef46786436b1f5a7303.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/a7f0fd5e-80ff-445f-a055-f2578a0b3422",
+          "alt_text": "",
+          "width": "603",
+          "height": "200",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/b81ba8ce217ee3a82fe49074afa7a178/images/e85e47e2b44524ae97b6e2bca25e84c1.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "You can download Renesas Flash Programmer and it's User's Manual from here:"
+      },
+      {
+        "type": "text",
+        "content": "https://www.renesas.com/en/software-tool/renesas-flash-programmer-programming-gui"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family, RFP"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA Family, RFP"
+      },
+      {
+        "type": "text",
+        "content": "RA Family, RFP"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/898121dd-e0d3-4121-b422-c98cd8dd434f",
+        "alt_text": "",
+        "width": "687",
+        "height": "284",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/b81ba8ce217ee3a82fe49074afa7a178/images/ef8fed64e0402a6014add2a65043aec3.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/26aabd82-2cee-4649-a319-339abdd24930",
+        "alt_text": "",
+        "width": "228",
+        "height": "42",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/b81ba8ce217ee3a82fe49074afa7a178/images/634062737dc677a0544c409a10ebf216.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/fc451c20-0452-487c-ace1-a3451bf20406",
+        "alt_text": "",
+        "width": "492",
+        "height": "309",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/b81ba8ce217ee3a82fe49074afa7a178/images/9cbf530cd478a4ebca53a63fd65a981c.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/c5dcaf2e-2684-49ee-995a-26b1c097826d",
+        "alt_text": "",
+        "width": "605",
+        "height": "649",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/b81ba8ce217ee3a82fe49074afa7a178/images/eb2a879b1c90cef46786436b1f5a7303.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/a7f0fd5e-80ff-445f-a055-f2578a0b3422",
+        "alt_text": "",
+        "width": "603",
+        "height": "200",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/b81ba8ce217ee3a82fe49074afa7a178/images/e85e47e2b44524ae97b6e2bca25e84c1.png"
+      }
+    ],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": [
+      {
+        "text": "https://www.renesas.com/en/software-tool/renesas-flash-programmer-programming-gui",
+        "url": "https://www.renesas.com/en/software-tool/renesas-flash-programmer-programming-gui"
+      }
+    ]
+  }
+}

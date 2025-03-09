@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20626254",
+    "title": "Both QFN packages available for the device have an exposed die pad. Is it mandatory to connect it to GND, or can it be left unconnected?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:24:54.310410"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nBoth QFN packages available for the device have an exposed die pad. Is it mandatory to connect it to GND, or can it be left unconnected?\nAnswer:\nOn this device connecting the exposed die pad is recommended, but not mandatory.\nSuitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "Both QFN packages available for the device have an exposed die pad. Is it mandatory to connect it to GND, or can it be left unconnected?"
+      },
+      {
+        "type": "text",
+        "content": "Both QFN packages available for the device have an exposed die pad. Is it mandatory to connect it to GND, or can it be left unconnected?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nOn this device connecting the exposed die pad is recommended, but not mandatory.\nSuitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "On this device connecting the exposed die pad is recommended, but not mandatory."
+      },
+      {
+        "type": "text",
+        "content": "On this device connecting the exposed die pad is recommended, but not mandatory."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RISC-V ASSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RISC-V ASSP"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20626315"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20628059"
+      }
+    ]
+  }
+}

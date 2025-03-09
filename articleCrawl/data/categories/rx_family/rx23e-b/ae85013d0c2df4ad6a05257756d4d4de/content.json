@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21106547",
+    "title": "Compatibility of the RX23E-B and RX23E-A",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:04:41.923922"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs the RX23E-B compatible with the RX23E-A?\nAnswer:\nThe RX23E-B and RX23-A are equipped with different AFE, so there is no pin compatibility. However, they have common CPU cores and basic peripheral functions, allowing the design assets of the RX23E-A to be inherited. \nWith regard to the detailed differences, a comparison of the incorporated functions is summarized in the following application note.\nDifferences Between the RX23E-B Group and the RX23E-A Group (R01AN6503)\nSuitable Products\nRX23E-B"
+      },
+      {
+        "type": "text",
+        "content": "Is the RX23E-B compatible with the RX23E-A?"
+      },
+      {
+        "type": "text",
+        "content": "Is the RX23E-B compatible with the RX23E-A?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RX23E-B and RX23-A are equipped with different AFE, so there is no pin compatibility. However, they have common CPU cores and basic peripheral functions, allowing the design assets of the RX23E-A to be inherited. \nWith regard to the detailed differences, a comparison of the incorporated functions is summarized in the following application note.\nDifferences Between the RX23E-B Group and the RX23E-A Group (R01AN6503)\nSuitable Products\nRX23E-B"
+      },
+      {
+        "type": "text",
+        "content": "The RX23E-B and RX23-A are equipped with different AFE, so there is no pin compatibility. However, they have common CPU cores and basic peripheral functions, allowing the design assets of the RX23E-A to be inherited. \nWith regard to the detailed differences, a comparison of the incorporated functions is summarized in the following application note.\nDifferences Between the RX23E-B Group and the RX23E-A Group (R01AN6503)"
+      },
+      {
+        "type": "text",
+        "content": "The RX23E-B and RX23-A are equipped with different AFE, so there is no pin compatibility. However, they have common CPU cores and basic peripheral functions, allowing the design assets of the RX23E-A to be inherited. \nWith regard to the detailed differences, a comparison of the incorporated functions is summarized in the following application note."
+      },
+      {
+        "type": "text",
+        "content": "Differences Between the RX23E-B Group and the RX23E-A Group (R01AN6503)"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX23E-B"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX23E-B"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX23E-B"
+    ],
+    "links": [
+      {
+        "text": "Differences Between the RX23E-B Group and the RX23E-A Group (R01AN6503)",
+        "url": "https://www.renesas.com/us/en/document/apn/differences-between-rx23e-b-group-and-rx23e-group-rev100"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21106552"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21106568"
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21763411",
+    "title": "Connecting 1.8V components to the RA4L1 MCUs",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:30:32.425258"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan I use 1.8V components with the RA4L1 Group MCUs?\nAnswer:\nThe RA4L1 Series MCUs support a wide operating voltage range of 1.6-3.6V. External components that operate at 1.8V can be easily connected to the RA4L1 MCUs. The RA4L1 also has a number of 5v tolerant I/O where 5v signals can be safely applied.\nSuitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "Can I use 1.8V components with the RA4L1 Group MCUs?"
+      },
+      {
+        "type": "text",
+        "content": "Can I use 1.8V components with the RA4L1 Group MCUs?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RA4L1 Series MCUs support a wide operating voltage range of 1.6-3.6V. External components that operate at 1.8V can be easily connected to the RA4L1 MCUs. The RA4L1 also has a number of 5v tolerant I/O where 5v signals can be safely applied.\nSuitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "The RA4L1 Series MCUs support a wide operating voltage range of 1.6-3.6V. External components that operate at 1.8V can be easily connected to the RA4L1 MCUs. The RA4L1 also has a number of 5v tolerant I/O where 5v signals can be safely applied."
+      },
+      {
+        "type": "text",
+        "content": "The RA4L1 Series MCUs support a wide operating voltage range of 1.6-3.6V. External components that operate at 1.8V can be easily connected to the RA4L1 MCUs. The RA4L1 also has a number of 5v tolerant I/O where 5v signals can be safely applied."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "Japanese Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA4L1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA4L1"
+    ],
+    "links": [
+      {
+        "text": "Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21763456"
+      },
+      {
+        "text": "Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21763468"
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20977304",
+    "title": "RH850/F1Kx: Low power sampler",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:27:13.632667"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is lower power sampler on RH850/F1Kx?\nAnswer:\nLow-Power Sampler (LPS) is a hardware sequencer that can check the digital input ports and analog input ports without using the CPU. By using LPS in low pawer standby modes, user can further reduce the device power consumption over a certain period. User can preset the states of digital inputs and thresholds of analog inputs and then put the MCU into standby modes. LPS will monitor digital and analog inputs periodically. Once digital inputs states match the preset value, or analog inputs cross the thresholds, LPS will generates a signal to wake up the CPU. Otherwise, the device will go back to standby mode.\nSuitable Products\nRH850/F1Kx"
+      },
+      {
+        "type": "text",
+        "content": "What is lower power sampler on RH850/F1Kx?"
+      },
+      {
+        "type": "text",
+        "content": "What is lower power sampler on RH850/F1Kx?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nLow-Power Sampler (LPS) is a hardware sequencer that can check the digital input ports and analog input ports without using the CPU. By using LPS in low pawer standby modes, user can further reduce the device power consumption over a certain period. User can preset the states of digital inputs and thresholds of analog inputs and then put the MCU into standby modes. LPS will monitor digital and analog inputs periodically. Once digital inputs states match the preset value, or analog inputs cross the thresholds, LPS will generates a signal to wake up the CPU. Otherwise, the device will go back to standby mode.\nSuitable Products\nRH850/F1Kx"
+      },
+      {
+        "type": "text",
+        "content": "Low-Power Sampler (LPS) is a hardware sequencer that can check the digital input ports and analog input ports without using the CPU. By using LPS in low pawer standby modes, user can further reduce the device power consumption over a certain period. User can preset the states of digital inputs and thresholds of analog inputs and then put the MCU into standby modes. LPS will monitor digital and analog inputs periodically. Once digital inputs states match the preset value, or analog inputs cross the thresholds, LPS will generates a signal to wake up the CPU. Otherwise, the device will go back to standby mode."
+      },
+      {
+        "type": "text",
+        "content": "Low-Power Sampler (LPS) is a hardware sequencer that can check the digital input ports and analog input ports without using the CPU. By using LPS in low pawer standby modes, user can further reduce the device power consumption over a certain period. User can preset the states of digital inputs and thresholds of analog inputs and then put the MCU into standby modes. LPS will monitor digital and analog inputs periodically. Once digital inputs states match the preset value, or analog inputs cross the thresholds, LPS will generates a signal to wake up the CPU. Otherwise, the device will go back to standby mode."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850/F1Kx"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850/F1Kx"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850/F1Kx"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20977309"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20977313"
+      }
+    ]
+  }
+}

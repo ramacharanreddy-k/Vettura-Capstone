@@ -1,0 +1,6 @@
+{
+  "url": "https://en-support.renesas.com/knowledgeBase/21715565",
+  "title": "RX Family: Timing of CPU interrupt handler call during RSPI full-duplex slave operation with DMAC transfer enabled",
+  "last_updated": "2024-10-12",
+  "extracted_at": "2025-03-09T00:12:16.399083"
+}

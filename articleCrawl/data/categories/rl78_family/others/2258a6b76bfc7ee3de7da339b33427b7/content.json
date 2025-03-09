@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21245135",
+    "title": "Why is the SHA hash function library (crypto library) for RL78-family products unavailable for in-vehicle use?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:01:29.975484"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhy is the SHA hash function library for RL78-family products unavailable for in-vehicle use although it is available for other general uses?\nAnswer:\nSince we have not performed self-established in-vehicle grading and evaluation for the library, we cannot guarantee its availability for in-vehicle use.\nThe unavailability is not due to known defects or other problems.\nYou can use (and modify, if necessary) the library for in-vehicle use if you have confirmed that no problems occur through self-testing.\nHowever, if you do so, we cannot provide support because the library does not support such use.\nSuitable Products\nRL78 family"
+      },
+      {
+        "type": "text",
+        "content": "Why is the SHA hash function library for RL78-family products unavailable for in-vehicle use although it is available for other general uses?"
+      },
+      {
+        "type": "text",
+        "content": "Why is the SHA hash function library for RL78-family products unavailable for in-vehicle use although it is available for other general uses?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nSince we have not performed self-established in-vehicle grading and evaluation for the library, we cannot guarantee its availability for in-vehicle use.\nThe unavailability is not due to known defects or other problems.\nYou can use (and modify, if necessary) the library for in-vehicle use if you have confirmed that no problems occur through self-testing.\nHowever, if you do so, we cannot provide support because the library does not support such use.\nSuitable Products\nRL78 family"
+      },
+      {
+        "type": "text",
+        "content": "Since we have not performed self-established in-vehicle grading and evaluation for the library, we cannot guarantee its availability for in-vehicle use.\nThe unavailability is not due to known defects or other problems.\nYou can use (and modify, if necessary) the library for in-vehicle use if you have confirmed that no problems occur through self-testing.\nHowever, if you do so, we cannot provide support because the library does not support such use."
+      },
+      {
+        "type": "text",
+        "content": "Since we have not performed self-established in-vehicle grading and evaluation for the library, we cannot guarantee its availability for in-vehicle use.\nThe unavailability is not due to known defects or other problems.\nYou can use (and modify, if necessary) the library for in-vehicle use if you have confirmed that no problems occur through self-testing.\nHowever, if you do so, we cannot provide support because the library does not support such use."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78 family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78 family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78 family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/19995313"
+      }
+    ]
+  }
+}

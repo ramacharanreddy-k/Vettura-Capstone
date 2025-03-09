@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20973363",
+    "title": "What do I need to start developing with RL78 microcontrollers?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:01:27.550790"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat do I need to start developing with RL78 microcontrollers?\nAnswer:\nTo begin development with RL78 microcontrollers, you will require an evaluation board and development tools.\nEvaluation Board\nWe recommend utilizing a Fast Prototyping Board (FPB) for quick development, which can be easily initiated by preparing a PC and a USB cable (Micro USB Type-B, or some with USB Type-C). These boards can be purchased from authorized resellers or distributors.\nFor example, the FPB for the RL78/G23 64-pin: RTK7RLG230CLG000BJ\nDevelopment Tools\nThere are two available development environments: the straightforward \"CS+\" and the highly customizable \"e²studio,\" which is based on Eclipse. If you are using Linux OS, QE for BLE, or QE for USB, we recommend choosing e²studio.\nFor the compiler, we recommend using the genuine Renesas \"CC-RL\" compiler. Since January 2023, the free edition of this compiler can be utilized for commercial purposes, including development and production, but it comes with optimization restrictions or link size limitations.\nDevelopment Process\nThere are several steps in the development process, including installing development tools, creating a project, coding, and debugging. We will provide videos that explain each of these stages.\nGetting Started with Fast Prototyping Board for RL78 Family\nFor CS+\nCS+ Quick Start Guide (1/4) – Installation\nCS+ Quick Start Guide (2/4) - New Project Creation\nCS+ Quick Start Guide (3/4) - Project Build\nCS+ Quick Start Guide (4/4) – Debug\n\nFor e2studio\ne² studio Quick Start Guide (1/3) - Installation for RX and RL78\ne² studio Quick Start Guide (2/3) - Project Generation for RL78\ne² studio Quick Start Guide (3/3) - Build and Debug for RL78 \nReference Links\nStart developing with RL78 - Essential for microcomputer beginners! (Part 1)\nRL78-Family-Fast-Prototyping-Board\nGetting Started with the RL78 Family Development Environment\nRL78 Family Software & Tool Course\nSuitable Products\nRL78 Family"
+      },
+      {
+        "type": "text",
+        "content": "What do I need to start developing with RL78 microcontrollers?"
+      },
+      {
+        "type": "text",
+        "content": "What do I need to start developing with RL78 microcontrollers?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nTo begin development with RL78 microcontrollers, you will require an evaluation board and development tools.\nEvaluation Board\nWe recommend utilizing a Fast Prototyping Board (FPB) for quick development, which can be easily initiated by preparing a PC and a USB cable (Micro USB Type-B, or some with USB Type-C). These boards can be purchased from authorized resellers or distributors.\nFor example, the FPB for the RL78/G23 64-pin: RTK7RLG230CLG000BJ\nDevelopment Tools\nThere are two available development environments: the straightforward \"CS+\" and the highly customizable \"e²studio,\" which is based on Eclipse. If you are using Linux OS, QE for BLE, or QE for USB, we recommend choosing e²studio.\nFor the compiler, we recommend using the genuine Renesas \"CC-RL\" compiler. Since January 2023, the free edition of this compiler can be utilized for commercial purposes, including development and production, but it comes with optimization restrictions or link size limitations.\nDevelopment Process\nThere are several steps in the development process, including installing development tools, creating a project, coding, and debugging. We will provide videos that explain each of these stages.\nGetting Started with Fast Prototyping Board for RL78 Family\nFor CS+\nCS+ Quick Start Guide (1/4) – Installation\nCS+ Quick Start Guide (2/4) - New Project Creation\nCS+ Quick Start Guide (3/4) - Project Build\nCS+ Quick Start Guide (4/4) – Debug\n\nFor e2studio\ne² studio Quick Start Guide (1/3) - Installation for RX and RL78\ne² studio Quick Start Guide (2/3) - Project Generation for RL78\ne² studio Quick Start Guide (3/3) - Build and Debug for RL78 \nReference Links\nStart developing with RL78 - Essential for microcomputer beginners! (Part 1)\nRL78-Family-Fast-Prototyping-Board\nGetting Started with the RL78 Family Development Environment\nRL78 Family Software & Tool Course\nSuitable Products\nRL78 Family"
+      },
+      {
+        "type": "text",
+        "content": "To begin development with RL78 microcontrollers, you will require an evaluation board and development tools.\nEvaluation Board\nWe recommend utilizing a Fast Prototyping Board (FPB) for quick development, which can be easily initiated by preparing a PC and a USB cable (Micro USB Type-B, or some with USB Type-C). These boards can be purchased from authorized resellers or distributors.\nFor example, the FPB for the RL78/G23 64-pin: RTK7RLG230CLG000BJ\nDevelopment Tools\nThere are two available development environments: the straightforward \"CS+\" and the highly customizable \"e²studio,\" which is based on Eclipse. If you are using Linux OS, QE for BLE, or QE for USB, we recommend choosing e²studio.\nFor the compiler, we recommend using the genuine Renesas \"CC-RL\" compiler. Since January 2023, the free edition of this compiler can be utilized for commercial purposes, including development and production, but it comes with optimization restrictions or link size limitations.\nDevelopment Process\nThere are several steps in the development process, including installing development tools, creating a project, coding, and debugging. We will provide videos that explain each of these stages.\nGetting Started with Fast Prototyping Board for RL78 Family\nFor CS+\nCS+ Quick Start Guide (1/4) – Installation\nCS+ Quick Start Guide (2/4) - New Project Creation\nCS+ Quick Start Guide (3/4) - Project Build\nCS+ Quick Start Guide (4/4) – Debug\n\nFor e2studio\ne² studio Quick Start Guide (1/3) - Installation for RX and RL78\ne² studio Quick Start Guide (2/3) - Project Generation for RL78\ne² studio Quick Start Guide (3/3) - Build and Debug for RL78 \nReference Links\nStart developing with RL78 - Essential for microcomputer beginners! (Part 1)\nRL78-Family-Fast-Prototyping-Board\nGetting Started with the RL78 Family Development Environment\nRL78 Family Software & Tool Course"
+      },
+      {
+        "type": "text",
+        "content": "To begin development with RL78 microcontrollers, you will require an evaluation board and development tools."
+      },
+      {
+        "type": "text",
+        "content": "Evaluation Board"
+      },
+      {
+        "type": "text",
+        "content": "We recommend utilizing a Fast Prototyping Board (FPB) for quick development, which can be easily initiated by preparing a PC and a USB cable (Micro USB Type-B, or some with USB Type-C). These boards can be purchased from authorized resellers or distributors.\nFor example, the FPB for the RL78/G23 64-pin: RTK7RLG230CLG000BJ"
+      },
+      {
+        "type": "text",
+        "content": "Development Tools"
+      },
+      {
+        "type": "text",
+        "content": "There are two available development environments: the straightforward \"CS+\" and the highly customizable \"e²studio,\" which is based on Eclipse. If you are using Linux OS, QE for BLE, or QE for USB, we recommend choosing e²studio.\nFor the compiler, we recommend using the genuine Renesas \"CC-RL\" compiler. Since January 2023, the free edition of this compiler can be utilized for commercial purposes, including development and production, but it comes with optimization restrictions or link size limitations."
+      },
+      {
+        "type": "text",
+        "content": "Development Process"
+      },
+      {
+        "type": "text",
+        "content": "There are several steps in the development process, including installing development tools, creating a project, coding, and debugging. We will provide videos that explain each of these stages."
+      },
+      {
+        "type": "text",
+        "content": "Getting Started with Fast Prototyping Board for RL78 Family"
+      },
+      {
+        "type": "text",
+        "content": "Reference Links"
+      },
+      {
+        "type": "text",
+        "content": "Start developing with RL78 - Essential for microcomputer beginners! (Part 1)\nRL78-Family-Fast-Prototyping-Board\nGetting Started with the RL78 Family Development Environment\nRL78 Family Software & Tool Course"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78 Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78 Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78 Family"
+    ],
+    "links": [
+      {
+        "text": "RTK7RLG230CLG000BJ",
+        "url": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rl78-low-power-8-16-bit-mcus/rtk7rlg230clg000bj-rl78g23-64p-fast-prototyping-board"
+      },
+      {
+        "text": "CS+",
+        "url": "https://www.renesas.com/us/en/software-tool/cs"
+      },
+      {
+        "text": "e²studio",
+        "url": "https://www.renesas.com/us/en/software-tool/e-studio"
+      },
+      {
+        "text": "Getting Started with Fast Prototyping Board for RL78 Family",
+        "url": "https://www.renesas.com/us/en/video/getting-started-fast-prototyping-board-rl78-family?rlsw-j"
+      },
+      {
+        "text": "CS+ Quick Start Guide (1/4) – Installation",
+        "url": "https://www.renesas.com/us/en/video/cs-quick-start-guide-14-installation?rlsw-j"
+      },
+      {
+        "text": "CS+ Quick Start Guide (2/4) - New Project Creation",
+        "url": "https://www.renesas.com/us/en/video/cs-quick-start-guide-24-new-project-creation?rlsw-j"
+      },
+      {
+        "text": "CS+ Quick Start Guide (3/4) - Project Build",
+        "url": "https://www.renesas.com/us/en/video/cs-quick-start-guide-34-project-build?rlsw-j"
+      },
+      {
+        "text": "CS+ Quick Start Guide (4/4) – Debug",
+        "url": "https://www.renesas.com/us/en/video/cs-quick-start-guide-44-debug?rlsw-j"
+      },
+      {
+        "text": "e² studio Quick Start Guide (1/3) - Installation for RX and RL78",
+        "url": "https://www.renesas.com/us/en/video/e-studio-quick-start-guide-13-installation-rx-and-rl78?rlsw-e"
+      },
+      {
+        "text": "e² studio Quick Start Guide (2/3) - Project Generation for RL78",
+        "url": "https://www.renesas.com/us/en/video/e-studio-quick-start-guide-23-project-generation-rl78?rlsw-e"
+      },
+      {
+        "text": "e² studio Quick Start Guide (3/3) - Build and Debug for RL78",
+        "url": "https://www.renesas.com/us/en/video/e-studio-quick-start-guide-33-build-and-debug-rl78?rlsw-e"
+      },
+      {
+        "text": "Start developing with RL78 - Essential for microcomputer beginners! (Part 1)",
+        "url": "https://www.renesas.com/us/en/blogs/start-developing-rl78-essential-microcomputer-beginners-part-1"
+      },
+      {
+        "text": "RL78-Family-Fast-Prototyping-Board",
+        "url": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rl78-low-power-8-16-bit-mcus/rl78-family-fast-prototyping-board-fast-prototyping-board-rl78-family"
+      },
+      {
+        "text": "Getting Started with the RL78 Family Development Environment",
+        "url": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rl78-low-power-8-16-bit-mcus/software-tool/getting-started-rl78-family-development-environment"
+      },
+      {
+        "text": "RL78 Family Software & Tool Course",
+        "url": "https://www.renesas.com/us/en/software-tool/rl78-software-tool-course"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20973365"
+      }
+    ]
+  }
+}

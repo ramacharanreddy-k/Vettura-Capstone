@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "int ConfigTargetSettings(void)\n{\nJLINK_ExecCommand(\"CORESIGHT_SetMTBBufUseAddr=0x20007C00\");\nJLINK_ExecCommand(\"CORESIGHT_SetMTBBufUsageSize=0x400\");\nreturn 0;\n}"
+    ]
+  ]
+}

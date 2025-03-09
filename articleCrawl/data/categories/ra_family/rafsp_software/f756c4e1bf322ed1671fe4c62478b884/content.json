@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21094268",
+    "title": "SubClock configuration during FSP for customized boards for RA Family",
+    "last_updated": "2023-12-10",
+    "extracted_at": "2025-03-08T23:17:07.705393"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nOn customized boards and on newer versions of FSP, where external clock source for sub-clock is not setup the project gets stuck on FSP_HARDWARE_REGISTER_WAIT(R_RTC->RCR2_b.RESET, 0);\nAnswer:\nSet the 'Subclock Populated' value to 'Not populated’ on BSP settings on FSP configurator.\n  Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "On customized boards and on newer versions of FSP, where external clock source for sub-clock is not setup the project gets stuck on FSP_HARDWARE_REGISTER_WAIT(R_RTC->RCR2_b.RESET, 0);"
+      },
+      {
+        "type": "text",
+        "content": "On customized boards and on newer versions of FSP, where external clock source for sub-clock is not setup the project gets stuck on FSP_HARDWARE_REGISTER_WAIT(R_RTC->RCR2_b.RESET, 0);"
+      },
+      {
+        "type": "text",
+        "content": "On customized boards and on newer versions of FSP, where external clock source for sub-clock is not setup the project gets stuck on FSP_HARDWARE_REGISTER_WAIT(R_RTC->RCR2_b.RESET, 0);"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nSet the 'Subclock Populated' value to 'Not populated’ on BSP settings on FSP configurator.\n  Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "Set the 'Subclock Populated' value to 'Not populated’ on BSP settings on FSP configurator."
+      },
+      {
+        "type": "text",
+        "content": "Set the 'Subclock Populated' value to 'Not populated’ on BSP settings on FSP configurator."
+      },
+      {
+        "type": "text",
+        "content": "Set the 'Subclock Populated' value to 'Not populated’ on BSP settings on FSP configurator."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/2353712d-db93-4e79-a435-d16f8b1208cf",
+          "alt_text": "A screenshot of a computer programDescription automatically generated",
+          "width": "288",
+          "height": "330",
+          "local_path": "data/categories/ra_family/rafsp_software/f756c4e1bf322ed1671fe4c62478b884/images/58bc226fe0c51f5efb99e339049be97b.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/2353712d-db93-4e79-a435-d16f8b1208cf",
+        "alt_text": "A screenshot of a computer programDescription automatically generated",
+        "width": "288",
+        "height": "330",
+        "local_path": "data/categories/ra_family/rafsp_software/f756c4e1bf322ed1671fe4c62478b884/images/58bc226fe0c51f5efb99e339049be97b.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/YYYYYYYY"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/ZZZZZZZZ"
+      }
+    ]
+  }
+}

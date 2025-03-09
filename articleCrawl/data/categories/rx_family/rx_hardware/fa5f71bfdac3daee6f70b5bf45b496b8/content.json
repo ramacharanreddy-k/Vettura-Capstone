@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21305715",
+    "title": "Does Renesas provide a design guide for hardware development?",
+    "last_updated": "2024-08-04",
+    "extracted_at": "2025-03-09T00:16:14.381743"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDoes Renesas provide a design guide for hardware development?\nAnswer:\nYes, we provide it. Please use the Hardware Design Guide (R01AN1411EJ).\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Does Renesas provide a design guide for hardware development?"
+      },
+      {
+        "type": "text",
+        "content": "Does Renesas provide a design guide for hardware development?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes, we provide it. Please use the Hardware Design Guide (R01AN1411EJ).\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Yes, we provide it. Please use the Hardware Design Guide (R01AN1411EJ)."
+      },
+      {
+        "type": "text",
+        "content": "Yes, we provide it. Please use the Hardware Design Guide (R01AN1411EJ)."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "Hardware Design Guide (R01AN1411EJ)",
+        "url": "https://www.renesas.com/document/apn/rx-family-hardware-design-guide-application-note-rev111?language=en"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21305717"
+      }
+    ]
+  }
+}

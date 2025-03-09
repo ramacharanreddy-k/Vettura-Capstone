@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "void gpt_capture_a_isr (void)\n{\n  .....\n  g_ioport.p_api->pinWrite(g_ioport.p_ctrl,BSP_IO_PORT_14_PIN_11,BSP_IO_LEVEL_HIGH);\n  .....\n}"
+    ]
+  ]
+}

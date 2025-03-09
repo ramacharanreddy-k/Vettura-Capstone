@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21062255",
+    "title": "Ambient operating temperature",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:52:55.890784"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDo all packages support an operating ambient temperature of 125°C?\nAnswer:\n25-WFLGA, 32-LQFP, 44-LQFP, 48-HWQFN, 64-LQFP, 64-LFQFP do not support 125°C operating ambient temperature. If you need 125°C support, please select from packages other than those listed above.\nSuitable Products\nRL78/G24"
+      },
+      {
+        "type": "text",
+        "content": "Do all packages support an operating ambient temperature of 125°C?"
+      },
+      {
+        "type": "text",
+        "content": "Do all packages support an operating ambient temperature of 125°C?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\n25-WFLGA, 32-LQFP, 44-LQFP, 48-HWQFN, 64-LQFP, 64-LFQFP do not support 125°C operating ambient temperature. If you need 125°C support, please select from packages other than those listed above.\nSuitable Products\nRL78/G24"
+      },
+      {
+        "type": "text",
+        "content": "25-WFLGA, 32-LQFP, 44-LQFP, 48-HWQFN, 64-LQFP, 64-LFQFP do not support 125°C operating ambient temperature. If you need 125°C support, please select from packages other than those listed above."
+      },
+      {
+        "type": "text",
+        "content": "25-WFLGA, 32-LQFP, 44-LQFP, 48-HWQFN, 64-LQFP, 64-LFQFP do not support 125°C operating ambient temperature. If you need 125°C support, please select from packages other than those listed above."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/G24"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G24"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G24"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21062262"
+      }
+    ]
+  }
+}

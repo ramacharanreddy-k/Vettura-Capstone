@@ -1,0 +1,342 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21810948",
+    "title": "RA Family: Assert Function Behavior of FSP",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:18:22.345023"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhen I open the FSP configurator for the RA Family and check the properties of the BSP, there is a setting item \"Assert Failures\", but how does this setting affect the operation of the application?\nAnswer:\nIn FSP, you can enable the parameter checking function by setting the Parameter Checking setting of the BSP and each driver to Enabled, but FSP_ASSERT () is mainly used for this check processing code. The behavior of this FSP_ASSERT () can be selected from the following four options in the BSP property \"Assert Failures\".\nReturn FSP_ERR_ASSERTION\nCall fsp_error_log then Return FSP_ERR_ASSERTION\nUse assert() to Halt Execution\nDisable checks that would return FSP_ERR_ASSERTION\nEach of them is described below. In any case, if the parameter verification result of the specified condition is true, no action is taken.\nReturn FSP_ERR_ASSERTION\nIf the result of the validation of the specified condition is false, the function returns with the return value of the FSP_ERR_ASSERTION.\nCall fsp_error_log then Return FSP_ERR_ASSERTION\nIf the result of the validation of the specified condition is false, the fsp_error_log function is executed, and then the function is returned with the return value of the FSP_ERR_ASSERTION. fsp_error_log function is defined in FSP as a function with the WEAK attribute, and the user can add a fsp_error_log function to perform the operation. For example, if the following fsp_error_log is defined by the user, the log can be output to RTT Viewer.\nvoid fsp_error_log(fsp_err_t err, const char * file, int32_t line)\n{\n    SEGGER_RTT_printf(0, \"Error (%x): %s (%d)\\r\\n\", err, file, line);\n}\n  Use assert() to Halt Execution\nIf the result of the validation of the specified condition is false, the assert function is called. Define the assert function provided by FSP with the __assert_func function (in the case of GCC) in ra/fsp/src/bsp/mcu/all/bsp_common.c, and stop the CPU processing with the BKPT instruction. This function is defined as a function with the WEAK attribute, so you can define it to change what it does.\nFor example, in the case of the EK-RA6M3 board, by defining the following __assert_func function, when the assert function is called, the CPU can be stopped after the red LED (lit when P100 outputs high) is lit.\nvoid __assert_func (const char * file, int line, const char * func, const char * expr)\n{\n    FSP_PARAMETER_NOT_USED(file);\n    FSP_PARAMETER_NOT_USED(line);\n    FSP_PARAMETER_NOT_USED(func);\n    FSP_PARAMETER_NOT_USED(expr);\n    R_PORT1->PCNTR3 = 0x00000001;    // LED3(R):ON\n    __BKPT(0);\n    while (1)\n    {\n        /* Do nothing. */\n    }\n}\n  Disable checks that would return FSP_ERR_ASSERTION\nIt does not do anything because it does not validate the specified condition.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "When I open the FSP configurator for the RA Family and check the properties of the BSP, there is a setting item \"Assert Failures\", but how does this setting affect the operation of the application?"
+      },
+      {
+        "type": "text",
+        "content": "When I open the FSP configurator for the RA Family and check the properties of the BSP, there is a setting item \"Assert Failures\", but how does this setting affect the operation of the application?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIn FSP, you can enable the parameter checking function by setting the Parameter Checking setting of the BSP and each driver to Enabled, but FSP_ASSERT () is mainly used for this check processing code. The behavior of this FSP_ASSERT () can be selected from the following four options in the BSP property \"Assert Failures\".\nReturn FSP_ERR_ASSERTION\nCall fsp_error_log then Return FSP_ERR_ASSERTION\nUse assert() to Halt Execution\nDisable checks that would return FSP_ERR_ASSERTION\nEach of them is described below. In any case, if the parameter verification result of the specified condition is true, no action is taken.\nReturn FSP_ERR_ASSERTION\nIf the result of the validation of the specified condition is false, the function returns with the return value of the FSP_ERR_ASSERTION.\nCall fsp_error_log then Return FSP_ERR_ASSERTION\nIf the result of the validation of the specified condition is false, the fsp_error_log function is executed, and then the function is returned with the return value of the FSP_ERR_ASSERTION. fsp_error_log function is defined in FSP as a function with the WEAK attribute, and the user can add a fsp_error_log function to perform the operation. For example, if the following fsp_error_log is defined by the user, the log can be output to RTT Viewer.\nvoid fsp_error_log(fsp_err_t err, const char * file, int32_t line)\n{\n    SEGGER_RTT_printf(0, \"Error (%x): %s (%d)\\r\\n\", err, file, line);\n}\n  Use assert() to Halt Execution\nIf the result of the validation of the specified condition is false, the assert function is called. Define the assert function provided by FSP with the __assert_func function (in the case of GCC) in ra/fsp/src/bsp/mcu/all/bsp_common.c, and stop the CPU processing with the BKPT instruction. This function is defined as a function with the WEAK attribute, so you can define it to change what it does.\nFor example, in the case of the EK-RA6M3 board, by defining the following __assert_func function, when the assert function is called, the CPU can be stopped after the red LED (lit when P100 outputs high) is lit.\nvoid __assert_func (const char * file, int line, const char * func, const char * expr)\n{\n    FSP_PARAMETER_NOT_USED(file);\n    FSP_PARAMETER_NOT_USED(line);\n    FSP_PARAMETER_NOT_USED(func);\n    FSP_PARAMETER_NOT_USED(expr);\n    R_PORT1->PCNTR3 = 0x00000001;    // LED3(R):ON\n    __BKPT(0);\n    while (1)\n    {\n        /* Do nothing. */\n    }\n}\n  Disable checks that would return FSP_ERR_ASSERTION\nIt does not do anything because it does not validate the specified condition.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "In FSP, you can enable the parameter checking function by setting the Parameter Checking setting of the BSP and each driver to Enabled, but FSP_ASSERT () is mainly used for this check processing code. The behavior of this FSP_ASSERT () can be selected from the following four options in the BSP property \"Assert Failures\".\nReturn FSP_ERR_ASSERTION\nCall fsp_error_log then Return FSP_ERR_ASSERTION\nUse assert() to Halt Execution\nDisable checks that would return FSP_ERR_ASSERTION\nEach of them is described below. In any case, if the parameter verification result of the specified condition is true, no action is taken.\nReturn FSP_ERR_ASSERTION\nIf the result of the validation of the specified condition is false, the function returns with the return value of the FSP_ERR_ASSERTION.\nCall fsp_error_log then Return FSP_ERR_ASSERTION\nIf the result of the validation of the specified condition is false, the fsp_error_log function is executed, and then the function is returned with the return value of the FSP_ERR_ASSERTION. fsp_error_log function is defined in FSP as a function with the WEAK attribute, and the user can add a fsp_error_log function to perform the operation. For example, if the following fsp_error_log is defined by the user, the log can be output to RTT Viewer.\nvoid fsp_error_log(fsp_err_t err, const char * file, int32_t line)\n{\n    SEGGER_RTT_printf(0, \"Error (%x): %s (%d)\\r\\n\", err, file, line);\n}\n  Use assert() to Halt Execution\nIf the result of the validation of the specified condition is false, the assert function is called. Define the assert function provided by FSP with the __assert_func function (in the case of GCC) in ra/fsp/src/bsp/mcu/all/bsp_common.c, and stop the CPU processing with the BKPT instruction. This function is defined as a function with the WEAK attribute, so you can define it to change what it does.\nFor example, in the case of the EK-RA6M3 board, by defining the following __assert_func function, when the assert function is called, the CPU can be stopped after the red LED (lit when P100 outputs high) is lit.\nvoid __assert_func (const char * file, int line, const char * func, const char * expr)\n{\n    FSP_PARAMETER_NOT_USED(file);\n    FSP_PARAMETER_NOT_USED(line);\n    FSP_PARAMETER_NOT_USED(func);\n    FSP_PARAMETER_NOT_USED(expr);\n    R_PORT1->PCNTR3 = 0x00000001;    // LED3(R):ON\n    __BKPT(0);\n    while (1)\n    {\n        /* Do nothing. */\n    }\n}\n  Disable checks that would return FSP_ERR_ASSERTION\nIt does not do anything because it does not validate the specified condition."
+      },
+      {
+        "type": "text",
+        "content": "In FSP, you can enable the parameter checking function by setting the Parameter Checking setting of the BSP and each driver to Enabled, but FSP_ASSERT () is mainly used for this check processing code. The behavior of this FSP_ASSERT () can be selected from the following four options in the BSP property \"Assert Failures\"."
+      },
+      {
+        "type": "text",
+        "content": "Each of them is described below. In any case, if the parameter verification result of the specified condition is true, no action is taken."
+      },
+      {
+        "type": "text",
+        "content": "Return FSP_ERR_ASSERTION"
+      },
+      {
+        "type": "text",
+        "content": "If the result of the validation of the specified condition is false, the function returns with the return value of the FSP_ERR_ASSERTION."
+      },
+      {
+        "type": "text",
+        "content": "Call fsp_error_log then Return FSP_ERR_ASSERTION"
+      },
+      {
+        "type": "text",
+        "content": "If the result of the validation of the specified condition is false, the fsp_error_log function is executed, and then the function is returned with the return value of the FSP_ERR_ASSERTION. fsp_error_log function is defined in FSP as a function with the WEAK attribute, and the user can add a fsp_error_log function to perform the operation. For example, if the following fsp_error_log is defined by the user, the log can be output to RTT Viewer."
+      },
+      {
+        "type": "text",
+        "content": "void fsp_error_log(fsp_err_t err, const char * file, int32_t line)"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "fsp_error_log"
+      },
+      {
+        "type": "text",
+        "content": "("
+      },
+      {
+        "type": "text",
+        "content": "fsp_err_t"
+      },
+      {
+        "type": "text",
+        "content": "err,"
+      },
+      {
+        "type": "text",
+        "content": "const char"
+      },
+      {
+        "type": "text",
+        "content": "* file,"
+      },
+      {
+        "type": "text",
+        "content": "int32_t"
+      },
+      {
+        "type": "text",
+        "content": "line)"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "SEGGER_RTT_printf(0, \"Error (%x): %s (%d)\\r\\n\", err, file, line);"
+      },
+      {
+        "type": "text",
+        "content": "SEGGER_RTT_printf(0,"
+      },
+      {
+        "type": "text",
+        "content": "\"Error (%x): %s (%d)\\r\\n\""
+      },
+      {
+        "type": "text",
+        "content": ", err, file, line);"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "Use assert() to Halt Execution"
+      },
+      {
+        "type": "text",
+        "content": "If the result of the validation of the specified condition is false, the assert function is called. Define the assert function provided by FSP with the __assert_func function (in the case of GCC) in ra/fsp/src/bsp/mcu/all/bsp_common.c, and stop the CPU processing with the BKPT instruction. This function is defined as a function with the WEAK attribute, so you can define it to change what it does.\nFor example, in the case of the EK-RA6M3 board, by defining the following __assert_func function, when the assert function is called, the CPU can be stopped after the red LED (lit when P100 outputs high) is lit."
+      },
+      {
+        "type": "text",
+        "content": "void __assert_func (const char * file, int line, const char * func, const char * expr)"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "__assert_func"
+      },
+      {
+        "type": "text",
+        "content": "("
+      },
+      {
+        "type": "text",
+        "content": "const char"
+      },
+      {
+        "type": "text",
+        "content": "* file,"
+      },
+      {
+        "type": "text",
+        "content": "int"
+      },
+      {
+        "type": "text",
+        "content": "line,"
+      },
+      {
+        "type": "text",
+        "content": "const char"
+      },
+      {
+        "type": "text",
+        "content": "* func,"
+      },
+      {
+        "type": "text",
+        "content": "const char"
+      },
+      {
+        "type": "text",
+        "content": "* expr)"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "FSP_PARAMETER_NOT_USED(file);"
+      },
+      {
+        "type": "text",
+        "content": "FSP_PARAMETER_NOT_USED(file);"
+      },
+      {
+        "type": "text",
+        "content": "FSP_PARAMETER_NOT_USED(line);"
+      },
+      {
+        "type": "text",
+        "content": "FSP_PARAMETER_NOT_USED(line);"
+      },
+      {
+        "type": "text",
+        "content": "FSP_PARAMETER_NOT_USED(func);"
+      },
+      {
+        "type": "text",
+        "content": "FSP_PARAMETER_NOT_USED(func);"
+      },
+      {
+        "type": "text",
+        "content": "FSP_PARAMETER_NOT_USED(expr);"
+      },
+      {
+        "type": "text",
+        "content": "FSP_PARAMETER_NOT_USED(expr);"
+      },
+      {
+        "type": "text",
+        "content": "R_PORT1->PCNTR3 = 0x00000001;    // LED3(R):ON"
+      },
+      {
+        "type": "text",
+        "content": "R_PORT1->PCNTR3 = 0x00000001;    // LED3(R):ON"
+      },
+      {
+        "type": "text",
+        "content": "__BKPT(0);"
+      },
+      {
+        "type": "text",
+        "content": "__BKPT(0);"
+      },
+      {
+        "type": "text",
+        "content": "while (1)"
+      },
+      {
+        "type": "text",
+        "content": "while"
+      },
+      {
+        "type": "text",
+        "content": "(1)"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "/* Do nothing. */"
+      },
+      {
+        "type": "text",
+        "content": "/* Do nothing. */"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "Disable checks that would return FSP_ERR_ASSERTION"
+      },
+      {
+        "type": "text",
+        "content": "It does not do anything because it does not validate the specified condition."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "void fsp_error_log(fsp_err_t err, const char * file, int32_t line)\n{\n    SEGGER_RTT_printf(0, \"Error (%x): %s (%d)\\r\\n\", err, file, line);\n}"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "void __assert_func (const char * file, int line, const char * func, const char * expr)\n{\n    FSP_PARAMETER_NOT_USED(file);\n    FSP_PARAMETER_NOT_USED(line);\n    FSP_PARAMETER_NOT_USED(func);\n    FSP_PARAMETER_NOT_USED(expr);\n    R_PORT1->PCNTR3 = 0x00000001;    // LED3(R):ON\n    __BKPT(0);\n    while (1)\n    {\n        /* Do nothing. */\n    }\n}"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21810952"
+      }
+    ]
+  }
+}

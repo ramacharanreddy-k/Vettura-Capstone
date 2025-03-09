@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20612316",
+    "title": "Please tell me which TSN standards are supported by the RZ/N2L.",
+    "last_updated": "2022-09-08",
+    "extracted_at": "2025-03-08T23:46:54.870449"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nPlease tell me which TSN standards are supported by the RZ/N2L.\nAnswer:\nThe following TSN standards can be supported.\nIEEE 802.1AS-2020:Timing and Synchronization for Time-Sensitive Applications\nIEEE 802.1Qbv:Enhancements for Scheduled Traffic\nIEEE 802.1Qbu,IEEE 802.3br:Frame Preemption\nIEEE 802.1Qch,Cyclic Queuing and Forwarding\nIEEE 802.1Qci:Per-Stream Filtering and Policing\nIEEE 802.1CB: Frame Replication and Elimination for Reliability (Active Stream identification)\nSuitable Products\nRZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "Please tell me which TSN standards are supported by the RZ/N2L."
+      },
+      {
+        "type": "text",
+        "content": "Please tell me which TSN standards are supported by the RZ/N2L."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe following TSN standards can be supported.\nIEEE 802.1AS-2020:Timing and Synchronization for Time-Sensitive Applications\nIEEE 802.1Qbv:Enhancements for Scheduled Traffic\nIEEE 802.1Qbu,IEEE 802.3br:Frame Preemption\nIEEE 802.1Qch,Cyclic Queuing and Forwarding\nIEEE 802.1Qci:Per-Stream Filtering and Policing\nIEEE 802.1CB: Frame Replication and Elimination for Reliability (Active Stream identification)\nSuitable Products\nRZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "The following TSN standards can be supported.\nIEEE 802.1AS-2020:Timing and Synchronization for Time-Sensitive Applications\nIEEE 802.1Qbv:Enhancements for Scheduled Traffic\nIEEE 802.1Qbu,IEEE 802.3br:Frame Preemption\nIEEE 802.1Qch,Cyclic Queuing and Forwarding\nIEEE 802.1Qci:Per-Stream Filtering and Policing\nIEEE 802.1CB: Frame Replication and Elimination for Reliability (Active Stream identification)"
+      },
+      {
+        "type": "text",
+        "content": "The following TSN standards can be supported."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/N2L"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/N2L"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20612297"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20612335"
+      }
+    ]
+  }
+}

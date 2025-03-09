@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21153481",
+    "title": "CANFD in RH850F1L",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:26:44.614268"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWe are using R7F7010103AFP#KA4.We would like to understand whether this controller can support for external CAN FD transceivers . As of now we are using CAN HS transceivers.\nAnswer:\nThe CAN controller of RH850/F1L is not compatible with CAN-FD. From the RH850/F1x series, you can choose RH850/F1KM as next product successor for F1L. F1KM does have a CAN-FD compatible CAN controller installed.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nWe are using R7F7010103AFP#KA4.We would like to understand whether this controller can support for external CAN FD transceivers . As of now we are using CAN HS transceivers.\nAnswer:\nThe CAN controller of RH850/F1L is not compatible with CAN-FD. From the RH850/F1x series, you can choose RH850/F1KM as next product successor for F1L. F1KM does have a CAN-FD compatible CAN controller installed.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "We are using R7F7010103AFP#KA4.We would like to understand whether this controller can support for external CAN FD transceivers . As of now we are using CAN HS transceivers."
+      },
+      {
+        "type": "text",
+        "content": "We are using R7F7010103AFP#KA4.We would like to understand whether this controller can support for external CAN FD transceivers . As of now we are using CAN HS transceivers."
+      },
+      {
+        "type": "text",
+        "content": "We are using R7F7010103AFP#KA4.We would like to understand whether this controller can support for external CAN FD transceivers . As of now we are using CAN HS transceivers."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe CAN controller of RH850/F1L is not compatible with CAN-FD. From the RH850/F1x series, you can choose RH850/F1KM as next product successor for F1L. F1KM does have a CAN-FD compatible CAN controller installed.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "The CAN controller of RH850/F1L is not compatible with CAN-FD. From the RH850/F1x series, you can choose RH850/F1KM as next product successor for F1L. F1KM does have a CAN-FD compatible CAN controller installed."
+      },
+      {
+        "type": "text",
+        "content": "The CAN controller of RH850/F1L is not compatible with CAN-FD. From the RH850/F1x series, you can choose RH850/F1KM as next product successor for F1L. F1KM does have a CAN-FD compatible CAN controller installed."
+      },
+      {
+        "type": "text",
+        "content": "The CAN controller of RH850/F1L is not compatible with CAN-FD. From the RH850/F1x series, you can choose RH850/F1KM as next product successor for F1L. F1KM does have a CAN-FD compatible CAN controller installed."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850"
+    ],
+    "links": []
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21606621",
+    "title": "Building Graphics/HMI applications with RA8E2",
+    "last_updated": "2024-05-11",
+    "extracted_at": "2025-03-08T23:29:42.503520"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat Graphics/HMI features are supported on the RA8E2?\nAnswer:\nRA8E2 devices include a high resolution Graphics LCD Controller that can support resolutions of WVGA or greater and a 2D Graphics Drawing Engine that offloads graphics rendering function from the CPU, and supports multiple graphics primitives and formats and image fucntions such as rotation, scaling, alpha blending etc.. Depending on the use case, frame rates can be traded off against resolution and color depth. To support LCD panels of various resolution, the RA8E2 devices include multiple memory options for storage of graphics frame buffers, including internal 672KB SRAM and a high throughput 16bit SDRAM interface.\nSuitable Products\nRA8E2"
+      },
+      {
+        "type": "text",
+        "content": "What Graphics/HMI features are supported on the RA8E2?"
+      },
+      {
+        "type": "text",
+        "content": "What Graphics/HMI features are supported on the RA8E2?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRA8E2 devices include a high resolution Graphics LCD Controller that can support resolutions of WVGA or greater and a 2D Graphics Drawing Engine that offloads graphics rendering function from the CPU, and supports multiple graphics primitives and formats and image fucntions such as rotation, scaling, alpha blending etc.. Depending on the use case, frame rates can be traded off against resolution and color depth. To support LCD panels of various resolution, the RA8E2 devices include multiple memory options for storage of graphics frame buffers, including internal 672KB SRAM and a high throughput 16bit SDRAM interface.\nSuitable Products\nRA8E2"
+      },
+      {
+        "type": "text",
+        "content": "RA8E2 devices include a high resolution Graphics LCD Controller that can support resolutions of WVGA or greater and a 2D Graphics Drawing Engine that offloads graphics rendering function from the CPU, and supports multiple graphics primitives and formats and image fucntions such as rotation, scaling, alpha blending etc.. Depending on the use case, frame rates can be traded off against resolution and color depth. To support LCD panels of various resolution, the RA8E2 devices include multiple memory options for storage of graphics frame buffers, including internal 672KB SRAM and a high throughput 16bit SDRAM interface."
+      },
+      {
+        "type": "text",
+        "content": "RA8E2 devices include a high resolution Graphics LCD Controller that can support resolutions of WVGA or greater and a 2D Graphics Drawing Engine that offloads graphics rendering function from the CPU, and supports multiple graphics primitives and formats and image fucntions such as rotation, scaling, alpha blending etc.. Depending on the use case, frame rates can be traded off against resolution and color depth. To support LCD panels of various resolution, the RA8E2 devices include multiple memory options for storage of graphics frame buffers, including internal 672KB SRAM and a high throughput 16bit SDRAM interface."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA8E2"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA8E2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA8E2"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21606631"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21606641"
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20364145",
+    "title": "Is there any difference between RH850G3K and RH850G3KH core?",
+    "last_updated": "2022-01-02",
+    "extracted_at": "2025-03-09T00:26:49.407310"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there any difference between RH850G3K and RH850G3KH core?\nAnswer:\nG3K Core – e.g. RH850/F1L (elder series)\nmax. 96MHz, 5 Stage pipeline, no FPU, MPU (4 areas), no PE Guard\nG3KH core – e.g. RH850/F1K (newer series)\nmax. 240MHz, 5 Stage pipeline, FPU, MPU (16 areas), PE Guard\n  Suitable Products\nRH850/F1x"
+      },
+      {
+        "type": "text",
+        "content": "Is there any difference between RH850G3K and RH850G3KH core?"
+      },
+      {
+        "type": "text",
+        "content": "Is there any difference between RH850G3K and RH850G3KH core?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nG3K Core – e.g. RH850/F1L (elder series)\nmax. 96MHz, 5 Stage pipeline, no FPU, MPU (4 areas), no PE Guard\nG3KH core – e.g. RH850/F1K (newer series)\nmax. 240MHz, 5 Stage pipeline, FPU, MPU (16 areas), PE Guard\n  Suitable Products\nRH850/F1x"
+      },
+      {
+        "type": "text",
+        "content": "G3K Core – e.g. RH850/F1L (elder series)\nmax. 96MHz, 5 Stage pipeline, no FPU, MPU (4 areas), no PE Guard\nG3KH core – e.g. RH850/F1K (newer series)\nmax. 240MHz, 5 Stage pipeline, FPU, MPU (16 areas), PE Guard"
+      },
+      {
+        "type": "text",
+        "content": "G3K Core – e.g. RH850/F1L (elder series)\nmax. 96MHz, 5 Stage pipeline, no FPU, MPU (4 areas), no PE Guard"
+      },
+      {
+        "type": "text",
+        "content": "G3KH core – e.g. RH850/F1K (newer series)\nmax. 240MHz, 5 Stage pipeline, FPU, MPU (16 areas), PE Guard"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850/F1x"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850/F1x"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850/F1x"
+    ],
+    "links": []
+  }
+}

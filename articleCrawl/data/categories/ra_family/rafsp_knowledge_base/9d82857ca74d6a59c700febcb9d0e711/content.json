@@ -1,0 +1,294 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21180395",
+    "title": "RA Family: User section definition of FSP linker script",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:19:19.823082"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the linker script file used for?\nAnswer:\nThe RA family FSP provides the linker script file to build an application project to meet RA MCU’s memory resources. When creating a project, it is generated in the script folder depending on the compiler version; fsp. <file extension>. The linker script file includes a file named memory_regions.<file extension> stored in the Debug folder, that contains the start address and size information of each memory region. This allows a common linker script file to accommodate multiple different device memory specifications.\nAdditionally, the FSP linker script provides various section definitions, and by using these definitions, users can easily place code/data where they want.\nREGION definition\nRegion definition RA2\nCortex-M23 RA4/RA6\nCoretex-M4 RA4/RA6\nCortex-M33 RA8\nCortex-M85\nITCM - - - ✓\nDTCM - - - ✓\nFLASH ✓ ✓ ✓ ✓\nRAM ✓ ✓ ✓ ✓\nDATA FLASH ✓ ✓ ✓ ✓\nQSPI_FLASH - ✓Note1 ✓Note1 -\nOSPI_DEVICE_0 - - ✓Note2 ✓Note2\nOSPI_DEVICE_1 - - ✓Note2 ✓Note2\nOSPI_DEVICE_0_RAM - - ✓Note2 ✓Note2\nOSPI_DEVICE_1_RAM - - ✓Note2 ✓Note2\nSDRAM - ✓(RA6M3) - ✓\nOPTION_SETTING_xxx\n(Option setting field in code flash) -Note3 -Note3 ✓ ✓\nOPTION_SETTING_DATA_FLASH_S\n(Option setting field in data flash) - - - ✓\nID_CODE ✓ ✓ ✓ -\n“✓”: Available, “-“: Not available\nNote1: Available on QSPI supported devices.\nNote2: Available on OSPI supported devices.\nNote3: The OFS area is located in FLASH region.\nSECTION definition\n  User section name Macro to place your code/data to specific regions. Allocate to Definition of start address and end address\nRAM .code_in_ram BSP_PLACE_IN_SECTION(\".code_in_ram\") RAM region, initial data in FLASH region Start : __Code_In_RAM_Start\nEnd : __Code_In_RAM_End\nITCM .itcm_data BSP_PLACE_IN_SECTION(\".itcm_data\") ITCM region, initial data in FLASH region Start : __itcm_data_start__\nEnd : __itcm_data_end__\nDTCM .dtcm_data BSP_PLACE_IN_SECTION(\".dtcm_data\") DTCM region, initial data in FLASH region Start : __dtcm_data_start__\nEnd : __dtcm_data_end__\n.dtcm_noinit BSP_PLACE_IN_SECTION(\".dtcm_noinit\") DTCM region, no initial data Start : __dtcm_noinit_start\nEnd : __dtcm_noinit_end\nQSPI .qspi_flash\n.code_in_qspi BSP_PLACE_IN_SECTION(\".qspi_flash\")\nBSP_PLACE_IN_SECTION(\".code_in_qspi\") QSPI_FLASH region, initial data is mapped to QSPI_FLASH region and downloaded via debugger Start : __qspi_flash_start__\nEnd : __qspi_flash_end__\n.qspi_non_retentive BSP_PLACE_IN_SECTION(\".qspi_non_retentive\") QSPI_FLASH region, initial data in FLASH region Start : __qspi_non_retentive_start__\nEnd : __qspi_non_retentive_end__\nStart of initial data : __qspi_flash_code_addr__\nOSPI .ospi_device_0\n.code_in_ospi_device_0 BSP_PLACE_IN_SECTION(\".ospi_device_0\")\nBSP_PLACE_IN_SECTION(\".code_in_ospi_device_0\") OSPI_DEVICE_0 region, initial data is mapped to OSPI_DEVICE_0 region and downloaded via debugger Start : __ospi_device_0_start__\nEnd : __ospi_device_0_end__\n.ospi_device_0_non_retentive BSP_PLACE_IN_SECTION(\".ospi_device_0_non_retentive\") OSPI_DEVICE_0 region, initial data in FLASH region Start : __ospi_device_0_non_retentive_start__\nEnd : __ospi_device_0_non_retentive_end__\nStart of initial data : __ospi_device_0_code_addr__\n.ospi_device_0_no_load BSP_PLACE_IN_SECTION(\".ospi_device_0_no_load\") OSPI_DEVICE_0 region, no initial data Start : __ospi_device_0_start__\nEnd : __ospi_device_0_end__\n.ospi_device_1\n.code_in_ospi_device_1 BSP_PLACE_IN_SECTION(\".ospi_device_1\")\nBSP_PLACE_IN_SECTION(\".code_in_ospi_device_1\") OSPI_DEVICE_0 region, initial data is mapped to OSPI_DEVICE_1 region and downloaded via debugger Start : __ospi_device_1_start__\nEnd : __ospi_device_1_end__\n.ospi_device_1_non_retentive BSP_PLACE_IN_SECTION(\".ospi_device_1_non_retentive\") OSPI_DEVICE_1 region, initial data in FLASH region Start : __ospi_device_1_non_retentive_start__\nEnd : __ospi_device_1_non_retentive_end__\nStart of initial data : __ospi_device_1_code_addr__\n.ospi_device_1_no_load BSP_PLACE_IN_SECTION(\".ospi_device_1_no_load\") OSPI_DEVICE_1 region, no initial data Start : __ospi_device_1_start__\nEnd : __ospi_device_1_end__\nData flash .data_flash BSP_PLACE_IN_SECTION(\".data_flash\") DATA_FLASH region, initial data is mapped to OSPI_DATA_FLASH_1 region and downloaded via debugger Start : __Data_Flash_Start\nEnd : __Data_Flash_End\nSDRAM .sdram\n.frame BSP_PLACE_IN_SECTION(\".sdram\")\nBSP_PLACE_IN_SECTION(\".frame\") SDRAM region, initial data should be placed in non-volatile region and copied it to SRAM area by user application. Start : __SDRAM_Start\nEnd : __SDRAM_End\nNote: This article is written based on FSPv5.0.0. The details of the linker script may differ depending on the FSP version.\nSuitable Products\nRA MCU"
+      },
+      {
+        "type": "text",
+        "content": "What is the linker script file used for?"
+      },
+      {
+        "type": "text",
+        "content": "What is the linker script file used for?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RA family FSP provides the linker script file to build an application project to meet RA MCU’s memory resources. When creating a project, it is generated in the script folder depending on the compiler version; fsp. <file extension>. The linker script file includes a file named memory_regions.<file extension> stored in the Debug folder, that contains the start address and size information of each memory region. This allows a common linker script file to accommodate multiple different device memory specifications.\nAdditionally, the FSP linker script provides various section definitions, and by using these definitions, users can easily place code/data where they want.\nREGION definition\nRegion definition RA2\nCortex-M23 RA4/RA6\nCoretex-M4 RA4/RA6\nCortex-M33 RA8\nCortex-M85\nITCM - - - ✓\nDTCM - - - ✓\nFLASH ✓ ✓ ✓ ✓\nRAM ✓ ✓ ✓ ✓\nDATA FLASH ✓ ✓ ✓ ✓\nQSPI_FLASH - ✓Note1 ✓Note1 -\nOSPI_DEVICE_0 - - ✓Note2 ✓Note2\nOSPI_DEVICE_1 - - ✓Note2 ✓Note2\nOSPI_DEVICE_0_RAM - - ✓Note2 ✓Note2\nOSPI_DEVICE_1_RAM - - ✓Note2 ✓Note2\nSDRAM - ✓(RA6M3) - ✓\nOPTION_SETTING_xxx\n(Option setting field in code flash) -Note3 -Note3 ✓ ✓\nOPTION_SETTING_DATA_FLASH_S\n(Option setting field in data flash) - - - ✓\nID_CODE ✓ ✓ ✓ -\n“✓”: Available, “-“: Not available\nNote1: Available on QSPI supported devices.\nNote2: Available on OSPI supported devices.\nNote3: The OFS area is located in FLASH region.\nSECTION definition\n  User section name Macro to place your code/data to specific regions. Allocate to Definition of start address and end address\nRAM .code_in_ram BSP_PLACE_IN_SECTION(\".code_in_ram\") RAM region, initial data in FLASH region Start : __Code_In_RAM_Start\nEnd : __Code_In_RAM_End\nITCM .itcm_data BSP_PLACE_IN_SECTION(\".itcm_data\") ITCM region, initial data in FLASH region Start : __itcm_data_start__\nEnd : __itcm_data_end__\nDTCM .dtcm_data BSP_PLACE_IN_SECTION(\".dtcm_data\") DTCM region, initial data in FLASH region Start : __dtcm_data_start__\nEnd : __dtcm_data_end__\n.dtcm_noinit BSP_PLACE_IN_SECTION(\".dtcm_noinit\") DTCM region, no initial data Start : __dtcm_noinit_start\nEnd : __dtcm_noinit_end\nQSPI .qspi_flash\n.code_in_qspi BSP_PLACE_IN_SECTION(\".qspi_flash\")\nBSP_PLACE_IN_SECTION(\".code_in_qspi\") QSPI_FLASH region, initial data is mapped to QSPI_FLASH region and downloaded via debugger Start : __qspi_flash_start__\nEnd : __qspi_flash_end__\n.qspi_non_retentive BSP_PLACE_IN_SECTION(\".qspi_non_retentive\") QSPI_FLASH region, initial data in FLASH region Start : __qspi_non_retentive_start__\nEnd : __qspi_non_retentive_end__\nStart of initial data : __qspi_flash_code_addr__\nOSPI .ospi_device_0\n.code_in_ospi_device_0 BSP_PLACE_IN_SECTION(\".ospi_device_0\")\nBSP_PLACE_IN_SECTION(\".code_in_ospi_device_0\") OSPI_DEVICE_0 region, initial data is mapped to OSPI_DEVICE_0 region and downloaded via debugger Start : __ospi_device_0_start__\nEnd : __ospi_device_0_end__\n.ospi_device_0_non_retentive BSP_PLACE_IN_SECTION(\".ospi_device_0_non_retentive\") OSPI_DEVICE_0 region, initial data in FLASH region Start : __ospi_device_0_non_retentive_start__\nEnd : __ospi_device_0_non_retentive_end__\nStart of initial data : __ospi_device_0_code_addr__\n.ospi_device_0_no_load BSP_PLACE_IN_SECTION(\".ospi_device_0_no_load\") OSPI_DEVICE_0 region, no initial data Start : __ospi_device_0_start__\nEnd : __ospi_device_0_end__\n.ospi_device_1\n.code_in_ospi_device_1 BSP_PLACE_IN_SECTION(\".ospi_device_1\")\nBSP_PLACE_IN_SECTION(\".code_in_ospi_device_1\") OSPI_DEVICE_0 region, initial data is mapped to OSPI_DEVICE_1 region and downloaded via debugger Start : __ospi_device_1_start__\nEnd : __ospi_device_1_end__\n.ospi_device_1_non_retentive BSP_PLACE_IN_SECTION(\".ospi_device_1_non_retentive\") OSPI_DEVICE_1 region, initial data in FLASH region Start : __ospi_device_1_non_retentive_start__\nEnd : __ospi_device_1_non_retentive_end__\nStart of initial data : __ospi_device_1_code_addr__\n.ospi_device_1_no_load BSP_PLACE_IN_SECTION(\".ospi_device_1_no_load\") OSPI_DEVICE_1 region, no initial data Start : __ospi_device_1_start__\nEnd : __ospi_device_1_end__\nData flash .data_flash BSP_PLACE_IN_SECTION(\".data_flash\") DATA_FLASH region, initial data is mapped to OSPI_DATA_FLASH_1 region and downloaded via debugger Start : __Data_Flash_Start\nEnd : __Data_Flash_End\nSDRAM .sdram\n.frame BSP_PLACE_IN_SECTION(\".sdram\")\nBSP_PLACE_IN_SECTION(\".frame\") SDRAM region, initial data should be placed in non-volatile region and copied it to SRAM area by user application. Start : __SDRAM_Start\nEnd : __SDRAM_End\nNote: This article is written based on FSPv5.0.0. The details of the linker script may differ depending on the FSP version.\nSuitable Products\nRA MCU"
+      },
+      {
+        "type": "text",
+        "content": "The RA family FSP provides the linker script file to build an application project to meet RA MCU’s memory resources. When creating a project, it is generated in the script folder depending on the compiler version; fsp. <file extension>. The linker script file includes a file named memory_regions.<file extension> stored in the Debug folder, that contains the start address and size information of each memory region. This allows a common linker script file to accommodate multiple different device memory specifications.\nAdditionally, the FSP linker script provides various section definitions, and by using these definitions, users can easily place code/data where they want.\nREGION definition\nRegion definition RA2\nCortex-M23 RA4/RA6\nCoretex-M4 RA4/RA6\nCortex-M33 RA8\nCortex-M85\nITCM - - - ✓\nDTCM - - - ✓\nFLASH ✓ ✓ ✓ ✓\nRAM ✓ ✓ ✓ ✓\nDATA FLASH ✓ ✓ ✓ ✓\nQSPI_FLASH - ✓Note1 ✓Note1 -\nOSPI_DEVICE_0 - - ✓Note2 ✓Note2\nOSPI_DEVICE_1 - - ✓Note2 ✓Note2\nOSPI_DEVICE_0_RAM - - ✓Note2 ✓Note2\nOSPI_DEVICE_1_RAM - - ✓Note2 ✓Note2\nSDRAM - ✓(RA6M3) - ✓\nOPTION_SETTING_xxx\n(Option setting field in code flash) -Note3 -Note3 ✓ ✓\nOPTION_SETTING_DATA_FLASH_S\n(Option setting field in data flash) - - - ✓\nID_CODE ✓ ✓ ✓ -\n“✓”: Available, “-“: Not available\nNote1: Available on QSPI supported devices.\nNote2: Available on OSPI supported devices.\nNote3: The OFS area is located in FLASH region.\nSECTION definition\n  User section name Macro to place your code/data to specific regions. Allocate to Definition of start address and end address\nRAM .code_in_ram BSP_PLACE_IN_SECTION(\".code_in_ram\") RAM region, initial data in FLASH region Start : __Code_In_RAM_Start\nEnd : __Code_In_RAM_End\nITCM .itcm_data BSP_PLACE_IN_SECTION(\".itcm_data\") ITCM region, initial data in FLASH region Start : __itcm_data_start__\nEnd : __itcm_data_end__\nDTCM .dtcm_data BSP_PLACE_IN_SECTION(\".dtcm_data\") DTCM region, initial data in FLASH region Start : __dtcm_data_start__\nEnd : __dtcm_data_end__\n.dtcm_noinit BSP_PLACE_IN_SECTION(\".dtcm_noinit\") DTCM region, no initial data Start : __dtcm_noinit_start\nEnd : __dtcm_noinit_end\nQSPI .qspi_flash\n.code_in_qspi BSP_PLACE_IN_SECTION(\".qspi_flash\")\nBSP_PLACE_IN_SECTION(\".code_in_qspi\") QSPI_FLASH region, initial data is mapped to QSPI_FLASH region and downloaded via debugger Start : __qspi_flash_start__\nEnd : __qspi_flash_end__\n.qspi_non_retentive BSP_PLACE_IN_SECTION(\".qspi_non_retentive\") QSPI_FLASH region, initial data in FLASH region Start : __qspi_non_retentive_start__\nEnd : __qspi_non_retentive_end__\nStart of initial data : __qspi_flash_code_addr__\nOSPI .ospi_device_0\n.code_in_ospi_device_0 BSP_PLACE_IN_SECTION(\".ospi_device_0\")\nBSP_PLACE_IN_SECTION(\".code_in_ospi_device_0\") OSPI_DEVICE_0 region, initial data is mapped to OSPI_DEVICE_0 region and downloaded via debugger Start : __ospi_device_0_start__\nEnd : __ospi_device_0_end__\n.ospi_device_0_non_retentive BSP_PLACE_IN_SECTION(\".ospi_device_0_non_retentive\") OSPI_DEVICE_0 region, initial data in FLASH region Start : __ospi_device_0_non_retentive_start__\nEnd : __ospi_device_0_non_retentive_end__\nStart of initial data : __ospi_device_0_code_addr__\n.ospi_device_0_no_load BSP_PLACE_IN_SECTION(\".ospi_device_0_no_load\") OSPI_DEVICE_0 region, no initial data Start : __ospi_device_0_start__\nEnd : __ospi_device_0_end__\n.ospi_device_1\n.code_in_ospi_device_1 BSP_PLACE_IN_SECTION(\".ospi_device_1\")\nBSP_PLACE_IN_SECTION(\".code_in_ospi_device_1\") OSPI_DEVICE_0 region, initial data is mapped to OSPI_DEVICE_1 region and downloaded via debugger Start : __ospi_device_1_start__\nEnd : __ospi_device_1_end__\n.ospi_device_1_non_retentive BSP_PLACE_IN_SECTION(\".ospi_device_1_non_retentive\") OSPI_DEVICE_1 region, initial data in FLASH region Start : __ospi_device_1_non_retentive_start__\nEnd : __ospi_device_1_non_retentive_end__\nStart of initial data : __ospi_device_1_code_addr__\n.ospi_device_1_no_load BSP_PLACE_IN_SECTION(\".ospi_device_1_no_load\") OSPI_DEVICE_1 region, no initial data Start : __ospi_device_1_start__\nEnd : __ospi_device_1_end__\nData flash .data_flash BSP_PLACE_IN_SECTION(\".data_flash\") DATA_FLASH region, initial data is mapped to OSPI_DATA_FLASH_1 region and downloaded via debugger Start : __Data_Flash_Start\nEnd : __Data_Flash_End\nSDRAM .sdram\n.frame BSP_PLACE_IN_SECTION(\".sdram\")\nBSP_PLACE_IN_SECTION(\".frame\") SDRAM region, initial data should be placed in non-volatile region and copied it to SRAM area by user application. Start : __SDRAM_Start\nEnd : __SDRAM_End\nNote: This article is written based on FSPv5.0.0. The details of the linker script may differ depending on the FSP version."
+      },
+      {
+        "type": "text",
+        "content": "The RA family FSP provides the linker script file to build an application project to meet RA MCU’s memory resources. When creating a project, it is generated in the script folder depending on the compiler version; fsp. <file extension>. The linker script file includes a file named memory_regions.<file extension> stored in the Debug folder, that contains the start address and size information of each memory region. This allows a common linker script file to accommodate multiple different device memory specifications."
+      },
+      {
+        "type": "text",
+        "content": "Additionally, the FSP linker script provides various section definitions, and by using these definitions, users can easily place code/data where they want."
+      },
+      {
+        "type": "text",
+        "content": "REGION definition"
+      },
+      {
+        "type": "text",
+        "content": "“✓”: Available, “-“: Not available"
+      },
+      {
+        "type": "text",
+        "content": "Note1: Available on QSPI supported devices.\nNote2: Available on OSPI supported devices.\nNote3: The OFS area is located in FLASH region."
+      },
+      {
+        "type": "text",
+        "content": "SECTION definition"
+      },
+      {
+        "type": "text",
+        "content": "Note: This article is written based on FSPv5.0.0. The details of the linker script may differ depending on the FSP version."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA MCU"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "Region definition",
+            "RA2\nCortex-M23",
+            "RA4/RA6\nCoretex-M4",
+            "RA4/RA6\nCortex-M33",
+            "RA8\nCortex-M85"
+          ],
+          [
+            "ITCM",
+            "-",
+            "-",
+            "-",
+            "✓"
+          ],
+          [
+            "DTCM",
+            "-",
+            "-",
+            "-",
+            "✓"
+          ],
+          [
+            "FLASH",
+            "✓",
+            "✓",
+            "✓",
+            "✓"
+          ],
+          [
+            "RAM",
+            "✓",
+            "✓",
+            "✓",
+            "✓"
+          ],
+          [
+            "DATA FLASH",
+            "✓",
+            "✓",
+            "✓",
+            "✓"
+          ],
+          [
+            "QSPI_FLASH",
+            "-",
+            "✓Note1",
+            "✓Note1",
+            "-"
+          ],
+          [
+            "OSPI_DEVICE_0",
+            "-",
+            "-",
+            "✓Note2",
+            "✓Note2"
+          ],
+          [
+            "OSPI_DEVICE_1",
+            "-",
+            "-",
+            "✓Note2",
+            "✓Note2"
+          ],
+          [
+            "OSPI_DEVICE_0_RAM",
+            "-",
+            "-",
+            "✓Note2",
+            "✓Note2"
+          ],
+          [
+            "OSPI_DEVICE_1_RAM",
+            "-",
+            "-",
+            "✓Note2",
+            "✓Note2"
+          ],
+          [
+            "SDRAM",
+            "-",
+            "✓(RA6M3)",
+            "-",
+            "✓"
+          ],
+          [
+            "OPTION_SETTING_xxx\n(Option setting field in code flash)",
+            "-Note3",
+            "-Note3",
+            "✓",
+            "✓"
+          ],
+          [
+            "OPTION_SETTING_DATA_FLASH_S\n(Option setting field in data flash)",
+            "-",
+            "-",
+            "-",
+            "✓"
+          ],
+          [
+            "ID_CODE",
+            "✓",
+            "✓",
+            "✓",
+            "-"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "",
+            "User section name",
+            "Macro to place your code/data to specific regions.",
+            "Allocate to",
+            "Definition of start address and end address"
+          ],
+          [
+            "RAM",
+            ".code_in_ram",
+            "BSP_PLACE_IN_SECTION(\".code_in_ram\")",
+            "RAM region, initial data in FLASH region",
+            "Start : __Code_In_RAM_Start\nEnd : __Code_In_RAM_End"
+          ],
+          [
+            "ITCM",
+            ".itcm_data",
+            "BSP_PLACE_IN_SECTION(\".itcm_data\")",
+            "ITCM region, initial data in FLASH region",
+            "Start : __itcm_data_start__\nEnd : __itcm_data_end__"
+          ],
+          [
+            "DTCM",
+            ".dtcm_data",
+            "BSP_PLACE_IN_SECTION(\".dtcm_data\")",
+            "DTCM region, initial data in FLASH region",
+            "Start : __dtcm_data_start__\nEnd : __dtcm_data_end__"
+          ],
+          [
+            ".dtcm_noinit",
+            "BSP_PLACE_IN_SECTION(\".dtcm_noinit\")",
+            "DTCM region, no initial data",
+            "Start : __dtcm_noinit_start\nEnd : __dtcm_noinit_end"
+          ],
+          [
+            "QSPI",
+            ".qspi_flash\n.code_in_qspi",
+            "BSP_PLACE_IN_SECTION(\".qspi_flash\")\nBSP_PLACE_IN_SECTION(\".code_in_qspi\")",
+            "QSPI_FLASH region, initial data is mapped to QSPI_FLASH region and downloaded via debugger",
+            "Start : __qspi_flash_start__\nEnd : __qspi_flash_end__"
+          ],
+          [
+            ".qspi_non_retentive",
+            "BSP_PLACE_IN_SECTION(\".qspi_non_retentive\")",
+            "QSPI_FLASH region, initial data in FLASH region",
+            "Start : __qspi_non_retentive_start__\nEnd : __qspi_non_retentive_end__\nStart of initial data : __qspi_flash_code_addr__"
+          ],
+          [
+            "OSPI",
+            ".ospi_device_0\n.code_in_ospi_device_0",
+            "BSP_PLACE_IN_SECTION(\".ospi_device_0\")\nBSP_PLACE_IN_SECTION(\".code_in_ospi_device_0\")",
+            "OSPI_DEVICE_0 region, initial data is mapped to OSPI_DEVICE_0 region and downloaded via debugger",
+            "Start : __ospi_device_0_start__\nEnd : __ospi_device_0_end__"
+          ],
+          [
+            ".ospi_device_0_non_retentive",
+            "BSP_PLACE_IN_SECTION(\".ospi_device_0_non_retentive\")",
+            "OSPI_DEVICE_0 region, initial data in FLASH region",
+            "Start : __ospi_device_0_non_retentive_start__\nEnd : __ospi_device_0_non_retentive_end__\nStart of initial data : __ospi_device_0_code_addr__"
+          ],
+          [
+            ".ospi_device_0_no_load",
+            "BSP_PLACE_IN_SECTION(\".ospi_device_0_no_load\")",
+            "OSPI_DEVICE_0 region, no initial data",
+            "Start : __ospi_device_0_start__\nEnd : __ospi_device_0_end__"
+          ],
+          [
+            ".ospi_device_1\n.code_in_ospi_device_1",
+            "BSP_PLACE_IN_SECTION(\".ospi_device_1\")\nBSP_PLACE_IN_SECTION(\".code_in_ospi_device_1\")",
+            "OSPI_DEVICE_0 region, initial data is mapped to OSPI_DEVICE_1 region and downloaded via debugger",
+            "Start : __ospi_device_1_start__\nEnd : __ospi_device_1_end__"
+          ],
+          [
+            ".ospi_device_1_non_retentive",
+            "BSP_PLACE_IN_SECTION(\".ospi_device_1_non_retentive\")",
+            "OSPI_DEVICE_1 region, initial data in FLASH region",
+            "Start : __ospi_device_1_non_retentive_start__\nEnd : __ospi_device_1_non_retentive_end__\nStart of initial data : __ospi_device_1_code_addr__"
+          ],
+          [
+            ".ospi_device_1_no_load",
+            "BSP_PLACE_IN_SECTION(\".ospi_device_1_no_load\")",
+            "OSPI_DEVICE_1 region, no initial data",
+            "Start : __ospi_device_1_start__\nEnd : __ospi_device_1_end__"
+          ],
+          [
+            "Data flash",
+            ".data_flash",
+            "BSP_PLACE_IN_SECTION(\".data_flash\")",
+            "DATA_FLASH region, initial data is mapped to OSPI_DATA_FLASH_1 region and downloaded via debugger",
+            "Start : __Data_Flash_Start\nEnd : __Data_Flash_End"
+          ],
+          [
+            "SDRAM",
+            ".sdram\n.frame",
+            "BSP_PLACE_IN_SECTION(\".sdram\")\nBSP_PLACE_IN_SECTION(\".frame\")",
+            "SDRAM region, initial data should be placed in non-volatile region and copied it to SRAM area by user application.",
+            "Start : __SDRAM_Start\nEnd : __SDRAM_End"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA MCU"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA MCU"
+    ],
+    "links": []
+  }
+}

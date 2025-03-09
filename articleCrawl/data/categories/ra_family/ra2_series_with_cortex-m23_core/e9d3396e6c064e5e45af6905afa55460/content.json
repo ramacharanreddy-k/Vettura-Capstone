@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/19761104",
+    "title": "RA2: Compatibility and Scalability",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:31:41.746824"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the difference between RA2L1, RA2A1, RA2E1, RA2E2, RA2E3 and RA2A2?\nAnswer:\nRA2L1 has bigger memory size maximum of 256KB Flash and 32KB SRAM, a DCDC mode using internal voltage regulator, 12bit DAC, CAN and ECC SRAM.\nRA2E1 has maximum 128KB Flash memory and 16KB SRAM. RA2E1 has optimized peripherals but offers memory size variations and package options.\nRA2E2 has smallest package option among RA2 family including 20, 24pin QFN and ultra-small 16pin WLCSP package. \nRA2E3 provides maximum 64KB Flash memory and 16KB SRAM together with optimized feature sets for cost-sensitive applications.\nRA2A2 provides 512KB dual bank flash, 48KB SRAM with rich peripherals including Segment LCD Controller, 24-bit Sigma Delta ADC, 12-bit SAR ADC and Security.\nWe offer excellent upgrade path with hardware and software scalability between RA2L1, RA2E1 , RA2E2, RA2E3 and RA2A2. All product integrated ARM Cortex M23 CPU core and has pin to pin compatibility. Peripheral functions and registers are compatibles and HAL drivers are portable directly between these RA family members. Of course customer can use same development tool as for all RA MCUs.\nSuitable Products\nRA2L1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "What is the difference between RA2L1, RA2A1, RA2E1, RA2E2, RA2E3 and RA2A2?"
+      },
+      {
+        "type": "text",
+        "content": "What is the difference between RA2L1, RA2A1, RA2E1, RA2E2, RA2E3 and RA2A2?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRA2L1 has bigger memory size maximum of 256KB Flash and 32KB SRAM, a DCDC mode using internal voltage regulator, 12bit DAC, CAN and ECC SRAM.\nRA2E1 has maximum 128KB Flash memory and 16KB SRAM. RA2E1 has optimized peripherals but offers memory size variations and package options.\nRA2E2 has smallest package option among RA2 family including 20, 24pin QFN and ultra-small 16pin WLCSP package. \nRA2E3 provides maximum 64KB Flash memory and 16KB SRAM together with optimized feature sets for cost-sensitive applications.\nRA2A2 provides 512KB dual bank flash, 48KB SRAM with rich peripherals including Segment LCD Controller, 24-bit Sigma Delta ADC, 12-bit SAR ADC and Security.\nWe offer excellent upgrade path with hardware and software scalability between RA2L1, RA2E1 , RA2E2, RA2E3 and RA2A2. All product integrated ARM Cortex M23 CPU core and has pin to pin compatibility. Peripheral functions and registers are compatibles and HAL drivers are portable directly between these RA family members. Of course customer can use same development tool as for all RA MCUs.\nSuitable Products\nRA2L1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "RA2L1 has bigger memory size maximum of 256KB Flash and 32KB SRAM, a DCDC mode using internal voltage regulator, 12bit DAC, CAN and ECC SRAM.\nRA2E1 has maximum 128KB Flash memory and 16KB SRAM. RA2E1 has optimized peripherals but offers memory size variations and package options.\nRA2E2 has smallest package option among RA2 family including 20, 24pin QFN and ultra-small 16pin WLCSP package. \nRA2E3 provides maximum 64KB Flash memory and 16KB SRAM together with optimized feature sets for cost-sensitive applications.\nRA2A2 provides 512KB dual bank flash, 48KB SRAM with rich peripherals including Segment LCD Controller, 24-bit Sigma Delta ADC, 12-bit SAR ADC and Security.\nWe offer excellent upgrade path with hardware and software scalability between RA2L1, RA2E1 , RA2E2, RA2E3 and RA2A2. All product integrated ARM Cortex M23 CPU core and has pin to pin compatibility. Peripheral functions and registers are compatibles and HAL drivers are portable directly between these RA family members. Of course customer can use same development tool as for all RA MCUs."
+      },
+      {
+        "type": "text",
+        "content": "RA2L1 has bigger memory size maximum of 256KB Flash and 32KB SRAM, a DCDC mode using internal voltage regulator, 12bit DAC, CAN and ECC SRAM.\nRA2E1 has maximum 128KB Flash memory and 16KB SRAM. RA2E1 has optimized peripherals but offers memory size variations and package options.\nRA2E2 has smallest package option among RA2 family including 20, 24pin QFN and ultra-small 16pin WLCSP package. \nRA2E3 provides maximum 64KB Flash memory and 16KB SRAM together with optimized feature sets for cost-sensitive applications.\nRA2A2 provides 512KB dual bank flash, 48KB SRAM with rich peripherals including Segment LCD Controller, 24-bit Sigma Delta ADC, 12-bit SAR ADC and Security."
+      },
+      {
+        "type": "text",
+        "content": "We offer excellent upgrade path with hardware and software scalability between RA2L1, RA2E1 , RA2E2, RA2E3 and RA2A2. All product integrated ARM Cortex M23 CPU core and has pin to pin compatibility. Peripheral functions and registers are compatibles and HAL drivers are portable directly between these RA family members. Of course customer can use same development tool as for all RA MCUs."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA2L1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA2L1, RA2E1, RA2E2, RA2E3, RA2A2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA2L1, RA2E1, RA2E2, RA2E3, RA2A2"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/19761099"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/19761106"
+      }
+    ]
+  }
+}

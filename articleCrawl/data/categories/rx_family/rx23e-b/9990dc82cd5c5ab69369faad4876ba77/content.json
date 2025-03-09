@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21106549",
+    "title": "Sample software for the RX23E-B",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:04:46.673684"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there any sample software for the RX23E-B?\nAnswer:\nThe following sample software is provided HERE for the RX23E-B.\nRX23E-B Group, Initial Settings Example (R01AN6634)\nRX23E-B Group, Example of weight measurement using AC excited load cell (R01AN6517)\nRX23E-B Group, Example of 4-20 mA transmitter using built-in D/A converter (R01AN6518)\nRX23E-B Group, Design and measurement of small board for 6-axis force sensor(R01AN6513)\nRX23E-B Group, Design and weight measurement of tiny board for digital load cell(R01AN6512)\nSuitable Products\nRX23E-B"
+      },
+      {
+        "type": "text",
+        "content": "Is there any sample software for the RX23E-B?"
+      },
+      {
+        "type": "text",
+        "content": "Is there any sample software for the RX23E-B?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe following sample software is provided HERE for the RX23E-B.\nRX23E-B Group, Initial Settings Example (R01AN6634)\nRX23E-B Group, Example of weight measurement using AC excited load cell (R01AN6517)\nRX23E-B Group, Example of 4-20 mA transmitter using built-in D/A converter (R01AN6518)\nRX23E-B Group, Design and measurement of small board for 6-axis force sensor(R01AN6513)\nRX23E-B Group, Design and weight measurement of tiny board for digital load cell(R01AN6512)\nSuitable Products\nRX23E-B"
+      },
+      {
+        "type": "text",
+        "content": "The following sample software is provided HERE for the RX23E-B.\nRX23E-B Group, Initial Settings Example (R01AN6634)\nRX23E-B Group, Example of weight measurement using AC excited load cell (R01AN6517)\nRX23E-B Group, Example of 4-20 mA transmitter using built-in D/A converter (R01AN6518)\nRX23E-B Group, Design and measurement of small board for 6-axis force sensor(R01AN6513)\nRX23E-B Group, Design and weight measurement of tiny board for digital load cell(R01AN6512)"
+      },
+      {
+        "type": "text",
+        "content": "The following sample software is provided HERE for the RX23E-B."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX23E-B"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX23E-B"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX23E-B"
+    ],
+    "links": [
+      {
+        "text": "HERE",
+        "url": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rx23e-b-32-bit-microcontroller-integrated-24-bit-delta-sigma-ad-converter-125ksps?doc_secondary=visible#documents"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21106555"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21106570"
+      }
+    ]
+  }
+}

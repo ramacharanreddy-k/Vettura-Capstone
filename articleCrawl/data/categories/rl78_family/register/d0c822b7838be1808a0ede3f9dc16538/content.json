@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21664339",
+    "title": "[RL78] How to change the direction of a pin during runtime ?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:00:26.561614"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Last updated: 02 Nov 2024"
+      },
+      {
+        "type": "text",
+        "content": "How to change the direction of a pin from input to output and vice versa during runtime ?"
+      },
+      {
+        "type": "text",
+        "content": "Whether a pin is input or output is controlled by the Port Mode Registers PMxx. For example to change P14 from input to output the following code should be added:"
+      },
+      {
+        "type": "text",
+        "content": "PM1 &= ~(1 << 4);"
+      },
+      {
+        "type": "text",
+        "content": "or"
+      },
+      {
+        "type": "text",
+        "content": "PM1_bit.no4 = 0;"
+      },
+      {
+        "type": "text",
+        "content": "These registers can be set by a 1-bit or 8-bit memory manipulation instruction. The first one is a 8-bit manipulation and the second one is a 1-bit manipulation. Both ways are equivalent."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78"
+    ],
+    "links": []
+  }
+}

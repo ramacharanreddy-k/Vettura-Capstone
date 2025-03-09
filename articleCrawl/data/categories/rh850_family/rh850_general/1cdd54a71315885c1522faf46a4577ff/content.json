@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21225586",
+    "title": "How to debug (RH850 ICUM) using E2 emulator and CS+",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:29:26.914976"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs it possible to debug the ICUM core of a RH850 MCU using the Renesas E2-Emulator and CS+?\nAnswer:\nDebugging the ICUM core with E2 and CS+ is possible. You need a different device file (= dvf file) to do this. Kindly request the same through Renesas Online Support. The shared CS+ patch will guide you how to replace the required files in your CS+ installation.\nNote:\nNDA is required for security-related support such as a request to get a security-related file. Contact our sales representative or distributor for details.\n  For debugging the ICUM core with GHS MULTI, you need also different device file package.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nIs it possible to debug the ICUM core of a RH850 MCU using the Renesas E2-Emulator and CS+?\nAnswer:\nDebugging the ICUM core with E2 and CS+ is possible. You need a different device file (= dvf file) to do this. Kindly request the same through Renesas Online Support. The shared CS+ patch will guide you how to replace the required files in your CS+ installation.\nNote:\nNDA is required for security-related support such as a request to get a security-related file. Contact our sales representative or distributor for details.\n  For debugging the ICUM core with GHS MULTI, you need also different device file package.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "Is it possible to debug the ICUM core of a RH850 MCU using the Renesas E2-Emulator and CS+?"
+      },
+      {
+        "type": "text",
+        "content": "Is it possible to debug the ICUM core of a RH850 MCU using the Renesas E2-Emulator and CS+?"
+      },
+      {
+        "type": "text",
+        "content": "Is it possible to debug the ICUM core of a RH850 MCU using the Renesas E2-Emulator and CS+?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nDebugging the ICUM core with E2 and CS+ is possible. You need a different device file (= dvf file) to do this. Kindly request the same through Renesas Online Support. The shared CS+ patch will guide you how to replace the required files in your CS+ installation.\nNote:\nNDA is required for security-related support such as a request to get a security-related file. Contact our sales representative or distributor for details.\n  For debugging the ICUM core with GHS MULTI, you need also different device file package.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "Debugging the ICUM core with E2 and CS+ is possible. You need a different device file (= dvf file) to do this. Kindly request the same through Renesas Online Support. The shared CS+ patch will guide you how to replace the required files in your CS+ installation.\nNote:\nNDA is required for security-related support such as a request to get a security-related file. Contact our sales representative or distributor for details.\n  For debugging the ICUM core with GHS MULTI, you need also different device file package."
+      },
+      {
+        "type": "text",
+        "content": "Debugging the ICUM core with E2 and CS+ is possible. You need a different device file (= dvf file) to do this. Kindly request the same through Renesas Online Support. The shared CS+ patch will guide you how to replace the required files in your CS+ installation."
+      },
+      {
+        "type": "text",
+        "content": "Debugging the ICUM core with E2 and CS+ is possible. You need a different device file (= dvf file) to do this. Kindly request the same through Renesas Online Support. The shared CS+ patch will guide you how to replace the required files in your CS+ installation."
+      },
+      {
+        "type": "text",
+        "content": "Note:"
+      },
+      {
+        "type": "text",
+        "content": "Note:"
+      },
+      {
+        "type": "text",
+        "content": "NDA is required for security-related support such as a request to get a security-related file. Contact our sales representative or distributor for details."
+      },
+      {
+        "type": "text",
+        "content": "NDA is required for security-related support such as a request to get a security-related file. Contact our sales representative or distributor for details."
+      },
+      {
+        "type": "text",
+        "content": "For debugging the ICUM core with GHS MULTI, you need also different device file package."
+      },
+      {
+        "type": "text",
+        "content": "For debugging the ICUM core with GHS MULTI, you need also different device file package."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850"
+    ],
+    "links": []
+  }
+}

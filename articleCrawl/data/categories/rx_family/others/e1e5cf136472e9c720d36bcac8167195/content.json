@@ -1,0 +1,138 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20939015",
+    "title": "Debug method",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:24:31.436248"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nPeripheral functions of the MCU do not work as expected. How should I debug (find the cause)?\nAnswer:\nCheck the following items.\n(Step1) To isolate the cause and identify the problem\n1. Isolate whether the cause is hardware (microcomputer) or software (program).\nIf there are multiple boards, check the reproducibility of the symptoms on the other boards.\na) When the symptom is reproduced in all boards, it is confirmed from the viewpoint of the program.\nFor example, to eliminate the effects of program settings and operating peripheral functions that are unrelated to symptoms, the program should be as small as possible so that only the relevant peripheral functions can operate, and the areas where symptoms occur should be identified.\nIf available, use FIT drivers and sample programs provided by us to confirm that they will be reproduced.\nb) When the symptom is reproduced only on a specific board, check from the viewpoint of the microcomputer.\nFor example, replace the microcomputer on a board that does not operate as expected with the microcomputer on a board that operates as expected, and check whether the problem occurs only in a specific microcomputer.\n2. Check using an oscilloscope, etc.\nIf the symptoms that occur are related to signal input/output, such as timers and communications, take a waveform with the oscilloscope to check whether the waveform is the expected one.\nIf interrupt processing is used in the program, add the processing to invert the test port in the interrupt processing.The test port is then measured by the oscilloscope to verify that the timing of the interrupt handling is correct.\n3. Update tools and sample programs to the latest.\nIf FIT drivers, sample programs, and tools use automatically generated source code, check whether to update to the latest version and reproduce it.\n(Step2) To determine the cause of the problem\n1. Check using the debugger function of the emulator.\n(1) When a problem occurs, check the value of I/O register related to the relevant peripheral function with the debugger. Check whether the setting is correct and whether the error flag is set.\nIf the setting value of I/O register is changed to an unintended value, check the following debugging functions of the emulator.\ne2 studio IDE Usage of Trace Debug Features (R20AN0309)\ne2 studio IDE Usage of Eventpoints Debug Feature (R20AN0307)\ne2 studio IDE Usage of Memory Debug Feature (R20AN0308)\nIf there is a difference in I/O register, the timing of the signal, etc., compared with the case of normal operation, the difference is noticed and analyzed.\n(2) If the interrupt does not occur, check the interrupt enable bit, IR register, IEN register, IPR register, and PSW.I flag in I/O register of the peripheral function.\nWhen interrupts are not generated at the timing when they are originally generated, check whether there is an interrupt disabled period (PSW.I = 0).\n(For FIT modules, look for R_BSP_InterruptControl() function.)\n2. Verify that the program meets the requirements described in the user's manual.\n(1) If you have created your own program, check the user's manual: Hardware　again to make sure that the functions of I/O register are correctly used and the initial settings (flowchart, etc.).\n(2) Check whether there is any conflict with the prohibited items such as \"Prohibited\" and \"Setting is prohibited\" in the user's manual: Hardware.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Peripheral functions of the MCU do not work as expected. How should I debug (find the cause)?"
+      },
+      {
+        "type": "text",
+        "content": "Peripheral functions of the MCU do not work as expected. How should I debug (find the cause)?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nCheck the following items.\n(Step1) To isolate the cause and identify the problem\n1. Isolate whether the cause is hardware (microcomputer) or software (program).\nIf there are multiple boards, check the reproducibility of the symptoms on the other boards.\na) When the symptom is reproduced in all boards, it is confirmed from the viewpoint of the program.\nFor example, to eliminate the effects of program settings and operating peripheral functions that are unrelated to symptoms, the program should be as small as possible so that only the relevant peripheral functions can operate, and the areas where symptoms occur should be identified.\nIf available, use FIT drivers and sample programs provided by us to confirm that they will be reproduced.\nb) When the symptom is reproduced only on a specific board, check from the viewpoint of the microcomputer.\nFor example, replace the microcomputer on a board that does not operate as expected with the microcomputer on a board that operates as expected, and check whether the problem occurs only in a specific microcomputer.\n2. Check using an oscilloscope, etc.\nIf the symptoms that occur are related to signal input/output, such as timers and communications, take a waveform with the oscilloscope to check whether the waveform is the expected one.\nIf interrupt processing is used in the program, add the processing to invert the test port in the interrupt processing.The test port is then measured by the oscilloscope to verify that the timing of the interrupt handling is correct.\n3. Update tools and sample programs to the latest.\nIf FIT drivers, sample programs, and tools use automatically generated source code, check whether to update to the latest version and reproduce it.\n(Step2) To determine the cause of the problem\n1. Check using the debugger function of the emulator.\n(1) When a problem occurs, check the value of I/O register related to the relevant peripheral function with the debugger. Check whether the setting is correct and whether the error flag is set.\nIf the setting value of I/O register is changed to an unintended value, check the following debugging functions of the emulator.\ne2 studio IDE Usage of Trace Debug Features (R20AN0309)\ne2 studio IDE Usage of Eventpoints Debug Feature (R20AN0307)\ne2 studio IDE Usage of Memory Debug Feature (R20AN0308)\nIf there is a difference in I/O register, the timing of the signal, etc., compared with the case of normal operation, the difference is noticed and analyzed.\n(2) If the interrupt does not occur, check the interrupt enable bit, IR register, IEN register, IPR register, and PSW.I flag in I/O register of the peripheral function.\nWhen interrupts are not generated at the timing when they are originally generated, check whether there is an interrupt disabled period (PSW.I = 0).\n(For FIT modules, look for R_BSP_InterruptControl() function.)\n2. Verify that the program meets the requirements described in the user's manual.\n(1) If you have created your own program, check the user's manual: Hardware　again to make sure that the functions of I/O register are correctly used and the initial settings (flowchart, etc.).\n(2) Check whether there is any conflict with the prohibited items such as \"Prohibited\" and \"Setting is prohibited\" in the user's manual: Hardware.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Check the following items.\n(Step1) To isolate the cause and identify the problem\n1. Isolate whether the cause is hardware (microcomputer) or software (program).\nIf there are multiple boards, check the reproducibility of the symptoms on the other boards.\na) When the symptom is reproduced in all boards, it is confirmed from the viewpoint of the program.\nFor example, to eliminate the effects of program settings and operating peripheral functions that are unrelated to symptoms, the program should be as small as possible so that only the relevant peripheral functions can operate, and the areas where symptoms occur should be identified.\nIf available, use FIT drivers and sample programs provided by us to confirm that they will be reproduced.\nb) When the symptom is reproduced only on a specific board, check from the viewpoint of the microcomputer.\nFor example, replace the microcomputer on a board that does not operate as expected with the microcomputer on a board that operates as expected, and check whether the problem occurs only in a specific microcomputer.\n2. Check using an oscilloscope, etc.\nIf the symptoms that occur are related to signal input/output, such as timers and communications, take a waveform with the oscilloscope to check whether the waveform is the expected one.\nIf interrupt processing is used in the program, add the processing to invert the test port in the interrupt processing.The test port is then measured by the oscilloscope to verify that the timing of the interrupt handling is correct.\n3. Update tools and sample programs to the latest.\nIf FIT drivers, sample programs, and tools use automatically generated source code, check whether to update to the latest version and reproduce it.\n(Step2) To determine the cause of the problem\n1. Check using the debugger function of the emulator.\n(1) When a problem occurs, check the value of I/O register related to the relevant peripheral function with the debugger. Check whether the setting is correct and whether the error flag is set.\nIf the setting value of I/O register is changed to an unintended value, check the following debugging functions of the emulator.\ne2 studio IDE Usage of Trace Debug Features (R20AN0309)\ne2 studio IDE Usage of Eventpoints Debug Feature (R20AN0307)\ne2 studio IDE Usage of Memory Debug Feature (R20AN0308)\nIf there is a difference in I/O register, the timing of the signal, etc., compared with the case of normal operation, the difference is noticed and analyzed.\n(2) If the interrupt does not occur, check the interrupt enable bit, IR register, IEN register, IPR register, and PSW.I flag in I/O register of the peripheral function.\nWhen interrupts are not generated at the timing when they are originally generated, check whether there is an interrupt disabled period (PSW.I = 0).\n(For FIT modules, look for R_BSP_InterruptControl() function.)\n2. Verify that the program meets the requirements described in the user's manual.\n(1) If you have created your own program, check the user's manual: Hardware　again to make sure that the functions of I/O register are correctly used and the initial settings (flowchart, etc.).\n(2) Check whether there is any conflict with the prohibited items such as \"Prohibited\" and \"Setting is prohibited\" in the user's manual: Hardware."
+      },
+      {
+        "type": "text",
+        "content": "Check the following items."
+      },
+      {
+        "type": "text",
+        "content": "(Step1) To isolate the cause and identify the problem"
+      },
+      {
+        "type": "text",
+        "content": "1. Isolate whether the cause is hardware (microcomputer) or software (program).\nIf there are multiple boards, check the reproducibility of the symptoms on the other boards."
+      },
+      {
+        "type": "text",
+        "content": "a) When the symptom is reproduced in all boards, it is confirmed from the viewpoint of the program.\nFor example, to eliminate the effects of program settings and operating peripheral functions that are unrelated to symptoms, the program should be as small as possible so that only the relevant peripheral functions can operate, and the areas where symptoms occur should be identified.\nIf available, use FIT drivers and sample programs provided by us to confirm that they will be reproduced."
+      },
+      {
+        "type": "text",
+        "content": "b) When the symptom is reproduced only on a specific board, check from the viewpoint of the microcomputer.\nFor example, replace the microcomputer on a board that does not operate as expected with the microcomputer on a board that operates as expected, and check whether the problem occurs only in a specific microcomputer."
+      },
+      {
+        "type": "text",
+        "content": "2. Check using an oscilloscope, etc.\nIf the symptoms that occur are related to signal input/output, such as timers and communications, take a waveform with the oscilloscope to check whether the waveform is the expected one.\nIf interrupt processing is used in the program, add the processing to invert the test port in the interrupt processing.The test port is then measured by the oscilloscope to verify that the timing of the interrupt handling is correct."
+      },
+      {
+        "type": "text",
+        "content": "3. Update tools and sample programs to the latest.\nIf FIT drivers, sample programs, and tools use automatically generated source code, check whether to update to the latest version and reproduce it."
+      },
+      {
+        "type": "text",
+        "content": "(Step2) To determine the cause of the problem"
+      },
+      {
+        "type": "text",
+        "content": "1. Check using the debugger function of the emulator."
+      },
+      {
+        "type": "text",
+        "content": "(1) When a problem occurs, check the value of I/O register related to the relevant peripheral function with the debugger. Check whether the setting is correct and whether the error flag is set.\nIf the setting value of I/O register is changed to an unintended value, check the following debugging functions of the emulator."
+      },
+      {
+        "type": "text",
+        "content": "e2 studio IDE Usage of Trace Debug Features (R20AN0309)\ne2 studio IDE Usage of Eventpoints Debug Feature (R20AN0307)\ne2 studio IDE Usage of Memory Debug Feature (R20AN0308)"
+      },
+      {
+        "type": "text",
+        "content": "If there is a difference in I/O register, the timing of the signal, etc., compared with the case of normal operation, the difference is noticed and analyzed."
+      },
+      {
+        "type": "text",
+        "content": "(2) If the interrupt does not occur, check the interrupt enable bit, IR register, IEN register, IPR register, and PSW.I flag in I/O register of the peripheral function.\nWhen interrupts are not generated at the timing when they are originally generated, check whether there is an interrupt disabled period (PSW.I = 0).\n(For FIT modules, look for R_BSP_InterruptControl() function.)"
+      },
+      {
+        "type": "text",
+        "content": "2. Verify that the program meets the requirements described in the user's manual."
+      },
+      {
+        "type": "text",
+        "content": "(1) If you have created your own program, check the user's manual: Hardware　again to make sure that the functions of I/O register are correctly used and the initial settings (flowchart, etc.).\n(2) Check whether there is any conflict with the prohibited items such as \"Prohibited\" and \"Setting is prohibited\" in the user's manual: Hardware."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "e2 studio IDE Usage of Trace Debug Features (R20AN0309)",
+        "url": "https://www.renesas.com/search?keywords=R20AN0309"
+      },
+      {
+        "text": "e2 studio IDE Usage of Eventpoints Debug Feature (R20AN0307)",
+        "url": "https://www.renesas.com/search?keywords=R20AN0307"
+      },
+      {
+        "text": "e2 studio IDE Usage of Memory Debug Feature (R20AN0308)",
+        "url": "https://www.renesas.com/search?keywords=R20AN0308"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20939020"
+      }
+    ]
+  }
+}

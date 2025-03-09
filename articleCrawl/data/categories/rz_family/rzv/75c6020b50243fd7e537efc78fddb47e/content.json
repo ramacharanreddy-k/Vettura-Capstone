@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20572384",
+    "title": "RZ/V2M: How to terminate the power supplying pin for the unused function?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:51:20.204461"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nRZ/V2M: Is it necessary to supply power to unused function terminals as well?\nAlso, if need power supplying, is it necessary to put on the decoupling condenser and so on?\nAnswer:\nIt shoud supply the power even the unsed function's pin.\nThe necessity of decoupling condenser is depends on the structure of the circuit or the power supply.\nUsually, when the voltage is not changed, it does not need.\nBut Renesas cannot guarantee this portion, so please consider risk hedge on your circuit.\nSuitable Products\nRZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "RZ/V2M: Is it necessary to supply power to unused function terminals as well?\nAlso, if need power supplying, is it necessary to put on the decoupling condenser and so on?"
+      },
+      {
+        "type": "text",
+        "content": "RZ/V2M: Is it necessary to supply power to unused function terminals as well?\nAlso, if need power supplying, is it necessary to put on the decoupling condenser and so on?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIt shoud supply the power even the unsed function's pin.\nThe necessity of decoupling condenser is depends on the structure of the circuit or the power supply.\nUsually, when the voltage is not changed, it does not need.\nBut Renesas cannot guarantee this portion, so please consider risk hedge on your circuit.\nSuitable Products\nRZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "It shoud supply the power even the unsed function's pin.\nThe necessity of decoupling condenser is depends on the structure of the circuit or the power supply.\nUsually, when the voltage is not changed, it does not need.\nBut Renesas cannot guarantee this portion, so please consider risk hedge on your circuit."
+      },
+      {
+        "type": "text",
+        "content": "It shoud supply the power even the unsed function's pin.\nThe necessity of decoupling condenser is depends on the structure of the circuit or the power supply.\nUsually, when the voltage is not changed, it does not need.\nBut Renesas cannot guarantee this portion, so please consider risk hedge on your circuit."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V2M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V2M"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20574346"
+      }
+    ]
+  }
+}

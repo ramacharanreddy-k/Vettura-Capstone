@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "GUI_PID_STATE swipe_state;\nvoid external_irq_callback (void)\n{\nswipe_state.x = x_position;\nswipe_state.y = y_position;\nswipe_state.Pressed = 1;\n  GUI_PID_StoreState(&swipe_state);\n  x_position += x_position_increment;\n  if(x_position >= x_position_max){\n    swipe_state.Pressed = 0;\n    GUI_PID_StoreState(&swipe_state);\n}\n}"
+    ]
+  ]
+}

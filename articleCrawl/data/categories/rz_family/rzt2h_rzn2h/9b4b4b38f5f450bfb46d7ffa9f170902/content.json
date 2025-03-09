@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21681482",
+    "title": "RZ/T2H, RZ/N2H: Communication between OS",
+    "last_updated": "2025-07-02",
+    "extracted_at": "2025-03-08T23:49:27.096553"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan inter-core communication occur between the Cortex-A55 and Cortex-R52 in RZ/T2H or RZ/N2H devices?\nAnswer:\nWe provide a Multi-OS Package that enables use of OpenAMP, which is a standardized API for inter-core communication frameworks. \nUsing this package enables the creation of applications that work together on different operating systems, such as Linux, FreeRTOS, and Baremetal, on each CPU core.\nSuitable Products\nRZ/T2H, RZ/N2H"
+      },
+      {
+        "type": "text",
+        "content": "Can inter-core communication occur between the Cortex-A55 and Cortex-R52 in RZ/T2H or RZ/N2H devices?"
+      },
+      {
+        "type": "text",
+        "content": "Can inter-core communication occur between the Cortex-A55 and Cortex-R52 in RZ/T2H or RZ/N2H devices?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nWe provide a Multi-OS Package that enables use of OpenAMP, which is a standardized API for inter-core communication frameworks. \nUsing this package enables the creation of applications that work together on different operating systems, such as Linux, FreeRTOS, and Baremetal, on each CPU core.\nSuitable Products\nRZ/T2H, RZ/N2H"
+      },
+      {
+        "type": "text",
+        "content": "We provide a Multi-OS Package that enables use of OpenAMP, which is a standardized API for inter-core communication frameworks. \nUsing this package enables the creation of applications that work together on different operating systems, such as Linux, FreeRTOS, and Baremetal, on each CPU core."
+      },
+      {
+        "type": "text",
+        "content": "We provide a Multi-OS Package that enables use of OpenAMP, which is a standardized API for inter-core communication frameworks. \nUsing this package enables the creation of applications that work together on different operating systems, such as Linux, FreeRTOS, and Baremetal, on each CPU core."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/T2H, RZ/N2H"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/T2H, RZ/N2H"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/T2H, RZ/N2H"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21662845"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21685998"
+      }
+    ]
+  }
+}

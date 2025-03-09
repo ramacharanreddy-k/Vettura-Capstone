@@ -1,0 +1,127 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "Category",
+      "Objectives",
+      "Format",
+      "URL"
+    ],
+    [
+      "Development process",
+      "Use e2 studio for development",
+      "Document",
+      "RL78 Family Using QE and SIS to Develop Capacitive Touch Applications (R01AN5512)"
+    ],
+    [
+      "Use CS+ for development",
+      "Document",
+      "RL78 Family Using the standalone version of QE to Develop Capacitive Touch Applications (R01AN6574)"
+    ],
+    [
+      "Sample code",
+      "I would like sample code that uses touch evaluation boards.",
+      "Sample code",
+      "RL78/G23 Capacitive Touch Evaluation System Sample Code - Sample Code"
+    ],
+    [
+      "Document",
+      "RL78/G23 Capacitive Touch Evaluation System Sample Code (R12AN0119)"
+    ],
+    [
+      "Sample code",
+      "RL78/G22 Capacitive Touch Evaluation System Sample Code"
+    ],
+    [
+      "Document",
+      "RL78/G22 Capacitive Touch Evaluation System Sample Code (R01AN6803)"
+    ],
+    [
+      "I would like to know the development procedure using FPB and I need the sample code.",
+      "Sample code",
+      "RL78 Family Using QE (standalone ver.) to Develop Touch Applications for FPB board"
+    ],
+    [
+      "Document",
+      "RL78 Family Using QE (standalone ver.) to Develop Touch Applications for FPB board (R01AN6741)"
+    ],
+    [
+      "Low power operation",
+      "I would like to know how to use the SNOOZE function of touch.",
+      "Sample code",
+      "RL78 Family RL78/G23 Capacitive Touch Low Power Guide (SNOOZE function) - Sample Code"
+    ],
+    [
+      "Document",
+      "RL78 Family RL78/G23 Capacitive Touch Low Power Guide (SNOOZE function)(R01AN5886)"
+    ],
+    [
+      "I would like to measure touch with SNOOZE mode sequencer (SMS) on RL78/G23.",
+      "Document",
+      "RL78/G23 Group RL78/G23 Capacitive Touch Low Power Guide (SMS function) (R01AN6670)"
+    ],
+    [
+      "I would like to measure touch using SNOOZE mode sequencer (SMS) and MEC function on RL78/G22.",
+      "Document",
+      "RL78/G22 Capacitive Touch Low Power Guide (SMS / MEC function) (R01AN6847)"
+    ],
+    [
+      "Development tool",
+      "I would like an overview of QE for Capacitive Touch.",
+      "Official website",
+      "QE for Capacitive Touch: Development Assistance Tool for Capacitive Touch Sensors"
+    ],
+    [
+      "Video",
+      "Getting Started with QE for Capacitive Touch for RL78"
+    ],
+    [
+      "I would like to see a video explaining how to use QE for Capacitive Touch.",
+      "Video",
+      "QE for Capacitive Touch Tutorial: Settings for RL78"
+    ],
+    [
+      "QE for Capacitive Touch Tutorial: Tuning for RL78"
+    ],
+    [
+      "QE for Capacitive Touch Tutorial: Serial Monitoring for RL78"
+    ],
+    [
+      "Technical documentation",
+      "I would like to know more about the CTSU.",
+      "Document",
+      "Capacitive Sensor Microcontrollers CTSU Capacitive Touch Introduction Guide (R30AN0424)"
+    ],
+    [
+      "RL78 Family TOUCH Module Software Integration System (R11AN0485)"
+    ],
+    [
+      "RL78 Family CTSU Module Software Integration System (R11AN0484)"
+    ],
+    [
+      "Hardware",
+      "I would like to know how to design touch electrodes.",
+      "Document",
+      "Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)"
+    ],
+    [
+      "I would like to know how to design touch electrodes.",
+      "RL78 Family Capacitive Touch Sensing Unit (CTSU2L) Operation Explanation (R01AN5744)"
+    ],
+    [
+      "Demo",
+      "I would like to know about water-resistant touch buttons.",
+      "Video",
+      "Self-capacitance Waterproof Touch Button Solution"
+    ],
+    [
+      "Document",
+      "RL78/G23 Self-capacitance Waterproof Touch Button Demo Sample Software (R01AN6117)"
+    ],
+    [
+      "I would like to know about QE for Capacitive Touch -3D gesture recognition.",
+      "Video",
+      "e-AI × 3D Gesture Recognition - QE for Capacitive Touch"
+    ]
+  ]
+}

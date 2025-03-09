@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21662907",
+    "title": "Trace RAM area error",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:53:18.968576"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Last updated: 01 Nov 2024"
+      },
+      {
+        "type": "text",
+        "content": "Why do I get 'Section .bss cannot be placed on the TRACERAM area' error when trying to build the project ?"
+      },
+      {
+        "type": "text",
+        "content": "The .bss area overlaps with the trace RAM area which on R7F100GxN is F4300H to F46FFH."
+      },
+      {
+        "type": "text",
+        "content": "The trace RAM area is an area in RAM which is used for the trace function of the debugger."
+      },
+      {
+        "type": "text",
+        "content": "You can disable the trace function and the problem should be gone. Otherwise you need to reserve this space for trace RAM only"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/1ea2b314-5cf0-4112-ada8-10bbe023d398",
+          "alt_text": "",
+          "width": "634",
+          "height": "496",
+          "local_path": "data/categories/rl78_family/rl78g23/354d396c714dcc1ee28a203db036a75f/images/c096aea49792f1b9c5e24c23ed0e23cd.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Alternatively, you can modify the start address of .bss section on linker settings to F4700H (right after the trace RAM area ends)."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/1ea2b314-5cf0-4112-ada8-10bbe023d398",
+        "alt_text": "",
+        "width": "634",
+        "height": "496",
+        "local_path": "data/categories/rl78_family/rl78g23/354d396c714dcc1ee28a203db036a75f/images/c096aea49792f1b9c5e24c23ed0e23cd.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G2x, RL78/F2x"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G2x, RL78/F2x"
+    ],
+    "links": []
+  }
+}

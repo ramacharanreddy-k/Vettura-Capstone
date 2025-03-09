@@ -1,0 +1,241 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21174040",
+    "title": "How to debug code from a specified address on Renesas RA MCUs - e2 studio",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:23:54.223259"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to debug code from a specified address on Renesas RA MCUs - e2 studio\nAnswer:\nAs more and more devices require OTA (Over The Air) code upgrades, there is an increasing need for parallel development of bootloaders and applications. This requires that in the development stage, the application project address can be offset to be consistent with the final address space division.\nFor Arm chips, the starting address 0 is required to start placing the initial stack pointer, reset vector table, and other necessary content, as shown in the following figure (take the RA2L1 manual as an example), so if the 0 address is full FFh, the code cannot be debugged.\nTo solve this issue, the address offset required for MCU operation can be respecified in the IDE (Initial stack pointer and Initial program counter in the figure above). In this article, we will take e2 Studio as an example.\n1. Linker script file (code writing phase).\nFirst, you need to modify the linker script file. Take the memory_regions.ld file as an example. FLASH_START is the basic offset address when the code is compiled, the default is 0, and the target offset address of the application is modified according to the requirements, such as 0x4000. Recompile the project, check the generated SREC file or MOT file, and make sure that the file starts at 0x4000, as shown below.\n2. Debug Configuration Settings (Code Debugging Phase)\nIn the Debug Configuration, add the following three lines of code to Startup > Run Commands.\nset $sp = *0x4000\nset $pc = *0x4004\nset {int}0xe000ed08 = 0x00020000\nThe meanings of these 3 lines of code are explained as follows:\nset $sp = *0x20000\nSince the stack pointer address is required at the start of the code, as shown in the following figure, it points to 0x20000\nset $pc = *0x20004\nThis is the address where the reset vector is stored.\nset {int}0xe000ed08 = 0x00020000\nE000ED08h is the address of the Vector Table Offset Register, which is a common register for ARM core chips, which can be found in the corresponding core manual and related documents of the MCU.\nFor example, the Arm® Cortex-M4® is detailed at the following link:\nhttps://developer.arm.com/documentation/ddi0337/e/nested-vectored-interrupt-controller/nvic-programmer-s-model/nvic-register-descriptions\nClick the debug button in the following figure to confirm the following content in the new interface: the RESET vector is located at the 0x4C45, and the code stops at the 0x4C44 after powering on.\nRegarding the difference between the last bit, the explanation is as follows:\nAfter powering up, the CPU check address is offset to the lowest bit of data at the 0x0004, if the bit is 1, it means that this is a usable thumb address. The bit is then ignored (set to 0) and the first instruction is taken as the reset handle at the modified address.\nFor more details, please refer to the Arm processor documentation.\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "How to debug code from a specified address on Renesas RA MCUs - e2 studio"
+      },
+      {
+        "type": "text",
+        "content": "How to debug code from a specified address on Renesas RA MCUs - e2 studio"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nAs more and more devices require OTA (Over The Air) code upgrades, there is an increasing need for parallel development of bootloaders and applications. This requires that in the development stage, the application project address can be offset to be consistent with the final address space division.\nFor Arm chips, the starting address 0 is required to start placing the initial stack pointer, reset vector table, and other necessary content, as shown in the following figure (take the RA2L1 manual as an example), so if the 0 address is full FFh, the code cannot be debugged.\nTo solve this issue, the address offset required for MCU operation can be respecified in the IDE (Initial stack pointer and Initial program counter in the figure above). In this article, we will take e2 Studio as an example.\n1. Linker script file (code writing phase).\nFirst, you need to modify the linker script file. Take the memory_regions.ld file as an example. FLASH_START is the basic offset address when the code is compiled, the default is 0, and the target offset address of the application is modified according to the requirements, such as 0x4000. Recompile the project, check the generated SREC file or MOT file, and make sure that the file starts at 0x4000, as shown below.\n2. Debug Configuration Settings (Code Debugging Phase)\nIn the Debug Configuration, add the following three lines of code to Startup > Run Commands.\nset $sp = *0x4000\nset $pc = *0x4004\nset {int}0xe000ed08 = 0x00020000\nThe meanings of these 3 lines of code are explained as follows:\nset $sp = *0x20000\nSince the stack pointer address is required at the start of the code, as shown in the following figure, it points to 0x20000\nset $pc = *0x20004\nThis is the address where the reset vector is stored.\nset {int}0xe000ed08 = 0x00020000\nE000ED08h is the address of the Vector Table Offset Register, which is a common register for ARM core chips, which can be found in the corresponding core manual and related documents of the MCU.\nFor example, the Arm® Cortex-M4® is detailed at the following link:\nhttps://developer.arm.com/documentation/ddi0337/e/nested-vectored-interrupt-controller/nvic-programmer-s-model/nvic-register-descriptions\nClick the debug button in the following figure to confirm the following content in the new interface: the RESET vector is located at the 0x4C45, and the code stops at the 0x4C44 after powering on.\nRegarding the difference between the last bit, the explanation is as follows:\nAfter powering up, the CPU check address is offset to the lowest bit of data at the 0x0004, if the bit is 1, it means that this is a usable thumb address. The bit is then ignored (set to 0) and the first instruction is taken as the reset handle at the modified address.\nFor more details, please refer to the Arm processor documentation.\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "As more and more devices require OTA (Over The Air) code upgrades, there is an increasing need for parallel development of bootloaders and applications. This requires that in the development stage, the application project address can be offset to be consistent with the final address space division."
+      },
+      {
+        "type": "text",
+        "content": "For Arm chips, the starting address 0 is required to start placing the initial stack pointer, reset vector table, and other necessary content, as shown in the following figure (take the RA2L1 manual as an example), so if the 0 address is full FFh, the code cannot be debugged."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380551-1e.png",
+          "alt_text": "",
+          "width": "652",
+          "height": "261",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/3bd11c96d3d55f88c63f92852438247c/images/d98f6ed3e504092b8b3205f0158ca374.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "To solve this issue, the address offset required for MCU operation can be respecified in the IDE (Initial stack pointer and Initial program counter in the figure above). In this article, we will take e2 Studio as an example."
+      },
+      {
+        "type": "text",
+        "content": "1. Linker script file (code writing phase)."
+      },
+      {
+        "type": "text",
+        "content": "First, you need to modify the linker script file. Take the memory_regions.ld file as an example. FLASH_START is the basic offset address when the code is compiled, the default is 0, and the target offset address of the application is modified according to the requirements, such as 0x4000. Recompile the project, check the generated SREC file or MOT file, and make sure that the file starts at 0x4000, as shown below."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380551-2.png",
+          "alt_text": "",
+          "width": "476",
+          "height": "185",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/3bd11c96d3d55f88c63f92852438247c/images/23d194c409158fde805663e56127b821.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380551-3.png",
+          "alt_text": "",
+          "width": "559",
+          "height": "138",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/3bd11c96d3d55f88c63f92852438247c/images/a7f760fa48cda337d6e3104e0a1f085e.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "2. Debug Configuration Settings (Code Debugging Phase)"
+      },
+      {
+        "type": "text",
+        "content": "In the Debug Configuration, add the following three lines of code to Startup > Run Commands."
+      },
+      {
+        "type": "text",
+        "content": "set $sp = *0x4000\nset $pc = *0x4004\nset {int}0xe000ed08 = 0x00020000"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380551-4.png",
+          "alt_text": "",
+          "width": "499",
+          "height": "273",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/3bd11c96d3d55f88c63f92852438247c/images/2beb26c8b6a12577661dada123099777.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The meanings of these 3 lines of code are explained as follows:"
+      },
+      {
+        "type": "text",
+        "content": "set $sp = *0x20000"
+      },
+      {
+        "type": "text",
+        "content": "Since the stack pointer address is required at the start of the code, as shown in the following figure, it points to 0x20000"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380551-5.png",
+          "alt_text": "",
+          "width": "531",
+          "height": "132",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/3bd11c96d3d55f88c63f92852438247c/images/55bf506502ee2f112969644f1b511f19.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "set $pc = *0x20004"
+      },
+      {
+        "type": "text",
+        "content": "This is the address where the reset vector is stored."
+      },
+      {
+        "type": "text",
+        "content": "set {int}0xe000ed08 = 0x00020000"
+      },
+      {
+        "type": "text",
+        "content": "E000ED08h is the address of the Vector Table Offset Register, which is a common register for ARM core chips, which can be found in the corresponding core manual and related documents of the MCU."
+      },
+      {
+        "type": "text",
+        "content": "For example, the Arm® Cortex-M4® is detailed at the following link:"
+      },
+      {
+        "type": "text",
+        "content": "https://developer.arm.com/documentation/ddi0337/e/nested-vectored-interrupt-controller/nvic-programmer-s-model/nvic-register-descriptions"
+      },
+      {
+        "type": "text",
+        "content": "Click the debug button in the following figure to confirm the following content in the new interface: the RESET vector is located at the 0x4C45, and the code stops at the 0x4C44 after powering on."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380551-6.png",
+          "alt_text": "",
+          "width": "553",
+          "height": "428",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/3bd11c96d3d55f88c63f92852438247c/images/acb69985710331559e0ec7affc678611.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Regarding the difference between the last bit, the explanation is as follows:"
+      },
+      {
+        "type": "text",
+        "content": "After powering up, the CPU check address is offset to the lowest bit of data at the 0x0004, if the bit is 1, it means that this is a usable thumb address. The bit is then ignored (set to 0) and the first instruction is taken as the reset handle at the modified address."
+      },
+      {
+        "type": "text",
+        "content": "For more details, please refer to the Arm processor documentation."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380551-1e.png",
+        "alt_text": "",
+        "width": "652",
+        "height": "261",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/3bd11c96d3d55f88c63f92852438247c/images/d98f6ed3e504092b8b3205f0158ca374.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380551-2.png",
+        "alt_text": "",
+        "width": "476",
+        "height": "185",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/3bd11c96d3d55f88c63f92852438247c/images/23d194c409158fde805663e56127b821.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380551-3.png",
+        "alt_text": "",
+        "width": "559",
+        "height": "138",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/3bd11c96d3d55f88c63f92852438247c/images/a7f760fa48cda337d6e3104e0a1f085e.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380551-4.png",
+        "alt_text": "",
+        "width": "499",
+        "height": "273",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/3bd11c96d3d55f88c63f92852438247c/images/2beb26c8b6a12577661dada123099777.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380551-5.png",
+        "alt_text": "",
+        "width": "531",
+        "height": "132",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/3bd11c96d3d55f88c63f92852438247c/images/55bf506502ee2f112969644f1b511f19.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380551-6.png",
+        "alt_text": "",
+        "width": "553",
+        "height": "428",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/3bd11c96d3d55f88c63f92852438247c/images/acb69985710331559e0ec7affc678611.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": [
+      {
+        "text": "https://developer.arm.com/documentation/ddi0337/e/nested-vectored-interrupt-controller/nvic-programmer-s-model/nvic-register-descriptions",
+        "url": "https://developer.arm.com/documentation/ddi0337/e/nested-vectored-interrupt-controller/nvic-programmer-s-model/nvic-register-descriptions"
+      }
+    ]
+  }
+}

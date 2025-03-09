@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20940283",
+    "title": "Bitmap images are not correctly displayed if DRW2D is enabled by using emWin. This phenomenon occurs in a GCC or IAR environment.",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:24:29.040606"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nBitmap images are not correctly displayed if DRW2D is enabled by using emWin. This phenomenon occurs in a GCC or IAR environment.\nAnswer:\nMake sure that bitmap data is positioned at 4-byte aligned addresses.\nIn a GCC environment:\nIn a GCC environment, the alignment type must be specified for each variable of image data. Each variable of image data in the source code output by AppWizard or Bitmap Converter bundled with the emWin FIT module is provided with the GUI_CONST_STORAGE macro. By redefining this macro including alignment specification attribute, you can apply the same alignment specification to all target variables.\nIf you are using e2 studio, select [Project] > [C/C++ Project Settings] to display the properties window. Then, in the tree view of the window, under the [C/C++ General] node, select [Paths and Symbols], open the [Symbols] tab, click the [Add] button, and then add the following definition:\nName: GUI_CONST_STORAGE\nValue: __attribute__ ((aligned(4))) const\n  In an IAR environment:\nIn an IAR environment, the alignment type must be specified for each variable of image data. Unlike CC-RX or GCC, there is no way to specify the alignment type for all variables at one time. Note, however, that each variable of image data in the source code output by AppWizard or Bitmap Converter bundled with the emWin FIT module is provided with the GUI_CONST_STORAGE macro. Therefore, add the “#pragma data_alignment=4” specification to each variable by, for example, a search-and-replace operation.\nSuitable Products\nRX Family\n  日本語"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nBitmap images are not correctly displayed if DRW2D is enabled by using emWin. This phenomenon occurs in a GCC or IAR environment.\nAnswer:\nMake sure that bitmap data is positioned at 4-byte aligned addresses.\nIn a GCC environment:\nIn a GCC environment, the alignment type must be specified for each variable of image data. Each variable of image data in the source code output by AppWizard or Bitmap Converter bundled with the emWin FIT module is provided with the GUI_CONST_STORAGE macro. By redefining this macro including alignment specification attribute, you can apply the same alignment specification to all target variables.\nIf you are using e2 studio, select [Project] > [C/C++ Project Settings] to display the properties window. Then, in the tree view of the window, under the [C/C++ General] node, select [Paths and Symbols], open the [Symbols] tab, click the [Add] button, and then add the following definition:\nName: GUI_CONST_STORAGE\nValue: __attribute__ ((aligned(4))) const\n  In an IAR environment:\nIn an IAR environment, the alignment type must be specified for each variable of image data. Unlike CC-RX or GCC, there is no way to specify the alignment type for all variables at one time. Note, however, that each variable of image data in the source code output by AppWizard or Bitmap Converter bundled with the emWin FIT module is provided with the GUI_CONST_STORAGE macro. Therefore, add the “#pragma data_alignment=4” specification to each variable by, for example, a search-and-replace operation.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Bitmap images are not correctly displayed if DRW2D is enabled by using emWin. This phenomenon occurs in a GCC or IAR environment."
+      },
+      {
+        "type": "text",
+        "content": "Bitmap images are not correctly displayed if DRW2D is enabled by using emWin. This phenomenon occurs in a GCC or IAR environment."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nMake sure that bitmap data is positioned at 4-byte aligned addresses.\nIn a GCC environment:\nIn a GCC environment, the alignment type must be specified for each variable of image data. Each variable of image data in the source code output by AppWizard or Bitmap Converter bundled with the emWin FIT module is provided with the GUI_CONST_STORAGE macro. By redefining this macro including alignment specification attribute, you can apply the same alignment specification to all target variables.\nIf you are using e2 studio, select [Project] > [C/C++ Project Settings] to display the properties window. Then, in the tree view of the window, under the [C/C++ General] node, select [Paths and Symbols], open the [Symbols] tab, click the [Add] button, and then add the following definition:\nName: GUI_CONST_STORAGE\nValue: __attribute__ ((aligned(4))) const\n  In an IAR environment:\nIn an IAR environment, the alignment type must be specified for each variable of image data. Unlike CC-RX or GCC, there is no way to specify the alignment type for all variables at one time. Note, however, that each variable of image data in the source code output by AppWizard or Bitmap Converter bundled with the emWin FIT module is provided with the GUI_CONST_STORAGE macro. Therefore, add the “#pragma data_alignment=4” specification to each variable by, for example, a search-and-replace operation.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Make sure that bitmap data is positioned at 4-byte aligned addresses.\nIn a GCC environment:\nIn a GCC environment, the alignment type must be specified for each variable of image data. Each variable of image data in the source code output by AppWizard or Bitmap Converter bundled with the emWin FIT module is provided with the GUI_CONST_STORAGE macro. By redefining this macro including alignment specification attribute, you can apply the same alignment specification to all target variables.\nIf you are using e2 studio, select [Project] > [C/C++ Project Settings] to display the properties window. Then, in the tree view of the window, under the [C/C++ General] node, select [Paths and Symbols], open the [Symbols] tab, click the [Add] button, and then add the following definition:\nName: GUI_CONST_STORAGE\nValue: __attribute__ ((aligned(4))) const\n  In an IAR environment:\nIn an IAR environment, the alignment type must be specified for each variable of image data. Unlike CC-RX or GCC, there is no way to specify the alignment type for all variables at one time. Note, however, that each variable of image data in the source code output by AppWizard or Bitmap Converter bundled with the emWin FIT module is provided with the GUI_CONST_STORAGE macro. Therefore, add the “#pragma data_alignment=4” specification to each variable by, for example, a search-and-replace operation."
+      },
+      {
+        "type": "text",
+        "content": "Make sure that bitmap data is positioned at 4-byte aligned addresses."
+      },
+      {
+        "type": "text",
+        "content": "In a GCC environment:"
+      },
+      {
+        "type": "text",
+        "content": "In a GCC environment, the alignment type must be specified for each variable of image data. Each variable of image data in the source code output by AppWizard or Bitmap Converter bundled with the emWin FIT module is provided with the GUI_CONST_STORAGE macro. By redefining this macro including alignment specification attribute, you can apply the same alignment specification to all target variables."
+      },
+      {
+        "type": "text",
+        "content": "If you are using e2 studio, select [Project] > [C/C++ Project Settings] to display the properties window. Then, in the tree view of the window, under the [C/C++ General] node, select [Paths and Symbols], open the [Symbols] tab, click the [Add] button, and then add the following definition:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370052.png",
+          "alt_text": "",
+          "width": "885",
+          "height": "559",
+          "local_path": "data/categories/rx_family/others/9a52300879ee0df7febd7d1b2f7b3784/images/5637767e76701d01bb3fc173ea2b08e8.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "In an IAR environment:"
+      },
+      {
+        "type": "text",
+        "content": "In an IAR environment, the alignment type must be specified for each variable of image data. Unlike CC-RX or GCC, there is no way to specify the alignment type for all variables at one time. Note, however, that each variable of image data in the source code output by AppWizard or Bitmap Converter bundled with the emWin FIT module is provided with the GUI_CONST_STORAGE macro. Therefore, add the “#pragma data_alignment=4” specification to each variable by, for example, a search-and-replace operation."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370052.png",
+        "alt_text": "",
+        "width": "885",
+        "height": "559",
+        "local_path": "data/categories/rx_family/others/9a52300879ee0df7febd7d1b2f7b3784/images/5637767e76701d01bb3fc173ea2b08e8.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20857269"
+      }
+    ]
+  }
+}

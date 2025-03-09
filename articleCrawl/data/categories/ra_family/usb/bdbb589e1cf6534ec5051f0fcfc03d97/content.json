@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20044815",
+    "title": "RA Family: Am I correct in thinking that in order to obtain a 48-MHz USB clock, a 12-MHz resonator must be used?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:40:20.612464"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nAm I correct in thinking that in order to obtain a 48-MHz USB clock, a 12-MHz resonator must be used? \nAnswer:\n(1) in the case of using RA2A1 MCU\nSince USB clock uses HOCO as the clock source, use any clock.\n(2) in the case of using RA6M1/RA6M2/RA6M3 MCU\nWhen using USB boot, connect an oscillator of 8, 10, 12, 15, 16, 20 or 24-MHz resonator to the main clock oscillator.\nWhen not using USB boot, any clock that can generate a 48-MHz USB clock is fine. It does not necessarily have to be 12-MHz.\n(3) in the case of using RA6M4/RA6M5/RA4M2/RA4M3 MCU\nWhen using USB boot, connect an oscillator of 8, 10, 16, 20 or 24-MHz resonator to the main clock oscillator.\nWhen not using USB boot, any clock that can generate a 48-MHz USB clock is fine. It does not necessarily have to be 12-MHz.\n(4) in the case of using RA4W1/RA4M1 MCU\nWhen using USB as a device controller, the USB clock uses HOCO as the clock source, so use any clock.\nWhen using USB as a host controller, any clock that can generate a 48-MHz USB clock is fine. It does not necessarily have to be 12-MHz. \nSuitable Products\nRA2A1, RA4M1, RA6M1, RA6M2, RA6M3, RA4W1, RA6M4, RA6M5, RA4M2, RA4M3"
+      },
+      {
+        "type": "text",
+        "content": "Am I correct in thinking that in order to obtain a 48-MHz USB clock, a 12-MHz resonator must be used?"
+      },
+      {
+        "type": "text",
+        "content": "Am I correct in thinking that in order to obtain a 48-MHz USB clock, a 12-MHz resonator must be used?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\n(1) in the case of using RA2A1 MCU\nSince USB clock uses HOCO as the clock source, use any clock.\n(2) in the case of using RA6M1/RA6M2/RA6M3 MCU\nWhen using USB boot, connect an oscillator of 8, 10, 12, 15, 16, 20 or 24-MHz resonator to the main clock oscillator.\nWhen not using USB boot, any clock that can generate a 48-MHz USB clock is fine. It does not necessarily have to be 12-MHz.\n(3) in the case of using RA6M4/RA6M5/RA4M2/RA4M3 MCU\nWhen using USB boot, connect an oscillator of 8, 10, 16, 20 or 24-MHz resonator to the main clock oscillator.\nWhen not using USB boot, any clock that can generate a 48-MHz USB clock is fine. It does not necessarily have to be 12-MHz.\n(4) in the case of using RA4W1/RA4M1 MCU\nWhen using USB as a device controller, the USB clock uses HOCO as the clock source, so use any clock.\nWhen using USB as a host controller, any clock that can generate a 48-MHz USB clock is fine. It does not necessarily have to be 12-MHz. \nSuitable Products\nRA2A1, RA4M1, RA6M1, RA6M2, RA6M3, RA4W1, RA6M4, RA6M5, RA4M2, RA4M3"
+      },
+      {
+        "type": "text",
+        "content": "(1) in the case of using RA2A1 MCU\nSince USB clock uses HOCO as the clock source, use any clock.\n(2) in the case of using RA6M1/RA6M2/RA6M3 MCU\nWhen using USB boot, connect an oscillator of 8, 10, 12, 15, 16, 20 or 24-MHz resonator to the main clock oscillator.\nWhen not using USB boot, any clock that can generate a 48-MHz USB clock is fine. It does not necessarily have to be 12-MHz.\n(3) in the case of using RA6M4/RA6M5/RA4M2/RA4M3 MCU\nWhen using USB boot, connect an oscillator of 8, 10, 16, 20 or 24-MHz resonator to the main clock oscillator.\nWhen not using USB boot, any clock that can generate a 48-MHz USB clock is fine. It does not necessarily have to be 12-MHz.\n(4) in the case of using RA4W1/RA4M1 MCU\nWhen using USB as a device controller, the USB clock uses HOCO as the clock source, so use any clock.\nWhen using USB as a host controller, any clock that can generate a 48-MHz USB clock is fine. It does not necessarily have to be 12-MHz."
+      },
+      {
+        "type": "text",
+        "content": "(1) in the case of using RA2A1 MCU"
+      },
+      {
+        "type": "text",
+        "content": "Since USB clock uses HOCO as the clock source, use any clock."
+      },
+      {
+        "type": "text",
+        "content": "(2) in the case of using RA6M1/RA6M2/RA6M3 MCU"
+      },
+      {
+        "type": "text",
+        "content": "When using USB boot, connect an oscillator of 8, 10, 12, 15, 16, 20 or 24-MHz resonator to the main clock oscillator.\nWhen not using USB boot, any clock that can generate a 48-MHz USB clock is fine. It does not necessarily have to be 12-MHz."
+      },
+      {
+        "type": "text",
+        "content": "(3) in the case of using RA6M4/RA6M5/RA4M2/RA4M3 MCU"
+      },
+      {
+        "type": "text",
+        "content": "When using USB boot, connect an oscillator of 8, 10, 16, 20 or 24-MHz resonator to the main clock oscillator.\nWhen not using USB boot, any clock that can generate a 48-MHz USB clock is fine. It does not necessarily have to be 12-MHz."
+      },
+      {
+        "type": "text",
+        "content": "(4) in the case of using RA4W1/RA4M1 MCU"
+      },
+      {
+        "type": "text",
+        "content": "When using USB as a device controller, the USB clock uses HOCO as the clock source, so use any clock.\nWhen using USB as a host controller, any clock that can generate a 48-MHz USB clock is fine. It does not necessarily have to be 12-MHz."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA2A1, RA4M1, RA6M1, RA6M2, RA6M3, RA4W1, RA6M4, RA6M5, RA4M2, RA4M3"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA2A1, RA4M1, RA6M1, RA6M2, RA6M3, RA4W1, RA6M4, RA6M5, RA4M2, RA4M3"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA2A1, RA4M1, RA6M1, RA6M2, RA6M3, RA4W1, RA6M4, RA6M5, RA4M2, RA4M3"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20044811"
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20982680",
+    "title": "RZ/G2UL: Maximum transfer rate of SPI (Renesas Serial Peripheral Interface)",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:45:34.451327"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow much is the maximum transfer rate of RSPI (Renesas Serial Peripheral Interface)?\nAnswer:\nThe maximum transfer rate of RSPI is not decided only by the specifications of RZ/G2UL, but also depends on the specifications of the connected counter device and the customer's PCB design. Therefore, it is necessary for the customer to consider and decide it.\nRSPI’s AC specs are described in the chapter \"48.5.17 Renesas Serial Peripheral Interface (RSPI) Access Timing\" of the H/W User's Manual, so please check the transfer rate with considering the specs of the connected device and PCB margin as well.\nAnd, please check also the following two points carefully to consider RSPI transfer rate.\nThe transfer rate can be selected in several steps by register settings, not an any value.\nPlease refer to the chapter ”24.3.8 Bit Rate Register (SPBR)” of the H/W User's Manual for more details.\nRSPI transfers are delivered in half a cycle of the reference clock(RSPCK), not in one cycle.\nPlease refer to the chapter ”24.4.4 Transfer Format” of the H/W User's Manual for more details.\nSuitable Products\nRZ/G2UL"
+      },
+      {
+        "type": "text",
+        "content": "How much is the maximum transfer rate of RSPI (Renesas Serial Peripheral Interface)?"
+      },
+      {
+        "type": "text",
+        "content": "How much is the maximum transfer rate of RSPI (Renesas Serial Peripheral Interface)?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe maximum transfer rate of RSPI is not decided only by the specifications of RZ/G2UL, but also depends on the specifications of the connected counter device and the customer's PCB design. Therefore, it is necessary for the customer to consider and decide it.\nRSPI’s AC specs are described in the chapter \"48.5.17 Renesas Serial Peripheral Interface (RSPI) Access Timing\" of the H/W User's Manual, so please check the transfer rate with considering the specs of the connected device and PCB margin as well.\nAnd, please check also the following two points carefully to consider RSPI transfer rate.\nThe transfer rate can be selected in several steps by register settings, not an any value.\nPlease refer to the chapter ”24.3.8 Bit Rate Register (SPBR)” of the H/W User's Manual for more details.\nRSPI transfers are delivered in half a cycle of the reference clock(RSPCK), not in one cycle.\nPlease refer to the chapter ”24.4.4 Transfer Format” of the H/W User's Manual for more details.\nSuitable Products\nRZ/G2UL"
+      },
+      {
+        "type": "text",
+        "content": "The maximum transfer rate of RSPI is not decided only by the specifications of RZ/G2UL, but also depends on the specifications of the connected counter device and the customer's PCB design. Therefore, it is necessary for the customer to consider and decide it.\nRSPI’s AC specs are described in the chapter \"48.5.17 Renesas Serial Peripheral Interface (RSPI) Access Timing\" of the H/W User's Manual, so please check the transfer rate with considering the specs of the connected device and PCB margin as well.\nAnd, please check also the following two points carefully to consider RSPI transfer rate.\nThe transfer rate can be selected in several steps by register settings, not an any value.\nPlease refer to the chapter ”24.3.8 Bit Rate Register (SPBR)” of the H/W User's Manual for more details.\nRSPI transfers are delivered in half a cycle of the reference clock(RSPCK), not in one cycle.\nPlease refer to the chapter ”24.4.4 Transfer Format” of the H/W User's Manual for more details."
+      },
+      {
+        "type": "text",
+        "content": "The maximum transfer rate of RSPI is not decided only by the specifications of RZ/G2UL, but also depends on the specifications of the connected counter device and the customer's PCB design. Therefore, it is necessary for the customer to consider and decide it.\nRSPI’s AC specs are described in the chapter \"48.5.17 Renesas Serial Peripheral Interface (RSPI) Access Timing\" of the H/W User's Manual, so please check the transfer rate with considering the specs of the connected device and PCB margin as well."
+      },
+      {
+        "type": "text",
+        "content": "And, please check also the following two points carefully to consider RSPI transfer rate."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/G2UL"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/G2UL"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/G2UL"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20982685"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20982690"
+      }
+    ]
+  }
+}

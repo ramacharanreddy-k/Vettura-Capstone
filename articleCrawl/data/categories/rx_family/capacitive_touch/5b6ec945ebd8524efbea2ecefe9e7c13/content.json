@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18286144",
+    "title": "Why Cannot I Connect With CS+ With FSG in Workbench6?",
+    "last_updated": "2023-02-03",
+    "extracted_at": "2025-03-09T00:08:21.102240"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIn the Workbench6 First Step Guide, I get a \"Target MCU and MCU on target board does not match\" error and I can't connect to CS+. What could be the problem?\nAnswer:\nThe possible causes are as follows:\nExternal power is not supplied\nClock setting is incorrect\nCPU product name is wrong\nWorkbench6 is now in maintenance status, and we do not plan to update it in the future.\nUse QE for Capacitive Touch as a support tool for developing a modern capacitive touch sensor.\nQE for Capacitive Touch can be downloaded from URL below.\nhttps://www.renesas.com/qe-capacitive-touch\n  Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "In the Workbench6 First Step Guide, I get a \"Target MCU and MCU on target board does not match\" error and I can't connect to CS+. What could be the problem?"
+      },
+      {
+        "type": "text",
+        "content": "In the Workbench6 First Step Guide, I get a \"Target MCU and MCU on target board does not match\" error and I can't connect to CS+. What could be the problem?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe possible causes are as follows:\nExternal power is not supplied\nClock setting is incorrect\nCPU product name is wrong\nWorkbench6 is now in maintenance status, and we do not plan to update it in the future.\nUse QE for Capacitive Touch as a support tool for developing a modern capacitive touch sensor.\nQE for Capacitive Touch can be downloaded from URL below.\nhttps://www.renesas.com/qe-capacitive-touch\n  Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "The possible causes are as follows:\nExternal power is not supplied\nClock setting is incorrect\nCPU product name is wrong\nWorkbench6 is now in maintenance status, and we do not plan to update it in the future.\nUse QE for Capacitive Touch as a support tool for developing a modern capacitive touch sensor.\nQE for Capacitive Touch can be downloaded from URL below.\nhttps://www.renesas.com/qe-capacitive-touch"
+      },
+      {
+        "type": "text",
+        "content": "The possible causes are as follows:"
+      },
+      {
+        "type": "text",
+        "content": "Workbench6 is now in maintenance status, and we do not plan to update it in the future.\nUse QE for Capacitive Touch as a support tool for developing a modern capacitive touch sensor.\nQE for Capacitive Touch can be downloaded from URL below."
+      },
+      {
+        "type": "text",
+        "content": "https://www.renesas.com/qe-capacitive-touch"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/qe-capacitive-touch",
+        "url": "https://www.renesas.com/qe-capacitive-touch"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792819"
+      }
+    ]
+  }
+}

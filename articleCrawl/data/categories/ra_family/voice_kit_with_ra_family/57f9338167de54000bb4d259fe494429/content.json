@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20536981",
+    "title": "RA4E1 and RA6E1 microcontrollers don't appear to natively support I2S interface, how are the digital microphones interfaced ?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:41:31.292295"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nRA4E1 and RA6E1 microcontrollers don't appear to natively support I2S interface, how are the digital microphones interfaced ?\nAnswer:\nThe I2S is emulated by using a combination of SPI and timer peripherals on RA MCU.\nSuitable Products\nMCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+      },
+      {
+        "type": "text",
+        "content": "RA4E1 and RA6E1 microcontrollers don't appear to natively support I2S interface, how are the digital microphones interfaced ?"
+      },
+      {
+        "type": "text",
+        "content": "RA4E1 and RA6E1 microcontrollers don't appear to natively support I2S interface, how are the digital microphones interfaced ?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe I2S is emulated by using a combination of SPI and timer peripherals on RA MCU.\nSuitable Products\nMCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+      },
+      {
+        "type": "text",
+        "content": "The I2S is emulated by using a combination of SPI and timer peripherals on RA MCU."
+      },
+      {
+        "type": "text",
+        "content": "The I2S is emulated by using a combination of SPI and timer peripherals on RA MCU."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nMCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "MCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "MCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20545075"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20545086"
+      }
+    ]
+  }
+}

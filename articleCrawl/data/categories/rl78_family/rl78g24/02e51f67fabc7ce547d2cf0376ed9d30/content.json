@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21062256",
+    "title": "DALI-2 communication",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:52:58.179575"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhy is the RL78/G24 ideal for DALI-2 communication?\nAnswer:\nThe RL78/G24 is equipped with DALI-2 communication peripheral functions, enabling high-speed processing compared to conventional software decoding/encoding, which is CPU-intensive. In addition, the basic communication code can be omitted, thus reducing development costs and evaluation time.\nSuitable Products\nRL78/G24"
+      },
+      {
+        "type": "text",
+        "content": "Why is the RL78/G24 ideal for DALI-2 communication?"
+      },
+      {
+        "type": "text",
+        "content": "Why is the RL78/G24 ideal for DALI-2 communication?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RL78/G24 is equipped with DALI-2 communication peripheral functions, enabling high-speed processing compared to conventional software decoding/encoding, which is CPU-intensive. In addition, the basic communication code can be omitted, thus reducing development costs and evaluation time.\nSuitable Products\nRL78/G24"
+      },
+      {
+        "type": "text",
+        "content": "The RL78/G24 is equipped with DALI-2 communication peripheral functions, enabling high-speed processing compared to conventional software decoding/encoding, which is CPU-intensive. In addition, the basic communication code can be omitted, thus reducing development costs and evaluation time."
+      },
+      {
+        "type": "text",
+        "content": "The RL78/G24 is equipped with DALI-2 communication peripheral functions, enabling high-speed processing compared to conventional software decoding/encoding, which is CPU-intensive. In addition, the basic communication code can be omitted, thus reducing development costs and evaluation time."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/G24"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G24"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G24"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21062263"
+      }
+    ]
+  }
+}

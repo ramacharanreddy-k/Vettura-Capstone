@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21727831",
+    "title": "RA Family: Handling of unused analog reference voltage supply pins",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:34:01.025601"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIf the analog reference voltage supply pins VREFH0/VREFL0 and VREFH/VREFL are not used, how should those terminals be treated?\nAnswer:\nThe proper method of handling unused pins is described below. There are two types of processing methods for the RA family, please select the method according to the RA MCU you are using.\n(1) For RA8 Family / RA6 Family / RA4 Family （except for RA4M1 and RA4W1）\nPins usage Pins handling method\nHandling of unused analog reference voltage supply pins. VREFH and VREFH0:\n→ These pins should not be left open. Connect them to analog power supply (AVCC).\n\nVREFL and VREFL0:\n→ These pins should not be left open. Connect them to analog ground (AVSS).\nHandling of analog reference voltage supply pins which is used as GPIO. N/A (For selected products, these are dedicated pins and are not multiplexed with GPIO's or other functions.)\n\n(2) For RA2 Family / RA0 Family / RA4M1 / RA4W1\nPins usage Pins handling method\nHandling of unused analog reference voltage supply pins. VREFH, VREFH0, VREFL, and VREFL0：\n→ It complies with the handling method for unused GPIO pins for the corresponding port. For details, please refer to \"Handling of Unused Pins\" in the User’s Manual: Hardware of each MCU.\nHandling of analog reference voltage supply pins which is used as GPIO. Connect to an external peripheral device to be controlled by GPIO.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "If the analog reference voltage supply pins VREFH0/VREFL0 and VREFH/VREFL are not used, how should those terminals be treated?"
+      },
+      {
+        "type": "text",
+        "content": "If the analog reference voltage supply pins VREFH0/VREFL0 and VREFH/VREFL are not used, how should those terminals be treated?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe proper method of handling unused pins is described below. There are two types of processing methods for the RA family, please select the method according to the RA MCU you are using.\n(1) For RA8 Family / RA6 Family / RA4 Family （except for RA4M1 and RA4W1）\nPins usage Pins handling method\nHandling of unused analog reference voltage supply pins. VREFH and VREFH0:\n→ These pins should not be left open. Connect them to analog power supply (AVCC).\n\nVREFL and VREFL0:\n→ These pins should not be left open. Connect them to analog ground (AVSS).\nHandling of analog reference voltage supply pins which is used as GPIO. N/A (For selected products, these are dedicated pins and are not multiplexed with GPIO's or other functions.)\n\n(2) For RA2 Family / RA0 Family / RA4M1 / RA4W1\nPins usage Pins handling method\nHandling of unused analog reference voltage supply pins. VREFH, VREFH0, VREFL, and VREFL0：\n→ It complies with the handling method for unused GPIO pins for the corresponding port. For details, please refer to \"Handling of Unused Pins\" in the User’s Manual: Hardware of each MCU.\nHandling of analog reference voltage supply pins which is used as GPIO. Connect to an external peripheral device to be controlled by GPIO.\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "The proper method of handling unused pins is described below. There are two types of processing methods for the RA family, please select the method according to the RA MCU you are using.\n(1) For RA8 Family / RA6 Family / RA4 Family （except for RA4M1 and RA4W1）\nPins usage Pins handling method\nHandling of unused analog reference voltage supply pins. VREFH and VREFH0:\n→ These pins should not be left open. Connect them to analog power supply (AVCC).\n\nVREFL and VREFL0:\n→ These pins should not be left open. Connect them to analog ground (AVSS).\nHandling of analog reference voltage supply pins which is used as GPIO. N/A (For selected products, these are dedicated pins and are not multiplexed with GPIO's or other functions.)\n\n(2) For RA2 Family / RA0 Family / RA4M1 / RA4W1\nPins usage Pins handling method\nHandling of unused analog reference voltage supply pins. VREFH, VREFH0, VREFL, and VREFL0：\n→ It complies with the handling method for unused GPIO pins for the corresponding port. For details, please refer to \"Handling of Unused Pins\" in the User’s Manual: Hardware of each MCU.\nHandling of analog reference voltage supply pins which is used as GPIO. Connect to an external peripheral device to be controlled by GPIO."
+      },
+      {
+        "type": "text",
+        "content": "The proper method of handling unused pins is described below. There are two types of processing methods for the RA family, please select the method according to the RA MCU you are using."
+      },
+      {
+        "type": "text",
+        "content": "(1) For RA8 Family / RA6 Family / RA4 Family （except for RA4M1 and RA4W1）"
+      },
+      {
+        "type": "text",
+        "content": "(2) For RA2 Family / RA0 Family / RA4M1 / RA4W1"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "Pins usage",
+            "Pins handling method"
+          ],
+          [
+            "Handling of unused analog reference voltage supply pins.",
+            "VREFH and VREFH0:\n→ These pins should not be left open. Connect them to analog power supply (AVCC).\n\nVREFL and VREFL0:\n→ These pins should not be left open. Connect them to analog ground (AVSS)."
+          ],
+          [
+            "Handling of analog reference voltage supply pins which is used as GPIO.",
+            "N/A (For selected products, these are dedicated pins and are not multiplexed with GPIO's or other functions.)"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "Pins usage",
+            "Pins handling method"
+          ],
+          [
+            "Handling of unused analog reference voltage supply pins.",
+            "VREFH, VREFH0, VREFL, and VREFL0：\n→ It complies with the handling method for unused GPIO pins for the corresponding port. For details, please refer to \"Handling of Unused Pins\" in the User’s Manual: Hardware of each MCU."
+          ],
+          [
+            "Handling of analog reference voltage supply pins which is used as GPIO.",
+            "Connect to an external peripheral device to be controlled by GPIO."
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21727843"
+      }
+    ]
+  }
+}

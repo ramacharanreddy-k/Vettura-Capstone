@@ -1,0 +1,47 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "",
+      "ID Code",
+      "ID Code Authentication"
+    ],
+    [
+      "Bit127",
+      "Bit126",
+      "Bit125 - Bit0"
+    ],
+    [
+      "(1)",
+      "Link",
+      "1",
+      "1",
+      "All bits are 1",
+      "Not required"
+    ],
+    [
+      "(2)",
+      "Link",
+      "1",
+      "1",
+      "At least one of bit is 0",
+      "Required"
+    ],
+    [
+      "(3)",
+      "Link",
+      "1",
+      "0",
+      "Don’t care",
+      "Required"
+    ],
+    [
+      "(4)",
+      "Link",
+      "0",
+      "x",
+      "Don’t care",
+      "Always failed"
+    ]
+  ]
+}

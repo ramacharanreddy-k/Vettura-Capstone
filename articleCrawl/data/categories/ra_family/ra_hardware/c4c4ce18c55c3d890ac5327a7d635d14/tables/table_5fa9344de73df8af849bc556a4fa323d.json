@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "void hal_entry(void)\n{\n    /* TODO: add your own code here */\n    fsp_err_t err = FSP_SUCCESS;\n    /* Complementary PWM mode Setting */\n    err = gpt_complementary_pwm_mode_3_init();\n    assert(err == FSP_SUCCESS);\n    while(1)\n    {\n    }\n#if BSP_TZ_SECURE_BUILD\n    /* Enter non-secure code */\n    R_BSP_NonSecureEnter();\n#endif\n}"
+    ]
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20977336",
+    "title": "RL78 Touch MCU",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:56:58.837534"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhich RL78 MCUs have touch functionality?\nAnswer:\nRL78/G23, RL78/G22, and RL78/G16 have.\nPlease refer to the figure below regarding the lineup by memory and pin count.\nFigure 1: RL78 Touch MCU Lineup\nAlso, please refer to the table below for the differences in each touch function.\nFigure 2: Comparison between RL78/G23, RL78/G22 and RL78/G16\nSuitable Products\nRL78/G23, RL78/G22, RL78/G16"
+      },
+      {
+        "type": "text",
+        "content": "Which RL78 MCUs have touch functionality?"
+      },
+      {
+        "type": "text",
+        "content": "Which RL78 MCUs have touch functionality?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRL78/G23, RL78/G22, and RL78/G16 have.\nPlease refer to the figure below regarding the lineup by memory and pin count.\nFigure 1: RL78 Touch MCU Lineup\nAlso, please refer to the table below for the differences in each touch function.\nFigure 2: Comparison between RL78/G23, RL78/G22 and RL78/G16\nSuitable Products\nRL78/G23, RL78/G22, RL78/G16"
+      },
+      {
+        "type": "text",
+        "content": "RL78/G23, RL78/G22, and RL78/G16 have.\nPlease refer to the figure below regarding the lineup by memory and pin count.\nFigure 1: RL78 Touch MCU Lineup\nAlso, please refer to the table below for the differences in each touch function.\nFigure 2: Comparison between RL78/G23, RL78/G22 and RL78/G16"
+      },
+      {
+        "type": "text",
+        "content": "RL78/G23, RL78/G22, and RL78/G16 have."
+      },
+      {
+        "type": "text",
+        "content": "Please refer to the figure below regarding the lineup by memory and pin count."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372024.png",
+          "alt_text": "",
+          "width": "897",
+          "height": "211",
+          "local_path": "data/categories/rl78_family/capacitive_touch/29966c0f65f5233670864e6f7df25742/images/4034592102df7fcef09a958280e20553.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 1: RL78 Touch MCU Lineup"
+      },
+      {
+        "type": "text",
+        "content": "Also, please refer to the table below for the differences in each touch function."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372024-2.png",
+          "alt_text": "",
+          "width": "703",
+          "height": "526",
+          "local_path": "data/categories/rl78_family/capacitive_touch/29966c0f65f5233670864e6f7df25742/images/99a2f01850a46470647e4e3a0246ce4b.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 2: Comparison between RL78/G23, RL78/G22 and RL78/G16"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/G23, RL78/G22, RL78/G16"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372024.png",
+        "alt_text": "",
+        "width": "897",
+        "height": "211",
+        "local_path": "data/categories/rl78_family/capacitive_touch/29966c0f65f5233670864e6f7df25742/images/4034592102df7fcef09a958280e20553.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372024-2.png",
+        "alt_text": "",
+        "width": "703",
+        "height": "526",
+        "local_path": "data/categories/rl78_family/capacitive_touch/29966c0f65f5233670864e6f7df25742/images/99a2f01850a46470647e4e3a0246ce4b.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G23, RL78/G22, RL78/G16"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G23, RL78/G22, RL78/G16"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20977344"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20977351"
+      }
+    ]
+  }
+}

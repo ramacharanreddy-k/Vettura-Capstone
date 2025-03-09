@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21174003",
+    "title": "RL78/F23, RL78/F24: Development environment (emulators, flash programmers)",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:55:09.748268"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs RL78/F23,F24 compatible with E1 emulator and PG-FP5 (flash programmer) used in the previous RL78? \nAnswer:\nE1 emulator and PG-FP5 (flash programmer) are not compatible with the RL78/F23, F24. Please use the E2 emulator, E2 emulator Lite, and PG-FP6 (flash programmer).\nSuitable Products\nRL78/F23, RL78/F24"
+      },
+      {
+        "type": "text",
+        "content": "Is RL78/F23,F24 compatible with E1 emulator and PG-FP5 (flash programmer) used in the previous RL78?"
+      },
+      {
+        "type": "text",
+        "content": "Is RL78/F23,F24 compatible with E1 emulator and PG-FP5 (flash programmer) used in the previous RL78?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nE1 emulator and PG-FP5 (flash programmer) are not compatible with the RL78/F23, F24. Please use the E2 emulator, E2 emulator Lite, and PG-FP6 (flash programmer).\nSuitable Products\nRL78/F23, RL78/F24"
+      },
+      {
+        "type": "text",
+        "content": "E1 emulator and PG-FP5 (flash programmer) are not compatible with the RL78/F23, F24. Please use the E2 emulator, E2 emulator Lite, and PG-FP6 (flash programmer)."
+      },
+      {
+        "type": "text",
+        "content": "E1 emulator and PG-FP5 (flash programmer) are not compatible with the RL78/F23, F24. Please use the E2 emulator, E2 emulator Lite, and PG-FP6 (flash programmer)."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/F23, RL78/F24"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/F23, RL78/F24"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/F23, RL78/F24"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21174010"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21174029"
+      }
+    ]
+  }
+}

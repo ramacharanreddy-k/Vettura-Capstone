@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "void mpu_config_octaspi(void)\n{\nARM_MPU_Disable();\n    ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);\n    ARM_MPU_Load(0, mpuTable, 2);\n    ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));\n}\n  void hal_entry(void)\n{\n  mpu_config_octaspi();\nenable_s_cache();\n  ospi_init();\n    while(1)\n  {"
+    ]
+  ]
+}

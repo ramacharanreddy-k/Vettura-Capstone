@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21481788",
+    "title": "RX Family: How to update the firmware",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:14:26.845107"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nAre there any application notes or sample code that I can refer to in order to update the firmware?\nAnswer:\nThe following are available. Please refer to them according to your application.\n(No sample code below)\nThis document explains general concepts and design policies for firmware updates.\n[Renesas MCU Firmware Update Design Policy (R01AN5548)]\nThis document explains general design guide for firmware updates via OTA.\n[RX65N Group AWS FreeRTOS 2nd MCU OTA Firmware Update Design Guide (R01AN6361)]\nThis is a guide to the concept and use of dual mode. It mainly explains how to debug and how to write with Renesas Flash Programmer.\n[Dual Mode Usage Guide (R01AN6894)]\n(Sample code available below)\nThis FIT performs firmware updates via a communication interface. It has a secure boot function and supports firmware updates in linear mode and dual mode.\n[RX Family Firmware Update Module Using Firmware Integration Technology (R01AN6850)]\n[sample code (R01AN6850)]\nFirmware is updated via data communication (Full-speed transfer) with USB host using CDC (Communication Device Class).\n[RX Family Internal Flash ROM rewrite program via USB CDC (R01AN3294)]\n[sample code (R01AN3294)]\nFirmware is updated from user program (mot file) in USB memory via USB (Mass Storage Class).\n[RX Family Internal Flash ROM rewrite program via USB Mass Storage (R01AN3503)]\n[sample code (R01AN3503)]\nFirmware is updated by FreeRTOS OTA using Amazon Web Services. The e2 studio allows you to download sample projects from GitHub.\n[RX Family How to implement FreeRTOS OTA using Amazon Web Services in RX65N (for v202210.01-LTS-rx-1.1.3 or later) (R01AN7037)]\nFirmware is updated using the Startup Program Protection feature on the RX100/RX200 series.\n[RX100/RX200 Series Updating Firmware Using Start-Up Program Protection and Serial Communication (R01AN3740)]\n[sample code (R01AN3740)]\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Are there any application notes or sample code that I can refer to in order to update the firmware?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe following are available. Please refer to them according to your application.\n(No sample code below)\nThis document explains general concepts and design policies for firmware updates.\n[Renesas MCU Firmware Update Design Policy (R01AN5548)]\nThis document explains general design guide for firmware updates via OTA.\n[RX65N Group AWS FreeRTOS 2nd MCU OTA Firmware Update Design Guide (R01AN6361)]\nThis is a guide to the concept and use of dual mode. It mainly explains how to debug and how to write with Renesas Flash Programmer.\n[Dual Mode Usage Guide (R01AN6894)]\n(Sample code available below)\nThis FIT performs firmware updates via a communication interface. It has a secure boot function and supports firmware updates in linear mode and dual mode.\n[RX Family Firmware Update Module Using Firmware Integration Technology (R01AN6850)]\n[sample code (R01AN6850)]\nFirmware is updated via data communication (Full-speed transfer) with USB host using CDC (Communication Device Class).\n[RX Family Internal Flash ROM rewrite program via USB CDC (R01AN3294)]\n[sample code (R01AN3294)]\nFirmware is updated from user program (mot file) in USB memory via USB (Mass Storage Class).\n[RX Family Internal Flash ROM rewrite program via USB Mass Storage (R01AN3503)]\n[sample code (R01AN3503)]\nFirmware is updated by FreeRTOS OTA using Amazon Web Services. The e2 studio allows you to download sample projects from GitHub.\n[RX Family How to implement FreeRTOS OTA using Amazon Web Services in RX65N (for v202210.01-LTS-rx-1.1.3 or later) (R01AN7037)]\nFirmware is updated using the Startup Program Protection feature on the RX100/RX200 series.\n[RX100/RX200 Series Updating Firmware Using Start-Up Program Protection and Serial Communication (R01AN3740)]\n[sample code (R01AN3740)]\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "The following are available. Please refer to them according to your application.\n(No sample code below)\nThis document explains general concepts and design policies for firmware updates.\n[Renesas MCU Firmware Update Design Policy (R01AN5548)]\nThis document explains general design guide for firmware updates via OTA.\n[RX65N Group AWS FreeRTOS 2nd MCU OTA Firmware Update Design Guide (R01AN6361)]\nThis is a guide to the concept and use of dual mode. It mainly explains how to debug and how to write with Renesas Flash Programmer.\n[Dual Mode Usage Guide (R01AN6894)]\n(Sample code available below)\nThis FIT performs firmware updates via a communication interface. It has a secure boot function and supports firmware updates in linear mode and dual mode.\n[RX Family Firmware Update Module Using Firmware Integration Technology (R01AN6850)]\n[sample code (R01AN6850)]\nFirmware is updated via data communication (Full-speed transfer) with USB host using CDC (Communication Device Class).\n[RX Family Internal Flash ROM rewrite program via USB CDC (R01AN3294)]\n[sample code (R01AN3294)]\nFirmware is updated from user program (mot file) in USB memory via USB (Mass Storage Class).\n[RX Family Internal Flash ROM rewrite program via USB Mass Storage (R01AN3503)]\n[sample code (R01AN3503)]\nFirmware is updated by FreeRTOS OTA using Amazon Web Services. The e2 studio allows you to download sample projects from GitHub.\n[RX Family How to implement FreeRTOS OTA using Amazon Web Services in RX65N (for v202210.01-LTS-rx-1.1.3 or later) (R01AN7037)]\nFirmware is updated using the Startup Program Protection feature on the RX100/RX200 series.\n[RX100/RX200 Series Updating Firmware Using Start-Up Program Protection and Serial Communication (R01AN3740)]\n[sample code (R01AN3740)]"
+      },
+      {
+        "type": "text",
+        "content": "The following are available. Please refer to them according to your application.\n(No sample code below)\nThis document explains general concepts and design policies for firmware updates.\n[Renesas MCU Firmware Update Design Policy (R01AN5548)]\nThis document explains general design guide for firmware updates via OTA.\n[RX65N Group AWS FreeRTOS 2nd MCU OTA Firmware Update Design Guide (R01AN6361)]\nThis is a guide to the concept and use of dual mode. It mainly explains how to debug and how to write with Renesas Flash Programmer.\n[Dual Mode Usage Guide (R01AN6894)]\n(Sample code available below)\nThis FIT performs firmware updates via a communication interface. It has a secure boot function and supports firmware updates in linear mode and dual mode.\n[RX Family Firmware Update Module Using Firmware Integration Technology (R01AN6850)]\n[sample code (R01AN6850)]\nFirmware is updated via data communication (Full-speed transfer) with USB host using CDC (Communication Device Class).\n[RX Family Internal Flash ROM rewrite program via USB CDC (R01AN3294)]\n[sample code (R01AN3294)]\nFirmware is updated from user program (mot file) in USB memory via USB (Mass Storage Class).\n[RX Family Internal Flash ROM rewrite program via USB Mass Storage (R01AN3503)]\n[sample code (R01AN3503)]\nFirmware is updated by FreeRTOS OTA using Amazon Web Services. The e2 studio allows you to download sample projects from GitHub.\n[RX Family How to implement FreeRTOS OTA using Amazon Web Services in RX65N (for v202210.01-LTS-rx-1.1.3 or later) (R01AN7037)]\nFirmware is updated using the Startup Program Protection feature on the RX100/RX200 series.\n[RX100/RX200 Series Updating Firmware Using Start-Up Program Protection and Serial Communication (R01AN3740)]\n[sample code (R01AN3740)]"
+      },
+      {
+        "type": "text",
+        "content": "The following are available. Please refer to them according to your application."
+      },
+      {
+        "type": "text",
+        "content": "(No sample code below)"
+      },
+      {
+        "type": "text",
+        "content": "(Sample code available below)"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "Renesas MCU Firmware Update Design Policy (R01AN5548)",
+        "url": "https://www.renesas.com/us/en/document/apn/renesas-mcu-firmware-update-design-policy-rev100"
+      },
+      {
+        "text": "RX65N Group AWS FreeRTOS 2nd MCU OTA Firmware Update Design Guide (R01AN6361)",
+        "url": "https://www.renesas.com/us/en/document/apn/rx65n-group-aws-freertos-2nd-mcu-ota-firmware-update-design-guide-rev101"
+      },
+      {
+        "text": "Dual Mode Usage Guide (R01AN6894)",
+        "url": "https://www.renesas.com/us/en/document/apn/dual-mode-usage-guide"
+      },
+      {
+        "text": "RX Family Firmware Update Module Using Firmware Integration Technology (R01AN6850)",
+        "url": "https://www.renesas.com/us/en/document/apn/rx-family-firmware-update-module-using-firmware-integration-technology-application-notes"
+      },
+      {
+        "text": "sample code (R01AN6850)",
+        "url": "https://www.renesas.com/us/en/document/scd/rx-family-firmware-update-module-using-firmware-integration-technology-application-notes-rev203"
+      },
+      {
+        "text": "RX Family Internal Flash ROM rewrite program via USB CDC (R01AN3294)",
+        "url": "https://www.renesas.com/us/en/document/apn/rx-family-internal-flash-rom-rewrite-program-usb-cdc"
+      },
+      {
+        "text": "sample code (R01AN3294)",
+        "url": "https://www.renesas.com/us/en/document/scd/rx-family-internal-flash-rom-rewrite-program-usb-cdc-sample-code"
+      },
+      {
+        "text": "RX Family Internal Flash ROM rewrite program via USB Mass Storage (R01AN3503)",
+        "url": "https://www.renesas.com/us/en/document/apn/rx-family-internal-flash-rom-rewrite-program-usb-mass-storage"
+      },
+      {
+        "text": "sample code (R01AN3503)",
+        "url": "https://www.renesas.com/us/en/document/scd/rx-family-internal-flash-rom-rewrite-program-usb-mass-storage-sample-code"
+      },
+      {
+        "text": "RX Family How to implement FreeRTOS OTA using Amazon Web Services in RX65N (for v202210.01-LTS-rx-1.1.3 or later) (R01AN7037)",
+        "url": "https://www.renesas.com/us/en/document/apn/rx-family-how-implement-freertos-ota-using-amazon-web-services-rx65n-v20221001-lts-rx-113-or-later"
+      },
+      {
+        "text": "RX100/RX200 Series Updating Firmware Using Start-Up Program Protection and Serial Communication (R01AN3740)",
+        "url": "https://www.renesas.com/us/en/document/apn/rx100rx200-series-updating-firmware-using-start-program-protection-and-serial-communication-rev120"
+      },
+      {
+        "text": "sample code (R01AN3740)",
+        "url": "https://www.renesas.com/us/en/document/scd/rx100rx200-series-updating-firmware-using-start-program-protection-and-serial-communication-rev120"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21481789"
+      }
+    ]
+  }
+}

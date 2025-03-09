@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20797626",
+    "title": "RA Family: Failed to start debug connection for the application which uses MMF",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:25:02.468852"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nFailed to start debug connection for the application which uses MMF\nAnswer:\nBefore downloading a program, make sure no breakpoints are set in the memory mirror space. Normally when starting a debug connection, the debugger performs MCU reset. Immediately after MCU reset, MMF is disabled (MMEN.EN = 0). Therefore, do not set breakpoints in the memory mirror space until this bit is enabled by the user application or the debugger. Set a breakpoint in the space after MMF is enabled.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Failed to start debug connection for the application which uses MMF"
+      },
+      {
+        "type": "text",
+        "content": "Failed to start debug connection for the application which uses MMF"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nBefore downloading a program, make sure no breakpoints are set in the memory mirror space. Normally when starting a debug connection, the debugger performs MCU reset. Immediately after MCU reset, MMF is disabled (MMEN.EN = 0). Therefore, do not set breakpoints in the memory mirror space until this bit is enabled by the user application or the debugger. Set a breakpoint in the space after MMF is enabled.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Before downloading a program, make sure no breakpoints are set in the memory mirror space. Normally when starting a debug connection, the debugger performs MCU reset. Immediately after MCU reset, MMF is disabled (MMEN.EN = 0). Therefore, do not set breakpoints in the memory mirror space until this bit is enabled by the user application or the debugger. Set a breakpoint in the space after MMF is enabled.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Before downloading a program, make sure no breakpoints are set in the memory mirror space. Normally when starting a debug connection, the debugger performs MCU reset. Immediately after MCU reset, MMF is disabled (MMEN.EN = 0). Therefore, do not set breakpoints in the memory mirror space until this bit is enabled by the user application or the debugger. Set a breakpoint in the space after MMF is enabled."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20796387"
+      }
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18284475",
+    "title": "How Many Millimeters Can Be Detected From the Board?",
+    "last_updated": "2023-02-03",
+    "extracted_at": "2025-03-09T00:09:07.728129"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the detectable distance (mm) between the MCU board and acrylic plate with and without an air gap?\nAnswer:\nFor more information, see \"5.4.6.1 Overlay Design and Sensitivity Characteristics\" in the Application Note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\".\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "What is the detectable distance (mm) between the MCU board and acrylic plate with and without an air gap?"
+      },
+      {
+        "type": "text",
+        "content": "What is the detectable distance (mm) between the MCU board and acrylic plate with and without an air gap?"
+      },
+      {
+        "type": "text",
+        "content": "What is the detectable distance (mm) between the MCU board and acrylic plate with and without an air gap?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nFor more information, see \"5.4.6.1 Overlay Design and Sensitivity Characteristics\" in the Application Note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\".\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "For more information, see \"5.4.6.1 Overlay Design and Sensitivity Characteristics\" in the Application Note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\"."
+      },
+      {
+        "type": "text",
+        "content": "For more information, see \"5.4.6.1 Overlay Design and Sensitivity Characteristics\" in the Application Note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\"."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792882"
+      }
+    ]
+  }
+}

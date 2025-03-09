@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21566493",
+    "title": "Target applications of RX261 and RX260",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:04:03.330376"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat kinds of applications are these MCUs suitable for?\nAnswer:\nThey are suitable for a wide range of applications, including home appliances that require 5V operation and touch functionality, industrial equipment and building automation equipment that require high-speed processing and highly reliable communication such as CAN FD, and battery-powered products that require long operating times with low power consumption.\nSuitable Products\nRX261, RX260"
+      },
+      {
+        "type": "text",
+        "content": "What kinds of applications are these MCUs suitable for?"
+      },
+      {
+        "type": "text",
+        "content": "What kinds of applications are these MCUs suitable for?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThey are suitable for a wide range of applications, including home appliances that require 5V operation and touch functionality, industrial equipment and building automation equipment that require high-speed processing and highly reliable communication such as CAN FD, and battery-powered products that require long operating times with low power consumption.\nSuitable Products\nRX261, RX260"
+      },
+      {
+        "type": "text",
+        "content": "They are suitable for a wide range of applications, including home appliances that require 5V operation and touch functionality, industrial equipment and building automation equipment that require high-speed processing and highly reliable communication such as CAN FD, and battery-powered products that require long operating times with low power consumption."
+      },
+      {
+        "type": "text",
+        "content": "They are suitable for a wide range of applications, including home appliances that require 5V operation and touch functionality, industrial equipment and building automation equipment that require high-speed processing and highly reliable communication such as CAN FD, and battery-powered products that require long operating times with low power consumption."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX261, RX260"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX261, RX260"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX261, RX260"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21566487"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21566497"
+      }
+    ]
+  }
+}

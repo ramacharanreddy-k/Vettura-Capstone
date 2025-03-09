@@ -1,0 +1,6 @@
+{
+  "url": "https://en-support.renesas.com/knowledgeBase/21245138",
+  "title": "If a PHY-LSI connected to the EtherC/EDMAC port of an RX microcontroller suddenly stops responding, how does phy_read() behave and how should the application behave?",
+  "last_updated": null,
+  "extracted_at": "2025-03-09T00:23:51.031849"
+}

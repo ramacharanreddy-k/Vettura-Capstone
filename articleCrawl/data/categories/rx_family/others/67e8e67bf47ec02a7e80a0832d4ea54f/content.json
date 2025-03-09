@@ -1,0 +1,110 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20940279",
+    "title": "Tell me how to calculate the size of a frame buffer when using emWin for RX family.",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:24:15.192535"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nTell me how to calculate the size of a frame buffer when using emWin for RX family.\nAnswer:\nYou can calculate the size (in bytes) of a frame buffer by using the following expression:\nSize of a frame buffer = Number of bytes per line x Height of the LCD\nThe method of calculating the number of bytes per line differs depending on the LCD width and color depth.\nThe following shows the calculation method for each color depth when the LCD size is 480 x 272 pixels.\nIf the color depth is RGB565 (2 bytes):\nNumber of bytes per line = 480 (pixels) x 2 (bytes) = 960 bytes\nSize of a frame buffer = 960 (bytes) x 272 (pixels) = 255 KB\nIf the color depth is CLUT8 (1 byte):\nNumber of bytes per line = 480 (pixels) x 1 (byte) = 480 bytes.\nHowever, the GLCDC restrictions prescribe that the number of bytes per line must be exactly divisible by 64.\nBecause 480 is not divisible by 64 (480 / 64 = 7.5), the resulting value must be rounded up.\n(This produces an area that is not displayed.)\nIn this case, the nearest divisible value is calculated as follows:\nNumber of bytes per line = 64 (bytes) x 8 = 512 bytes\nTherefore, the size of a frame buffer is calculated as follows:\nSize of a frame buffer = 512 (bytes) x 272 (pixels) = 136 KB\nIf the color depth is CLUT4 (1/2 bytes):\nNumber of bytes per line = 480 (pixels) x 4 bits (1/2 bytes) = 240 bytes.\nHowever, in the same way as for CLUT8, the number of bytes per line must be exactly divisible by 64.\nBecause 240 is not divisible by 64 (240 / 64 = 3.75), the resulting value must be rounded up.\nIn this case, the nearest divisible value is calculated as follows:\nNumber of bytes per line = 64 (bytes) x 4 = 256 bytes\nTherefore, the size of a frame buffer is calculated as follows:\nSize of a frame buffer = 256 (bytes) x 272 (pixels) = 68 KB\n\nBecause the emWin FIT module adopts a double-buffer configuration by default, an area twice as large as the preceding size is necessary. A single-buffer configuration can be used. However, flickering may occur when displaying a fast-moving image, such as animation. Therefore, choose the configuration after due consideration.\n  Reference: RAM size of an RX group equipped with GLCDC\nRX65N or RX651 group:\nInternal RAM: 256 KB\nExtended RAM: 384 KB\nRX72N, RX72M, or RX66N group:\nInternal RAM: 512 KB\nExtended RAM: 512 KB\nNote: The addresses in the Internal RAM and Extended RAM areas are not consecutive. Therefore, continuous space cannot be secured across these areas.\nSuitable Products\nRX Family\n  日本語"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nTell me how to calculate the size of a frame buffer when using emWin for RX family.\nAnswer:\nYou can calculate the size (in bytes) of a frame buffer by using the following expression:\nSize of a frame buffer = Number of bytes per line x Height of the LCD\nThe method of calculating the number of bytes per line differs depending on the LCD width and color depth.\nThe following shows the calculation method for each color depth when the LCD size is 480 x 272 pixels.\nIf the color depth is RGB565 (2 bytes):\nNumber of bytes per line = 480 (pixels) x 2 (bytes) = 960 bytes\nSize of a frame buffer = 960 (bytes) x 272 (pixels) = 255 KB\nIf the color depth is CLUT8 (1 byte):\nNumber of bytes per line = 480 (pixels) x 1 (byte) = 480 bytes.\nHowever, the GLCDC restrictions prescribe that the number of bytes per line must be exactly divisible by 64.\nBecause 480 is not divisible by 64 (480 / 64 = 7.5), the resulting value must be rounded up.\n(This produces an area that is not displayed.)\nIn this case, the nearest divisible value is calculated as follows:\nNumber of bytes per line = 64 (bytes) x 8 = 512 bytes\nTherefore, the size of a frame buffer is calculated as follows:\nSize of a frame buffer = 512 (bytes) x 272 (pixels) = 136 KB\nIf the color depth is CLUT4 (1/2 bytes):\nNumber of bytes per line = 480 (pixels) x 4 bits (1/2 bytes) = 240 bytes.\nHowever, in the same way as for CLUT8, the number of bytes per line must be exactly divisible by 64.\nBecause 240 is not divisible by 64 (240 / 64 = 3.75), the resulting value must be rounded up.\nIn this case, the nearest divisible value is calculated as follows:\nNumber of bytes per line = 64 (bytes) x 4 = 256 bytes\nTherefore, the size of a frame buffer is calculated as follows:\nSize of a frame buffer = 256 (bytes) x 272 (pixels) = 68 KB\n\nBecause the emWin FIT module adopts a double-buffer configuration by default, an area twice as large as the preceding size is necessary. A single-buffer configuration can be used. However, flickering may occur when displaying a fast-moving image, such as animation. Therefore, choose the configuration after due consideration.\n  Reference: RAM size of an RX group equipped with GLCDC\nRX65N or RX651 group:\nInternal RAM: 256 KB\nExtended RAM: 384 KB\nRX72N, RX72M, or RX66N group:\nInternal RAM: 512 KB\nExtended RAM: 512 KB\nNote: The addresses in the Internal RAM and Extended RAM areas are not consecutive. Therefore, continuous space cannot be secured across these areas.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Tell me how to calculate the size of a frame buffer when using emWin for RX family."
+      },
+      {
+        "type": "text",
+        "content": "Tell me how to calculate the size of a frame buffer when using emWin for RX family."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYou can calculate the size (in bytes) of a frame buffer by using the following expression:\nSize of a frame buffer = Number of bytes per line x Height of the LCD\nThe method of calculating the number of bytes per line differs depending on the LCD width and color depth.\nThe following shows the calculation method for each color depth when the LCD size is 480 x 272 pixels.\nIf the color depth is RGB565 (2 bytes):\nNumber of bytes per line = 480 (pixels) x 2 (bytes) = 960 bytes\nSize of a frame buffer = 960 (bytes) x 272 (pixels) = 255 KB\nIf the color depth is CLUT8 (1 byte):\nNumber of bytes per line = 480 (pixels) x 1 (byte) = 480 bytes.\nHowever, the GLCDC restrictions prescribe that the number of bytes per line must be exactly divisible by 64.\nBecause 480 is not divisible by 64 (480 / 64 = 7.5), the resulting value must be rounded up.\n(This produces an area that is not displayed.)\nIn this case, the nearest divisible value is calculated as follows:\nNumber of bytes per line = 64 (bytes) x 8 = 512 bytes\nTherefore, the size of a frame buffer is calculated as follows:\nSize of a frame buffer = 512 (bytes) x 272 (pixels) = 136 KB\nIf the color depth is CLUT4 (1/2 bytes):\nNumber of bytes per line = 480 (pixels) x 4 bits (1/2 bytes) = 240 bytes.\nHowever, in the same way as for CLUT8, the number of bytes per line must be exactly divisible by 64.\nBecause 240 is not divisible by 64 (240 / 64 = 3.75), the resulting value must be rounded up.\nIn this case, the nearest divisible value is calculated as follows:\nNumber of bytes per line = 64 (bytes) x 4 = 256 bytes\nTherefore, the size of a frame buffer is calculated as follows:\nSize of a frame buffer = 256 (bytes) x 272 (pixels) = 68 KB\n\nBecause the emWin FIT module adopts a double-buffer configuration by default, an area twice as large as the preceding size is necessary. A single-buffer configuration can be used. However, flickering may occur when displaying a fast-moving image, such as animation. Therefore, choose the configuration after due consideration.\n  Reference: RAM size of an RX group equipped with GLCDC\nRX65N or RX651 group:\nInternal RAM: 256 KB\nExtended RAM: 384 KB\nRX72N, RX72M, or RX66N group:\nInternal RAM: 512 KB\nExtended RAM: 512 KB\nNote: The addresses in the Internal RAM and Extended RAM areas are not consecutive. Therefore, continuous space cannot be secured across these areas.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "You can calculate the size (in bytes) of a frame buffer by using the following expression:\nSize of a frame buffer = Number of bytes per line x Height of the LCD\nThe method of calculating the number of bytes per line differs depending on the LCD width and color depth.\nThe following shows the calculation method for each color depth when the LCD size is 480 x 272 pixels.\nIf the color depth is RGB565 (2 bytes):\nNumber of bytes per line = 480 (pixels) x 2 (bytes) = 960 bytes\nSize of a frame buffer = 960 (bytes) x 272 (pixels) = 255 KB\nIf the color depth is CLUT8 (1 byte):\nNumber of bytes per line = 480 (pixels) x 1 (byte) = 480 bytes.\nHowever, the GLCDC restrictions prescribe that the number of bytes per line must be exactly divisible by 64.\nBecause 480 is not divisible by 64 (480 / 64 = 7.5), the resulting value must be rounded up.\n(This produces an area that is not displayed.)\nIn this case, the nearest divisible value is calculated as follows:\nNumber of bytes per line = 64 (bytes) x 8 = 512 bytes\nTherefore, the size of a frame buffer is calculated as follows:\nSize of a frame buffer = 512 (bytes) x 272 (pixels) = 136 KB\nIf the color depth is CLUT4 (1/2 bytes):\nNumber of bytes per line = 480 (pixels) x 4 bits (1/2 bytes) = 240 bytes.\nHowever, in the same way as for CLUT8, the number of bytes per line must be exactly divisible by 64.\nBecause 240 is not divisible by 64 (240 / 64 = 3.75), the resulting value must be rounded up.\nIn this case, the nearest divisible value is calculated as follows:\nNumber of bytes per line = 64 (bytes) x 4 = 256 bytes\nTherefore, the size of a frame buffer is calculated as follows:\nSize of a frame buffer = 256 (bytes) x 272 (pixels) = 68 KB\n\nBecause the emWin FIT module adopts a double-buffer configuration by default, an area twice as large as the preceding size is necessary. A single-buffer configuration can be used. However, flickering may occur when displaying a fast-moving image, such as animation. Therefore, choose the configuration after due consideration.\n  Reference: RAM size of an RX group equipped with GLCDC\nRX65N or RX651 group:\nInternal RAM: 256 KB\nExtended RAM: 384 KB\nRX72N, RX72M, or RX66N group:\nInternal RAM: 512 KB\nExtended RAM: 512 KB\nNote: The addresses in the Internal RAM and Extended RAM areas are not consecutive. Therefore, continuous space cannot be secured across these areas."
+      },
+      {
+        "type": "text",
+        "content": "You can calculate the size (in bytes) of a frame buffer by using the following expression:"
+      },
+      {
+        "type": "text",
+        "content": "Size of a frame buffer = Number of bytes per line x Height of the LCD"
+      },
+      {
+        "type": "text",
+        "content": "The method of calculating the number of bytes per line differs depending on the LCD width and color depth.\nThe following shows the calculation method for each color depth when the LCD size is 480 x 272 pixels."
+      },
+      {
+        "type": "text",
+        "content": "If the color depth is RGB565 (2 bytes):\nNumber of bytes per line = 480 (pixels) x 2 (bytes) = 960 bytes\nSize of a frame buffer = 960 (bytes) x 272 (pixels) = 255 KB"
+      },
+      {
+        "type": "text",
+        "content": "If the color depth is CLUT8 (1 byte):\nNumber of bytes per line = 480 (pixels) x 1 (byte) = 480 bytes.\nHowever, the GLCDC restrictions prescribe that the number of bytes per line must be exactly divisible by 64.\nBecause 480 is not divisible by 64 (480 / 64 = 7.5), the resulting value must be rounded up.\n(This produces an area that is not displayed.)\nIn this case, the nearest divisible value is calculated as follows:\nNumber of bytes per line = 64 (bytes) x 8 = 512 bytes\nTherefore, the size of a frame buffer is calculated as follows:\nSize of a frame buffer = 512 (bytes) x 272 (pixels) = 136 KB"
+      },
+      {
+        "type": "text",
+        "content": "If the color depth is CLUT4 (1/2 bytes):\nNumber of bytes per line = 480 (pixels) x 4 bits (1/2 bytes) = 240 bytes.\nHowever, in the same way as for CLUT8, the number of bytes per line must be exactly divisible by 64.\nBecause 240 is not divisible by 64 (240 / 64 = 3.75), the resulting value must be rounded up.\nIn this case, the nearest divisible value is calculated as follows:\nNumber of bytes per line = 64 (bytes) x 4 = 256 bytes\nTherefore, the size of a frame buffer is calculated as follows:\nSize of a frame buffer = 256 (bytes) x 272 (pixels) = 68 KB"
+      },
+      {
+        "type": "text",
+        "content": "Because the emWin FIT module adopts a double-buffer configuration by default, an area twice as large as the preceding size is necessary. A single-buffer configuration can be used. However, flickering may occur when displaying a fast-moving image, such as animation. Therefore, choose the configuration after due consideration."
+      },
+      {
+        "type": "text",
+        "content": "Reference: RAM size of an RX group equipped with GLCDC\nRX65N or RX651 group:\nInternal RAM: 256 KB\nExtended RAM: 384 KB"
+      },
+      {
+        "type": "text",
+        "content": "RX72N, RX72M, or RX66N group:\nInternal RAM: 512 KB\nExtended RAM: 512 KB"
+      },
+      {
+        "type": "text",
+        "content": "Note: The addresses in the Internal RAM and Extended RAM areas are not consecutive. Therefore, continuous space cannot be secured across these areas."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20857263"
+      }
+    ]
+  }
+}

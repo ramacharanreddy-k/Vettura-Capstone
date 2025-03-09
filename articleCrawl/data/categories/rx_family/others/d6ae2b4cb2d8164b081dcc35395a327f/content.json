@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21246414",
+    "title": "Software for using the temperature sensor in an RX-family product",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:23:46.002872"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat software should I use for using the temperature sensor in an RX-family product?\nAnswer:\nUse the FIT module (r01an1666) as an ADC module or the ADC function of CG.\nSuitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "What software should I use for using the temperature sensor in an RX-family product?"
+      },
+      {
+        "type": "text",
+        "content": "What software should I use for using the temperature sensor in an RX-family product?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nUse the FIT module (r01an1666) as an ADC module or the ADC function of CG.\nSuitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "Use the FIT module (r01an1666) as an ADC module or the ADC function of CG."
+      },
+      {
+        "type": "text",
+        "content": "Use the FIT module (r01an1666) as an ADC module or the ADC function of CG."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20401477"
+      }
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "",
+      "User section name",
+      "Macro to place your code/data to specific regions.",
+      "Allocate to",
+      "Definition of start address and end address"
+    ],
+    [
+      "RAM",
+      ".code_in_ram",
+      "BSP_PLACE_IN_SECTION(\".code_in_ram\")",
+      "RAM region, initial data in FLASH region",
+      "Start : __Code_In_RAM_Start\nEnd : __Code_In_RAM_End"
+    ],
+    [
+      "ITCM",
+      ".itcm_data",
+      "BSP_PLACE_IN_SECTION(\".itcm_data\")",
+      "ITCM region, initial data in FLASH region",
+      "Start : __itcm_data_start__\nEnd : __itcm_data_end__"
+    ],
+    [
+      "DTCM",
+      ".dtcm_data",
+      "BSP_PLACE_IN_SECTION(\".dtcm_data\")",
+      "DTCM region, initial data in FLASH region",
+      "Start : __dtcm_data_start__\nEnd : __dtcm_data_end__"
+    ],
+    [
+      ".dtcm_noinit",
+      "BSP_PLACE_IN_SECTION(\".dtcm_noinit\")",
+      "DTCM region, no initial data",
+      "Start : __dtcm_noinit_start\nEnd : __dtcm_noinit_end"
+    ],
+    [
+      "QSPI",
+      ".qspi_flash\n.code_in_qspi",
+      "BSP_PLACE_IN_SECTION(\".qspi_flash\")\nBSP_PLACE_IN_SECTION(\".code_in_qspi\")",
+      "QSPI_FLASH region, initial data is mapped to QSPI_FLASH region and downloaded via debugger",
+      "Start : __qspi_flash_start__\nEnd : __qspi_flash_end__"
+    ],
+    [
+      ".qspi_non_retentive",
+      "BSP_PLACE_IN_SECTION(\".qspi_non_retentive\")",
+      "QSPI_FLASH region, initial data in FLASH region",
+      "Start : __qspi_non_retentive_start__\nEnd : __qspi_non_retentive_end__\nStart of initial data : __qspi_flash_code_addr__"
+    ],
+    [
+      "OSPI",
+      ".ospi_device_0\n.code_in_ospi_device_0",
+      "BSP_PLACE_IN_SECTION(\".ospi_device_0\")\nBSP_PLACE_IN_SECTION(\".code_in_ospi_device_0\")",
+      "OSPI_DEVICE_0 region, initial data is mapped to OSPI_DEVICE_0 region and downloaded via debugger",
+      "Start : __ospi_device_0_start__\nEnd : __ospi_device_0_end__"
+    ],
+    [
+      ".ospi_device_0_non_retentive",
+      "BSP_PLACE_IN_SECTION(\".ospi_device_0_non_retentive\")",
+      "OSPI_DEVICE_0 region, initial data in FLASH region",
+      "Start : __ospi_device_0_non_retentive_start__\nEnd : __ospi_device_0_non_retentive_end__\nStart of initial data : __ospi_device_0_code_addr__"
+    ],
+    [
+      ".ospi_device_0_no_load",
+      "BSP_PLACE_IN_SECTION(\".ospi_device_0_no_load\")",
+      "OSPI_DEVICE_0 region, no initial data",
+      "Start : __ospi_device_0_start__\nEnd : __ospi_device_0_end__"
+    ],
+    [
+      ".ospi_device_1\n.code_in_ospi_device_1",
+      "BSP_PLACE_IN_SECTION(\".ospi_device_1\")\nBSP_PLACE_IN_SECTION(\".code_in_ospi_device_1\")",
+      "OSPI_DEVICE_0 region, initial data is mapped to OSPI_DEVICE_1 region and downloaded via debugger",
+      "Start : __ospi_device_1_start__\nEnd : __ospi_device_1_end__"
+    ],
+    [
+      ".ospi_device_1_non_retentive",
+      "BSP_PLACE_IN_SECTION(\".ospi_device_1_non_retentive\")",
+      "OSPI_DEVICE_1 region, initial data in FLASH region",
+      "Start : __ospi_device_1_non_retentive_start__\nEnd : __ospi_device_1_non_retentive_end__\nStart of initial data : __ospi_device_1_code_addr__"
+    ],
+    [
+      ".ospi_device_1_no_load",
+      "BSP_PLACE_IN_SECTION(\".ospi_device_1_no_load\")",
+      "OSPI_DEVICE_1 region, no initial data",
+      "Start : __ospi_device_1_start__\nEnd : __ospi_device_1_end__"
+    ],
+    [
+      "Data flash",
+      ".data_flash",
+      "BSP_PLACE_IN_SECTION(\".data_flash\")",
+      "DATA_FLASH region, initial data is mapped to OSPI_DATA_FLASH_1 region and downloaded via debugger",
+      "Start : __Data_Flash_Start\nEnd : __Data_Flash_End"
+    ],
+    [
+      "SDRAM",
+      ".sdram\n.frame",
+      "BSP_PLACE_IN_SECTION(\".sdram\")\nBSP_PLACE_IN_SECTION(\".frame\")",
+      "SDRAM region, initial data should be placed in non-volatile region and copied it to SRAM area by user application.",
+      "Start : __SDRAM_Start\nEnd : __SDRAM_End"
+    ]
+  ]
+}

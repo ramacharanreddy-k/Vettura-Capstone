@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20416803",
+    "title": "Impact of S Cache use on RA Family MCU Certified CoreMark Results",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:25:27.990892"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Some RA Family MCUs (some Cortex-M33 devices) have a system level cache for both data and instructions that can improve program performance."
+      },
+      {
+        "type": "text",
+        "content": "The CoreMark tests for these MCUs were done using the S Cache, so the measured results may be higher than those found when running the benchmark code without the S Cache enabled."
+      },
+      {
+        "type": "text",
+        "content": "The below application note details the guidelines when using the S Cache.  Sample code is also available and shows the performance improvements possible when the S Cache is used."
+      },
+      {
+        "type": "text",
+        "content": "App Note:"
+      },
+      {
+        "type": "text",
+        "content": "https://www.renesas.com/sg/en/document/apn/ra-family-guidelines-using-s-cache-system-bus"
+      },
+      {
+        "type": "text",
+        "content": "Sample Code:"
+      },
+      {
+        "type": "text",
+        "content": "https://www.renesas.com/sg/en/document/scd/ra-family-guidelines-using-s-cache-system-bus-sample-code"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP\n  source: https://www.renesas.com/sg/en/document/apn/ra-family-guidelines-using-s-cache-system-bus"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP\n  source: https://www.renesas.com/sg/en/document/apn/ra-family-guidelines-using-s-cache-system-bus"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP\n  source: https://www.renesas.com/sg/en/document/apn/ra-family-guidelines-using-s-cache-system-bus"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP\n  source: https://www.renesas.com/sg/en/document/apn/ra-family-guidelines-using-s-cache-system-bus"
+      },
+      {
+        "type": "text",
+        "content": "source: https://www.renesas.com/sg/en/document/apn/ra-family-guidelines-using-s-cache-system-bus"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/sg/en/document/apn/ra-family-guidelines-using-s-cache-system-bus",
+        "url": "https://www.renesas.com/sg/en/document/apn/ra-family-guidelines-using-s-cache-system-bus"
+      },
+      {
+        "text": "https://www.renesas.com/sg/en/document/scd/ra-family-guidelines-using-s-cache-system-bus-sample-code",
+        "url": "https://www.renesas.com/sg/en/document/scd/ra-family-guidelines-using-s-cache-system-bus-sample-code"
+      },
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20418609"
+      }
+    ]
+  }
+}

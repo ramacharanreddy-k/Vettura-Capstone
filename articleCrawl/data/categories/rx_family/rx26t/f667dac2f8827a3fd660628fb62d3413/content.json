@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20938978",
+    "title": "Differences within the RX26T group",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:06:01.625506"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the difference between RX26T products with 64 Kbytes of RAM and those with 48 Kbyte of RAM?\nAnswer:\nThe RX26T comes with either 48 Kbytes or 64 Kbytes of RAM. \nRefer to the following for details on the differences between each product. \nFor detailed specifications, please refer to the RX26T Group User's Manual: Hardware.\n*Mass production of the 48-Kbyte RAM products is scheduled to start in the second half of 2023.\nSuitable Products\nRX26T"
+      },
+      {
+        "type": "text",
+        "content": "What is the difference between RX26T products with 64 Kbytes of RAM and those with 48 Kbyte of RAM?"
+      },
+      {
+        "type": "text",
+        "content": "What is the difference between RX26T products with 64 Kbytes of RAM and those with 48 Kbyte of RAM?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RX26T comes with either 48 Kbytes or 64 Kbytes of RAM. \nRefer to the following for details on the differences between each product. \nFor detailed specifications, please refer to the RX26T Group User's Manual: Hardware.\n*Mass production of the 48-Kbyte RAM products is scheduled to start in the second half of 2023.\nSuitable Products\nRX26T"
+      },
+      {
+        "type": "text",
+        "content": "The RX26T comes with either 48 Kbytes or 64 Kbytes of RAM. \nRefer to the following for details on the differences between each product. \nFor detailed specifications, please refer to the RX26T Group User's Manual: Hardware.\n*Mass production of the 48-Kbyte RAM products is scheduled to start in the second half of 2023."
+      },
+      {
+        "type": "text",
+        "content": "The RX26T comes with either 48 Kbytes or 64 Kbytes of RAM. \nRefer to the following for details on the differences between each product."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/369964.png",
+          "alt_text": "",
+          "width": "747",
+          "height": "500",
+          "local_path": "data/categories/rx_family/rx26t/f667dac2f8827a3fd660628fb62d3413/images/713f32e6f49f3b394e37e279da8dec8e.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "For detailed specifications, please refer to the RX26T Group User's Manual: Hardware.\n*Mass production of the 48-Kbyte RAM products is scheduled to start in the second half of 2023."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX26T"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/369964.png",
+        "alt_text": "",
+        "width": "747",
+        "height": "500",
+        "local_path": "data/categories/rx_family/rx26t/f667dac2f8827a3fd660628fb62d3413/images/713f32e6f49f3b394e37e279da8dec8e.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX26T"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX26T"
+    ],
+    "links": [
+      {
+        "text": "RX26T Group User's Manual: Hardware",
+        "url": "https://www.renesas.com/us/en/document/mah/rx26t-group-users-manual-hardware?r=25424951"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20938983"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20938988"
+      }
+    ]
+  }
+}

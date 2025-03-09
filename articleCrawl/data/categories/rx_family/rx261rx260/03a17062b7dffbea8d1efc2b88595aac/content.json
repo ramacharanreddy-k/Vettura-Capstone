@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21566496",
+    "title": "Snooze mode of RX261 and RX260",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:04:10.455960"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat are the benefits of snooze mode of the low power consumption function?\nAnswer:\nSpecific peripheral functions can be operated during standby by using snooze mode.\nFor example, in the case of a battery-powered smart locks with touch keys, it was necessary to wake up from the software standby mode periodically in order to detect finger contact at arbitrary timing and start operation. This series of processes requires power to operate CPU, which is a challenge when optimizing power consumption.\nThe smart wake-up solution that uses the snooze mode and capacitive touch sensing unit of the RX261 and RX260 contributes to reducing power consumption in applications requiring intermittent operation such as the above.\nSuitable Products\nRX261, RX260"
+      },
+      {
+        "type": "text",
+        "content": "What are the benefits of snooze mode of the low power consumption function?"
+      },
+      {
+        "type": "text",
+        "content": "What are the benefits of snooze mode of the low power consumption function?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nSpecific peripheral functions can be operated during standby by using snooze mode.\nFor example, in the case of a battery-powered smart locks with touch keys, it was necessary to wake up from the software standby mode periodically in order to detect finger contact at arbitrary timing and start operation. This series of processes requires power to operate CPU, which is a challenge when optimizing power consumption.\nThe smart wake-up solution that uses the snooze mode and capacitive touch sensing unit of the RX261 and RX260 contributes to reducing power consumption in applications requiring intermittent operation such as the above.\nSuitable Products\nRX261, RX260"
+      },
+      {
+        "type": "text",
+        "content": "Specific peripheral functions can be operated during standby by using snooze mode.\nFor example, in the case of a battery-powered smart locks with touch keys, it was necessary to wake up from the software standby mode periodically in order to detect finger contact at arbitrary timing and start operation. This series of processes requires power to operate CPU, which is a challenge when optimizing power consumption.\nThe smart wake-up solution that uses the snooze mode and capacitive touch sensing unit of the RX261 and RX260 contributes to reducing power consumption in applications requiring intermittent operation such as the above."
+      },
+      {
+        "type": "text",
+        "content": "Specific peripheral functions can be operated during standby by using snooze mode."
+      },
+      {
+        "type": "text",
+        "content": "For example, in the case of a battery-powered smart locks with touch keys, it was necessary to wake up from the software standby mode periodically in order to detect finger contact at arbitrary timing and start operation. This series of processes requires power to operate CPU, which is a challenge when optimizing power consumption.\nThe smart wake-up solution that uses the snooze mode and capacitive touch sensing unit of the RX261 and RX260 contributes to reducing power consumption in applications requiring intermittent operation such as the above."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX261, RX260"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX261, RX260"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX261, RX260"
+    ],
+    "links": [
+      {
+        "text": "smart wake-up solution",
+        "url": "https://www.renesas.com/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/smart-wake-solution-smart-wake-solution"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21566491"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21566500"
+      }
+    ]
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21618620",
+    "title": "RA Family: How can I resolve the linker error message “cannot move location counter backwards” when using the GCC toolchain",
+    "last_updated": "2024-04-10",
+    "extracted_at": "2025-03-08T23:23:25.772226"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Overview:\nSome RA MCUs requires special placement of Code/RAM for proper operation. One example is RAM allocation in the RA6M4 when an ethernet peripheral is used.  The EDMAC peripheral is designed for non-secure operation, so RAM buffer allocated to it needs to be placed in non-secure RAM.\nThis RAM assignment is accomplished by adding instructions in linker script to move the location counter for .ns_buffer (non-secure buffer) towards the end of RAM, as illustrated below.\nNormally RAM is allocation from the start of RAM location.\nFor an MCU with CMSE (Cortex Microcomputer Security Extension, aka TrustZone), the secure and NSC regions are allocated first.  The remainder are assigned to non-secure.  For a flat project (MCU with CMSE) the ethernet buffers are allocated from the top of RAM while the rest of RAM are allocated from the start of RAM.\nWhen RAM use exceeds the available RAM, the linker will prompt with an error message, of the form “‘RAM’ region overflowed by xyz bytes”.\nIn the case of a flat project with ethernet, a different error message is seen, of the form ““../arm-none-eabi/bin/ld.exe:fsp.ld:622 cannot move location counter backwards (from 20036d70 to 2002c900)”\nCheck your RAM assignments and reduce them where possible.  If further RAM reduction is not possible, please consider another MCU with larger RAM."
+      },
+      {
+        "type": "text",
+        "content": "Some RA MCUs requires special placement of Code/RAM for proper operation. One example is RAM allocation in the RA6M4 when an ethernet peripheral is used.  The EDMAC peripheral is designed for non-secure operation, so RAM buffer allocated to it needs to be placed in non-secure RAM.\nThis RAM assignment is accomplished by adding instructions in linker script to move the location counter for .ns_buffer (non-secure buffer) towards the end of RAM, as illustrated below.\nNormally RAM is allocation from the start of RAM location.\nFor an MCU with CMSE (Cortex Microcomputer Security Extension, aka TrustZone), the secure and NSC regions are allocated first.  The remainder are assigned to non-secure.  For a flat project (MCU with CMSE) the ethernet buffers are allocated from the top of RAM while the rest of RAM are allocated from the start of RAM.\nWhen RAM use exceeds the available RAM, the linker will prompt with an error message, of the form “‘RAM’ region overflowed by xyz bytes”.\nIn the case of a flat project with ethernet, a different error message is seen, of the form ““../arm-none-eabi/bin/ld.exe:fsp.ld:622 cannot move location counter backwards (from 20036d70 to 2002c900)”\nCheck your RAM assignments and reduce them where possible.  If further RAM reduction is not possible, please consider another MCU with larger RAM."
+      },
+      {
+        "type": "text",
+        "content": "Some RA MCUs requires special placement of Code/RAM for proper operation. One example is RAM allocation in the RA6M4 when an ethernet peripheral is used.  The EDMAC peripheral is designed for non-secure operation, so RAM buffer allocated to it needs to be placed in non-secure RAM."
+      },
+      {
+        "type": "text",
+        "content": "This RAM assignment is accomplished by adding instructions in linker script to move the location counter for .ns_buffer (non-secure buffer) towards the end of RAM, as illustrated below."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/393841-1_2.png",
+          "alt_text": "",
+          "width": "790",
+          "height": "130",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/5e2f6446153730f385081f39a48c4a47/images/791cc8e036aa3ca0b04e3736e2721aa8.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Normally RAM is allocation from the start of RAM location."
+      },
+      {
+        "type": "text",
+        "content": "For an MCU with CMSE (Cortex Microcomputer Security Extension, aka TrustZone), the secure and NSC regions are allocated first.  The remainder are assigned to non-secure.  For a flat project (MCU with CMSE) the ethernet buffers are allocated from the top of RAM while the rest of RAM are allocated from the start of RAM."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/393841-2.png",
+          "alt_text": "",
+          "width": "967",
+          "height": "363",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/5e2f6446153730f385081f39a48c4a47/images/eca247e8a98c19dfef25af357547c8a2.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "When RAM use exceeds the available RAM, the linker will prompt with an error message, of the form “‘RAM’ region overflowed by xyz bytes”."
+      },
+      {
+        "type": "text",
+        "content": "In the case of a flat project with ethernet, a different error message is seen, of the form ““../arm-none-eabi/bin/ld.exe:fsp.ld:622 cannot move location counter backwards (from 20036d70 to 2002c900)”"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/393841-3.png",
+          "alt_text": "",
+          "width": "1008",
+          "height": "289",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/5e2f6446153730f385081f39a48c4a47/images/58c1c1c42c9aaeda3959031ccf69d354.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Check your RAM assignments and reduce them where possible.  If further RAM reduction is not possible, please consider another MCU with larger RAM."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA6M4, RA6M5"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA6M4, RA6M5"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/393841-1_2.png",
+        "alt_text": "",
+        "width": "790",
+        "height": "130",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/5e2f6446153730f385081f39a48c4a47/images/791cc8e036aa3ca0b04e3736e2721aa8.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/393841-2.png",
+        "alt_text": "",
+        "width": "967",
+        "height": "363",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/5e2f6446153730f385081f39a48c4a47/images/eca247e8a98c19dfef25af357547c8a2.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/393841-3.png",
+        "alt_text": "",
+        "width": "1008",
+        "height": "289",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/5e2f6446153730f385081f39a48c4a47/images/58c1c1c42c9aaeda3959031ccf69d354.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA6M4, RA6M5"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA6M4, RA6M5"
+    ],
+    "links": []
+  }
+}

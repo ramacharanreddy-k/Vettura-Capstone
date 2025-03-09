@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18284532",
+    "title": "Why Is the Mutual Capacitance Method More Water Resistant?",
+    "last_updated": "2023-02-03",
+    "extracted_at": "2025-03-09T00:08:58.432257"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhy is the mutual capacity method more water resistant?\nAnswer:\nIn the mutual capacitance method, the decrease in capacitance between electrodes is detected when a finger touches the panel, and it is judged to have been touched. If water drops adhere to the panel, the inter-electrode capacitance increases. Therefore, the water resistance is high because the change in water droplets and the change in touch can be distinguished.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Why is the mutual capacity method more water resistant?"
+      },
+      {
+        "type": "text",
+        "content": "Why is the mutual capacity method more water resistant?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nIn the mutual capacitance method, the decrease in capacitance between electrodes is detected when a finger touches the panel, and it is judged to have been touched. If water drops adhere to the panel, the inter-electrode capacitance increases. Therefore, the water resistance is high because the change in water droplets and the change in touch can be distinguished.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "In the mutual capacitance method, the decrease in capacitance between electrodes is detected when a finger touches the panel, and it is judged to have been touched. If water drops adhere to the panel, the inter-electrode capacitance increases. Therefore, the water resistance is high because the change in water droplets and the change in touch can be distinguished."
+      },
+      {
+        "type": "text",
+        "content": "In the mutual capacitance method, the decrease in capacitance between electrodes is detected when a finger touches the panel, and it is judged to have been touched. If water drops adhere to the panel, the inter-electrode capacitance increases. Therefore, the water resistance is high because the change in water droplets and the change in touch can be distinguished."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792862"
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21661640",
+    "title": "RA Family: Is there any document as reference for Ethernet Design?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:35:07.477069"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Is there any document as reference for Ethernet Design?"
+      },
+      {
+        "type": "text",
+        "content": "Yes, please check the application note provided in the link below:"
+      },
+      {
+        "type": "text",
+        "content": "RA Ethernet Design and Custom PHY Setup using FSP"
+      },
+      {
+        "type": "text",
+        "content": "This application note provides guidelines when using the RA MCU with RMII modes for Ethernet specific applications."
+      },
+      {
+        "type": "text",
+        "content": "It addresses utilizing the FSP configurator to incorporate the Ethernet module and ensure proper configuration."
+      },
+      {
+        "type": "text",
+        "content": "And provides instructions of how to integrate a new PHY into a custom board and providing software support for it through FSP."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA Family, FSP"
+      },
+      {
+        "type": "text",
+        "content": "RA Family, FSP"
+      }
+    ],
+    "images": [],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": [
+      {
+        "text": "RA Ethernet Design and Custom PHY Setup using FSP",
+        "url": "https://www.renesas.com/en/document/apn/ra-ethernet-design-and-custom-phy-setup-using-fsp"
+      }
+    ]
+  }
+}

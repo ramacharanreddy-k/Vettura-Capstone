@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21074286",
+    "title": "RA Family: Quick FSP 4.6.0 Labs: Introduction to FSP using Blinky",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:12:12.793483"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "This Quick FSP Lab will take you through the process of:"
+      },
+      {
+        "type": "text",
+        "content": "This process will test out the complete RA FSP environment and will make it easy to start your own development project. We recommend you continue with a few follow-on Quick FSP Labs. A link to the list of labs in the series is always given at the end of each of these Quick Labs articles."
+      },
+      {
+        "type": "text",
+        "content": "The below attached PDFs contain the guide for this Quick FSP Lab- either for the EK-RA6M3 or EK-RA6M4. Simply download and follow along to complete this lab."
+      },
+      {
+        "type": "text",
+        "content": "The list of Quick FSP Labs is available here."
+      }
+    ],
+    "images": [],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": [
+      {
+        "text": "here.",
+        "url": "https://en-support.renesas.com/knowledgeBase/19450948"
+      }
+    ]
+  }
+}

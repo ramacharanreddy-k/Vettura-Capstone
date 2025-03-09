@@ -1,0 +1,225 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21715565",
+    "title": "RX Family: Timing of CPU interrupt handler call during RSPI full-duplex slave operation with DMAC transfer enabled",
+    "last_updated": "2024-10-12",
+    "extracted_at": "2025-03-09T00:12:16.399083"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Overview\nThis article explains how and when the CPU interrupt handler call is generated on each RSPI and DMAC interrupt when using an RSPI as slave and enabling full-duplex and DMAC transfer.\nThis article only covers three types of interrupts.\nRSPI - SPRIx : Receive buffer full interrupt\nRSPI - SPTIx : Transmit buffer empty interrupt\nDMAC - DMACxI : Transfer end interrupt (1 channel for RSPI RX linked to SPRIx interrupt and 1 channel for RSPI TX linked to SPTIx interrupt)\nAt the end of this article, some related driver software settings are introduced for your reference.\nOperation Result\nThe following capture image shows a signal waveform when the RSPI receives 10 bytes of data. At this time, the DMAC transfer is enabled and configured to do 10 bytes (1 byte x 10 times) transfer triggered by each RSIP interrupts. In the image, “SSL”, “CLK” and “MOSI” are actual SPI communication signals, following “RSPI RX”, “RSPI TX”, “DMA RX” and “DMA TX” show the timing of the CPU interrupt handler call occurrence. The test program was implemented so that the GPIO pin will go to low when the CPU interrupt handler is called.\nAs you can see in the picture below, the interrupt handlers are called in the following order. We will review how and why the interrupt occurred at this timing:\nDMAC transfer end interrupt for RSPI Transmit\nRSPI Transmit buffer empty interrupt\nDMAC transfer end interrupt for RSPI Receive\nRSPI Receive buffer full interrupt (Does not occur)\n\n\n1. DMAC transfer end interrupt for RSPI Transmit\nFirst you will get the DMA TX transfer end interrupt around two bytes earlier. The reason why it occurs two bytes earlier is due to the RSPI shift register and the SPTI interrupt timing. As soon as RSPI is enabled, if the shit register is empty, the RSPI issues “TX buffer empty” interrupt, that triggers DMAC’s first transfer (first byte) to the RSIP data register (SPDR). The data will move to the shift register soon, and then another “TX buffer empty” interrupt occurrs and the second DMAC transfer (second byte) will be transferred. These are done before receiving the clock signal from the connected device. After that, the remaining 8 bytes will be transferred by synchronizing with the SPI clock. Therefore, the DMAC Transfer end interrupt occurs 2 bytes earlier.\nPlease note that this is not a good place to put some user code like restarting the RSPI slave operation, since the RSPI clock is still coming in.\nRefer to section “Serial Peripheral Interface” > “Operation” > “Communications Operating Mode” > “Full-Duplex Communications” in the hardware user manual of MCU device.\n2. RSPI Transmit buffer empty interrupt\nAfter the DMAC has completed its TX task with the provided transfer information (e.g. number of transfers), the interrupt request of the RSPI Transmit buffer empty is passed to the CPU when the RSPI TX buffer is empty, so the CPU interrupt handler for the RSPI Transmit buffer empty will be executed. There is no special operation to do here.\n3. DMAC transfer end interrupt for RSPI Receive\nThe DMAC transfer occurs every RSIP Receive buffer full interrupt, and the CPU interrupt handler call for DMAC transfer end interrupt is executed when the 10 bytes (10 times) transfer complete.\n4. RSPI RX buffer full interrupt (Does not occur)\nYou may be wondering why the CPU interrupt handler call of the RSPI Transmit empty interrupt is called. but for the RSPI RX interrupt is not. As explained in #3, the DMAC transfer happens every RSPI Receive buffer full interrupt, so if it received 10 bytes (1 byte x 10 times), 10 interrupt requests are generated. However, all the interrupt requests are passed to the DMAC, and the DMAC executes 10 data transfers. Therefore, in the case of the RSPI RX buffer full interrupt, the CPU interrupt handler call does not happen.\nPlease note that the RSPI RX buffer full interrupt handler is not a good place to put user code like restarting the RSPI slave operation, and instead it would be better to put it in the DMAC transfer end interrupt for the RSPI Receive handler.\nSetting - RSPI slave interrupt generation and user callback code generation\nTo trigger the DMAC transfer by the RSPI, the RSPI should enable either the TX or TX/RX interrupts. The RSPI can enable the TX interrupt by setting RSPIx.SPCR.SPTIE=1 and the RX interrupt by setting RSPIx.SPCR.SPRIE=1. This allows the RSPI interrupt to arrive at the ICU.\nIn the CG driver setting on the smart configurator, you can find the “Callback function setting” field below. However, this field setting enables the generation of user callback function code to allow the user to put any code into the CPU interrupt handling. Even if you uncheck the boxes below, TX, RX, Error interrupt handlers will still be created by the smart configurator (code generator).\nPlease don’t confuse enabling RSPI interrupts and generating the user callback function code for RSPI interrupts.\nSetting - ICU\nThe ICU is responsible for deciding whether to forward the RSPI generated interrupts to the CPU or to the DMA (DTC or DMAC). First, the ICU should be configured to receive the RSPI TX or the TX/RX interrupts by setting ICU.IERm.IENn. Then, the ICU needs to be configured to relay the RSPI TX or the RX interrupts to the respective DMAC channel (ICU.DMARSRm), not to the CPU in our example.\nSetting - DMAC interrupt handling (generation)\nUnlike the DTC, the DMAC can generate an interrupt (DMACxI) with its own interrupt generation sources, such as the DMAC transfer end event. Additionally, the DMAC can be configured (DMACm.DMCSL.DISEL) to pass every single interrupt to the CPU after it has processed them. However, this will increase unnecessary CPU/bus load, so keep the setting as follows. (“Clear interrupt flag of the activation source”)\n\n\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Overview"
+      },
+      {
+        "type": "text",
+        "content": "Overview"
+      },
+      {
+        "type": "text",
+        "content": "This article explains how and when the CPU interrupt handler call is generated on each RSPI and DMAC interrupt when using an RSPI as slave and enabling full-duplex and DMAC transfer.\nThis article only covers three types of interrupts.\nRSPI - SPRIx : Receive buffer full interrupt\nRSPI - SPTIx : Transmit buffer empty interrupt\nDMAC - DMACxI : Transfer end interrupt (1 channel for RSPI RX linked to SPRIx interrupt and 1 channel for RSPI TX linked to SPTIx interrupt)\nAt the end of this article, some related driver software settings are introduced for your reference."
+      },
+      {
+        "type": "text",
+        "content": "This article explains how and when the CPU interrupt handler call is generated on each RSPI and DMAC interrupt when using an RSPI as slave and enabling full-duplex and DMAC transfer."
+      },
+      {
+        "type": "text",
+        "content": "This article only covers three types of interrupts."
+      },
+      {
+        "type": "text",
+        "content": "At the end of this article, some related driver software settings are introduced for your reference."
+      },
+      {
+        "type": "text",
+        "content": "Operation Result\nThe following capture image shows a signal waveform when the RSPI receives 10 bytes of data. At this time, the DMAC transfer is enabled and configured to do 10 bytes (1 byte x 10 times) transfer triggered by each RSIP interrupts. In the image, “SSL”, “CLK” and “MOSI” are actual SPI communication signals, following “RSPI RX”, “RSPI TX”, “DMA RX” and “DMA TX” show the timing of the CPU interrupt handler call occurrence. The test program was implemented so that the GPIO pin will go to low when the CPU interrupt handler is called.\nAs you can see in the picture below, the interrupt handlers are called in the following order. We will review how and why the interrupt occurred at this timing:\nDMAC transfer end interrupt for RSPI Transmit\nRSPI Transmit buffer empty interrupt\nDMAC transfer end interrupt for RSPI Receive\nRSPI Receive buffer full interrupt (Does not occur)\n\n\n1. DMAC transfer end interrupt for RSPI Transmit\nFirst you will get the DMA TX transfer end interrupt around two bytes earlier. The reason why it occurs two bytes earlier is due to the RSPI shift register and the SPTI interrupt timing. As soon as RSPI is enabled, if the shit register is empty, the RSPI issues “TX buffer empty” interrupt, that triggers DMAC’s first transfer (first byte) to the RSIP data register (SPDR). The data will move to the shift register soon, and then another “TX buffer empty” interrupt occurrs and the second DMAC transfer (second byte) will be transferred. These are done before receiving the clock signal from the connected device. After that, the remaining 8 bytes will be transferred by synchronizing with the SPI clock. Therefore, the DMAC Transfer end interrupt occurs 2 bytes earlier.\nPlease note that this is not a good place to put some user code like restarting the RSPI slave operation, since the RSPI clock is still coming in.\nRefer to section “Serial Peripheral Interface” > “Operation” > “Communications Operating Mode” > “Full-Duplex Communications” in the hardware user manual of MCU device.\n2. RSPI Transmit buffer empty interrupt\nAfter the DMAC has completed its TX task with the provided transfer information (e.g. number of transfers), the interrupt request of the RSPI Transmit buffer empty is passed to the CPU when the RSPI TX buffer is empty, so the CPU interrupt handler for the RSPI Transmit buffer empty will be executed. There is no special operation to do here.\n3. DMAC transfer end interrupt for RSPI Receive\nThe DMAC transfer occurs every RSIP Receive buffer full interrupt, and the CPU interrupt handler call for DMAC transfer end interrupt is executed when the 10 bytes (10 times) transfer complete.\n4. RSPI RX buffer full interrupt (Does not occur)\nYou may be wondering why the CPU interrupt handler call of the RSPI Transmit empty interrupt is called. but for the RSPI RX interrupt is not. As explained in #3, the DMAC transfer happens every RSPI Receive buffer full interrupt, so if it received 10 bytes (1 byte x 10 times), 10 interrupt requests are generated. However, all the interrupt requests are passed to the DMAC, and the DMAC executes 10 data transfers. Therefore, in the case of the RSPI RX buffer full interrupt, the CPU interrupt handler call does not happen.\nPlease note that the RSPI RX buffer full interrupt handler is not a good place to put user code like restarting the RSPI slave operation, and instead it would be better to put it in the DMAC transfer end interrupt for the RSPI Receive handler.\nSetting - RSPI slave interrupt generation and user callback code generation\nTo trigger the DMAC transfer by the RSPI, the RSPI should enable either the TX or TX/RX interrupts. The RSPI can enable the TX interrupt by setting RSPIx.SPCR.SPTIE=1 and the RX interrupt by setting RSPIx.SPCR.SPRIE=1. This allows the RSPI interrupt to arrive at the ICU.\nIn the CG driver setting on the smart configurator, you can find the “Callback function setting” field below. However, this field setting enables the generation of user callback function code to allow the user to put any code into the CPU interrupt handling. Even if you uncheck the boxes below, TX, RX, Error interrupt handlers will still be created by the smart configurator (code generator).\nPlease don’t confuse enabling RSPI interrupts and generating the user callback function code for RSPI interrupts.\nSetting - ICU\nThe ICU is responsible for deciding whether to forward the RSPI generated interrupts to the CPU or to the DMA (DTC or DMAC). First, the ICU should be configured to receive the RSPI TX or the TX/RX interrupts by setting ICU.IERm.IENn. Then, the ICU needs to be configured to relay the RSPI TX or the RX interrupts to the respective DMAC channel (ICU.DMARSRm), not to the CPU in our example.\nSetting - DMAC interrupt handling (generation)\nUnlike the DTC, the DMAC can generate an interrupt (DMACxI) with its own interrupt generation sources, such as the DMAC transfer end event. Additionally, the DMAC can be configured (DMACm.DMCSL.DISEL) to pass every single interrupt to the CPU after it has processed them. However, this will increase unnecessary CPU/bus load, so keep the setting as follows. (“Clear interrupt flag of the activation source”)\n\n\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Operation Result"
+      },
+      {
+        "type": "text",
+        "content": "Operation Result"
+      },
+      {
+        "type": "text",
+        "content": "The following capture image shows a signal waveform when the RSPI receives 10 bytes of data. At this time, the DMAC transfer is enabled and configured to do 10 bytes (1 byte x 10 times) transfer triggered by each RSIP interrupts. In the image, “SSL”, “CLK” and “MOSI” are actual SPI communication signals, following “RSPI RX”, “RSPI TX”, “DMA RX” and “DMA TX” show the timing of the CPU interrupt handler call occurrence. The test program was implemented so that the GPIO pin will go to low when the CPU interrupt handler is called.\nAs you can see in the picture below, the interrupt handlers are called in the following order. We will review how and why the interrupt occurred at this timing:\nDMAC transfer end interrupt for RSPI Transmit\nRSPI Transmit buffer empty interrupt\nDMAC transfer end interrupt for RSPI Receive\nRSPI Receive buffer full interrupt (Does not occur)\n\n\n1. DMAC transfer end interrupt for RSPI Transmit\nFirst you will get the DMA TX transfer end interrupt around two bytes earlier. The reason why it occurs two bytes earlier is due to the RSPI shift register and the SPTI interrupt timing. As soon as RSPI is enabled, if the shit register is empty, the RSPI issues “TX buffer empty” interrupt, that triggers DMAC’s first transfer (first byte) to the RSIP data register (SPDR). The data will move to the shift register soon, and then another “TX buffer empty” interrupt occurrs and the second DMAC transfer (second byte) will be transferred. These are done before receiving the clock signal from the connected device. After that, the remaining 8 bytes will be transferred by synchronizing with the SPI clock. Therefore, the DMAC Transfer end interrupt occurs 2 bytes earlier.\nPlease note that this is not a good place to put some user code like restarting the RSPI slave operation, since the RSPI clock is still coming in.\nRefer to section “Serial Peripheral Interface” > “Operation” > “Communications Operating Mode” > “Full-Duplex Communications” in the hardware user manual of MCU device.\n2. RSPI Transmit buffer empty interrupt\nAfter the DMAC has completed its TX task with the provided transfer information (e.g. number of transfers), the interrupt request of the RSPI Transmit buffer empty is passed to the CPU when the RSPI TX buffer is empty, so the CPU interrupt handler for the RSPI Transmit buffer empty will be executed. There is no special operation to do here.\n3. DMAC transfer end interrupt for RSPI Receive\nThe DMAC transfer occurs every RSIP Receive buffer full interrupt, and the CPU interrupt handler call for DMAC transfer end interrupt is executed when the 10 bytes (10 times) transfer complete.\n4. RSPI RX buffer full interrupt (Does not occur)\nYou may be wondering why the CPU interrupt handler call of the RSPI Transmit empty interrupt is called. but for the RSPI RX interrupt is not. As explained in #3, the DMAC transfer happens every RSPI Receive buffer full interrupt, so if it received 10 bytes (1 byte x 10 times), 10 interrupt requests are generated. However, all the interrupt requests are passed to the DMAC, and the DMAC executes 10 data transfers. Therefore, in the case of the RSPI RX buffer full interrupt, the CPU interrupt handler call does not happen.\nPlease note that the RSPI RX buffer full interrupt handler is not a good place to put user code like restarting the RSPI slave operation, and instead it would be better to put it in the DMAC transfer end interrupt for the RSPI Receive handler.\nSetting - RSPI slave interrupt generation and user callback code generation\nTo trigger the DMAC transfer by the RSPI, the RSPI should enable either the TX or TX/RX interrupts. The RSPI can enable the TX interrupt by setting RSPIx.SPCR.SPTIE=1 and the RX interrupt by setting RSPIx.SPCR.SPRIE=1. This allows the RSPI interrupt to arrive at the ICU.\nIn the CG driver setting on the smart configurator, you can find the “Callback function setting” field below. However, this field setting enables the generation of user callback function code to allow the user to put any code into the CPU interrupt handling. Even if you uncheck the boxes below, TX, RX, Error interrupt handlers will still be created by the smart configurator (code generator).\nPlease don’t confuse enabling RSPI interrupts and generating the user callback function code for RSPI interrupts.\nSetting - ICU\nThe ICU is responsible for deciding whether to forward the RSPI generated interrupts to the CPU or to the DMA (DTC or DMAC). First, the ICU should be configured to receive the RSPI TX or the TX/RX interrupts by setting ICU.IERm.IENn. Then, the ICU needs to be configured to relay the RSPI TX or the RX interrupts to the respective DMAC channel (ICU.DMARSRm), not to the CPU in our example.\nSetting - DMAC interrupt handling (generation)\nUnlike the DTC, the DMAC can generate an interrupt (DMACxI) with its own interrupt generation sources, such as the DMAC transfer end event. Additionally, the DMAC can be configured (DMACm.DMCSL.DISEL) to pass every single interrupt to the CPU after it has processed them. However, this will increase unnecessary CPU/bus load, so keep the setting as follows. (“Clear interrupt flag of the activation source”)"
+      },
+      {
+        "type": "text",
+        "content": "The following capture image shows a signal waveform when the RSPI receives 10 bytes of data. At this time, the DMAC transfer is enabled and configured to do 10 bytes (1 byte x 10 times) transfer triggered by each RSIP interrupts. In the image, “SSL”, “CLK” and “MOSI” are actual SPI communication signals, following “RSPI RX”, “RSPI TX”, “DMA RX” and “DMA TX” show the timing of the CPU interrupt handler call occurrence. The test program was implemented so that the GPIO pin will go to low when the CPU interrupt handler is called."
+      },
+      {
+        "type": "text",
+        "content": "As you can see in the picture below, the interrupt handlers are called in the following order. We will review how and why the interrupt occurred at this timing:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396380_1_2.png",
+          "alt_text": "",
+          "width": "847",
+          "height": "394",
+          "local_path": "data/categories/rx_family/data_transfer_(dmac_dtc_others)/ccacdef63f51d672e7af05bc2720fbc5/images/cb1b5d9fc2c2cbd6d91e78ec24a3657b.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "1. DMAC transfer end interrupt for RSPI Transmit"
+      },
+      {
+        "type": "text",
+        "content": "First you will get the DMA TX transfer end interrupt around two bytes earlier. The reason why it occurs two bytes earlier is due to the RSPI shift register and the SPTI interrupt timing. As soon as RSPI is enabled, if the shit register is empty, the RSPI issues “TX buffer empty” interrupt, that triggers DMAC’s first transfer (first byte) to the RSIP data register (SPDR). The data will move to the shift register soon, and then another “TX buffer empty” interrupt occurrs and the second DMAC transfer (second byte) will be transferred. These are done before receiving the clock signal from the connected device. After that, the remaining 8 bytes will be transferred by synchronizing with the SPI clock. Therefore, the DMAC Transfer end interrupt occurs 2 bytes earlier."
+      },
+      {
+        "type": "text",
+        "content": "Please note that this is not a good place to put some user code like restarting the RSPI slave operation, since the RSPI clock is still coming in."
+      },
+      {
+        "type": "text",
+        "content": "Refer to section “Serial Peripheral Interface” > “Operation” > “Communications Operating Mode” > “Full-Duplex Communications” in the hardware user manual of MCU device."
+      },
+      {
+        "type": "text",
+        "content": "2. RSPI Transmit buffer empty interrupt"
+      },
+      {
+        "type": "text",
+        "content": "After the DMAC has completed its TX task with the provided transfer information (e.g. number of transfers), the interrupt request of the RSPI Transmit buffer empty is passed to the CPU when the RSPI TX buffer is empty, so the CPU interrupt handler for the RSPI Transmit buffer empty will be executed. There is no special operation to do here."
+      },
+      {
+        "type": "text",
+        "content": "3. DMAC transfer end interrupt for RSPI Receive"
+      },
+      {
+        "type": "text",
+        "content": "The DMAC transfer occurs every RSIP Receive buffer full interrupt, and the CPU interrupt handler call for DMAC transfer end interrupt is executed when the 10 bytes (10 times) transfer complete."
+      },
+      {
+        "type": "text",
+        "content": "4. RSPI RX buffer full interrupt (Does not occur)"
+      },
+      {
+        "type": "text",
+        "content": "You may be wondering why the CPU interrupt handler call of the RSPI Transmit empty interrupt is called. but for the RSPI RX interrupt is not. As explained in #3, the DMAC transfer happens every RSPI Receive buffer full interrupt, so if it received 10 bytes (1 byte x 10 times), 10 interrupt requests are generated. However, all the interrupt requests are passed to the DMAC, and the DMAC executes 10 data transfers. Therefore, in the case of the RSPI RX buffer full interrupt, the CPU interrupt handler call does not happen."
+      },
+      {
+        "type": "text",
+        "content": "Please note that the RSPI RX buffer full interrupt handler is not a good place to put user code like restarting the RSPI slave operation, and instead it would be better to put it in the DMAC transfer end interrupt for the RSPI Receive handler."
+      },
+      {
+        "type": "text",
+        "content": "Setting - RSPI slave interrupt generation and user callback code generation"
+      },
+      {
+        "type": "text",
+        "content": "Setting - RSPI slave interrupt generation and user callback code generation"
+      },
+      {
+        "type": "text",
+        "content": "To trigger the DMAC transfer by the RSPI, the RSPI should enable either the TX or TX/RX interrupts. The RSPI can enable the TX interrupt by setting RSPIx.SPCR.SPTIE=1 and the RX interrupt by setting RSPIx.SPCR.SPRIE=1. This allows the RSPI interrupt to arrive at the ICU."
+      },
+      {
+        "type": "text",
+        "content": "In the CG driver setting on the smart configurator, you can find the “Callback function setting” field below. However, this field setting enables the generation of user callback function code to allow the user to put any code into the CPU interrupt handling. Even if you uncheck the boxes below, TX, RX, Error interrupt handlers will still be created by the smart configurator (code generator)."
+      },
+      {
+        "type": "text",
+        "content": "Please don’t confuse enabling RSPI interrupts and generating the user callback function code for RSPI interrupts."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396380_2_2.png",
+          "alt_text": "",
+          "width": "711",
+          "height": "58",
+          "local_path": "data/categories/rx_family/data_transfer_(dmac_dtc_others)/ccacdef63f51d672e7af05bc2720fbc5/images/d2be9c6298b71f61194f009af54be269.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Setting - ICU"
+      },
+      {
+        "type": "text",
+        "content": "Setting - ICU"
+      },
+      {
+        "type": "text",
+        "content": "The ICU is responsible for deciding whether to forward the RSPI generated interrupts to the CPU or to the DMA (DTC or DMAC). First, the ICU should be configured to receive the RSPI TX or the TX/RX interrupts by setting ICU.IERm.IENn. Then, the ICU needs to be configured to relay the RSPI TX or the RX interrupts to the respective DMAC channel (ICU.DMARSRm), not to the CPU in our example."
+      },
+      {
+        "type": "text",
+        "content": "Setting - DMAC interrupt handling (generation)"
+      },
+      {
+        "type": "text",
+        "content": "Setting - DMAC interrupt handling (generation)"
+      },
+      {
+        "type": "text",
+        "content": "Unlike the DTC, the DMAC can generate an interrupt (DMACxI) with its own interrupt generation sources, such as the DMAC transfer end event. Additionally, the DMAC can be configured (DMACm.DMCSL.DISEL) to pass every single interrupt to the CPU after it has processed them. However, this will increase unnecessary CPU/bus load, so keep the setting as follows. (“Clear interrupt flag of the activation source”)"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396380_3.png",
+          "alt_text": "",
+          "width": "579",
+          "height": "123",
+          "local_path": "data/categories/rx_family/data_transfer_(dmac_dtc_others)/ccacdef63f51d672e7af05bc2720fbc5/images/0c7713722f7189029a62a9b43e37a8d7.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396380_1_2.png",
+        "alt_text": "",
+        "width": "847",
+        "height": "394",
+        "local_path": "data/categories/rx_family/data_transfer_(dmac_dtc_others)/ccacdef63f51d672e7af05bc2720fbc5/images/cb1b5d9fc2c2cbd6d91e78ec24a3657b.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396380_2_2.png",
+        "alt_text": "",
+        "width": "711",
+        "height": "58",
+        "local_path": "data/categories/rx_family/data_transfer_(dmac_dtc_others)/ccacdef63f51d672e7af05bc2720fbc5/images/d2be9c6298b71f61194f009af54be269.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396380_3.png",
+        "alt_text": "",
+        "width": "579",
+        "height": "123",
+        "local_path": "data/categories/rx_family/data_transfer_(dmac_dtc_others)/ccacdef63f51d672e7af05bc2720fbc5/images/0c7713722f7189029a62a9b43e37a8d7.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": []
+  }
+}

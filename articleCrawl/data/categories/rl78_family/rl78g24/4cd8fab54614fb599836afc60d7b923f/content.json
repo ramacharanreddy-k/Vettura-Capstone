@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21062253",
+    "title": "Use of Flexible Application Accelerator (FAA)",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:52:51.282595"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs the Flexible Application Accelerator (FAA) easy to use?\nAnswer:\nPre-prepared libraries for FAA simplify development and reduce the cost.\nSuitable Products\nRL78/G24"
+      },
+      {
+        "type": "text",
+        "content": "Is the Flexible Application Accelerator (FAA) easy to use?"
+      },
+      {
+        "type": "text",
+        "content": "Is the Flexible Application Accelerator (FAA) easy to use?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nPre-prepared libraries for FAA simplify development and reduce the cost.\nSuitable Products\nRL78/G24"
+      },
+      {
+        "type": "text",
+        "content": "Pre-prepared libraries for FAA simplify development and reduce the cost."
+      },
+      {
+        "type": "text",
+        "content": "Pre-prepared libraries for FAA simplify development and reduce the cost."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/G24"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G24"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G24"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21062260"
+      }
+    ]
+  }
+}

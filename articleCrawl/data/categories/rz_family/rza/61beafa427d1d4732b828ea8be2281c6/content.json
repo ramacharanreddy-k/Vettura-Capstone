@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21276790",
+    "title": "RZ/A1M: Notes on RZ/A1H and RZ/A1M from a software perspective",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:43:04.810110"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the notes on RZ/A1H and RZ/A1M from a software perspective?\nAnswer:\nSince RZ/A1H and RZ/A1M are pin-compatible, Renesas only provides evaluation board and software packages for RZ/A1H and not provides RZ/A1M's one.If you consider RZ/A1M, please use RZ/A1H's one.\n(The built-in memory size is different between RZ/A1H and RZ/A1M: RZ/A1H: 10MB, RZ/A1M: 5MB)\nHowever, when using the RZ/A1H software package to evaluate RZ/A1M, please note the following point.\nTarget RZ/A1H software package: RZ/A1H FreeRTOS™ Software Package\nThe above RZ/A1H software uses the red frame in the table below as the memory area. \nOn the other hand, RZ/A1M can not use the reserved area in the blue frame in the table below.\nWhen using the above software on RZ/A1M, it is possible to use the software as it is by arranging memory that does not use the reserved area in the blue frame above.\nSuitable Products\nRZ/A1M"
+      },
+      {
+        "type": "text",
+        "content": "What is the notes on RZ/A1H and RZ/A1M from a software perspective?"
+      },
+      {
+        "type": "text",
+        "content": "What is the notes on RZ/A1H and RZ/A1M from a software perspective?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nSince RZ/A1H and RZ/A1M are pin-compatible, Renesas only provides evaluation board and software packages for RZ/A1H and not provides RZ/A1M's one.If you consider RZ/A1M, please use RZ/A1H's one.\n(The built-in memory size is different between RZ/A1H and RZ/A1M: RZ/A1H: 10MB, RZ/A1M: 5MB)\nHowever, when using the RZ/A1H software package to evaluate RZ/A1M, please note the following point.\nTarget RZ/A1H software package: RZ/A1H FreeRTOS™ Software Package\nThe above RZ/A1H software uses the red frame in the table below as the memory area. \nOn the other hand, RZ/A1M can not use the reserved area in the blue frame in the table below.\nWhen using the above software on RZ/A1M, it is possible to use the software as it is by arranging memory that does not use the reserved area in the blue frame above.\nSuitable Products\nRZ/A1M"
+      },
+      {
+        "type": "text",
+        "content": "Since RZ/A1H and RZ/A1M are pin-compatible, Renesas only provides evaluation board and software packages for RZ/A1H and not provides RZ/A1M's one.If you consider RZ/A1M, please use RZ/A1H's one.\n(The built-in memory size is different between RZ/A1H and RZ/A1M: RZ/A1H: 10MB, RZ/A1M: 5MB)\nHowever, when using the RZ/A1H software package to evaluate RZ/A1M, please note the following point.\nTarget RZ/A1H software package: RZ/A1H FreeRTOS™ Software Package\nThe above RZ/A1H software uses the red frame in the table below as the memory area. \nOn the other hand, RZ/A1M can not use the reserved area in the blue frame in the table below.\nWhen using the above software on RZ/A1M, it is possible to use the software as it is by arranging memory that does not use the reserved area in the blue frame above."
+      },
+      {
+        "type": "text",
+        "content": "Since RZ/A1H and RZ/A1M are pin-compatible, Renesas only provides evaluation board and software packages for RZ/A1H and not provides RZ/A1M's one.If you consider RZ/A1M, please use RZ/A1H's one."
+      },
+      {
+        "type": "text",
+        "content": "(The built-in memory size is different between RZ/A1H and RZ/A1M: RZ/A1H: 10MB, RZ/A1M: 5MB)"
+      },
+      {
+        "type": "text",
+        "content": "However, when using the RZ/A1H software package to evaluate RZ/A1M, please note the following point."
+      },
+      {
+        "type": "text",
+        "content": "Target RZ/A1H software package: RZ/A1H FreeRTOS™ Software Package\nThe above RZ/A1H software uses the red frame in the table below as the memory area. \nOn the other hand, RZ/A1M can not use the reserved area in the blue frame in the table below."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/384600b.png",
+          "alt_text": "",
+          "width": "820",
+          "height": "584",
+          "local_path": "data/categories/rz_family/rza/61beafa427d1d4732b828ea8be2281c6/images/1b07bf68123dc56b75639427bd9967b8.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "When using the above software on RZ/A1M, it is possible to use the software as it is by arranging memory that does not use the reserved area in the blue frame above."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A1M"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/384600b.png",
+        "alt_text": "",
+        "width": "820",
+        "height": "584",
+        "local_path": "data/categories/rz_family/rza/61beafa427d1d4732b828ea8be2281c6/images/1b07bf68123dc56b75639427bd9967b8.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A1M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A1M"
+    ],
+    "links": [
+      {
+        "text": "RZ/A1H FreeRTOS™ Software Package",
+        "url": "https://www.renesas.com/us/en/software-tool/rza1h-freertos-software-package"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21276791"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21276792"
+      }
+    ]
+  }
+}

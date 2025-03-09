@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20977305",
+    "title": "RH850/F1Kx: Code flash background operation (BGO)",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:27:15.945691"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDoes RH850/F1KM-S2 support code flash background operation (BGO)?\nAnswer:\nYes, RH850/F1KM-S2 supports code flash background operation (BGO). User can run application code in one black of 1MB code flash area and erase/program the other 1MB code flash area. Please refer to hardware user's manual for details.\nSuitable Products\nRH850/F1Kx"
+      },
+      {
+        "type": "text",
+        "content": "Does RH850/F1KM-S2 support code flash background operation (BGO)?"
+      },
+      {
+        "type": "text",
+        "content": "Does RH850/F1KM-S2 support code flash background operation (BGO)?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes, RH850/F1KM-S2 supports code flash background operation (BGO). User can run application code in one black of 1MB code flash area and erase/program the other 1MB code flash area. Please refer to hardware user's manual for details.\nSuitable Products\nRH850/F1Kx"
+      },
+      {
+        "type": "text",
+        "content": "Yes, RH850/F1KM-S2 supports code flash background operation (BGO). User can run application code in one black of 1MB code flash area and erase/program the other 1MB code flash area. Please refer to hardware user's manual for details."
+      },
+      {
+        "type": "text",
+        "content": "Yes, RH850/F1KM-S2 supports code flash background operation (BGO). User can run application code in one black of 1MB code flash area and erase/program the other 1MB code flash area. Please refer to hardware user's manual for details."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850/F1Kx"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850/F1Kx"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850/F1Kx"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20977310"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20977314"
+      }
+    ]
+  }
+}

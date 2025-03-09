@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20839475",
+    "title": "RZ/T2M cannot access EEPROM on the T2M RSK board. What could be the cause?",
+    "last_updated": "2023-07-02",
+    "extracted_at": "2025-03-08T23:50:09.455852"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nRZ/T2M cannot access EEPROM on the T2M RSK board. What could be the cause?\nAnswer:\nThere are two types of EEPROM sizes: 16kbit and 32kbit. Please refer to the following and configure the software settings according to the EEPROM size.\n[RZ/T2M RSK board]\nSerial No. of boards with 16kbit: 240493~240592, 242767~242866\nSerial No. for boards with 32kbit: other than above\nRefer to the following page.\nhttps://www.renesas.com/document/tnn/notes-renesas-starter-kit-rzt2m-differences-eeprom-size?r=1593196\nSuitable Products\nRZ/T2M"
+      },
+      {
+        "type": "text",
+        "content": "RZ/T2M cannot access EEPROM on the T2M RSK board. What could be the cause?"
+      },
+      {
+        "type": "text",
+        "content": "RZ/T2M cannot access EEPROM on the T2M RSK board. What could be the cause?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThere are two types of EEPROM sizes: 16kbit and 32kbit. Please refer to the following and configure the software settings according to the EEPROM size.\n[RZ/T2M RSK board]\nSerial No. of boards with 16kbit: 240493~240592, 242767~242866\nSerial No. for boards with 32kbit: other than above\nRefer to the following page.\nhttps://www.renesas.com/document/tnn/notes-renesas-starter-kit-rzt2m-differences-eeprom-size?r=1593196\nSuitable Products\nRZ/T2M"
+      },
+      {
+        "type": "text",
+        "content": "There are two types of EEPROM sizes: 16kbit and 32kbit. Please refer to the following and configure the software settings according to the EEPROM size.\n[RZ/T2M RSK board]\nSerial No. of boards with 16kbit: 240493~240592, 242767~242866\nSerial No. for boards with 32kbit: other than above\nRefer to the following page.\nhttps://www.renesas.com/document/tnn/notes-renesas-starter-kit-rzt2m-differences-eeprom-size?r=1593196"
+      },
+      {
+        "type": "text",
+        "content": "There are two types of EEPROM sizes: 16kbit and 32kbit. Please refer to the following and configure the software settings according to the EEPROM size."
+      },
+      {
+        "type": "text",
+        "content": "[RZ/T2M RSK board]"
+      },
+      {
+        "type": "text",
+        "content": "Serial No. of boards with 16kbit: 240493~240592, 242767~242866\nSerial No. for boards with 32kbit: other than above"
+      },
+      {
+        "type": "text",
+        "content": "Refer to the following page.\nhttps://www.renesas.com/document/tnn/notes-renesas-starter-kit-rzt2m-differences-eeprom-size?r=1593196"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/T2M"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/T2M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/T2M"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/document/tnn/notes-renesas-starter-kit-rzt2m-differences-eeprom-size?r=1593196",
+        "url": "https://www.renesas.com/document/tnn/notes-renesas-starter-kit-rzt2m-differences-eeprom-size?r=1593196"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20832435"
+      }
+    ]
+  }
+}

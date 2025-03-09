@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21106543",
+    "title": "Differences within the RX23E-B group",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:04:36.965732"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat are the differences within the RX23E-B group?\nAnswer:\nThe RX23E-B are 32-bit microcontrollers with built-in high-speed, high-precision 24-bit Δ-ΣA/D converters, and the data rate and analog input voltage range of the 24-bit Δ-ΣA/D converters differ depending on the part number. Refer to the table below for details.\n  Suitable Products\nRX23E-B"
+      },
+      {
+        "type": "text",
+        "content": "What are the differences within the RX23E-B group?"
+      },
+      {
+        "type": "text",
+        "content": "What are the differences within the RX23E-B group?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RX23E-B are 32-bit microcontrollers with built-in high-speed, high-precision 24-bit Δ-ΣA/D converters, and the data rate and analog input voltage range of the 24-bit Δ-ΣA/D converters differ depending on the part number. Refer to the table below for details.\n  Suitable Products\nRX23E-B"
+      },
+      {
+        "type": "text",
+        "content": "The RX23E-B are 32-bit microcontrollers with built-in high-speed, high-precision 24-bit Δ-ΣA/D converters, and the data rate and analog input voltage range of the 24-bit Δ-ΣA/D converters differ depending on the part number. Refer to the table below for details."
+      },
+      {
+        "type": "text",
+        "content": "The RX23E-B are 32-bit microcontrollers with built-in high-speed, high-precision 24-bit Δ-ΣA/D converters, and the data rate and analog input voltage range of the 24-bit Δ-ΣA/D converters differ depending on the part number. Refer to the table below for details."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/377672.png",
+          "alt_text": "",
+          "width": "892",
+          "height": "323",
+          "local_path": "data/categories/rx_family/rx23e-b/50f645c4fbf9c072a2663f78c6fa169c/images/a2be97e31fafcbaa6af81b108eae8786.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX23E-B"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/377672.png",
+        "alt_text": "",
+        "width": "892",
+        "height": "323",
+        "local_path": "data/categories/rx_family/rx23e-b/50f645c4fbf9c072a2663f78c6fa169c/images/a2be97e31fafcbaa6af81b108eae8786.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX23E-B"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX23E-B"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21106550"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21106563"
+      }
+    ]
+  }
+}

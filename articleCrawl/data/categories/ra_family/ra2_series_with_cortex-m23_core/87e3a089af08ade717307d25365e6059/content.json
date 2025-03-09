@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/19668883",
+    "title": "RA2: External Memory interface",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:31:37.003816"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs it possible to interface the external SRAM to the RA2 series ?\nAnswer:\nThe RA2 series is the single chip microcontroller, it doesn't have an external bus interface. For this reason, it is not possible to connect external memory to the CPU's address and data bus.\nSuitable Products\nRA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "Is it possible to interface the external SRAM to the RA2 series ?"
+      },
+      {
+        "type": "text",
+        "content": "Is it possible to interface the external SRAM to the RA2 series ?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RA2 series is the single chip microcontroller, it doesn't have an external bus interface. For this reason, it is not possible to connect external memory to the CPU's address and data bus.\nSuitable Products\nRA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "The RA2 series is the single chip microcontroller, it doesn't have an external bus interface. For this reason, it is not possible to connect external memory to the CPU's address and data bus."
+      },
+      {
+        "type": "text",
+        "content": "The RA2 series is the single chip microcontroller, it doesn't have an external bus interface. For this reason, it is not possible to connect external memory to the CPU's address and data bus."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA2L1, RA2A1, RA2E1, RA2E2, RA2E3, RA2A2"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/19668834"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/19668895"
+      }
+    ]
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21633589",
+    "title": "[RL78] How can I issue a software reset on a RL78 device ?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:00:43.339593"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Last updated: 17 Oct 2024"
+      },
+      {
+        "type": "text",
+        "content": "How can I issue a software reset on a RL78 device ?"
+      },
+      {
+        "type": "text",
+        "content": "Most RL78 devices do not have a software reset as reset source. The reset sources are usually as following:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://community.renesas.com/cfs-file/__key/communityserver-discussions-components-files/26/pastedimage1728890193327v1.png",
+          "alt_text": "",
+          "width": "622",
+          "height": "188",
+          "local_path": "data/categories/rl78_family/reset/e68d4fcf20d6e7d5f0002ab23d3bd1bc/images/85abc75a10d450c71021c9a8b8eb6ac2.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The user can take advantage of the internal reset due to execution of illegal instruction and use it as 'software' reset."
+      },
+      {
+        "type": "text",
+        "content": "This is what R_RFD_ForceReset function of the code flash programming library also does:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://community.renesas.com/resized-image/__size/640x480/__key/communityserver-discussions-components-files/26/pastedimage1722327867391v1.png",
+          "alt_text": "",
+          "width": "471",
+          "height": "150",
+          "local_path": "data/categories/rl78_family/reset/e68d4fcf20d6e7d5f0002ab23d3bd1bc/images/f8235e0cc36bb2b99c79bbd1bf502875.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "For example the .DB 255 command on CC-RL will reset the device due to illegal instruction but it can be used as a forced software reset too."
+      },
+      {
+        "type": "text",
+        "content": "Note: The illegal instruction is generated when instruction code FFH is executed."
+      },
+      {
+        "type": "text",
+        "content": "Reset by the illegal instruction execution not issued by emulation with the in-circuit emulator or on-chip debug emulator."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://community.renesas.com/cfs-file/__key/communityserver-discussions-components-files/26/pastedimage1728890193327v1.png",
+        "alt_text": "",
+        "width": "622",
+        "height": "188",
+        "local_path": "data/categories/rl78_family/reset/e68d4fcf20d6e7d5f0002ab23d3bd1bc/images/85abc75a10d450c71021c9a8b8eb6ac2.png"
+      },
+      {
+        "original_url": "https://community.renesas.com/resized-image/__size/640x480/__key/communityserver-discussions-components-files/26/pastedimage1722327867391v1.png",
+        "alt_text": "",
+        "width": "471",
+        "height": "150",
+        "local_path": "data/categories/rl78_family/reset/e68d4fcf20d6e7d5f0002ab23d3bd1bc/images/f8235e0cc36bb2b99c79bbd1bf502875.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78"
+    ],
+    "links": []
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21172751",
+    "title": "How to Debug Code from a Specified Address in Renesas RA MCUs - IAR",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:23:57.998604"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to Debug Code from a Specified Address in Renesas RA MCUs - IAR\nAnswer:\nFor Arm chips, the starting address 0 is required to start placing the initial stack pointer, reset vector table, and other necessary content, so if the 0 address is full FFh, the code cannot be debugged.\nTo debug the code from the specified address, you can respecify the address offsets (Initial stack pointer and Initial program counter) required for MCU operation in the IDE. In this article, we will use IAR as an example.\n1. Linker script file (code writing phase).\nTo modify the linker script, take the memory_regions.icf file as an example, FLASH_START the basic offset address is 0 by default when the code is compiled, and the target offset address of the application is changed to the application as required, such as 0x4000. Recompile the project, check the generated rec file or MOT file, and make sure that the file starts at 0x4000 as seen below.\n  2. Debug Configuration Settings (Code Debugging Phase)\nModify the settings in Debugger > Extra Options, as shown in the following figure.\n  As shown in the following figure, when you jump to the main() function, the address is at 0x4fd0.\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "How to Debug Code from a Specified Address in Renesas RA MCUs - IAR"
+      },
+      {
+        "type": "text",
+        "content": "How to Debug Code from a Specified Address in Renesas RA MCUs - IAR"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nFor Arm chips, the starting address 0 is required to start placing the initial stack pointer, reset vector table, and other necessary content, so if the 0 address is full FFh, the code cannot be debugged.\nTo debug the code from the specified address, you can respecify the address offsets (Initial stack pointer and Initial program counter) required for MCU operation in the IDE. In this article, we will use IAR as an example.\n1. Linker script file (code writing phase).\nTo modify the linker script, take the memory_regions.icf file as an example, FLASH_START the basic offset address is 0 by default when the code is compiled, and the target offset address of the application is changed to the application as required, such as 0x4000. Recompile the project, check the generated rec file or MOT file, and make sure that the file starts at 0x4000 as seen below.\n  2. Debug Configuration Settings (Code Debugging Phase)\nModify the settings in Debugger > Extra Options, as shown in the following figure.\n  As shown in the following figure, when you jump to the main() function, the address is at 0x4fd0.\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "For Arm chips, the starting address 0 is required to start placing the initial stack pointer, reset vector table, and other necessary content, so if the 0 address is full FFh, the code cannot be debugged."
+      },
+      {
+        "type": "text",
+        "content": "To debug the code from the specified address, you can respecify the address offsets (Initial stack pointer and Initial program counter) required for MCU operation in the IDE. In this article, we will use IAR as an example."
+      },
+      {
+        "type": "text",
+        "content": "1. Linker script file (code writing phase)."
+      },
+      {
+        "type": "text",
+        "content": "To modify the linker script, take the memory_regions.icf file as an example, FLASH_START the basic offset address is 0 by default when the code is compiled, and the target offset address of the application is changed to the application as required, such as 0x4000. Recompile the project, check the generated rec file or MOT file, and make sure that the file starts at 0x4000 as seen below."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380474-1a.png",
+          "alt_text": "",
+          "width": "441",
+          "height": "283",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/11e79377143e719f1f29cc5244404567/images/aee31b448c849f7ddcdc961107b1dd14.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380474-2a.png",
+          "alt_text": "",
+          "width": "559",
+          "height": "414",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/11e79377143e719f1f29cc5244404567/images/67d9357bdfeafe8862b601fb5bf4dbb3.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "2. Debug Configuration Settings (Code Debugging Phase)"
+      },
+      {
+        "type": "text",
+        "content": "Modify the settings in Debugger > Extra Options, as shown in the following figure."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380474-3d.png",
+          "alt_text": "",
+          "width": "559",
+          "height": "577",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/11e79377143e719f1f29cc5244404567/images/ec735d80928f030183d99de0543afc5e.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "As shown in the following figure, when you jump to the main() function, the address is at 0x4fd0."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380474-4a.png",
+          "alt_text": "",
+          "width": "554",
+          "height": "193",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/11e79377143e719f1f29cc5244404567/images/69c1817e6079ab977ab23c6744653497.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380474-1a.png",
+        "alt_text": "",
+        "width": "441",
+        "height": "283",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/11e79377143e719f1f29cc5244404567/images/aee31b448c849f7ddcdc961107b1dd14.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380474-2a.png",
+        "alt_text": "",
+        "width": "559",
+        "height": "414",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/11e79377143e719f1f29cc5244404567/images/67d9357bdfeafe8862b601fb5bf4dbb3.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380474-3d.png",
+        "alt_text": "",
+        "width": "559",
+        "height": "577",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/11e79377143e719f1f29cc5244404567/images/ec735d80928f030183d99de0543afc5e.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380474-4a.png",
+        "alt_text": "",
+        "width": "554",
+        "height": "193",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/11e79377143e719f1f29cc5244404567/images/69c1817e6079ab977ab23c6744653497.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": []
+  }
+}

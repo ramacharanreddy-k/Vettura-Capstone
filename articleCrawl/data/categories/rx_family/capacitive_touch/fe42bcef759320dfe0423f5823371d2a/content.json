@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20865647",
+    "title": "What Noise Countermeasures Does Renesas CTSU2 Use?",
+    "last_updated": "2023-07-03",
+    "extracted_at": "2025-03-09T00:07:17.592618"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat Noise Countermeasures Does Renesas CTSU2 Use?\nAnswer:\nCTSU2 is equipped with the following noise suppression measures\nMulti-frequency measurement\nThe CTSU2 can measure at up to four different sensor drive frequencies to avoid synchronization noise.\nThis module measures at three frequencies that allow majority decision by default, and standardizes the obtained results at the three frequencies to the first frequency reference value and determines the measurement value by majority decision.\nActive shielding\nTo shield external influences while minimizing the increase in parasitic capacitance, a shield signal in phase with the sensor drive pulse is output from the shield and non-measurement terminals.\nThis function is available only for self-capacitance measurement.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "What Noise Countermeasures Does Renesas CTSU2 Use?"
+      },
+      {
+        "type": "text",
+        "content": "What Noise Countermeasures Does Renesas CTSU2 Use?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nCTSU2 is equipped with the following noise suppression measures\nMulti-frequency measurement\nThe CTSU2 can measure at up to four different sensor drive frequencies to avoid synchronization noise.\nThis module measures at three frequencies that allow majority decision by default, and standardizes the obtained results at the three frequencies to the first frequency reference value and determines the measurement value by majority decision.\nActive shielding\nTo shield external influences while minimizing the increase in parasitic capacitance, a shield signal in phase with the sensor drive pulse is output from the shield and non-measurement terminals.\nThis function is available only for self-capacitance measurement.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "CTSU2 is equipped with the following noise suppression measures\nMulti-frequency measurement\nThe CTSU2 can measure at up to four different sensor drive frequencies to avoid synchronization noise.\nThis module measures at three frequencies that allow majority decision by default, and standardizes the obtained results at the three frequencies to the first frequency reference value and determines the measurement value by majority decision.\nActive shielding\nTo shield external influences while minimizing the increase in parasitic capacitance, a shield signal in phase with the sensor drive pulse is output from the shield and non-measurement terminals.\nThis function is available only for self-capacitance measurement."
+      },
+      {
+        "type": "text",
+        "content": "CTSU2 is equipped with the following noise suppression measures"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20865653"
+      }
+    ]
+  }
+}

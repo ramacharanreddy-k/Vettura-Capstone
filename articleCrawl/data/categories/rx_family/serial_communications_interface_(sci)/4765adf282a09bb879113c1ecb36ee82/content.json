@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20939014",
+    "title": "Reception margin in asynchronous mode",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:21:01.872899"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow can I evaluate the formula for the reception margin (M) in asynchronous mode described in the serial communication interface chapter of the hardware manual? What is the \"F (absolute value of clock frequency deviation)\" in the calculation formula?\nAnswer:\nThe reception margin (M) indicates where the data is sampled during a 1-bit period.\nWhen sampling in the middle of a 1-bit period, M=50%, when sampling at the beginning or end of a 1-bit period, M=0%.\nM=0% indicates no margin.\nTherefore, it is recommended to adjust the reception margin close to 50%.\nGenerally, the clock frequency deviation is as follows:\nSampling clock frequency deviation\nThe frequency deviation between the basic clock to achieve the assumed bit rate (BPS) and the base clock that can be set in the bit rate register (BRR).\nSource clock frequency deviation\nDeviations such as the frequency of EXTAL pin and the frequency deviation of the source clocks inputted to SCK pin.\nOther party's clock frequency deviation\nThe frequency deviation of the clock that generates the transmit data on the other side of serial communication.\nNoise in the transmission path\nWaveform dull/noise, etc.\n\"F (Absolute value of clock frequency deviation)\" in the formula for calculating the reception margin is the sampling clock frequency deviation described in 1. above. Expressed as follows:\nF = | (BPS that can be set in BRR)-(Assumed BPS)| ÷ (Assumed BPS)\nThis value corresponds to the absolute value of the \"Bit rate error (%)\" described in the explanation of the bit rate register (BRR) in the hardware manual.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "How can I evaluate the formula for the reception margin (M) in asynchronous mode described in the serial communication interface chapter of the hardware manual? What is the \"F (absolute value of clock frequency deviation)\" in the calculation formula?"
+      },
+      {
+        "type": "text",
+        "content": "How can I evaluate the formula for the reception margin (M) in asynchronous mode described in the serial communication interface chapter of the hardware manual? What is the \"F (absolute value of clock frequency deviation)\" in the calculation formula?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe reception margin (M) indicates where the data is sampled during a 1-bit period.\nWhen sampling in the middle of a 1-bit period, M=50%, when sampling at the beginning or end of a 1-bit period, M=0%.\nM=0% indicates no margin.\nTherefore, it is recommended to adjust the reception margin close to 50%.\nGenerally, the clock frequency deviation is as follows:\nSampling clock frequency deviation\nThe frequency deviation between the basic clock to achieve the assumed bit rate (BPS) and the base clock that can be set in the bit rate register (BRR).\nSource clock frequency deviation\nDeviations such as the frequency of EXTAL pin and the frequency deviation of the source clocks inputted to SCK pin.\nOther party's clock frequency deviation\nThe frequency deviation of the clock that generates the transmit data on the other side of serial communication.\nNoise in the transmission path\nWaveform dull/noise, etc.\n\"F (Absolute value of clock frequency deviation)\" in the formula for calculating the reception margin is the sampling clock frequency deviation described in 1. above. Expressed as follows:\nF = | (BPS that can be set in BRR)-(Assumed BPS)| ÷ (Assumed BPS)\nThis value corresponds to the absolute value of the \"Bit rate error (%)\" described in the explanation of the bit rate register (BRR) in the hardware manual.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "The reception margin (M) indicates where the data is sampled during a 1-bit period.\nWhen sampling in the middle of a 1-bit period, M=50%, when sampling at the beginning or end of a 1-bit period, M=0%.\nM=0% indicates no margin.\nTherefore, it is recommended to adjust the reception margin close to 50%.\nGenerally, the clock frequency deviation is as follows:\nSampling clock frequency deviation\nThe frequency deviation between the basic clock to achieve the assumed bit rate (BPS) and the base clock that can be set in the bit rate register (BRR).\nSource clock frequency deviation\nDeviations such as the frequency of EXTAL pin and the frequency deviation of the source clocks inputted to SCK pin.\nOther party's clock frequency deviation\nThe frequency deviation of the clock that generates the transmit data on the other side of serial communication.\nNoise in the transmission path\nWaveform dull/noise, etc.\n\"F (Absolute value of clock frequency deviation)\" in the formula for calculating the reception margin is the sampling clock frequency deviation described in 1. above. Expressed as follows:\nF = | (BPS that can be set in BRR)-(Assumed BPS)| ÷ (Assumed BPS)\nThis value corresponds to the absolute value of the \"Bit rate error (%)\" described in the explanation of the bit rate register (BRR) in the hardware manual."
+      },
+      {
+        "type": "text",
+        "content": "The reception margin (M) indicates where the data is sampled during a 1-bit period.\nWhen sampling in the middle of a 1-bit period, M=50%, when sampling at the beginning or end of a 1-bit period, M=0%."
+      },
+      {
+        "type": "text",
+        "content": "M=0% indicates no margin.\nTherefore, it is recommended to adjust the reception margin close to 50%."
+      },
+      {
+        "type": "text",
+        "content": "Generally, the clock frequency deviation is as follows:"
+      },
+      {
+        "type": "text",
+        "content": "\"F (Absolute value of clock frequency deviation)\" in the formula for calculating the reception margin is the sampling clock frequency deviation described in 1. above. Expressed as follows:\nF = | (BPS that can be set in BRR)-(Assumed BPS)| ÷ (Assumed BPS)"
+      },
+      {
+        "type": "text",
+        "content": "This value corresponds to the absolute value of the \"Bit rate error (%)\" described in the explanation of the bit rate register (BRR) in the hardware manual."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20939019"
+      }
+    ]
+  }
+}

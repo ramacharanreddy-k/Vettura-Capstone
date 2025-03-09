@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20364146",
+    "title": "RH850/F1x: How can I code for an interrupt in F1K, for example, if a rising edge is detected, a GPIO must be set high?",
+    "last_updated": "2022-01-02",
+    "extracted_at": "2025-03-09T00:26:39.941204"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow can I code for an interrupt in F1K, for example, if a rising edge is detected, a GPIO must be set high?\nAnswer:\nThere is a tool called Applilet4.\nThe Applilet4 is a software tool for automatically generating control programs (device driver programs) for peripheral modules (timers, UART, A/D, etc.) in accordance with user settings via a GUI.\nYou can download it - as well as the manual and release notes - from the web page from Renesas (you will find it under “Software Tools”: https://www.renesas.com/eu/en/products/microcontrollers-microprocessors/rh850/rh850f1x/rh850f1k.html#designsupport\nSuitable Products\nRH850/F1x"
+      },
+      {
+        "type": "text",
+        "content": "How can I code for an interrupt in F1K, for example, if a rising edge is detected, a GPIO must be set high?"
+      },
+      {
+        "type": "text",
+        "content": "How can I code for an interrupt in F1K, for example, if a rising edge is detected, a GPIO must be set high?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThere is a tool called Applilet4.\nThe Applilet4 is a software tool for automatically generating control programs (device driver programs) for peripheral modules (timers, UART, A/D, etc.) in accordance with user settings via a GUI.\nYou can download it - as well as the manual and release notes - from the web page from Renesas (you will find it under “Software Tools”: https://www.renesas.com/eu/en/products/microcontrollers-microprocessors/rh850/rh850f1x/rh850f1k.html#designsupport\nSuitable Products\nRH850/F1x"
+      },
+      {
+        "type": "text",
+        "content": "There is a tool called Applilet4.\nThe Applilet4 is a software tool for automatically generating control programs (device driver programs) for peripheral modules (timers, UART, A/D, etc.) in accordance with user settings via a GUI.\nYou can download it - as well as the manual and release notes - from the web page from Renesas (you will find it under “Software Tools”: https://www.renesas.com/eu/en/products/microcontrollers-microprocessors/rh850/rh850f1x/rh850f1k.html#designsupport"
+      },
+      {
+        "type": "text",
+        "content": "There is a tool called Applilet4.\nThe Applilet4 is a software tool for automatically generating control programs (device driver programs) for peripheral modules (timers, UART, A/D, etc.) in accordance with user settings via a GUI.\nYou can download it - as well as the manual and release notes - from the web page from Renesas (you will find it under “Software Tools”: https://www.renesas.com/eu/en/products/microcontrollers-microprocessors/rh850/rh850f1x/rh850f1k.html#designsupport"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850/F1x"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850/F1x"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850/F1x"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/eu/en/products/microcontrollers-microprocessors/rh850/rh850f1x/rh850f1k.html#designsupport",
+        "url": "https://www.renesas.com/eu/en/products/microcontrollers-microprocessors/rh850/rh850f1x/rh850f1k.html#designsupport"
+      }
+    ]
+  }
+}

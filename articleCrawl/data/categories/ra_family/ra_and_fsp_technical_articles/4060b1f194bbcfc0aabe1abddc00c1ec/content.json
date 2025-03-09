@@ -1,0 +1,327 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21546612",
+    "title": "RA Family: Simple dual bank flash swap example for firmware A/B update",
+    "last_updated": "2024-03-09",
+    "extracted_at": "2025-03-08T23:12:33.227699"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Overview:\nSome RA MCUs support both a Linear Mode and a Dual Bank mode. This feature is switchable by an option memory setting. The Dual Bank flash mode is the preferred choice when user firmware A in Bank0 and user firmware B in Bank1 must be built identically to run from the same flash memory address, or when a user firmware update (including a user bootloader) must be safely completed even in the event of a power failure, while a firmware update is underway. In addition, the Dual Bank mode supports BGO (Background operation, or so called RWW), allowing flash memory to be read/executed from the current bank even when a firmware update on the other bank is in progress.\nThe example provided below is a simple way to implement a firmware update in Dual Bank mode using Xmodem. Once all the firmware updates are complete, the \"Bank Swap\" function is used to swap the current running bank with the newly downloaded bank.\nHardware configuration\n- EK-RA6M4 board (1MB flash MCU)\n- Your own USB-UART adapter (TX: P411, RX: P410)\nFlash memory configuration\n- Dual bank mode (512 KB x 2 banks) is used.\n- Each bank (Bank0, 1) is divided into user bootloader area and user application area as below.\n- The user bootloader is always built at address 0 regardless of the bank number to download.\n- The user application is always built at address 0x8000 (bootloader size = e.g., 32 Kbytes) regardless of the bank number to download.\n- The size and location of user bootloader and application can be changed as user needs.\n- Whether or not to have a user bootloader is user's choice.\nBank 0 (Block 0 to 21) memory in 1MB product\nBank 1 (Block 70 to 91) memory in 1MB product\nLinker script configuration (both bootloader and application)\n- In the linker script, two user-defined sections (.verinfo, .sizeinfo) are added immediately after the application interrupt vector (.application_vectors), so they are always placed at a fixed address locations regardless of user code modification.\n- The size of the application interrupt vector (g_Vector_table[BSP_ICU_VECTOR_MAX_ENTRIES]) depends on the MCU series used, so please ensure that both the bootloader project and application project are built on the same MCU series.\n- During the user application firmware post-build process, CRC32 is padded to the end of the user application firmware binary, and its (CRC32) location is pointed by “.sizeinfo”.\nCaution with “bin” firmware and option memory\nUser firmware can be converted to .hex, .srec, or .bin file type format in e2 studio. However, when creating a bin file, care must be taken to ensure that the option memory is not unintentionally filled with garbage values or zero values. This is because some settings in option memory cannot be permanently changed once set. e2 studio's default linker script has many memory sections (e.g. .text, .data, option_setting_x, .data_flash, qspi_flash, etc.) spread over a wide address range. Therefore, the user binary output file will be over 1 Mbyte in size, but only user code/data sections are required unless you download it new to a virgin MCU. This can be easily achieved by checking only those two check boxes in e2 studio.\nPlease don't forget to program the MCU with .srec or .hex at least once with the option memory settings to change Linear Mode to Dual Bank mode.\nAppend CRC32 to end of “bin” file\nAs an example of the firmware integrity verification process, the “application_postbuild.bat” and “srec_cat.exe” files are added in the application project folder. The \"srec_cat.exe\" is free software available on the Internet that allows you to rearrange, reformat, and relocate input files into output file as well as CRC32 calculation. Current version of e2 studio “Post-build steps” runs before the “GNU Arm Cross Create Flash Image” which creates a .bin file, so the “Append CRC32” builder was added as an alternative. If all the build processes are completed successfully, another .bin file will be created that ends with “<original bin file>_crc.bin”, which is 4 bytes (CRC32) larger than the original .bin file.\nOperation flow of the example projects\nUser bootloader\n1. Program the board with the bootloader project. Use .srec (.hex) for option memory update.\n2. The bootloader toggles the LED1 (Blue) on the board a number of times equal to the user bootloader’s own version.\n3. When the S2 button is pressed, the bootloader checks the CRC32 of the user application firmware, and if the CRC32 is correct, it jumps to the user application as shown below.\n4. If CRC32 is incorrect or an error occurs, the bootloader starts Xmodem task as shown below.\n4-1. Press 1 and download the user bootloader .bin file to the opposite bank.\n4-2. Press 2 and download the user application _crc.bin file to the opposite bank.\n4-3. Press 0 to swap the banks.\n4-4. Press 3 to reset the board.\nUser application\n1. The application toggles the LED3 (Red) on the board a number of times equal to the user application’s own version.\n2. When the S1 button is pressed, the application starts Xmodem task to download a new bootloader and application to the opposite bank.\n3. After the Xmodem download is complete, the user can determine the bank swap and reset the MCU.\nTera Term setting\n115200, 8bit, parity none, 1 stop bit, no hardware flow control.\nTo view the text properly, New-line setting for reception should be CR+LF as follows:\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "Some RA MCUs support both a Linear Mode and a Dual Bank mode. This feature is switchable by an option memory setting. The Dual Bank flash mode is the preferred choice when user firmware A in Bank0 and user firmware B in Bank1 must be built identically to run from the same flash memory address, or when a user firmware update (including a user bootloader) must be safely completed even in the event of a power failure, while a firmware update is underway. In addition, the Dual Bank mode supports BGO (Background operation, or so called RWW), allowing flash memory to be read/executed from the current bank even when a firmware update on the other bank is in progress.\nThe example provided below is a simple way to implement a firmware update in Dual Bank mode using Xmodem. Once all the firmware updates are complete, the \"Bank Swap\" function is used to swap the current running bank with the newly downloaded bank.\nHardware configuration\n- EK-RA6M4 board (1MB flash MCU)\n- Your own USB-UART adapter (TX: P411, RX: P410)\nFlash memory configuration\n- Dual bank mode (512 KB x 2 banks) is used.\n- Each bank (Bank0, 1) is divided into user bootloader area and user application area as below.\n- The user bootloader is always built at address 0 regardless of the bank number to download.\n- The user application is always built at address 0x8000 (bootloader size = e.g., 32 Kbytes) regardless of the bank number to download.\n- The size and location of user bootloader and application can be changed as user needs.\n- Whether or not to have a user bootloader is user's choice.\nBank 0 (Block 0 to 21) memory in 1MB product\nBank 1 (Block 70 to 91) memory in 1MB product\nLinker script configuration (both bootloader and application)\n- In the linker script, two user-defined sections (.verinfo, .sizeinfo) are added immediately after the application interrupt vector (.application_vectors), so they are always placed at a fixed address locations regardless of user code modification.\n- The size of the application interrupt vector (g_Vector_table[BSP_ICU_VECTOR_MAX_ENTRIES]) depends on the MCU series used, so please ensure that both the bootloader project and application project are built on the same MCU series.\n- During the user application firmware post-build process, CRC32 is padded to the end of the user application firmware binary, and its (CRC32) location is pointed by “.sizeinfo”.\nCaution with “bin” firmware and option memory\nUser firmware can be converted to .hex, .srec, or .bin file type format in e2 studio. However, when creating a bin file, care must be taken to ensure that the option memory is not unintentionally filled with garbage values or zero values. This is because some settings in option memory cannot be permanently changed once set. e2 studio's default linker script has many memory sections (e.g. .text, .data, option_setting_x, .data_flash, qspi_flash, etc.) spread over a wide address range. Therefore, the user binary output file will be over 1 Mbyte in size, but only user code/data sections are required unless you download it new to a virgin MCU. This can be easily achieved by checking only those two check boxes in e2 studio.\nPlease don't forget to program the MCU with .srec or .hex at least once with the option memory settings to change Linear Mode to Dual Bank mode.\nAppend CRC32 to end of “bin” file\nAs an example of the firmware integrity verification process, the “application_postbuild.bat” and “srec_cat.exe” files are added in the application project folder. The \"srec_cat.exe\" is free software available on the Internet that allows you to rearrange, reformat, and relocate input files into output file as well as CRC32 calculation. Current version of e2 studio “Post-build steps” runs before the “GNU Arm Cross Create Flash Image” which creates a .bin file, so the “Append CRC32” builder was added as an alternative. If all the build processes are completed successfully, another .bin file will be created that ends with “<original bin file>_crc.bin”, which is 4 bytes (CRC32) larger than the original .bin file.\nOperation flow of the example projects\nUser bootloader\n1. Program the board with the bootloader project. Use .srec (.hex) for option memory update.\n2. The bootloader toggles the LED1 (Blue) on the board a number of times equal to the user bootloader’s own version.\n3. When the S2 button is pressed, the bootloader checks the CRC32 of the user application firmware, and if the CRC32 is correct, it jumps to the user application as shown below.\n4. If CRC32 is incorrect or an error occurs, the bootloader starts Xmodem task as shown below.\n4-1. Press 1 and download the user bootloader .bin file to the opposite bank.\n4-2. Press 2 and download the user application _crc.bin file to the opposite bank.\n4-3. Press 0 to swap the banks.\n4-4. Press 3 to reset the board.\nUser application\n1. The application toggles the LED3 (Red) on the board a number of times equal to the user application’s own version.\n2. When the S1 button is pressed, the application starts Xmodem task to download a new bootloader and application to the opposite bank.\n3. After the Xmodem download is complete, the user can determine the bank swap and reset the MCU.\nTera Term setting\n115200, 8bit, parity none, 1 stop bit, no hardware flow control.\nTo view the text properly, New-line setting for reception should be CR+LF as follows:"
+      },
+      {
+        "type": "text",
+        "content": "Some RA MCUs support both a Linear Mode and a Dual Bank mode. This feature is switchable by an option memory setting. The Dual Bank flash mode is the preferred choice when user firmware A in Bank0 and user firmware B in Bank1 must be built identically to run from the same flash memory address, or when a user firmware update (including a user bootloader) must be safely completed even in the event of a power failure, while a firmware update is underway. In addition, the Dual Bank mode supports BGO (Background operation, or so called RWW), allowing flash memory to be read/executed from the current bank even when a firmware update on the other bank is in progress."
+      },
+      {
+        "type": "text",
+        "content": "The example provided below is a simple way to implement a firmware update in Dual Bank mode using Xmodem. Once all the firmware updates are complete, the \"Bank Swap\" function is used to swap the current running bank with the newly downloaded bank."
+      },
+      {
+        "type": "text",
+        "content": "Hardware configuration"
+      },
+      {
+        "type": "text",
+        "content": "- EK-RA6M4 board (1MB flash MCU)\n- Your own USB-UART adapter (TX: P411, RX: P410)"
+      },
+      {
+        "type": "text",
+        "content": "Flash memory configuration"
+      },
+      {
+        "type": "text",
+        "content": "- Dual bank mode (512 KB x 2 banks) is used.\n- Each bank (Bank0, 1) is divided into user bootloader area and user application area as below.\n- The user bootloader is always built at address 0 regardless of the bank number to download.\n- The user application is always built at address 0x8000 (bootloader size = e.g., 32 Kbytes) regardless of the bank number to download.\n- The size and location of user bootloader and application can be changed as user needs.\n- Whether or not to have a user bootloader is user's choice."
+      },
+      {
+        "type": "text",
+        "content": "Bank 0 (Block 0 to 21) memory in 1MB product"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/392358-1.png",
+          "alt_text": "",
+          "width": "489",
+          "height": "212",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/4060b1f194bbcfc0aabe1abddc00c1ec/images/87e9e983cec7aef987cedc8838701d7f.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Bank 1 (Block 70 to 91) memory in 1MB product"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/392358-2.png",
+          "alt_text": "",
+          "width": "487",
+          "height": "211",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/4060b1f194bbcfc0aabe1abddc00c1ec/images/81386aa1d109719bd5edd30b1d853787.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Linker script configuration (both bootloader and application)"
+      },
+      {
+        "type": "text",
+        "content": "- In the linker script, two user-defined sections (.verinfo, .sizeinfo) are added immediately after the application interrupt vector (.application_vectors), so they are always placed at a fixed address locations regardless of user code modification.\n- The size of the application interrupt vector (g_Vector_table[BSP_ICU_VECTOR_MAX_ENTRIES]) depends on the MCU series used, so please ensure that both the bootloader project and application project are built on the same MCU series.\n- During the user application firmware post-build process, CRC32 is padded to the end of the user application firmware binary, and its (CRC32) location is pointed by “.sizeinfo”."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/392358-3.png",
+          "alt_text": "",
+          "width": "496",
+          "height": "211",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/4060b1f194bbcfc0aabe1abddc00c1ec/images/852d51c16952b0363b3ffe3105428c28.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Caution with “bin” firmware and option memory"
+      },
+      {
+        "type": "text",
+        "content": "Caution with “bin” firmware and option memory"
+      },
+      {
+        "type": "text",
+        "content": "User firmware can be converted to .hex, .srec, or .bin file type format in e2 studio. However, when creating a bin file, care must be taken to ensure that the option memory is not unintentionally filled with garbage values or zero values. This is because some settings in option memory cannot be permanently changed once set. e2 studio's default linker script has many memory sections (e.g. .text, .data, option_setting_x, .data_flash, qspi_flash, etc.) spread over a wide address range. Therefore, the user binary output file will be over 1 Mbyte in size, but only user code/data sections are required unless you download it new to a virgin MCU. This can be easily achieved by checking only those two check boxes in e2 studio."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/392358-4.png",
+          "alt_text": "",
+          "width": "602",
+          "height": "293",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/4060b1f194bbcfc0aabe1abddc00c1ec/images/1f46c535d3a62bcbb67e1873232808ac.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Please don't forget to program the MCU with .srec or .hex at least once with the option memory settings to change Linear Mode to Dual Bank mode."
+      },
+      {
+        "type": "text",
+        "content": "Append CRC32 to end of “bin” file"
+      },
+      {
+        "type": "text",
+        "content": "Append CRC32 to end of “bin” file"
+      },
+      {
+        "type": "text",
+        "content": "As an example of the firmware integrity verification process, the “application_postbuild.bat” and “srec_cat.exe” files are added in the application project folder. The \"srec_cat.exe\" is free software available on the Internet that allows you to rearrange, reformat, and relocate input files into output file as well as CRC32 calculation. Current version of e2 studio “Post-build steps” runs before the “GNU Arm Cross Create Flash Image” which creates a .bin file, so the “Append CRC32” builder was added as an alternative. If all the build processes are completed successfully, another .bin file will be created that ends with “<original bin file>_crc.bin”, which is 4 bytes (CRC32) larger than the original .bin file."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/392358-5.png",
+          "alt_text": "",
+          "width": "377",
+          "height": "230",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/4060b1f194bbcfc0aabe1abddc00c1ec/images/6d155f5077b60f3f573ebc741a58cab5.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Operation flow of the example projects"
+      },
+      {
+        "type": "text",
+        "content": "Operation flow of the example projects"
+      },
+      {
+        "type": "text",
+        "content": "User bootloader"
+      },
+      {
+        "type": "text",
+        "content": "1. Program the board with the bootloader project. Use .srec (.hex) for option memory update.\n2. The bootloader toggles the LED1 (Blue) on the board a number of times equal to the user bootloader’s own version.\n3. When the S2 button is pressed, the bootloader checks the CRC32 of the user application firmware, and if the CRC32 is correct, it jumps to the user application as shown below."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/392358-6.png",
+          "alt_text": "",
+          "width": "320",
+          "height": "207",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/4060b1f194bbcfc0aabe1abddc00c1ec/images/34856018334af7bf447121dcc1d31579.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "4. If CRC32 is incorrect or an error occurs, the bootloader starts Xmodem task as shown below."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/392358-7.png",
+          "alt_text": "",
+          "width": "324",
+          "height": "205",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/4060b1f194bbcfc0aabe1abddc00c1ec/images/ab432ee5ccf993eb4c260cab60135cd0.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "4-1. Press 1 and download the user bootloader .bin file to the opposite bank.\n4-2. Press 2 and download the user application _crc.bin file to the opposite bank."
+      },
+      {
+        "type": "text",
+        "content": "opposite"
+      },
+      {
+        "type": "text",
+        "content": "opposite"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/392358-8.png",
+          "alt_text": "",
+          "width": "330",
+          "height": "282",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/4060b1f194bbcfc0aabe1abddc00c1ec/images/5aff6b191903590f29299de89211e103.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "4-3. Press 0 to swap the banks.\n4-4. Press 3 to reset the board."
+      },
+      {
+        "type": "text",
+        "content": "swap the banks"
+      },
+      {
+        "type": "text",
+        "content": "User application"
+      },
+      {
+        "type": "text",
+        "content": "1. The application toggles the LED3 (Red) on the board a number of times equal to the user application’s own version.\n2. When the S1 button is pressed, the application starts Xmodem task to download a new bootloader and application to the opposite bank.\n3. After the Xmodem download is complete, the user can determine the bank swap and reset the MCU."
+      },
+      {
+        "type": "text",
+        "content": "opposite"
+      },
+      {
+        "type": "text",
+        "content": "Tera Term setting"
+      },
+      {
+        "type": "text",
+        "content": "115200, 8bit, parity none, 1 stop bit, no hardware flow control.\nTo view the text properly, New-line setting for reception should be CR+LF as follows:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/392358-9.png",
+          "alt_text": "",
+          "width": "268",
+          "height": "164",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/4060b1f194bbcfc0aabe1abddc00c1ec/images/aa3cfb0d7c447951b809025a1983d51c.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/392358-1.png",
+        "alt_text": "",
+        "width": "489",
+        "height": "212",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/4060b1f194bbcfc0aabe1abddc00c1ec/images/87e9e983cec7aef987cedc8838701d7f.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/392358-2.png",
+        "alt_text": "",
+        "width": "487",
+        "height": "211",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/4060b1f194bbcfc0aabe1abddc00c1ec/images/81386aa1d109719bd5edd30b1d853787.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/392358-3.png",
+        "alt_text": "",
+        "width": "496",
+        "height": "211",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/4060b1f194bbcfc0aabe1abddc00c1ec/images/852d51c16952b0363b3ffe3105428c28.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/392358-4.png",
+        "alt_text": "",
+        "width": "602",
+        "height": "293",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/4060b1f194bbcfc0aabe1abddc00c1ec/images/1f46c535d3a62bcbb67e1873232808ac.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/392358-5.png",
+        "alt_text": "",
+        "width": "377",
+        "height": "230",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/4060b1f194bbcfc0aabe1abddc00c1ec/images/6d155f5077b60f3f573ebc741a58cab5.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/392358-6.png",
+        "alt_text": "",
+        "width": "320",
+        "height": "207",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/4060b1f194bbcfc0aabe1abddc00c1ec/images/34856018334af7bf447121dcc1d31579.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/392358-7.png",
+        "alt_text": "",
+        "width": "324",
+        "height": "205",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/4060b1f194bbcfc0aabe1abddc00c1ec/images/ab432ee5ccf993eb4c260cab60135cd0.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/392358-8.png",
+        "alt_text": "",
+        "width": "330",
+        "height": "282",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/4060b1f194bbcfc0aabe1abddc00c1ec/images/5aff6b191903590f29299de89211e103.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/392358-9.png",
+        "alt_text": "",
+        "width": "268",
+        "height": "164",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/4060b1f194bbcfc0aabe1abddc00c1ec/images/aa3cfb0d7c447951b809025a1983d51c.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": []
+  }
+}

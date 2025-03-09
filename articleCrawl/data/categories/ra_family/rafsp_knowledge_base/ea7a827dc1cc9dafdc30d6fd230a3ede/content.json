@@ -1,0 +1,534 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21652597",
+    "title": "RA Family: How to investigate when an application jumps to a Default_Handler function",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:23:10.156620"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nThe application jumps to Default_Handler function. How do I investigate the cause?\nAnswer:\nThe following application notes are available on exception handling for the RA family. Refer to the description of 4. Debugging Exception Events to determine why the exception occurred.\nRenesas RA Family Exception Handling (https://www.renesas.com/jp/ja/search?keywords=R11AN0576)\nAs described in Section 3.1.1 Exception Handler Definition, FSP is implemented so that if the user does not define an exception handler function, the Default_Handler function defined by FSP will be called. If you want to run a specific process when an exception occurs, you can define a handler function (such as HardFault_Handler) for each exception. This will cause the custom handler function to be called instead of the Default_Handler function.\nra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.c:\n/* All system exceptions in the vector table are weak references to Default_Handler. If the user wishes to handle\n * these exceptions in their code they should define their own function with the same name.\n */\n#if defined(__ICCARM__)\n #define WEAK_REF_ATTRIBUTE\n   #pragma weak HardFault_Handler                        = Default_Handler\n #pragma weak MemManage_Handler                        = Default_Handler\n #pragma weak BusFault_Handler                         = Default_Handler\n #pragma weak UsageFault_Handler                       = Default_Handler\n #pragma weak SecureFault_Handler                      = Default_Handler\n #pragma weak SVC_Handler                              = Default_Handler\n #pragma weak DebugMon_Handler                         = Default_Handler\n #pragma weak PendSV_Handler                           = Default_Handler\n #pragma weak SysTick_Handler                          = Default_Handler\n#elif defined(__GNUC__)\n   #define WEAK_REF_ATTRIBUTE    __attribute__((weak, alias(\"Default_Handler\")))\n#endif\n  void NMI_Handler(void);                // NMI has many sources and is handled by BSP\nvoid HardFault_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid MemManage_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid BusFault_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid UsageFault_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid SecureFault_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid SVC_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid DebugMon_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid PendSV_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid SysTick_Handler(void) WEAK_REF_ATTRIBUTE;\n  Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "The application jumps to Default_Handler function. How do I investigate the cause?"
+      },
+      {
+        "type": "text",
+        "content": "The application jumps to Default_Handler function. How do I investigate the cause?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe following application notes are available on exception handling for the RA family. Refer to the description of 4. Debugging Exception Events to determine why the exception occurred.\nRenesas RA Family Exception Handling (https://www.renesas.com/jp/ja/search?keywords=R11AN0576)\nAs described in Section 3.1.1 Exception Handler Definition, FSP is implemented so that if the user does not define an exception handler function, the Default_Handler function defined by FSP will be called. If you want to run a specific process when an exception occurs, you can define a handler function (such as HardFault_Handler) for each exception. This will cause the custom handler function to be called instead of the Default_Handler function.\nra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.c:\n/* All system exceptions in the vector table are weak references to Default_Handler. If the user wishes to handle\n * these exceptions in their code they should define their own function with the same name.\n */\n#if defined(__ICCARM__)\n #define WEAK_REF_ATTRIBUTE\n   #pragma weak HardFault_Handler                        = Default_Handler\n #pragma weak MemManage_Handler                        = Default_Handler\n #pragma weak BusFault_Handler                         = Default_Handler\n #pragma weak UsageFault_Handler                       = Default_Handler\n #pragma weak SecureFault_Handler                      = Default_Handler\n #pragma weak SVC_Handler                              = Default_Handler\n #pragma weak DebugMon_Handler                         = Default_Handler\n #pragma weak PendSV_Handler                           = Default_Handler\n #pragma weak SysTick_Handler                          = Default_Handler\n#elif defined(__GNUC__)\n   #define WEAK_REF_ATTRIBUTE    __attribute__((weak, alias(\"Default_Handler\")))\n#endif\n  void NMI_Handler(void);                // NMI has many sources and is handled by BSP\nvoid HardFault_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid MemManage_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid BusFault_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid UsageFault_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid SecureFault_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid SVC_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid DebugMon_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid PendSV_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid SysTick_Handler(void) WEAK_REF_ATTRIBUTE;\n  Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "The following application notes are available on exception handling for the RA family. Refer to the description of 4. Debugging Exception Events to determine why the exception occurred.\nRenesas RA Family Exception Handling (https://www.renesas.com/jp/ja/search?keywords=R11AN0576)\nAs described in Section 3.1.1 Exception Handler Definition, FSP is implemented so that if the user does not define an exception handler function, the Default_Handler function defined by FSP will be called. If you want to run a specific process when an exception occurs, you can define a handler function (such as HardFault_Handler) for each exception. This will cause the custom handler function to be called instead of the Default_Handler function.\nra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.c:\n/* All system exceptions in the vector table are weak references to Default_Handler. If the user wishes to handle\n * these exceptions in their code they should define their own function with the same name.\n */\n#if defined(__ICCARM__)\n #define WEAK_REF_ATTRIBUTE\n   #pragma weak HardFault_Handler                        = Default_Handler\n #pragma weak MemManage_Handler                        = Default_Handler\n #pragma weak BusFault_Handler                         = Default_Handler\n #pragma weak UsageFault_Handler                       = Default_Handler\n #pragma weak SecureFault_Handler                      = Default_Handler\n #pragma weak SVC_Handler                              = Default_Handler\n #pragma weak DebugMon_Handler                         = Default_Handler\n #pragma weak PendSV_Handler                           = Default_Handler\n #pragma weak SysTick_Handler                          = Default_Handler\n#elif defined(__GNUC__)\n   #define WEAK_REF_ATTRIBUTE    __attribute__((weak, alias(\"Default_Handler\")))\n#endif\n  void NMI_Handler(void);                // NMI has many sources and is handled by BSP\nvoid HardFault_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid MemManage_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid BusFault_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid UsageFault_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid SecureFault_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid SVC_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid DebugMon_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid PendSV_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid SysTick_Handler(void) WEAK_REF_ATTRIBUTE;"
+      },
+      {
+        "type": "text",
+        "content": "The following application notes are available on exception handling for the RA family. Refer to the description of 4. Debugging Exception Events to determine why the exception occurred."
+      },
+      {
+        "type": "text",
+        "content": "As described in Section 3.1.1 Exception Handler Definition, FSP is implemented so that if the user does not define an exception handler function, the Default_Handler function defined by FSP will be called. If you want to run a specific process when an exception occurs, you can define a handler function (such as HardFault_Handler) for each exception. This will cause the custom handler function to be called instead of the Default_Handler function."
+      },
+      {
+        "type": "text",
+        "content": "ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.c:"
+      },
+      {
+        "type": "text",
+        "content": "/* All system exceptions in the vector table are weak references to Default_Handler. If the user wishes to handle"
+      },
+      {
+        "type": "text",
+        "content": "/* All system exceptions in the vector table are weak references to Default_Handler. If the user wishes to handle"
+      },
+      {
+        "type": "text",
+        "content": "* these exceptions in their code they should define their own function with the same name."
+      },
+      {
+        "type": "text",
+        "content": "* these exceptions in their code they should define their own function with the same name."
+      },
+      {
+        "type": "text",
+        "content": "*/"
+      },
+      {
+        "type": "text",
+        "content": "*/"
+      },
+      {
+        "type": "text",
+        "content": "#if defined(__ICCARM__)"
+      },
+      {
+        "type": "text",
+        "content": "#if"
+      },
+      {
+        "type": "text",
+        "content": "defined(__ICCARM__)"
+      },
+      {
+        "type": "text",
+        "content": "#define WEAK_REF_ATTRIBUTE"
+      },
+      {
+        "type": "text",
+        "content": "#define"
+      },
+      {
+        "type": "text",
+        "content": "WEAK_REF_ATTRIBUTE"
+      },
+      {
+        "type": "text",
+        "content": "#pragma weak HardFault_Handler                        = Default_Handler"
+      },
+      {
+        "type": "text",
+        "content": "#pragma"
+      },
+      {
+        "type": "text",
+        "content": "weak HardFault_Handler                        = Default_Handler"
+      },
+      {
+        "type": "text",
+        "content": "HardFault_Handler"
+      },
+      {
+        "type": "text",
+        "content": "#pragma weak MemManage_Handler                        = Default_Handler"
+      },
+      {
+        "type": "text",
+        "content": "#pragma"
+      },
+      {
+        "type": "text",
+        "content": "weak MemManage_Handler                        = Default_Handler"
+      },
+      {
+        "type": "text",
+        "content": "#pragma weak BusFault_Handler                         = Default_Handler"
+      },
+      {
+        "type": "text",
+        "content": "#pragma"
+      },
+      {
+        "type": "text",
+        "content": "weak BusFault_Handler                         = Default_Handler"
+      },
+      {
+        "type": "text",
+        "content": "#pragma weak UsageFault_Handler                       = Default_Handler"
+      },
+      {
+        "type": "text",
+        "content": "#pragma"
+      },
+      {
+        "type": "text",
+        "content": "weak UsageFault_Handler                       = Default_Handler"
+      },
+      {
+        "type": "text",
+        "content": "#pragma weak SecureFault_Handler                      = Default_Handler"
+      },
+      {
+        "type": "text",
+        "content": "#pragma"
+      },
+      {
+        "type": "text",
+        "content": "weak SecureFault_Handler                      = Default_Handler"
+      },
+      {
+        "type": "text",
+        "content": "#pragma weak SVC_Handler                              = Default_Handler"
+      },
+      {
+        "type": "text",
+        "content": "#pragma"
+      },
+      {
+        "type": "text",
+        "content": "weak SVC_Handler                              = Default_Handler"
+      },
+      {
+        "type": "text",
+        "content": "#pragma weak DebugMon_Handler                         = Default_Handler"
+      },
+      {
+        "type": "text",
+        "content": "#pragma"
+      },
+      {
+        "type": "text",
+        "content": "weak DebugMon_Handler                         = Default_Handler"
+      },
+      {
+        "type": "text",
+        "content": "#pragma weak PendSV_Handler                           = Default_Handler"
+      },
+      {
+        "type": "text",
+        "content": "#pragma"
+      },
+      {
+        "type": "text",
+        "content": "weak PendSV_Handler                           = Default_Handler"
+      },
+      {
+        "type": "text",
+        "content": "#pragma weak SysTick_Handler                          = Default_Handler"
+      },
+      {
+        "type": "text",
+        "content": "#pragma"
+      },
+      {
+        "type": "text",
+        "content": "weak SysTick_Handler                          = Default_Handler"
+      },
+      {
+        "type": "text",
+        "content": "#elif defined(__GNUC__)"
+      },
+      {
+        "type": "text",
+        "content": "#elif"
+      },
+      {
+        "type": "text",
+        "content": "defined(__GNUC__)"
+      },
+      {
+        "type": "text",
+        "content": "#define WEAK_REF_ATTRIBUTE    __attribute__((weak, alias(\"Default_Handler\")))"
+      },
+      {
+        "type": "text",
+        "content": "#define"
+      },
+      {
+        "type": "text",
+        "content": "WEAK_REF_ATTRIBUTE    __attribute__((weak, alias("
+      },
+      {
+        "type": "text",
+        "content": "\"Default_Handler\""
+      },
+      {
+        "type": "text",
+        "content": ")))"
+      },
+      {
+        "type": "text",
+        "content": "#endif"
+      },
+      {
+        "type": "text",
+        "content": "#endif"
+      },
+      {
+        "type": "text",
+        "content": "void NMI_Handler(void);                // NMI has many sources and is handled by BSP"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "NMI_Handler"
+      },
+      {
+        "type": "text",
+        "content": "("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ");"
+      },
+      {
+        "type": "text",
+        "content": "// NMI has many sources and is handled by BSP"
+      },
+      {
+        "type": "text",
+        "content": "void HardFault_Handler(void) WEAK_REF_ATTRIBUTE;"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "HardFault_Handler"
+      },
+      {
+        "type": "text",
+        "content": "("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ") WEAK_REF_ATTRIBUTE;"
+      },
+      {
+        "type": "text",
+        "content": "void MemManage_Handler(void) WEAK_REF_ATTRIBUTE;"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "MemManage_Handler"
+      },
+      {
+        "type": "text",
+        "content": "("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ") WEAK_REF_ATTRIBUTE;"
+      },
+      {
+        "type": "text",
+        "content": "void BusFault_Handler(void) WEAK_REF_ATTRIBUTE;"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "BusFault_Handler"
+      },
+      {
+        "type": "text",
+        "content": "("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ") WEAK_REF_ATTRIBUTE;"
+      },
+      {
+        "type": "text",
+        "content": "void UsageFault_Handler(void) WEAK_REF_ATTRIBUTE;"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "UsageFault_Handler"
+      },
+      {
+        "type": "text",
+        "content": "("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ") WEAK_REF_ATTRIBUTE;"
+      },
+      {
+        "type": "text",
+        "content": "void SecureFault_Handler(void) WEAK_REF_ATTRIBUTE;"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "SecureFault_Handler"
+      },
+      {
+        "type": "text",
+        "content": "("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ") WEAK_REF_ATTRIBUTE;"
+      },
+      {
+        "type": "text",
+        "content": "void SVC_Handler(void) WEAK_REF_ATTRIBUTE;"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "SVC_Handler"
+      },
+      {
+        "type": "text",
+        "content": "("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ") WEAK_REF_ATTRIBUTE;"
+      },
+      {
+        "type": "text",
+        "content": "void DebugMon_Handler(void) WEAK_REF_ATTRIBUTE;"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "DebugMon_Handler"
+      },
+      {
+        "type": "text",
+        "content": "("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ") WEAK_REF_ATTRIBUTE;"
+      },
+      {
+        "type": "text",
+        "content": "void PendSV_Handler(void) WEAK_REF_ATTRIBUTE;"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "PendSV_Handler"
+      },
+      {
+        "type": "text",
+        "content": "("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ") WEAK_REF_ATTRIBUTE;"
+      },
+      {
+        "type": "text",
+        "content": "void SysTick_Handler(void) WEAK_REF_ATTRIBUTE;"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "SysTick_Handler"
+      },
+      {
+        "type": "text",
+        "content": "("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ") WEAK_REF_ATTRIBUTE;"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "/* All system exceptions in the vector table are weak references to Default_Handler. If the user wishes to handle\n * these exceptions in their code they should define their own function with the same name.\n */\n#if defined(__ICCARM__)\n #define WEAK_REF_ATTRIBUTE\n   #pragma weak HardFault_Handler                        = Default_Handler\n #pragma weak MemManage_Handler                        = Default_Handler\n #pragma weak BusFault_Handler                         = Default_Handler\n #pragma weak UsageFault_Handler                       = Default_Handler\n #pragma weak SecureFault_Handler                      = Default_Handler\n #pragma weak SVC_Handler                              = Default_Handler\n #pragma weak DebugMon_Handler                         = Default_Handler\n #pragma weak PendSV_Handler                           = Default_Handler\n #pragma weak SysTick_Handler                          = Default_Handler\n#elif defined(__GNUC__)\n   #define WEAK_REF_ATTRIBUTE    __attribute__((weak, alias(\"Default_Handler\")))\n#endif\n  void NMI_Handler(void);                // NMI has many sources and is handled by BSP\nvoid HardFault_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid MemManage_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid BusFault_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid UsageFault_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid SecureFault_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid SVC_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid DebugMon_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid PendSV_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid SysTick_Handler(void) WEAK_REF_ATTRIBUTE;"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "Renesas RA Family Exception Handling",
+        "url": "https://www.renesas.com/jp/ja/search?keywords=R11AN0576"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21652603"
+      }
+    ]
+  }
+}

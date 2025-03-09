@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21225578",
+    "title": "RL78/F24 Locked",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:55:12.030204"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDuring software development for an internal project using microcontroller R7F124FBJ we ported the bootloader from our older product (using microcontroller R5F10BAG). The memory addresses were updated in the liker file, but the FLPEN bit introduced for the new family was missed. And we are not able to connect to the flashed parts anymore.\nAnswer:\nUnfortunately, this parts cannot be fixed anymore. If the FLPEN bit is set to \"0\" once, the serial programming interface is disabled and cannot be enabled anymore. This is a security feature and is meant to be irreversible.\nSuitable Products\nRL78/F24"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nDuring software development for an internal project using microcontroller R7F124FBJ we ported the bootloader from our older product (using microcontroller R5F10BAG). The memory addresses were updated in the liker file, but the FLPEN bit introduced for the new family was missed. And we are not able to connect to the flashed parts anymore.\nAnswer:\nUnfortunately, this parts cannot be fixed anymore. If the FLPEN bit is set to \"0\" once, the serial programming interface is disabled and cannot be enabled anymore. This is a security feature and is meant to be irreversible.\nSuitable Products\nRL78/F24"
+      },
+      {
+        "type": "text",
+        "content": "During software development for an internal project using microcontroller R7F124FBJ we ported the bootloader from our older product (using microcontroller R5F10BAG). The memory addresses were updated in the liker file, but the FLPEN bit introduced for the new family was missed. And we are not able to connect to the flashed parts anymore."
+      },
+      {
+        "type": "text",
+        "content": "During software development for an internal project using microcontroller R7F124FBJ we ported the bootloader from our older product (using microcontroller R5F10BAG). The memory addresses were updated in the liker file, but the FLPEN bit introduced for the new family was missed. And we are not able to connect to the flashed parts anymore."
+      },
+      {
+        "type": "text",
+        "content": "During software development for an internal project using microcontroller R7F124FBJ we ported the bootloader from our older product (using microcontroller R5F10BAG). The memory addresses were updated in the liker file, but the FLPEN bit introduced for the new family was missed. And we are not able to connect to the flashed parts anymore."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nUnfortunately, this parts cannot be fixed anymore. If the FLPEN bit is set to \"0\" once, the serial programming interface is disabled and cannot be enabled anymore. This is a security feature and is meant to be irreversible.\nSuitable Products\nRL78/F24"
+      },
+      {
+        "type": "text",
+        "content": "Unfortunately, this parts cannot be fixed anymore. If the FLPEN bit is set to \"0\" once, the serial programming interface is disabled and cannot be enabled anymore. This is a security feature and is meant to be irreversible."
+      },
+      {
+        "type": "text",
+        "content": "Unfortunately, this parts cannot be fixed anymore. If the FLPEN bit is set to \"0\" once, the serial programming interface is disabled and cannot be enabled anymore. This is a security feature and is meant to be irreversible."
+      },
+      {
+        "type": "text",
+        "content": "Unfortunately, this parts cannot be fixed anymore."
+      },
+      {
+        "type": "text",
+        "content": "If the FLPEN bit is set to \"0\" once, the serial programming interface is disabled and cannot be enabled anymore. This is a security feature and is meant to be irreversible."
+      },
+      {
+        "type": "text",
+        "content": "If the FLPEN bit is set to \"0\" once, the serial programming interface is disabled and cannot be enabled anymore. This is a security feature and is meant to be irreversible."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/F24"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/F24"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/F24"
+    ],
+    "links": []
+  }
+}

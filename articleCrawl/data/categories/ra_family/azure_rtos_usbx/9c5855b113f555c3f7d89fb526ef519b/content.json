@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20311712",
+    "title": "RA Family: How do I set the timeout for USBX CDC-ACM transfer?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:34:23.185621"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there any way to set a timeout for USBX Device CDC-ACM read/write API calls?\nAnswer:\nNo, you cannot set a timeout for USBX Device Class CDC-ACM read/write API calls; however, you can use the _ux_device_class_cdc_acm_ioctl() function to set a timeout. If the tick of ThreadX is 10msec and the timeout is set to 10 seconds, the timeout setting is 1000.\nUX_SLAVE_CLASS_CDC_ACM cdc_instance; \nULONG timeout = 1000;   // 10sec = 1000ticks (when 10ms/tick)\n\n// To set a timeout period for the read API \nux_device_class_cdc_acm_ioctl(&cdc_instance, UX_SLAVE_CLASS_CDC_ACM_IOCTL_SET_READ_TIMEOUT, (ULONG *)timeout);\n// To set a timeout period for the write API \nux_device_class_cdc_acm_ioctl(&cdc_instance, UX_SLAVE_CLASS_CDC_ACM_IOCTL_SET_WRITE_TIMEOUT, (ULONG *)timeout); \nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "Is there any way to set a timeout for USBX Device CDC-ACM read/write API calls?"
+      },
+      {
+        "type": "text",
+        "content": "Is there any way to set a timeout for USBX Device CDC-ACM read/write API calls?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nNo, you cannot set a timeout for USBX Device Class CDC-ACM read/write API calls; however, you can use the _ux_device_class_cdc_acm_ioctl() function to set a timeout. If the tick of ThreadX is 10msec and the timeout is set to 10 seconds, the timeout setting is 1000.\nUX_SLAVE_CLASS_CDC_ACM cdc_instance; \nULONG timeout = 1000;   // 10sec = 1000ticks (when 10ms/tick)\n\n// To set a timeout period for the read API \nux_device_class_cdc_acm_ioctl(&cdc_instance, UX_SLAVE_CLASS_CDC_ACM_IOCTL_SET_READ_TIMEOUT, (ULONG *)timeout);\n// To set a timeout period for the write API \nux_device_class_cdc_acm_ioctl(&cdc_instance, UX_SLAVE_CLASS_CDC_ACM_IOCTL_SET_WRITE_TIMEOUT, (ULONG *)timeout); \nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "No, you cannot set a timeout for USBX Device Class CDC-ACM read/write API calls; however, you can use the _ux_device_class_cdc_acm_ioctl() function to set a timeout. If the tick of ThreadX is 10msec and the timeout is set to 10 seconds, the timeout setting is 1000.\nUX_SLAVE_CLASS_CDC_ACM cdc_instance; \nULONG timeout = 1000;   // 10sec = 1000ticks (when 10ms/tick)\n\n// To set a timeout period for the read API \nux_device_class_cdc_acm_ioctl(&cdc_instance, UX_SLAVE_CLASS_CDC_ACM_IOCTL_SET_READ_TIMEOUT, (ULONG *)timeout);\n// To set a timeout period for the write API \nux_device_class_cdc_acm_ioctl(&cdc_instance, UX_SLAVE_CLASS_CDC_ACM_IOCTL_SET_WRITE_TIMEOUT, (ULONG *)timeout);"
+      },
+      {
+        "type": "text",
+        "content": "No, you cannot set a timeout for USBX Device Class CDC-ACM read/write API calls; however, you can use the _ux_device_class_cdc_acm_ioctl() function to set a timeout. If the tick of ThreadX is 10msec and the timeout is set to 10 seconds, the timeout setting is 1000."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20311714"
+      }
+    ]
+  }
+}

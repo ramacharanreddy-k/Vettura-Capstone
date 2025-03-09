@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20459405",
+    "title": "RA Family: How to create a critical section when using FSP",
+    "last_updated": "2022-05-04",
+    "extracted_at": "2025-03-08T23:20:43.522858"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to create a critical section when using FSP\nAnswer:\nTo disable CPU interrupts in a user application, enclose the predefined macro before and after the process as shown below.\nFSP_CRITICAL_SECTION_DEFINE;\nFSP_CRITICAL_SECTION_ENTER;\n\n(critical codes)\n\nFSP_CRITICAL_SECTION_EXIT;\nIn the critical section, the execution priority is set to 0 by setting the PRIMASK register. Therefore, all exceptions except NMI (priority is -2) and HardFault (priority is -1) are inhibited. However, if BSP_CFG_IRQ_MASK_LEVEL_FOR_CRITICAL_SECTION is defined by user, its value is set to the BASEPRI register and interrupts of this priority or lower are inhibited.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "How to create a critical section when using FSP"
+      },
+      {
+        "type": "text",
+        "content": "How to create a critical section when using FSP"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nTo disable CPU interrupts in a user application, enclose the predefined macro before and after the process as shown below.\nFSP_CRITICAL_SECTION_DEFINE;\nFSP_CRITICAL_SECTION_ENTER;\n\n(critical codes)\n\nFSP_CRITICAL_SECTION_EXIT;\nIn the critical section, the execution priority is set to 0 by setting the PRIMASK register. Therefore, all exceptions except NMI (priority is -2) and HardFault (priority is -1) are inhibited. However, if BSP_CFG_IRQ_MASK_LEVEL_FOR_CRITICAL_SECTION is defined by user, its value is set to the BASEPRI register and interrupts of this priority or lower are inhibited.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "To disable CPU interrupts in a user application, enclose the predefined macro before and after the process as shown below.\nFSP_CRITICAL_SECTION_DEFINE;\nFSP_CRITICAL_SECTION_ENTER;\n\n(critical codes)\n\nFSP_CRITICAL_SECTION_EXIT;\nIn the critical section, the execution priority is set to 0 by setting the PRIMASK register. Therefore, all exceptions except NMI (priority is -2) and HardFault (priority is -1) are inhibited. However, if BSP_CFG_IRQ_MASK_LEVEL_FOR_CRITICAL_SECTION is defined by user, its value is set to the BASEPRI register and interrupts of this priority or lower are inhibited."
+      },
+      {
+        "type": "text",
+        "content": "To disable CPU interrupts in a user application, enclose the predefined macro before and after the process as shown below."
+      },
+      {
+        "type": "text",
+        "content": "In the critical section, the execution priority is set to 0 by setting the PRIMASK register. Therefore, all exceptions except NMI (priority is -2) and HardFault (priority is -1) are inhibited. However, if BSP_CFG_IRQ_MASK_LEVEL_FOR_CRITICAL_SECTION is defined by user, its value is set to the BASEPRI register and interrupts of this priority or lower are inhibited."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20459397"
+      }
+    ]
+  }
+}

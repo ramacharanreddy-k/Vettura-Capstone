@@ -1,0 +1,463 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21397542",
+    "title": "How to use the ADC window comparison feature in an RA MCU",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:23:35.642159"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "As we all know, an analog-to-digital converter, commonly known as ADC, refers to a device that converts an analog signal of a continuous variable into a discrete digital signal. It is mainly used for digital acquisition of analog signals for data processing. Typically, the conversion result is read when the conversion is complete. The window comparison feature in the ADC detects whether the ADC result is below or above a certain threshold, and can trigger an interrupt when the conversion result is within a certain range, with little to no software intervention. This configuration is very useful in that it monitors whether the signal is maintained within a specific range as required, or when the signal moves out of the range, as when a battery is low or overcharged.\nIn this article, the RA4M2 is used as an example to describe how to set up the ADC window comparison function.\nRA MCUs typically include a 12-bit successive approximation A/D converter (ADC12) unit with up to 13 analog input channels, temperature sensor outputs, and internal reference voltages for conversion.\nThe ADC12 provides a comparison function (Window A and Window B). The comparison function specifies the upper and lower limits of the reference value for window A and window B, respectively, and the output is interrupted when the A/D conversion value of the selected channel satisfies the comparison conditions. The main differences between Window A and Window B are the difference in their interrupt output signals and the restriction that Window B can only select one channel.\nThis section uses window A as an example. Window A has the following 4 comparison modes.\nThe result is below the threshold\nThe result is above the threshold\nThe results are within the window\nThe results are outside the window\nThe registers related to the Window A comparison function are ADCMPCR, ADCMPLR0/1, and ADCMPDR0/1 registers, which can be found in the RA hardware manual for details.\nThe ADC data is compared to a settable high and low threshold, and a comparison break can be automatically generated for the ADC data within, outside of, high, or low within the set threshold. There are three option locations that need to be set, and we'll go through each of the property settings and user code in each case.\n1. When the A/D conversion result is higher than the threshold value, a window comparison A interrupt (ADC120_CMPAI) is generated\nTo implement the above comparison function, set the ADC properties in the FSP as shown in the figure below.\n(1) Input -> Window Compare -> Window A\nEnable: Enabled\nLower Reference: Set the threshold here- in this example it is set to 1000.\n(2) Input -> Window Compare\nWindow Mode: Disabled\n(3) The CMPLCHA0 bit needs to be set to \"1\" in the code as shown below.\nR_ADC0->ADCMPLR_b->CMPLCHA0 = 1;\nWhen the AD conversion result is > ADCMPDR0 (at the time of the Lower Reference setting), a Compare interrupt is generated.\n2. When the A/D conversion result is lower than the threshold value, a window comparison A interrupt (ADC120_CMPAI) is generated\nTo perform the comparison function in the figure above, set the ADC properties in the FSP as shown in the figure below.\n(1) Input -> Window Compare -> Window A\nEnable: Enabled\nLower Reference: Set the threshold here- in this example 1000 is used.\n(2) Input -> Window Compare\nWindow Mode: Disabled\n(3) The CMPLCHA0 bit needs to be set to \"0\" in the code as shown below.\nR_ADC0->ADCMPLR_b->CMPLCHA0 = 0;\nWhen the AD conversion result is < ADCMPDR0 (Lower Reference setting), a Compare interrupt is generated.\n3. The A/D conversion result is within the threshold\nTo perform the comparison function in the figure above, set the ADC properties in the FSP as shown in the figure below.\n(1) Input -> Window Compare -> Window A\nEnable: Enabled\nLower Reference, Upper Reference: Set the threshold here- in this example 1000 and 3000 are used.\n(2) Input -> Window Compare\nWindow Mode: Enabled\n(3) The CMPLCHA0 bit needs to be set to \"1\" in the code as shown below.\nR_ADC0->ADCMPLR_b->CMPLCHA0 = 1;\nWhen ADCMPDR0 ( Lower Reference set) < AD conversion result < ADCMPDR1 ( Upper Reference set), a Compare interrupt is generated.\n4. The A/D conversion result is outside the threshold\nTo perform the comparison function in the figure above, set the ADC properties in the FSP as shown in the figure below.\n(1) Input -> Window Compare -> Window A\nEnable: Enabled\nLower Reference, Upper Reference: Set the threshold here- in this example 1000 and 3000 are used.\n(2) Input -> Window Compare\nWindow Mode: Enabled\n(3) The CMPLCHA0 bit needs to be set to \"0\" in the code as shown below.\nR_ADC0->ADCMPLR_b->CMPLCHA0 = 0;\nGenerated when the AD conversion result < ADCMPDR0 (at the Lower Reference setting) or > ADCMPDR1 (at the Upper Reference setting). Compare is interrupted.\nAlso, be aware of the following limitations when using the window comparison feature:\nThe compare function cannot be used together with the self-diagnosis function or double-trigger mode. (The compare function is not available for ADRD, ADDBLDR, ADDBLDRA, and ADDBLDRB.)\nSpecify single scan mode when using match/mismatch event outputs.\nWhen the temperature sensor output or internal reference voltage is selected for Window A, Window B operations are disabled.\nWhen the temperature sensor output or internal reference voltage is selected for Window B, Window A operations are disabled.\nSetting the same channel for Window A and Window B is prohibited.\nSet the reference voltage values so that the high-potential reference voltage value is equal to or larger than the low-potential reference voltage value.\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "As we all know, an analog-to-digital converter, commonly known as ADC, refers to a device that converts an analog signal of a continuous variable into a discrete digital signal. It is mainly used for digital acquisition of analog signals for data processing. Typically, the conversion result is read when the conversion is complete. The window comparison feature in the ADC detects whether the ADC result is below or above a certain threshold, and can trigger an interrupt when the conversion result is within a certain range, with little to no software intervention. This configuration is very useful in that it monitors whether the signal is maintained within a specific range as required, or when the signal moves out of the range, as when a battery is low or overcharged.\nIn this article, the RA4M2 is used as an example to describe how to set up the ADC window comparison function.\nRA MCUs typically include a 12-bit successive approximation A/D converter (ADC12) unit with up to 13 analog input channels, temperature sensor outputs, and internal reference voltages for conversion.\nThe ADC12 provides a comparison function (Window A and Window B). The comparison function specifies the upper and lower limits of the reference value for window A and window B, respectively, and the output is interrupted when the A/D conversion value of the selected channel satisfies the comparison conditions. The main differences between Window A and Window B are the difference in their interrupt output signals and the restriction that Window B can only select one channel.\nThis section uses window A as an example. Window A has the following 4 comparison modes.\nThe result is below the threshold\nThe result is above the threshold\nThe results are within the window\nThe results are outside the window\nThe registers related to the Window A comparison function are ADCMPCR, ADCMPLR0/1, and ADCMPDR0/1 registers, which can be found in the RA hardware manual for details.\nThe ADC data is compared to a settable high and low threshold, and a comparison break can be automatically generated for the ADC data within, outside of, high, or low within the set threshold. There are three option locations that need to be set, and we'll go through each of the property settings and user code in each case.\n1. When the A/D conversion result is higher than the threshold value, a window comparison A interrupt (ADC120_CMPAI) is generated\nTo implement the above comparison function, set the ADC properties in the FSP as shown in the figure below.\n(1) Input -> Window Compare -> Window A\nEnable: Enabled\nLower Reference: Set the threshold here- in this example it is set to 1000.\n(2) Input -> Window Compare\nWindow Mode: Disabled\n(3) The CMPLCHA0 bit needs to be set to \"1\" in the code as shown below.\nR_ADC0->ADCMPLR_b->CMPLCHA0 = 1;\nWhen the AD conversion result is > ADCMPDR0 (at the time of the Lower Reference setting), a Compare interrupt is generated.\n2. When the A/D conversion result is lower than the threshold value, a window comparison A interrupt (ADC120_CMPAI) is generated\nTo perform the comparison function in the figure above, set the ADC properties in the FSP as shown in the figure below.\n(1) Input -> Window Compare -> Window A\nEnable: Enabled\nLower Reference: Set the threshold here- in this example 1000 is used.\n(2) Input -> Window Compare\nWindow Mode: Disabled\n(3) The CMPLCHA0 bit needs to be set to \"0\" in the code as shown below.\nR_ADC0->ADCMPLR_b->CMPLCHA0 = 0;\nWhen the AD conversion result is < ADCMPDR0 (Lower Reference setting), a Compare interrupt is generated.\n3. The A/D conversion result is within the threshold\nTo perform the comparison function in the figure above, set the ADC properties in the FSP as shown in the figure below.\n(1) Input -> Window Compare -> Window A\nEnable: Enabled\nLower Reference, Upper Reference: Set the threshold here- in this example 1000 and 3000 are used.\n(2) Input -> Window Compare\nWindow Mode: Enabled\n(3) The CMPLCHA0 bit needs to be set to \"1\" in the code as shown below.\nR_ADC0->ADCMPLR_b->CMPLCHA0 = 1;\nWhen ADCMPDR0 ( Lower Reference set) < AD conversion result < ADCMPDR1 ( Upper Reference set), a Compare interrupt is generated.\n4. The A/D conversion result is outside the threshold\nTo perform the comparison function in the figure above, set the ADC properties in the FSP as shown in the figure below.\n(1) Input -> Window Compare -> Window A\nEnable: Enabled\nLower Reference, Upper Reference: Set the threshold here- in this example 1000 and 3000 are used.\n(2) Input -> Window Compare\nWindow Mode: Enabled\n(3) The CMPLCHA0 bit needs to be set to \"0\" in the code as shown below.\nR_ADC0->ADCMPLR_b->CMPLCHA0 = 0;\nGenerated when the AD conversion result < ADCMPDR0 (at the Lower Reference setting) or > ADCMPDR1 (at the Upper Reference setting). Compare is interrupted.\nAlso, be aware of the following limitations when using the window comparison feature:\nThe compare function cannot be used together with the self-diagnosis function or double-trigger mode. (The compare function is not available for ADRD, ADDBLDR, ADDBLDRA, and ADDBLDRB.)\nSpecify single scan mode when using match/mismatch event outputs.\nWhen the temperature sensor output or internal reference voltage is selected for Window A, Window B operations are disabled.\nWhen the temperature sensor output or internal reference voltage is selected for Window B, Window A operations are disabled.\nSetting the same channel for Window A and Window B is prohibited.\nSet the reference voltage values so that the high-potential reference voltage value is equal to or larger than the low-potential reference voltage value.\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "As we all know, an analog-to-digital converter, commonly known as ADC, refers to a device that converts an analog signal of a continuous variable into a discrete digital signal. It is mainly used for digital acquisition of analog signals for data processing. Typically, the conversion result is read when the conversion is complete. The window comparison feature in the ADC detects whether the ADC result is below or above a certain threshold, and can trigger an interrupt when the conversion result is within a certain range, with little to no software intervention. This configuration is very useful in that it monitors whether the signal is maintained within a specific range as required, or when the signal moves out of the range, as when a battery is low or overcharged.\nIn this article, the RA4M2 is used as an example to describe how to set up the ADC window comparison function.\nRA MCUs typically include a 12-bit successive approximation A/D converter (ADC12) unit with up to 13 analog input channels, temperature sensor outputs, and internal reference voltages for conversion.\nThe ADC12 provides a comparison function (Window A and Window B). The comparison function specifies the upper and lower limits of the reference value for window A and window B, respectively, and the output is interrupted when the A/D conversion value of the selected channel satisfies the comparison conditions. The main differences between Window A and Window B are the difference in their interrupt output signals and the restriction that Window B can only select one channel.\nThis section uses window A as an example. Window A has the following 4 comparison modes.\nThe result is below the threshold\nThe result is above the threshold\nThe results are within the window\nThe results are outside the window\nThe registers related to the Window A comparison function are ADCMPCR, ADCMPLR0/1, and ADCMPDR0/1 registers, which can be found in the RA hardware manual for details.\nThe ADC data is compared to a settable high and low threshold, and a comparison break can be automatically generated for the ADC data within, outside of, high, or low within the set threshold. There are three option locations that need to be set, and we'll go through each of the property settings and user code in each case.\n1. When the A/D conversion result is higher than the threshold value, a window comparison A interrupt (ADC120_CMPAI) is generated\nTo implement the above comparison function, set the ADC properties in the FSP as shown in the figure below.\n(1) Input -> Window Compare -> Window A\nEnable: Enabled\nLower Reference: Set the threshold here- in this example it is set to 1000.\n(2) Input -> Window Compare\nWindow Mode: Disabled\n(3) The CMPLCHA0 bit needs to be set to \"1\" in the code as shown below.\nR_ADC0->ADCMPLR_b->CMPLCHA0 = 1;\nWhen the AD conversion result is > ADCMPDR0 (at the time of the Lower Reference setting), a Compare interrupt is generated.\n2. When the A/D conversion result is lower than the threshold value, a window comparison A interrupt (ADC120_CMPAI) is generated\nTo perform the comparison function in the figure above, set the ADC properties in the FSP as shown in the figure below.\n(1) Input -> Window Compare -> Window A\nEnable: Enabled\nLower Reference: Set the threshold here- in this example 1000 is used.\n(2) Input -> Window Compare\nWindow Mode: Disabled\n(3) The CMPLCHA0 bit needs to be set to \"0\" in the code as shown below.\nR_ADC0->ADCMPLR_b->CMPLCHA0 = 0;\nWhen the AD conversion result is < ADCMPDR0 (Lower Reference setting), a Compare interrupt is generated.\n3. The A/D conversion result is within the threshold\nTo perform the comparison function in the figure above, set the ADC properties in the FSP as shown in the figure below.\n(1) Input -> Window Compare -> Window A\nEnable: Enabled\nLower Reference, Upper Reference: Set the threshold here- in this example 1000 and 3000 are used.\n(2) Input -> Window Compare\nWindow Mode: Enabled\n(3) The CMPLCHA0 bit needs to be set to \"1\" in the code as shown below.\nR_ADC0->ADCMPLR_b->CMPLCHA0 = 1;\nWhen ADCMPDR0 ( Lower Reference set) < AD conversion result < ADCMPDR1 ( Upper Reference set), a Compare interrupt is generated.\n4. The A/D conversion result is outside the threshold\nTo perform the comparison function in the figure above, set the ADC properties in the FSP as shown in the figure below.\n(1) Input -> Window Compare -> Window A\nEnable: Enabled\nLower Reference, Upper Reference: Set the threshold here- in this example 1000 and 3000 are used.\n(2) Input -> Window Compare\nWindow Mode: Enabled\n(3) The CMPLCHA0 bit needs to be set to \"0\" in the code as shown below.\nR_ADC0->ADCMPLR_b->CMPLCHA0 = 0;\nGenerated when the AD conversion result < ADCMPDR0 (at the Lower Reference setting) or > ADCMPDR1 (at the Upper Reference setting). Compare is interrupted.\nAlso, be aware of the following limitations when using the window comparison feature:\nThe compare function cannot be used together with the self-diagnosis function or double-trigger mode. (The compare function is not available for ADRD, ADDBLDR, ADDBLDRA, and ADDBLDRB.)\nSpecify single scan mode when using match/mismatch event outputs.\nWhen the temperature sensor output or internal reference voltage is selected for Window A, Window B operations are disabled.\nWhen the temperature sensor output or internal reference voltage is selected for Window B, Window A operations are disabled.\nSetting the same channel for Window A and Window B is prohibited.\nSet the reference voltage values so that the high-potential reference voltage value is equal to or larger than the low-potential reference voltage value.\nSuitable Products"
+      },
+      {
+        "type": "text",
+        "content": "As we all know, an analog-to-digital converter, commonly known as ADC, refers to a device that converts an analog signal of a continuous variable into a discrete digital signal. It is mainly used for digital acquisition of analog signals for data processing. Typically, the conversion result is read when the conversion is complete. The window comparison feature in the ADC detects whether the ADC result is below or above a certain threshold, and can trigger an interrupt when the conversion result is within a certain range, with little to no software intervention. This configuration is very useful in that it monitors whether the signal is maintained within a specific range as required, or when the signal moves out of the range, as when a battery is low or overcharged."
+      },
+      {
+        "type": "text",
+        "content": "In this article, the RA4M2 is used as an example to describe how to set up the ADC window comparison function."
+      },
+      {
+        "type": "text",
+        "content": "RA MCUs typically include a 12-bit successive approximation A/D converter (ADC12) unit with up to 13 analog input channels, temperature sensor outputs, and internal reference voltages for conversion."
+      },
+      {
+        "type": "text",
+        "content": "The ADC12 provides a comparison function (Window A and Window B). The comparison function specifies the upper and lower limits of the reference value for window A and window B, respectively, and the output is interrupted when the A/D conversion value of the selected channel satisfies the comparison conditions. The main differences between Window A and Window B are the difference in their interrupt output signals and the restriction that Window B can only select one channel."
+      },
+      {
+        "type": "text",
+        "content": "This section uses window A as an example. Window A has the following 4 comparison modes."
+      },
+      {
+        "type": "text",
+        "content": "The registers related to the Window A comparison function are ADCMPCR, ADCMPLR0/1, and ADCMPDR0/1 registers, which can be found in the RA hardware manual for details."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-1.png",
+          "alt_text": "",
+          "width": "622",
+          "height": "704",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/d87addccaa64a37b2de1b6ce35a3fc20.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-2.png",
+          "alt_text": "",
+          "width": "615",
+          "height": "385",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/85076eaadd05b2b85cdb03413febc1d6.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-3.png",
+          "alt_text": "",
+          "width": "619",
+          "height": "168",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/8243f5f1f0b45b6a9aa66e32c0eff26a.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-4.png",
+          "alt_text": "",
+          "width": "621",
+          "height": "227",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/aefd2391f61244eb09509f4a4f4c9f3e.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-5.png",
+          "alt_text": "",
+          "width": "617",
+          "height": "156",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/b88da847a54e7310acd325b21115ce0c.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The ADC data is compared to a settable high and low threshold, and a comparison break can be automatically generated for the ADC data within, outside of, high, or low within the set threshold. There are three option locations that need to be set, and we'll go through each of the property settings and user code in each case."
+      },
+      {
+        "type": "text",
+        "content": "1. When the A/D conversion result is higher than the threshold value, a window comparison A interrupt (ADC120_CMPAI) is generated"
+      },
+      {
+        "type": "text",
+        "content": "1. When the A/D conversion result is higher than the threshold value, a window comparison A interrupt (ADC120_CMPAI) is generated"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-6.png",
+          "alt_text": "",
+          "width": "443",
+          "height": "170",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/2a172554f5487ca05f21c1b7fdd9b64b.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "To implement the above comparison function, set the ADC properties in the FSP as shown in the figure below."
+      },
+      {
+        "type": "text",
+        "content": "(1) Input -> Window Compare -> Window A"
+      },
+      {
+        "type": "text",
+        "content": "Enable: Enabled\nLower Reference: Set the threshold here- in this example it is set to 1000."
+      },
+      {
+        "type": "text",
+        "content": "(2) Input -> Window Compare"
+      },
+      {
+        "type": "text",
+        "content": "Window Mode: Disabled"
+      },
+      {
+        "type": "text",
+        "content": "(3) The CMPLCHA0 bit needs to be set to \"1\" in the code as shown below."
+      },
+      {
+        "type": "text",
+        "content": "R_ADC0->ADCMPLR_b->CMPLCHA0 = 1;"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-7.png",
+          "alt_text": "",
+          "width": "555",
+          "height": "327",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/d785d3abb43924fe5f041421faf1ffc2.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "When the AD conversion result is > ADCMPDR0 (at the time of the Lower Reference setting), a Compare interrupt is generated."
+      },
+      {
+        "type": "text",
+        "content": "2. When the A/D conversion result is lower than the threshold value, a window comparison A interrupt (ADC120_CMPAI) is generated"
+      },
+      {
+        "type": "text",
+        "content": "2. When the A/D conversion result is lower than the threshold value, a window comparison A interrupt (ADC120_CMPAI) is generated"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-8.png",
+          "alt_text": "",
+          "width": "456",
+          "height": "204",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/136e2ee1647946c3071f78d47c4f536c.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "To perform the comparison function in the figure above, set the ADC properties in the FSP as shown in the figure below."
+      },
+      {
+        "type": "text",
+        "content": "(1) Input -> Window Compare -> Window A"
+      },
+      {
+        "type": "text",
+        "content": "Enable: Enabled\nLower Reference: Set the threshold here- in this example 1000 is used."
+      },
+      {
+        "type": "text",
+        "content": "(2) Input -> Window Compare"
+      },
+      {
+        "type": "text",
+        "content": "Window Mode: Disabled"
+      },
+      {
+        "type": "text",
+        "content": "(3) The CMPLCHA0 bit needs to be set to \"0\" in the code as shown below."
+      },
+      {
+        "type": "text",
+        "content": "R_ADC0->ADCMPLR_b->CMPLCHA0 = 0;"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-9.png",
+          "alt_text": "",
+          "width": "529",
+          "height": "312",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/17ec2fd2cc4932adbbc491c130f8e81b.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "When the AD conversion result is < ADCMPDR0 (Lower Reference setting), a Compare interrupt is generated."
+      },
+      {
+        "type": "text",
+        "content": "3. The A/D conversion result is within the threshold"
+      },
+      {
+        "type": "text",
+        "content": "3. The A/D conversion result is within the threshold"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-10.png",
+          "alt_text": "",
+          "width": "500",
+          "height": "190",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/96e783e0d56bae3cc97e3e8efc927d13.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "To perform the comparison function in the figure above, set the ADC properties in the FSP as shown in the figure below."
+      },
+      {
+        "type": "text",
+        "content": "(1) Input -> Window Compare -> Window A"
+      },
+      {
+        "type": "text",
+        "content": "Enable: Enabled\nLower Reference, Upper Reference: Set the threshold here- in this example 1000 and 3000 are used."
+      },
+      {
+        "type": "text",
+        "content": "(2) Input -> Window Compare"
+      },
+      {
+        "type": "text",
+        "content": "Window Mode: Enabled"
+      },
+      {
+        "type": "text",
+        "content": "(3) The CMPLCHA0 bit needs to be set to \"1\" in the code as shown below."
+      },
+      {
+        "type": "text",
+        "content": "R_ADC0->ADCMPLR_b->CMPLCHA0 = 1;"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-11.png",
+          "alt_text": "",
+          "width": "552",
+          "height": "323",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/4823cb8007478edb2932ebcab0aae23f.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "When ADCMPDR0 ( Lower Reference set) < AD conversion result < ADCMPDR1 ( Upper Reference set), a Compare interrupt is generated."
+      },
+      {
+        "type": "text",
+        "content": "4. The A/D conversion result is outside the threshold"
+      },
+      {
+        "type": "text",
+        "content": "4. The A/D conversion result is outside the threshold"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-12.png",
+          "alt_text": "",
+          "width": "467",
+          "height": "200",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/e1b2d46a0a7d7beeca2bd441a936ec05.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "To perform the comparison function in the figure above, set the ADC properties in the FSP as shown in the figure below."
+      },
+      {
+        "type": "text",
+        "content": "(1) Input -> Window Compare -> Window A"
+      },
+      {
+        "type": "text",
+        "content": "Enable: Enabled\nLower Reference, Upper Reference: Set the threshold here- in this example 1000 and 3000 are used."
+      },
+      {
+        "type": "text",
+        "content": "(2) Input -> Window Compare"
+      },
+      {
+        "type": "text",
+        "content": "Window Mode: Enabled"
+      },
+      {
+        "type": "text",
+        "content": "(3) The CMPLCHA0 bit needs to be set to \"0\" in the code as shown below."
+      },
+      {
+        "type": "text",
+        "content": "R_ADC0->ADCMPLR_b->CMPLCHA0 = 0;"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-13.png",
+          "alt_text": "",
+          "width": "587",
+          "height": "349",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/a7bb5592d458bf25484228a4747be724.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Generated when the AD conversion result < ADCMPDR0 (at the Lower Reference setting) or > ADCMPDR1 (at the Upper Reference setting). Compare is interrupted."
+      },
+      {
+        "type": "text",
+        "content": "Also, be aware of the following limitations when using the window comparison feature:"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-1.png",
+        "alt_text": "",
+        "width": "622",
+        "height": "704",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/d87addccaa64a37b2de1b6ce35a3fc20.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-2.png",
+        "alt_text": "",
+        "width": "615",
+        "height": "385",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/85076eaadd05b2b85cdb03413febc1d6.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-3.png",
+        "alt_text": "",
+        "width": "619",
+        "height": "168",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/8243f5f1f0b45b6a9aa66e32c0eff26a.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-4.png",
+        "alt_text": "",
+        "width": "621",
+        "height": "227",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/aefd2391f61244eb09509f4a4f4c9f3e.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-5.png",
+        "alt_text": "",
+        "width": "617",
+        "height": "156",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/b88da847a54e7310acd325b21115ce0c.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-6.png",
+        "alt_text": "",
+        "width": "443",
+        "height": "170",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/2a172554f5487ca05f21c1b7fdd9b64b.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-7.png",
+        "alt_text": "",
+        "width": "555",
+        "height": "327",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/d785d3abb43924fe5f041421faf1ffc2.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-8.png",
+        "alt_text": "",
+        "width": "456",
+        "height": "204",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/136e2ee1647946c3071f78d47c4f536c.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-9.png",
+        "alt_text": "",
+        "width": "529",
+        "height": "312",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/17ec2fd2cc4932adbbc491c130f8e81b.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-10.png",
+        "alt_text": "",
+        "width": "500",
+        "height": "190",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/96e783e0d56bae3cc97e3e8efc927d13.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-11.png",
+        "alt_text": "",
+        "width": "552",
+        "height": "323",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/4823cb8007478edb2932ebcab0aae23f.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-12.png",
+        "alt_text": "",
+        "width": "467",
+        "height": "200",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/e1b2d46a0a7d7beeca2bd441a936ec05.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/387439-13.png",
+        "alt_text": "",
+        "width": "587",
+        "height": "349",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/1b85af70b205c9fe6c3bbe2ec5136bd0/images/a7bb5592d458bf25484228a4747be724.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": []
+  }
+}

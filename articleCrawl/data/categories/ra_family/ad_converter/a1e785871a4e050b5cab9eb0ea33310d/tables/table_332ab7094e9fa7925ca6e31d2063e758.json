@@ -1,0 +1,17 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "Pins usage",
+      "Pins handling method"
+    ],
+    [
+      "Handling of unused analog reference voltage supply pins.",
+      "VREFH, VREFH0, VREFL, and VREFL0：\n→ It complies with the handling method for unused GPIO pins for the corresponding port. For details, please refer to \"Handling of Unused Pins\" in the User’s Manual: Hardware of each MCU."
+    ],
+    [
+      "Handling of analog reference voltage supply pins which is used as GPIO.",
+      "Connect to an external peripheral device to be controlled by GPIO."
+    ]
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20626301",
+    "title": "Is there any further serial number programmed in the device, besides from the part marking?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:24:59.019725"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there any further serial number programmed in the device, besides from the part marking?\nAnswer:\nYes. Besides from the device part number (reflecting the full device part name, including the ROM code identifying the pre-programmed firmware) there is a unique identifier programmed in the chip which is 128-bit wide. Both the unique code and part number can be queried over the device programming interface.\nSuitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "Is there any further serial number programmed in the device, besides from the part marking?"
+      },
+      {
+        "type": "text",
+        "content": "Is there any further serial number programmed in the device, besides from the part marking?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes. Besides from the device part number (reflecting the full device part name, including the ROM code identifying the pre-programmed firmware) there is a unique identifier programmed in the chip which is 128-bit wide. Both the unique code and part number can be queried over the device programming interface.\nSuitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "Yes. Besides from the device part number (reflecting the full device part name, including the ROM code identifying the pre-programmed firmware) there is a unique identifier programmed in the chip which is 128-bit wide. Both the unique code and part number can be queried over the device programming interface."
+      },
+      {
+        "type": "text",
+        "content": "Yes. Besides from the device part number (reflecting the full device part name, including the ROM code identifying the pre-programmed firmware) there is a unique identifier programmed in the chip which is 128-bit wide. Both the unique code and part number can be queried over the device programming interface."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RISC-V ASSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RISC-V ASSP"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20626320"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20628061"
+      }
+    ]
+  }
+}

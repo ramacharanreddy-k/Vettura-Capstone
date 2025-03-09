@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21083645",
+    "title": "Quick FSP 4.6.0 Labs: Using the GPT Module Example Project with RTT",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:24:14.791666"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "This Quick FSP Lab demonstrates how to use the GPT example project and the RTT Viewer Input function. The use of the GPT example project illustrates how to find and download these useful code examples from GitHub. The RTT Viewer provides a console interface for outputting text from the application project and providing inputs to control program execution from the PC console."
+      },
+      {
+        "type": "text",
+        "content": "This Quick FSP Lab is best done after completing the Introduction Quick FSP Lab, but if you are even somewhat experienced with e2 studio and FSP you should be able to complete this lab without doing the Introduction lab first."
+      },
+      {
+        "type": "text",
+        "content": "Just follow along with the step by step guide, and use the example project file from GitHub (as described in the lab), to complete the lab."
+      },
+      {
+        "type": "text",
+        "content": "s described in the lab), to complete the lab"
+      },
+      {
+        "type": "text",
+        "content": "."
+      },
+      {
+        "type": "text",
+        "content": "The complete list of all Quick FSP Labs is available here."
+      }
+    ],
+    "images": [],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": [
+      {
+        "text": "here.",
+        "url": "https://en-support.renesas.com/knowledgeBase/19450948"
+      }
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21116871",
+    "title": "RA Family: Support for SM Bus on I2C Interface",
+    "last_updated": "2023-02-11",
+    "extracted_at": "2025-03-08T23:36:40.640610"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there SM Bus support on I2C interface on FSP?\nAnswer:\nThe FSP 4.6.0 version does not support SMBUS stack as of now, but a future version may support this. Refer to release notes to see if/when it is added.\nThe FSP configuration allow 100Khz or 400Khz in SCI_I2C module and 100Khz or 400Khz or 1Mhz in IIC mode.\nWith a few additional modifications, it is possible to run the I2C module at the desired speed.\n  Suitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "Is there SM Bus support on I2C interface on FSP?"
+      },
+      {
+        "type": "text",
+        "content": "Is there SM Bus support on I2C interface on FSP?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe FSP 4.6.0 version does not support SMBUS stack as of now, but a future version may support this. Refer to release notes to see if/when it is added.\nThe FSP configuration allow 100Khz or 400Khz in SCI_I2C module and 100Khz or 400Khz or 1Mhz in IIC mode.\nWith a few additional modifications, it is possible to run the I2C module at the desired speed.\n  Suitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "The FSP 4.6.0 version does not support SMBUS stack as of now, but a future version may support this. Refer to release notes to see if/when it is added.\nThe FSP configuration allow 100Khz or 400Khz in SCI_I2C module and 100Khz or 400Khz or 1Mhz in IIC mode.\nWith a few additional modifications, it is possible to run the I2C module at the desired speed."
+      },
+      {
+        "type": "text",
+        "content": "The FSP 4.6.0 version does not support SMBUS stack as of now, but a future version may support this. Refer to release notes to see if/when it is added."
+      },
+      {
+        "type": "text",
+        "content": "The FSP configuration allow 100Khz or 400Khz in SCI_I2C module and 100Khz or 400Khz or 1Mhz in IIC mode."
+      },
+      {
+        "type": "text",
+        "content": "With a few additional modifications, it is possible to run the I2C module at the desired speed."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": []
+  }
+}

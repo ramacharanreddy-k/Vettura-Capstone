@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20626310",
+    "title": "Where is the ASSP hardware user manual located?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:25:39.158340"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhere is the ASSP hardware user manual located?\nAnswer:\nThe ASSP user manual is not necessary since the functionality of the included application is pre-programmed and fixed, so there is no need to develop any application from end user perspective. The datasheet specifies the high-level hardware features and the electrical characteristics of the device, and the user manual of the evaluation kit specifies the implemented software functionality.\nSuitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "Where is the ASSP hardware user manual located?"
+      },
+      {
+        "type": "text",
+        "content": "Where is the ASSP hardware user manual located?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe ASSP user manual is not necessary since the functionality of the included application is pre-programmed and fixed, so there is no need to develop any application from end user perspective. The datasheet specifies the high-level hardware features and the electrical characteristics of the device, and the user manual of the evaluation kit specifies the implemented software functionality.\nSuitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "The ASSP user manual is not necessary since the functionality of the included application is pre-programmed and fixed, so there is no need to develop any application from end user perspective. The datasheet specifies the high-level hardware features and the electrical characteristics of the device, and the user manual of the evaluation kit specifies the implemented software functionality."
+      },
+      {
+        "type": "text",
+        "content": "The ASSP user manual is not necessary since the functionality of the included application is pre-programmed and fixed, so there is no need to develop any application from end user perspective. The datasheet specifies the high-level hardware features and the electrical characteristics of the device, and the user manual of the evaluation kit specifies the implemented software functionality."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRISC-V ASSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RISC-V ASSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RISC-V ASSP"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20626330"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20628071"
+      }
+    ]
+  }
+}

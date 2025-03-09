@@ -1,0 +1,621 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20980156",
+    "title": "RA Family: ID code protection (in case of protection enabled with Bit127=1 and Bit126=1)",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:24:39.424703"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to set the ID Code when protection is enabled and ALeRASE command execution is enabled, and how to connect a debugger or programmer in that case?\nAnswer:\nHow to set the ID code\nIn the FSP configurator, set the “ID Code Mode” to “Locked with All Erase support” and set 16bytes ID code to “ID Code (32 Hex Characters)” in the BSP property as shown below.\nThe value of the ID code in the OSIS register\nIn the following, to make it easier to understand the relationship between the ID code value and the OSIS register, the ID code is color-coded each 4 bytes, such as “00112233445566778899AABBCCDDEEFF”. This setting is output to ra_cfg/fsp_cfg/bsp/bsp_mcu_family_cfg.h as shown below.\n/* ID CODE: 00112233445566778899AABBCCDDEEff */\n#define BSP_CFG_ID_CODE_LONG_1 (0x33221100)\n#define BSP_CFG_ID_CODE_LONG_2 (0x77665544)\n#define BSP_CFG_ID_CODE_LONG_3 (0xBBAA9988)\n#define BSP_CFG_ID_CODE_LONG_4 (0xffEEDDCC)\n\nThe ID code is generated in the program image file as shown below. It defers as follows depending on the address of the OSIS register:\nIn case of RA2L1:\nS3150101001800112233FFFFFFFF44556677FFFFFFFFFC\nS311010100288899AABBFFFFFFFFCCDDEEFFAC\n\nIn case of RA6M3:\nS3150100A15000112233445566778899AABBCCDDEEFF00\n\nIn case of RA4E2:\nS3150100A12000112233445566778899AABBCCDDEEFF30\n\nDebugger connection in e2 studio (ID code authentication)\nWhen connecting with e2 studio, set the ID code in Debugger -> Connection Settings -> Connection -> ID Code (Bytes) as shown below. It shows the case of J-Link, but the same applies to the E2 and E2 Lite.\n\nThe figure below is the dialog which appears by clicking “…” button. You can also set the ID Code on this dialog.\n\nIf you start a debug connection and the ID code authentication succeeds, the debug connection succeeds as usual. If ID code authentication fails, the following dialog will be displayed.\nIn case of J-Link debugger:\n\nIn case of E2/E2 Lite debugger:\n\nDebugger connection in e2 studio (with ALeRASE execution)\nIn case of E2 or E2 Lite, you can erase the entire internal flash ROM by setting the ALeRASE ID (FFFFFFFFFFFFFFFFFF45534152654C41) to the ID Code. It cannot be used when using J-Link debugger. If the program image to be loaded is set, the image will be loaded after the ALeRASE execution.\n\n\nConnection by RFP (with ID code authentication)\nIf the authentication dialog is displayed when connecting in RFP, enter the ID code (FFEEDDCCBBAA99887766554433221100) as follows.\n\nAfter creating an RFP project, set the ID code as follows.\n\nConnection by RFP (with ALeRASE execution)\nIf an authentication dialog is displayed when connecting in RFP, you can erase the entire internal flash ROM by entering the ALeRASE code (414C6552415345FFFFFFFFFFFFFFFFFF) as shown below.\n\nYou can also set it in the authentication code settings dialog as follows:\n\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "How to set the ID Code when protection is enabled and ALeRASE command execution is enabled, and how to connect a debugger or programmer in that case?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nHow to set the ID code\nIn the FSP configurator, set the “ID Code Mode” to “Locked with All Erase support” and set 16bytes ID code to “ID Code (32 Hex Characters)” in the BSP property as shown below.\nThe value of the ID code in the OSIS register\nIn the following, to make it easier to understand the relationship between the ID code value and the OSIS register, the ID code is color-coded each 4 bytes, such as “00112233445566778899AABBCCDDEEFF”. This setting is output to ra_cfg/fsp_cfg/bsp/bsp_mcu_family_cfg.h as shown below.\n/* ID CODE: 00112233445566778899AABBCCDDEEff */\n#define BSP_CFG_ID_CODE_LONG_1 (0x33221100)\n#define BSP_CFG_ID_CODE_LONG_2 (0x77665544)\n#define BSP_CFG_ID_CODE_LONG_3 (0xBBAA9988)\n#define BSP_CFG_ID_CODE_LONG_4 (0xffEEDDCC)\n\nThe ID code is generated in the program image file as shown below. It defers as follows depending on the address of the OSIS register:\nIn case of RA2L1:\nS3150101001800112233FFFFFFFF44556677FFFFFFFFFC\nS311010100288899AABBFFFFFFFFCCDDEEFFAC\n\nIn case of RA6M3:\nS3150100A15000112233445566778899AABBCCDDEEFF00\n\nIn case of RA4E2:\nS3150100A12000112233445566778899AABBCCDDEEFF30\n\nDebugger connection in e2 studio (ID code authentication)\nWhen connecting with e2 studio, set the ID code in Debugger -> Connection Settings -> Connection -> ID Code (Bytes) as shown below. It shows the case of J-Link, but the same applies to the E2 and E2 Lite.\n\nThe figure below is the dialog which appears by clicking “…” button. You can also set the ID Code on this dialog.\n\nIf you start a debug connection and the ID code authentication succeeds, the debug connection succeeds as usual. If ID code authentication fails, the following dialog will be displayed.\nIn case of J-Link debugger:\n\nIn case of E2/E2 Lite debugger:\n\nDebugger connection in e2 studio (with ALeRASE execution)\nIn case of E2 or E2 Lite, you can erase the entire internal flash ROM by setting the ALeRASE ID (FFFFFFFFFFFFFFFFFF45534152654C41) to the ID Code. It cannot be used when using J-Link debugger. If the program image to be loaded is set, the image will be loaded after the ALeRASE execution.\n\n\nConnection by RFP (with ID code authentication)\nIf the authentication dialog is displayed when connecting in RFP, enter the ID code (FFEEDDCCBBAA99887766554433221100) as follows.\n\nAfter creating an RFP project, set the ID code as follows.\n\nConnection by RFP (with ALeRASE execution)\nIf an authentication dialog is displayed when connecting in RFP, you can erase the entire internal flash ROM by entering the ALeRASE code (414C6552415345FFFFFFFFFFFFFFFFFF) as shown below.\n\nYou can also set it in the authentication code settings dialog as follows:\n\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "How to set the ID code\nIn the FSP configurator, set the “ID Code Mode” to “Locked with All Erase support” and set 16bytes ID code to “ID Code (32 Hex Characters)” in the BSP property as shown below.\nThe value of the ID code in the OSIS register\nIn the following, to make it easier to understand the relationship between the ID code value and the OSIS register, the ID code is color-coded each 4 bytes, such as “00112233445566778899AABBCCDDEEFF”. This setting is output to ra_cfg/fsp_cfg/bsp/bsp_mcu_family_cfg.h as shown below.\n/* ID CODE: 00112233445566778899AABBCCDDEEff */\n#define BSP_CFG_ID_CODE_LONG_1 (0x33221100)\n#define BSP_CFG_ID_CODE_LONG_2 (0x77665544)\n#define BSP_CFG_ID_CODE_LONG_3 (0xBBAA9988)\n#define BSP_CFG_ID_CODE_LONG_4 (0xffEEDDCC)\n\nThe ID code is generated in the program image file as shown below. It defers as follows depending on the address of the OSIS register:\nIn case of RA2L1:\nS3150101001800112233FFFFFFFF44556677FFFFFFFFFC\nS311010100288899AABBFFFFFFFFCCDDEEFFAC\n\nIn case of RA6M3:\nS3150100A15000112233445566778899AABBCCDDEEFF00\n\nIn case of RA4E2:\nS3150100A12000112233445566778899AABBCCDDEEFF30\n\nDebugger connection in e2 studio (ID code authentication)\nWhen connecting with e2 studio, set the ID code in Debugger -> Connection Settings -> Connection -> ID Code (Bytes) as shown below. It shows the case of J-Link, but the same applies to the E2 and E2 Lite.\n\nThe figure below is the dialog which appears by clicking “…” button. You can also set the ID Code on this dialog.\n\nIf you start a debug connection and the ID code authentication succeeds, the debug connection succeeds as usual. If ID code authentication fails, the following dialog will be displayed.\nIn case of J-Link debugger:\n\nIn case of E2/E2 Lite debugger:\n\nDebugger connection in e2 studio (with ALeRASE execution)\nIn case of E2 or E2 Lite, you can erase the entire internal flash ROM by setting the ALeRASE ID (FFFFFFFFFFFFFFFFFF45534152654C41) to the ID Code. It cannot be used when using J-Link debugger. If the program image to be loaded is set, the image will be loaded after the ALeRASE execution.\n\n\nConnection by RFP (with ID code authentication)\nIf the authentication dialog is displayed when connecting in RFP, enter the ID code (FFEEDDCCBBAA99887766554433221100) as follows.\n\nAfter creating an RFP project, set the ID code as follows.\n\nConnection by RFP (with ALeRASE execution)\nIf an authentication dialog is displayed when connecting in RFP, you can erase the entire internal flash ROM by entering the ALeRASE code (414C6552415345FFFFFFFFFFFFFFFFFF) as shown below.\n\nYou can also set it in the authentication code settings dialog as follows:"
+      },
+      {
+        "type": "text",
+        "content": "How to set the ID code"
+      },
+      {
+        "type": "text",
+        "content": "In the FSP configurator, set the “ID Code Mode” to “Locked with All Erase support” and set 16bytes ID code to “ID Code (32 Hex Characters)” in the BSP property as shown below."
+      },
+      {
+        "type": "text",
+        "content": "In the FSP configurator, set the “ID Code Mode” to “Locked with All Erase support” and set 16bytes ID code to “ID Code (32 Hex Characters)” in the BSP property as shown below."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372194.png",
+          "alt_text": "",
+          "width": "398",
+          "height": "40",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/e05a984f1d6cd781dca3f23d9adddc7d/images/554c3a81b680af1327e431109948edca.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The value of the ID code in the OSIS register"
+      },
+      {
+        "type": "text",
+        "content": "The value of the ID code in the OSIS register"
+      },
+      {
+        "type": "text",
+        "content": "In the following, to make it easier to understand the relationship between the ID code value and the OSIS register, the ID code is color-coded each 4 bytes, such as “00112233445566778899AABBCCDDEEFF”. This setting is output to ra_cfg/fsp_cfg/bsp/bsp_mcu_family_cfg.h as shown below."
+      },
+      {
+        "type": "text",
+        "content": "In the following, to make it easier to understand the relationship between the ID code value and the OSIS register, the ID code is color-coded each 4 bytes, such as “00112233445566778899AABBCCDDEEFF”. This setting is output to ra_cfg/fsp_cfg/bsp/bsp_mcu_family_cfg.h as shown below."
+      },
+      {
+        "type": "text",
+        "content": "00112233"
+      },
+      {
+        "type": "text",
+        "content": "44556677"
+      },
+      {
+        "type": "text",
+        "content": "8899AABB"
+      },
+      {
+        "type": "text",
+        "content": "CCDDEEFF"
+      },
+      {
+        "type": "text",
+        "content": "/* ID CODE: 00112233445566778899AABBCCDDEEff */\n#define BSP_CFG_ID_CODE_LONG_1 (0x33221100)\n#define BSP_CFG_ID_CODE_LONG_2 (0x77665544)\n#define BSP_CFG_ID_CODE_LONG_3 (0xBBAA9988)\n#define BSP_CFG_ID_CODE_LONG_4 (0xffEEDDCC)"
+      },
+      {
+        "type": "text",
+        "content": "/* ID CODE: 00112233445566778899AABBCCDDEEff */"
+      },
+      {
+        "type": "text",
+        "content": "00112233"
+      },
+      {
+        "type": "text",
+        "content": "44556677"
+      },
+      {
+        "type": "text",
+        "content": "8899AABB"
+      },
+      {
+        "type": "text",
+        "content": "CCDDEEff"
+      },
+      {
+        "type": "text",
+        "content": "#define BSP_CFG_ID_CODE_LONG_1 (0x33221100)"
+      },
+      {
+        "type": "text",
+        "content": "33221100"
+      },
+      {
+        "type": "text",
+        "content": "#define BSP_CFG_ID_CODE_LONG_2 (0x77665544)"
+      },
+      {
+        "type": "text",
+        "content": "77665544"
+      },
+      {
+        "type": "text",
+        "content": "#define BSP_CFG_ID_CODE_LONG_3 (0xBBAA9988)"
+      },
+      {
+        "type": "text",
+        "content": "BBAA9988"
+      },
+      {
+        "type": "text",
+        "content": "#define BSP_CFG_ID_CODE_LONG_4 (0xffEEDDCC)"
+      },
+      {
+        "type": "text",
+        "content": "ffEEDDCC"
+      },
+      {
+        "type": "text",
+        "content": "The ID code is generated in the program image file as shown below. It defers as follows depending on the address of the OSIS register:"
+      },
+      {
+        "type": "text",
+        "content": "The ID code is generated in the program image file as shown below. It defers as follows depending on the address of the OSIS register:"
+      },
+      {
+        "type": "text",
+        "content": "In case of RA2L1:"
+      },
+      {
+        "type": "text",
+        "content": "In case of RA2L1:"
+      },
+      {
+        "type": "text",
+        "content": "S3150101001800112233FFFFFFFF44556677FFFFFFFFFC\nS311010100288899AABBFFFFFFFFCCDDEEFFAC"
+      },
+      {
+        "type": "text",
+        "content": "S3150101001800112233FFFFFFFF44556677FFFFFFFFFC\nS311010100288899AABBFFFFFFFFCCDDEEFFAC"
+      },
+      {
+        "type": "text",
+        "content": "00112233"
+      },
+      {
+        "type": "text",
+        "content": "44556677"
+      },
+      {
+        "type": "text",
+        "content": "8899AABB"
+      },
+      {
+        "type": "text",
+        "content": "CCDDEEFF"
+      },
+      {
+        "type": "text",
+        "content": "In case of RA6M3:"
+      },
+      {
+        "type": "text",
+        "content": "In case of RA6M3:"
+      },
+      {
+        "type": "text",
+        "content": "S3150100A15000112233445566778899AABBCCDDEEFF00"
+      },
+      {
+        "type": "text",
+        "content": "S3150100A15000112233445566778899AABBCCDDEEFF00"
+      },
+      {
+        "type": "text",
+        "content": "S3150100A150"
+      },
+      {
+        "type": "text",
+        "content": "00112233"
+      },
+      {
+        "type": "text",
+        "content": "44556677"
+      },
+      {
+        "type": "text",
+        "content": "8899AABB"
+      },
+      {
+        "type": "text",
+        "content": "CCDDEEFF"
+      },
+      {
+        "type": "text",
+        "content": "00"
+      },
+      {
+        "type": "text",
+        "content": "In case of RA4E2:"
+      },
+      {
+        "type": "text",
+        "content": "In case of RA4E2:"
+      },
+      {
+        "type": "text",
+        "content": "S3150100A12000112233445566778899AABBCCDDEEFF30"
+      },
+      {
+        "type": "text",
+        "content": "S3150100A12000112233445566778899AABBCCDDEEFF30"
+      },
+      {
+        "type": "text",
+        "content": "S3150100A120"
+      },
+      {
+        "type": "text",
+        "content": "00112233"
+      },
+      {
+        "type": "text",
+        "content": "44556677"
+      },
+      {
+        "type": "text",
+        "content": "8899AABB"
+      },
+      {
+        "type": "text",
+        "content": "CCDDEEFF"
+      },
+      {
+        "type": "text",
+        "content": "30"
+      },
+      {
+        "type": "text",
+        "content": "Debugger connection in e2 studio (ID code authentication)"
+      },
+      {
+        "type": "text",
+        "content": "Debugger connection in e2 studio (ID code authentication)"
+      },
+      {
+        "type": "text",
+        "content": "When connecting with e2 studio, set the ID code in Debugger -> Connection Settings -> Connection -> ID Code (Bytes) as shown below. It shows the case of J-Link, but the same applies to the E2 and E2 Lite."
+      },
+      {
+        "type": "text",
+        "content": "When connecting with e2 studio, set the ID code in Debugger -> Connection Settings -> Connection -> ID Code (Bytes) as shown below. It shows the case of J-Link, but the same applies to the E2 and E2 Lite."
+      },
+      {
+        "type": "text",
+        "content": "Debugger -> Connection Settings -> Connection -> ID Code (Bytes)"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372194-2.png",
+          "alt_text": "",
+          "width": "555",
+          "height": "262",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/e05a984f1d6cd781dca3f23d9adddc7d/images/2c0157a51d02c7082d8f894babfe8f5a.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The figure below is the dialog which appears by clicking “…” button. You can also set the ID Code on this dialog."
+      },
+      {
+        "type": "text",
+        "content": "The figure below is the dialog which appears by clicking “…” button. You can also set the ID Code on this dialog."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372194-3.png",
+          "alt_text": "",
+          "width": "502",
+          "height": "376",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/e05a984f1d6cd781dca3f23d9adddc7d/images/5e4235c17e0c01a9d6a2e6a06e1a67b7.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "If you start a debug connection and the ID code authentication succeeds, the debug connection succeeds as usual. If ID code authentication fails, the following dialog will be displayed."
+      },
+      {
+        "type": "text",
+        "content": "If you start a debug connection and the ID code authentication succeeds, the debug connection succeeds as usual. If ID code authentication fails, the following dialog will be displayed."
+      },
+      {
+        "type": "text",
+        "content": "In case of J-Link debugger:"
+      },
+      {
+        "type": "text",
+        "content": "In case of J-Link debugger:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372194-4.png",
+          "alt_text": "",
+          "width": "407",
+          "height": "339",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/e05a984f1d6cd781dca3f23d9adddc7d/images/3db10a56bfc92cef3458194713044596.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "In case of E2/E2 Lite debugger:"
+      },
+      {
+        "type": "text",
+        "content": "In case of E2/E2 Lite debugger:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372194-5.png",
+          "alt_text": "",
+          "width": "407",
+          "height": "149",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/e05a984f1d6cd781dca3f23d9adddc7d/images/2f1f3cdcdd90872ee62ce9b91849211f.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Debugger connection in e2 studio (with ALeRASE execution)"
+      },
+      {
+        "type": "text",
+        "content": "Debugger connection in e2 studio (with ALeRASE execution)"
+      },
+      {
+        "type": "text",
+        "content": "In case of E2 or E2 Lite, you can erase the entire internal flash ROM by setting the ALeRASE ID (FFFFFFFFFFFFFFFFFF45534152654C41) to the ID Code. It cannot be used when using J-Link debugger. If the program image to be loaded is set, the image will be loaded after the ALeRASE execution."
+      },
+      {
+        "type": "text",
+        "content": "In case of E2 or E2 Lite, you can erase the entire internal flash ROM by setting the ALeRASE ID (FFFFFFFFFFFFFFFFFF45534152654C41) to the ID Code. It cannot be used when using J-Link debugger. If the program image to be loaded is set, the image will be loaded after the ALeRASE execution."
+      },
+      {
+        "type": "text",
+        "content": "FFFFFFFFFFFFFFFFFF45534152654C41"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372194-6.png",
+          "alt_text": "",
+          "width": "651",
+          "height": "228",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/e05a984f1d6cd781dca3f23d9adddc7d/images/d893c47bf86a17ffd26853130cedaaee.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372194-7.png",
+          "alt_text": "",
+          "width": "495",
+          "height": "378",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/e05a984f1d6cd781dca3f23d9adddc7d/images/c6c3f4892cabdd6ed0fb5bc4567691f3.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Connection by RFP (with ID code authentication)"
+      },
+      {
+        "type": "text",
+        "content": "Connection by RFP (with ID code authentication)"
+      },
+      {
+        "type": "text",
+        "content": "If the authentication dialog is displayed when connecting in RFP, enter the ID code (FFEEDDCCBBAA99887766554433221100) as follows."
+      },
+      {
+        "type": "text",
+        "content": "If the authentication dialog is displayed when connecting in RFP, enter the ID code (FFEEDDCCBBAA99887766554433221100) as follows."
+      },
+      {
+        "type": "text",
+        "content": "FFEEDDCCBBAA99887766554433221100"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372194-8.png",
+          "alt_text": "",
+          "width": "388",
+          "height": "132",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/e05a984f1d6cd781dca3f23d9adddc7d/images/df748f5dfd1a525d1c0bf87d2bf69208.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "After creating an RFP project, set the ID code as follows."
+      },
+      {
+        "type": "text",
+        "content": "After creating an RFP project, set the ID code as follows."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372194-9.png",
+          "alt_text": "",
+          "width": "758",
+          "height": "331",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/e05a984f1d6cd781dca3f23d9adddc7d/images/2cf0d837f17e0ca296d4653753336afb.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Connection by RFP (with ALeRASE execution)"
+      },
+      {
+        "type": "text",
+        "content": "Connection by RFP (with ALeRASE execution)"
+      },
+      {
+        "type": "text",
+        "content": "If an authentication dialog is displayed when connecting in RFP, you can erase the entire internal flash ROM by entering the ALeRASE code (414C6552415345FFFFFFFFFFFFFFFFFF) as shown below."
+      },
+      {
+        "type": "text",
+        "content": "If an authentication dialog is displayed when connecting in RFP, you can erase the entire internal flash ROM by entering the ALeRASE code (414C6552415345FFFFFFFFFFFFFFFFFF) as shown below."
+      },
+      {
+        "type": "text",
+        "content": "414C6552415345FFFFFFFFFFFFFFFFFF"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372194-10.png",
+          "alt_text": "",
+          "width": "388",
+          "height": "132",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/e05a984f1d6cd781dca3f23d9adddc7d/images/f05a8f46caf53abb4b5d7a40891de95c.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "You can also set it in the authentication code settings dialog as follows:"
+      },
+      {
+        "type": "text",
+        "content": "You can also set it in the authentication code settings dialog as follows:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372194-11.png",
+          "alt_text": "",
+          "width": "754",
+          "height": "334",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/e05a984f1d6cd781dca3f23d9adddc7d/images/edfbb8594ea5c98174d951ddf325565e.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "RA and FSP"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372194.png",
+        "alt_text": "",
+        "width": "398",
+        "height": "40",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/e05a984f1d6cd781dca3f23d9adddc7d/images/554c3a81b680af1327e431109948edca.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372194-2.png",
+        "alt_text": "",
+        "width": "555",
+        "height": "262",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/e05a984f1d6cd781dca3f23d9adddc7d/images/2c0157a51d02c7082d8f894babfe8f5a.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372194-3.png",
+        "alt_text": "",
+        "width": "502",
+        "height": "376",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/e05a984f1d6cd781dca3f23d9adddc7d/images/5e4235c17e0c01a9d6a2e6a06e1a67b7.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372194-4.png",
+        "alt_text": "",
+        "width": "407",
+        "height": "339",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/e05a984f1d6cd781dca3f23d9adddc7d/images/3db10a56bfc92cef3458194713044596.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372194-5.png",
+        "alt_text": "",
+        "width": "407",
+        "height": "149",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/e05a984f1d6cd781dca3f23d9adddc7d/images/2f1f3cdcdd90872ee62ce9b91849211f.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372194-6.png",
+        "alt_text": "",
+        "width": "651",
+        "height": "228",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/e05a984f1d6cd781dca3f23d9adddc7d/images/d893c47bf86a17ffd26853130cedaaee.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372194-7.png",
+        "alt_text": "",
+        "width": "495",
+        "height": "378",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/e05a984f1d6cd781dca3f23d9adddc7d/images/c6c3f4892cabdd6ed0fb5bc4567691f3.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372194-8.png",
+        "alt_text": "",
+        "width": "388",
+        "height": "132",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/e05a984f1d6cd781dca3f23d9adddc7d/images/df748f5dfd1a525d1c0bf87d2bf69208.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372194-9.png",
+        "alt_text": "",
+        "width": "758",
+        "height": "331",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/e05a984f1d6cd781dca3f23d9adddc7d/images/2cf0d837f17e0ca296d4653753336afb.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372194-10.png",
+        "alt_text": "",
+        "width": "388",
+        "height": "132",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/e05a984f1d6cd781dca3f23d9adddc7d/images/f05a8f46caf53abb4b5d7a40891de95c.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/372194-11.png",
+        "alt_text": "",
+        "width": "754",
+        "height": "334",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/e05a984f1d6cd781dca3f23d9adddc7d/images/edfbb8594ea5c98174d951ddf325565e.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "/* ID CODE: 00112233445566778899AABBCCDDEEff */\n#define BSP_CFG_ID_CODE_LONG_1 (0x33221100)\n#define BSP_CFG_ID_CODE_LONG_2 (0x77665544)\n#define BSP_CFG_ID_CODE_LONG_3 (0xBBAA9988)\n#define BSP_CFG_ID_CODE_LONG_4 (0xffEEDDCC)"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "S3150101001800112233FFFFFFFF44556677FFFFFFFFFC\nS311010100288899AABBFFFFFFFFCCDDEEFFAC"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "S3150100A15000112233445566778899AABBCCDDEEFF00"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "S3150100A12000112233445566778899AABBCCDDEEFF30"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": []
+  }
+}

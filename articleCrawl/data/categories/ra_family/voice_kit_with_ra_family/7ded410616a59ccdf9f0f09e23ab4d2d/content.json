@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21464796",
+    "title": "RA Family: Can this kit do other than VCR and NLU?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:41:24.279480"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan this kit do other than VCR and NLU?\nAnswer:\nYes. As an example:\n(1) by using this board as a hardware reference, you can test using your own Voice based AI model or other AI Partner of your preference.\n(2) implement applicaton examples provided by Renesas and/or Renesas' Ready Partner such as Voice Anti-spoofing(by Renesas) and/or SpeakerID(AIZip).\nSuitable Products\nRA8M1"
+      },
+      {
+        "type": "text",
+        "content": "Can this kit do other than VCR and NLU?"
+      },
+      {
+        "type": "text",
+        "content": "Can this kit do other than VCR and NLU?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes. As an example:\n(1) by using this board as a hardware reference, you can test using your own Voice based AI model or other AI Partner of your preference.\n(2) implement applicaton examples provided by Renesas and/or Renesas' Ready Partner such as Voice Anti-spoofing(by Renesas) and/or SpeakerID(AIZip).\nSuitable Products\nRA8M1"
+      },
+      {
+        "type": "text",
+        "content": "Yes. As an example:\n(1) by using this board as a hardware reference, you can test using your own Voice based AI model or other AI Partner of your preference.\n(2) implement applicaton examples provided by Renesas and/or Renesas' Ready Partner such as Voice Anti-spoofing(by Renesas) and/or SpeakerID(AIZip)."
+      },
+      {
+        "type": "text",
+        "content": "Yes. As an example:"
+      },
+      {
+        "type": "text",
+        "content": "(1) by using this board as a hardware reference, you can test using your own Voice based AI model or other AI Partner of your preference.\n(2) implement applicaton examples provided by Renesas and/or Renesas' Ready Partner such as Voice Anti-spoofing(by Renesas) and/or SpeakerID(AIZip)."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA8M1"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA8M1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA8M1"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21464810"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21464817"
+      }
+    ]
+  }
+}

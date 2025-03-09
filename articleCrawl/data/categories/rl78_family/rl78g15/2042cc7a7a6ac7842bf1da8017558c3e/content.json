@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20765772",
+    "title": "Background operation support of RL78/G15",
+    "last_updated": "2023-12-01",
+    "extracted_at": "2025-03-08T23:54:11.763743"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDoes the data flash memory of RL78/G15 support background operation? \n* Background Operation (BGO): A function that enables execution of instructions from the program memory during data flash re-writing\nAnswer:\nThe data flash memory of RL78/G15 does not support background operation (BGO). Please use RL78/G12 if background operation (BGO) is required.\nSuitable Products\nRL78/G15"
+      },
+      {
+        "type": "text",
+        "content": "Does the data flash memory of RL78/G15 support background operation? \n* Background Operation (BGO): A function that enables execution of instructions from the program memory during data flash re-writing"
+      },
+      {
+        "type": "text",
+        "content": "Does the data flash memory of RL78/G15 support background operation? \n* Background Operation (BGO): A function that enables execution of instructions from the program memory during data flash re-writing"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe data flash memory of RL78/G15 does not support background operation (BGO). Please use RL78/G12 if background operation (BGO) is required.\nSuitable Products\nRL78/G15"
+      },
+      {
+        "type": "text",
+        "content": "The data flash memory of RL78/G15 does not support background operation (BGO). Please use RL78/G12 if background operation (BGO) is required."
+      },
+      {
+        "type": "text",
+        "content": "The data flash memory of RL78/G15 does not support background operation (BGO). Please use RL78/G12 if background operation (BGO) is required."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/G15"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G15"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G15"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20765763"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20765778"
+      }
+    ]
+  }
+}

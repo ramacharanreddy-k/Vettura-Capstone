@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20078475",
+    "title": "Disassembly View for RA MCUs in FSP",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:18:19.597238"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "To use the disassembly view you must first enable the assembly listing, using the project tool settings property, as seen in the below screen shot."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/pastedimage1625558676376v1.png",
+          "alt_text": "",
+          "width": "796",
+          "height": "715",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/b0371bfed4fabbb7167d3e2634308e2c/images/3142b1db2834630102b01914d442691d.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Start a debug session and the assembly file is generated in the project directory src folder, as illustrated below."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/pastedimage1625558722915v2.png",
+          "alt_text": "",
+          "width": "464",
+          "height": "767",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/b0371bfed4fabbb7167d3e2634308e2c/images/a7ca923cb8ca79da973a822b2a942f28.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA/FSP"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/pastedimage1625558676376v1.png",
+        "alt_text": "",
+        "width": "796",
+        "height": "715",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/b0371bfed4fabbb7167d3e2634308e2c/images/3142b1db2834630102b01914d442691d.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/pastedimage1625558722915v2.png",
+        "alt_text": "",
+        "width": "464",
+        "height": "767",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/b0371bfed4fabbb7167d3e2634308e2c/images/a7ca923cb8ca79da973a822b2a942f28.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA/FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA/FSP"
+    ],
+    "links": []
+  }
+}

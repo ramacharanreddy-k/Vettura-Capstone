@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21483964",
+    "title": "[RL78] How to initialize RAM to avoid RAM parity errors ?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:00:00.766864"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Last updated: 19/07/2024"
+      },
+      {
+        "type": "text",
+        "content": "How to initialize RAM to avoid RAM parity errors  ?"
+      },
+      {
+        "type": "text",
+        "content": "During startup some parts of RAM (.bss, .dataR , stack sections) are initialized but others do not. As a result there are uninitialized parts in RAM that can cause RAM parity errors."
+      },
+      {
+        "type": "text",
+        "content": "To avoid these errors, RAM must be initialized manually during initialization. To do this, the cstart.asm file should be modified as per the following example:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://community.renesas.com/cfs-file/__key/communityserver-discussions-components-files/259/pastedimage1707379610704v2.png",
+          "alt_text": "",
+          "width": "870",
+          "height": "290",
+          "local_path": "data/categories/rl78_family/memory/9fdab48172f9db4b11a4bd41ad5838e4/images/13627864c40b6c1d0d1209898dd2cfba.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The RAM start address and size are according to below address range so please modify according to your device."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://community.renesas.com/resized-image/__size/640x480/__key/communityserver-discussions-components-files/259/pastedimage1707379212432v1.png",
+          "alt_text": "",
+          "width": "639",
+          "height": "386",
+          "local_path": "data/categories/rl78_family/memory/9fdab48172f9db4b11a4bd41ad5838e4/images/3b710b79de43fabc87a0fa2e89451b59.png"
+        }
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://community.renesas.com/cfs-file/__key/communityserver-discussions-components-files/259/pastedimage1707379610704v2.png",
+        "alt_text": "",
+        "width": "870",
+        "height": "290",
+        "local_path": "data/categories/rl78_family/memory/9fdab48172f9db4b11a4bd41ad5838e4/images/13627864c40b6c1d0d1209898dd2cfba.png"
+      },
+      {
+        "original_url": "https://community.renesas.com/resized-image/__size/640x480/__key/communityserver-discussions-components-files/259/pastedimage1707379212432v1.png",
+        "alt_text": "",
+        "width": "639",
+        "height": "386",
+        "local_path": "data/categories/rl78_family/memory/9fdab48172f9db4b11a4bd41ad5838e4/images/3b710b79de43fabc87a0fa2e89451b59.png"
+      }
+    ],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": []
+  }
+}

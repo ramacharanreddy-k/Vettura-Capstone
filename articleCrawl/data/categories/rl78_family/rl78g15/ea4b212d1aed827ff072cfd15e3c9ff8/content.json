@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20765774",
+    "title": "Operating voltage of RL78/G15",
+    "last_updated": "2023-12-01",
+    "extracted_at": "2025-03-08T23:54:16.459713"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the operating voltage of RL78/G15?\nAnswer:\nThe operating voltage of RL78/G15 ranges between 2.4 to 5.5 V. \nPlease use RL78/G12 for operating with a voltage lower than 2.4 V.\nSuitable Products\nRL78/G15"
+      },
+      {
+        "type": "text",
+        "content": "What is the operating voltage of RL78/G15?"
+      },
+      {
+        "type": "text",
+        "content": "What is the operating voltage of RL78/G15?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe operating voltage of RL78/G15 ranges between 2.4 to 5.5 V. \nPlease use RL78/G12 for operating with a voltage lower than 2.4 V.\nSuitable Products\nRL78/G15"
+      },
+      {
+        "type": "text",
+        "content": "The operating voltage of RL78/G15 ranges between 2.4 to 5.5 V. \nPlease use RL78/G12 for operating with a voltage lower than 2.4 V."
+      },
+      {
+        "type": "text",
+        "content": "The operating voltage of RL78/G15 ranges between 2.4 to 5.5 V. \nPlease use RL78/G12 for operating with a voltage lower than 2.4 V."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/G15"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G15"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G15"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20765768"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20765781"
+      }
+    ]
+  }
+}

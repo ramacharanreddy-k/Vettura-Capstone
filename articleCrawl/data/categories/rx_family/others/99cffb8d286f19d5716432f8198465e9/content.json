@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21245140",
+    "title": "Is USB sample code available at no cost (with no guarantee)?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:23:06.705352"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs all USB sample code provided on the Renesas website available at no cost (with no guarantee)?\nAre there any restrictions (such as the size of a file that can access the USB drive)?\nAnswer:\nYes, you can use the sample code free of charge. (Available at no cost, with neither guarantee nor support.)\nThe following restrictions are placed on USB drive access:\nOnly USB drives supported by FAT12, FAT16 and FAT32 can be used.\nA USB drive having multiple partitions cannot be used.\nThis driver does not support an MSC device that returns 1 or a larger value to the GetMaxLun command (Mass Storage Class command).\nUSB drives whose sector size is 512 bytes can be connected.\nRestrictions 1, 2, and 4 depend on the file system you use. Also confirm the specifications of the file system.\nSuitable Products\nRX family"
+      },
+      {
+        "type": "text",
+        "content": "Is all USB sample code provided on the Renesas website available at no cost (with no guarantee)?\nAre there any restrictions (such as the size of a file that can access the USB drive)?"
+      },
+      {
+        "type": "text",
+        "content": "Is all USB sample code provided on the Renesas website available at no cost (with no guarantee)?\nAre there any restrictions (such as the size of a file that can access the USB drive)?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes, you can use the sample code free of charge. (Available at no cost, with neither guarantee nor support.)\nThe following restrictions are placed on USB drive access:\nOnly USB drives supported by FAT12, FAT16 and FAT32 can be used.\nA USB drive having multiple partitions cannot be used.\nThis driver does not support an MSC device that returns 1 or a larger value to the GetMaxLun command (Mass Storage Class command).\nUSB drives whose sector size is 512 bytes can be connected.\nRestrictions 1, 2, and 4 depend on the file system you use. Also confirm the specifications of the file system.\nSuitable Products\nRX family"
+      },
+      {
+        "type": "text",
+        "content": "Yes, you can use the sample code free of charge. (Available at no cost, with neither guarantee nor support.)\nThe following restrictions are placed on USB drive access:\nOnly USB drives supported by FAT12, FAT16 and FAT32 can be used.\nA USB drive having multiple partitions cannot be used.\nThis driver does not support an MSC device that returns 1 or a larger value to the GetMaxLun command (Mass Storage Class command).\nUSB drives whose sector size is 512 bytes can be connected.\nRestrictions 1, 2, and 4 depend on the file system you use. Also confirm the specifications of the file system."
+      },
+      {
+        "type": "text",
+        "content": "Yes, you can use the sample code free of charge. (Available at no cost, with neither guarantee nor support.)\nThe following restrictions are placed on USB drive access:"
+      },
+      {
+        "type": "text",
+        "content": "Restrictions 1, 2, and 4 depend on the file system you use. Also confirm the specifications of the file system."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20661624"
+      }
+    ]
+  }
+}

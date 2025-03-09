@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21205011",
+    "title": "RL78 ADC Sampling time",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:56:13.605929"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI need more information about ADC module in µC R5F10BGGCKFB. Can I achieve maximum sample rate of 470MHz. What is the channel to channel delay time ?\nCPU and peripheral clock is 24MH.\nAnswer:\nThe sampling rate (min conversion time) is selectable with the ADM0 register. But there are limits which are given in the electrical specs. \n   Figure 1: Conversion time electrical specs\nMin. conversion time is given with 2.125us which results in a max sample rate of about 470KHz.\nBut the sample rate depends also on the possible ADM0 (FR and LV bits) settings. It is not completely free configurable. \nFor 24MHz the min sample time will be a round 3us\nFigure 2: Conversion clock electrical spec\n  A channel-to-channel delay time is not existing. If a new conversion is started, a possibly running conversion is cancelled an the new one is directly started. In scan mode and sequential conversion, the next the channel is switched in next clock cycle.\nSuitable Products\nRL78"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nI need more information about ADC module in µC R5F10BGGCKFB. Can I achieve maximum sample rate of 470MHz. What is the channel to channel delay time ?\nCPU and peripheral clock is 24MH.\nAnswer:\nThe sampling rate (min conversion time) is selectable with the ADM0 register. But there are limits which are given in the electrical specs. \n   Figure 1: Conversion time electrical specs\nMin. conversion time is given with 2.125us which results in a max sample rate of about 470KHz.\nBut the sample rate depends also on the possible ADM0 (FR and LV bits) settings. It is not completely free configurable. \nFor 24MHz the min sample time will be a round 3us\nFigure 2: Conversion clock electrical spec\n  A channel-to-channel delay time is not existing. If a new conversion is started, a possibly running conversion is cancelled an the new one is directly started. In scan mode and sequential conversion, the next the channel is switched in next clock cycle.\nSuitable Products\nRL78"
+      },
+      {
+        "type": "text",
+        "content": "I need more information about ADC module in µC R5F10BGGCKFB. Can I achieve maximum sample rate of 470MHz. What is the channel to channel delay time ?\nCPU and peripheral clock is 24MH."
+      },
+      {
+        "type": "text",
+        "content": "I need more information about ADC module in µC R5F10BGGCKFB. Can I achieve maximum sample rate of 470MHz. What is the channel to channel delay time ?"
+      },
+      {
+        "type": "text",
+        "content": "I need more information about ADC module in µC"
+      },
+      {
+        "type": "text",
+        "content": "R5F10BGGCKFB."
+      },
+      {
+        "type": "text",
+        "content": "Can I achieve maximum sample rate of 470MHz. What is the channel to channel delay time ?"
+      },
+      {
+        "type": "text",
+        "content": "CPU and peripheral clock is 24MH."
+      },
+      {
+        "type": "text",
+        "content": "CPU and peripheral clock is 24MH."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe sampling rate (min conversion time) is selectable with the ADM0 register. But there are limits which are given in the electrical specs. \n   Figure 1: Conversion time electrical specs\nMin. conversion time is given with 2.125us which results in a max sample rate of about 470KHz.\nBut the sample rate depends also on the possible ADM0 (FR and LV bits) settings. It is not completely free configurable. \nFor 24MHz the min sample time will be a round 3us\nFigure 2: Conversion clock electrical spec\n  A channel-to-channel delay time is not existing. If a new conversion is started, a possibly running conversion is cancelled an the new one is directly started. In scan mode and sequential conversion, the next the channel is switched in next clock cycle.\nSuitable Products\nRL78"
+      },
+      {
+        "type": "text",
+        "content": "The sampling rate (min conversion time) is selectable with the ADM0 register. But there are limits which are given in the electrical specs. \n   Figure 1: Conversion time electrical specs\nMin. conversion time is given with 2.125us which results in a max sample rate of about 470KHz.\nBut the sample rate depends also on the possible ADM0 (FR and LV bits) settings. It is not completely free configurable. \nFor 24MHz the min sample time will be a round 3us\nFigure 2: Conversion clock electrical spec\n  A channel-to-channel delay time is not existing. If a new conversion is started, a possibly running conversion is cancelled an the new one is directly started. In scan mode and sequential conversion, the next the channel is switched in next clock cycle."
+      },
+      {
+        "type": "text",
+        "content": "The sampling rate (min conversion time) is selectable with the ADM0 register. But there are limits which are given in the electrical specs."
+      },
+      {
+        "type": "text",
+        "content": "The sampling rate (min conversion time) is selectable with the ADM0 register. But there are limits which are given in the electrical specs."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/0601183f-e2f3-4aaf-a22f-1fb2aeaea39b",
+          "alt_text": "",
+          "width": "602",
+          "height": "340",
+          "local_path": "data/categories/rl78_family/ad_converter/d28a079bd8b7b0321819324bbe19d5ac/images/11238e947e14beea8eeb87e2ce670825.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 1: Conversion time electrical specs"
+      },
+      {
+        "type": "text",
+        "content": "Min. conversion time is given with 2.125us which results in a max sample rate of about 470KHz."
+      },
+      {
+        "type": "text",
+        "content": "Min. conversion time is given with 2.125us which results in a max sample rate of about 470KHz."
+      },
+      {
+        "type": "text",
+        "content": "But the sample rate depends also on the possible ADM0 (FR and LV bits) settings. It is not completely free configurable. \nFor 24MHz the min sample time will be a round 3us"
+      },
+      {
+        "type": "text",
+        "content": "But the sample rate depends also on the possible ADM0 (FR and LV bits) settings. It is not completely free configurable. \nFor 24MHz the min sample time will be a round 3us"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/37ab5aad-c131-4c25-ad2f-c323fea8018b",
+          "alt_text": "",
+          "width": "602",
+          "height": "547",
+          "local_path": "data/categories/rl78_family/ad_converter/d28a079bd8b7b0321819324bbe19d5ac/images/7d4903223de989d3f9130dc9bd73ccaf.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 2: Conversion clock electrical spec"
+      },
+      {
+        "type": "text",
+        "content": "A channel-to-channel delay time is not existing. If a new conversion is started, a possibly running conversion is cancelled an the new one is directly started. In scan mode and sequential conversion, the next the channel is switched in next clock cycle."
+      },
+      {
+        "type": "text",
+        "content": "A channel-to-channel delay time is not existing. If a new conversion is started, a possibly running conversion is cancelled an the new one is directly started. In scan mode and sequential conversion, the next the channel is switched in next clock cycle."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/0601183f-e2f3-4aaf-a22f-1fb2aeaea39b",
+        "alt_text": "",
+        "width": "602",
+        "height": "340",
+        "local_path": "data/categories/rl78_family/ad_converter/d28a079bd8b7b0321819324bbe19d5ac/images/11238e947e14beea8eeb87e2ce670825.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/37ab5aad-c131-4c25-ad2f-c323fea8018b",
+        "alt_text": "",
+        "width": "602",
+        "height": "547",
+        "local_path": "data/categories/rl78_family/ad_converter/d28a079bd8b7b0321819324bbe19d5ac/images/7d4903223de989d3f9130dc9bd73ccaf.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78"
+    ],
+    "links": []
+  }
+}

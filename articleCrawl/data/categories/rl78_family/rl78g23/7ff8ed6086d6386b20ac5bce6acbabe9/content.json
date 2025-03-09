@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20824903",
+    "title": "RL78/G23: Current consumption when measuring capacitive touch",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:53:10.929337"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow much current is consumed when measuring capacitive touch? Is there any reference information available?\nAnswer:\nThe average current consumption measured with a capacitive touch cycle of 100 ms is 15.8 μA (reference value for the RL78/G23).\nFigure 1: Current consumption results\nCurrent consumption can be reduced further when using the SNOOZE Mode Sequencer (SMS).\nThe average current consumption measured with a capacitive touch cycle of 100 ms and using SMS is 10.8 μA (reference value for the RL78/G23).\nFigure 2: Current consumption results (touch measurement using SMS)\nFor details on measurement conditions, etc., please refer to this document.\nhttps://www.renesas.com/document/apn/rl78g23-group-rl78g23-capacitive-touch-low-power-guide-sms-function-rev100?r=1496636\nSuitable Products\nRL78/G23"
+      },
+      {
+        "type": "text",
+        "content": "How much current is consumed when measuring capacitive touch? Is there any reference information available?"
+      },
+      {
+        "type": "text",
+        "content": "How much current is consumed when measuring capacitive touch? Is there any reference information available?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe average current consumption measured with a capacitive touch cycle of 100 ms is 15.8 μA (reference value for the RL78/G23).\nFigure 1: Current consumption results\nCurrent consumption can be reduced further when using the SNOOZE Mode Sequencer (SMS).\nThe average current consumption measured with a capacitive touch cycle of 100 ms and using SMS is 10.8 μA (reference value for the RL78/G23).\nFigure 2: Current consumption results (touch measurement using SMS)\nFor details on measurement conditions, etc., please refer to this document.\nhttps://www.renesas.com/document/apn/rl78g23-group-rl78g23-capacitive-touch-low-power-guide-sms-function-rev100?r=1496636\nSuitable Products\nRL78/G23"
+      },
+      {
+        "type": "text",
+        "content": "The average current consumption measured with a capacitive touch cycle of 100 ms is 15.8 μA (reference value for the RL78/G23).\nFigure 1: Current consumption results\nCurrent consumption can be reduced further when using the SNOOZE Mode Sequencer (SMS).\nThe average current consumption measured with a capacitive touch cycle of 100 ms and using SMS is 10.8 μA (reference value for the RL78/G23).\nFigure 2: Current consumption results (touch measurement using SMS)\nFor details on measurement conditions, etc., please refer to this document.\nhttps://www.renesas.com/document/apn/rl78g23-group-rl78g23-capacitive-touch-low-power-guide-sms-function-rev100?r=1496636\nSuitable Products"
+      },
+      {
+        "type": "text",
+        "content": "The average current consumption measured with a capacitive touch cycle of 100 ms is 15.8 μA (reference value for the RL78/G23)."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/363997-1.png",
+          "alt_text": "",
+          "width": "1003",
+          "height": "495",
+          "local_path": "data/categories/rl78_family/rl78g23/7ff8ed6086d6386b20ac5bce6acbabe9/images/d1c1623c64cc65ed0adcf0bf6fd93eb1.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 1: Current consumption results"
+      },
+      {
+        "type": "text",
+        "content": "Current consumption can be reduced further when using the SNOOZE Mode Sequencer (SMS).\nThe average current consumption measured with a capacitive touch cycle of 100 ms and using SMS is 10.8 μA (reference value for the RL78/G23)."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/363997-2.png",
+          "alt_text": "",
+          "width": "1003",
+          "height": "540",
+          "local_path": "data/categories/rl78_family/rl78g23/7ff8ed6086d6386b20ac5bce6acbabe9/images/9c7d202b0fd04b654c8f8fc9cfd484d8.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 2: Current consumption results (touch measurement using SMS)"
+      },
+      {
+        "type": "text",
+        "content": "For details on measurement conditions, etc., please refer to this document.\nhttps://www.renesas.com/document/apn/rl78g23-group-rl78g23-capacitive-touch-low-power-guide-sms-function-rev100?r=1496636"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RL78/G23"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/363997-1.png",
+        "alt_text": "",
+        "width": "1003",
+        "height": "495",
+        "local_path": "data/categories/rl78_family/rl78g23/7ff8ed6086d6386b20ac5bce6acbabe9/images/d1c1623c64cc65ed0adcf0bf6fd93eb1.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/363997-2.png",
+        "alt_text": "",
+        "width": "1003",
+        "height": "540",
+        "local_path": "data/categories/rl78_family/rl78g23/7ff8ed6086d6386b20ac5bce6acbabe9/images/9c7d202b0fd04b654c8f8fc9cfd484d8.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G23"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G23"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/document/apn/rl78g23-group-rl78g23-capacitive-touch-low-power-guide-sms-function-rev100?r=1496636",
+        "url": "https://www.renesas.com/document/apn/rl78g23-group-rl78g23-capacitive-touch-low-power-guide-sms-function-rev100?r=1496636"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20824909"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20824914"
+      }
+    ]
+  }
+}

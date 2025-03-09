@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21056458",
+    "title": "How to enable real time refresh of variables during debugging with RL78/G15",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:54:09.332088"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow to enable real time refresh of variables during debugging with RL78/G15\nAnswer:\nTo enable real time refresh of variables, it is required to enable the Pseudo-RRM/DMM function setting and to allocate 4 bytes of memory in RAM.\nPre-requisite of IDE and compiler for RL78/G15–\nIDE:\ne2studio: 2023-01 (23.1.0) or later\nCS+: CC V8.09.00 or later.\n\nCompiler:\nCC-RL V1.12.00 or later.\nConfiguration setting for pseudo-RRM/DMM function and allocation of 4 bytes of memory in RAM -\nUsing e2studio:\nEnable the Real-time Refresh on specified variable.\n\n\nSelect Pseudo-RRM/DMM function setting.\n\n\nProvide the address for 4 bytes of RAM memory required for the RRM/DMM function.\n\n\nUsing CS+:\nEnable “Access by stopping execution” option in the Debug Tool Settings.\n\n\nEnable “Set debug monitor area”, “Reserve working memory for RRM/DMM function” and “Start address of working memory for RRM/DMM function”.\n\n\nNote: Allocate the 4 bytes memory on top of RAM to allow maximum RAM available to the user application.\nSuitable Products\nRL78/G15"
+      },
+      {
+        "type": "text",
+        "content": "How to enable real time refresh of variables during debugging with RL78/G15"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nTo enable real time refresh of variables, it is required to enable the Pseudo-RRM/DMM function setting and to allocate 4 bytes of memory in RAM.\nPre-requisite of IDE and compiler for RL78/G15–\nIDE:\ne2studio: 2023-01 (23.1.0) or later\nCS+: CC V8.09.00 or later.\n\nCompiler:\nCC-RL V1.12.00 or later.\nConfiguration setting for pseudo-RRM/DMM function and allocation of 4 bytes of memory in RAM -\nUsing e2studio:\nEnable the Real-time Refresh on specified variable.\n\n\nSelect Pseudo-RRM/DMM function setting.\n\n\nProvide the address for 4 bytes of RAM memory required for the RRM/DMM function.\n\n\nUsing CS+:\nEnable “Access by stopping execution” option in the Debug Tool Settings.\n\n\nEnable “Set debug monitor area”, “Reserve working memory for RRM/DMM function” and “Start address of working memory for RRM/DMM function”.\n\n\nNote: Allocate the 4 bytes memory on top of RAM to allow maximum RAM available to the user application.\nSuitable Products\nRL78/G15"
+      },
+      {
+        "type": "text",
+        "content": "To enable real time refresh of variables, it is required to enable the Pseudo-RRM/DMM function setting and to allocate 4 bytes of memory in RAM."
+      },
+      {
+        "type": "text",
+        "content": "Pre-requisite of IDE and compiler for RL78/G15–"
+      },
+      {
+        "type": "text",
+        "content": "Configuration setting for pseudo-RRM/DMM function and allocation of 4 bytes of memory in RAM -"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/375178-1.png",
+          "alt_text": "",
+          "width": "497",
+          "height": "331",
+          "local_path": "data/categories/rl78_family/rl78g15/96412b0e4b5dfee9d8c0b8096b03c211/images/fa8ae2c72a11f0ec5b08f14f2e906934.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/375178-2.png",
+          "alt_text": "",
+          "width": "590",
+          "height": "456",
+          "local_path": "data/categories/rl78_family/rl78g15/96412b0e4b5dfee9d8c0b8096b03c211/images/b544d48adf95d4160b12d6a066e08974.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/375178-3.png",
+          "alt_text": "",
+          "width": "976",
+          "height": "726",
+          "local_path": "data/categories/rl78_family/rl78g15/96412b0e4b5dfee9d8c0b8096b03c211/images/edf2b5ed67775f78e4a4af06a5b273da.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/375178-4.png",
+          "alt_text": "",
+          "width": "941",
+          "height": "425",
+          "local_path": "data/categories/rl78_family/rl78g15/96412b0e4b5dfee9d8c0b8096b03c211/images/54f4969681c7ba3cf2fc498aa088b53b.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/375178-5a.png",
+          "alt_text": "",
+          "width": "1104",
+          "height": "447",
+          "local_path": "data/categories/rl78_family/rl78g15/96412b0e4b5dfee9d8c0b8096b03c211/images/b52c4928746de361cc48e5dfeffc5279.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Note: Allocate the 4 bytes memory on top of RAM to allow maximum RAM available to the user application."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/G15"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/375178-1.png",
+        "alt_text": "",
+        "width": "497",
+        "height": "331",
+        "local_path": "data/categories/rl78_family/rl78g15/96412b0e4b5dfee9d8c0b8096b03c211/images/fa8ae2c72a11f0ec5b08f14f2e906934.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/375178-2.png",
+        "alt_text": "",
+        "width": "590",
+        "height": "456",
+        "local_path": "data/categories/rl78_family/rl78g15/96412b0e4b5dfee9d8c0b8096b03c211/images/b544d48adf95d4160b12d6a066e08974.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/375178-3.png",
+        "alt_text": "",
+        "width": "976",
+        "height": "726",
+        "local_path": "data/categories/rl78_family/rl78g15/96412b0e4b5dfee9d8c0b8096b03c211/images/edf2b5ed67775f78e4a4af06a5b273da.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/375178-4.png",
+        "alt_text": "",
+        "width": "941",
+        "height": "425",
+        "local_path": "data/categories/rl78_family/rl78g15/96412b0e4b5dfee9d8c0b8096b03c211/images/54f4969681c7ba3cf2fc498aa088b53b.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/375178-5a.png",
+        "alt_text": "",
+        "width": "1104",
+        "height": "447",
+        "local_path": "data/categories/rl78_family/rl78g15/96412b0e4b5dfee9d8c0b8096b03c211/images/b52c4928746de361cc48e5dfeffc5279.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G15"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G15"
+    ],
+    "links": []
+  }
+}

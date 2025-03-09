@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21246431",
+    "title": "PCDC driver for RZ/A1L-group products",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:43:09.536376"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nAccording to the following document (application note for the RZ/A1H-group product), the target device of the PCDC driver is the RZ/A1H-group product. Can the PCDC driver be used for an RZ/A1L product?\nhttps://www.renesas.com/document/apn/rza1h-group-usb-peripheral-communications-device-class-driver-pcdc\nAnswer:\nYes, the driver can be used because their USB modules are the same.\nSuitable Products\nRZ/A1L"
+      },
+      {
+        "type": "text",
+        "content": "According to the following document (application note for the RZ/A1H-group product), the target device of the PCDC driver is the RZ/A1H-group product. Can the PCDC driver be used for an RZ/A1L product?\nhttps://www.renesas.com/document/apn/rza1h-group-usb-peripheral-communications-device-class-driver-pcdc"
+      },
+      {
+        "type": "text",
+        "content": "According to the following document (application note for the RZ/A1H-group product), the target device of the PCDC driver is the RZ/A1H-group product. Can the PCDC driver be used for an RZ/A1L product?\nhttps://www.renesas.com/document/apn/rza1h-group-usb-peripheral-communications-device-class-driver-pcdc"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes, the driver can be used because their USB modules are the same.\nSuitable Products\nRZ/A1L"
+      },
+      {
+        "type": "text",
+        "content": "Yes, the driver can be used because their USB modules are the same."
+      },
+      {
+        "type": "text",
+        "content": "Yes, the driver can be used because their USB modules are the same."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/A1L"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/A1L"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/A1L"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/document/apn/rza1h-group-usb-peripheral-communications-device-class-driver-pcdc",
+        "url": "https://www.renesas.com/document/apn/rza1h-group-usb-peripheral-communications-device-class-driver-pcdc"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20016986"
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "Pins usage",
+      "Pins handling method"
+    ],
+    [
+      "Handling of unused analog reference voltage supply pins.",
+      "VREFH and VREFH0:\n→ These pins should not be left open. Connect them to analog power supply (AVCC).\n\nVREFL and VREFL0:\n→ These pins should not be left open. Connect them to analog ground (AVSS)."
+    ],
+    [
+      "Handling of analog reference voltage supply pins which is used as GPIO.",
+      "N/A (For selected products, these are dedicated pins and are not multiplexed with GPIO's or other functions.)"
+    ]
+  ]
+}

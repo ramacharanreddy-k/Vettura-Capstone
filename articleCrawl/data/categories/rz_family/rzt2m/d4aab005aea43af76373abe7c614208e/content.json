@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20483523",
+    "title": "What combinations can be used simultaneously with Ethernet/EtherCAT communication of the RZ/T2M?",
+    "last_updated": "2022-07-06",
+    "extracted_at": "2025-03-08T23:50:12.097934"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat combinations can be used simultaneously with Ethernet/EtherCAT communication of the RZ/T2M?\nAnswer:\nThe combinations that can be used simultaneously with the Ethernet/EtherCAT communication port of the RZ/T2M can be selected in MDOCTRL. \nThe combinations that can be set are as shown in the following figure.\nFor details, refer to the following items. \nTable 26.4 MAC-PHY interface mode and 26.2.2 MODCTRL: Mode Control Register in RZ/T2M Group User’s Manual: Hardware (r01uh0916ej0080-rzt2m)\nSuitable Products\nRZ/T2M"
+      },
+      {
+        "type": "text",
+        "content": "What combinations can be used simultaneously with Ethernet/EtherCAT communication of the RZ/T2M?"
+      },
+      {
+        "type": "text",
+        "content": "What combinations can be used simultaneously with Ethernet/EtherCAT communication of the RZ/T2M?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe combinations that can be used simultaneously with the Ethernet/EtherCAT communication port of the RZ/T2M can be selected in MDOCTRL. \nThe combinations that can be set are as shown in the following figure.\nFor details, refer to the following items. \nTable 26.4 MAC-PHY interface mode and 26.2.2 MODCTRL: Mode Control Register in RZ/T2M Group User’s Manual: Hardware (r01uh0916ej0080-rzt2m)\nSuitable Products\nRZ/T2M"
+      },
+      {
+        "type": "text",
+        "content": "The combinations that can be used simultaneously with the Ethernet/EtherCAT communication port of the RZ/T2M can be selected in MDOCTRL. \nThe combinations that can be set are as shown in the following figure.\nFor details, refer to the following items. \nTable 26.4 MAC-PHY interface mode and 26.2.2 MODCTRL: Mode Control Register in RZ/T2M Group User’s Manual: Hardware (r01uh0916ej0080-rzt2m)"
+      },
+      {
+        "type": "text",
+        "content": "The combinations that can be used simultaneously with the Ethernet/EtherCAT communication port of the RZ/T2M can be selected in MDOCTRL. \nThe combinations that can be set are as shown in the following figure."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/088e2d95-cd5e-4f15-9c6b-db7f46246def.png",
+          "alt_text": "",
+          "width": "676",
+          "height": "253",
+          "local_path": "data/categories/rz_family/rzt2m/d4aab005aea43af76373abe7c614208e/images/2e81d73589f7604fd234a1e565b04c51.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "For details, refer to the following items. \nTable 26.4 MAC-PHY interface mode and 26.2.2 MODCTRL: Mode Control Register in RZ/T2M Group User’s Manual: Hardware (r01uh0916ej0080-rzt2m)"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/T2M"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/088e2d95-cd5e-4f15-9c6b-db7f46246def.png",
+        "alt_text": "",
+        "width": "676",
+        "height": "253",
+        "local_path": "data/categories/rz_family/rzt2m/d4aab005aea43af76373abe7c614208e/images/2e81d73589f7604fd234a1e565b04c51.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/T2M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/T2M"
+    ],
+    "links": [
+      {
+        "text": "RZ/T2M Group User’s Manual: Hardware (r01uh0916ej0080-rzt2m)",
+        "url": "https://www.renesas.com/document/mah/rzt2m-group-users-manual-hardware"
+      },
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20483529"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20483535"
+      }
+    ]
+  }
+}

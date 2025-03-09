@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21603109",
+    "title": "RA6T2: Set up high voltage motor control development environment",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:32:49.926045"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat do I need to set up high voltage motor control development environment?\nAnswer:\nPlease prepare below hardware kits.\nHigh voltage inverter kit (RTK0EM0000B14030BJ)\nhttps://www.renesas.com/RTK0EM0000B14030BJ\nRA6T2 CPU board (RTK0EMA270C00000BJ)\nhttps://www.renesas.com/RTK0EMA270C00000BJ\nCommunication board (RTK0EMXC90S00000BJ)\nhttps://www.renesas.com/RTK0EMXC90S00000BJ\nAbout sample code, Quick Start Guide, etc. that you need are available on Renesas.com.\nSuitable Products\nRA6T2"
+      },
+      {
+        "type": "text",
+        "content": "What do I need to set up high voltage motor control development environment?"
+      },
+      {
+        "type": "text",
+        "content": "What do I need to set up high voltage motor control development environment?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nPlease prepare below hardware kits.\nHigh voltage inverter kit (RTK0EM0000B14030BJ)\nhttps://www.renesas.com/RTK0EM0000B14030BJ\nRA6T2 CPU board (RTK0EMA270C00000BJ)\nhttps://www.renesas.com/RTK0EMA270C00000BJ\nCommunication board (RTK0EMXC90S00000BJ)\nhttps://www.renesas.com/RTK0EMXC90S00000BJ\nAbout sample code, Quick Start Guide, etc. that you need are available on Renesas.com.\nSuitable Products\nRA6T2"
+      },
+      {
+        "type": "text",
+        "content": "Please prepare below hardware kits.\nHigh voltage inverter kit (RTK0EM0000B14030BJ)\nhttps://www.renesas.com/RTK0EM0000B14030BJ\nRA6T2 CPU board (RTK0EMA270C00000BJ)\nhttps://www.renesas.com/RTK0EMA270C00000BJ\nCommunication board (RTK0EMXC90S00000BJ)\nhttps://www.renesas.com/RTK0EMXC90S00000BJ\nAbout sample code, Quick Start Guide, etc. that you need are available on Renesas.com."
+      },
+      {
+        "type": "text",
+        "content": "Please prepare below hardware kits."
+      },
+      {
+        "type": "text",
+        "content": "High voltage inverter kit (RTK0EM0000B14030BJ)\nhttps://www.renesas.com/RTK0EM0000B14030BJ"
+      },
+      {
+        "type": "text",
+        "content": "RA6T2 CPU board (RTK0EMA270C00000BJ)\nhttps://www.renesas.com/RTK0EMA270C00000BJ"
+      },
+      {
+        "type": "text",
+        "content": "Communication board (RTK0EMXC90S00000BJ)\nhttps://www.renesas.com/RTK0EMXC90S00000BJ"
+      },
+      {
+        "type": "text",
+        "content": "About sample code, Quick Start Guide, etc. that you need are available on Renesas.com."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA6T2"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA6T2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA6T2"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/RTK0EM0000B14030BJ",
+        "url": "https://www.renesas.com/RTK0EM0000B14030BJ"
+      },
+      {
+        "text": "https://www.renesas.com/RTK0EMA270C00000BJ",
+        "url": "https://www.renesas.com/RTK0EMA270C00000BJ"
+      },
+      {
+        "text": "https://www.renesas.com/RTK0EMXC90S00000BJ",
+        "url": "https://www.renesas.com/RTK0EMXC90S00000BJ"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21603116"
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21143962",
+    "title": "RA8D1: Graphics/HMI support",
+    "last_updated": "2023-12-12",
+    "extracted_at": "2025-03-08T23:30:01.387262"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat display resolutions can be supported with the RA8D1?\nAnswer:\nRA8D1 devices include a high resolution Graphics LCD Controller that can support resolutions up to WXGA (1280x800) and a 2D Graphics Drawing Engine that offloads graphics rendering function from the CPU, and supports multiple graphics primitives and formats and image functions such as rotation, scaling, alpha blending etc.. Depending on the use case, frame rates can be traded off against resolution and color depth. To support low and high resolution displays, the RA8D1 devices include multiple memory options for storage of graphics frame buffers, including internal 1MB SRAM and a high throughput 32bit SDRAM interface.\nSuitable Products\nRA8D1"
+      },
+      {
+        "type": "text",
+        "content": "What display resolutions can be supported with the RA8D1?"
+      },
+      {
+        "type": "text",
+        "content": "What display resolutions can be supported with the RA8D1?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRA8D1 devices include a high resolution Graphics LCD Controller that can support resolutions up to WXGA (1280x800) and a 2D Graphics Drawing Engine that offloads graphics rendering function from the CPU, and supports multiple graphics primitives and formats and image functions such as rotation, scaling, alpha blending etc.. Depending on the use case, frame rates can be traded off against resolution and color depth. To support low and high resolution displays, the RA8D1 devices include multiple memory options for storage of graphics frame buffers, including internal 1MB SRAM and a high throughput 32bit SDRAM interface.\nSuitable Products\nRA8D1"
+      },
+      {
+        "type": "text",
+        "content": "RA8D1 devices include a high resolution Graphics LCD Controller that can support resolutions up to WXGA (1280x800) and a 2D Graphics Drawing Engine that offloads graphics rendering function from the CPU, and supports multiple graphics primitives and formats and image functions such as rotation, scaling, alpha blending etc.. Depending on the use case, frame rates can be traded off against resolution and color depth. To support low and high resolution displays, the RA8D1 devices include multiple memory options for storage of graphics frame buffers, including internal 1MB SRAM and a high throughput 32bit SDRAM interface."
+      },
+      {
+        "type": "text",
+        "content": "RA8D1 devices include a high resolution Graphics LCD Controller that can support resolutions up to WXGA (1280x800) and a 2D Graphics Drawing Engine that offloads graphics rendering function from the CPU, and supports multiple graphics primitives and formats and image functions such as rotation, scaling, alpha blending etc.. Depending on the use case, frame rates can be traded off against resolution and color depth. To support low and high resolution displays, the RA8D1 devices include multiple memory options for storage of graphics frame buffers, including internal 1MB SRAM and a high throughput 32bit SDRAM interface."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA8D1"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA8D1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA8D1"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21143965"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21143968"
+      }
+    ]
+  }
+}

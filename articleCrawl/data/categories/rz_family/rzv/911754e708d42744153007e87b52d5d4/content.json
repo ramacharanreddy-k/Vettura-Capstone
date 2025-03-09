@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20978992",
+    "title": "RZ/V: Introduction to RZ/V AI SDK",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:52:07.196694"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the RZ/V AI SDK? And what will be provided?\nAnswer:\nAI Applications and AI SDK are quick and easy solutions for starting AI.\nIt provides various AI applications for free.\nRZ/V AI Software Development Kit (AI SDK) is the most comprehensive solution for building end-to-end accelerated AI applications. AI SDK includes Yocto Linux with bootloader, Linux Kernel, Cross Compiler and a complete set of libraries for DRP-AI, graphics and codec.\nSuitable Products\nRZ/V"
+      },
+      {
+        "type": "text",
+        "content": "What is the RZ/V AI SDK? And what will be provided?"
+      },
+      {
+        "type": "text",
+        "content": "What is the RZ/V AI SDK? And what will be provided?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nAI Applications and AI SDK are quick and easy solutions for starting AI.\nIt provides various AI applications for free.\nRZ/V AI Software Development Kit (AI SDK) is the most comprehensive solution for building end-to-end accelerated AI applications. AI SDK includes Yocto Linux with bootloader, Linux Kernel, Cross Compiler and a complete set of libraries for DRP-AI, graphics and codec.\nSuitable Products\nRZ/V"
+      },
+      {
+        "type": "text",
+        "content": "AI Applications and AI SDK are quick and easy solutions for starting AI.\nIt provides various AI applications for free.\nRZ/V AI Software Development Kit (AI SDK) is the most comprehensive solution for building end-to-end accelerated AI applications. AI SDK includes Yocto Linux with bootloader, Linux Kernel, Cross Compiler and a complete set of libraries for DRP-AI, graphics and codec."
+      },
+      {
+        "type": "text",
+        "content": "AI Applications and AI SDK are quick and easy solutions for starting AI.\nIt provides various AI applications for free."
+      },
+      {
+        "type": "text",
+        "content": "RZ/V AI Software Development Kit (AI SDK) is the most comprehensive solution for building end-to-end accelerated AI applications. AI SDK includes Yocto Linux with bootloader, Linux Kernel, Cross Compiler and a complete set of libraries for DRP-AI, graphics and codec."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20978989"
+      }
+    ]
+  }
+}

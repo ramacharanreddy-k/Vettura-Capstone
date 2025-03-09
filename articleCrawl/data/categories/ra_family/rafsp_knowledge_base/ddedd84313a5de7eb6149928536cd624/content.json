@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20797642",
+    "title": "RA Family (Cortex-M MCUs): Interrupt latency of the highest priority interrupt may not be constant",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:24:57.846926"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nInterrupt latency of the highest priority interrupt may not be constant\nAnswer:\nThe latency of interrupt function with the highest priority in a system may not be constant due to the Arm Cortex-M processor’s late-arriving interrupt mechanism. Let’s say, an interrupt INT0 has highest interrupt priority and INT1 has a lower priority than INT0. When the INT0 request occurs during the interrupt processing for INT1 has already started and been in the stack push, INT0 is served first instead of INT1 without another stack push. Thanks to this behavior, late-arriving interrupt (INT0) is handled slightly faster than normal. Refer to this ARM article for more information : https://developer.arm.com/documentation/ka001190/latest\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Interrupt latency of the highest priority interrupt may not be constant"
+      },
+      {
+        "type": "text",
+        "content": "Interrupt latency of the highest priority interrupt may not be constant"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe latency of interrupt function with the highest priority in a system may not be constant due to the Arm Cortex-M processor’s late-arriving interrupt mechanism. Let’s say, an interrupt INT0 has highest interrupt priority and INT1 has a lower priority than INT0. When the INT0 request occurs during the interrupt processing for INT1 has already started and been in the stack push, INT0 is served first instead of INT1 without another stack push. Thanks to this behavior, late-arriving interrupt (INT0) is handled slightly faster than normal. Refer to this ARM article for more information : https://developer.arm.com/documentation/ka001190/latest\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "The latency of interrupt function with the highest priority in a system may not be constant due to the Arm Cortex-M processor’s late-arriving interrupt mechanism. Let’s say, an interrupt INT0 has highest interrupt priority and INT1 has a lower priority than INT0. When the INT0 request occurs during the interrupt processing for INT1 has already started and been in the stack push, INT0 is served first instead of INT1 without another stack push. Thanks to this behavior, late-arriving interrupt (INT0) is handled slightly faster than normal. Refer to this ARM article for more information : https://developer.arm.com/documentation/ka001190/latest\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "The latency of interrupt function with the highest priority in a system may not be constant due to the Arm Cortex-M processor’s late-arriving interrupt mechanism. Let’s say, an interrupt INT0 has highest interrupt priority and INT1 has a lower priority than INT0. When the INT0 request occurs during the interrupt processing for INT1 has already started and been in the stack push, INT0 is served first instead of INT1 without another stack push. Thanks to this behavior, late-arriving interrupt (INT0) is handled slightly faster than normal. Refer to this ARM article for more information : https://developer.arm.com/documentation/ka001190/latest"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": [
+      {
+        "text": "https://developer.arm.com/documentation/ka001190/latest",
+        "url": "https://developer.arm.com/documentation/ka001190/latest"
+      },
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20796417"
+      }
+    ]
+  }
+}

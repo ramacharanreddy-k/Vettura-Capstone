@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21732378",
+    "title": "Cannot erase or program RA2A1",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:22:33.779996"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "In some cases it is possible that erasing or re-programming your target fails. Especially, if the option-setting memory area is overwritten, there is risk that the Security MPU settings have been enabled."
+      },
+      {
+        "type": "text",
+        "content": "In some cases it is possible that erasing or re-programming your target fails. Especially, if the option-setting memory area is overwritten, there is risk that the Security MPU settings have been enabled."
+      },
+      {
+        "type": "text",
+        "content": "To check if your MCU has been locked permanently try to run the script attached in folder RA2A1_Erase_Block_0.zip."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/09f7ed57-abe1-476f-a093-ca9a19a237ff",
+          "alt_text": "",
+          "width": "750",
+          "height": "365",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/48180f9f6caba0ae2fa0892b01439cef/images/81ced95fcbb6498447d038057d318a86.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "This script erases block 0 of code flash. You must edit  the JLink_path.bat to point to the location of JLink.exe, and then open command prompt in order to run the script."
+      },
+      {
+        "type": "text",
+        "content": "If the script runs successfully and block 0 is erased you should see something like this:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/d09d7dd2-887a-4063-8b5e-b7ed5abf889b",
+          "alt_text": "",
+          "width": "406",
+          "height": "598",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/48180f9f6caba0ae2fa0892b01439cef/images/94ad7f229d34cea54071080227b331d6.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA2A1,RA2L1,RA2E1,RA2E2,RA2E3,RA2A2,RA4M1,RA4W1"
+      },
+      {
+        "type": "text",
+        "content": "RA2A1,RA2L1,RA2E1,RA2E2,RA2E3,RA2A2,RA4M1,RA4W1"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/09f7ed57-abe1-476f-a093-ca9a19a237ff",
+        "alt_text": "",
+        "width": "750",
+        "height": "365",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/48180f9f6caba0ae2fa0892b01439cef/images/81ced95fcbb6498447d038057d318a86.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/d09d7dd2-887a-4063-8b5e-b7ed5abf889b",
+        "alt_text": "",
+        "width": "406",
+        "height": "598",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/48180f9f6caba0ae2fa0892b01439cef/images/94ad7f229d34cea54071080227b331d6.png"
+      }
+    ],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": []
+  }
+}

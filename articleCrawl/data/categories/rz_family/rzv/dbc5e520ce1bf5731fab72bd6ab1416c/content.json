@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20352689",
+    "title": "RZ/V2L: Points to note when using ISP Support Package",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:51:34.296923"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI do not perform AI inference with the RZ/V2L, but I wish to use the ISP feature. \nIs there anything I should note when doing so?\nAnswer:\nYes. Even if inference execution using the DRP-AI will not be performed, you should download the RZ/V2L DRP-AI Support Package and install the DRP-AI driver. The Simple ISP feature of the RZ/V2L requires the DRP-AI driver because it uses the DRP part of the DRP-AI.\nSuitable Products\nRZ/V2L"
+      },
+      {
+        "type": "text",
+        "content": "I do not perform AI inference with the RZ/V2L, but I wish to use the ISP feature. \nIs there anything I should note when doing so?"
+      },
+      {
+        "type": "text",
+        "content": "I do not perform AI inference with the RZ/V2L, but I wish to use the ISP feature. \nIs there anything I should note when doing so?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes. Even if inference execution using the DRP-AI will not be performed, you should download the RZ/V2L DRP-AI Support Package and install the DRP-AI driver. The Simple ISP feature of the RZ/V2L requires the DRP-AI driver because it uses the DRP part of the DRP-AI.\nSuitable Products\nRZ/V2L"
+      },
+      {
+        "type": "text",
+        "content": "Yes. Even if inference execution using the DRP-AI will not be performed, you should download the RZ/V2L DRP-AI Support Package and install the DRP-AI driver. The Simple ISP feature of the RZ/V2L requires the DRP-AI driver because it uses the DRP part of the DRP-AI."
+      },
+      {
+        "type": "text",
+        "content": "Yes. Even if inference execution using the DRP-AI will not be performed, you should download the RZ/V2L DRP-AI Support Package and install the DRP-AI driver. The Simple ISP feature of the RZ/V2L requires the DRP-AI driver because it uses the DRP part of the DRP-AI."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V2L"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V2L"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V2L"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20352676"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20352699"
+      }
+    ]
+  }
+}

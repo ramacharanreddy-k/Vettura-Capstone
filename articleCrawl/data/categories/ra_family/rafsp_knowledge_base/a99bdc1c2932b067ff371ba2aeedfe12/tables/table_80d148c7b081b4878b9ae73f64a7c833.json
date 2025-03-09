@@ -1,0 +1,33 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "J29",
+      "Customer Targets Board"
+    ],
+    [
+      "Pin6",
+      "P108/SWDIO"
+    ],
+    [
+      "Pin8",
+      "P300/SWCLK"
+    ],
+    [
+      "Pin2",
+      "P110/RXD9"
+    ],
+    [
+      "Pin4",
+      "P109/TXD9"
+    ],
+    [
+      "J8",
+      "Customer Targets Board"
+    ],
+    [
+      "Pin1",
+      "RESET"
+    ]
+  ]
+}

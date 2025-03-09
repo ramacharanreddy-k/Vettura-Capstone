@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18286049",
+    "title": "Is There a Proximity Sensing Solution?",
+    "last_updated": "2023-02-03",
+    "extracted_at": "2025-03-09T00:08:51.477892"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there a proximity sensing solution?\nAnswer:\nThe following solutions are available for proximity sensing.\n3D Gesture /2D Gesture\nhttps://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/touch-free-user-interface-reference-design-touch-free-user-interface-reference-design\nTouchless Button\nhttps://www.renesas.com/us/en/application/home-building/capacitive-touch-solutions/capacitive-sensor-application-reference-design-touchless-button-solution-reference-design\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Is there a proximity sensing solution?"
+      },
+      {
+        "type": "text",
+        "content": "Is there a proximity sensing solution?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe following solutions are available for proximity sensing.\n3D Gesture /2D Gesture\nhttps://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/touch-free-user-interface-reference-design-touch-free-user-interface-reference-design\nTouchless Button\nhttps://www.renesas.com/us/en/application/home-building/capacitive-touch-solutions/capacitive-sensor-application-reference-design-touchless-button-solution-reference-design\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "The following solutions are available for proximity sensing.\n3D Gesture /2D Gesture\nhttps://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/touch-free-user-interface-reference-design-touch-free-user-interface-reference-design\nTouchless Button\nhttps://www.renesas.com/us/en/application/home-building/capacitive-touch-solutions/capacitive-sensor-application-reference-design-touchless-button-solution-reference-design"
+      },
+      {
+        "type": "text",
+        "content": "The following solutions are available for proximity sensing."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/touch-free-user-interface-reference-design-touch-free-user-interface-reference-design",
+        "url": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/touch-free-user-interface-reference-design-touch-free-user-interface-reference-design"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/application/home-building/capacitive-touch-solutions/capacitive-sensor-application-reference-design-touchless-button-solution-reference-design",
+        "url": "https://www.renesas.com/us/en/application/home-building/capacitive-touch-solutions/capacitive-sensor-application-reference-design-touchless-button-solution-reference-design"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792851"
+      }
+    ]
+  }
+}

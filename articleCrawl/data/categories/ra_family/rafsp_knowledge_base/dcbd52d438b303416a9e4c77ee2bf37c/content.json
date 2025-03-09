@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21116861",
+    "title": "Program RA MCU without using FSP",
+    "last_updated": "2023-02-11",
+    "extracted_at": "2025-03-08T23:24:12.406105"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI need to program my RA MCU without using the flexible software package.\nI am having difficulties.\nAnswer:\nWe strongly recommend using FSP APIs. You will save tons of time and energy compared to what you are trying to do.\nHowever, if you still want to code using direct register access, the easiest and safest way to make sure you do not miss anything is to go through the basic FSP APIs for initialization to see what registers are configured, so you can replicate the same process.\n  Suitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "I need to program my RA MCU without using the flexible software package.\nI am having difficulties."
+      },
+      {
+        "type": "text",
+        "content": "I need to program my RA MCU without using the flexible software package.\nI am having difficulties."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nWe strongly recommend using FSP APIs. You will save tons of time and energy compared to what you are trying to do.\nHowever, if you still want to code using direct register access, the easiest and safest way to make sure you do not miss anything is to go through the basic FSP APIs for initialization to see what registers are configured, so you can replicate the same process.\n  Suitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "We strongly recommend using FSP APIs. You will save tons of time and energy compared to what you are trying to do.\nHowever, if you still want to code using direct register access, the easiest and safest way to make sure you do not miss anything is to go through the basic FSP APIs for initialization to see what registers are configured, so you can replicate the same process."
+      },
+      {
+        "type": "text",
+        "content": "We strongly recommend using FSP APIs. You will save tons of time and energy compared to what you are trying to do."
+      },
+      {
+        "type": "text",
+        "content": "However, if you still want to code using direct register access, the easiest and safest way to make sure you do not miss anything is to go through the basic FSP APIs for initialization to see what registers are configured, so you can replicate the same process."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": []
+  }
+}

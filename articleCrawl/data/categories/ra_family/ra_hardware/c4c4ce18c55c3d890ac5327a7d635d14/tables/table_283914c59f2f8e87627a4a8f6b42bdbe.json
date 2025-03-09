@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "enum e_gpt_three_phase_prv_gtccr\n{\n    GPT_THREE_PHASE_PRV_GTCCRA = 0U,\n    GPT_THREE_PHASE_PRV_GTCCRB,\n    GPT_THREE_PHASE_PRV_GTCCRC,\n    GPT_THREE_PHASE_PRV_GTCCRE,\n    GPT_THREE_PHASE_PRV_GTCCRD,\n    GPT_THREE_PHASE_PRV_GTCCRF\n};\nstatic fsp_err_t gpt_complementary_pwm_mode_3_init (void);"
+    ]
+  ]
+}

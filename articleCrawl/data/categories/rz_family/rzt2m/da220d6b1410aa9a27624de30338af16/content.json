@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20483528",
+    "title": "Please tell me about the types of reset of the RZ/T2M, and their initialization targets.",
+    "last_updated": "2022-07-06",
+    "extracted_at": "2025-03-08T23:50:20.282789"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nPlease tell me about the types of reset of the RZ/T2M, and their initialization targets.\nAnswer:\nThe RZ/T2M has the five types of reset shown in Table 5.1.\nFor the initialization targets of each reset, refer to Table 5.2.\nSuitable Products\nRZ/T2M"
+      },
+      {
+        "type": "text",
+        "content": "Please tell me about the types of reset of the RZ/T2M, and their initialization targets."
+      },
+      {
+        "type": "text",
+        "content": "Please tell me about the types of reset of the RZ/T2M, and their initialization targets."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RZ/T2M has the five types of reset shown in Table 5.1.\nFor the initialization targets of each reset, refer to Table 5.2.\nSuitable Products\nRZ/T2M"
+      },
+      {
+        "type": "text",
+        "content": "The RZ/T2M has the five types of reset shown in Table 5.1.\nFor the initialization targets of each reset, refer to Table 5.2."
+      },
+      {
+        "type": "text",
+        "content": "The RZ/T2M has the five types of reset shown in Table 5.1.\nFor the initialization targets of each reset, refer to Table 5.2."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/70286ca0-12d6-4f07-9afb-d13bc13527c3.png",
+          "alt_text": "",
+          "width": "591",
+          "height": "136",
+          "local_path": "data/categories/rz_family/rzt2m/da220d6b1410aa9a27624de30338af16/images/4a2f9e3f6d7eac9bb05c33a4c21c1c96.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/1e6de2a1-6096-4670-822a-3298f35593a7.png",
+          "alt_text": "",
+          "width": "650",
+          "height": "505",
+          "local_path": "data/categories/rz_family/rzt2m/da220d6b1410aa9a27624de30338af16/images/414993a67cb1a819ee5acb69422a4196.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/T2M"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/70286ca0-12d6-4f07-9afb-d13bc13527c3.png",
+        "alt_text": "",
+        "width": "591",
+        "height": "136",
+        "local_path": "data/categories/rz_family/rzt2m/da220d6b1410aa9a27624de30338af16/images/4a2f9e3f6d7eac9bb05c33a4c21c1c96.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/1e6de2a1-6096-4670-822a-3298f35593a7.png",
+        "alt_text": "",
+        "width": "650",
+        "height": "505",
+        "local_path": "data/categories/rz_family/rzt2m/da220d6b1410aa9a27624de30338af16/images/414993a67cb1a819ee5acb69422a4196.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/T2M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/T2M"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20483534"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20483541"
+      }
+    ]
+  }
+}

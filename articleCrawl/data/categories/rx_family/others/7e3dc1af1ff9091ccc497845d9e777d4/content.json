@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20940236",
+    "title": "Is it possible to change the screen display orientation by using emWin at runtime rather than during compilation?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:23:56.224781"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs it possible to change the screen display orientation by using emWin at runtime rather than during compilation?\nAnswer:\nYes. Is possible.\nSet EMWIN_USE_RUNTIME_ORIENTATION in the configuration option (r_emwin_rx_config.h) to \"(1)\".\nAs a result, you can use AppWizard's ROTATEDISPLAY function and screen rotation using the LCD_ROTATE_SetSel().\nNote that the user does not need to call or set initialization functions such as LCD_ROTATE_AddDriver() and LCD_ROTATE_SetCallback().\nPlease refer to the following manual for details.\nemWin User Guide & Reference Manual (Chapter 11 Display drivers, 11.5 Display orientation)\nAppWizard User Guide & Reference Manual (8.3.15 ROTATEDISPLAY)\nemWin FIT module manual (2.6 Configuration while Compiling, 6.1.5 Notes on touch coordinates when the orientation change function is used at runtime)\nSuitable Products\nRX Family\n  日本語"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nIs it possible to change the screen display orientation by using emWin at runtime rather than during compilation?\nAnswer:\nYes. Is possible.\nSet EMWIN_USE_RUNTIME_ORIENTATION in the configuration option (r_emwin_rx_config.h) to \"(1)\".\nAs a result, you can use AppWizard's ROTATEDISPLAY function and screen rotation using the LCD_ROTATE_SetSel().\nNote that the user does not need to call or set initialization functions such as LCD_ROTATE_AddDriver() and LCD_ROTATE_SetCallback().\nPlease refer to the following manual for details.\nemWin User Guide & Reference Manual (Chapter 11 Display drivers, 11.5 Display orientation)\nAppWizard User Guide & Reference Manual (8.3.15 ROTATEDISPLAY)\nemWin FIT module manual (2.6 Configuration while Compiling, 6.1.5 Notes on touch coordinates when the orientation change function is used at runtime)\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Is it possible to change the screen display orientation by using emWin at runtime rather than during compilation?"
+      },
+      {
+        "type": "text",
+        "content": "Is it possible to change the screen display orientation by using emWin at runtime rather than during compilation?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes. Is possible.\nSet EMWIN_USE_RUNTIME_ORIENTATION in the configuration option (r_emwin_rx_config.h) to \"(1)\".\nAs a result, you can use AppWizard's ROTATEDISPLAY function and screen rotation using the LCD_ROTATE_SetSel().\nNote that the user does not need to call or set initialization functions such as LCD_ROTATE_AddDriver() and LCD_ROTATE_SetCallback().\nPlease refer to the following manual for details.\nemWin User Guide & Reference Manual (Chapter 11 Display drivers, 11.5 Display orientation)\nAppWizard User Guide & Reference Manual (8.3.15 ROTATEDISPLAY)\nemWin FIT module manual (2.6 Configuration while Compiling, 6.1.5 Notes on touch coordinates when the orientation change function is used at runtime)\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Yes. Is possible.\nSet EMWIN_USE_RUNTIME_ORIENTATION in the configuration option (r_emwin_rx_config.h) to \"(1)\".\nAs a result, you can use AppWizard's ROTATEDISPLAY function and screen rotation using the LCD_ROTATE_SetSel().\nNote that the user does not need to call or set initialization functions such as LCD_ROTATE_AddDriver() and LCD_ROTATE_SetCallback().\nPlease refer to the following manual for details.\nemWin User Guide & Reference Manual (Chapter 11 Display drivers, 11.5 Display orientation)\nAppWizard User Guide & Reference Manual (8.3.15 ROTATEDISPLAY)\nemWin FIT module manual (2.6 Configuration while Compiling, 6.1.5 Notes on touch coordinates when the orientation change function is used at runtime)"
+      },
+      {
+        "type": "text",
+        "content": "Yes. Is possible."
+      },
+      {
+        "type": "text",
+        "content": "Set EMWIN_USE_RUNTIME_ORIENTATION in the configuration option (r_emwin_rx_config.h) to \"(1)\".\nAs a result, you can use AppWizard's ROTATEDISPLAY function and screen rotation using the LCD_ROTATE_SetSel().\nNote that the user does not need to call or set initialization functions such as LCD_ROTATE_AddDriver() and LCD_ROTATE_SetCallback()."
+      },
+      {
+        "type": "text",
+        "content": "Please refer to the following manual for details."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20684875"
+      }
+    ]
+  }
+}

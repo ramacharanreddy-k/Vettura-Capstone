@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "#define CTRL_PV 1\n#define CTRL_HN 1\n#define ARM_MPU_CTRL(PV, HN) \\\n  (((PV) << MPU_CTRL_PRIVDEFENA_Pos) | \\\n  ((HN) << MPU_CTRL_HFNMIENA_Pos))\n  #define MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL             0x04\n#define MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX             0\n#define MPU_ARMV8M_MAIR_ATTR_CODE_VAL               0xAA\n#define MPU_ARMV8M_MAIR_ATTR_CODE_IDX               1\n#define MPU_ARMV8M_MAIR_ATTR_DATA_VAL               0xFF\n#define MPU_ARMV8M_MAIR_ATTR_DATA_IDX               2\n#define MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL        0x44\n#define MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX        3"
+    ]
+  ]
+}

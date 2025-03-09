@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21116868",
+    "title": "RA Family: Mixing SPI and I2C on same pins",
+    "last_updated": "2023-02-11",
+    "extracted_at": "2025-03-08T23:20:04.482979"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan you mix I2C and SPI on the same pins?\nAnswer:\nYou can normally mix I2C and SPI on the same pins. I2C only does something between START and STOP.\nSTART is when SCL is HI, SDA goes to HI->LO.\nSTOP is when SCL is HI and SDA goes LO->HI.\nBetween START and STOP you can only do I2C transactions.\nSo if you arrange your code such that SDA only changes value when SCL is LO, there will be no problems. The I2C will not notice any SPI transactions. You can use SPI devices on an I2C bus, just give each chip its own CS signal. The \"SPI\" type devices do have to have a common-able data in and out pins. Of course all the SPI devices have their own individual CS pin, but this is the disadvantage of SPI. You can use the same routines for both if you are short of code space.\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "Can you mix I2C and SPI on the same pins?"
+      },
+      {
+        "type": "text",
+        "content": "Can you mix I2C and SPI on the same pins?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYou can normally mix I2C and SPI on the same pins. I2C only does something between START and STOP.\nSTART is when SCL is HI, SDA goes to HI->LO.\nSTOP is when SCL is HI and SDA goes LO->HI.\nBetween START and STOP you can only do I2C transactions.\nSo if you arrange your code such that SDA only changes value when SCL is LO, there will be no problems. The I2C will not notice any SPI transactions. You can use SPI devices on an I2C bus, just give each chip its own CS signal. The \"SPI\" type devices do have to have a common-able data in and out pins. Of course all the SPI devices have their own individual CS pin, but this is the disadvantage of SPI. You can use the same routines for both if you are short of code space.\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "You can normally mix I2C and SPI on the same pins. I2C only does something between START and STOP.\nSTART is when SCL is HI, SDA goes to HI->LO.\nSTOP is when SCL is HI and SDA goes LO->HI.\nBetween START and STOP you can only do I2C transactions.\nSo if you arrange your code such that SDA only changes value when SCL is LO, there will be no problems. The I2C will not notice any SPI transactions. You can use SPI devices on an I2C bus, just give each chip its own CS signal. The \"SPI\" type devices do have to have a common-able data in and out pins. Of course all the SPI devices have their own individual CS pin, but this is the disadvantage of SPI. You can use the same routines for both if you are short of code space."
+      },
+      {
+        "type": "text",
+        "content": "You can normally mix I2C and SPI on the same pins. I2C only does something between START and STOP."
+      },
+      {
+        "type": "text",
+        "content": "START is when SCL is HI, SDA goes to HI->LO."
+      },
+      {
+        "type": "text",
+        "content": "STOP is when SCL is HI and SDA goes LO->HI."
+      },
+      {
+        "type": "text",
+        "content": "Between START and STOP you can only do I2C transactions."
+      },
+      {
+        "type": "text",
+        "content": "So if you arrange your code such that SDA only changes value when SCL is LO, there will be no problems. The I2C will not notice any SPI transactions. You can use SPI devices on an I2C bus, just give each chip its own CS signal. The \"SPI\" type devices do have to have a common-able data in and out pins. Of course all the SPI devices have their own individual CS pin, but this is the disadvantage of SPI. You can use the same routines for both if you are short of code space."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": []
+  }
+}

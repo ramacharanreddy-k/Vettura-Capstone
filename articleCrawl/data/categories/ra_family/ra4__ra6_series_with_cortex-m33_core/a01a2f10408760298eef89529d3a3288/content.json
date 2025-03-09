@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21659735",
+    "title": "RA4M2, RA4M3, RA6M4, RA6M5: Is it possible to change the Trustzone boundaries via OTA?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:30:50.947528"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Is it possible to change the Trustzone boundaries via OTA?"
+      },
+      {
+        "type": "text",
+        "content": "Trustzone technology is a security feature that can be met in RA MCUs that use a Cortex-M33."
+      },
+      {
+        "type": "text",
+        "content": "To set the Trustzone boundaries and IDAU region the MCU needs to be placed in boot mode SCI or USB ."
+      },
+      {
+        "type": "text",
+        "content": "It is not possible to change the IDAU settings in firmware and it is not possible to be manipulated during remote update (e.g. OTA)."
+      },
+      {
+        "type": "text",
+        "content": "So the answer is no, the Trustzone boundaries cannot be changed during OTA."
+      },
+      {
+        "type": "text",
+        "content": "Resources: Securing Data at Rest Using the Arm® TrustZone®"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA4M2,RA4M3,RA6M4,RA6M5"
+      },
+      {
+        "type": "text",
+        "content": "RA4M2,RA4M3,RA6M4,RA6M5"
+      }
+    ],
+    "images": [],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": [
+      {
+        "text": "Securing Data at Rest Using the Arm® TrustZone®",
+        "url": "https://www.renesas.com/en/document/apn/renesas-ra-securing-data-rest-using-arm-trustzone"
+      }
+    ]
+  }
+}

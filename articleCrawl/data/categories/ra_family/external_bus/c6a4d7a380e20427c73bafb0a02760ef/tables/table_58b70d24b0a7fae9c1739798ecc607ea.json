@@ -1,0 +1,34 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "Part Numbers",
+      "Density",
+      "Bank address",
+      "Row address",
+      "Column address"
+    ],
+    [
+      "MT48LC4M16A2",
+      "64Mb (8MB)",
+      "BA[1:0] (2bit)",
+      "A[11:0] (12bits)",
+      "A[7:0] (8bits)"
+    ],
+    [
+      "MT48LC8M16A2",
+      "128Mb (16MB)",
+      "A[8:0] (9bits)"
+    ],
+    [
+      "MT48LC16M16A2",
+      "256Mb (32MB)",
+      "A[12:0] (13bits)"
+    ],
+    [
+      "MT48LC32M16A2",
+      "512Mb (64MB)",
+      "A[9:0] (10bits)"
+    ]
+  ]
+}

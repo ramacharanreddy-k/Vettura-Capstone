@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "void external_irq_callback (void)\n{\nWM_HWIN hWin;\nWM_HWIN hItem;\n    hWin = WM_GetActiveWindow();\n  hItem = WM_GetDialogItem(hWin, ID_BUTTON_00);\n  WIDGET_SetFocusable(hItem,1);\n  WM_SetFocus(hItem);\n  GUI_StoreKeyMsg(GUI_KEY_ENTER, 1); /* Pressed */\n  GUI_StoreKeyMsg(GUI_KEY_ENTER, 0); /* Release */\n}"
+    ]
+  ]
+}

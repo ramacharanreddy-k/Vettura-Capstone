@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "/*\n ID Code\n Note: To permanently lock and disable the debug interface define the BSP_ID_CODE_PERMANENTLY_LOCKED in the compiler settings.\n WARNING: This will disable debug access to the part and cannot be reversed by a debug probe.\n */\n#if defined(BSP_ID_CODE_PERMANENTLY_LOCKED)\n            #define BSP_CFG_ID_CODE_LONG_1 (0x00000000)\n            #define BSP_CFG_ID_CODE_LONG_2 (0x00000000)\n            #define BSP_CFG_ID_CODE_LONG_3 (0x00000000)\n            #define BSP_CFG_ID_CODE_LONG_4 (0x00000000)\n            #else\n/* ID CODE: 00112233445566778899AABBCCDDEEbf */\n#define BSP_CFG_ID_CODE_LONG_1 (0x33221100)\n#define BSP_CFG_ID_CODE_LONG_2 (0x77665544)\n#define BSP_CFG_ID_CODE_LONG_3 (0xBBAA9988)\n#define BSP_CFG_ID_CODE_LONG_4 (0xbfEEDDCC)\n#endif"
+    ]
+  ]
+}

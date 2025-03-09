@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18287592",
+    "title": "Why Is \"CS+ With Emulator\" Not Displayed in FSG?",
+    "last_updated": "2023-03-03",
+    "extracted_at": "2025-03-09T00:07:45.843597"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\n[Using CS + and emulator] is not displayed under the Integrated Development Environment Selection of the Workbench6 First Step Guide. What are the possible causes?\nAnswer:\nMost likely, CS + is not installed properly.\nPlease install the following IDE and compiler:\n   CS + V3.00.00 or later\n   CS + for CC V3.00.00 or later\n   CS + for CA, CX V3.00.00 or later\n   CS + Utility V3.00.00 or later\n* *For IDE, compiler, and device dependent information related to touch sensor MCUs,\n     please install the latest document version corresponding to the touch sensor MCU you are using.\n     For a list of operation-confirmed compilers of touch sensor MCUs supported in Workbench 6,\n     refer to the Workbench 6 User's Manual [6.2 Support Compiler].\nMicrosoft Visual C ++ 2012 RunTime Library (32-bit)\n  (Even if the OS of the PC is a 64-bit version, please install the runtime library of the 32-bit version.)\nMicrosoft .NET framework 4 or later.\nWorkbench6 is now in maintenance status, and we do not plan to update it in the future.\nUse QE for Capacitive Touch as a support tool for developing a modern capacitive touch sensor.\nQE for Capacitive Touch can be downloaded from URL below.\nhttps://www.renesas.com/qe-capacitive-touch\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "[Using CS + and emulator] is not displayed under the Integrated Development Environment Selection of the Workbench6 First Step Guide. What are the possible causes?"
+      },
+      {
+        "type": "text",
+        "content": "[Using CS + and emulator] is not displayed under the Integrated Development Environment Selection of the Workbench6 First Step Guide. What are the possible causes?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nMost likely, CS + is not installed properly.\nPlease install the following IDE and compiler:\n   CS + V3.00.00 or later\n   CS + for CC V3.00.00 or later\n   CS + for CA, CX V3.00.00 or later\n   CS + Utility V3.00.00 or later\n* *For IDE, compiler, and device dependent information related to touch sensor MCUs,\n     please install the latest document version corresponding to the touch sensor MCU you are using.\n     For a list of operation-confirmed compilers of touch sensor MCUs supported in Workbench 6,\n     refer to the Workbench 6 User's Manual [6.2 Support Compiler].\nMicrosoft Visual C ++ 2012 RunTime Library (32-bit)\n  (Even if the OS of the PC is a 64-bit version, please install the runtime library of the 32-bit version.)\nMicrosoft .NET framework 4 or later.\nWorkbench6 is now in maintenance status, and we do not plan to update it in the future.\nUse QE for Capacitive Touch as a support tool for developing a modern capacitive touch sensor.\nQE for Capacitive Touch can be downloaded from URL below.\nhttps://www.renesas.com/qe-capacitive-touch\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Most likely, CS + is not installed properly.\nPlease install the following IDE and compiler:\n   CS + V3.00.00 or later\n   CS + for CC V3.00.00 or later\n   CS + for CA, CX V3.00.00 or later\n   CS + Utility V3.00.00 or later\n* *For IDE, compiler, and device dependent information related to touch sensor MCUs,\n     please install the latest document version corresponding to the touch sensor MCU you are using.\n     For a list of operation-confirmed compilers of touch sensor MCUs supported in Workbench 6,\n     refer to the Workbench 6 User's Manual [6.2 Support Compiler].\nMicrosoft Visual C ++ 2012 RunTime Library (32-bit)\n  (Even if the OS of the PC is a 64-bit version, please install the runtime library of the 32-bit version.)\nMicrosoft .NET framework 4 or later.\nWorkbench6 is now in maintenance status, and we do not plan to update it in the future.\nUse QE for Capacitive Touch as a support tool for developing a modern capacitive touch sensor.\nQE for Capacitive Touch can be downloaded from URL below.\nhttps://www.renesas.com/qe-capacitive-touch"
+      },
+      {
+        "type": "text",
+        "content": "Most likely, CS + is not installed properly."
+      },
+      {
+        "type": "text",
+        "content": "Please install the following IDE and compiler:"
+      },
+      {
+        "type": "text",
+        "content": "CS + V3.00.00 or later\n   CS + for CC V3.00.00 or later\n   CS + for CA, CX V3.00.00 or later\n   CS + Utility V3.00.00 or later"
+      },
+      {
+        "type": "text",
+        "content": "* *For IDE, compiler, and device dependent information related to touch sensor MCUs,\n     please install the latest document version corresponding to the touch sensor MCU you are using.\n     For a list of operation-confirmed compilers of touch sensor MCUs supported in Workbench 6,\n     refer to the Workbench 6 User's Manual [6.2 Support Compiler]."
+      },
+      {
+        "type": "text",
+        "content": "Microsoft Visual C ++ 2012 RunTime Library (32-bit)\n  (Even if the OS of the PC is a 64-bit version, please install the runtime library of the 32-bit version.)\nMicrosoft .NET framework 4 or later."
+      },
+      {
+        "type": "text",
+        "content": "Workbench6 is now in maintenance status, and we do not plan to update it in the future.\nUse QE for Capacitive Touch as a support tool for developing a modern capacitive touch sensor.\nQE for Capacitive Touch can be downloaded from URL below."
+      },
+      {
+        "type": "text",
+        "content": "https://www.renesas.com/qe-capacitive-touch"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/qe-capacitive-touch",
+        "url": "https://www.renesas.com/qe-capacitive-touch"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792796"
+      }
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21175343",
+    "title": "RZ/G3S: Communication between OS",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:45:20.445998"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan communication between processors be performed between the Cortex-A55 (Linux) and Cortex-M33 (FreeRTOS) incorporated in the RZ/G3S?\nAnswer:\nWe provide RZ/G3S Multi-OS Package that can use OpenAMP which is an API with a standardized framework for communication between processors. \nBy using this package, you can use Free RTOS with Cortex-M33 and create an application that links Linux and RTOS using OpenAMP.\nPlease also refer to the user's manual (https://www.renesas.com/us/en/document/mah/rzg3s-group-users-manual-hardware?r=25458591), 12. Message Handling Unit (MHU).\nSuitable Products\nRZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "Can communication between processors be performed between the Cortex-A55 (Linux) and Cortex-M33 (FreeRTOS) incorporated in the RZ/G3S?"
+      },
+      {
+        "type": "text",
+        "content": "Can communication between processors be performed between the Cortex-A55 (Linux) and Cortex-M33 (FreeRTOS) incorporated in the RZ/G3S?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nWe provide RZ/G3S Multi-OS Package that can use OpenAMP which is an API with a standardized framework for communication between processors. \nBy using this package, you can use Free RTOS with Cortex-M33 and create an application that links Linux and RTOS using OpenAMP.\nPlease also refer to the user's manual (https://www.renesas.com/us/en/document/mah/rzg3s-group-users-manual-hardware?r=25458591), 12. Message Handling Unit (MHU).\nSuitable Products\nRZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "We provide RZ/G3S Multi-OS Package that can use OpenAMP which is an API with a standardized framework for communication between processors. \nBy using this package, you can use Free RTOS with Cortex-M33 and create an application that links Linux and RTOS using OpenAMP.\nPlease also refer to the user's manual (https://www.renesas.com/us/en/document/mah/rzg3s-group-users-manual-hardware?r=25458591), 12. Message Handling Unit (MHU)."
+      },
+      {
+        "type": "text",
+        "content": "We provide RZ/G3S Multi-OS Package that can use OpenAMP which is an API with a standardized framework for communication between processors."
+      },
+      {
+        "type": "text",
+        "content": "By using this package, you can use Free RTOS with Cortex-M33 and create an application that links Linux and RTOS using OpenAMP."
+      },
+      {
+        "type": "text",
+        "content": "Please also refer to the user's manual (https://www.renesas.com/us/en/document/mah/rzg3s-group-users-manual-hardware?r=25458591), 12. Message Handling Unit (MHU)."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/G3S"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/G3S"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/us/en/document/mah/rzg3s-group-users-manual-hardware?r=25458591",
+        "url": "https://www.renesas.com/us/en/document/mah/rzg3s-group-users-manual-hardware?r=25458591"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21175357"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21175365"
+      }
+    ]
+  }
+}

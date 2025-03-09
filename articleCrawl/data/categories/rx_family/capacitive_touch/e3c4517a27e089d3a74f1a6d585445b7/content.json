@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18284484",
+    "title": "Which Parameters Can Be Adjusted?",
+    "last_updated": "2023-07-03",
+    "extracted_at": "2025-03-09T00:07:24.658856"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhich parameters can be modified to adjust the detection performance?\nAnswer:\nThe following parameters can be adjusted.\nAdjust touch judgement threshold value and hysteresis\nSet ON/OFF and execution interval of drift correction (correction processing to make reference count value follow fluctuations in sensor count value due to external factors)\nLong Touch Cancel ON/OFF (increase reference to sensor count value when specified ON number is reached) and set execution interval.\nPositive Noise Filter ON/OFF (judge as ON when specified ON number is reached) and cycle.\nNegative Noise Filter ON/OFF (judge as OFF when specified OFF number is reached) and cycle.\nAfter adjusting the parameters to meet your system needs, make sure you fully evaluate operations before implementation.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Which parameters can be modified to adjust the detection performance?"
+      },
+      {
+        "type": "text",
+        "content": "Which parameters can be modified to adjust the detection performance?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe following parameters can be adjusted.\nAdjust touch judgement threshold value and hysteresis\nSet ON/OFF and execution interval of drift correction (correction processing to make reference count value follow fluctuations in sensor count value due to external factors)\nLong Touch Cancel ON/OFF (increase reference to sensor count value when specified ON number is reached) and set execution interval.\nPositive Noise Filter ON/OFF (judge as ON when specified ON number is reached) and cycle.\nNegative Noise Filter ON/OFF (judge as OFF when specified OFF number is reached) and cycle.\nAfter adjusting the parameters to meet your system needs, make sure you fully evaluate operations before implementation.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "The following parameters can be adjusted.\nAdjust touch judgement threshold value and hysteresis\nSet ON/OFF and execution interval of drift correction (correction processing to make reference count value follow fluctuations in sensor count value due to external factors)\nLong Touch Cancel ON/OFF (increase reference to sensor count value when specified ON number is reached) and set execution interval.\nPositive Noise Filter ON/OFF (judge as ON when specified ON number is reached) and cycle.\nNegative Noise Filter ON/OFF (judge as OFF when specified OFF number is reached) and cycle.\nAfter adjusting the parameters to meet your system needs, make sure you fully evaluate operations before implementation."
+      },
+      {
+        "type": "text",
+        "content": "The following parameters can be adjusted."
+      },
+      {
+        "type": "text",
+        "content": "After adjusting the parameters to meet your system needs, make sure you fully evaluate operations before implementation."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792877"
+      }
+    ]
+  }
+}

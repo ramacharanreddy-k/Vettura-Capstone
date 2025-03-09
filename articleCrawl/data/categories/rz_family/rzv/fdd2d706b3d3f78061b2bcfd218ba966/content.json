@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20352695",
+    "title": "RZ/V2M: RGMII support",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:51:31.894553"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nRZ/V2M: Is there support for RGMII?\nAnswer:\nThe RZ/V2M does not support RGSMII. If the number of pins is a problem, please consider an Ethernet PHY connection via PCIe.\nSuitable Products\nRZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "RZ/V2M: Is there support for RGMII?"
+      },
+      {
+        "type": "text",
+        "content": "RZ/V2M: Is there support for RGMII?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RZ/V2M does not support RGSMII. If the number of pins is a problem, please consider an Ethernet PHY connection via PCIe.\nSuitable Products\nRZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "The RZ/V2M does not support RGSMII. If the number of pins is a problem, please consider an Ethernet PHY connection via PCIe."
+      },
+      {
+        "type": "text",
+        "content": "The RZ/V2M does not support RGSMII. If the number of pins is a problem, please consider an Ethernet PHY connection via PCIe."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V2M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V2M"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20352684"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20352706"
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "/* All system exceptions in the vector table are weak references to Default_Handler. If the user wishes to handle\n * these exceptions in their code they should define their own function with the same name.\n */\n#if defined(__ICCARM__)\n #define WEAK_REF_ATTRIBUTE\n   #pragma weak HardFault_Handler                        = Default_Handler\n #pragma weak MemManage_Handler                        = Default_Handler\n #pragma weak BusFault_Handler                         = Default_Handler\n #pragma weak UsageFault_Handler                       = Default_Handler\n #pragma weak SecureFault_Handler                      = Default_Handler\n #pragma weak SVC_Handler                              = Default_Handler\n #pragma weak DebugMon_Handler                         = Default_Handler\n #pragma weak PendSV_Handler                           = Default_Handler\n #pragma weak SysTick_Handler                          = Default_Handler\n#elif defined(__GNUC__)\n   #define WEAK_REF_ATTRIBUTE    __attribute__((weak, alias(\"Default_Handler\")))\n#endif\n  void NMI_Handler(void);                // NMI has many sources and is handled by BSP\nvoid HardFault_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid MemManage_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid BusFault_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid UsageFault_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid SecureFault_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid SVC_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid DebugMon_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid PendSV_Handler(void) WEAK_REF_ATTRIBUTE;\nvoid SysTick_Handler(void) WEAK_REF_ATTRIBUTE;"
+    ]
+  ]
+}

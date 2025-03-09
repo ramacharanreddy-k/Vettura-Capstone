@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21810951",
+    "title": "RX Family: Power supply to pull up port",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:16:22.294320"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIf the port is pulled up externally, to which power supply should it be connected?\nAnswer:\nA pull-up to the port's power supply is required. The power supply of the port can be checked with VIH or VIL listed in the electrical characteristics in the user's manual of the product used, as shown below. For example, the power supply of the port in the case where “0.8 x VCC” is written is VCC, so the pull-up resistor should be connected to VCC. If “0.8 x AVCC1” is written, the pull-up resistor should be connected to AVCC1. If VCC and AVCC1 are at the same potential, the pull-up resistor may be connected to either VCC or AVCC1.\n(RX66T Group User's Manual Excerpt)\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "If the port is pulled up externally, to which power supply should it be connected?"
+      },
+      {
+        "type": "text",
+        "content": "If the port is pulled up externally, to which power supply should it be connected?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nA pull-up to the port's power supply is required. The power supply of the port can be checked with VIH or VIL listed in the electrical characteristics in the user's manual of the product used, as shown below. For example, the power supply of the port in the case where “0.8 x VCC” is written is VCC, so the pull-up resistor should be connected to VCC. If “0.8 x AVCC1” is written, the pull-up resistor should be connected to AVCC1. If VCC and AVCC1 are at the same potential, the pull-up resistor may be connected to either VCC or AVCC1.\n(RX66T Group User's Manual Excerpt)\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "A pull-up to the port's power supply is required. The power supply of the port can be checked with VIH or VIL listed in the electrical characteristics in the user's manual of the product used, as shown below. For example, the power supply of the port in the case where “0.8 x VCC” is written is VCC, so the pull-up resistor should be connected to VCC. If “0.8 x AVCC1” is written, the pull-up resistor should be connected to AVCC1. If VCC and AVCC1 are at the same potential, the pull-up resistor may be connected to either VCC or AVCC1.\n(RX66T Group User's Manual Excerpt)"
+      },
+      {
+        "type": "text",
+        "content": "A pull-up to the port's power supply is required. The power supply of the port can be checked with VIH or VIL listed in the electrical characteristics in the user's manual of the product used, as shown below. For example, the power supply of the port in the case where “0.8 x VCC” is written is VCC, so the pull-up resistor should be connected to VCC. If “0.8 x AVCC1” is written, the pull-up resistor should be connected to AVCC1. If VCC and AVCC1 are at the same potential, the pull-up resistor may be connected to either VCC or AVCC1."
+      },
+      {
+        "type": "text",
+        "content": "(RX66T Group User's Manual Excerpt)"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399860a.png",
+          "alt_text": "",
+          "width": "472",
+          "height": "370",
+          "local_path": "data/categories/rx_family/io_port/90834a1150d409d7f533f8079d32c364/images/0c1bcbdeb149d08f0271ec257953a5b9.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/399860a.png",
+        "alt_text": "",
+        "width": "472",
+        "height": "370",
+        "local_path": "data/categories/rx_family/io_port/90834a1150d409d7f533f8079d32c364/images/0c1bcbdeb149d08f0271ec257953a5b9.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21810955"
+      }
+    ]
+  }
+}

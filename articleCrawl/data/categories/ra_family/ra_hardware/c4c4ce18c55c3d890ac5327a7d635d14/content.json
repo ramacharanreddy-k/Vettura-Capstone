@@ -1,0 +1,1818 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21745546",
+    "title": "RA6T2: How to use the GPT Complementary PWM mode",
+    "last_updated": "2024-07-01",
+    "extracted_at": "2025-03-08T23:13:56.988643"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Answer:\nThe RA6T2 General PWM Timer (GPT) supports Complementary the PWM mode, which can generate a three-phase PWM waveform with dead time and ensure the linearity in the vicinity of duty 0% and 100%. Therefore, this article takes Complementary PWM mode 3 (transfer at both crests and troughs) as an example to illustrate how to enable this operating mode based upon the FSP General PWM Timer Driver* (r_gpt).\n*As Complementary PWM operating mode is not generally supported by other RA MCU General PWM Timer (GPT) peripheral, the configuration of FSP General PWM Timer Driver (r_gpt) does not support it as default.\nThe example below demonstrates using the complementary PWM mode with consecutive three GPT channels to generate three-phase PWM waveform with dead time based on below conditions.\nPWM Frequency: 10kHz\nDeadtime period: 2us (GTDVU=240, PCLKD=120MHz)\nGTIOA output:\nInitial output level is Low, and active level is High\nOutput level is High in up count compare match, and it becomes Low in down count compare match.\nGTIOB: Initial output level is Low\nInitial output level is Low, and active level is High.\nOutput level is Low in up count compare match, and it becomes High in down count compare match.\n  Step 1: Create a Renesas RA C/C++ Flat Project with the No RTOS selection based on MCK-RA6T2. Once the project is created, open the FSP Configuration perspective.\nFrom the toolbar of e2studio, select File > New > RA C/C++ Project > Renesas RA\nFlat (Non-TrustZone) Project is selected\nRTOS selection is No RTOS.\nBare Metal (Minimal) is selected.\nStep 2: In the Stacks option of FSP configuration window, first we add “Three-Phase PWM module (r_gpt_three_phase) in the HAL/Common Stacks. The Three-Phase PWM module can be found under the Timer category.\nNew Stack > Timers > Three-Phase PWM (r_gpt_three_phase)\n  Step 3: After step 2, you should receive the error indications from the configuration window like the above picture. This error can be eliminated by enabling the Pin Output Support on underneath GPT Drivers.\nSelect one of the r_gpt modules and configure “Pin Output Support” property to Enabled with Extra Features\nStep 4: Configure Three-Phase PWM module (r_gpt_three_phase) with the settings below. The default value of other properties is kept.\nGeneral > Period: 10\nGeneral > Period Unit: Kilohertz\nGeneral > GPT U-Channel: 4\nGeneral > GPT V-Channel: 5\nGeneral > GPT W-Channel: 6\nExtra Features > Dead Time > Dead Time Count Up (Raw Counts): 240\nIn complementary PWM mode, the GTDVD register is invalid and the GTDVU register is used as the dead time value during both up-counting and down-counting. Therefore, we only need to configure Dead Time Count Up (Raw Counts).\n  Step 5: Configure the g_timer1, which is used for U signal output, with the setting below through FSP configuration.\nInterrupts > Callback: gpt_u_callback\nInterrupts > Overflow/Crest Interrupt Priority: Priority 1\nInterrupts > Underflow/Trough Interrupt Priority: Priority 1\nBecause the GPT callback channel is set to U channel, we should register a user callback function to the U channel GPT. In addition, we will use Complementary PWM mode 3 to transfer the data count at both crest and trough sections, so both Crest Interrupt and Trough Interrupt are enabled.\n  Step 6: Assign the required MCU Pins for running this example\nFSP Configuration > Pins > Peripherals > Timers:GPT > GPT\nGTCPPO4: PB10 (used as PWM Synchronous Output Pin)\nFSP Configuration > Pins > Peripherals > Timers:GPT > GPT4\nGTIOC4A: PB04\nGTIOC4B: PB05\nFSP Configuration > Pins > Peripherals > Timers:GPT > GPT5\nGTIOC5A: PB06\nGTIOC5B: PB07\nFSP Configuration > Pins > Peripherals > Timers:GPT > GPT6\nGTIOC6A: PB08\nGTIOC6B: PB09\n  Step 7: Add the below initialization function, which enables Complementary PWM mode 3 usage, in the hal_entry.c.\nstatic fsp_err_t gpt_complementary_pwm_mode_3_init (void)\n{\n    fsp_err_t err = FSP_SUCCESS;\n    /* Initializes the module. */\n    err = R_GPT_THREE_PHASE_Open(&g_three_phase0_ctrl, &g_three_phase0_cfg);\n    /* Handle any errors. This function should be defined by the user. */\n    if(FSP_SUCCESS != err)\n    {\n        return err;\n    }\n    R_GPT4->GTCR_b.MD = 0x0E; //Complementary PWM mode 3(transfer at crest and trough)\n    R_GPT5->GTCR_b.MD = 0x0E; //Complementary PWM mode 3(transfer at crest and trough)\n    R_GPT6->GTCR_b.MD = 0x0E; //Complementary PWM mode 3(transfer at crest and trough)\n    /*\n     * GTBER: General PWM Timer Buffer Enable\n     * - BD0: GTCCR Buffer Operation\n     * - BD1: GTPR Buffer Operation\n     * - BD2: GTADTRA/GTADTRB Buffer Operation\n     * - BD3: GTDVU/GTDVD Buffer (This bit is invalid in complementary PWM mode)\n     */\n    R_GPT4->GTBER_b.BD0 = 0; //GTCCCR Buffer operation is enabled\n    R_GPT4->GTBER_b.BD1 = 0; //GTPR Buffer operation is enabled\n    R_GPT4->GTBER_b.BD2 = 1; //GTADTRA/GTADTRB Buffer operation is disabled\n    R_GPT5->GTBER_b.BD0 = 0; //GTCCCR Buffer operation is enabled\n    R_GPT5->GTBER_b.BD1 = 0; //GTPR Buffer operation is enabled\n    R_GPT5->GTBER_b.BD2 = 1; //GTADTRA/GTADTRB Buffer operation is disabled\n    R_GPT6->GTBER_b.BD0 = 0; //GTCCCR Buffer operation is enabled\n    R_GPT6->GTBER_b.BD1 = 0; //GTPR Buffer operation is enabled\n    R_GPT6->GTBER_b.BD2 = 1; //GTADTRA/GTADTRB Buffer operation is disabled\n    R_GPT4->GTPDBR = 6000;\n    R_GPT5->GTPDBR = 6000;\n    R_GPT6->GTPDBR = 6000;\n    /*\n     * GTIOR : General PWM Timer I/O Control Register\n     * - In complementary PWM mode,\n     * the only values that can be set in the GTIOA[4:0] bits are 01001b, and 10110b\n     * - In complementary PWM mode,\n     * the only values that can be set in the GTIOB[4:0] bits are 00110b, and 11001b\n     * GTIOA = 0x09\n     *  - Initial output is Low (Active level is High),\n     *  - High output in up count compare match\n     *  - Low output in down count compare match\n     * GTIOB = 0x06\n     *  - Initial output is Low (Active level is High),\n     *  - Low output in up count compare match\n     *  - High output in down count compare match\n     */\n    R_GPT4->GTIOR_b.GTIOA = 0x09;\n    R_GPT5->GTIOR_b.GTIOA = 0x09;\n    R_GPT6->GTIOR_b.GTIOA = 0x09;\n    R_GPT4->GTIOR_b.GTIOB = 0x06;\n    R_GPT5->GTIOR_b.GTIOB = 0x06;\n    R_GPT6->GTIOR_b.GTIOB = 0x06;\n    /*PSYE: PWM Synchronous output Enable:\n     * Enable GTCPPOT4 output */\n    R_GPT4->GTIOR_b.PSYE = 1;\n    /*\n     * GTBER2: General PWM Timer Buffer Enable 2\n     * - CP3DB=0 : Disable double buffer function in complementary PWM mode 3, 4\n     * - OLTTA: GTIOCnA Output Level Buffer Transfer Timing Select\n     * - OLTTB: GTIOCnB Output Level Buffer Transfer Timing Select\n     */\n    R_GPT4->GTBER2_b.CP3DB = 0;\n    R_GPT4->GTBER2_b.OLTTA = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT4->GTBER2_b.OLTTB = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT5->GTBER2_b.CP3DB = 0;\n    R_GPT5->GTBER2_b.OLTTA = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT5->GTBER2_b.OLTTB = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT6->GTBER2_b.CP3DB = 0;\n    R_GPT6->GTBER2_b.OLTTA = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT6->GTBER2_b.OLTTB = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT4->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = 3000;\n    R_GPT5->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = 3000;\n    R_GPT6->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = 3000;\n    /* Start the timer. */\n    err = R_GPT_THREE_PHASE_Start(&g_three_phase0_ctrl);\n    if(FSP_SUCCESS != err)\n    {\n        return err;\n    }\n    return FSP_SUCCESS;\n}\n  Step 8: Add the below code, which includes the implementation of gpt_u_callback, in the hal_entry.c\nstatic volatile int direction = 1; // 1 for incrementing, -1 for decrementing\nstatic volatile int u2_count_u = 0U;\nstatic void rm_motor_driver_set_uvw_duty_test (void)\n{\n    u2_count_u += direction;\n    // Check if the counter needs to change direction\n    if (u2_count_u == 6240) {\n        direction = -1; // Switch to decrementing\n    } else if (u2_count_u == 0) {\n        direction = 1; // Switch to incrementing\n    }\n    R_GPT4->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = (uint32_t) u2_count_u;\n    R_GPT5->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = (uint32_t) u2_count_u;\n    R_GPT6->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = (uint32_t) u2_count_u;\n}\n  #define DEBUG_OUTPUT_PD00_ENABLE 1\nvoid gpt_u_callback(timer_callback_args_t *p_args)\n{\n    /* TODO: add your own code here */\n    if(p_args->event == TIMER_EVENT_CREST)\n    {\n#if DEBUG_OUTPUT_PD00_ENABLE\n        R_IOPORT_PinWrite(&g_ioport_ctrl, BSP_IO_PORT_13_PIN_00, BSP_IO_LEVEL_LOW);\n#endif\n        rm_motor_driver_set_uvw_duty_test();\n    }\n      if(p_args->event == TIMER_EVENT_TROUGH)\n    {\n#if DEBUG_OUTPUT_PD00_ENABLE\n        R_IOPORT_PinWrite(&g_ioport_ctrl, BSP_IO_PORT_13_PIN_00, BSP_IO_LEVEL_HIGH);\n#endif\n        rm_motor_driver_set_uvw_duty_test();\n    }\n}\n  Step 9: Add below code in the beginning of hal_entry.c\nenum e_gpt_three_phase_prv_gtccr\n{\n    GPT_THREE_PHASE_PRV_GTCCRA = 0U,\n    GPT_THREE_PHASE_PRV_GTCCRB,\n    GPT_THREE_PHASE_PRV_GTCCRC,\n    GPT_THREE_PHASE_PRV_GTCCRE,\n    GPT_THREE_PHASE_PRV_GTCCRD,\n    GPT_THREE_PHASE_PRV_GTCCRF\n};\nstatic fsp_err_t gpt_complementary_pwm_mode_3_init (void);\n  Step 10: In the hal_entry(), make a call to gpt_complementary_pwm_mode_3_init to start the three phase PWM. Then, the GPT Compare Capture Register (GTCCRD) will be updated periodically right after the GPTn_OVF and GPTn_UDF interrupts.\nGPTn_OVF: In complementary PWM mode, these interrupts request are enabled at crests (GTCNT counter value of master channel changes from GTPR register to GTPR register value minus 1)\nGPTn_UDF: In complementary PWM mode, these interrupt requests are enabled at troughs (GTCNT counter value of master channel changes from 0 to 1)\nvoid hal_entry(void)\n{\n    /* TODO: add your own code here */\n    fsp_err_t err = FSP_SUCCESS;\n    /* Complementary PWM mode Setting */\n    err = gpt_complementary_pwm_mode_3_init();\n    assert(err == FSP_SUCCESS);\n    while(1)\n    {\n    }\n#if BSP_TZ_SECURE_BUILD\n    /* Enter non-secure code */\n    R_BSP_NonSecureEnter();\n#endif\n}\n  Step 11: Do a quick measurement to verify whether the result matches our target operation.\nThe example below demonstrates using the complementary PWM mode with consecutive three GPT channels to generate three-phase PWM waveform with dead time based on below conditions.\nPWM Frequency: 10kHz\nDeadtime period: 2us (GTDVU=240, PCLKD=120MHz)\nGTIOA output: \nInitial output level is Low, and active level is High\nOutput level is High in up count compare match, and it becomes Low in down count compare match.\nGTIOB: Initial output level is Low\nInitial output level is Low, and active level is High.\nOutput level is Low in up count compare match, and it becomes High in down count compare match.\n\n\n    Suitable Products\nRA6T2"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RA6T2 General PWM Timer (GPT) supports Complementary the PWM mode, which can generate a three-phase PWM waveform with dead time and ensure the linearity in the vicinity of duty 0% and 100%. Therefore, this article takes Complementary PWM mode 3 (transfer at both crests and troughs) as an example to illustrate how to enable this operating mode based upon the FSP General PWM Timer Driver* (r_gpt).\n*As Complementary PWM operating mode is not generally supported by other RA MCU General PWM Timer (GPT) peripheral, the configuration of FSP General PWM Timer Driver (r_gpt) does not support it as default.\nThe example below demonstrates using the complementary PWM mode with consecutive three GPT channels to generate three-phase PWM waveform with dead time based on below conditions.\nPWM Frequency: 10kHz\nDeadtime period: 2us (GTDVU=240, PCLKD=120MHz)\nGTIOA output:\nInitial output level is Low, and active level is High\nOutput level is High in up count compare match, and it becomes Low in down count compare match.\nGTIOB: Initial output level is Low\nInitial output level is Low, and active level is High.\nOutput level is Low in up count compare match, and it becomes High in down count compare match.\n  Step 1: Create a Renesas RA C/C++ Flat Project with the No RTOS selection based on MCK-RA6T2. Once the project is created, open the FSP Configuration perspective.\nFrom the toolbar of e2studio, select File > New > RA C/C++ Project > Renesas RA\nFlat (Non-TrustZone) Project is selected\nRTOS selection is No RTOS.\nBare Metal (Minimal) is selected.\nStep 2: In the Stacks option of FSP configuration window, first we add “Three-Phase PWM module (r_gpt_three_phase) in the HAL/Common Stacks. The Three-Phase PWM module can be found under the Timer category.\nNew Stack > Timers > Three-Phase PWM (r_gpt_three_phase)\n  Step 3: After step 2, you should receive the error indications from the configuration window like the above picture. This error can be eliminated by enabling the Pin Output Support on underneath GPT Drivers.\nSelect one of the r_gpt modules and configure “Pin Output Support” property to Enabled with Extra Features\nStep 4: Configure Three-Phase PWM module (r_gpt_three_phase) with the settings below. The default value of other properties is kept.\nGeneral > Period: 10\nGeneral > Period Unit: Kilohertz\nGeneral > GPT U-Channel: 4\nGeneral > GPT V-Channel: 5\nGeneral > GPT W-Channel: 6\nExtra Features > Dead Time > Dead Time Count Up (Raw Counts): 240\nIn complementary PWM mode, the GTDVD register is invalid and the GTDVU register is used as the dead time value during both up-counting and down-counting. Therefore, we only need to configure Dead Time Count Up (Raw Counts).\n  Step 5: Configure the g_timer1, which is used for U signal output, with the setting below through FSP configuration.\nInterrupts > Callback: gpt_u_callback\nInterrupts > Overflow/Crest Interrupt Priority: Priority 1\nInterrupts > Underflow/Trough Interrupt Priority: Priority 1\nBecause the GPT callback channel is set to U channel, we should register a user callback function to the U channel GPT. In addition, we will use Complementary PWM mode 3 to transfer the data count at both crest and trough sections, so both Crest Interrupt and Trough Interrupt are enabled.\n  Step 6: Assign the required MCU Pins for running this example\nFSP Configuration > Pins > Peripherals > Timers:GPT > GPT\nGTCPPO4: PB10 (used as PWM Synchronous Output Pin)\nFSP Configuration > Pins > Peripherals > Timers:GPT > GPT4\nGTIOC4A: PB04\nGTIOC4B: PB05\nFSP Configuration > Pins > Peripherals > Timers:GPT > GPT5\nGTIOC5A: PB06\nGTIOC5B: PB07\nFSP Configuration > Pins > Peripherals > Timers:GPT > GPT6\nGTIOC6A: PB08\nGTIOC6B: PB09\n  Step 7: Add the below initialization function, which enables Complementary PWM mode 3 usage, in the hal_entry.c.\nstatic fsp_err_t gpt_complementary_pwm_mode_3_init (void)\n{\n    fsp_err_t err = FSP_SUCCESS;\n    /* Initializes the module. */\n    err = R_GPT_THREE_PHASE_Open(&g_three_phase0_ctrl, &g_three_phase0_cfg);\n    /* Handle any errors. This function should be defined by the user. */\n    if(FSP_SUCCESS != err)\n    {\n        return err;\n    }\n    R_GPT4->GTCR_b.MD = 0x0E; //Complementary PWM mode 3(transfer at crest and trough)\n    R_GPT5->GTCR_b.MD = 0x0E; //Complementary PWM mode 3(transfer at crest and trough)\n    R_GPT6->GTCR_b.MD = 0x0E; //Complementary PWM mode 3(transfer at crest and trough)\n    /*\n     * GTBER: General PWM Timer Buffer Enable\n     * - BD0: GTCCR Buffer Operation\n     * - BD1: GTPR Buffer Operation\n     * - BD2: GTADTRA/GTADTRB Buffer Operation\n     * - BD3: GTDVU/GTDVD Buffer (This bit is invalid in complementary PWM mode)\n     */\n    R_GPT4->GTBER_b.BD0 = 0; //GTCCCR Buffer operation is enabled\n    R_GPT4->GTBER_b.BD1 = 0; //GTPR Buffer operation is enabled\n    R_GPT4->GTBER_b.BD2 = 1; //GTADTRA/GTADTRB Buffer operation is disabled\n    R_GPT5->GTBER_b.BD0 = 0; //GTCCCR Buffer operation is enabled\n    R_GPT5->GTBER_b.BD1 = 0; //GTPR Buffer operation is enabled\n    R_GPT5->GTBER_b.BD2 = 1; //GTADTRA/GTADTRB Buffer operation is disabled\n    R_GPT6->GTBER_b.BD0 = 0; //GTCCCR Buffer operation is enabled\n    R_GPT6->GTBER_b.BD1 = 0; //GTPR Buffer operation is enabled\n    R_GPT6->GTBER_b.BD2 = 1; //GTADTRA/GTADTRB Buffer operation is disabled\n    R_GPT4->GTPDBR = 6000;\n    R_GPT5->GTPDBR = 6000;\n    R_GPT6->GTPDBR = 6000;\n    /*\n     * GTIOR : General PWM Timer I/O Control Register\n     * - In complementary PWM mode,\n     * the only values that can be set in the GTIOA[4:0] bits are 01001b, and 10110b\n     * - In complementary PWM mode,\n     * the only values that can be set in the GTIOB[4:0] bits are 00110b, and 11001b\n     * GTIOA = 0x09\n     *  - Initial output is Low (Active level is High),\n     *  - High output in up count compare match\n     *  - Low output in down count compare match\n     * GTIOB = 0x06\n     *  - Initial output is Low (Active level is High),\n     *  - Low output in up count compare match\n     *  - High output in down count compare match\n     */\n    R_GPT4->GTIOR_b.GTIOA = 0x09;\n    R_GPT5->GTIOR_b.GTIOA = 0x09;\n    R_GPT6->GTIOR_b.GTIOA = 0x09;\n    R_GPT4->GTIOR_b.GTIOB = 0x06;\n    R_GPT5->GTIOR_b.GTIOB = 0x06;\n    R_GPT6->GTIOR_b.GTIOB = 0x06;\n    /*PSYE: PWM Synchronous output Enable:\n     * Enable GTCPPOT4 output */\n    R_GPT4->GTIOR_b.PSYE = 1;\n    /*\n     * GTBER2: General PWM Timer Buffer Enable 2\n     * - CP3DB=0 : Disable double buffer function in complementary PWM mode 3, 4\n     * - OLTTA: GTIOCnA Output Level Buffer Transfer Timing Select\n     * - OLTTB: GTIOCnB Output Level Buffer Transfer Timing Select\n     */\n    R_GPT4->GTBER2_b.CP3DB = 0;\n    R_GPT4->GTBER2_b.OLTTA = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT4->GTBER2_b.OLTTB = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT5->GTBER2_b.CP3DB = 0;\n    R_GPT5->GTBER2_b.OLTTA = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT5->GTBER2_b.OLTTB = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT6->GTBER2_b.CP3DB = 0;\n    R_GPT6->GTBER2_b.OLTTA = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT6->GTBER2_b.OLTTB = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT4->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = 3000;\n    R_GPT5->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = 3000;\n    R_GPT6->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = 3000;\n    /* Start the timer. */\n    err = R_GPT_THREE_PHASE_Start(&g_three_phase0_ctrl);\n    if(FSP_SUCCESS != err)\n    {\n        return err;\n    }\n    return FSP_SUCCESS;\n}\n  Step 8: Add the below code, which includes the implementation of gpt_u_callback, in the hal_entry.c\nstatic volatile int direction = 1; // 1 for incrementing, -1 for decrementing\nstatic volatile int u2_count_u = 0U;\nstatic void rm_motor_driver_set_uvw_duty_test (void)\n{\n    u2_count_u += direction;\n    // Check if the counter needs to change direction\n    if (u2_count_u == 6240) {\n        direction = -1; // Switch to decrementing\n    } else if (u2_count_u == 0) {\n        direction = 1; // Switch to incrementing\n    }\n    R_GPT4->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = (uint32_t) u2_count_u;\n    R_GPT5->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = (uint32_t) u2_count_u;\n    R_GPT6->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = (uint32_t) u2_count_u;\n}\n  #define DEBUG_OUTPUT_PD00_ENABLE 1\nvoid gpt_u_callback(timer_callback_args_t *p_args)\n{\n    /* TODO: add your own code here */\n    if(p_args->event == TIMER_EVENT_CREST)\n    {\n#if DEBUG_OUTPUT_PD00_ENABLE\n        R_IOPORT_PinWrite(&g_ioport_ctrl, BSP_IO_PORT_13_PIN_00, BSP_IO_LEVEL_LOW);\n#endif\n        rm_motor_driver_set_uvw_duty_test();\n    }\n      if(p_args->event == TIMER_EVENT_TROUGH)\n    {\n#if DEBUG_OUTPUT_PD00_ENABLE\n        R_IOPORT_PinWrite(&g_ioport_ctrl, BSP_IO_PORT_13_PIN_00, BSP_IO_LEVEL_HIGH);\n#endif\n        rm_motor_driver_set_uvw_duty_test();\n    }\n}\n  Step 9: Add below code in the beginning of hal_entry.c\nenum e_gpt_three_phase_prv_gtccr\n{\n    GPT_THREE_PHASE_PRV_GTCCRA = 0U,\n    GPT_THREE_PHASE_PRV_GTCCRB,\n    GPT_THREE_PHASE_PRV_GTCCRC,\n    GPT_THREE_PHASE_PRV_GTCCRE,\n    GPT_THREE_PHASE_PRV_GTCCRD,\n    GPT_THREE_PHASE_PRV_GTCCRF\n};\nstatic fsp_err_t gpt_complementary_pwm_mode_3_init (void);\n  Step 10: In the hal_entry(), make a call to gpt_complementary_pwm_mode_3_init to start the three phase PWM. Then, the GPT Compare Capture Register (GTCCRD) will be updated periodically right after the GPTn_OVF and GPTn_UDF interrupts.\nGPTn_OVF: In complementary PWM mode, these interrupts request are enabled at crests (GTCNT counter value of master channel changes from GTPR register to GTPR register value minus 1)\nGPTn_UDF: In complementary PWM mode, these interrupt requests are enabled at troughs (GTCNT counter value of master channel changes from 0 to 1)\nvoid hal_entry(void)\n{\n    /* TODO: add your own code here */\n    fsp_err_t err = FSP_SUCCESS;\n    /* Complementary PWM mode Setting */\n    err = gpt_complementary_pwm_mode_3_init();\n    assert(err == FSP_SUCCESS);\n    while(1)\n    {\n    }\n#if BSP_TZ_SECURE_BUILD\n    /* Enter non-secure code */\n    R_BSP_NonSecureEnter();\n#endif\n}\n  Step 11: Do a quick measurement to verify whether the result matches our target operation.\nThe example below demonstrates using the complementary PWM mode with consecutive three GPT channels to generate three-phase PWM waveform with dead time based on below conditions.\nPWM Frequency: 10kHz\nDeadtime period: 2us (GTDVU=240, PCLKD=120MHz)\nGTIOA output: \nInitial output level is Low, and active level is High\nOutput level is High in up count compare match, and it becomes Low in down count compare match.\nGTIOB: Initial output level is Low\nInitial output level is Low, and active level is High.\nOutput level is Low in up count compare match, and it becomes High in down count compare match.\n\n\n    Suitable Products\nRA6T2"
+      },
+      {
+        "type": "text",
+        "content": "The RA6T2 General PWM Timer (GPT) supports Complementary the PWM mode, which can generate a three-phase PWM waveform with dead time and ensure the linearity in the vicinity of duty 0% and 100%. Therefore, this article takes Complementary PWM mode 3 (transfer at both crests and troughs) as an example to illustrate how to enable this operating mode based upon the FSP General PWM Timer Driver* (r_gpt).\n*As Complementary PWM operating mode is not generally supported by other RA MCU General PWM Timer (GPT) peripheral, the configuration of FSP General PWM Timer Driver (r_gpt) does not support it as default.\nThe example below demonstrates using the complementary PWM mode with consecutive three GPT channels to generate three-phase PWM waveform with dead time based on below conditions.\nPWM Frequency: 10kHz\nDeadtime period: 2us (GTDVU=240, PCLKD=120MHz)\nGTIOA output:\nInitial output level is Low, and active level is High\nOutput level is High in up count compare match, and it becomes Low in down count compare match.\nGTIOB: Initial output level is Low\nInitial output level is Low, and active level is High.\nOutput level is Low in up count compare match, and it becomes High in down count compare match.\n  Step 1: Create a Renesas RA C/C++ Flat Project with the No RTOS selection based on MCK-RA6T2. Once the project is created, open the FSP Configuration perspective.\nFrom the toolbar of e2studio, select File > New > RA C/C++ Project > Renesas RA\nFlat (Non-TrustZone) Project is selected\nRTOS selection is No RTOS.\nBare Metal (Minimal) is selected.\nStep 2: In the Stacks option of FSP configuration window, first we add “Three-Phase PWM module (r_gpt_three_phase) in the HAL/Common Stacks. The Three-Phase PWM module can be found under the Timer category.\nNew Stack > Timers > Three-Phase PWM (r_gpt_three_phase)\n  Step 3: After step 2, you should receive the error indications from the configuration window like the above picture. This error can be eliminated by enabling the Pin Output Support on underneath GPT Drivers.\nSelect one of the r_gpt modules and configure “Pin Output Support” property to Enabled with Extra Features\nStep 4: Configure Three-Phase PWM module (r_gpt_three_phase) with the settings below. The default value of other properties is kept.\nGeneral > Period: 10\nGeneral > Period Unit: Kilohertz\nGeneral > GPT U-Channel: 4\nGeneral > GPT V-Channel: 5\nGeneral > GPT W-Channel: 6\nExtra Features > Dead Time > Dead Time Count Up (Raw Counts): 240\nIn complementary PWM mode, the GTDVD register is invalid and the GTDVU register is used as the dead time value during both up-counting and down-counting. Therefore, we only need to configure Dead Time Count Up (Raw Counts).\n  Step 5: Configure the g_timer1, which is used for U signal output, with the setting below through FSP configuration.\nInterrupts > Callback: gpt_u_callback\nInterrupts > Overflow/Crest Interrupt Priority: Priority 1\nInterrupts > Underflow/Trough Interrupt Priority: Priority 1\nBecause the GPT callback channel is set to U channel, we should register a user callback function to the U channel GPT. In addition, we will use Complementary PWM mode 3 to transfer the data count at both crest and trough sections, so both Crest Interrupt and Trough Interrupt are enabled.\n  Step 6: Assign the required MCU Pins for running this example\nFSP Configuration > Pins > Peripherals > Timers:GPT > GPT\nGTCPPO4: PB10 (used as PWM Synchronous Output Pin)\nFSP Configuration > Pins > Peripherals > Timers:GPT > GPT4\nGTIOC4A: PB04\nGTIOC4B: PB05\nFSP Configuration > Pins > Peripherals > Timers:GPT > GPT5\nGTIOC5A: PB06\nGTIOC5B: PB07\nFSP Configuration > Pins > Peripherals > Timers:GPT > GPT6\nGTIOC6A: PB08\nGTIOC6B: PB09\n  Step 7: Add the below initialization function, which enables Complementary PWM mode 3 usage, in the hal_entry.c.\nstatic fsp_err_t gpt_complementary_pwm_mode_3_init (void)\n{\n    fsp_err_t err = FSP_SUCCESS;\n    /* Initializes the module. */\n    err = R_GPT_THREE_PHASE_Open(&g_three_phase0_ctrl, &g_three_phase0_cfg);\n    /* Handle any errors. This function should be defined by the user. */\n    if(FSP_SUCCESS != err)\n    {\n        return err;\n    }\n    R_GPT4->GTCR_b.MD = 0x0E; //Complementary PWM mode 3(transfer at crest and trough)\n    R_GPT5->GTCR_b.MD = 0x0E; //Complementary PWM mode 3(transfer at crest and trough)\n    R_GPT6->GTCR_b.MD = 0x0E; //Complementary PWM mode 3(transfer at crest and trough)\n    /*\n     * GTBER: General PWM Timer Buffer Enable\n     * - BD0: GTCCR Buffer Operation\n     * - BD1: GTPR Buffer Operation\n     * - BD2: GTADTRA/GTADTRB Buffer Operation\n     * - BD3: GTDVU/GTDVD Buffer (This bit is invalid in complementary PWM mode)\n     */\n    R_GPT4->GTBER_b.BD0 = 0; //GTCCCR Buffer operation is enabled\n    R_GPT4->GTBER_b.BD1 = 0; //GTPR Buffer operation is enabled\n    R_GPT4->GTBER_b.BD2 = 1; //GTADTRA/GTADTRB Buffer operation is disabled\n    R_GPT5->GTBER_b.BD0 = 0; //GTCCCR Buffer operation is enabled\n    R_GPT5->GTBER_b.BD1 = 0; //GTPR Buffer operation is enabled\n    R_GPT5->GTBER_b.BD2 = 1; //GTADTRA/GTADTRB Buffer operation is disabled\n    R_GPT6->GTBER_b.BD0 = 0; //GTCCCR Buffer operation is enabled\n    R_GPT6->GTBER_b.BD1 = 0; //GTPR Buffer operation is enabled\n    R_GPT6->GTBER_b.BD2 = 1; //GTADTRA/GTADTRB Buffer operation is disabled\n    R_GPT4->GTPDBR = 6000;\n    R_GPT5->GTPDBR = 6000;\n    R_GPT6->GTPDBR = 6000;\n    /*\n     * GTIOR : General PWM Timer I/O Control Register\n     * - In complementary PWM mode,\n     * the only values that can be set in the GTIOA[4:0] bits are 01001b, and 10110b\n     * - In complementary PWM mode,\n     * the only values that can be set in the GTIOB[4:0] bits are 00110b, and 11001b\n     * GTIOA = 0x09\n     *  - Initial output is Low (Active level is High),\n     *  - High output in up count compare match\n     *  - Low output in down count compare match\n     * GTIOB = 0x06\n     *  - Initial output is Low (Active level is High),\n     *  - Low output in up count compare match\n     *  - High output in down count compare match\n     */\n    R_GPT4->GTIOR_b.GTIOA = 0x09;\n    R_GPT5->GTIOR_b.GTIOA = 0x09;\n    R_GPT6->GTIOR_b.GTIOA = 0x09;\n    R_GPT4->GTIOR_b.GTIOB = 0x06;\n    R_GPT5->GTIOR_b.GTIOB = 0x06;\n    R_GPT6->GTIOR_b.GTIOB = 0x06;\n    /*PSYE: PWM Synchronous output Enable:\n     * Enable GTCPPOT4 output */\n    R_GPT4->GTIOR_b.PSYE = 1;\n    /*\n     * GTBER2: General PWM Timer Buffer Enable 2\n     * - CP3DB=0 : Disable double buffer function in complementary PWM mode 3, 4\n     * - OLTTA: GTIOCnA Output Level Buffer Transfer Timing Select\n     * - OLTTB: GTIOCnB Output Level Buffer Transfer Timing Select\n     */\n    R_GPT4->GTBER2_b.CP3DB = 0;\n    R_GPT4->GTBER2_b.OLTTA = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT4->GTBER2_b.OLTTB = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT5->GTBER2_b.CP3DB = 0;\n    R_GPT5->GTBER2_b.OLTTA = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT5->GTBER2_b.OLTTB = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT6->GTBER2_b.CP3DB = 0;\n    R_GPT6->GTBER2_b.OLTTA = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT6->GTBER2_b.OLTTB = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT4->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = 3000;\n    R_GPT5->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = 3000;\n    R_GPT6->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = 3000;\n    /* Start the timer. */\n    err = R_GPT_THREE_PHASE_Start(&g_three_phase0_ctrl);\n    if(FSP_SUCCESS != err)\n    {\n        return err;\n    }\n    return FSP_SUCCESS;\n}\n  Step 8: Add the below code, which includes the implementation of gpt_u_callback, in the hal_entry.c\nstatic volatile int direction = 1; // 1 for incrementing, -1 for decrementing\nstatic volatile int u2_count_u = 0U;\nstatic void rm_motor_driver_set_uvw_duty_test (void)\n{\n    u2_count_u += direction;\n    // Check if the counter needs to change direction\n    if (u2_count_u == 6240) {\n        direction = -1; // Switch to decrementing\n    } else if (u2_count_u == 0) {\n        direction = 1; // Switch to incrementing\n    }\n    R_GPT4->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = (uint32_t) u2_count_u;\n    R_GPT5->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = (uint32_t) u2_count_u;\n    R_GPT6->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = (uint32_t) u2_count_u;\n}\n  #define DEBUG_OUTPUT_PD00_ENABLE 1\nvoid gpt_u_callback(timer_callback_args_t *p_args)\n{\n    /* TODO: add your own code here */\n    if(p_args->event == TIMER_EVENT_CREST)\n    {\n#if DEBUG_OUTPUT_PD00_ENABLE\n        R_IOPORT_PinWrite(&g_ioport_ctrl, BSP_IO_PORT_13_PIN_00, BSP_IO_LEVEL_LOW);\n#endif\n        rm_motor_driver_set_uvw_duty_test();\n    }\n      if(p_args->event == TIMER_EVENT_TROUGH)\n    {\n#if DEBUG_OUTPUT_PD00_ENABLE\n        R_IOPORT_PinWrite(&g_ioport_ctrl, BSP_IO_PORT_13_PIN_00, BSP_IO_LEVEL_HIGH);\n#endif\n        rm_motor_driver_set_uvw_duty_test();\n    }\n}\n  Step 9: Add below code in the beginning of hal_entry.c\nenum e_gpt_three_phase_prv_gtccr\n{\n    GPT_THREE_PHASE_PRV_GTCCRA = 0U,\n    GPT_THREE_PHASE_PRV_GTCCRB,\n    GPT_THREE_PHASE_PRV_GTCCRC,\n    GPT_THREE_PHASE_PRV_GTCCRE,\n    GPT_THREE_PHASE_PRV_GTCCRD,\n    GPT_THREE_PHASE_PRV_GTCCRF\n};\nstatic fsp_err_t gpt_complementary_pwm_mode_3_init (void);\n  Step 10: In the hal_entry(), make a call to gpt_complementary_pwm_mode_3_init to start the three phase PWM. Then, the GPT Compare Capture Register (GTCCRD) will be updated periodically right after the GPTn_OVF and GPTn_UDF interrupts.\nGPTn_OVF: In complementary PWM mode, these interrupts request are enabled at crests (GTCNT counter value of master channel changes from GTPR register to GTPR register value minus 1)\nGPTn_UDF: In complementary PWM mode, these interrupt requests are enabled at troughs (GTCNT counter value of master channel changes from 0 to 1)\nvoid hal_entry(void)\n{\n    /* TODO: add your own code here */\n    fsp_err_t err = FSP_SUCCESS;\n    /* Complementary PWM mode Setting */\n    err = gpt_complementary_pwm_mode_3_init();\n    assert(err == FSP_SUCCESS);\n    while(1)\n    {\n    }\n#if BSP_TZ_SECURE_BUILD\n    /* Enter non-secure code */\n    R_BSP_NonSecureEnter();\n#endif\n}\n  Step 11: Do a quick measurement to verify whether the result matches our target operation.\nThe example below demonstrates using the complementary PWM mode with consecutive three GPT channels to generate three-phase PWM waveform with dead time based on below conditions.\nPWM Frequency: 10kHz\nDeadtime period: 2us (GTDVU=240, PCLKD=120MHz)\nGTIOA output: \nInitial output level is Low, and active level is High\nOutput level is High in up count compare match, and it becomes Low in down count compare match.\nGTIOB: Initial output level is Low\nInitial output level is Low, and active level is High.\nOutput level is Low in up count compare match, and it becomes High in down count compare match."
+      },
+      {
+        "type": "text",
+        "content": "The RA6T2 General PWM Timer (GPT) supports Complementary the PWM mode, which can generate a three-phase PWM waveform with dead time and ensure the linearity in the vicinity of duty 0% and 100%. Therefore, this article takes Complementary PWM mode 3 (transfer at both crests and troughs) as an example to illustrate how to enable this operating mode based upon the FSP General PWM Timer Driver* (r_gpt)."
+      },
+      {
+        "type": "text",
+        "content": "*As Complementary PWM operating mode is not generally supported by other RA MCU General PWM Timer (GPT) peripheral, the configuration of FSP General PWM Timer Driver (r_gpt) does not support it as default."
+      },
+      {
+        "type": "text",
+        "content": "The example below demonstrates using the complementary PWM mode with consecutive three GPT channels to generate three-phase PWM waveform with dead time based on below conditions."
+      },
+      {
+        "type": "text",
+        "content": "Step 1: Create a Renesas RA C/C++ Flat Project with the No RTOS selection based on MCK-RA6T2. Once the project is created, open the FSP Configuration perspective."
+      },
+      {
+        "type": "text",
+        "content": "Step 2: In the Stacks option of FSP configuration window, first we add “Three-Phase PWM module (r_gpt_three_phase) in the HAL/Common Stacks. The Three-Phase PWM module can be found under the Timer category."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/397114_1.png",
+          "alt_text": "",
+          "width": "602",
+          "height": "203",
+          "local_path": "data/categories/ra_family/ra_hardware/c4c4ce18c55c3d890ac5327a7d635d14/images/8d54988bfaffb52d1eddba1d0966c5da.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Step 3: After step 2, you should receive the error indications from the configuration window like the above picture. This error can be eliminated by enabling the Pin Output Support on underneath GPT Drivers."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/397114_2b.png",
+          "alt_text": "",
+          "width": "537",
+          "height": "175",
+          "local_path": "data/categories/ra_family/ra_hardware/c4c4ce18c55c3d890ac5327a7d635d14/images/91131772c15fae3c52b624c1180f8cdb.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/397114_3a.png",
+          "alt_text": "",
+          "width": "612",
+          "height": "336",
+          "local_path": "data/categories/ra_family/ra_hardware/c4c4ce18c55c3d890ac5327a7d635d14/images/7142db3f1eca213dc6ec553a147d9f32.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Step 4: Configure Three-Phase PWM module (r_gpt_three_phase) with the settings below. The default value of other properties is kept."
+      },
+      {
+        "type": "text",
+        "content": "Step 5: Configure the g_timer1, which is used for U signal output, with the setting below through FSP configuration."
+      },
+      {
+        "type": "text",
+        "content": "Because the GPT callback channel is set to U channel, we should register a user callback function to the U channel GPT. In addition, we will use Complementary PWM mode 3 to transfer the data count at both crest and trough sections, so both Crest Interrupt and Trough Interrupt are enabled."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/397114_4b.png",
+          "alt_text": "",
+          "width": "559",
+          "height": "421",
+          "local_path": "data/categories/ra_family/ra_hardware/c4c4ce18c55c3d890ac5327a7d635d14/images/4701650b9a6d81bdbf2ab018ac8d3d0c.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Step 6: Assign the required MCU Pins for running this example"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/397114_5a.png",
+          "alt_text": "",
+          "width": "813",
+          "height": "587",
+          "local_path": "data/categories/ra_family/ra_hardware/c4c4ce18c55c3d890ac5327a7d635d14/images/692c5949cc97b5bf687b61a145e6e57b.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/397114_6a.png",
+          "alt_text": "",
+          "width": "823",
+          "height": "596",
+          "local_path": "data/categories/ra_family/ra_hardware/c4c4ce18c55c3d890ac5327a7d635d14/images/07128eeadeb01b85cc9f21099690e4cf.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Step 7: Add the below initialization function, which enables Complementary PWM mode 3 usage, in the hal_entry.c."
+      },
+      {
+        "type": "text",
+        "content": "static fsp_err_t gpt_complementary_pwm_mode_3_init (void)"
+      },
+      {
+        "type": "text",
+        "content": "static"
+      },
+      {
+        "type": "text",
+        "content": "fsp_err_t"
+      },
+      {
+        "type": "text",
+        "content": "gpt_complementary_pwm_mode_3_init ("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ")"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "fsp_err_t err = FSP_SUCCESS;"
+      },
+      {
+        "type": "text",
+        "content": "fsp_err_t"
+      },
+      {
+        "type": "text",
+        "content": "err ="
+      },
+      {
+        "type": "text",
+        "content": "FSP_SUCCESS"
+      },
+      {
+        "type": "text",
+        "content": ";"
+      },
+      {
+        "type": "text",
+        "content": "/* Initializes the module. */"
+      },
+      {
+        "type": "text",
+        "content": "/* Initializes the module. */"
+      },
+      {
+        "type": "text",
+        "content": "err = R_GPT_THREE_PHASE_Open(&g_three_phase0_ctrl, &g_three_phase0_cfg);"
+      },
+      {
+        "type": "text",
+        "content": "err = R_GPT_THREE_PHASE_Open(&g_three_phase0_ctrl, &g_three_phase0_cfg);"
+      },
+      {
+        "type": "text",
+        "content": "/* Handle any errors. This function should be defined by the user. */"
+      },
+      {
+        "type": "text",
+        "content": "/* Handle any errors. This function should be defined by the user. */"
+      },
+      {
+        "type": "text",
+        "content": "if(FSP_SUCCESS != err)"
+      },
+      {
+        "type": "text",
+        "content": "if"
+      },
+      {
+        "type": "text",
+        "content": "("
+      },
+      {
+        "type": "text",
+        "content": "FSP_SUCCESS"
+      },
+      {
+        "type": "text",
+        "content": "!= err)"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "return err;"
+      },
+      {
+        "type": "text",
+        "content": "return"
+      },
+      {
+        "type": "text",
+        "content": "err;"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTCR_b.MD = 0x0E; //Complementary PWM mode 3(transfer at crest and trough)"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTCR_b.MD = 0x0E;"
+      },
+      {
+        "type": "text",
+        "content": "//Complementary PWM mode 3(transfer at crest and trough)"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTCR_b.MD = 0x0E; //Complementary PWM mode 3(transfer at crest and trough)"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTCR_b.MD = 0x0E;"
+      },
+      {
+        "type": "text",
+        "content": "//Complementary PWM mode 3(transfer at crest and trough)"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTCR_b.MD = 0x0E; //Complementary PWM mode 3(transfer at crest and trough)"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTCR_b.MD = 0x0E;"
+      },
+      {
+        "type": "text",
+        "content": "//Complementary PWM mode 3(transfer at crest and trough)"
+      },
+      {
+        "type": "text",
+        "content": "/*"
+      },
+      {
+        "type": "text",
+        "content": "/*"
+      },
+      {
+        "type": "text",
+        "content": "* GTBER: General PWM Timer Buffer Enable"
+      },
+      {
+        "type": "text",
+        "content": "* GTBER: General PWM Timer Buffer Enable"
+      },
+      {
+        "type": "text",
+        "content": "* - BD0: GTCCR Buffer Operation"
+      },
+      {
+        "type": "text",
+        "content": "* - BD0: GTCCR Buffer Operation"
+      },
+      {
+        "type": "text",
+        "content": "* - BD1: GTPR Buffer Operation"
+      },
+      {
+        "type": "text",
+        "content": "* - BD1: GTPR Buffer Operation"
+      },
+      {
+        "type": "text",
+        "content": "* - BD2: GTADTRA/GTADTRB Buffer Operation"
+      },
+      {
+        "type": "text",
+        "content": "* - BD2: GTADTRA/GTADTRB Buffer Operation"
+      },
+      {
+        "type": "text",
+        "content": "* - BD3: GTDVU/GTDVD Buffer (This bit is invalid in complementary PWM mode)"
+      },
+      {
+        "type": "text",
+        "content": "* - BD3: GTDVU/GTDVD Buffer (This bit is invalid in complementary PWM mode)"
+      },
+      {
+        "type": "text",
+        "content": "*/"
+      },
+      {
+        "type": "text",
+        "content": "*/"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTBER_b.BD0 = 0; //GTCCCR Buffer operation is enabled"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTBER_b.BD0 = 0;"
+      },
+      {
+        "type": "text",
+        "content": "//GTCCCR Buffer operation is enabled"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTBER_b.BD1 = 0; //GTPR Buffer operation is enabled"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTBER_b.BD1 = 0;"
+      },
+      {
+        "type": "text",
+        "content": "//GTPR Buffer operation is enabled"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTBER_b.BD2 = 1; //GTADTRA/GTADTRB Buffer operation is disabled"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTBER_b.BD2 = 1;"
+      },
+      {
+        "type": "text",
+        "content": "//GTADTRA/GTADTRB Buffer operation is disabled"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTBER_b.BD0 = 0; //GTCCCR Buffer operation is enabled"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTBER_b.BD0 = 0;"
+      },
+      {
+        "type": "text",
+        "content": "//GTCCCR Buffer operation is enabled"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTBER_b.BD1 = 0; //GTPR Buffer operation is enabled"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTBER_b.BD1 = 0;"
+      },
+      {
+        "type": "text",
+        "content": "//GTPR Buffer operation is enabled"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTBER_b.BD2 = 1; //GTADTRA/GTADTRB Buffer operation is disabled"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTBER_b.BD2 = 1;"
+      },
+      {
+        "type": "text",
+        "content": "//GTADTRA/GTADTRB Buffer operation is disabled"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTBER_b.BD0 = 0; //GTCCCR Buffer operation is enabled"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTBER_b.BD0 = 0;"
+      },
+      {
+        "type": "text",
+        "content": "//GTCCCR Buffer operation is enabled"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTBER_b.BD1 = 0; //GTPR Buffer operation is enabled"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTBER_b.BD1 = 0;"
+      },
+      {
+        "type": "text",
+        "content": "//GTPR Buffer operation is enabled"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTBER_b.BD2 = 1; //GTADTRA/GTADTRB Buffer operation is disabled"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTBER_b.BD2 = 1;"
+      },
+      {
+        "type": "text",
+        "content": "//GTADTRA/GTADTRB Buffer operation is disabled"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTPDBR = 6000;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTPDBR = 6000;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTPDBR = 6000;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTPDBR = 6000;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTPDBR = 6000;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTPDBR = 6000;"
+      },
+      {
+        "type": "text",
+        "content": "/*"
+      },
+      {
+        "type": "text",
+        "content": "/*"
+      },
+      {
+        "type": "text",
+        "content": "* GTIOR : General PWM Timer I/O Control Register"
+      },
+      {
+        "type": "text",
+        "content": "* GTIOR : General PWM Timer I/O Control Register"
+      },
+      {
+        "type": "text",
+        "content": "* - In complementary PWM mode,"
+      },
+      {
+        "type": "text",
+        "content": "* - In complementary PWM mode,"
+      },
+      {
+        "type": "text",
+        "content": "* the only values that can be set in the GTIOA[4:0] bits are 01001b, and 10110b"
+      },
+      {
+        "type": "text",
+        "content": "* the only values that can be set in the GTIOA[4:0] bits are 01001b, and 10110b"
+      },
+      {
+        "type": "text",
+        "content": "* - In complementary PWM mode,"
+      },
+      {
+        "type": "text",
+        "content": "* - In complementary PWM mode,"
+      },
+      {
+        "type": "text",
+        "content": "* the only values that can be set in the GTIOB[4:0] bits are 00110b, and 11001b"
+      },
+      {
+        "type": "text",
+        "content": "* the only values that can be set in the GTIOB[4:0] bits are 00110b, and 11001b"
+      },
+      {
+        "type": "text",
+        "content": "* GTIOA = 0x09"
+      },
+      {
+        "type": "text",
+        "content": "* GTIOA = 0x09"
+      },
+      {
+        "type": "text",
+        "content": "*  - Initial output is Low (Active level is High),"
+      },
+      {
+        "type": "text",
+        "content": "*  - Initial output is Low (Active level is High),"
+      },
+      {
+        "type": "text",
+        "content": "*  - High output in up count compare match"
+      },
+      {
+        "type": "text",
+        "content": "*  - High output in up count compare match"
+      },
+      {
+        "type": "text",
+        "content": "*  - Low output in down count compare match"
+      },
+      {
+        "type": "text",
+        "content": "*  - Low output in down count compare match"
+      },
+      {
+        "type": "text",
+        "content": "* GTIOB = 0x06"
+      },
+      {
+        "type": "text",
+        "content": "* GTIOB = 0x06"
+      },
+      {
+        "type": "text",
+        "content": "*  - Initial output is Low (Active level is High),"
+      },
+      {
+        "type": "text",
+        "content": "*  - Initial output is Low (Active level is High),"
+      },
+      {
+        "type": "text",
+        "content": "*  - Low output in up count compare match"
+      },
+      {
+        "type": "text",
+        "content": "*  - Low output in up count compare match"
+      },
+      {
+        "type": "text",
+        "content": "*  - High output in down count compare match"
+      },
+      {
+        "type": "text",
+        "content": "*  - High output in down count compare match"
+      },
+      {
+        "type": "text",
+        "content": "*/"
+      },
+      {
+        "type": "text",
+        "content": "*/"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTIOR_b.GTIOA = 0x09;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTIOR_b.GTIOA = 0x09;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTIOR_b.GTIOA = 0x09;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTIOR_b.GTIOA = 0x09;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTIOR_b.GTIOA = 0x09;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTIOR_b.GTIOA = 0x09;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTIOR_b.GTIOB = 0x06;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTIOR_b.GTIOB = 0x06;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTIOR_b.GTIOB = 0x06;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTIOR_b.GTIOB = 0x06;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTIOR_b.GTIOB = 0x06;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTIOR_b.GTIOB = 0x06;"
+      },
+      {
+        "type": "text",
+        "content": "/*PSYE: PWM Synchronous output Enable:"
+      },
+      {
+        "type": "text",
+        "content": "/*PSYE: PWM Synchronous output Enable:"
+      },
+      {
+        "type": "text",
+        "content": "* Enable GTCPPOT4 output */"
+      },
+      {
+        "type": "text",
+        "content": "* Enable GTCPPOT4 output */"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTIOR_b.PSYE = 1;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTIOR_b.PSYE = 1;"
+      },
+      {
+        "type": "text",
+        "content": "/*"
+      },
+      {
+        "type": "text",
+        "content": "/*"
+      },
+      {
+        "type": "text",
+        "content": "* GTBER2: General PWM Timer Buffer Enable 2"
+      },
+      {
+        "type": "text",
+        "content": "* GTBER2: General PWM Timer Buffer Enable 2"
+      },
+      {
+        "type": "text",
+        "content": "* - CP3DB=0 : Disable double buffer function in complementary PWM mode 3, 4"
+      },
+      {
+        "type": "text",
+        "content": "* - CP3DB=0 : Disable double buffer function in complementary PWM mode 3, 4"
+      },
+      {
+        "type": "text",
+        "content": "* - OLTTA: GTIOCnA Output Level Buffer Transfer Timing Select"
+      },
+      {
+        "type": "text",
+        "content": "* - OLTTA: GTIOCnA Output Level Buffer Transfer Timing Select"
+      },
+      {
+        "type": "text",
+        "content": "* - OLTTB: GTIOCnB Output Level Buffer Transfer Timing Select"
+      },
+      {
+        "type": "text",
+        "content": "* - OLTTB: GTIOCnB Output Level Buffer Transfer Timing Select"
+      },
+      {
+        "type": "text",
+        "content": "*/"
+      },
+      {
+        "type": "text",
+        "content": "*/"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTBER2_b.CP3DB = 0;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTBER2_b.CP3DB = 0;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTBER2_b.OLTTA = 3; //complementary PWM mode: Transfer at both crest and trough"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTBER2_b.OLTTA = 3;"
+      },
+      {
+        "type": "text",
+        "content": "//complementary PWM mode: Transfer at both crest and trough"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTBER2_b.OLTTB = 3; //complementary PWM mode: Transfer at both crest and trough"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTBER2_b.OLTTB = 3;"
+      },
+      {
+        "type": "text",
+        "content": "//complementary PWM mode: Transfer at both crest and trough"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTBER2_b.CP3DB = 0;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTBER2_b.CP3DB = 0;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTBER2_b.OLTTA = 3; //complementary PWM mode: Transfer at both crest and trough"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTBER2_b.OLTTA = 3;"
+      },
+      {
+        "type": "text",
+        "content": "//complementary PWM mode: Transfer at both crest and trough"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTBER2_b.OLTTB = 3; //complementary PWM mode: Transfer at both crest and trough"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTBER2_b.OLTTB = 3;"
+      },
+      {
+        "type": "text",
+        "content": "//complementary PWM mode: Transfer at both crest and trough"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTBER2_b.CP3DB = 0;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTBER2_b.CP3DB = 0;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTBER2_b.OLTTA = 3; //complementary PWM mode: Transfer at both crest and trough"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTBER2_b.OLTTA = 3;"
+      },
+      {
+        "type": "text",
+        "content": "//complementary PWM mode: Transfer at both crest and trough"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTBER2_b.OLTTB = 3; //complementary PWM mode: Transfer at both crest and trough"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTBER2_b.OLTTB = 3;"
+      },
+      {
+        "type": "text",
+        "content": "//complementary PWM mode: Transfer at both crest and trough"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = 3000;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = 3000;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = 3000;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = 3000;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = 3000;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = 3000;"
+      },
+      {
+        "type": "text",
+        "content": "/* Start the timer. */"
+      },
+      {
+        "type": "text",
+        "content": "/* Start the timer. */"
+      },
+      {
+        "type": "text",
+        "content": "err = R_GPT_THREE_PHASE_Start(&g_three_phase0_ctrl);"
+      },
+      {
+        "type": "text",
+        "content": "err = R_GPT_THREE_PHASE_Start(&g_three_phase0_ctrl);"
+      },
+      {
+        "type": "text",
+        "content": "if(FSP_SUCCESS != err)"
+      },
+      {
+        "type": "text",
+        "content": "if"
+      },
+      {
+        "type": "text",
+        "content": "("
+      },
+      {
+        "type": "text",
+        "content": "FSP_SUCCESS"
+      },
+      {
+        "type": "text",
+        "content": "!= err)"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "return err;"
+      },
+      {
+        "type": "text",
+        "content": "return"
+      },
+      {
+        "type": "text",
+        "content": "err;"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "return FSP_SUCCESS;"
+      },
+      {
+        "type": "text",
+        "content": "return"
+      },
+      {
+        "type": "text",
+        "content": "FSP_SUCCESS"
+      },
+      {
+        "type": "text",
+        "content": ";"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "Step 8: Add the below code, which includes the implementation of gpt_u_callback, in the hal_entry.c"
+      },
+      {
+        "type": "text",
+        "content": "static volatile int direction = 1; // 1 for incrementing, -1 for decrementing"
+      },
+      {
+        "type": "text",
+        "content": "static"
+      },
+      {
+        "type": "text",
+        "content": "volatile"
+      },
+      {
+        "type": "text",
+        "content": "int"
+      },
+      {
+        "type": "text",
+        "content": "direction = 1;"
+      },
+      {
+        "type": "text",
+        "content": "// 1 for incrementing, -1 for decrementing"
+      },
+      {
+        "type": "text",
+        "content": "static volatile int u2_count_u = 0U;"
+      },
+      {
+        "type": "text",
+        "content": "static"
+      },
+      {
+        "type": "text",
+        "content": "volatile"
+      },
+      {
+        "type": "text",
+        "content": "int"
+      },
+      {
+        "type": "text",
+        "content": "u2_count_u = 0U;"
+      },
+      {
+        "type": "text",
+        "content": "static void rm_motor_driver_set_uvw_duty_test (void)"
+      },
+      {
+        "type": "text",
+        "content": "static"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "rm_motor_driver_set_uvw_duty_test ("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ")"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "u2_count_u += direction;"
+      },
+      {
+        "type": "text",
+        "content": "u2_count_u += direction;"
+      },
+      {
+        "type": "text",
+        "content": "// Check if the counter needs to change direction"
+      },
+      {
+        "type": "text",
+        "content": "// Check if the counter needs to change direction"
+      },
+      {
+        "type": "text",
+        "content": "if (u2_count_u == 6240) {"
+      },
+      {
+        "type": "text",
+        "content": "if"
+      },
+      {
+        "type": "text",
+        "content": "(u2_count_u == 6240) {"
+      },
+      {
+        "type": "text",
+        "content": "direction = -1; // Switch to decrementing"
+      },
+      {
+        "type": "text",
+        "content": "direction = -1;"
+      },
+      {
+        "type": "text",
+        "content": "// Switch to decrementing"
+      },
+      {
+        "type": "text",
+        "content": "} else if (u2_count_u == 0) {"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "else"
+      },
+      {
+        "type": "text",
+        "content": "if"
+      },
+      {
+        "type": "text",
+        "content": "(u2_count_u == 0) {"
+      },
+      {
+        "type": "text",
+        "content": "direction = 1; // Switch to incrementing"
+      },
+      {
+        "type": "text",
+        "content": "direction = 1;"
+      },
+      {
+        "type": "text",
+        "content": "// Switch to incrementing"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = (uint32_t) u2_count_u;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT4->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = ("
+      },
+      {
+        "type": "text",
+        "content": "uint32_t"
+      },
+      {
+        "type": "text",
+        "content": ") u2_count_u;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = (uint32_t) u2_count_u;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT5->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = ("
+      },
+      {
+        "type": "text",
+        "content": "uint32_t"
+      },
+      {
+        "type": "text",
+        "content": ") u2_count_u;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = (uint32_t) u2_count_u;"
+      },
+      {
+        "type": "text",
+        "content": "R_GPT6->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = ("
+      },
+      {
+        "type": "text",
+        "content": "uint32_t"
+      },
+      {
+        "type": "text",
+        "content": ") u2_count_u;"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "#define DEBUG_OUTPUT_PD00_ENABLE 1"
+      },
+      {
+        "type": "text",
+        "content": "#define"
+      },
+      {
+        "type": "text",
+        "content": "DEBUG_OUTPUT_PD00_ENABLE 1"
+      },
+      {
+        "type": "text",
+        "content": "void gpt_u_callback(timer_callback_args_t *p_args)"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "gpt_u_callback(timer_callback_args_t *p_args)"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "/* TODO: add your own code here */"
+      },
+      {
+        "type": "text",
+        "content": "/*"
+      },
+      {
+        "type": "text",
+        "content": "TODO"
+      },
+      {
+        "type": "text",
+        "content": ": add your own code here */"
+      },
+      {
+        "type": "text",
+        "content": "if(p_args->event == TIMER_EVENT_CREST)"
+      },
+      {
+        "type": "text",
+        "content": "if"
+      },
+      {
+        "type": "text",
+        "content": "(p_args->event =="
+      },
+      {
+        "type": "text",
+        "content": "TIMER_EVENT_CREST"
+      },
+      {
+        "type": "text",
+        "content": ")"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "#if DEBUG_OUTPUT_PD00_ENABLE"
+      },
+      {
+        "type": "text",
+        "content": "#if"
+      },
+      {
+        "type": "text",
+        "content": "DEBUG_OUTPUT_PD00_ENABLE"
+      },
+      {
+        "type": "text",
+        "content": "R_IOPORT_PinWrite(&g_ioport_ctrl, BSP_IO_PORT_13_PIN_00, BSP_IO_LEVEL_LOW);"
+      },
+      {
+        "type": "text",
+        "content": "R_IOPORT_PinWrite(&g_ioport_ctrl,"
+      },
+      {
+        "type": "text",
+        "content": "BSP_IO_PORT_13_PIN_00"
+      },
+      {
+        "type": "text",
+        "content": ","
+      },
+      {
+        "type": "text",
+        "content": "BSP_IO_LEVEL_LOW"
+      },
+      {
+        "type": "text",
+        "content": ");"
+      },
+      {
+        "type": "text",
+        "content": "#endif"
+      },
+      {
+        "type": "text",
+        "content": "#endif"
+      },
+      {
+        "type": "text",
+        "content": "rm_motor_driver_set_uvw_duty_test();"
+      },
+      {
+        "type": "text",
+        "content": "rm_motor_driver_set_uvw_duty_test();"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "if(p_args->event == TIMER_EVENT_TROUGH)"
+      },
+      {
+        "type": "text",
+        "content": "if"
+      },
+      {
+        "type": "text",
+        "content": "(p_args->event == TIMER_EVENT_TROUGH)"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "#if DEBUG_OUTPUT_PD00_ENABLE"
+      },
+      {
+        "type": "text",
+        "content": "#if"
+      },
+      {
+        "type": "text",
+        "content": "DEBUG_OUTPUT_PD00_ENABLE"
+      },
+      {
+        "type": "text",
+        "content": "R_IOPORT_PinWrite(&g_ioport_ctrl, BSP_IO_PORT_13_PIN_00, BSP_IO_LEVEL_HIGH);"
+      },
+      {
+        "type": "text",
+        "content": "R_IOPORT_PinWrite(&g_ioport_ctrl,"
+      },
+      {
+        "type": "text",
+        "content": "BSP_IO_PORT_13_PIN_00"
+      },
+      {
+        "type": "text",
+        "content": ","
+      },
+      {
+        "type": "text",
+        "content": "BSP_IO_LEVEL_HIGH"
+      },
+      {
+        "type": "text",
+        "content": ");"
+      },
+      {
+        "type": "text",
+        "content": "#endif"
+      },
+      {
+        "type": "text",
+        "content": "#endif"
+      },
+      {
+        "type": "text",
+        "content": "rm_motor_driver_set_uvw_duty_test();"
+      },
+      {
+        "type": "text",
+        "content": "rm_motor_driver_set_uvw_duty_test();"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "Step 9: Add below code in the beginning of hal_entry.c"
+      },
+      {
+        "type": "text",
+        "content": "enum e_gpt_three_phase_prv_gtccr"
+      },
+      {
+        "type": "text",
+        "content": "enum"
+      },
+      {
+        "type": "text",
+        "content": "e_gpt_three_phase_prv_gtccr"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "GPT_THREE_PHASE_PRV_GTCCRA = 0U,"
+      },
+      {
+        "type": "text",
+        "content": "GPT_THREE_PHASE_PRV_GTCCRA"
+      },
+      {
+        "type": "text",
+        "content": "= 0U,"
+      },
+      {
+        "type": "text",
+        "content": "GPT_THREE_PHASE_PRV_GTCCRB,"
+      },
+      {
+        "type": "text",
+        "content": "GPT_THREE_PHASE_PRV_GTCCRB"
+      },
+      {
+        "type": "text",
+        "content": ","
+      },
+      {
+        "type": "text",
+        "content": "GPT_THREE_PHASE_PRV_GTCCRC,"
+      },
+      {
+        "type": "text",
+        "content": "GPT_THREE_PHASE_PRV_GTCCRC"
+      },
+      {
+        "type": "text",
+        "content": ","
+      },
+      {
+        "type": "text",
+        "content": "GPT_THREE_PHASE_PRV_GTCCRE,"
+      },
+      {
+        "type": "text",
+        "content": "GPT_THREE_PHASE_PRV_GTCCRE"
+      },
+      {
+        "type": "text",
+        "content": ","
+      },
+      {
+        "type": "text",
+        "content": "GPT_THREE_PHASE_PRV_GTCCRD,"
+      },
+      {
+        "type": "text",
+        "content": "GPT_THREE_PHASE_PRV_GTCCRD"
+      },
+      {
+        "type": "text",
+        "content": ","
+      },
+      {
+        "type": "text",
+        "content": "GPT_THREE_PHASE_PRV_GTCCRF"
+      },
+      {
+        "type": "text",
+        "content": "GPT_THREE_PHASE_PRV_GTCCRF"
+      },
+      {
+        "type": "text",
+        "content": "};"
+      },
+      {
+        "type": "text",
+        "content": "};"
+      },
+      {
+        "type": "text",
+        "content": "static fsp_err_t gpt_complementary_pwm_mode_3_init (void);"
+      },
+      {
+        "type": "text",
+        "content": "static"
+      },
+      {
+        "type": "text",
+        "content": "fsp_err_t"
+      },
+      {
+        "type": "text",
+        "content": "gpt_complementary_pwm_mode_3_init ("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ");"
+      },
+      {
+        "type": "text",
+        "content": "Step 10: In the hal_entry(), make a call to gpt_complementary_pwm_mode_3_init to start the three phase PWM. Then, the GPT Compare Capture Register (GTCCRD) will be updated periodically right after the GPTn_OVF and GPTn_UDF interrupts."
+      },
+      {
+        "type": "text",
+        "content": "void hal_entry(void)"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "hal_entry("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ")"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "/* TODO: add your own code here */"
+      },
+      {
+        "type": "text",
+        "content": "/*"
+      },
+      {
+        "type": "text",
+        "content": "TODO"
+      },
+      {
+        "type": "text",
+        "content": ": add your own code here */"
+      },
+      {
+        "type": "text",
+        "content": "fsp_err_t err = FSP_SUCCESS;"
+      },
+      {
+        "type": "text",
+        "content": "fsp_err_t"
+      },
+      {
+        "type": "text",
+        "content": "err ="
+      },
+      {
+        "type": "text",
+        "content": "FSP_SUCCESS"
+      },
+      {
+        "type": "text",
+        "content": ";"
+      },
+      {
+        "type": "text",
+        "content": "/* Complementary PWM mode Setting */"
+      },
+      {
+        "type": "text",
+        "content": "/* Complementary PWM mode Setting */"
+      },
+      {
+        "type": "text",
+        "content": "err = gpt_complementary_pwm_mode_3_init();"
+      },
+      {
+        "type": "text",
+        "content": "err = gpt_complementary_pwm_mode_3_init();"
+      },
+      {
+        "type": "text",
+        "content": "assert(err == FSP_SUCCESS);"
+      },
+      {
+        "type": "text",
+        "content": "assert(err =="
+      },
+      {
+        "type": "text",
+        "content": "FSP_SUCCESS"
+      },
+      {
+        "type": "text",
+        "content": ");"
+      },
+      {
+        "type": "text",
+        "content": "while(1)"
+      },
+      {
+        "type": "text",
+        "content": "while"
+      },
+      {
+        "type": "text",
+        "content": "(1)"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "#if BSP_TZ_SECURE_BUILD"
+      },
+      {
+        "type": "text",
+        "content": "#if"
+      },
+      {
+        "type": "text",
+        "content": "BSP_TZ_SECURE_BUILD"
+      },
+      {
+        "type": "text",
+        "content": "/* Enter non-secure code */"
+      },
+      {
+        "type": "text",
+        "content": "/* Enter non-secure code */"
+      },
+      {
+        "type": "text",
+        "content": "R_BSP_NonSecureEnter();"
+      },
+      {
+        "type": "text",
+        "content": "R_BSP_NonSecureEnter();"
+      },
+      {
+        "type": "text",
+        "content": "#endif"
+      },
+      {
+        "type": "text",
+        "content": "#endif"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "Step 11: Do a quick measurement to verify whether the result matches our target operation."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/397114_7.png",
+          "alt_text": "",
+          "width": "672",
+          "height": "577",
+          "local_path": "data/categories/ra_family/ra_hardware/c4c4ce18c55c3d890ac5327a7d635d14/images/73daa6998081e489038f9b2a0ac2d0e3.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/397114_8.png",
+          "alt_text": "",
+          "width": "671",
+          "height": "537",
+          "local_path": "data/categories/ra_family/ra_hardware/c4c4ce18c55c3d890ac5327a7d635d14/images/055d1d942bcb2900ddc624bea814c44c.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA6T2"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/397114_1.png",
+        "alt_text": "",
+        "width": "602",
+        "height": "203",
+        "local_path": "data/categories/ra_family/ra_hardware/c4c4ce18c55c3d890ac5327a7d635d14/images/8d54988bfaffb52d1eddba1d0966c5da.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/397114_2b.png",
+        "alt_text": "",
+        "width": "537",
+        "height": "175",
+        "local_path": "data/categories/ra_family/ra_hardware/c4c4ce18c55c3d890ac5327a7d635d14/images/91131772c15fae3c52b624c1180f8cdb.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/397114_3a.png",
+        "alt_text": "",
+        "width": "612",
+        "height": "336",
+        "local_path": "data/categories/ra_family/ra_hardware/c4c4ce18c55c3d890ac5327a7d635d14/images/7142db3f1eca213dc6ec553a147d9f32.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/397114_4b.png",
+        "alt_text": "",
+        "width": "559",
+        "height": "421",
+        "local_path": "data/categories/ra_family/ra_hardware/c4c4ce18c55c3d890ac5327a7d635d14/images/4701650b9a6d81bdbf2ab018ac8d3d0c.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/397114_5a.png",
+        "alt_text": "",
+        "width": "813",
+        "height": "587",
+        "local_path": "data/categories/ra_family/ra_hardware/c4c4ce18c55c3d890ac5327a7d635d14/images/692c5949cc97b5bf687b61a145e6e57b.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/397114_6a.png",
+        "alt_text": "",
+        "width": "823",
+        "height": "596",
+        "local_path": "data/categories/ra_family/ra_hardware/c4c4ce18c55c3d890ac5327a7d635d14/images/07128eeadeb01b85cc9f21099690e4cf.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/397114_7.png",
+        "alt_text": "",
+        "width": "672",
+        "height": "577",
+        "local_path": "data/categories/ra_family/ra_hardware/c4c4ce18c55c3d890ac5327a7d635d14/images/73daa6998081e489038f9b2a0ac2d0e3.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/397114_8.png",
+        "alt_text": "",
+        "width": "671",
+        "height": "537",
+        "local_path": "data/categories/ra_family/ra_hardware/c4c4ce18c55c3d890ac5327a7d635d14/images/055d1d942bcb2900ddc624bea814c44c.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "The example below demonstrates using the complementary PWM mode with consecutive three GPT channels to generate three-phase PWM waveform with dead time based on below conditions.\nPWM Frequency: 10kHz\nDeadtime period: 2us (GTDVU=240, PCLKD=120MHz)\nGTIOA output:\nInitial output level is Low, and active level is High\nOutput level is High in up count compare match, and it becomes Low in down count compare match.\nGTIOB: Initial output level is Low\nInitial output level is Low, and active level is High.\nOutput level is Low in up count compare match, and it becomes High in down count compare match."
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "In complementary PWM mode, the GTDVD register is invalid and the GTDVU register is used as the dead time value during both up-counting and down-counting. Therefore, we only need to configure Dead Time Count Up (Raw Counts)."
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "static fsp_err_t gpt_complementary_pwm_mode_3_init (void)\n{\n    fsp_err_t err = FSP_SUCCESS;\n    /* Initializes the module. */\n    err = R_GPT_THREE_PHASE_Open(&g_three_phase0_ctrl, &g_three_phase0_cfg);\n    /* Handle any errors. This function should be defined by the user. */\n    if(FSP_SUCCESS != err)\n    {\n        return err;\n    }\n    R_GPT4->GTCR_b.MD = 0x0E; //Complementary PWM mode 3(transfer at crest and trough)\n    R_GPT5->GTCR_b.MD = 0x0E; //Complementary PWM mode 3(transfer at crest and trough)\n    R_GPT6->GTCR_b.MD = 0x0E; //Complementary PWM mode 3(transfer at crest and trough)\n    /*\n     * GTBER: General PWM Timer Buffer Enable\n     * - BD0: GTCCR Buffer Operation\n     * - BD1: GTPR Buffer Operation\n     * - BD2: GTADTRA/GTADTRB Buffer Operation\n     * - BD3: GTDVU/GTDVD Buffer (This bit is invalid in complementary PWM mode)\n     */\n    R_GPT4->GTBER_b.BD0 = 0; //GTCCCR Buffer operation is enabled\n    R_GPT4->GTBER_b.BD1 = 0; //GTPR Buffer operation is enabled\n    R_GPT4->GTBER_b.BD2 = 1; //GTADTRA/GTADTRB Buffer operation is disabled\n    R_GPT5->GTBER_b.BD0 = 0; //GTCCCR Buffer operation is enabled\n    R_GPT5->GTBER_b.BD1 = 0; //GTPR Buffer operation is enabled\n    R_GPT5->GTBER_b.BD2 = 1; //GTADTRA/GTADTRB Buffer operation is disabled\n    R_GPT6->GTBER_b.BD0 = 0; //GTCCCR Buffer operation is enabled\n    R_GPT6->GTBER_b.BD1 = 0; //GTPR Buffer operation is enabled\n    R_GPT6->GTBER_b.BD2 = 1; //GTADTRA/GTADTRB Buffer operation is disabled\n    R_GPT4->GTPDBR = 6000;\n    R_GPT5->GTPDBR = 6000;\n    R_GPT6->GTPDBR = 6000;\n    /*\n     * GTIOR : General PWM Timer I/O Control Register\n     * - In complementary PWM mode,\n     * the only values that can be set in the GTIOA[4:0] bits are 01001b, and 10110b\n     * - In complementary PWM mode,\n     * the only values that can be set in the GTIOB[4:0] bits are 00110b, and 11001b\n     * GTIOA = 0x09\n     *  - Initial output is Low (Active level is High),\n     *  - High output in up count compare match\n     *  - Low output in down count compare match\n     * GTIOB = 0x06\n     *  - Initial output is Low (Active level is High),\n     *  - Low output in up count compare match\n     *  - High output in down count compare match\n     */\n    R_GPT4->GTIOR_b.GTIOA = 0x09;\n    R_GPT5->GTIOR_b.GTIOA = 0x09;\n    R_GPT6->GTIOR_b.GTIOA = 0x09;\n    R_GPT4->GTIOR_b.GTIOB = 0x06;\n    R_GPT5->GTIOR_b.GTIOB = 0x06;\n    R_GPT6->GTIOR_b.GTIOB = 0x06;\n    /*PSYE: PWM Synchronous output Enable:\n     * Enable GTCPPOT4 output */\n    R_GPT4->GTIOR_b.PSYE = 1;\n    /*\n     * GTBER2: General PWM Timer Buffer Enable 2\n     * - CP3DB=0 : Disable double buffer function in complementary PWM mode 3, 4\n     * - OLTTA: GTIOCnA Output Level Buffer Transfer Timing Select\n     * - OLTTB: GTIOCnB Output Level Buffer Transfer Timing Select\n     */\n    R_GPT4->GTBER2_b.CP3DB = 0;\n    R_GPT4->GTBER2_b.OLTTA = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT4->GTBER2_b.OLTTB = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT5->GTBER2_b.CP3DB = 0;\n    R_GPT5->GTBER2_b.OLTTA = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT5->GTBER2_b.OLTTB = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT6->GTBER2_b.CP3DB = 0;\n    R_GPT6->GTBER2_b.OLTTA = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT6->GTBER2_b.OLTTB = 3; //complementary PWM mode: Transfer at both crest and trough\n    R_GPT4->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = 3000;\n    R_GPT5->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = 3000;\n    R_GPT6->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = 3000;\n    /* Start the timer. */\n    err = R_GPT_THREE_PHASE_Start(&g_three_phase0_ctrl);\n    if(FSP_SUCCESS != err)\n    {\n        return err;\n    }\n    return FSP_SUCCESS;\n}"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "static volatile int direction = 1; // 1 for incrementing, -1 for decrementing\nstatic volatile int u2_count_u = 0U;\nstatic void rm_motor_driver_set_uvw_duty_test (void)\n{\n    u2_count_u += direction;\n    // Check if the counter needs to change direction\n    if (u2_count_u == 6240) {\n        direction = -1; // Switch to decrementing\n    } else if (u2_count_u == 0) {\n        direction = 1; // Switch to incrementing\n    }\n    R_GPT4->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = (uint32_t) u2_count_u;\n    R_GPT5->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = (uint32_t) u2_count_u;\n    R_GPT6->GTCCR[GPT_THREE_PHASE_PRV_GTCCRD] = (uint32_t) u2_count_u;\n}\n  #define DEBUG_OUTPUT_PD00_ENABLE 1\nvoid gpt_u_callback(timer_callback_args_t *p_args)\n{\n    /* TODO: add your own code here */\n    if(p_args->event == TIMER_EVENT_CREST)\n    {\n#if DEBUG_OUTPUT_PD00_ENABLE\n        R_IOPORT_PinWrite(&g_ioport_ctrl, BSP_IO_PORT_13_PIN_00, BSP_IO_LEVEL_LOW);\n#endif\n        rm_motor_driver_set_uvw_duty_test();\n    }\n      if(p_args->event == TIMER_EVENT_TROUGH)\n    {\n#if DEBUG_OUTPUT_PD00_ENABLE\n        R_IOPORT_PinWrite(&g_ioport_ctrl, BSP_IO_PORT_13_PIN_00, BSP_IO_LEVEL_HIGH);\n#endif\n        rm_motor_driver_set_uvw_duty_test();\n    }\n}"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "enum e_gpt_three_phase_prv_gtccr\n{\n    GPT_THREE_PHASE_PRV_GTCCRA = 0U,\n    GPT_THREE_PHASE_PRV_GTCCRB,\n    GPT_THREE_PHASE_PRV_GTCCRC,\n    GPT_THREE_PHASE_PRV_GTCCRE,\n    GPT_THREE_PHASE_PRV_GTCCRD,\n    GPT_THREE_PHASE_PRV_GTCCRF\n};\nstatic fsp_err_t gpt_complementary_pwm_mode_3_init (void);"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "void hal_entry(void)\n{\n    /* TODO: add your own code here */\n    fsp_err_t err = FSP_SUCCESS;\n    /* Complementary PWM mode Setting */\n    err = gpt_complementary_pwm_mode_3_init();\n    assert(err == FSP_SUCCESS);\n    while(1)\n    {\n    }\n#if BSP_TZ_SECURE_BUILD\n    /* Enter non-secure code */\n    R_BSP_NonSecureEnter();\n#endif\n}"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "The example below demonstrates using the complementary PWM mode with consecutive three GPT channels to generate three-phase PWM waveform with dead time based on below conditions.\nPWM Frequency: 10kHz\nDeadtime period: 2us (GTDVU=240, PCLKD=120MHz)\nGTIOA output: \nInitial output level is Low, and active level is High\nOutput level is High in up count compare match, and it becomes Low in down count compare match.\nGTIOB: Initial output level is Low\nInitial output level is Low, and active level is High.\nOutput level is Low in up count compare match, and it becomes High in down count compare match."
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA6T2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA6T2"
+    ],
+    "links": []
+  }
+}

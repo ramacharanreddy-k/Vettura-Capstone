@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21174002",
+    "title": "RL78/F23, RL78/F24: Development environment (evaluation boards)",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:55:07.338593"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat evaluation boards are available?\nAnswer:\nWe have a simple target board using RL78/F24 100pin LQFP package. This also covers the functionality of RL78/F23, so it can also be used for RL78/F23. We also have a Renesas Solution Starter Kit that allows you to experience control of BLDC, security, etc.\nSuitable Products\nRL78/F23, RL78/F24"
+      },
+      {
+        "type": "text",
+        "content": "What evaluation boards are available?"
+      },
+      {
+        "type": "text",
+        "content": "What evaluation boards are available?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nWe have a simple target board using RL78/F24 100pin LQFP package. This also covers the functionality of RL78/F23, so it can also be used for RL78/F23. We also have a Renesas Solution Starter Kit that allows you to experience control of BLDC, security, etc.\nSuitable Products\nRL78/F23, RL78/F24"
+      },
+      {
+        "type": "text",
+        "content": "We have a simple target board using RL78/F24 100pin LQFP package. This also covers the functionality of RL78/F23, so it can also be used for RL78/F23. We also have a Renesas Solution Starter Kit that allows you to experience control of BLDC, security, etc."
+      },
+      {
+        "type": "text",
+        "content": "We have a simple target board using RL78/F24 100pin LQFP package. This also covers the functionality of RL78/F23, so it can also be used for RL78/F23. We also have a Renesas Solution Starter Kit that allows you to experience control of BLDC, security, etc."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/F23, RL78/F24"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/F23, RL78/F24"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/F23, RL78/F24"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21174009"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21174028"
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20453292",
+    "title": "RZ/V2M: What kind of ISP adjustment is possible?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:51:27.174096"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat are some of the adjustments that can be made to the ISP function?\nAnswer:\nPlease refer to \"Introduction for Image Quality Functions\" in the \"RZ/V2M ISP Support Package\" website.\nSuitable Products\nRZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "What are some of the adjustments that can be made to the ISP function?"
+      },
+      {
+        "type": "text",
+        "content": "What are some of the adjustments that can be made to the ISP function?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nPlease refer to \"Introduction for Image Quality Functions\" in the \"RZ/V2M ISP Support Package\" website.\nSuitable Products\nRZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "Please refer to \"Introduction for Image Quality Functions\" in the \"RZ/V2M ISP Support Package\" website."
+      },
+      {
+        "type": "text",
+        "content": "Please refer to \"Introduction for Image Quality Functions\" in the \"RZ/V2M ISP Support Package\" website."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V2M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V2M"
+    ],
+    "links": [
+      {
+        "text": "Introduction for Image Quality Functions",
+        "url": "https://www.renesas.com/us/en/document/ppt/introduction-image-quality-functions?r=1525131"
+      },
+      {
+        "text": "RZ/V2M ISP Support Package",
+        "url": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rz-arm-based-high-end-32-64-bit-mpus/rzv2m-isp-support-package"
+      },
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20447202"
+      }
+    ]
+  }
+}

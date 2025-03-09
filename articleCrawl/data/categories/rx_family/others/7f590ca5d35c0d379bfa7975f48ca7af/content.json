@@ -1,0 +1,251 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20940275",
+    "title": "How can I use an LCD controller that is not supported by the emWin FIT module or QE for Display?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:24:08.932759"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow can I use an LCD controller that is not supported by the emWin FIT module or QE for Display?\nAnswer:\nWith an LCD controller that is not supported by the emWin FIT module, you cannot specify settings from QE. In this case, you must yourself implement a program that communicates with the LCD controller.\nDisplay drivers and functions other than RGB connection (GUIDRV_Lin) and serial connection (GUIDRV_FlexColor) are not supported by emWin FIT module. If you want to use it, you need a license agreement with Segger.\nNote: “GUIDRV_LIN” and “GUIDRV_FlexColor” are display driver names defined by emWin. You must use a display driver that supports the LCD controller.\n1. In the case of an LCD controller for RGB connection (GUIDRV_Lin)\nIf the LCD controller (source driver) supports RGB connection, it can likely be used with an emWin FT module and QE for Display. Use QE for Display to specify the GLCDC settings.\n2. In the case of an LCD controller for serial connection (GUIDRV_FlexColor)\nFor the LCD controllers that support FlexColor drivers that can be used with the latest version of the emWin FIT module, see the documentation for the emWin FIT module.\nSee the following procedure:\n(1) Specify the settings to the extent possible, and then output the configuration file (qe_emwin_config.h).\n(2) In the “qe_emwin_config.h” file that is output, \nset the EMWIN_LCD_IF definition to LCD_IF_RSPI or LCD_IF_SCI_SPI, and then\nset the EMWIN_LCD_DRIVER_IC definition to LCD_DRV_IC_OTHER.\n(Note that if you output the configuration file from QE again, the changes you made will be lost.)\nNote: If a custom board and custom display are selected, the preceding settings might be specified during setup. In such a case, you do not need to edit the file directly.\n(3) Implement a program that communicates with the LCD controller you use in the following two files:\n• LCDConf_spi_if.c\nDirectory:\n<project-name>\\src\\smc_gen\\r_emwin_rx\\lib\\Config\nOverview of the program to be implemented:\nInitialize emWin, the peripherals to be used, and the LCD controller according to the specifications and connection  interface of the controller to be used, and then implement the functions that send data.\nHint:\nThe implementations in the same program source will become helpful.\nNotes on implementation:\nNote the following points when referring to the ST7715 configuration program (LCDConf_spi_if.c).\na. About the offset of write buffer memory\nFor the Pmod-connected LCD that comes with the RSK, the resolution has been narrowed from the maximum resolution (132x132) of ST7715 to 127x127. Therefore, an offset shown below has been set for the controller memory.\nIf the resolution has not been changed from the controller's maximum resolution for the LCD you are using, set 0 for the settings shown below.\nb. About the connection interface\nFor example, the ST7715 supports two types of 4-line 8-bit serial interfaces.\nThese two interfaces are programmed assuming the 0110 settings according to the Pmode-connected LCD that comes with the RSK.\nThese interfaces do not support read from the LCD controller. \n(The implemented read8_a1 and readm8_a1 functions are dummy functions.)\n3. In the case of an LCD controller that is neither for RGB connection (GUIDRV_Lin) nor for serial connection (GUIDRV_FlexColor)\n(1) Specify the settings to the extent possible, and then output the configuration file (qe_emwin_config.h).\n(2) In the “qe_emwin_config.h” file that is output,\nSet the EMWIN_LCD_IF definition to LCD_IF_OTHER.\n(Note that if you output the configuration file from QE again, the changes you made will be lost.)\n(3) Implement a program that communicates with the LCD controller you use in the following files:\n• LCDConf_user_if.c\nDirectory:\n<project-name>\\src\\smc_gen\\r_emwin_rx\\lib\\Config\nOverview of the program to be implemented:\nInitialize emWin, the peripherals to be used, and the LCD controller according to the specifications and protocol of the controller to be used, and then implement the functions that send data.\nHint:\nThe implementations of LCDConf_glcdc_if.c or LCDConf_spi_if.c will become helpful.\nSupplementary information:\nYou need to implement the programs in accordance with the emWin specifications.\nFor details, see the emWin user's manual bundled with the emWin FIT module (UM03001_emWin.pdf) or the web manual (emWin User Guide & Reference Manual (segger.com)) provided by Segger that developed emWin.\nemWin User Guide & Reference Manual (segger.com)\nYou will be able to see the information about the sections to be configured by performing searches by the controller model name or communication protocol.\nSee also the following documentation, which is bundled with the emWin FIT module:\n• Documentation for the emWin FIT module\n Read the notes in Chapter 6.\nFor other details about emWin, contact Segger(https://www.segger.com/) or it local agency.\nSuitable Products\nRX Family\n  日本語"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nHow can I use an LCD controller that is not supported by the emWin FIT module or QE for Display?\nAnswer:\nWith an LCD controller that is not supported by the emWin FIT module, you cannot specify settings from QE. In this case, you must yourself implement a program that communicates with the LCD controller.\nDisplay drivers and functions other than RGB connection (GUIDRV_Lin) and serial connection (GUIDRV_FlexColor) are not supported by emWin FIT module. If you want to use it, you need a license agreement with Segger.\nNote: “GUIDRV_LIN” and “GUIDRV_FlexColor” are display driver names defined by emWin. You must use a display driver that supports the LCD controller.\n1. In the case of an LCD controller for RGB connection (GUIDRV_Lin)\nIf the LCD controller (source driver) supports RGB connection, it can likely be used with an emWin FT module and QE for Display. Use QE for Display to specify the GLCDC settings.\n2. In the case of an LCD controller for serial connection (GUIDRV_FlexColor)\nFor the LCD controllers that support FlexColor drivers that can be used with the latest version of the emWin FIT module, see the documentation for the emWin FIT module.\nSee the following procedure:\n(1) Specify the settings to the extent possible, and then output the configuration file (qe_emwin_config.h).\n(2) In the “qe_emwin_config.h” file that is output, \nset the EMWIN_LCD_IF definition to LCD_IF_RSPI or LCD_IF_SCI_SPI, and then\nset the EMWIN_LCD_DRIVER_IC definition to LCD_DRV_IC_OTHER.\n(Note that if you output the configuration file from QE again, the changes you made will be lost.)\nNote: If a custom board and custom display are selected, the preceding settings might be specified during setup. In such a case, you do not need to edit the file directly.\n(3) Implement a program that communicates with the LCD controller you use in the following two files:\n• LCDConf_spi_if.c\nDirectory:\n<project-name>\\src\\smc_gen\\r_emwin_rx\\lib\\Config\nOverview of the program to be implemented:\nInitialize emWin, the peripherals to be used, and the LCD controller according to the specifications and connection  interface of the controller to be used, and then implement the functions that send data.\nHint:\nThe implementations in the same program source will become helpful.\nNotes on implementation:\nNote the following points when referring to the ST7715 configuration program (LCDConf_spi_if.c).\na. About the offset of write buffer memory\nFor the Pmod-connected LCD that comes with the RSK, the resolution has been narrowed from the maximum resolution (132x132) of ST7715 to 127x127. Therefore, an offset shown below has been set for the controller memory.\nIf the resolution has not been changed from the controller's maximum resolution for the LCD you are using, set 0 for the settings shown below.\nb. About the connection interface\nFor example, the ST7715 supports two types of 4-line 8-bit serial interfaces.\nThese two interfaces are programmed assuming the 0110 settings according to the Pmode-connected LCD that comes with the RSK.\nThese interfaces do not support read from the LCD controller. \n(The implemented read8_a1 and readm8_a1 functions are dummy functions.)\n3. In the case of an LCD controller that is neither for RGB connection (GUIDRV_Lin) nor for serial connection (GUIDRV_FlexColor)\n(1) Specify the settings to the extent possible, and then output the configuration file (qe_emwin_config.h).\n(2) In the “qe_emwin_config.h” file that is output,\nSet the EMWIN_LCD_IF definition to LCD_IF_OTHER.\n(Note that if you output the configuration file from QE again, the changes you made will be lost.)\n(3) Implement a program that communicates with the LCD controller you use in the following files:\n• LCDConf_user_if.c\nDirectory:\n<project-name>\\src\\smc_gen\\r_emwin_rx\\lib\\Config\nOverview of the program to be implemented:\nInitialize emWin, the peripherals to be used, and the LCD controller according to the specifications and protocol of the controller to be used, and then implement the functions that send data.\nHint:\nThe implementations of LCDConf_glcdc_if.c or LCDConf_spi_if.c will become helpful.\nSupplementary information:\nYou need to implement the programs in accordance with the emWin specifications.\nFor details, see the emWin user's manual bundled with the emWin FIT module (UM03001_emWin.pdf) or the web manual (emWin User Guide & Reference Manual (segger.com)) provided by Segger that developed emWin.\nemWin User Guide & Reference Manual (segger.com)\nYou will be able to see the information about the sections to be configured by performing searches by the controller model name or communication protocol.\nSee also the following documentation, which is bundled with the emWin FIT module:\n• Documentation for the emWin FIT module\n Read the notes in Chapter 6.\nFor other details about emWin, contact Segger(https://www.segger.com/) or it local agency.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "How can I use an LCD controller that is not supported by the emWin FIT module or QE for Display?"
+      },
+      {
+        "type": "text",
+        "content": "How can I use an LCD controller that is not supported by the emWin FIT module or QE for Display?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nWith an LCD controller that is not supported by the emWin FIT module, you cannot specify settings from QE. In this case, you must yourself implement a program that communicates with the LCD controller.\nDisplay drivers and functions other than RGB connection (GUIDRV_Lin) and serial connection (GUIDRV_FlexColor) are not supported by emWin FIT module. If you want to use it, you need a license agreement with Segger.\nNote: “GUIDRV_LIN” and “GUIDRV_FlexColor” are display driver names defined by emWin. You must use a display driver that supports the LCD controller.\n1. In the case of an LCD controller for RGB connection (GUIDRV_Lin)\nIf the LCD controller (source driver) supports RGB connection, it can likely be used with an emWin FT module and QE for Display. Use QE for Display to specify the GLCDC settings.\n2. In the case of an LCD controller for serial connection (GUIDRV_FlexColor)\nFor the LCD controllers that support FlexColor drivers that can be used with the latest version of the emWin FIT module, see the documentation for the emWin FIT module.\nSee the following procedure:\n(1) Specify the settings to the extent possible, and then output the configuration file (qe_emwin_config.h).\n(2) In the “qe_emwin_config.h” file that is output, \nset the EMWIN_LCD_IF definition to LCD_IF_RSPI or LCD_IF_SCI_SPI, and then\nset the EMWIN_LCD_DRIVER_IC definition to LCD_DRV_IC_OTHER.\n(Note that if you output the configuration file from QE again, the changes you made will be lost.)\nNote: If a custom board and custom display are selected, the preceding settings might be specified during setup. In such a case, you do not need to edit the file directly.\n(3) Implement a program that communicates with the LCD controller you use in the following two files:\n• LCDConf_spi_if.c\nDirectory:\n<project-name>\\src\\smc_gen\\r_emwin_rx\\lib\\Config\nOverview of the program to be implemented:\nInitialize emWin, the peripherals to be used, and the LCD controller according to the specifications and connection  interface of the controller to be used, and then implement the functions that send data.\nHint:\nThe implementations in the same program source will become helpful.\nNotes on implementation:\nNote the following points when referring to the ST7715 configuration program (LCDConf_spi_if.c).\na. About the offset of write buffer memory\nFor the Pmod-connected LCD that comes with the RSK, the resolution has been narrowed from the maximum resolution (132x132) of ST7715 to 127x127. Therefore, an offset shown below has been set for the controller memory.\nIf the resolution has not been changed from the controller's maximum resolution for the LCD you are using, set 0 for the settings shown below.\nb. About the connection interface\nFor example, the ST7715 supports two types of 4-line 8-bit serial interfaces.\nThese two interfaces are programmed assuming the 0110 settings according to the Pmode-connected LCD that comes with the RSK.\nThese interfaces do not support read from the LCD controller. \n(The implemented read8_a1 and readm8_a1 functions are dummy functions.)\n3. In the case of an LCD controller that is neither for RGB connection (GUIDRV_Lin) nor for serial connection (GUIDRV_FlexColor)\n(1) Specify the settings to the extent possible, and then output the configuration file (qe_emwin_config.h).\n(2) In the “qe_emwin_config.h” file that is output,\nSet the EMWIN_LCD_IF definition to LCD_IF_OTHER.\n(Note that if you output the configuration file from QE again, the changes you made will be lost.)\n(3) Implement a program that communicates with the LCD controller you use in the following files:\n• LCDConf_user_if.c\nDirectory:\n<project-name>\\src\\smc_gen\\r_emwin_rx\\lib\\Config\nOverview of the program to be implemented:\nInitialize emWin, the peripherals to be used, and the LCD controller according to the specifications and protocol of the controller to be used, and then implement the functions that send data.\nHint:\nThe implementations of LCDConf_glcdc_if.c or LCDConf_spi_if.c will become helpful.\nSupplementary information:\nYou need to implement the programs in accordance with the emWin specifications.\nFor details, see the emWin user's manual bundled with the emWin FIT module (UM03001_emWin.pdf) or the web manual (emWin User Guide & Reference Manual (segger.com)) provided by Segger that developed emWin.\nemWin User Guide & Reference Manual (segger.com)\nYou will be able to see the information about the sections to be configured by performing searches by the controller model name or communication protocol.\nSee also the following documentation, which is bundled with the emWin FIT module:\n• Documentation for the emWin FIT module\n Read the notes in Chapter 6.\nFor other details about emWin, contact Segger(https://www.segger.com/) or it local agency.\nSuitable Products\nRX Family"
+      },
+      {
+        "type": "text",
+        "content": "With an LCD controller that is not supported by the emWin FIT module, you cannot specify settings from QE. In this case, you must yourself implement a program that communicates with the LCD controller.\nDisplay drivers and functions other than RGB connection (GUIDRV_Lin) and serial connection (GUIDRV_FlexColor) are not supported by emWin FIT module. If you want to use it, you need a license agreement with Segger.\nNote: “GUIDRV_LIN” and “GUIDRV_FlexColor” are display driver names defined by emWin. You must use a display driver that supports the LCD controller.\n1. In the case of an LCD controller for RGB connection (GUIDRV_Lin)\nIf the LCD controller (source driver) supports RGB connection, it can likely be used with an emWin FT module and QE for Display. Use QE for Display to specify the GLCDC settings.\n2. In the case of an LCD controller for serial connection (GUIDRV_FlexColor)\nFor the LCD controllers that support FlexColor drivers that can be used with the latest version of the emWin FIT module, see the documentation for the emWin FIT module.\nSee the following procedure:\n(1) Specify the settings to the extent possible, and then output the configuration file (qe_emwin_config.h).\n(2) In the “qe_emwin_config.h” file that is output, \nset the EMWIN_LCD_IF definition to LCD_IF_RSPI or LCD_IF_SCI_SPI, and then\nset the EMWIN_LCD_DRIVER_IC definition to LCD_DRV_IC_OTHER.\n(Note that if you output the configuration file from QE again, the changes you made will be lost.)\nNote: If a custom board and custom display are selected, the preceding settings might be specified during setup. In such a case, you do not need to edit the file directly.\n(3) Implement a program that communicates with the LCD controller you use in the following two files:\n• LCDConf_spi_if.c\nDirectory:\n<project-name>\\src\\smc_gen\\r_emwin_rx\\lib\\Config\nOverview of the program to be implemented:\nInitialize emWin, the peripherals to be used, and the LCD controller according to the specifications and connection  interface of the controller to be used, and then implement the functions that send data.\nHint:\nThe implementations in the same program source will become helpful.\nNotes on implementation:\nNote the following points when referring to the ST7715 configuration program (LCDConf_spi_if.c).\na. About the offset of write buffer memory\nFor the Pmod-connected LCD that comes with the RSK, the resolution has been narrowed from the maximum resolution (132x132) of ST7715 to 127x127. Therefore, an offset shown below has been set for the controller memory.\nIf the resolution has not been changed from the controller's maximum resolution for the LCD you are using, set 0 for the settings shown below.\nb. About the connection interface\nFor example, the ST7715 supports two types of 4-line 8-bit serial interfaces.\nThese two interfaces are programmed assuming the 0110 settings according to the Pmode-connected LCD that comes with the RSK.\nThese interfaces do not support read from the LCD controller. \n(The implemented read8_a1 and readm8_a1 functions are dummy functions.)\n3. In the case of an LCD controller that is neither for RGB connection (GUIDRV_Lin) nor for serial connection (GUIDRV_FlexColor)\n(1) Specify the settings to the extent possible, and then output the configuration file (qe_emwin_config.h).\n(2) In the “qe_emwin_config.h” file that is output,\nSet the EMWIN_LCD_IF definition to LCD_IF_OTHER.\n(Note that if you output the configuration file from QE again, the changes you made will be lost.)\n(3) Implement a program that communicates with the LCD controller you use in the following files:\n• LCDConf_user_if.c\nDirectory:\n<project-name>\\src\\smc_gen\\r_emwin_rx\\lib\\Config\nOverview of the program to be implemented:\nInitialize emWin, the peripherals to be used, and the LCD controller according to the specifications and protocol of the controller to be used, and then implement the functions that send data.\nHint:\nThe implementations of LCDConf_glcdc_if.c or LCDConf_spi_if.c will become helpful.\nSupplementary information:\nYou need to implement the programs in accordance with the emWin specifications.\nFor details, see the emWin user's manual bundled with the emWin FIT module (UM03001_emWin.pdf) or the web manual (emWin User Guide & Reference Manual (segger.com)) provided by Segger that developed emWin.\nemWin User Guide & Reference Manual (segger.com)\nYou will be able to see the information about the sections to be configured by performing searches by the controller model name or communication protocol.\nSee also the following documentation, which is bundled with the emWin FIT module:\n• Documentation for the emWin FIT module\n Read the notes in Chapter 6.\nFor other details about emWin, contact Segger(https://www.segger.com/) or it local agency.\nSuitable Products"
+      },
+      {
+        "type": "text",
+        "content": "With an LCD controller that is not supported by the emWin FIT module, you cannot specify settings from QE. In this case, you must yourself implement a program that communicates with the LCD controller.\nDisplay drivers and functions other than RGB connection (GUIDRV_Lin) and serial connection (GUIDRV_FlexColor) are not supported by emWin FIT module. If you want to use it, you need a license agreement with Segger."
+      },
+      {
+        "type": "text",
+        "content": "Note: “GUIDRV_LIN” and “GUIDRV_FlexColor” are display driver names defined by emWin. You must use a display driver that supports the LCD controller."
+      },
+      {
+        "type": "text",
+        "content": "1. In the case of an LCD controller for RGB connection (GUIDRV_Lin)\nIf the LCD controller (source driver) supports RGB connection, it can likely be used with an emWin FT module and QE for Display. Use QE for Display to specify the GLCDC settings."
+      },
+      {
+        "type": "text",
+        "content": "2. In the case of an LCD controller for serial connection (GUIDRV_FlexColor)\nFor the LCD controllers that support FlexColor drivers that can be used with the latest version of the emWin FIT module, see the documentation for the emWin FIT module.\nSee the following procedure:"
+      },
+      {
+        "type": "text",
+        "content": "(1) Specify the settings to the extent possible, and then output the configuration file (qe_emwin_config.h)."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370044.png",
+          "alt_text": "",
+          "width": "353",
+          "height": "342",
+          "local_path": "data/categories/rx_family/others/7f590ca5d35c0d379bfa7975f48ca7af/images/d15b5e080a69ec5e9ce5aba37a36a1aa.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "(2) In the “qe_emwin_config.h” file that is output, \nset the EMWIN_LCD_IF definition to LCD_IF_RSPI or LCD_IF_SCI_SPI, and then\nset the EMWIN_LCD_DRIVER_IC definition to LCD_DRV_IC_OTHER.\n(Note that if you output the configuration file from QE again, the changes you made will be lost.)\nNote: If a custom board and custom display are selected, the preceding settings might be specified during setup. In such a case, you do not need to edit the file directly."
+      },
+      {
+        "type": "text",
+        "content": "(3) Implement a program that communicates with the LCD controller you use in the following two files:"
+      },
+      {
+        "type": "text",
+        "content": "• LCDConf_spi_if.c\nDirectory:\n<project-name>\\src\\smc_gen\\r_emwin_rx\\lib\\Config"
+      },
+      {
+        "type": "text",
+        "content": "Overview of the program to be implemented:\nInitialize emWin, the peripherals to be used, and the LCD controller according to the specifications and connection  interface of the controller to be used, and then implement the functions that send data."
+      },
+      {
+        "type": "text",
+        "content": "Hint:\nThe implementations in the same program source will become helpful."
+      },
+      {
+        "type": "text",
+        "content": "Notes on implementation:\nNote the following points when referring to the ST7715 configuration program (LCDConf_spi_if.c).\na. About the offset of write buffer memory\nFor the Pmod-connected LCD that comes with the RSK, the resolution has been narrowed from the maximum resolution (132x132) of ST7715 to 127x127. Therefore, an offset shown below has been set for the controller memory.\nIf the resolution has not been changed from the controller's maximum resolution for the LCD you are using, set 0 for the settings shown below."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370044-2.png",
+          "alt_text": "",
+          "width": "579",
+          "height": "41",
+          "local_path": "data/categories/rx_family/others/7f590ca5d35c0d379bfa7975f48ca7af/images/f9cefd22d409322ff89c745b6b88d941.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "b. About the connection interface\nFor example, the ST7715 supports two types of 4-line 8-bit serial interfaces."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370044-3.png",
+          "alt_text": "",
+          "width": "431",
+          "height": "102",
+          "local_path": "data/categories/rx_family/others/7f590ca5d35c0d379bfa7975f48ca7af/images/1302202bc17536b8af00e9f665cd05a5.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "These two interfaces are programmed assuming the 0110 settings according to the Pmode-connected LCD that comes with the RSK.\nThese interfaces do not support read from the LCD controller. \n(The implemented read8_a1 and readm8_a1 functions are dummy functions.)"
+      },
+      {
+        "type": "text",
+        "content": "3. In the case of an LCD controller that is neither for RGB connection (GUIDRV_Lin) nor for serial connection (GUIDRV_FlexColor)"
+      },
+      {
+        "type": "text",
+        "content": "(1) Specify the settings to the extent possible, and then output the configuration file (qe_emwin_config.h)."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370044-4.png",
+          "alt_text": "",
+          "width": "347",
+          "height": "343",
+          "local_path": "data/categories/rx_family/others/7f590ca5d35c0d379bfa7975f48ca7af/images/5c44d7ba6c635a045e005e037ecd515f.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "(2) In the “qe_emwin_config.h” file that is output,\nSet the EMWIN_LCD_IF definition to LCD_IF_OTHER.\n(Note that if you output the configuration file from QE again, the changes you made will be lost.)\n(3) Implement a program that communicates with the LCD controller you use in the following files:"
+      },
+      {
+        "type": "text",
+        "content": "• LCDConf_user_if.c\nDirectory:\n<project-name>\\src\\smc_gen\\r_emwin_rx\\lib\\Config"
+      },
+      {
+        "type": "text",
+        "content": "Overview of the program to be implemented:\nInitialize emWin, the peripherals to be used, and the LCD controller according to the specifications and protocol of the controller to be used, and then implement the functions that send data."
+      },
+      {
+        "type": "text",
+        "content": "Hint:\nThe implementations of LCDConf_glcdc_if.c or LCDConf_spi_if.c will become helpful."
+      },
+      {
+        "type": "text",
+        "content": "Supplementary information:"
+      },
+      {
+        "type": "text",
+        "content": "You need to implement the programs in accordance with the emWin specifications.\nFor details, see the emWin user's manual bundled with the emWin FIT module (UM03001_emWin.pdf) or the web manual (emWin User Guide & Reference Manual (segger.com)) provided by Segger that developed emWin."
+      },
+      {
+        "type": "text",
+        "content": "emWin User Guide & Reference Manual (segger.com)"
+      },
+      {
+        "type": "text",
+        "content": "You will be able to see the information about the sections to be configured by performing searches by the controller model name or communication protocol."
+      },
+      {
+        "type": "text",
+        "content": "See also the following documentation, which is bundled with the emWin FIT module:\n• Documentation for the emWin FIT module\n Read the notes in Chapter 6."
+      },
+      {
+        "type": "text",
+        "content": "For other details about emWin, contact Segger(https://www.segger.com/) or it local agency."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RX Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370044.png",
+        "alt_text": "",
+        "width": "353",
+        "height": "342",
+        "local_path": "data/categories/rx_family/others/7f590ca5d35c0d379bfa7975f48ca7af/images/d15b5e080a69ec5e9ce5aba37a36a1aa.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370044-2.png",
+        "alt_text": "",
+        "width": "579",
+        "height": "41",
+        "local_path": "data/categories/rx_family/others/7f590ca5d35c0d379bfa7975f48ca7af/images/f9cefd22d409322ff89c745b6b88d941.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370044-3.png",
+        "alt_text": "",
+        "width": "431",
+        "height": "102",
+        "local_path": "data/categories/rx_family/others/7f590ca5d35c0d379bfa7975f48ca7af/images/1302202bc17536b8af00e9f665cd05a5.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/370044-4.png",
+        "alt_text": "",
+        "width": "347",
+        "height": "343",
+        "local_path": "data/categories/rx_family/others/7f590ca5d35c0d379bfa7975f48ca7af/images/5c44d7ba6c635a045e005e037ecd515f.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX Family"
+    ],
+    "links": [
+      {
+        "text": "emWin User Guide & Reference Manual (segger.com)",
+        "url": "https://www.segger.com/doc/UM03001_emWin.html"
+      },
+      {
+        "text": "https://www.segger.com/)",
+        "url": "https://www.segger.com/)"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20857259"
+      }
+    ]
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21490032",
+    "title": "RH850 data flash checksum using RFP",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:28:54.625009"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI am using RH850 D1L device with Renesas Flash Programmer. When I perform checksum command the Data Flash1 checksum is different every time.\n>sum\nCode Flash1:     0xD0344DEB\nUser Boot Area1: 0x42A83D27\nData Flash1:     0x802134F6\nTotal:           0x92FDC008\nPASS\nProgram operation finished.\n>sum\nCode Flash1:     0xD0344DEB\nUser Boot Area1: 0x42A83D27\nData Flash1:     0x2A26C55D\nTotal:           0x3D03506F\nPASS\nChecksum operation finished.\n>sum\nCode Flash1:     0xD0344DEB\nUser Boot Area1: 0x42A83D27\nData Flash1:     0xED84C32A\nTotal:           0x00614E3C\nPASS\nChecksum operation finished.\nWhat could be the reason for this?\nAnswer:\nThe checksum option in RFP calculates the checksum by the method selected under \"Checksum Type\". The available types of calculation differ according to the target device. The results are output in units of areas of flash memory. The checksum command does not work on a partially written DataFlash. The parts which are not written return random values which are also changing with every read and thus the checksum is always changing. The only option is the very by reading back the data - in the Operation Settings -> Program &Verify Option -> Verify by reading the device needs to be selected\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nI am using RH850 D1L device with Renesas Flash Programmer. When I perform checksum command the Data Flash1 checksum is different every time.\n>sum\nCode Flash1:     0xD0344DEB\nUser Boot Area1: 0x42A83D27\nData Flash1:     0x802134F6\nTotal:           0x92FDC008\nPASS\nProgram operation finished.\n>sum\nCode Flash1:     0xD0344DEB\nUser Boot Area1: 0x42A83D27\nData Flash1:     0x2A26C55D\nTotal:           0x3D03506F\nPASS\nChecksum operation finished.\n>sum\nCode Flash1:     0xD0344DEB\nUser Boot Area1: 0x42A83D27\nData Flash1:     0xED84C32A\nTotal:           0x00614E3C\nPASS\nChecksum operation finished.\nWhat could be the reason for this?\nAnswer:\nThe checksum option in RFP calculates the checksum by the method selected under \"Checksum Type\". The available types of calculation differ according to the target device. The results are output in units of areas of flash memory. The checksum command does not work on a partially written DataFlash. The parts which are not written return random values which are also changing with every read and thus the checksum is always changing. The only option is the very by reading back the data - in the Operation Settings -> Program &Verify Option -> Verify by reading the device needs to be selected\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "I am using RH850 D1L device with Renesas Flash Programmer. When I perform checksum command the Data Flash1 checksum is different every time.\n>sum\nCode Flash1:     0xD0344DEB\nUser Boot Area1: 0x42A83D27\nData Flash1:     0x802134F6\nTotal:           0x92FDC008\nPASS\nProgram operation finished.\n>sum\nCode Flash1:     0xD0344DEB\nUser Boot Area1: 0x42A83D27\nData Flash1:     0x2A26C55D\nTotal:           0x3D03506F\nPASS\nChecksum operation finished.\n>sum\nCode Flash1:     0xD0344DEB\nUser Boot Area1: 0x42A83D27\nData Flash1:     0xED84C32A\nTotal:           0x00614E3C\nPASS\nChecksum operation finished.\nWhat could be the reason for this?"
+      },
+      {
+        "type": "text",
+        "content": "I am using RH850 D1L device with Renesas Flash Programmer. When I perform checksum command the Data Flash1 checksum is different every time."
+      },
+      {
+        "type": "text",
+        "content": "I am using RH850 D1L device with Renesas Flash Programmer. When I perform checksum command the Data Flash1 checksum is different every time."
+      },
+      {
+        "type": "text",
+        "content": ">sum"
+      },
+      {
+        "type": "text",
+        "content": ">sum"
+      },
+      {
+        "type": "text",
+        "content": "Code Flash1:     0xD0344DEB"
+      },
+      {
+        "type": "text",
+        "content": "Code Flash1:     0xD0344DEB"
+      },
+      {
+        "type": "text",
+        "content": "User Boot Area1: 0x42A83D27"
+      },
+      {
+        "type": "text",
+        "content": "User Boot Area1: 0x42A83D27"
+      },
+      {
+        "type": "text",
+        "content": "Data Flash1:     0x802134F6"
+      },
+      {
+        "type": "text",
+        "content": "Data Flash1:"
+      },
+      {
+        "type": "text",
+        "content": "0x802134F6"
+      },
+      {
+        "type": "text",
+        "content": "Total:           0x92FDC008"
+      },
+      {
+        "type": "text",
+        "content": "Total:           0x92FDC008"
+      },
+      {
+        "type": "text",
+        "content": "PASS"
+      },
+      {
+        "type": "text",
+        "content": "PASS"
+      },
+      {
+        "type": "text",
+        "content": "Program operation finished."
+      },
+      {
+        "type": "text",
+        "content": "Program operation finished."
+      },
+      {
+        "type": "text",
+        "content": ">sum"
+      },
+      {
+        "type": "text",
+        "content": ">sum"
+      },
+      {
+        "type": "text",
+        "content": "Code Flash1:     0xD0344DEB"
+      },
+      {
+        "type": "text",
+        "content": "Code Flash1:     0xD0344DEB"
+      },
+      {
+        "type": "text",
+        "content": "User Boot Area1: 0x42A83D27"
+      },
+      {
+        "type": "text",
+        "content": "User Boot Area1: 0x42A83D27"
+      },
+      {
+        "type": "text",
+        "content": "Data Flash1:     0x2A26C55D"
+      },
+      {
+        "type": "text",
+        "content": "Data Flash1:"
+      },
+      {
+        "type": "text",
+        "content": "0x2A26C55D"
+      },
+      {
+        "type": "text",
+        "content": "Total:           0x3D03506F"
+      },
+      {
+        "type": "text",
+        "content": "Total:           0x3D03506F"
+      },
+      {
+        "type": "text",
+        "content": "PASS"
+      },
+      {
+        "type": "text",
+        "content": "PASS"
+      },
+      {
+        "type": "text",
+        "content": "Checksum operation finished."
+      },
+      {
+        "type": "text",
+        "content": "Checksum operation finished."
+      },
+      {
+        "type": "text",
+        "content": ">sum"
+      },
+      {
+        "type": "text",
+        "content": ">sum"
+      },
+      {
+        "type": "text",
+        "content": "Code Flash1:     0xD0344DEB"
+      },
+      {
+        "type": "text",
+        "content": "Code Flash1:     0xD0344DEB"
+      },
+      {
+        "type": "text",
+        "content": "User Boot Area1: 0x42A83D27"
+      },
+      {
+        "type": "text",
+        "content": "User Boot Area1: 0x42A83D27"
+      },
+      {
+        "type": "text",
+        "content": "Data Flash1:     0xED84C32A"
+      },
+      {
+        "type": "text",
+        "content": "Data Flash1:"
+      },
+      {
+        "type": "text",
+        "content": "0xED84C32A"
+      },
+      {
+        "type": "text",
+        "content": "Total:           0x00614E3C"
+      },
+      {
+        "type": "text",
+        "content": "Total:           0x00614E3C"
+      },
+      {
+        "type": "text",
+        "content": "PASS"
+      },
+      {
+        "type": "text",
+        "content": "PASS"
+      },
+      {
+        "type": "text",
+        "content": "Checksum operation finished."
+      },
+      {
+        "type": "text",
+        "content": "Checksum operation finished."
+      },
+      {
+        "type": "text",
+        "content": "What could be the reason for this?"
+      },
+      {
+        "type": "text",
+        "content": "What could be the reason for this?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe checksum option in RFP calculates the checksum by the method selected under \"Checksum Type\". The available types of calculation differ according to the target device. The results are output in units of areas of flash memory. The checksum command does not work on a partially written DataFlash. The parts which are not written return random values which are also changing with every read and thus the checksum is always changing. The only option is the very by reading back the data - in the Operation Settings -> Program &Verify Option -> Verify by reading the device needs to be selected\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "The checksum option in RFP calculates the checksum by the method selected under \"Checksum Type\". The available types of calculation differ according to the target device. The results are output in units of areas of flash memory. The checksum command does not work on a partially written DataFlash. The parts which are not written return random values which are also changing with every read and thus the checksum is always changing. The only option is the very by reading back the data - in the Operation Settings -> Program &Verify Option -> Verify by reading the device needs to be selected"
+      },
+      {
+        "type": "text",
+        "content": "The checksum option in RFP calculates the checksum by the method selected under \"Checksum Type\". The available types of calculation differ according to the target device. The results are output in units of areas of flash memory. The checksum command does not work on a partially written DataFlash. The parts which are not written return random values which are also changing with every read and thus the checksum is always changing. The only option is the very by reading back the data - in the Operation Settings -> Program &Verify Option -> Verify by reading the device needs to be selected"
+      },
+      {
+        "type": "text",
+        "content": "The checksum option in RFP calculates the checksum by the method selected under \"Checksum Type\". The available types of calculation differ according to the target device. The results are output in units of areas of flash memory. The checksum command does not work on a partially written DataFlash. The parts which are not written return random values which are also changing with every read and thus the checksum is always changing. The only option is the very by reading back the data - in the Operation Settings -> Program &Verify Option -> Verify by reading the device needs to be selected"
+      },
+      {
+        "type": "text",
+        "content": "The available types of calculation differ according to the target device."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850"
+    ],
+    "links": []
+  }
+}

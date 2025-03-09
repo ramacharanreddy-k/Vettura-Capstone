@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20352693",
+    "title": "RZ/V2L, RZ/V2M: Product specifications",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:50:45.156936"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the difference between RZ/V2M and RZ/V2L?\nAnswer:\nA major difference is that the RZ/V2M is equipped with a hardware ISP. \nWhereas the RZ/V2L implements a simple ISP feature, Simple ISP, using the DRP-AI.\nSuitable Products\nRZ/V2L, RZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "What is the difference between RZ/V2M and RZ/V2L?"
+      },
+      {
+        "type": "text",
+        "content": "What is the difference between RZ/V2M and RZ/V2L?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nA major difference is that the RZ/V2M is equipped with a hardware ISP. \nWhereas the RZ/V2L implements a simple ISP feature, Simple ISP, using the DRP-AI.\nSuitable Products\nRZ/V2L, RZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "A major difference is that the RZ/V2M is equipped with a hardware ISP. \nWhereas the RZ/V2L implements a simple ISP feature, Simple ISP, using the DRP-AI."
+      },
+      {
+        "type": "text",
+        "content": "A major difference is that the RZ/V2M is equipped with a hardware ISP. \nWhereas the RZ/V2L implements a simple ISP feature, Simple ISP, using the DRP-AI."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V2L, RZ/V2M"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V2L, RZ/V2M"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V2L, RZ/V2M"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20352682"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20352703"
+      }
+    ]
+  }
+}

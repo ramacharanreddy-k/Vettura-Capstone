@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21681478",
+    "title": "RZ/T2H, RZ/N2H: Booting from NOR flash",
+    "last_updated": "2025-07-02",
+    "extracted_at": "2025-03-08T23:49:22.219240"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow do I boot from NOR flash?\nAnswer:\nRZ/T2H and RZ/N2H devices are not capable of booting from NOR flash.\nSupported boot modes and mode setting pins (MDx) configurations are described below.\nSuitable Products\nRZ/T2H, RZ/N2H"
+      },
+      {
+        "type": "text",
+        "content": "How do I boot from NOR flash?"
+      },
+      {
+        "type": "text",
+        "content": "How do I boot from NOR flash?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRZ/T2H and RZ/N2H devices are not capable of booting from NOR flash.\nSupported boot modes and mode setting pins (MDx) configurations are described below.\nSuitable Products\nRZ/T2H, RZ/N2H"
+      },
+      {
+        "type": "text",
+        "content": "RZ/T2H and RZ/N2H devices are not capable of booting from NOR flash.\nSupported boot modes and mode setting pins (MDx) configurations are described below."
+      },
+      {
+        "type": "text",
+        "content": "RZ/T2H and RZ/N2H devices are not capable of booting from NOR flash."
+      },
+      {
+        "type": "text",
+        "content": "Supported boot modes and mode setting pins (MDx) configurations are described below."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/395438.png",
+          "alt_text": "",
+          "width": "876",
+          "height": "414",
+          "local_path": "data/categories/rz_family/rzt2h_rzn2h/5b422b7a44c7f9eed559902955806842/images/9564c55e674ccfa7e25eae893f81e756.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/T2H, RZ/N2H"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/395438.png",
+        "alt_text": "",
+        "width": "876",
+        "height": "414",
+        "local_path": "data/categories/rz_family/rzt2h_rzn2h/5b422b7a44c7f9eed559902955806842/images/9564c55e674ccfa7e25eae893f81e756.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/T2H, RZ/N2H"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/T2H, RZ/N2H"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21662842"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21685995"
+      }
+    ]
+  }
+}

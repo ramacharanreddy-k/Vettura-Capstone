@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20938977",
+    "title": "Motor evaluation environment using RX26T",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:05:58.746892"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDo you provide a motor evaluation environment for RX26T?\nAnswer:\nWe provide MCK-RX26T Renesas Flexible Motor Control Kit for MCU and motor evaluation using RX26T.\nMCK-RX26T Renesas Flexible Motor Control Kit :\nThe MCK-RX26T is a development kit that makes it easy to evaluate motor control via a permanent magnet synchronous motor (brushless DC motor). With this kit and sample software downloadable from the website or Renesas Motor Workbench 3.0, user can immediately start evaluating motor control with the RX26T. \n(Included: MCB-RX26T Type A, inverter board (MCI-LV-1), communication board (MC-COM), permanent magnet synchronous motor, and accessories (cables, spacers, etc.)) \nThe sample software can be downloaded below.\nRX26T Sensorless vector control for permanent magnet synchronous motor\nRX26T Sensorless vector control with one shunt for permanent magnet synchronous motor\nRX26T Vector control for permanent magnet synchronous motor with encoder\nSuitable Products\nRX26T"
+      },
+      {
+        "type": "text",
+        "content": "Do you provide a motor evaluation environment for RX26T?"
+      },
+      {
+        "type": "text",
+        "content": "Do you provide a motor evaluation environment for RX26T?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nWe provide MCK-RX26T Renesas Flexible Motor Control Kit for MCU and motor evaluation using RX26T.\nMCK-RX26T Renesas Flexible Motor Control Kit :\nThe MCK-RX26T is a development kit that makes it easy to evaluate motor control via a permanent magnet synchronous motor (brushless DC motor). With this kit and sample software downloadable from the website or Renesas Motor Workbench 3.0, user can immediately start evaluating motor control with the RX26T. \n(Included: MCB-RX26T Type A, inverter board (MCI-LV-1), communication board (MC-COM), permanent magnet synchronous motor, and accessories (cables, spacers, etc.)) \nThe sample software can be downloaded below.\nRX26T Sensorless vector control for permanent magnet synchronous motor\nRX26T Sensorless vector control with one shunt for permanent magnet synchronous motor\nRX26T Vector control for permanent magnet synchronous motor with encoder\nSuitable Products\nRX26T"
+      },
+      {
+        "type": "text",
+        "content": "We provide MCK-RX26T Renesas Flexible Motor Control Kit for MCU and motor evaluation using RX26T.\nMCK-RX26T Renesas Flexible Motor Control Kit :\nThe MCK-RX26T is a development kit that makes it easy to evaluate motor control via a permanent magnet synchronous motor (brushless DC motor). With this kit and sample software downloadable from the website or Renesas Motor Workbench 3.0, user can immediately start evaluating motor control with the RX26T. \n(Included: MCB-RX26T Type A, inverter board (MCI-LV-1), communication board (MC-COM), permanent magnet synchronous motor, and accessories (cables, spacers, etc.)) \nThe sample software can be downloaded below.\nRX26T Sensorless vector control for permanent magnet synchronous motor\nRX26T Sensorless vector control with one shunt for permanent magnet synchronous motor\nRX26T Vector control for permanent magnet synchronous motor with encoder"
+      },
+      {
+        "type": "text",
+        "content": "We provide MCK-RX26T Renesas Flexible Motor Control Kit for MCU and motor evaluation using RX26T."
+      },
+      {
+        "type": "text",
+        "content": "MCK-RX26T Renesas Flexible Motor Control Kit :"
+      },
+      {
+        "type": "text",
+        "content": "The MCK-RX26T is a development kit that makes it easy to evaluate motor control via a permanent magnet synchronous motor (brushless DC motor). With this kit and sample software downloadable from the website or Renesas Motor Workbench 3.0, user can immediately start evaluating motor control with the RX26T. \n(Included: MCB-RX26T Type A, inverter board (MCI-LV-1), communication board (MC-COM), permanent magnet synchronous motor, and accessories (cables, spacers, etc.))"
+      },
+      {
+        "type": "text",
+        "content": "The sample software can be downloaded below."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX26T"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX26T"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX26T"
+    ],
+    "links": [
+      {
+        "text": "MCK-RX26T Renesas Flexible Motor Control Kit",
+        "url": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rx-32-bit-performance-efficiency-mcus/rtk0emxe70s00020bj-mck-rx26t-renesas-flexible-motor-control-kit-rx26t-mcu-group"
+      },
+      {
+        "text": "RX26T Sensorless vector control for permanent magnet synchronous motor",
+        "url": "https://www.renesas.com/us/en/document/scd/sensorless-vector-control-permanent-magnet-synchronous-motor-mck-rx26t-rev100?r=25424951"
+      },
+      {
+        "text": "RX26T Vector control for permanent magnet synchronous motor with encoder",
+        "url": "https://www.renesas.com/us/en/document/scd/vector-control-permanent-magnet-synchronous-motor-encoder-mck-rx26t-rev100?r=25424951"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20938982"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20938987"
+      }
+    ]
+  }
+}

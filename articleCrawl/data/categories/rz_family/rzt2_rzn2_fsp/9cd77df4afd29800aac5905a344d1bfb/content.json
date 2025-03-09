@@ -1,0 +1,148 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21733882",
+    "title": "How to use J-Link RTT with RZ/T2 and RZ/N2 (Cortex-R52) devices",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:52:31.342371"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDo I need any settings to use J-Link RTT with RZ/T2 and RZ/N2 (Cortex-R52) devices?\nAnswer:\nRTT (Real time transfer) communication is performed by placing a “SEGGER RTT Control Block” and a “buffer for reading/writing data” in the memory.(https://www.segger.com/products/debug-probes/j-link/technology/about-real-time-transfer/)\nIn case RZ/T2 devices, these data are placed in the SystemRAM area without cache for the following reasons.\n - The assigned addresses on each memory mapping of the CPU and AXI-AP is the same memory area. (e.g. ATCM cannot be used because the assigned addresses are different between the CPU and CoreSight (AXI-AP).)\n - No-cache areas are recommended because they are accessed by multiple bus masters.\nTo use J-Link RTT with Cortex-R52 core of RZ/T2 and RZ/N2 devices, make the following changes.\nFile to be changed\nlinker script(.ld) in {project name}/script\nChnages\nAdd the section definition for RTT to the .data_noncache section (SystemRAM area without cache) of the GCC linker script. Also, move the .data_noncache section before the .bss section, since the section for RTT is defined in the .bss section if it is after .bss.\n1. Move .data_noncache section to the previous of .bss section(to avoid .data_noncache section being defined in .bss)\n2. Add the following definitions in .data_noncache section.\n\n    *(.bss._SEGGER_RTT)\n    *(.bss._acDownBuffer)\n    *(.bss._acUpBuffer)\nIn the case of RZ/T FSP v2.2.0\n\n.data_noncache DATA_NONCACHE_START : AT (DATA_NONCACHE_INIT_START)\n{\n    . = ((0 == HAS_SYSTEM_RAM_MIRROR) && (DEFINED(CR52_0) || DEFINED(CR52_1))) ? ALIGN(64) : ALIGN(8);\n    _data_noncache_start = .;\n    *(.bss._SEGGER_RTT)\n    *(.bss._acDownBuffer)\n    *(.bss._acUpBuffer)\n    KEEP(*(.data_noncache*))\n    _data_noncache_end = .;\n} > NONCACHE\nSuitable Products\nRZ/T2M, RZ/T2L, RZ/T2ME, RZ/T2H, RZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "Do I need any settings to use J-Link RTT with RZ/T2 and RZ/N2 (Cortex-R52) devices?"
+      },
+      {
+        "type": "text",
+        "content": "Do I need any settings to use J-Link RTT with RZ/T2 and RZ/N2 (Cortex-R52) devices?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRTT (Real time transfer) communication is performed by placing a “SEGGER RTT Control Block” and a “buffer for reading/writing data” in the memory.(https://www.segger.com/products/debug-probes/j-link/technology/about-real-time-transfer/)\nIn case RZ/T2 devices, these data are placed in the SystemRAM area without cache for the following reasons.\n - The assigned addresses on each memory mapping of the CPU and AXI-AP is the same memory area. (e.g. ATCM cannot be used because the assigned addresses are different between the CPU and CoreSight (AXI-AP).)\n - No-cache areas are recommended because they are accessed by multiple bus masters.\nTo use J-Link RTT with Cortex-R52 core of RZ/T2 and RZ/N2 devices, make the following changes.\nFile to be changed\nlinker script(.ld) in {project name}/script\nChnages\nAdd the section definition for RTT to the .data_noncache section (SystemRAM area without cache) of the GCC linker script. Also, move the .data_noncache section before the .bss section, since the section for RTT is defined in the .bss section if it is after .bss.\n1. Move .data_noncache section to the previous of .bss section(to avoid .data_noncache section being defined in .bss)\n2. Add the following definitions in .data_noncache section.\n\n    *(.bss._SEGGER_RTT)\n    *(.bss._acDownBuffer)\n    *(.bss._acUpBuffer)\nIn the case of RZ/T FSP v2.2.0\n\n.data_noncache DATA_NONCACHE_START : AT (DATA_NONCACHE_INIT_START)\n{\n    . = ((0 == HAS_SYSTEM_RAM_MIRROR) && (DEFINED(CR52_0) || DEFINED(CR52_1))) ? ALIGN(64) : ALIGN(8);\n    _data_noncache_start = .;\n    *(.bss._SEGGER_RTT)\n    *(.bss._acDownBuffer)\n    *(.bss._acUpBuffer)\n    KEEP(*(.data_noncache*))\n    _data_noncache_end = .;\n} > NONCACHE\nSuitable Products\nRZ/T2M, RZ/T2L, RZ/T2ME, RZ/T2H, RZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "RTT (Real time transfer) communication is performed by placing a “SEGGER RTT Control Block” and a “buffer for reading/writing data” in the memory.(https://www.segger.com/products/debug-probes/j-link/technology/about-real-time-transfer/)\nIn case RZ/T2 devices, these data are placed in the SystemRAM area without cache for the following reasons.\n - The assigned addresses on each memory mapping of the CPU and AXI-AP is the same memory area. (e.g. ATCM cannot be used because the assigned addresses are different between the CPU and CoreSight (AXI-AP).)\n - No-cache areas are recommended because they are accessed by multiple bus masters.\nTo use J-Link RTT with Cortex-R52 core of RZ/T2 and RZ/N2 devices, make the following changes.\nFile to be changed\nlinker script(.ld) in {project name}/script\nChnages\nAdd the section definition for RTT to the .data_noncache section (SystemRAM area without cache) of the GCC linker script. Also, move the .data_noncache section before the .bss section, since the section for RTT is defined in the .bss section if it is after .bss.\n1. Move .data_noncache section to the previous of .bss section(to avoid .data_noncache section being defined in .bss)\n2. Add the following definitions in .data_noncache section.\n\n    *(.bss._SEGGER_RTT)\n    *(.bss._acDownBuffer)\n    *(.bss._acUpBuffer)\nIn the case of RZ/T FSP v2.2.0\n\n.data_noncache DATA_NONCACHE_START : AT (DATA_NONCACHE_INIT_START)\n{\n    . = ((0 == HAS_SYSTEM_RAM_MIRROR) && (DEFINED(CR52_0) || DEFINED(CR52_1))) ? ALIGN(64) : ALIGN(8);\n    _data_noncache_start = .;\n    *(.bss._SEGGER_RTT)\n    *(.bss._acDownBuffer)\n    *(.bss._acUpBuffer)\n    KEEP(*(.data_noncache*))\n    _data_noncache_end = .;\n} > NONCACHE"
+      },
+      {
+        "type": "text",
+        "content": "RTT (Real time transfer) communication is performed by placing a “SEGGER RTT Control Block” and a “buffer for reading/writing data” in the memory.(https://www.segger.com/products/debug-probes/j-link/technology/about-real-time-transfer/)"
+      },
+      {
+        "type": "text",
+        "content": "In case RZ/T2 devices, these data are placed in the SystemRAM area without cache for the following reasons.\n - The assigned addresses on each memory mapping of the CPU and AXI-AP is the same memory area. (e.g. ATCM cannot be used because the assigned addresses are different between the CPU and CoreSight (AXI-AP).)\n - No-cache areas are recommended because they are accessed by multiple bus masters."
+      },
+      {
+        "type": "text",
+        "content": "To use J-Link RTT with Cortex-R52 core of RZ/T2 and RZ/N2 devices, make the following changes."
+      },
+      {
+        "type": "text",
+        "content": "File to be changed"
+      },
+      {
+        "type": "text",
+        "content": "linker script(.ld) in {project name}/script"
+      },
+      {
+        "type": "text",
+        "content": "Chnages"
+      },
+      {
+        "type": "text",
+        "content": "Add the section definition for RTT to the .data_noncache section (SystemRAM area without cache) of the GCC linker script. Also, move the .data_noncache section before the .bss section, since the section for RTT is defined in the .bss section if it is after .bss.\n1. Move .data_noncache section to the previous of .bss section(to avoid .data_noncache section being defined in .bss)"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/04_rtt.png",
+          "alt_text": "",
+          "width": "800",
+          "height": "617",
+          "local_path": "data/categories/rz_family/rzt2_rzn2_fsp/9cd77df4afd29800aac5905a344d1bfb/images/71aab7ea9fd7135b3b2e4aab9120bf8b.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "2. Add the following definitions in .data_noncache section.\n\n    *(.bss._SEGGER_RTT)\n    *(.bss._acDownBuffer)\n    *(.bss._acUpBuffer)"
+      },
+      {
+        "type": "text",
+        "content": "*(.bss._SEGGER_RTT)"
+      },
+      {
+        "type": "text",
+        "content": "*(.bss._acDownBuffer)"
+      },
+      {
+        "type": "text",
+        "content": "*(.bss._acUpBuffer)"
+      },
+      {
+        "type": "text",
+        "content": "In the case of RZ/T FSP v2.2.0\n\n.data_noncache DATA_NONCACHE_START : AT (DATA_NONCACHE_INIT_START)\n{\n    . = ((0 == HAS_SYSTEM_RAM_MIRROR) && (DEFINED(CR52_0) || DEFINED(CR52_1))) ? ALIGN(64) : ALIGN(8);\n    _data_noncache_start = .;\n    *(.bss._SEGGER_RTT)\n    *(.bss._acDownBuffer)\n    *(.bss._acUpBuffer)\n    KEEP(*(.data_noncache*))\n    _data_noncache_end = .;\n} > NONCACHE"
+      },
+      {
+        "type": "text",
+        "content": "*(.bss._SEGGER_RTT)"
+      },
+      {
+        "type": "text",
+        "content": "*(.bss._acDownBuffer)"
+      },
+      {
+        "type": "text",
+        "content": "*(.bss._acUpBuffer)"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/T2M, RZ/T2L, RZ/T2ME, RZ/T2H, RZ/N2L"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/04_rtt.png",
+        "alt_text": "",
+        "width": "800",
+        "height": "617",
+        "local_path": "data/categories/rz_family/rzt2_rzn2_fsp/9cd77df4afd29800aac5905a344d1bfb/images/71aab7ea9fd7135b3b2e4aab9120bf8b.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/T2M, RZ/T2L, RZ/T2ME, RZ/T2H, RZ/N2L"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/T2M, RZ/T2L, RZ/T2ME, RZ/T2H, RZ/N2L"
+    ],
+    "links": [
+      {
+        "text": "https://www.segger.com/products/debug-probes/j-link/technology/about-real-time-transfer/)",
+        "url": "https://www.segger.com/products/debug-probes/j-link/technology/about-real-time-transfer/)"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21733888"
+      }
+    ]
+  }
+}

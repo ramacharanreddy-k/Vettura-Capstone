@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18284486",
+    "title": "As a Safety Function, Touch IP Can Detect Its Own Fault?",
+    "last_updated": "2023-02-03",
+    "extracted_at": "2025-03-09T00:09:03.072699"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nAs an additional safety function, is it possible for me to configure the Touch IP to detect a Touch IP MCU malfunction?\nAnswer:\nRenesas's capacitive touch buttons (CTSU and CTSU2) allow the self-test software to diagnose its own circuitry.\nRefer to the Functional Safety Solutions for Capacitive Touch Sensors Web page for more information.\nhttps://www.renesas.com/us/en/application/industrial/building-home-automation/functional-safety-solution-capacitive-touch-sensor\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "As an additional safety function, is it possible for me to configure the Touch IP to detect a Touch IP MCU malfunction?"
+      },
+      {
+        "type": "text",
+        "content": "As an additional safety function, is it possible for me to configure the Touch IP to detect a Touch IP MCU malfunction?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRenesas's capacitive touch buttons (CTSU and CTSU2) allow the self-test software to diagnose its own circuitry.\nRefer to the Functional Safety Solutions for Capacitive Touch Sensors Web page for more information.\nhttps://www.renesas.com/us/en/application/industrial/building-home-automation/functional-safety-solution-capacitive-touch-sensor\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Renesas's capacitive touch buttons (CTSU and CTSU2) allow the self-test software to diagnose its own circuitry.\nRefer to the Functional Safety Solutions for Capacitive Touch Sensors Web page for more information.\nhttps://www.renesas.com/us/en/application/industrial/building-home-automation/functional-safety-solution-capacitive-touch-sensor"
+      },
+      {
+        "type": "text",
+        "content": "Renesas's capacitive touch buttons (CTSU and CTSU2) allow the self-test software to diagnose its own circuitry.\nRefer to the Functional Safety Solutions for Capacitive Touch Sensors Web page for more information."
+      },
+      {
+        "type": "text",
+        "content": "https://www.renesas.com/us/en/application/industrial/building-home-automation/functional-safety-solution-capacitive-touch-sensor"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/us/en/application/industrial/building-home-automation/functional-safety-solution-capacitive-touch-sensor",
+        "url": "https://www.renesas.com/us/en/application/industrial/building-home-automation/functional-safety-solution-capacitive-touch-sensor"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792875"
+      }
+    ]
+  }
+}

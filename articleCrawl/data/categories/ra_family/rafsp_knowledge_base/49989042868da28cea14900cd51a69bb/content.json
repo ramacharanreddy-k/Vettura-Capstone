@@ -1,0 +1,170 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21698322",
+    "title": "RA Family: Timer of peripheral function does not work at the interval set in FSP configurator",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:22:50.462067"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI added a timer driver in the FSP configurator and set the period, but the operation of the timer does not match the period.\nAnswer:\nAfter completing the necessary settings in the configurator and generating the configuration code with the Generate Project Content button, check the files in the ra_gen folder of the project (hal_data.c, common_data.c, <RTOS thread name>.c). For example, when the AGT timer module of the RA4M3 MCU is operated with a clock source PCLKB = 50 MHz, the counter register of the module is 16 bits long, so the longest period is 1/(50 MHz/8)  x65536 = 0.01048576 sec. Therefore, even if you set a longer period in the configurator, you will not be able to create the expected cycle.\nCheck the upper and lower limits of the cycle that can be generated in the user's manual of the device you are using.\nconst timer_cfg_t g_timer0_cfg =\n{ .mode = TIMER_MODE_PERIODIC,\n/* Actual period: 0.01048576 seconds. Actual duty: 50%. */.period_counts = (uint32_t) 0x10000,\n.duty_cycle_counts = 0x8000, .source_div = (timer_source_div_t) 3, .channel = 0, .p_callback = callback_agt0,\n...\n}\n  Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "I added a timer driver in the FSP configurator and set the period, but the operation of the timer does not match the period."
+      },
+      {
+        "type": "text",
+        "content": "I added a timer driver in the FSP configurator and set the period, but the operation of the timer does not match the period."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nAfter completing the necessary settings in the configurator and generating the configuration code with the Generate Project Content button, check the files in the ra_gen folder of the project (hal_data.c, common_data.c, <RTOS thread name>.c). For example, when the AGT timer module of the RA4M3 MCU is operated with a clock source PCLKB = 50 MHz, the counter register of the module is 16 bits long, so the longest period is 1/(50 MHz/8)  x65536 = 0.01048576 sec. Therefore, even if you set a longer period in the configurator, you will not be able to create the expected cycle.\nCheck the upper and lower limits of the cycle that can be generated in the user's manual of the device you are using.\nconst timer_cfg_t g_timer0_cfg =\n{ .mode = TIMER_MODE_PERIODIC,\n/* Actual period: 0.01048576 seconds. Actual duty: 50%. */.period_counts = (uint32_t) 0x10000,\n.duty_cycle_counts = 0x8000, .source_div = (timer_source_div_t) 3, .channel = 0, .p_callback = callback_agt0,\n...\n}\n  Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "After completing the necessary settings in the configurator and generating the configuration code with the Generate Project Content button, check the files in the ra_gen folder of the project (hal_data.c, common_data.c, <RTOS thread name>.c). For example, when the AGT timer module of the RA4M3 MCU is operated with a clock source PCLKB = 50 MHz, the counter register of the module is 16 bits long, so the longest period is 1/(50 MHz/8)  x65536 = 0.01048576 sec. Therefore, even if you set a longer period in the configurator, you will not be able to create the expected cycle.\nCheck the upper and lower limits of the cycle that can be generated in the user's manual of the device you are using.\nconst timer_cfg_t g_timer0_cfg =\n{ .mode = TIMER_MODE_PERIODIC,\n/* Actual period: 0.01048576 seconds. Actual duty: 50%. */.period_counts = (uint32_t) 0x10000,\n.duty_cycle_counts = 0x8000, .source_div = (timer_source_div_t) 3, .channel = 0, .p_callback = callback_agt0,\n...\n}\n  Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "After completing the necessary settings in the configurator and generating the configuration code with the Generate Project Content button, check the files in the ra_gen folder of the project (hal_data.c, common_data.c, <RTOS thread name>.c). For example, when the AGT timer module of the RA4M3 MCU is operated with a clock source PCLKB = 50 MHz, the counter register of the module is 16 bits long, so the longest period is 1/(50 MHz/8)  x65536 = 0.01048576 sec. Therefore, even if you set a longer period in the configurator, you will not be able to create the expected cycle."
+      },
+      {
+        "type": "text",
+        "content": "Check the upper and lower limits of the cycle that can be generated in the user's manual of the device you are using."
+      },
+      {
+        "type": "text",
+        "content": "const timer_cfg_t g_timer0_cfg ="
+      },
+      {
+        "type": "text",
+        "content": "const"
+      },
+      {
+        "type": "text",
+        "content": "timer_cfg_t"
+      },
+      {
+        "type": "text",
+        "content": "g_timer0_cfg ="
+      },
+      {
+        "type": "text",
+        "content": "{ .mode = TIMER_MODE_PERIODIC,"
+      },
+      {
+        "type": "text",
+        "content": "{ .mode ="
+      },
+      {
+        "type": "text",
+        "content": "TIMER_MODE_PERIODIC"
+      },
+      {
+        "type": "text",
+        "content": ","
+      },
+      {
+        "type": "text",
+        "content": "/* Actual period: 0.01048576 seconds. Actual duty: 50%. */.period_counts = (uint32_t) 0x10000,"
+      },
+      {
+        "type": "text",
+        "content": "/* Actual period: 0.01048576 seconds. Actual duty: 50%. */"
+      },
+      {
+        "type": "text",
+        "content": ".period_counts = ("
+      },
+      {
+        "type": "text",
+        "content": "uint32_t"
+      },
+      {
+        "type": "text",
+        "content": ") 0x10000,"
+      },
+      {
+        "type": "text",
+        "content": ".duty_cycle_counts = 0x8000, .source_div = (timer_source_div_t) 3, .channel = 0, .p_callback = callback_agt0,"
+      },
+      {
+        "type": "text",
+        "content": ".duty_cycle_counts = 0x8000, .source_div = ("
+      },
+      {
+        "type": "text",
+        "content": "timer_source_div_t"
+      },
+      {
+        "type": "text",
+        "content": ") 3, .channel = 0, .p_callback = callback_agt0,"
+      },
+      {
+        "type": "text",
+        "content": "..."
+      },
+      {
+        "type": "text",
+        "content": "..."
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "const timer_cfg_t g_timer0_cfg =\n{ .mode = TIMER_MODE_PERIODIC,\n/* Actual period: 0.01048576 seconds. Actual duty: 50%. */.period_counts = (uint32_t) 0x10000,\n.duty_cycle_counts = 0x8000, .source_div = (timer_source_div_t) 3, .channel = 0, .p_callback = callback_agt0,\n...\n}"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21698341"
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/19668880",
+    "title": "RA2: BOM cost saving",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:31:53.231746"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow does the RA2L1/RA2E1/RA2E2/RA2E3/RA2A2 reduces my total BOM cost?\nAnswer:\nOn-chip peripheral functions include a high precision (±1%) high-speed on-chip oscillator, background operation data flash supporting 1 million erase/program cycles, a temperature sensor, and multiple power supply interface ports.\nSuitable Products\nRA2L1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "How does the RA2L1/RA2E1/RA2E2/RA2E3/RA2A2 reduces my total BOM cost?"
+      },
+      {
+        "type": "text",
+        "content": "How does the RA2L1/RA2E1/RA2E2/RA2E3/RA2A2 reduces my total BOM cost?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nOn-chip peripheral functions include a high precision (±1%) high-speed on-chip oscillator, background operation data flash supporting 1 million erase/program cycles, a temperature sensor, and multiple power supply interface ports.\nSuitable Products\nRA2L1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "On-chip peripheral functions include a high precision (±1%) high-speed on-chip oscillator, background operation data flash supporting 1 million erase/program cycles, a temperature sensor, and multiple power supply interface ports.\nSuitable Products"
+      },
+      {
+        "type": "text",
+        "content": "On-chip peripheral functions include a high precision (±1%) high-speed on-chip oscillator, background operation data flash supporting 1 million erase/program cycles, a temperature sensor, and multiple power supply interface ports."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA2L1, RA2E1, RA2E2, RA2E3, RA2A2"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA2L1, RA2E1, RA2E2, RA2E3, RA2A2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA2L1, RA2E1, RA2E2, RA2E3, RA2A2"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/19668831"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/19668892"
+      }
+    ]
+  }
+}

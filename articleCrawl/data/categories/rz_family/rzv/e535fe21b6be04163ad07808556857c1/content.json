@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21250639",
+    "title": "RZ/V2H: Software Development Environment",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:51:48.068064"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow do I obtain a development environment?\nAnswer:\nA software development kit called an “AI SDK” is available for download free of charge from the Renesas website. We also provide free, open-source, pre-trained AI applications on GitHub.\nSuitable Products\nRZ/V2H"
+      },
+      {
+        "type": "text",
+        "content": "How do I obtain a development environment?"
+      },
+      {
+        "type": "text",
+        "content": "How do I obtain a development environment?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nA software development kit called an “AI SDK” is available for download free of charge from the Renesas website. We also provide free, open-source, pre-trained AI applications on GitHub.\nSuitable Products\nRZ/V2H"
+      },
+      {
+        "type": "text",
+        "content": "A software development kit called an “AI SDK” is available for download free of charge from the Renesas website. We also provide free, open-source, pre-trained AI applications on GitHub."
+      },
+      {
+        "type": "text",
+        "content": "A software development kit called an “AI SDK” is available for download free of charge from the Renesas website. We also provide free, open-source, pre-trained AI applications on GitHub."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V2H"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V2H"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V2H"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21250649"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21250660"
+      }
+    ]
+  }
+}

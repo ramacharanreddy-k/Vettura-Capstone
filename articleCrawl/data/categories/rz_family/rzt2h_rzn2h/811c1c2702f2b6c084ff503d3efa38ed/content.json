@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21727836",
+    "title": "How to Use a PCIe card on the RZT2H-EVB",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:49:40.104072"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow do I use a PCIe card on the RZT2H-EVB.\nAnswer:\nUsing a 5Gbps PCIe NIC (Gen3 1-lane) as an example to explain the procedure, follow the below steps:\nStep1: Modify the dts file (r9a09g077m44-dev.dts) to enable PCIe I/F as the root complex port.\nChange SEL_ETHSS_PCIE from 1 (ETHSS/default) to 0 (PCIE) and compile the dts file.\nStep2: Compile the in-box or out-of-box driver.\nFor in-box driver, reconfigure Linux kernel to enable it.\nEg. MACHINE=rzt2h-dev bitbake linux-renesas -c menuconfig\nFor out-of-box driver, use T2H Yocto SDK as the build env. to compile device driver module (*.ko) of the specific PCIe card.\nSetup Yocto SDK env: source /opt/poky/3.1.21/environment-setup-aarch64-poky-linux\nModify the macro in Makefile of PCIe card device driver\nEg. BASEDIR, KERNELDIR, DRIVERDIR and etc\nStep3: Change the SW setting on T2H-EVB to enable PCIe I/F.\nFor PCIe RC Configuration (2-port & 1-lane)\nSet SW2-8 (OFF) and SW15-1 (ON), SW15-2 (ON), SW15-5~8 (ON)\nStep4: Insert PCIe card and power on T2H-EVB.\nStep5: Power on T2H-EVB and use lspci to check information about PCI buses in the system and devices connected to them.\nlspci output is as following\n\nIf lspci utility is not available, check whether PCIe adaptor can be found under /sys/bus/pci/devices (or /sys/bus/pci-express/devices) directory\n\nStep6: Install the PCIe card device driver (*.ko) by insmod command.\nEg. insmod r8126.ko\nNow the 5Gbps PCIe NIC is working on T2H-EVB and can be configured by Linux ifconfig command. Utilities (ethtool and iperf3) can be used to set ethernet band (eg. 2.5GBaseT, 5GBaseT and etc) and performance/throughput.\nSuitable Products\nRZ/T2H"
+      },
+      {
+        "type": "text",
+        "content": "How do I use a PCIe card on the RZT2H-EVB."
+      },
+      {
+        "type": "text",
+        "content": "How do I use a PCIe card on the RZT2H-EVB."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nUsing a 5Gbps PCIe NIC (Gen3 1-lane) as an example to explain the procedure, follow the below steps:\nStep1: Modify the dts file (r9a09g077m44-dev.dts) to enable PCIe I/F as the root complex port.\nChange SEL_ETHSS_PCIE from 1 (ETHSS/default) to 0 (PCIE) and compile the dts file.\nStep2: Compile the in-box or out-of-box driver.\nFor in-box driver, reconfigure Linux kernel to enable it.\nEg. MACHINE=rzt2h-dev bitbake linux-renesas -c menuconfig\nFor out-of-box driver, use T2H Yocto SDK as the build env. to compile device driver module (*.ko) of the specific PCIe card.\nSetup Yocto SDK env: source /opt/poky/3.1.21/environment-setup-aarch64-poky-linux\nModify the macro in Makefile of PCIe card device driver\nEg. BASEDIR, KERNELDIR, DRIVERDIR and etc\nStep3: Change the SW setting on T2H-EVB to enable PCIe I/F.\nFor PCIe RC Configuration (2-port & 1-lane)\nSet SW2-8 (OFF) and SW15-1 (ON), SW15-2 (ON), SW15-5~8 (ON)\nStep4: Insert PCIe card and power on T2H-EVB.\nStep5: Power on T2H-EVB and use lspci to check information about PCI buses in the system and devices connected to them.\nlspci output is as following\n\nIf lspci utility is not available, check whether PCIe adaptor can be found under /sys/bus/pci/devices (or /sys/bus/pci-express/devices) directory\n\nStep6: Install the PCIe card device driver (*.ko) by insmod command.\nEg. insmod r8126.ko\nNow the 5Gbps PCIe NIC is working on T2H-EVB and can be configured by Linux ifconfig command. Utilities (ethtool and iperf3) can be used to set ethernet band (eg. 2.5GBaseT, 5GBaseT and etc) and performance/throughput.\nSuitable Products\nRZ/T2H"
+      },
+      {
+        "type": "text",
+        "content": "Using a 5Gbps PCIe NIC (Gen3 1-lane) as an example to explain the procedure, follow the below steps:\nStep1: Modify the dts file (r9a09g077m44-dev.dts) to enable PCIe I/F as the root complex port.\nChange SEL_ETHSS_PCIE from 1 (ETHSS/default) to 0 (PCIE) and compile the dts file.\nStep2: Compile the in-box or out-of-box driver.\nFor in-box driver, reconfigure Linux kernel to enable it.\nEg. MACHINE=rzt2h-dev bitbake linux-renesas -c menuconfig\nFor out-of-box driver, use T2H Yocto SDK as the build env. to compile device driver module (*.ko) of the specific PCIe card.\nSetup Yocto SDK env: source /opt/poky/3.1.21/environment-setup-aarch64-poky-linux\nModify the macro in Makefile of PCIe card device driver\nEg. BASEDIR, KERNELDIR, DRIVERDIR and etc\nStep3: Change the SW setting on T2H-EVB to enable PCIe I/F.\nFor PCIe RC Configuration (2-port & 1-lane)\nSet SW2-8 (OFF) and SW15-1 (ON), SW15-2 (ON), SW15-5~8 (ON)\nStep4: Insert PCIe card and power on T2H-EVB.\nStep5: Power on T2H-EVB and use lspci to check information about PCI buses in the system and devices connected to them.\nlspci output is as following\n\nIf lspci utility is not available, check whether PCIe adaptor can be found under /sys/bus/pci/devices (or /sys/bus/pci-express/devices) directory\n\nStep6: Install the PCIe card device driver (*.ko) by insmod command.\nEg. insmod r8126.ko\nNow the 5Gbps PCIe NIC is working on T2H-EVB and can be configured by Linux ifconfig command. Utilities (ethtool and iperf3) can be used to set ethernet band (eg. 2.5GBaseT, 5GBaseT and etc) and performance/throughput."
+      },
+      {
+        "type": "text",
+        "content": "Using a 5Gbps PCIe NIC (Gen3 1-lane) as an example to explain the procedure, follow the below steps:"
+      },
+      {
+        "type": "text",
+        "content": "Step1: Modify the dts file (r9a09g077m44-dev.dts) to enable PCIe I/F as the root complex port."
+      },
+      {
+        "type": "text",
+        "content": "Step2: Compile the in-box or out-of-box driver."
+      },
+      {
+        "type": "text",
+        "content": "Step3: Change the SW setting on T2H-EVB to enable PCIe I/F."
+      },
+      {
+        "type": "text",
+        "content": "Step4: Insert PCIe card and power on T2H-EVB."
+      },
+      {
+        "type": "text",
+        "content": "Step5: Power on T2H-EVB and use lspci to check information about PCI buses in the system and devices connected to them."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396691_1.png",
+          "alt_text": "",
+          "width": "1096",
+          "height": "91",
+          "local_path": "data/categories/rz_family/rzt2h_rzn2h/811c1c2702f2b6c084ff503d3efa38ed/images/3aa085b30caeeebb546f8cc3778ca28d.png"
+        }
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396691_2.png",
+          "alt_text": "",
+          "width": "979",
+          "height": "207",
+          "local_path": "data/categories/rz_family/rzt2h_rzn2h/811c1c2702f2b6c084ff503d3efa38ed/images/93e8d38e4eca3761adec36088f2fcc3f.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Step6: Install the PCIe card device driver (*.ko) by insmod command."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396691_3.png",
+          "alt_text": "",
+          "width": "982",
+          "height": "346",
+          "local_path": "data/categories/rz_family/rzt2h_rzn2h/811c1c2702f2b6c084ff503d3efa38ed/images/4ba37b2b80ff69cd55ee3a80de8ab5bb.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Now the 5Gbps PCIe NIC is working on T2H-EVB and can be configured by Linux ifconfig command. Utilities (ethtool and iperf3) can be used to set ethernet band (eg. 2.5GBaseT, 5GBaseT and etc) and performance/throughput."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/T2H"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396691_1.png",
+        "alt_text": "",
+        "width": "1096",
+        "height": "91",
+        "local_path": "data/categories/rz_family/rzt2h_rzn2h/811c1c2702f2b6c084ff503d3efa38ed/images/3aa085b30caeeebb546f8cc3778ca28d.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396691_2.png",
+        "alt_text": "",
+        "width": "979",
+        "height": "207",
+        "local_path": "data/categories/rz_family/rzt2h_rzn2h/811c1c2702f2b6c084ff503d3efa38ed/images/93e8d38e4eca3761adec36088f2fcc3f.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396691_3.png",
+        "alt_text": "",
+        "width": "982",
+        "height": "346",
+        "local_path": "data/categories/rz_family/rzt2h_rzn2h/811c1c2702f2b6c084ff503d3efa38ed/images/4ba37b2b80ff69cd55ee3a80de8ab5bb.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/T2H"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/T2H"
+    ],
+    "links": []
+  }
+}

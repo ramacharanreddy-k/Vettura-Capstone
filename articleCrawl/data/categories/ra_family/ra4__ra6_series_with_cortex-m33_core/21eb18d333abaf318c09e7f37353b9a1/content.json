@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20780054",
+    "title": "RA4E2, RA6E2: New Entry-Line",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:30:43.791896"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan you explain what is the new Entry-Line in the RA Family?\nAnswer:\nThe RA4E2 and RA6E2 are the 2nd generation Entry-Line MCUs in the RA4 and RA6 series.\nThe RA4E2 and RA6E2 offer new levels of CPU performance and functionality in compact packages, supporting packages as small as 4 mm x 4 mm, while offering the ARM Cortex- M33 core with operating speeds of 100 MHz for the RA4E2 and 200 MHz for the RA6E2.\nSuitable Products\nRA4E2, RA6E2"
+      },
+      {
+        "type": "text",
+        "content": "Can you explain what is the new Entry-Line in the RA Family?"
+      },
+      {
+        "type": "text",
+        "content": "Can you explain what is the new Entry-Line in the RA Family?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RA4E2 and RA6E2 are the 2nd generation Entry-Line MCUs in the RA4 and RA6 series.\nThe RA4E2 and RA6E2 offer new levels of CPU performance and functionality in compact packages, supporting packages as small as 4 mm x 4 mm, while offering the ARM Cortex- M33 core with operating speeds of 100 MHz for the RA4E2 and 200 MHz for the RA6E2.\nSuitable Products\nRA4E2, RA6E2"
+      },
+      {
+        "type": "text",
+        "content": "The RA4E2 and RA6E2 are the 2nd generation Entry-Line MCUs in the RA4 and RA6 series.\nThe RA4E2 and RA6E2 offer new levels of CPU performance and functionality in compact packages, supporting packages as small as 4 mm x 4 mm, while offering the ARM Cortex- M33 core with operating speeds of 100 MHz for the RA4E2 and 200 MHz for the RA6E2."
+      },
+      {
+        "type": "text",
+        "content": "The RA4E2 and RA6E2 are the 2nd generation Entry-Line MCUs in the RA4 and RA6 series.\nThe RA4E2 and RA6E2 offer new levels of CPU performance and functionality in compact packages, supporting packages as small as 4 mm x 4 mm, while offering the ARM Cortex- M33 core with operating speeds of 100 MHz for the RA4E2 and 200 MHz for the RA6E2."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA4E2, RA6E2"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA4E2, RA6E2"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA4E2, RA6E2"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20844786"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20844789"
+      }
+    ]
+  }
+}

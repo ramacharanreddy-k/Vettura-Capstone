@@ -1,0 +1,204 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20370421",
+    "title": "Creating an RA Project with ARM Compiler 6.17 in e2 studio",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:13:23.201892"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "This post applies to AC 6.17. Refer to the companion post for AC 6.16 and earlier here: https://en-support.renesas.com/knowledgeBase/19375553"
+      },
+      {
+        "type": "text",
+        "content": "1) Arm Compiler v6.17 will not be automatically detected when attempting to register the toolchain with e2 studio 2021-10 and earlier. Earlier Arm Compiler v6 versions are recognized."
+      },
+      {
+        "type": "text",
+        "content": "2) When creating a new project the commands related to the compiler, assembler and linker are missing by default in the project settings."
+      },
+      {
+        "type": "text",
+        "content": "1) Registration Issue"
+      },
+      {
+        "type": "text",
+        "content": "When attempting to register an error like the one below will be shown."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://user-images.githubusercontent.com/53097876/144288732-34aa6d99-cd09-4f4c-b840-e98ded445fb9.png",
+          "alt_text": "image",
+          "width": "546",
+          "height": "412",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/cb2f721cbff9e33e23869ed649dcce87/images/b8599d7cb5f511020372f9bf11099e36.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Workaround"
+      },
+      {
+        "type": "text",
+        "content": "The toolchain can be registered in the same dialog by manually entering in the information. Click Next from the dialog shown in the image above. On the next screen enter the information as shown in the image below. When done click Finish. e2 studio will request to be restarted. Once restarted, you will be able to create projects using the newly registered toolchain."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://user-images.githubusercontent.com/53097876/144289454-743a73e6-11c5-4028-95ac-34d73c14df34.png",
+          "alt_text": "image",
+          "width": "546",
+          "height": "412",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/cb2f721cbff9e33e23869ed649dcce87/images/9569f85960de9aaeb39419cc51b727b2.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "2) Compiler, Assembler and Linker Issue"
+      },
+      {
+        "type": "text",
+        "content": "When a user creates a new project with Arm compiler 6.17 and E2 studio, the commands related to the compiler, assembler are linker are missing by default in project settings."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/Project.png",
+          "alt_text": "",
+          "width": "810",
+          "height": "602",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/cb2f721cbff9e33e23869ed649dcce87/images/cbc20504c966eb8f46f4c3d644403b37.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "This is resulting in failure to create binary with following error, please refer below image."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/error.png",
+          "alt_text": "",
+          "width": "556",
+          "height": "208",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/cb2f721cbff9e33e23869ed649dcce87/images/87be0c4e6c38b041fc1d502b074869bc.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Workaround:"
+      },
+      {
+        "type": "text",
+        "content": "Add the compiler, assembler and linker commands in the project settings command window as listed below."
+      },
+      {
+        "type": "text",
+        "content": "Example for the Compiler is shown below. Add the commands for Assembler and Linker too."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/image/784358/a75c3952-4bdf-4e47-ac17-168366a7f889.png",
+          "alt_text": "",
+          "width": "511",
+          "height": "532",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/cb2f721cbff9e33e23869ed649dcce87/images/bd478401771475c8f45b56e4cca4fb8f.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\ne2studio and ARM Compiler for RA\n  https://github.com/renesas/fsp/issues/154"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\ne2studio and ARM Compiler for RA\n  https://github.com/renesas/fsp/issues/154"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\ne2studio and ARM Compiler for RA\n  https://github.com/renesas/fsp/issues/154"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\ne2studio and ARM Compiler for RA\n  https://github.com/renesas/fsp/issues/154"
+      },
+      {
+        "type": "text",
+        "content": "https://github.com/renesas/fsp/issues/154"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://user-images.githubusercontent.com/53097876/144288732-34aa6d99-cd09-4f4c-b840-e98ded445fb9.png",
+        "alt_text": "image",
+        "width": "546",
+        "height": "412",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/cb2f721cbff9e33e23869ed649dcce87/images/b8599d7cb5f511020372f9bf11099e36.png"
+      },
+      {
+        "original_url": "https://user-images.githubusercontent.com/53097876/144289454-743a73e6-11c5-4028-95ac-34d73c14df34.png",
+        "alt_text": "image",
+        "width": "546",
+        "height": "412",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/cb2f721cbff9e33e23869ed649dcce87/images/9569f85960de9aaeb39419cc51b727b2.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/Project.png",
+        "alt_text": "",
+        "width": "810",
+        "height": "602",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/cb2f721cbff9e33e23869ed649dcce87/images/cbc20504c966eb8f46f4c3d644403b37.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/error.png",
+        "alt_text": "",
+        "width": "556",
+        "height": "208",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/cb2f721cbff9e33e23869ed649dcce87/images/87be0c4e6c38b041fc1d502b074869bc.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/image/784358/a75c3952-4bdf-4e47-ac17-168366a7f889.png",
+        "alt_text": "",
+        "width": "511",
+        "height": "532",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/cb2f721cbff9e33e23869ed649dcce87/images/bd478401771475c8f45b56e4cca4fb8f.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "e2studio and ARM Compiler for RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "e2studio and ARM Compiler for RA"
+    ],
+    "links": [
+      {
+        "text": "https://en-support.renesas.com/knowledgeBase/19375553",
+        "url": "https://en-support.renesas.com/knowledgeBase/19375553"
+      },
+      {
+        "text": "",
+        "url": "https://user-images.githubusercontent.com/53097876/144288732-34aa6d99-cd09-4f4c-b840-e98ded445fb9.png"
+      },
+      {
+        "text": "",
+        "url": "https://user-images.githubusercontent.com/53097876/144289454-743a73e6-11c5-4028-95ac-34d73c14df34.png"
+      },
+      {
+        "text": "https://github.com/renesas/fsp/issues/154",
+        "url": "https://github.com/renesas/fsp/issues/154"
+      }
+    ]
+  }
+}

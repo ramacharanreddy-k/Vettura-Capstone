@@ -1,0 +1,588 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21476371",
+    "title": "RH850: CC-RH Execution of a routine from RAM",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:28:39.925390"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI am using RH850 with CS+ IDE. CC-RH's -rom command can map the data and const areas, but it seems that it cannot map the text area. Can it map the text area? How to execute a routine from RAM?\nAnswer:\nAnswer:\nIf you wish to have specific routines in your program, be executed from RAM, use the -rom option of the optimizing linker as in the procedure described below.\n  Allocate sections to addresses in ROM where you wish to place the routines and the corresponding addresses in RAM, respectively.\n    Prepare a separate routine for transfer that will lead to the following actions and include it in your program.\nCopy the target routines from the ROM sections to the corresponding RAM sections.( Code use pre-defined _INITSCT_RH function provided by CC-RH)\nCall the target routines from RAM.\nIn the process of building your program, run the optimizing linker with the following settings for such code.\nAs parameter ROMsection of the -rom option, specify the name of the ROM section where the target routine for copying is to be allocated.\nAs parameter RAMsection of the -rom option, specify the name of the RAM section from which you wish the target routine to be run.\n    Sample Code:\n#include <_h_c_lib.h>\n/* void _INITSCT_RH(void * datatbl_start, void * datatbl_end, void * bsstbl_start, void * bsstbl_end) */\n    extern void my_ram_function(void);\n  /* import sections to get start/end addresses */\nextern char _Smysection_rom_text;\nextern char _Emysection_rom_text;\nextern char _Smysection_ram_text;\n  /* define type for copy table entry. See doc --> _INITSCT_RH */\nstruct SectionTableEntry {\n    void *rom_s;\n    void *rom_e;\n    void *ram_s;\n};\n      /* Initialize the array with our section addresses */\n#define M 1\nstruct SectionTableEntry _C_DSEC[M] = {\n    { (void *)&_Smysection_rom_text, (void *)&_Emysection_rom_text, (void *)&_Smysection_ram_text, }\n};\n    void main(void);\nvoid main(void)\n{\n            /* copy function contents to RAM */\n            _INITSCT_RH((void *)_C_DSEC, (void *)(_C_DSEC+M),(void *)0,(void *)0);\n                        /* call RAM function */\n            my_ram_function();\n}\n\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nI am using RH850 with CS+ IDE. CC-RH's -rom command can map the data and const areas, but it seems that it cannot map the text area. Can it map the text area? How to execute a routine from RAM?\nAnswer:\nAnswer:\nIf you wish to have specific routines in your program, be executed from RAM, use the -rom option of the optimizing linker as in the procedure described below.\n  Allocate sections to addresses in ROM where you wish to place the routines and the corresponding addresses in RAM, respectively.\n    Prepare a separate routine for transfer that will lead to the following actions and include it in your program.\nCopy the target routines from the ROM sections to the corresponding RAM sections.( Code use pre-defined _INITSCT_RH function provided by CC-RH)\nCall the target routines from RAM.\nIn the process of building your program, run the optimizing linker with the following settings for such code.\nAs parameter ROMsection of the -rom option, specify the name of the ROM section where the target routine for copying is to be allocated.\nAs parameter RAMsection of the -rom option, specify the name of the RAM section from which you wish the target routine to be run.\n    Sample Code:\n#include <_h_c_lib.h>\n/* void _INITSCT_RH(void * datatbl_start, void * datatbl_end, void * bsstbl_start, void * bsstbl_end) */\n    extern void my_ram_function(void);\n  /* import sections to get start/end addresses */\nextern char _Smysection_rom_text;\nextern char _Emysection_rom_text;\nextern char _Smysection_ram_text;\n  /* define type for copy table entry. See doc --> _INITSCT_RH */\nstruct SectionTableEntry {\n    void *rom_s;\n    void *rom_e;\n    void *ram_s;\n};\n      /* Initialize the array with our section addresses */\n#define M 1\nstruct SectionTableEntry _C_DSEC[M] = {\n    { (void *)&_Smysection_rom_text, (void *)&_Emysection_rom_text, (void *)&_Smysection_ram_text, }\n};\n    void main(void);\nvoid main(void)\n{\n            /* copy function contents to RAM */\n            _INITSCT_RH((void *)_C_DSEC, (void *)(_C_DSEC+M),(void *)0,(void *)0);\n                        /* call RAM function */\n            my_ram_function();\n}\n\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "I am using RH850 with CS+ IDE. CC-RH's -rom command can map the data and const areas, but it seems that it cannot map the text area. Can it map the text area? How to execute a routine from RAM?"
+      },
+      {
+        "type": "text",
+        "content": "I am using RH850 with CS+ IDE. CC-RH's -rom command can map the data and const areas, but it seems that it cannot map the text area. Can it map the text area? How to execute a routine from RAM?"
+      },
+      {
+        "type": "text",
+        "content": "I am using RH850 with CS+ IDE. CC-RH's -rom command can map the data and const areas, but it seems that it cannot map the text area. Can it map the text area? How to execute a routine from RAM?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nAnswer:\nIf you wish to have specific routines in your program, be executed from RAM, use the -rom option of the optimizing linker as in the procedure described below.\n  Allocate sections to addresses in ROM where you wish to place the routines and the corresponding addresses in RAM, respectively.\n    Prepare a separate routine for transfer that will lead to the following actions and include it in your program.\nCopy the target routines from the ROM sections to the corresponding RAM sections.( Code use pre-defined _INITSCT_RH function provided by CC-RH)\nCall the target routines from RAM.\nIn the process of building your program, run the optimizing linker with the following settings for such code.\nAs parameter ROMsection of the -rom option, specify the name of the ROM section where the target routine for copying is to be allocated.\nAs parameter RAMsection of the -rom option, specify the name of the RAM section from which you wish the target routine to be run.\n    Sample Code:\n#include <_h_c_lib.h>\n/* void _INITSCT_RH(void * datatbl_start, void * datatbl_end, void * bsstbl_start, void * bsstbl_end) */\n    extern void my_ram_function(void);\n  /* import sections to get start/end addresses */\nextern char _Smysection_rom_text;\nextern char _Emysection_rom_text;\nextern char _Smysection_ram_text;\n  /* define type for copy table entry. See doc --> _INITSCT_RH */\nstruct SectionTableEntry {\n    void *rom_s;\n    void *rom_e;\n    void *ram_s;\n};\n      /* Initialize the array with our section addresses */\n#define M 1\nstruct SectionTableEntry _C_DSEC[M] = {\n    { (void *)&_Smysection_rom_text, (void *)&_Emysection_rom_text, (void *)&_Smysection_ram_text, }\n};\n    void main(void);\nvoid main(void)\n{\n            /* copy function contents to RAM */\n            _INITSCT_RH((void *)_C_DSEC, (void *)(_C_DSEC+M),(void *)0,(void *)0);\n                        /* call RAM function */\n            my_ram_function();\n}\n\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "Answer:"
+      },
+      {
+        "type": "text",
+        "content": "Answer:"
+      },
+      {
+        "type": "text",
+        "content": "If you wish to have specific routines in your program, be executed from RAM, use the -rom option of the optimizing linker as in the procedure described below."
+      },
+      {
+        "type": "text",
+        "content": "If you wish to have specific routines in your program, be executed from RAM, use the -rom option of the optimizing linker as in the procedure described below."
+      },
+      {
+        "type": "text",
+        "content": "Allocate sections to addresses in ROM where you wish to place the routines and the corresponding addresses in RAM, respectively."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/62923812-e93c-4d5d-b383-2de04e0b8513",
+          "alt_text": "",
+          "width": "713",
+          "height": "409",
+          "local_path": "data/categories/rh850_family/rh850_general/85b897523834211bbbc3b0fe00a067a4/images/198d45ba348f46df5f05c47eb602ca1e.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Prepare a separate routine for transfer that will lead to the following actions and include it in your program.\nCopy the target routines from the ROM sections to the corresponding RAM sections.( Code use pre-defined _INITSCT_RH function provided by CC-RH)\nCall the target routines from RAM.\nIn the process of building your program, run the optimizing linker with the following settings for such code.\nAs parameter ROMsection of the -rom option, specify the name of the ROM section where the target routine for copying is to be allocated.\nAs parameter RAMsection of the -rom option, specify the name of the RAM section from which you wish the target routine to be run.\n    Sample Code:\n#include <_h_c_lib.h>\n/* void _INITSCT_RH(void * datatbl_start, void * datatbl_end, void * bsstbl_start, void * bsstbl_end) */\n    extern void my_ram_function(void);\n  /* import sections to get start/end addresses */\nextern char _Smysection_rom_text;\nextern char _Emysection_rom_text;\nextern char _Smysection_ram_text;\n  /* define type for copy table entry. See doc --> _INITSCT_RH */\nstruct SectionTableEntry {\n    void *rom_s;\n    void *rom_e;\n    void *ram_s;\n};\n      /* Initialize the array with our section addresses */\n#define M 1\nstruct SectionTableEntry _C_DSEC[M] = {\n    { (void *)&_Smysection_rom_text, (void *)&_Emysection_rom_text, (void *)&_Smysection_ram_text, }\n};\n    void main(void);\nvoid main(void)\n{\n            /* copy function contents to RAM */\n            _INITSCT_RH((void *)_C_DSEC, (void *)(_C_DSEC+M),(void *)0,(void *)0);\n                        /* call RAM function */\n            my_ram_function();\n}"
+      },
+      {
+        "type": "text",
+        "content": "Prepare a separate routine for transfer that will lead to the following actions and include it in your program."
+      },
+      {
+        "type": "text",
+        "content": "Copy the target routines from the ROM sections to the corresponding RAM sections.("
+      },
+      {
+        "type": "text",
+        "content": "Code use pre-defined _INITSCT_RH function provided by CC-RH)"
+      },
+      {
+        "type": "text",
+        "content": "Call the target routines from RAM."
+      },
+      {
+        "type": "text",
+        "content": "In the process of building your program, run the optimizing linker with the following settings for such code."
+      },
+      {
+        "type": "text",
+        "content": "As parameter ROMsection of the -rom option, specify the name of the ROM section where the target routine for copying is to be allocated."
+      },
+      {
+        "type": "text",
+        "content": "As parameter RAMsection of the -rom option, specify the name of the RAM section from which you wish the target routine to be run."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/638eec00-2641-48e2-9961-552cbc7e8bf0",
+          "alt_text": "",
+          "width": "983",
+          "height": "93",
+          "local_path": "data/categories/rh850_family/rh850_general/85b897523834211bbbc3b0fe00a067a4/images/b1a996cd92b432d64e4c1a7869df6e50.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Sample Code:"
+      },
+      {
+        "type": "text",
+        "content": "Sample Code:"
+      },
+      {
+        "type": "text",
+        "content": "#include <_h_c_lib.h>"
+      },
+      {
+        "type": "text",
+        "content": "#include"
+      },
+      {
+        "type": "text",
+        "content": "<_h_c_lib.h>"
+      },
+      {
+        "type": "text",
+        "content": "/* void _INITSCT_RH(void * datatbl_start, void * datatbl_end, void * bsstbl_start, void * bsstbl_end) */"
+      },
+      {
+        "type": "text",
+        "content": "/* void _INITSCT_RH(void * datatbl_start, void * datatbl_end, void * bsstbl_start, void * bsstbl_end) */"
+      },
+      {
+        "type": "text",
+        "content": "extern void my_ram_function(void);"
+      },
+      {
+        "type": "text",
+        "content": "extern"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "my_ram_function("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ");"
+      },
+      {
+        "type": "text",
+        "content": "/* import sections to get start/end addresses */"
+      },
+      {
+        "type": "text",
+        "content": "/* import sections to get start/end addresses */"
+      },
+      {
+        "type": "text",
+        "content": "extern char _Smysection_rom_text;"
+      },
+      {
+        "type": "text",
+        "content": "extern"
+      },
+      {
+        "type": "text",
+        "content": "char"
+      },
+      {
+        "type": "text",
+        "content": "_Smysection_rom_text;"
+      },
+      {
+        "type": "text",
+        "content": "extern char _Emysection_rom_text;"
+      },
+      {
+        "type": "text",
+        "content": "extern"
+      },
+      {
+        "type": "text",
+        "content": "char"
+      },
+      {
+        "type": "text",
+        "content": "_Emysection_rom_text;"
+      },
+      {
+        "type": "text",
+        "content": "extern char _Smysection_ram_text;"
+      },
+      {
+        "type": "text",
+        "content": "extern"
+      },
+      {
+        "type": "text",
+        "content": "char"
+      },
+      {
+        "type": "text",
+        "content": "_Smysection_ram_text;"
+      },
+      {
+        "type": "text",
+        "content": "/* define type for copy table entry. See doc --> _INITSCT_RH */"
+      },
+      {
+        "type": "text",
+        "content": "/* define type for copy table entry. See doc --> _INITSCT_RH */"
+      },
+      {
+        "type": "text",
+        "content": "struct SectionTableEntry {"
+      },
+      {
+        "type": "text",
+        "content": "struct"
+      },
+      {
+        "type": "text",
+        "content": "SectionTableEntry {"
+      },
+      {
+        "type": "text",
+        "content": "void *rom_s;"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "*"
+      },
+      {
+        "type": "text",
+        "content": "rom_s;"
+      },
+      {
+        "type": "text",
+        "content": "void *rom_e;"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "*"
+      },
+      {
+        "type": "text",
+        "content": "rom_e;"
+      },
+      {
+        "type": "text",
+        "content": "void *ram_s;"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "*"
+      },
+      {
+        "type": "text",
+        "content": "ram_s;"
+      },
+      {
+        "type": "text",
+        "content": "};"
+      },
+      {
+        "type": "text",
+        "content": "};"
+      },
+      {
+        "type": "text",
+        "content": "/* Initialize the array with our section addresses */"
+      },
+      {
+        "type": "text",
+        "content": "/* Initialize the array with our section addresses */"
+      },
+      {
+        "type": "text",
+        "content": "#define M 1"
+      },
+      {
+        "type": "text",
+        "content": "#define"
+      },
+      {
+        "type": "text",
+        "content": "M 1"
+      },
+      {
+        "type": "text",
+        "content": "struct SectionTableEntry _C_DSEC[M] = {"
+      },
+      {
+        "type": "text",
+        "content": "struct"
+      },
+      {
+        "type": "text",
+        "content": "SectionTableEntry _C_DSEC[M]"
+      },
+      {
+        "type": "text",
+        "content": "="
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{ (void *)&_Smysection_rom_text, (void *)&_Emysection_rom_text, (void *)&_Smysection_ram_text, }"
+      },
+      {
+        "type": "text",
+        "content": "{ ("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "*"
+      },
+      {
+        "type": "text",
+        "content": ")"
+      },
+      {
+        "type": "text",
+        "content": "&"
+      },
+      {
+        "type": "text",
+        "content": "_Smysection_rom_text, ("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "*"
+      },
+      {
+        "type": "text",
+        "content": ")"
+      },
+      {
+        "type": "text",
+        "content": "&"
+      },
+      {
+        "type": "text",
+        "content": "_Emysection_rom_text, ("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "*"
+      },
+      {
+        "type": "text",
+        "content": ")"
+      },
+      {
+        "type": "text",
+        "content": "&"
+      },
+      {
+        "type": "text",
+        "content": "_Smysection_ram_text, }"
+      },
+      {
+        "type": "text",
+        "content": "};"
+      },
+      {
+        "type": "text",
+        "content": "};"
+      },
+      {
+        "type": "text",
+        "content": "void main(void);"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "main("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ");"
+      },
+      {
+        "type": "text",
+        "content": "void main(void)"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "main("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ")"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "/* copy function contents to RAM */"
+      },
+      {
+        "type": "text",
+        "content": "/* copy function contents to RAM */"
+      },
+      {
+        "type": "text",
+        "content": "_INITSCT_RH((void *)_C_DSEC, (void *)(_C_DSEC+M),(void *)0,(void *)0);"
+      },
+      {
+        "type": "text",
+        "content": "_INITSCT_RH(("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "*"
+      },
+      {
+        "type": "text",
+        "content": ")_C_DSEC, ("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "*"
+      },
+      {
+        "type": "text",
+        "content": ")(_C_DSEC"
+      },
+      {
+        "type": "text",
+        "content": "+"
+      },
+      {
+        "type": "text",
+        "content": "M),("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "*"
+      },
+      {
+        "type": "text",
+        "content": ")0,("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "*"
+      },
+      {
+        "type": "text",
+        "content": ")0);"
+      },
+      {
+        "type": "text",
+        "content": "/* call RAM function */"
+      },
+      {
+        "type": "text",
+        "content": "/* call RAM function */"
+      },
+      {
+        "type": "text",
+        "content": "my_ram_function();"
+      },
+      {
+        "type": "text",
+        "content": "my_ram_function();"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/62923812-e93c-4d5d-b383-2de04e0b8513",
+        "alt_text": "",
+        "width": "713",
+        "height": "409",
+        "local_path": "data/categories/rh850_family/rh850_general/85b897523834211bbbc3b0fe00a067a4/images/198d45ba348f46df5f05c47eb602ca1e.png"
+      },
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/638eec00-2641-48e2-9961-552cbc7e8bf0",
+        "alt_text": "",
+        "width": "983",
+        "height": "93",
+        "local_path": "data/categories/rh850_family/rh850_general/85b897523834211bbbc3b0fe00a067a4/images/b1a996cd92b432d64e4c1a7869df6e50.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850"
+    ],
+    "links": []
+  }
+}

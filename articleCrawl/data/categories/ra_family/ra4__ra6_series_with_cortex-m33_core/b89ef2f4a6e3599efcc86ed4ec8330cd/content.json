@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21763418",
+    "title": "RA4L1 Evaluation Kit, Software and Development Tools",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:30:16.169207"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat software and development/evaluation tools are available for the RA4L1 Group MCUs?\nAnswer:\nThe RA4 Series MCUs are supported by a comprehensive solution with Flexible Software Package (FSP), evaluation kits, development tools and cloud, graphics and motor control solutions.\nThe FSP enables faster application development (bare metal or using RTOS) by providing all the infrastructure software needed for application development, including multiple RTOS, BSP, peripheral drivers, middleware, connectivity, networking and security stacks as well as reference software to build complex AI, motor control and graphics solutions. It allows customers to integrate their own legacy code and choice of RTOS with FSP, thus providing full flexibility in application development.\nThe Renesas solution also includes comprehensive development tools including integrated development environment, compilers, debug tools and programmers from Renesas as well as other ecosystem partners. Pin/function and TrustZone configurators ease development.\nThe Renesas RA4L1 Evaluation kit provides an efficient platform for application development by exposing all the functionality of the device on one platform and allowing debug capability for code development. (RA4L1 EK Part Number: RTK7EKA4L1S01001BE)\nSuitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "What software and development/evaluation tools are available for the RA4L1 Group MCUs?"
+      },
+      {
+        "type": "text",
+        "content": "What software and development/evaluation tools are available for the RA4L1 Group MCUs?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe RA4 Series MCUs are supported by a comprehensive solution with Flexible Software Package (FSP), evaluation kits, development tools and cloud, graphics and motor control solutions.\nThe FSP enables faster application development (bare metal or using RTOS) by providing all the infrastructure software needed for application development, including multiple RTOS, BSP, peripheral drivers, middleware, connectivity, networking and security stacks as well as reference software to build complex AI, motor control and graphics solutions. It allows customers to integrate their own legacy code and choice of RTOS with FSP, thus providing full flexibility in application development.\nThe Renesas solution also includes comprehensive development tools including integrated development environment, compilers, debug tools and programmers from Renesas as well as other ecosystem partners. Pin/function and TrustZone configurators ease development.\nThe Renesas RA4L1 Evaluation kit provides an efficient platform for application development by exposing all the functionality of the device on one platform and allowing debug capability for code development. (RA4L1 EK Part Number: RTK7EKA4L1S01001BE)\nSuitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "The RA4 Series MCUs are supported by a comprehensive solution with Flexible Software Package (FSP), evaluation kits, development tools and cloud, graphics and motor control solutions.\nThe FSP enables faster application development (bare metal or using RTOS) by providing all the infrastructure software needed for application development, including multiple RTOS, BSP, peripheral drivers, middleware, connectivity, networking and security stacks as well as reference software to build complex AI, motor control and graphics solutions. It allows customers to integrate their own legacy code and choice of RTOS with FSP, thus providing full flexibility in application development.\nThe Renesas solution also includes comprehensive development tools including integrated development environment, compilers, debug tools and programmers from Renesas as well as other ecosystem partners. Pin/function and TrustZone configurators ease development.\nThe Renesas RA4L1 Evaluation kit provides an efficient platform for application development by exposing all the functionality of the device on one platform and allowing debug capability for code development. (RA4L1 EK Part Number: RTK7EKA4L1S01001BE)"
+      },
+      {
+        "type": "text",
+        "content": "The RA4 Series MCUs are supported by a comprehensive solution with Flexible Software Package (FSP), evaluation kits, development tools and cloud, graphics and motor control solutions."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA4L1"
+      },
+      {
+        "type": "text",
+        "content": "Japanese Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA4L1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA4L1"
+    ],
+    "links": [
+      {
+        "text": "Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21763464"
+      },
+      {
+        "text": "Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21763477"
+      }
+    ]
+  }
+}

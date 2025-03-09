@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      ".id_code (NOLOAD):\n  .option_setting_ofs (NOLOAD):\n{\n} > OPTION_SETTING_OFS = 0xFF\n  .option_setting_sas (NOLOAD):\n{\n} > OPTION_SETTING_SAS = 0xFF\n  .option_setting_ns (NOLOAD):\n{\n} > OPTION_SETTING = 0xFF\n  .option_setting_s (NOLOAD):\n{\n} > OPTION_SETTING_S = 0xFF"
+    ]
+  ]
+}

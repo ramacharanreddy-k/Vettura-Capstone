@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "const ARM_MPU_Region_t mpuTable[2] = {\n    //                         BASE          SH              RO   NP   XN\n    { .RBAR = ARM_MPU_RBAR(0x60000000UL, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),\n    //                        LIMIT         ATTR\n      .RLAR = ARM_MPU_RLAR(0x63FFFFFFUL, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX) },\n      //                         BASE          SH              RO   NP   XN\n    { .RBAR = ARM_MPU_RBAR(0x64000000UL, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),\n    //                         LIMIT         ATTR\n      .RLAR = ARM_MPU_RLAR(0x67FFFFFFUL, MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX) }\n};\n  void mpu_config_quadspi(void)\n{\nARM_MPU_Disable();\n    ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);\n    ARM_MPU_Load(0, mpuTable, 2);\n    ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));\n}\n  void hal_entry(void)\n{\n  mpu_config_quadspi();\nenable_s_cache();\n  qspi_init();\n    while(1)\n  {"
+    ]
+  ]
+}

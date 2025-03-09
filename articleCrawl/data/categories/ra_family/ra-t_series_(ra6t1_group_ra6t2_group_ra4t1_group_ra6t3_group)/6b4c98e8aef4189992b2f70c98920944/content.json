@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20260296",
+    "title": "RA-T Series: development kit",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:32:59.270234"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there a development kit suitable for motor control? \nAnswer:\nRA6T1 has released RSSK (RTK0EMA170S00020BJ) for evaluation and development of motor control applications.\nRA6T2 has released a new concept, MCK-RA6T2 (RTK0EMA270S00020BJ).\nRA4T1 and RA6T3 are also available MCKs (RTK0EMA430S00020BJ, RTK0EMA330S00020BJ) on the same platform as RA6T2.\nWith this kit and the sample code that you can download from Renesas website, you can start your motor control evaluation right away. \nSuitable Products\nRA6T1, RA6T2, RA4T1, RA6T3"
+      },
+      {
+        "type": "text",
+        "content": "Is there a development kit suitable for motor control?"
+      },
+      {
+        "type": "text",
+        "content": "Is there a development kit suitable for motor control?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRA6T1 has released RSSK (RTK0EMA170S00020BJ) for evaluation and development of motor control applications.\nRA6T2 has released a new concept, MCK-RA6T2 (RTK0EMA270S00020BJ).\nRA4T1 and RA6T3 are also available MCKs (RTK0EMA430S00020BJ, RTK0EMA330S00020BJ) on the same platform as RA6T2.\nWith this kit and the sample code that you can download from Renesas website, you can start your motor control evaluation right away. \nSuitable Products\nRA6T1, RA6T2, RA4T1, RA6T3"
+      },
+      {
+        "type": "text",
+        "content": "RA6T1 has released RSSK (RTK0EMA170S00020BJ) for evaluation and development of motor control applications.\nRA6T2 has released a new concept, MCK-RA6T2 (RTK0EMA270S00020BJ).\nRA4T1 and RA6T3 are also available MCKs (RTK0EMA430S00020BJ, RTK0EMA330S00020BJ) on the same platform as RA6T2.\nWith this kit and the sample code that you can download from Renesas website, you can start your motor control evaluation right away."
+      },
+      {
+        "type": "text",
+        "content": "RA6T1 has released RSSK (RTK0EMA170S00020BJ) for evaluation and development of motor control applications.\nRA6T2 has released a new concept, MCK-RA6T2 (RTK0EMA270S00020BJ).\nRA4T1 and RA6T3 are also available MCKs (RTK0EMA430S00020BJ, RTK0EMA330S00020BJ) on the same platform as RA6T2.\nWith this kit and the sample code that you can download from Renesas website, you can start your motor control evaluation right away."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA6T1, RA6T2, RA4T1, RA6T3"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA6T1, RA6T2, RA4T1, RA6T3"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA6T1, RA6T2, RA4T1, RA6T3"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20260302"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20260306"
+      }
+    ]
+  }
+}

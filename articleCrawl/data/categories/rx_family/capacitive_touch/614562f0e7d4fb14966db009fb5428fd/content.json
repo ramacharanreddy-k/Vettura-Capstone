@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18286089",
+    "title": "What Is the Impact of Long Touch Wiring?",
+    "last_updated": "2023-07-03",
+    "extracted_at": "2025-03-09T00:07:31.689967"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat happens when the touch electrode wire length becomes longer?\nAnswer:\nWiring length affects the parasitic capacitance and RF noise. In order suppress parasitic capacitance, we recommend keeping the wiring at a sufficient distance from GND pattern or L-level wiring. Always evaluate RF noise in your system sufficiently before use.\nFor more information, refer to \"5.4.2 Wiring Length\" in the Application Note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\".\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "What happens when the touch electrode wire length becomes longer?"
+      },
+      {
+        "type": "text",
+        "content": "What happens when the touch electrode wire length becomes longer?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nWiring length affects the parasitic capacitance and RF noise. In order suppress parasitic capacitance, we recommend keeping the wiring at a sufficient distance from GND pattern or L-level wiring. Always evaluate RF noise in your system sufficiently before use.\nFor more information, refer to \"5.4.2 Wiring Length\" in the Application Note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\".\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Wiring length affects the parasitic capacitance and RF noise. In order suppress parasitic capacitance, we recommend keeping the wiring at a sufficient distance from GND pattern or L-level wiring. Always evaluate RF noise in your system sufficiently before use.\nFor more information, refer to \"5.4.2 Wiring Length\" in the Application Note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\"."
+      },
+      {
+        "type": "text",
+        "content": "Wiring length affects the parasitic capacitance and RF noise. In order suppress parasitic capacitance, we recommend keeping the wiring at a sufficient distance from GND pattern or L-level wiring. Always evaluate RF noise in your system sufficiently before use."
+      },
+      {
+        "type": "text",
+        "content": "For more information, refer to \"5.4.2 Wiring Length\" in the Application Note \"Capacitive Sensor Microcontrollers CTSU Capacitive Touch Electrode Design Guide (R30AN0389)\"."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792841"
+      }
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21464793",
+    "title": "What is the difference between Voice Kit RA6/4/2 and VK-RA8M1?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:41:35.890759"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the difference between Voice Kit RA6/4/2 and VK-RA8M1?\nAnswer:\nVUI software solution perspective, the VK-RA8M1 can run either VCR (Voice Command Recognition) or NLU (Natural Language Understanding) which modeling tool are both provided by Cyberon. On the other hand, Voice Kit RA6/4/2 series supports VCR (Voice Command Recognition) from Cyberon.\nFor hardware functionality difference, please check our kit landing pages from https://www.renesas.com/us/en/key-technologies/artificial-intelligence/voice\nSuitable Products\nRA8M1"
+      },
+      {
+        "type": "text",
+        "content": "What is the difference between Voice Kit RA6/4/2 and VK-RA8M1?"
+      },
+      {
+        "type": "text",
+        "content": "What is the difference between Voice Kit RA6/4/2 and VK-RA8M1?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nVUI software solution perspective, the VK-RA8M1 can run either VCR (Voice Command Recognition) or NLU (Natural Language Understanding) which modeling tool are both provided by Cyberon. On the other hand, Voice Kit RA6/4/2 series supports VCR (Voice Command Recognition) from Cyberon.\nFor hardware functionality difference, please check our kit landing pages from https://www.renesas.com/us/en/key-technologies/artificial-intelligence/voice\nSuitable Products\nRA8M1"
+      },
+      {
+        "type": "text",
+        "content": "VUI software solution perspective, the VK-RA8M1 can run either VCR (Voice Command Recognition) or NLU (Natural Language Understanding) which modeling tool are both provided by Cyberon. On the other hand, Voice Kit RA6/4/2 series supports VCR (Voice Command Recognition) from Cyberon.\nFor hardware functionality difference, please check our kit landing pages from https://www.renesas.com/us/en/key-technologies/artificial-intelligence/voice"
+      },
+      {
+        "type": "text",
+        "content": "VUI software solution perspective, the VK-RA8M1 can run either VCR (Voice Command Recognition) or NLU (Natural Language Understanding) which modeling tool are both provided by Cyberon. On the other hand, Voice Kit RA6/4/2 series supports VCR (Voice Command Recognition) from Cyberon."
+      },
+      {
+        "type": "text",
+        "content": "For hardware functionality difference, please check our kit landing pages from https://www.renesas.com/us/en/key-technologies/artificial-intelligence/voice"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA8M1"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA8M1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA8M1"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/us/en/key-technologies/artificial-intelligence/voice",
+        "url": "https://www.renesas.com/us/en/key-technologies/artificial-intelligence/voice"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21464807"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21464814"
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "int _write(int file, char *ptr, int len)\n{\n     FSP_PARAMETER_NOT_USED(file);\n     int    ret;\n          ret = (int)SEGGER_RTT_Write(0, ptr, (unsigned int)len);\n          return ret;\n}"
+    ]
+  ]
+}

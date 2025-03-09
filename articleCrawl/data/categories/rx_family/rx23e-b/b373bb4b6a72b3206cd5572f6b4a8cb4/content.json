@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21106546",
+    "title": "Differences within the RX23E series",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:04:39.619815"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat are the differences between the RX23E-B and RX23E-A?\nAnswer:\nThe data rate and noise performance of the 24-bit Δ-ΣA/D converters and the number of them built in differ between the RX23E-B and RX23E-A. The Δ-ΣA/D converters of the RX23E-B have the high speed performance and noise performance enhanced from those of the RX23E-A. The Δ-ΣA/D converters of the RX23E-B support a maximum of 125 kSPS, which is eight times faster than that of the RX23E-A.. The RMS noise performance is also reduced from that of the RX23E-A to about a 1/3. Other differences are that a 16-bit D/A converter and +/-10 V analog input are newly incorporated from the RX23E-B.\nAlso refer to the table below for details.\nSuitable Products\nRX23E-B"
+      },
+      {
+        "type": "text",
+        "content": "What are the differences between the RX23E-B and RX23E-A?"
+      },
+      {
+        "type": "text",
+        "content": "What are the differences between the RX23E-B and RX23E-A?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe data rate and noise performance of the 24-bit Δ-ΣA/D converters and the number of them built in differ between the RX23E-B and RX23E-A. The Δ-ΣA/D converters of the RX23E-B have the high speed performance and noise performance enhanced from those of the RX23E-A. The Δ-ΣA/D converters of the RX23E-B support a maximum of 125 kSPS, which is eight times faster than that of the RX23E-A.. The RMS noise performance is also reduced from that of the RX23E-A to about a 1/3. Other differences are that a 16-bit D/A converter and +/-10 V analog input are newly incorporated from the RX23E-B.\nAlso refer to the table below for details.\nSuitable Products\nRX23E-B"
+      },
+      {
+        "type": "text",
+        "content": "The data rate and noise performance of the 24-bit Δ-ΣA/D converters and the number of them built in differ between the RX23E-B and RX23E-A. The Δ-ΣA/D converters of the RX23E-B have the high speed performance and noise performance enhanced from those of the RX23E-A. The Δ-ΣA/D converters of the RX23E-B support a maximum of 125 kSPS, which is eight times faster than that of the RX23E-A.. The RMS noise performance is also reduced from that of the RX23E-A to about a 1/3. Other differences are that a 16-bit D/A converter and +/-10 V analog input are newly incorporated from the RX23E-B."
+      },
+      {
+        "type": "text",
+        "content": "Also refer to the table below for details."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/377673.png",
+          "alt_text": "",
+          "width": "896",
+          "height": "233",
+          "local_path": "data/categories/rx_family/rx23e-b/b373bb4b6a72b3206cd5572f6b4a8cb4/images/5b5aeefbea0f8d40e47d3d76a3f967b0.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX23E-B"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/377673.png",
+        "alt_text": "",
+        "width": "896",
+        "height": "233",
+        "local_path": "data/categories/rx_family/rx23e-b/b373bb4b6a72b3206cd5572f6b4a8cb4/images/5b5aeefbea0f8d40e47d3d76a3f967b0.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX23E-B"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX23E-B"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21106551"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21106567"
+      }
+    ]
+  }
+}

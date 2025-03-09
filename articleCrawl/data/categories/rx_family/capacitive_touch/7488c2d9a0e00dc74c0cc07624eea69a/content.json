@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18286155",
+    "title": "How Much Can the SCF Phase and Cycle Be Changed? Why Is It More Resistant to External Noise?",
+    "last_updated": "2023-02-03",
+    "extracted_at": "2025-03-09T00:08:16.390847"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWe have adopted a method that diffuses phase and cycle by randomizing the switch timing of SCF in the drive pulse generator. How much can the phase and cycle be changed in CTSU?\nAlso, is there a reason that it will be more resistant to external noise?\nWhy is it more resistant to external noise?\nAnswer:\nPhase and cycle is fixed by recomenced setting.\nUse the recommended values for the measurement pulse number adjustment bit and the basic pulse number setting bit.\nIt is recommended to use the parameter adjusted by the tool.\nThe built-in phase shift and edge diffusion functions prevent synchronization between the measurement drive pulse frequency and external noise, so it is resistant to external noise.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "We have adopted a method that diffuses phase and cycle by randomizing the switch timing of SCF in the drive pulse generator. How much can the phase and cycle be changed in CTSU?\nAlso, is there a reason that it will be more resistant to external noise?\nWhy is it more resistant to external noise?"
+      },
+      {
+        "type": "text",
+        "content": "We have adopted a method that diffuses phase and cycle by randomizing the switch timing of SCF in the drive pulse generator. How much can the phase and cycle be changed in CTSU?\nAlso, is there a reason that it will be more resistant to external noise?\nWhy is it more resistant to external noise?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nPhase and cycle is fixed by recomenced setting.\nUse the recommended values for the measurement pulse number adjustment bit and the basic pulse number setting bit.\nIt is recommended to use the parameter adjusted by the tool.\nThe built-in phase shift and edge diffusion functions prevent synchronization between the measurement drive pulse frequency and external noise, so it is resistant to external noise.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Phase and cycle is fixed by recomenced setting.\nUse the recommended values for the measurement pulse number adjustment bit and the basic pulse number setting bit.\nIt is recommended to use the parameter adjusted by the tool.\nThe built-in phase shift and edge diffusion functions prevent synchronization between the measurement drive pulse frequency and external noise, so it is resistant to external noise."
+      },
+      {
+        "type": "text",
+        "content": "Phase and cycle is fixed by recomenced setting.\nUse the recommended values for the measurement pulse number adjustment bit and the basic pulse number setting bit.\nIt is recommended to use the parameter adjusted by the tool."
+      },
+      {
+        "type": "text",
+        "content": "The built-in phase shift and edge diffusion functions prevent synchronization between the measurement drive pulse frequency and external noise, so it is resistant to external noise."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792817"
+      }
+    ]
+  }
+}

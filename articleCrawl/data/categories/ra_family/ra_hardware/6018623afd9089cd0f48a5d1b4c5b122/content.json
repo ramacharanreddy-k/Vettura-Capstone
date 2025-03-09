@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21727827",
+    "title": "RA Family: CAN / CAN-FD signal output not observed",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:13:59.647580"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nEven though a CAN/CAN-FD communication application is implemented on RA Family MCU, test signal output cannot be confirmed from the MCU pin.\nAnswer:\nTo connect the RA Family MCU to the CAN physical bus, an external CAN bus transceiver is required. If the CAN bus transceiver is not connected (e.g., the state when the receive pin is open), the MCU may not output a CAN transmit signal. Please check the setup of evaluation board used.\nSome RA Family evaluation kits (e.g., the EK-RA6M5) already mounted a CAN bus transceiver on the board, so users can start evaluation without additional components consideration.\nNote: Few development kits are shipped with cutting the line between MCU pins and the CAN bus transceiver by a solder jumper. Please refer to the User's Manual of evaluation kit for details on how to use it.\n  Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "Even though a CAN/CAN-FD communication application is implemented on RA Family MCU, test signal output cannot be confirmed from the MCU pin."
+      },
+      {
+        "type": "text",
+        "content": "Even though a CAN/CAN-FD communication application is implemented on RA Family MCU, test signal output cannot be confirmed from the MCU pin."
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nTo connect the RA Family MCU to the CAN physical bus, an external CAN bus transceiver is required. If the CAN bus transceiver is not connected (e.g., the state when the receive pin is open), the MCU may not output a CAN transmit signal. Please check the setup of evaluation board used.\nSome RA Family evaluation kits (e.g., the EK-RA6M5) already mounted a CAN bus transceiver on the board, so users can start evaluation without additional components consideration.\nNote: Few development kits are shipped with cutting the line between MCU pins and the CAN bus transceiver by a solder jumper. Please refer to the User's Manual of evaluation kit for details on how to use it.\n  Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "To connect the RA Family MCU to the CAN physical bus, an external CAN bus transceiver is required. If the CAN bus transceiver is not connected (e.g., the state when the receive pin is open), the MCU may not output a CAN transmit signal. Please check the setup of evaluation board used.\nSome RA Family evaluation kits (e.g., the EK-RA6M5) already mounted a CAN bus transceiver on the board, so users can start evaluation without additional components consideration.\nNote: Few development kits are shipped with cutting the line between MCU pins and the CAN bus transceiver by a solder jumper. Please refer to the User's Manual of evaluation kit for details on how to use it."
+      },
+      {
+        "type": "text",
+        "content": "To connect the RA Family MCU to the CAN physical bus, an external CAN bus transceiver is required. If the CAN bus transceiver is not connected (e.g., the state when the receive pin is open), the MCU may not output a CAN transmit signal. Please check the setup of evaluation board used."
+      },
+      {
+        "type": "text",
+        "content": "Some RA Family evaluation kits (e.g., the EK-RA6M5) already mounted a CAN bus transceiver on the board, so users can start evaluation without additional components consideration."
+      },
+      {
+        "type": "text",
+        "content": "Note: Few development kits are shipped with cutting the line between MCU pins and the CAN bus transceiver by a solder jumper. Please refer to the User's Manual of evaluation kit for details on how to use it."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396683.png",
+          "alt_text": "",
+          "width": "879",
+          "height": "330",
+          "local_path": "data/categories/ra_family/ra_hardware/6018623afd9089cd0f48a5d1b4c5b122/images/d7f674b9591098f0ebd829b5f42f6e2f.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/396683.png",
+        "alt_text": "",
+        "width": "879",
+        "height": "330",
+        "local_path": "data/categories/ra_family/ra_hardware/6018623afd9089cd0f48a5d1b4c5b122/images/d7f674b9591098f0ebd829b5f42f6e2f.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21727840"
+      }
+    ]
+  }
+}

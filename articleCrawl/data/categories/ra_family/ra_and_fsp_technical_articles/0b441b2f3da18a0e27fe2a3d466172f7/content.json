@@ -1,0 +1,1237 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20892495",
+    "title": "RA Family: Potential Issues when s-cache is enabled without MPU configuration in Cortex-M33 MCU",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:12:51.120380"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Issue:\nSome Renesas Cortex-M33 MCUs are equipped with two caches to improve performance. The c-cache is on the instruction bus and the s-cache is on the data bus, between the Cortex-M33 and AHB bus matrix. When the s-cache is enabled, users may experience communication failures with such as:\nExternal QSPI memory\nExternal OSPI memory\nShared memory with CPU in SRAM (Ethernet, Segger RTT viewer)\nAnswers:\nThere are two ways to solve this issue:\nUse the s-cache flush (invalidate/clean) command.\nUse the MPU (Memory protection unit).\nFor more information about s-cache flush usage, cache coherency issues with DMA/DTC, and MPU, please refer to the links below.\nhttps://www.renesas.com/us/en/document/apn/ra-family-guidelines-using-s-cache-system-bus\nThe second approach, using the MPU, involves disabling the s-cache only in the specific user configurable memory area that causes the problem. Below we will explain how to fix the issue by configuring the MPU. See the “Description” at the bottom of this article for details on each MPU setting. \nThe following defines are to be commonly used in all 3 cases to be explained.\n#define CTRL_PV 1\n#define CTRL_HN 1\n#define ARM_MPU_CTRL(PV, HN) \\\n  (((PV) << MPU_CTRL_PRIVDEFENA_Pos) | \\\n  ((HN) << MPU_CTRL_HFNMIENA_Pos))\n  #define MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL             0x04\n#define MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX             0\n#define MPU_ARMV8M_MAIR_ATTR_CODE_VAL               0xAA\n#define MPU_ARMV8M_MAIR_ATTR_CODE_IDX               1\n#define MPU_ARMV8M_MAIR_ATTR_DATA_VAL               0xFF\n#define MPU_ARMV8M_MAIR_ATTR_DATA_IDX               2\n#define MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL        0x44\n#define MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX        3\n\n(1) External QSPI memory\nUse the code below to disable the s-cache on QSPI memory locations. If your MCU has a different address map for QSPI, please change addresses in “ARM_MPU_RBAR” and “ARM_MPU_RLAR” accordingly.\n0x6000 0000 - 0x63FF FFFF : External SPI device\n0x6400 0000 - 0x67FF FFFF : QSPI I/O registers\nconst ARM_MPU_Region_t mpuTable[2] = {\n    //                         BASE          SH              RO   NP   XN\n    { .RBAR = ARM_MPU_RBAR(0x60000000UL, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),\n    //                        LIMIT         ATTR\n      .RLAR = ARM_MPU_RLAR(0x63FFFFFFUL, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX) },\n      //                         BASE          SH              RO   NP   XN\n    { .RBAR = ARM_MPU_RBAR(0x64000000UL, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),\n    //                         LIMIT         ATTR\n      .RLAR = ARM_MPU_RLAR(0x67FFFFFFUL, MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX) }\n};\n  void mpu_config_quadspi(void)\n{\nARM_MPU_Disable();\n    ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);\n    ARM_MPU_Load(0, mpuTable, 2);\n    ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));\n}\n  void hal_entry(void)\n{\n  mpu_config_quadspi();\nenable_s_cache();\n  qspi_init();\n    while(1)\n  {\n  (2) External OSPI memory\nUse the code below to disable the s-cache on OSPI area. If your MCU has a different address map for OSPI, please change addresses in “ARM_MPU_RBAR” and “ARM_MPU_RLAR” accordingly.\n0x6800 0000 - 0x6FFF FFFF : CS0\n0x7000 0000 - 0x7FFF FFFF : CS1\nvoid mpu_config_octaspi(void)\n{\nARM_MPU_Disable();\n    ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);\n    ARM_MPU_Load(0, mpuTable, 2);\n    ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));\n}\n  void hal_entry(void)\n{\n  mpu_config_octaspi();\nenable_s_cache();\n  ospi_init();\n    while(1)\n  {\n  (3) Shared memory with CPU in SRAM\nEthernet (EDMAC)\nUse the code below to disable the s-cache on the EDMAC descriptors and buffers area. The default linker script of the e2 studio project places the EDMAC descriptors and buffers in the \".ns_buffer.eth\" section, and these addresses are likely to change with code changes. Therefore, change the addresses of “ARM_MPU_RBAR” and “ARM_MPU_RLAR” accordingly, or place the EDMAC descriptors and buffers in a section with fixed address.\nFigure.1 Memory map file snippet (EDMAC)\nWith the given memory map file snippet example above, the memory area covering EDMAC descriptors and buffers will be:\nStart address: 0x2003 CF80\nEnd address: 0x2003 FFFF (0x2003CF80 + 0x3080 – 1)\nPlease note that MPU addresses should be aligned in multiples of 32-byte.\nconst ARM_MPU_Region_t mpuTable[1] = {\n    //                       BASE          SH              RO   NP   XN\n    { .RBAR = ARM_MPU_RBAR(0x2003CF80, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),\n    //                       LIMIT         ATTR\n      .RLAR = ARM_MPU_RLAR(0x2003FFFF, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX) },\n};\n  void mpu_config_eth(void)\n{\nARM_MPU_Disable();\n    ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);\n    ARM_MPU_Load(0, mpuTable, 1);\n    ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));\n}\n  void hal_entry(void)\n{\n  mpu_config_eth();\nenable_s_cache();\n    while(1)\n  {\n  Segger RTT Viewer\nUse the code below to disable the s-cache on the Segger RTT area. The Segger RTT uses some of user SRAM to output debug information, and receive input from the user. The start and end addresses for the 3 regions below can be found in the memory map file after compilation of your project, so please change addresses in “ARM_MPU_RBAR” and “ARM_MPU_RLAR” accordingly.\n.bss._SEGGER_RTT\n.bss._acUpBuffer\n.bss._acDownBuffer\nFigure.2 Memory map file snippet (Segger RTT Viewer)\nWith the given memory map file snippet example above, the memory area covering all 3 regions will be:\nStart address: 0x2000 01D4\nEnd address: 0x2000 128B\nMPU addresses should be aligned in multiples of 32-byte, so\nStart address: 0x2000 01C0\nEnd address: 0x2000 129F\nconst ARM_MPU_Region_t mpuTable[1] = {\n    //                         BASE          SH              RO   NP   XN\n    { .RBAR = ARM_MPU_RBAR(0x200001C0UL, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),\n    //                         LIMIT         ATTR\n      .RLAR = ARM_MPU_RLAR(0x2000129FUL, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX) },\n};\n  void mpu_config_rtt(void)\n{\nARM_MPU_Disable();\n    ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);\n    ARM_MPU_Load(0, mpuTable, 1);\n    ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));\n}\n  void hal_entry(void)\n{\n  mpu_config_rtt();\nenable_s_cache();\n  SEGGER_RTT_printf(“HELLO”);\n    while(1)\n  {\n  Arm Cortex-M33 Processor Technical Reference Manual\nhttps://documentation-service.arm.com/static/5f15c42420b7cf4bc5247f3a\nArmv8-M Architecture Reference Manual\nhttps://documentation-service.arm.com/static/5f8efe85f86e16515cdbe596\nGuidelines for Using the S Cache on the System Bus\nhttps://www.renesas.com/us/en/document/apn/ra-family-guidelines-using-s-cache-system-bus\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "Some Renesas Cortex-M33 MCUs are equipped with two caches to improve performance. The c-cache is on the instruction bus and the s-cache is on the data bus, between the Cortex-M33 and AHB bus matrix. When the s-cache is enabled, users may experience communication failures with such as:"
+      },
+      {
+        "type": "text",
+        "content": "Answers:\nThere are two ways to solve this issue:\nUse the s-cache flush (invalidate/clean) command.\nUse the MPU (Memory protection unit).\nFor more information about s-cache flush usage, cache coherency issues with DMA/DTC, and MPU, please refer to the links below.\nhttps://www.renesas.com/us/en/document/apn/ra-family-guidelines-using-s-cache-system-bus\nThe second approach, using the MPU, involves disabling the s-cache only in the specific user configurable memory area that causes the problem. Below we will explain how to fix the issue by configuring the MPU. See the “Description” at the bottom of this article for details on each MPU setting. \nThe following defines are to be commonly used in all 3 cases to be explained.\n#define CTRL_PV 1\n#define CTRL_HN 1\n#define ARM_MPU_CTRL(PV, HN) \\\n  (((PV) << MPU_CTRL_PRIVDEFENA_Pos) | \\\n  ((HN) << MPU_CTRL_HFNMIENA_Pos))\n  #define MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL             0x04\n#define MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX             0\n#define MPU_ARMV8M_MAIR_ATTR_CODE_VAL               0xAA\n#define MPU_ARMV8M_MAIR_ATTR_CODE_IDX               1\n#define MPU_ARMV8M_MAIR_ATTR_DATA_VAL               0xFF\n#define MPU_ARMV8M_MAIR_ATTR_DATA_IDX               2\n#define MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL        0x44\n#define MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX        3\n\n(1) External QSPI memory\nUse the code below to disable the s-cache on QSPI memory locations. If your MCU has a different address map for QSPI, please change addresses in “ARM_MPU_RBAR” and “ARM_MPU_RLAR” accordingly.\n0x6000 0000 - 0x63FF FFFF : External SPI device\n0x6400 0000 - 0x67FF FFFF : QSPI I/O registers\nconst ARM_MPU_Region_t mpuTable[2] = {\n    //                         BASE          SH              RO   NP   XN\n    { .RBAR = ARM_MPU_RBAR(0x60000000UL, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),\n    //                        LIMIT         ATTR\n      .RLAR = ARM_MPU_RLAR(0x63FFFFFFUL, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX) },\n      //                         BASE          SH              RO   NP   XN\n    { .RBAR = ARM_MPU_RBAR(0x64000000UL, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),\n    //                         LIMIT         ATTR\n      .RLAR = ARM_MPU_RLAR(0x67FFFFFFUL, MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX) }\n};\n  void mpu_config_quadspi(void)\n{\nARM_MPU_Disable();\n    ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);\n    ARM_MPU_Load(0, mpuTable, 2);\n    ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));\n}\n  void hal_entry(void)\n{\n  mpu_config_quadspi();\nenable_s_cache();\n  qspi_init();\n    while(1)\n  {\n  (2) External OSPI memory\nUse the code below to disable the s-cache on OSPI area. If your MCU has a different address map for OSPI, please change addresses in “ARM_MPU_RBAR” and “ARM_MPU_RLAR” accordingly.\n0x6800 0000 - 0x6FFF FFFF : CS0\n0x7000 0000 - 0x7FFF FFFF : CS1\nvoid mpu_config_octaspi(void)\n{\nARM_MPU_Disable();\n    ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);\n    ARM_MPU_Load(0, mpuTable, 2);\n    ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));\n}\n  void hal_entry(void)\n{\n  mpu_config_octaspi();\nenable_s_cache();\n  ospi_init();\n    while(1)\n  {\n  (3) Shared memory with CPU in SRAM\nEthernet (EDMAC)\nUse the code below to disable the s-cache on the EDMAC descriptors and buffers area. The default linker script of the e2 studio project places the EDMAC descriptors and buffers in the \".ns_buffer.eth\" section, and these addresses are likely to change with code changes. Therefore, change the addresses of “ARM_MPU_RBAR” and “ARM_MPU_RLAR” accordingly, or place the EDMAC descriptors and buffers in a section with fixed address.\nFigure.1 Memory map file snippet (EDMAC)\nWith the given memory map file snippet example above, the memory area covering EDMAC descriptors and buffers will be:\nStart address: 0x2003 CF80\nEnd address: 0x2003 FFFF (0x2003CF80 + 0x3080 – 1)\nPlease note that MPU addresses should be aligned in multiples of 32-byte.\nconst ARM_MPU_Region_t mpuTable[1] = {\n    //                       BASE          SH              RO   NP   XN\n    { .RBAR = ARM_MPU_RBAR(0x2003CF80, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),\n    //                       LIMIT         ATTR\n      .RLAR = ARM_MPU_RLAR(0x2003FFFF, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX) },\n};\n  void mpu_config_eth(void)\n{\nARM_MPU_Disable();\n    ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);\n    ARM_MPU_Load(0, mpuTable, 1);\n    ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));\n}\n  void hal_entry(void)\n{\n  mpu_config_eth();\nenable_s_cache();\n    while(1)\n  {\n  Segger RTT Viewer\nUse the code below to disable the s-cache on the Segger RTT area. The Segger RTT uses some of user SRAM to output debug information, and receive input from the user. The start and end addresses for the 3 regions below can be found in the memory map file after compilation of your project, so please change addresses in “ARM_MPU_RBAR” and “ARM_MPU_RLAR” accordingly.\n.bss._SEGGER_RTT\n.bss._acUpBuffer\n.bss._acDownBuffer\nFigure.2 Memory map file snippet (Segger RTT Viewer)\nWith the given memory map file snippet example above, the memory area covering all 3 regions will be:\nStart address: 0x2000 01D4\nEnd address: 0x2000 128B\nMPU addresses should be aligned in multiples of 32-byte, so\nStart address: 0x2000 01C0\nEnd address: 0x2000 129F\nconst ARM_MPU_Region_t mpuTable[1] = {\n    //                         BASE          SH              RO   NP   XN\n    { .RBAR = ARM_MPU_RBAR(0x200001C0UL, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),\n    //                         LIMIT         ATTR\n      .RLAR = ARM_MPU_RLAR(0x2000129FUL, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX) },\n};\n  void mpu_config_rtt(void)\n{\nARM_MPU_Disable();\n    ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);\n    ARM_MPU_Load(0, mpuTable, 1);\n    ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));\n}\n  void hal_entry(void)\n{\n  mpu_config_rtt();\nenable_s_cache();\n  SEGGER_RTT_printf(“HELLO”);\n    while(1)\n  {\n  Arm Cortex-M33 Processor Technical Reference Manual\nhttps://documentation-service.arm.com/static/5f15c42420b7cf4bc5247f3a\nArmv8-M Architecture Reference Manual\nhttps://documentation-service.arm.com/static/5f8efe85f86e16515cdbe596\nGuidelines for Using the S Cache on the System Bus\nhttps://www.renesas.com/us/en/document/apn/ra-family-guidelines-using-s-cache-system-bus\nSuitable Products\nRA Family"
+      },
+      {
+        "type": "text",
+        "content": "There are two ways to solve this issue:\nUse the s-cache flush (invalidate/clean) command.\nUse the MPU (Memory protection unit).\nFor more information about s-cache flush usage, cache coherency issues with DMA/DTC, and MPU, please refer to the links below.\nhttps://www.renesas.com/us/en/document/apn/ra-family-guidelines-using-s-cache-system-bus\nThe second approach, using the MPU, involves disabling the s-cache only in the specific user configurable memory area that causes the problem. Below we will explain how to fix the issue by configuring the MPU. See the “Description” at the bottom of this article for details on each MPU setting. \nThe following defines are to be commonly used in all 3 cases to be explained.\n#define CTRL_PV 1\n#define CTRL_HN 1\n#define ARM_MPU_CTRL(PV, HN) \\\n  (((PV) << MPU_CTRL_PRIVDEFENA_Pos) | \\\n  ((HN) << MPU_CTRL_HFNMIENA_Pos))\n  #define MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL             0x04\n#define MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX             0\n#define MPU_ARMV8M_MAIR_ATTR_CODE_VAL               0xAA\n#define MPU_ARMV8M_MAIR_ATTR_CODE_IDX               1\n#define MPU_ARMV8M_MAIR_ATTR_DATA_VAL               0xFF\n#define MPU_ARMV8M_MAIR_ATTR_DATA_IDX               2\n#define MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL        0x44\n#define MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX        3\n\n(1) External QSPI memory\nUse the code below to disable the s-cache on QSPI memory locations. If your MCU has a different address map for QSPI, please change addresses in “ARM_MPU_RBAR” and “ARM_MPU_RLAR” accordingly.\n0x6000 0000 - 0x63FF FFFF : External SPI device\n0x6400 0000 - 0x67FF FFFF : QSPI I/O registers\nconst ARM_MPU_Region_t mpuTable[2] = {\n    //                         BASE          SH              RO   NP   XN\n    { .RBAR = ARM_MPU_RBAR(0x60000000UL, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),\n    //                        LIMIT         ATTR\n      .RLAR = ARM_MPU_RLAR(0x63FFFFFFUL, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX) },\n      //                         BASE          SH              RO   NP   XN\n    { .RBAR = ARM_MPU_RBAR(0x64000000UL, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),\n    //                         LIMIT         ATTR\n      .RLAR = ARM_MPU_RLAR(0x67FFFFFFUL, MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX) }\n};\n  void mpu_config_quadspi(void)\n{\nARM_MPU_Disable();\n    ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);\n    ARM_MPU_Load(0, mpuTable, 2);\n    ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));\n}\n  void hal_entry(void)\n{\n  mpu_config_quadspi();\nenable_s_cache();\n  qspi_init();\n    while(1)\n  {\n  (2) External OSPI memory\nUse the code below to disable the s-cache on OSPI area. If your MCU has a different address map for OSPI, please change addresses in “ARM_MPU_RBAR” and “ARM_MPU_RLAR” accordingly.\n0x6800 0000 - 0x6FFF FFFF : CS0\n0x7000 0000 - 0x7FFF FFFF : CS1\nvoid mpu_config_octaspi(void)\n{\nARM_MPU_Disable();\n    ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);\n    ARM_MPU_Load(0, mpuTable, 2);\n    ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));\n}\n  void hal_entry(void)\n{\n  mpu_config_octaspi();\nenable_s_cache();\n  ospi_init();\n    while(1)\n  {\n  (3) Shared memory with CPU in SRAM\nEthernet (EDMAC)\nUse the code below to disable the s-cache on the EDMAC descriptors and buffers area. The default linker script of the e2 studio project places the EDMAC descriptors and buffers in the \".ns_buffer.eth\" section, and these addresses are likely to change with code changes. Therefore, change the addresses of “ARM_MPU_RBAR” and “ARM_MPU_RLAR” accordingly, or place the EDMAC descriptors and buffers in a section with fixed address.\nFigure.1 Memory map file snippet (EDMAC)\nWith the given memory map file snippet example above, the memory area covering EDMAC descriptors and buffers will be:\nStart address: 0x2003 CF80\nEnd address: 0x2003 FFFF (0x2003CF80 + 0x3080 – 1)\nPlease note that MPU addresses should be aligned in multiples of 32-byte.\nconst ARM_MPU_Region_t mpuTable[1] = {\n    //                       BASE          SH              RO   NP   XN\n    { .RBAR = ARM_MPU_RBAR(0x2003CF80, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),\n    //                       LIMIT         ATTR\n      .RLAR = ARM_MPU_RLAR(0x2003FFFF, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX) },\n};\n  void mpu_config_eth(void)\n{\nARM_MPU_Disable();\n    ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);\n    ARM_MPU_Load(0, mpuTable, 1);\n    ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));\n}\n  void hal_entry(void)\n{\n  mpu_config_eth();\nenable_s_cache();\n    while(1)\n  {\n  Segger RTT Viewer\nUse the code below to disable the s-cache on the Segger RTT area. The Segger RTT uses some of user SRAM to output debug information, and receive input from the user. The start and end addresses for the 3 regions below can be found in the memory map file after compilation of your project, so please change addresses in “ARM_MPU_RBAR” and “ARM_MPU_RLAR” accordingly.\n.bss._SEGGER_RTT\n.bss._acUpBuffer\n.bss._acDownBuffer\nFigure.2 Memory map file snippet (Segger RTT Viewer)\nWith the given memory map file snippet example above, the memory area covering all 3 regions will be:\nStart address: 0x2000 01D4\nEnd address: 0x2000 128B\nMPU addresses should be aligned in multiples of 32-byte, so\nStart address: 0x2000 01C0\nEnd address: 0x2000 129F\nconst ARM_MPU_Region_t mpuTable[1] = {\n    //                         BASE          SH              RO   NP   XN\n    { .RBAR = ARM_MPU_RBAR(0x200001C0UL, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),\n    //                         LIMIT         ATTR\n      .RLAR = ARM_MPU_RLAR(0x2000129FUL, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX) },\n};\n  void mpu_config_rtt(void)\n{\nARM_MPU_Disable();\n    ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);\n    ARM_MPU_Load(0, mpuTable, 1);\n    ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));\n}\n  void hal_entry(void)\n{\n  mpu_config_rtt();\nenable_s_cache();\n  SEGGER_RTT_printf(“HELLO”);\n    while(1)\n  {\n  Arm Cortex-M33 Processor Technical Reference Manual\nhttps://documentation-service.arm.com/static/5f15c42420b7cf4bc5247f3a\nArmv8-M Architecture Reference Manual\nhttps://documentation-service.arm.com/static/5f8efe85f86e16515cdbe596\nGuidelines for Using the S Cache on the System Bus\nhttps://www.renesas.com/us/en/document/apn/ra-family-guidelines-using-s-cache-system-bus"
+      },
+      {
+        "type": "text",
+        "content": "There are two ways to solve this issue:"
+      },
+      {
+        "type": "text",
+        "content": "For more information about s-cache flush usage, cache coherency issues with DMA/DTC, and MPU, please refer to the links below.\nhttps://www.renesas.com/us/en/document/apn/ra-family-guidelines-using-s-cache-system-bus"
+      },
+      {
+        "type": "text",
+        "content": "The second approach, using the MPU, involves disabling the s-cache only in the specific user configurable memory area that causes the problem. Below we will explain how to fix the issue by configuring the MPU. See the “Description” at the bottom of this article for details on each MPU setting."
+      },
+      {
+        "type": "text",
+        "content": "The following defines are to be commonly used in all 3 cases to be explained."
+      },
+      {
+        "type": "text",
+        "content": "#define CTRL_PV 1"
+      },
+      {
+        "type": "text",
+        "content": "#define"
+      },
+      {
+        "type": "text",
+        "content": "CTRL_PV 1"
+      },
+      {
+        "type": "text",
+        "content": "#define CTRL_HN 1"
+      },
+      {
+        "type": "text",
+        "content": "#define"
+      },
+      {
+        "type": "text",
+        "content": "CTRL_HN 1"
+      },
+      {
+        "type": "text",
+        "content": "#define ARM_MPU_CTRL(PV, HN) \\"
+      },
+      {
+        "type": "text",
+        "content": "#define"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_CTRL(PV, HN) \\"
+      },
+      {
+        "type": "text",
+        "content": "(((PV) << MPU_CTRL_PRIVDEFENA_Pos) | \\"
+      },
+      {
+        "type": "text",
+        "content": "(((PV) << MPU_CTRL_PRIVDEFENA_Pos) | \\"
+      },
+      {
+        "type": "text",
+        "content": "((HN) << MPU_CTRL_HFNMIENA_Pos))"
+      },
+      {
+        "type": "text",
+        "content": "((HN) << MPU_CTRL_HFNMIENA_Pos))"
+      },
+      {
+        "type": "text",
+        "content": "#define MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL             0x04"
+      },
+      {
+        "type": "text",
+        "content": "#define"
+      },
+      {
+        "type": "text",
+        "content": "MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL             0x04"
+      },
+      {
+        "type": "text",
+        "content": "#define MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX             0"
+      },
+      {
+        "type": "text",
+        "content": "#define"
+      },
+      {
+        "type": "text",
+        "content": "MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX             0"
+      },
+      {
+        "type": "text",
+        "content": "#define MPU_ARMV8M_MAIR_ATTR_CODE_VAL               0xAA"
+      },
+      {
+        "type": "text",
+        "content": "#define"
+      },
+      {
+        "type": "text",
+        "content": "MPU_ARMV8M_MAIR_ATTR_CODE_VAL               0xAA"
+      },
+      {
+        "type": "text",
+        "content": "#define MPU_ARMV8M_MAIR_ATTR_CODE_IDX               1"
+      },
+      {
+        "type": "text",
+        "content": "#define"
+      },
+      {
+        "type": "text",
+        "content": "MPU_ARMV8M_MAIR_ATTR_CODE_IDX               1"
+      },
+      {
+        "type": "text",
+        "content": "#define MPU_ARMV8M_MAIR_ATTR_DATA_VAL               0xFF"
+      },
+      {
+        "type": "text",
+        "content": "#define"
+      },
+      {
+        "type": "text",
+        "content": "MPU_ARMV8M_MAIR_ATTR_DATA_VAL               0xFF"
+      },
+      {
+        "type": "text",
+        "content": "#define MPU_ARMV8M_MAIR_ATTR_DATA_IDX               2"
+      },
+      {
+        "type": "text",
+        "content": "#define"
+      },
+      {
+        "type": "text",
+        "content": "MPU_ARMV8M_MAIR_ATTR_DATA_IDX               2"
+      },
+      {
+        "type": "text",
+        "content": "#define MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL        0x44"
+      },
+      {
+        "type": "text",
+        "content": "#define"
+      },
+      {
+        "type": "text",
+        "content": "MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL        0x44"
+      },
+      {
+        "type": "text",
+        "content": "#define MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX        3"
+      },
+      {
+        "type": "text",
+        "content": "#define"
+      },
+      {
+        "type": "text",
+        "content": "MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX        3"
+      },
+      {
+        "type": "text",
+        "content": "(1) External QSPI memory"
+      },
+      {
+        "type": "text",
+        "content": "Use the code below to disable the s-cache on QSPI memory locations. If your MCU has a different address map for QSPI, please change addresses in “ARM_MPU_RBAR” and “ARM_MPU_RLAR” accordingly."
+      },
+      {
+        "type": "text",
+        "content": "0x6000 0000 - 0x63FF FFFF : External SPI device\n0x6400 0000 - 0x67FF FFFF : QSPI I/O registers"
+      },
+      {
+        "type": "text",
+        "content": "const ARM_MPU_Region_t mpuTable[2] = {"
+      },
+      {
+        "type": "text",
+        "content": "const"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Region_t"
+      },
+      {
+        "type": "text",
+        "content": "mpuTable[2] = {"
+      },
+      {
+        "type": "text",
+        "content": "//                         BASE          SH              RO   NP   XN"
+      },
+      {
+        "type": "text",
+        "content": "//                         BASE          SH              RO   NP   XN"
+      },
+      {
+        "type": "text",
+        "content": "{ .RBAR = ARM_MPU_RBAR(0x60000000UL, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),"
+      },
+      {
+        "type": "text",
+        "content": "{ .RBAR = ARM_MPU_RBAR(0x60000000UL, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),"
+      },
+      {
+        "type": "text",
+        "content": "//                        LIMIT         ATTR"
+      },
+      {
+        "type": "text",
+        "content": "//                        LIMIT         ATTR"
+      },
+      {
+        "type": "text",
+        "content": ".RLAR = ARM_MPU_RLAR(0x63FFFFFFUL, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX) },"
+      },
+      {
+        "type": "text",
+        "content": ".RLAR = ARM_MPU_RLAR(0x63FFFFFFUL, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX) },"
+      },
+      {
+        "type": "text",
+        "content": "//                         BASE          SH              RO   NP   XN"
+      },
+      {
+        "type": "text",
+        "content": "//                         BASE          SH              RO   NP   XN"
+      },
+      {
+        "type": "text",
+        "content": "{ .RBAR = ARM_MPU_RBAR(0x64000000UL, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),"
+      },
+      {
+        "type": "text",
+        "content": "{ .RBAR = ARM_MPU_RBAR(0x64000000UL, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),"
+      },
+      {
+        "type": "text",
+        "content": "//                         LIMIT         ATTR"
+      },
+      {
+        "type": "text",
+        "content": "//                         LIMIT         ATTR"
+      },
+      {
+        "type": "text",
+        "content": ".RLAR = ARM_MPU_RLAR(0x67FFFFFFUL, MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX) }"
+      },
+      {
+        "type": "text",
+        "content": ".RLAR = ARM_MPU_RLAR(0x67FFFFFFUL, MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX) }"
+      },
+      {
+        "type": "text",
+        "content": "};"
+      },
+      {
+        "type": "text",
+        "content": "};"
+      },
+      {
+        "type": "text",
+        "content": "void mpu_config_quadspi(void)"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "mpu_config_quadspi("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ")"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Disable();"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Disable();"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Load(0, mpuTable, 2);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Load(0, mpuTable, 2);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "void hal_entry(void)"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "hal_entry("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ")"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "mpu_config_quadspi();"
+      },
+      {
+        "type": "text",
+        "content": "mpu_config_quadspi();"
+      },
+      {
+        "type": "text",
+        "content": "enable_s_cache();"
+      },
+      {
+        "type": "text",
+        "content": "enable_s_cache();"
+      },
+      {
+        "type": "text",
+        "content": "qspi_init();"
+      },
+      {
+        "type": "text",
+        "content": "qspi_init();"
+      },
+      {
+        "type": "text",
+        "content": "while(1)"
+      },
+      {
+        "type": "text",
+        "content": "while"
+      },
+      {
+        "type": "text",
+        "content": "(1)"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "(2) External OSPI memory"
+      },
+      {
+        "type": "text",
+        "content": "Use the code below to disable the s-cache on OSPI area. If your MCU has a different address map for OSPI, please change addresses in “ARM_MPU_RBAR” and “ARM_MPU_RLAR” accordingly."
+      },
+      {
+        "type": "text",
+        "content": "0x6800 0000 - 0x6FFF FFFF : CS0\n0x7000 0000 - 0x7FFF FFFF : CS1"
+      },
+      {
+        "type": "text",
+        "content": "void mpu_config_octaspi(void)"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "mpu_config_octaspi("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ")"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Disable();"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Disable();"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Load(0, mpuTable, 2);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Load(0, mpuTable, 2);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "void hal_entry(void)"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "hal_entry("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ")"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "mpu_config_octaspi();"
+      },
+      {
+        "type": "text",
+        "content": "mpu_config_octaspi();"
+      },
+      {
+        "type": "text",
+        "content": "enable_s_cache();"
+      },
+      {
+        "type": "text",
+        "content": "enable_s_cache();"
+      },
+      {
+        "type": "text",
+        "content": "ospi_init();"
+      },
+      {
+        "type": "text",
+        "content": "ospi_init();"
+      },
+      {
+        "type": "text",
+        "content": "while(1)"
+      },
+      {
+        "type": "text",
+        "content": "while"
+      },
+      {
+        "type": "text",
+        "content": "(1)"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "(3) Shared memory with CPU in SRAM"
+      },
+      {
+        "type": "text",
+        "content": "Ethernet (EDMAC)"
+      },
+      {
+        "type": "text",
+        "content": "Use the code below to disable the s-cache on the EDMAC descriptors and buffers area. The default linker script of the e2 studio project places the EDMAC descriptors and buffers in the \".ns_buffer.eth\" section, and these addresses are likely to change with code changes. Therefore, change the addresses of “ARM_MPU_RBAR” and “ARM_MPU_RLAR” accordingly, or place the EDMAC descriptors and buffers in a section with fixed address."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/367421.png",
+          "alt_text": "",
+          "width": "516",
+          "height": "399",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/0b441b2f3da18a0e27fe2a3d466172f7/images/79980aa685ea1d6d72e111c70c00cf46.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure.1 Memory map file snippet (EDMAC)"
+      },
+      {
+        "type": "text",
+        "content": "With the given memory map file snippet example above, the memory area covering EDMAC descriptors and buffers will be:"
+      },
+      {
+        "type": "text",
+        "content": "Start address: 0x2003 CF80\nEnd address: 0x2003 FFFF (0x2003CF80 + 0x3080 – 1)"
+      },
+      {
+        "type": "text",
+        "content": "Please note that MPU addresses should be aligned in multiples of 32-byte."
+      },
+      {
+        "type": "text",
+        "content": "const ARM_MPU_Region_t mpuTable[1] = {"
+      },
+      {
+        "type": "text",
+        "content": "const"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Region_t"
+      },
+      {
+        "type": "text",
+        "content": "mpuTable[1] = {"
+      },
+      {
+        "type": "text",
+        "content": "//                       BASE          SH              RO   NP   XN"
+      },
+      {
+        "type": "text",
+        "content": "//                       BASE          SH              RO   NP   XN"
+      },
+      {
+        "type": "text",
+        "content": "{ .RBAR = ARM_MPU_RBAR(0x2003CF80, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),"
+      },
+      {
+        "type": "text",
+        "content": "{ .RBAR = ARM_MPU_RBAR(0x2003CF80, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),"
+      },
+      {
+        "type": "text",
+        "content": "//                       LIMIT         ATTR"
+      },
+      {
+        "type": "text",
+        "content": "//                       LIMIT         ATTR"
+      },
+      {
+        "type": "text",
+        "content": ".RLAR = ARM_MPU_RLAR(0x2003FFFF, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX) },"
+      },
+      {
+        "type": "text",
+        "content": ".RLAR = ARM_MPU_RLAR(0x2003FFFF, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX) },"
+      },
+      {
+        "type": "text",
+        "content": "};"
+      },
+      {
+        "type": "text",
+        "content": "};"
+      },
+      {
+        "type": "text",
+        "content": "void mpu_config_eth(void)"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "mpu_config_eth("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ")"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Disable();"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Disable();"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Load(0, mpuTable, 1);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Load(0, mpuTable, 1);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "void hal_entry(void)"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "hal_entry("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ")"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "mpu_config_eth();"
+      },
+      {
+        "type": "text",
+        "content": "mpu_config_eth();"
+      },
+      {
+        "type": "text",
+        "content": "enable_s_cache();"
+      },
+      {
+        "type": "text",
+        "content": "enable_s_cache();"
+      },
+      {
+        "type": "text",
+        "content": "while(1)"
+      },
+      {
+        "type": "text",
+        "content": "while"
+      },
+      {
+        "type": "text",
+        "content": "(1)"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "Segger RTT Viewer"
+      },
+      {
+        "type": "text",
+        "content": "Use the code below to disable the s-cache on the Segger RTT area. The Segger RTT uses some of user SRAM to output debug information, and receive input from the user. The start and end addresses for the 3 regions below can be found in the memory map file after compilation of your project, so please change addresses in “ARM_MPU_RBAR” and “ARM_MPU_RLAR” accordingly."
+      },
+      {
+        "type": "text",
+        "content": ".bss._SEGGER_RTT\n.bss._acUpBuffer\n.bss._acDownBuffer"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/367421-2.png",
+          "alt_text": "",
+          "width": "523",
+          "height": "251",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/0b441b2f3da18a0e27fe2a3d466172f7/images/7c3091d22fb397d570ab025366582248.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure.2 Memory map file snippet (Segger RTT Viewer)"
+      },
+      {
+        "type": "text",
+        "content": "With the given memory map file snippet example above, the memory area covering all 3 regions will be:"
+      },
+      {
+        "type": "text",
+        "content": "Start address: 0x2000 01D4\nEnd address: 0x2000 128B"
+      },
+      {
+        "type": "text",
+        "content": "MPU addresses should be aligned in multiples of 32-byte, so"
+      },
+      {
+        "type": "text",
+        "content": "Start address: 0x2000 01C0\nEnd address: 0x2000 129F"
+      },
+      {
+        "type": "text",
+        "content": "const ARM_MPU_Region_t mpuTable[1] = {"
+      },
+      {
+        "type": "text",
+        "content": "const"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Region_t"
+      },
+      {
+        "type": "text",
+        "content": "mpuTable[1] = {"
+      },
+      {
+        "type": "text",
+        "content": "//                         BASE          SH              RO   NP   XN"
+      },
+      {
+        "type": "text",
+        "content": "//                         BASE          SH              RO   NP   XN"
+      },
+      {
+        "type": "text",
+        "content": "{ .RBAR = ARM_MPU_RBAR(0x200001C0UL, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),"
+      },
+      {
+        "type": "text",
+        "content": "{ .RBAR = ARM_MPU_RBAR(0x200001C0UL, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),"
+      },
+      {
+        "type": "text",
+        "content": "//                         LIMIT         ATTR"
+      },
+      {
+        "type": "text",
+        "content": "//                         LIMIT         ATTR"
+      },
+      {
+        "type": "text",
+        "content": ".RLAR = ARM_MPU_RLAR(0x2000129FUL, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX) },"
+      },
+      {
+        "type": "text",
+        "content": ".RLAR = ARM_MPU_RLAR(0x2000129FUL, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX) },"
+      },
+      {
+        "type": "text",
+        "content": "};"
+      },
+      {
+        "type": "text",
+        "content": "};"
+      },
+      {
+        "type": "text",
+        "content": "void mpu_config_rtt(void)"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "mpu_config_rtt("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ")"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Disable();"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Disable();"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Load(0, mpuTable, 1);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Load(0, mpuTable, 1);"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));"
+      },
+      {
+        "type": "text",
+        "content": "ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "}"
+      },
+      {
+        "type": "text",
+        "content": "void hal_entry(void)"
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": "hal_entry("
+      },
+      {
+        "type": "text",
+        "content": "void"
+      },
+      {
+        "type": "text",
+        "content": ")"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "mpu_config_rtt();"
+      },
+      {
+        "type": "text",
+        "content": "mpu_config_rtt();"
+      },
+      {
+        "type": "text",
+        "content": "enable_s_cache();"
+      },
+      {
+        "type": "text",
+        "content": "enable_s_cache();"
+      },
+      {
+        "type": "text",
+        "content": "SEGGER_RTT_printf(“HELLO”);"
+      },
+      {
+        "type": "text",
+        "content": "SEGGER_RTT_printf("
+      },
+      {
+        "type": "text",
+        "content": "“HELLO”"
+      },
+      {
+        "type": "text",
+        "content": ");"
+      },
+      {
+        "type": "text",
+        "content": "while(1)"
+      },
+      {
+        "type": "text",
+        "content": "while"
+      },
+      {
+        "type": "text",
+        "content": "(1)"
+      },
+      {
+        "type": "text",
+        "content": "{"
+      },
+      {
+        "type": "text",
+        "content": "Arm Cortex-M33 Processor Technical Reference Manual\nhttps://documentation-service.arm.com/static/5f15c42420b7cf4bc5247f3a"
+      },
+      {
+        "type": "text",
+        "content": "Armv8-M Architecture Reference Manual\nhttps://documentation-service.arm.com/static/5f8efe85f86e16515cdbe596"
+      },
+      {
+        "type": "text",
+        "content": "Guidelines for Using the S Cache on the System Bus\nhttps://www.renesas.com/us/en/document/apn/ra-family-guidelines-using-s-cache-system-bus"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Family"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/367421.png",
+        "alt_text": "",
+        "width": "516",
+        "height": "399",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/0b441b2f3da18a0e27fe2a3d466172f7/images/79980aa685ea1d6d72e111c70c00cf46.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/367421-2.png",
+        "alt_text": "",
+        "width": "523",
+        "height": "251",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/0b441b2f3da18a0e27fe2a3d466172f7/images/7c3091d22fb397d570ab025366582248.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "#define CTRL_PV 1\n#define CTRL_HN 1\n#define ARM_MPU_CTRL(PV, HN) \\\n  (((PV) << MPU_CTRL_PRIVDEFENA_Pos) | \\\n  ((HN) << MPU_CTRL_HFNMIENA_Pos))\n  #define MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL             0x04\n#define MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX             0\n#define MPU_ARMV8M_MAIR_ATTR_CODE_VAL               0xAA\n#define MPU_ARMV8M_MAIR_ATTR_CODE_IDX               1\n#define MPU_ARMV8M_MAIR_ATTR_DATA_VAL               0xFF\n#define MPU_ARMV8M_MAIR_ATTR_DATA_IDX               2\n#define MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL        0x44\n#define MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX        3"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "const ARM_MPU_Region_t mpuTable[2] = {\n    //                         BASE          SH              RO   NP   XN\n    { .RBAR = ARM_MPU_RBAR(0x60000000UL, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),\n    //                        LIMIT         ATTR\n      .RLAR = ARM_MPU_RLAR(0x63FFFFFFUL, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX) },\n      //                         BASE          SH              RO   NP   XN\n    { .RBAR = ARM_MPU_RBAR(0x64000000UL, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),\n    //                         LIMIT         ATTR\n      .RLAR = ARM_MPU_RLAR(0x67FFFFFFUL, MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX) }\n};\n  void mpu_config_quadspi(void)\n{\nARM_MPU_Disable();\n    ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);\n    ARM_MPU_Load(0, mpuTable, 2);\n    ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));\n}\n  void hal_entry(void)\n{\n  mpu_config_quadspi();\nenable_s_cache();\n  qspi_init();\n    while(1)\n  {"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "void mpu_config_octaspi(void)\n{\nARM_MPU_Disable();\n    ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);\n    ARM_MPU_Load(0, mpuTable, 2);\n    ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));\n}\n  void hal_entry(void)\n{\n  mpu_config_octaspi();\nenable_s_cache();\n  ospi_init();\n    while(1)\n  {"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "const ARM_MPU_Region_t mpuTable[1] = {\n    //                       BASE          SH              RO   NP   XN\n    { .RBAR = ARM_MPU_RBAR(0x2003CF80, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),\n    //                       LIMIT         ATTR\n      .RLAR = ARM_MPU_RLAR(0x2003FFFF, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX) },\n};\n  void mpu_config_eth(void)\n{\nARM_MPU_Disable();\n    ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);\n    ARM_MPU_Load(0, mpuTable, 1);\n    ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));\n}\n  void hal_entry(void)\n{\n  mpu_config_eth();\nenable_s_cache();\n    while(1)\n  {"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "const ARM_MPU_Region_t mpuTable[1] = {\n    //                         BASE          SH              RO   NP   XN\n    { .RBAR = ARM_MPU_RBAR(0x200001C0UL, ARM_MPU_SH_NON, 0UL, 1UL, 1UL),\n    //                         LIMIT         ATTR\n      .RLAR = ARM_MPU_RLAR(0x2000129FUL, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX) },\n};\n  void mpu_config_rtt(void)\n{\nARM_MPU_Disable();\n    ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DEVICE_IDX, MPU_ARMV8M_MAIR_ATTR_DEVICE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_CODE_IDX, MPU_ARMV8M_MAIR_ATTR_CODE_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATA_IDX, MPU_ARMV8M_MAIR_ATTR_DATA_VAL);\n  ARM_MPU_SetMemAttr(MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_IDX, MPU_ARMV8M_MAIR_ATTR_DATANOCACHE_VAL);\n    ARM_MPU_Load(0, mpuTable, 1);\n    ARM_MPU_Enable(ARM_MPU_CTRL(CTRL_PV, CTRL_HN));\n}\n  void hal_entry(void)\n{\n  mpu_config_rtt();\nenable_s_cache();\n  SEGGER_RTT_printf(“HELLO”);\n    while(1)\n  {"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Family"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/us/en/document/apn/ra-family-guidelines-using-s-cache-system-bus",
+        "url": "https://www.renesas.com/us/en/document/apn/ra-family-guidelines-using-s-cache-system-bus"
+      },
+      {
+        "text": "https://documentation-service.arm.com/static/5f15c42420b7cf4bc5247f3a",
+        "url": "https://documentation-service.arm.com/static/5f15c42420b7cf4bc5247f3a"
+      },
+      {
+        "text": "https://documentation-service.arm.com/static/5f8efe85f86e16515cdbe596",
+        "url": "https://documentation-service.arm.com/static/5f8efe85f86e16515cdbe596"
+      }
+    ]
+  }
+}

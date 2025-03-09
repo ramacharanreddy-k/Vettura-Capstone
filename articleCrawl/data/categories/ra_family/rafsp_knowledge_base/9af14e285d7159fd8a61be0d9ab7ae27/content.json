@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20797629",
+    "title": "RA Family: RFP could fail in verification when programming new image depending on the AWS.BTFLG (Startup Area Select Flag) setting",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:24:55.571814"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nRFP could fail in verification when programming new image depending on the AWS.BTFLG (Startup Area Select Flag) setting\nAnswer:\nWhen you use RFP to program a new image to an MCU with a different AWS.BTFLG setting from the setting that has been programmed in the MCU, the MCU will immediately swap BLOCK0 area and BLOCK1 area during the flash programming. That results in a verification error on RFP because different memory area is read from the MCU during the memory verification. If you want to change the AWS.BTFLG setting in a new program image, it is advised to write the value to AWS register first in the option setting memory, and then write a new program.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "RFP could fail in verification when programming new image depending on the AWS.BTFLG (Startup Area Select Flag) setting"
+      },
+      {
+        "type": "text",
+        "content": "RFP could fail in verification when programming new image depending on the AWS.BTFLG (Startup Area Select Flag) setting"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nWhen you use RFP to program a new image to an MCU with a different AWS.BTFLG setting from the setting that has been programmed in the MCU, the MCU will immediately swap BLOCK0 area and BLOCK1 area during the flash programming. That results in a verification error on RFP because different memory area is read from the MCU during the memory verification. If you want to change the AWS.BTFLG setting in a new program image, it is advised to write the value to AWS register first in the option setting memory, and then write a new program.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "When you use RFP to program a new image to an MCU with a different AWS.BTFLG setting from the setting that has been programmed in the MCU, the MCU will immediately swap BLOCK0 area and BLOCK1 area during the flash programming. That results in a verification error on RFP because different memory area is read from the MCU during the memory verification. If you want to change the AWS.BTFLG setting in a new program image, it is advised to write the value to AWS register first in the option setting memory, and then write a new program.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "When you use RFP to program a new image to an MCU with a different AWS.BTFLG setting from the setting that has been programmed in the MCU, the MCU will immediately swap BLOCK0 area and BLOCK1 area during the flash programming. That results in a verification error on RFP because different memory area is read from the MCU during the memory verification. If you want to change the AWS.BTFLG setting in a new program image, it is advised to write the value to AWS register first in the option setting memory, and then write a new program."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20796090"
+      }
+    ]
+  }
+}

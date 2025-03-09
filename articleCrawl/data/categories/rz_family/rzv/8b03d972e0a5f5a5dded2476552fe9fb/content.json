@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20572382",
+    "title": "RZ/V: What should I do when the booting procedure stops?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:50:54.737869"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhen I try to update the version of Linux, Linux stops while booting.\nHow can I get it to boot properly?\nAnswer:\nBoot Loader and U-boot were written to the eMMC of the evaluation board.\nIf the version of the Boot Loader and U-boot are different from the version of the Linux Package, the Linux will not boot.\nPlease update the Boot Loader and U-boot using bundled in Linux Package that you use.\nSuitable Products\nRZ/V"
+      },
+      {
+        "type": "text",
+        "content": "When I try to update the version of Linux, Linux stops while booting.\nHow can I get it to boot properly?"
+      },
+      {
+        "type": "text",
+        "content": "When I try to update the version of Linux, Linux stops while booting.\nHow can I get it to boot properly?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nBoot Loader and U-boot were written to the eMMC of the evaluation board.\nIf the version of the Boot Loader and U-boot are different from the version of the Linux Package, the Linux will not boot.\nPlease update the Boot Loader and U-boot using bundled in Linux Package that you use.\nSuitable Products\nRZ/V"
+      },
+      {
+        "type": "text",
+        "content": "Boot Loader and U-boot were written to the eMMC of the evaluation board.\nIf the version of the Boot Loader and U-boot are different from the version of the Linux Package, the Linux will not boot.\nPlease update the Boot Loader and U-boot using bundled in Linux Package that you use."
+      },
+      {
+        "type": "text",
+        "content": "Boot Loader and U-boot were written to the eMMC of the evaluation board.\nIf the version of the Boot Loader and U-boot are different from the version of the Linux Package, the Linux will not boot.\nPlease update the Boot Loader and U-boot using bundled in Linux Package that you use."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/V"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/V"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/V"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20574344"
+      }
+    ]
+  }
+}

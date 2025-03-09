@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20855744",
+    "title": "Solution and tools: What tools are available to evaluate the Voice HMI ASSP solution?",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:26:09.565176"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat tools are available to evaluate the Voice HMI ASSP solution?\nAnswer:\nOur development partner can provide you the evaluation kit for testing the device characteristics, together with GUI utility programs to monitor, tune and evaluate the accuracy and performance of the voice recognition solution. Please contact your Renesas sales representative or our development partner for more information. \nSuitable Products\nRISC-V Voice ASSP"
+      },
+      {
+        "type": "text",
+        "content": "What tools are available to evaluate the Voice HMI ASSP solution?"
+      },
+      {
+        "type": "text",
+        "content": "What tools are available to evaluate the Voice HMI ASSP solution?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nOur development partner can provide you the evaluation kit for testing the device characteristics, together with GUI utility programs to monitor, tune and evaluate the accuracy and performance of the voice recognition solution. Please contact your Renesas sales representative or our development partner for more information. \nSuitable Products\nRISC-V Voice ASSP"
+      },
+      {
+        "type": "text",
+        "content": "Our development partner can provide you the evaluation kit for testing the device characteristics, together with GUI utility programs to monitor, tune and evaluate the accuracy and performance of the voice recognition solution. Please contact your Renesas sales representative or our development partner for more information."
+      },
+      {
+        "type": "text",
+        "content": "Our development partner can provide you the evaluation kit for testing the device characteristics, together with GUI utility programs to monitor, tune and evaluate the accuracy and performance of the voice recognition solution. Please contact your Renesas sales representative or our development partner for more information."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRISC-V Voice ASSP"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RISC-V Voice ASSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RISC-V Voice ASSP"
+    ],
+    "links": []
+  }
+}

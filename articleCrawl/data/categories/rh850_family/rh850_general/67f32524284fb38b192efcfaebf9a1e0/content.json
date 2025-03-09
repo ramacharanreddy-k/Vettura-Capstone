@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21153491",
+    "title": "RH850: GHS Code Flash security ID is not specified.",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:29:14.713533"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWe are working on RH850-P1MC controller using GHS compiler and E1 emulator. when we tried connecting with target board, we are facing an -cfapw security issue.\ncan you please let us know the way to get out of this and successfully download on target. attached you the issue screenshot check it and let us know.\nAnswer:\nThe error shown occurs when there is a mismatch in the security ID. Please use the Security ID used before to program again. MCUs from Renesas factory by default have the authentication ID set to all 0xFFs.  If you have manually changed it before, you may have to use the new value.\n  If you have forgotten the security ID, you may try to use Renesas RFP (Renesas Flash Programmer) to connect to the device and perform code flash erase or reset the security ID using Renesas Flash Programmer for Devices like RH850 P1x-C where the debug ID is not part of code flash, but in the configuration area. Please try to program and debug the device after that.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "Question:\nWe are working on RH850-P1MC controller using GHS compiler and E1 emulator. when we tried connecting with target board, we are facing an -cfapw security issue.\ncan you please let us know the way to get out of this and successfully download on target. attached you the issue screenshot check it and let us know.\nAnswer:\nThe error shown occurs when there is a mismatch in the security ID. Please use the Security ID used before to program again. MCUs from Renesas factory by default have the authentication ID set to all 0xFFs.  If you have manually changed it before, you may have to use the new value.\n  If you have forgotten the security ID, you may try to use Renesas RFP (Renesas Flash Programmer) to connect to the device and perform code flash erase or reset the security ID using Renesas Flash Programmer for Devices like RH850 P1x-C where the debug ID is not part of code flash, but in the configuration area. Please try to program and debug the device after that.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "We are working on RH850-P1MC controller using GHS compiler and E1 emulator. when we tried connecting with target board, we are facing an -cfapw security issue.\ncan you please let us know the way to get out of this and successfully download on target. attached you the issue screenshot check it and let us know."
+      },
+      {
+        "type": "text",
+        "content": "We are working on RH850-P1MC controller using GHS compiler and E1 emulator. when we tried connecting with target board, we are facing an -cfapw security issue."
+      },
+      {
+        "type": "text",
+        "content": "We are working on RH850-P1MC controller using GHS compiler and E1 emulator. when we tried connecting with target board, we are facing an -cfapw security issue."
+      },
+      {
+        "type": "text",
+        "content": "can you please let us know the way to get out of this and successfully download on target. attached you the issue screenshot check it and let us know."
+      },
+      {
+        "type": "text",
+        "content": "can you please let us know the way to get out of this and successfully download on target. attached you the issue screenshot check it and let us know."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://en-support.renesas.com/api/attachments/action/1/fe6ad00a-303d-4aed-b2eb-d8f0496286c4",
+          "alt_text": "A screenshot of a computer errorDescription automatically generated",
+          "width": "386",
+          "height": "200",
+          "local_path": "data/categories/rh850_family/rh850_general/67f32524284fb38b192efcfaebf9a1e0/images/3412fe575648e0769784f9cd4b7c261b.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe error shown occurs when there is a mismatch in the security ID. Please use the Security ID used before to program again. MCUs from Renesas factory by default have the authentication ID set to all 0xFFs.  If you have manually changed it before, you may have to use the new value.\n  If you have forgotten the security ID, you may try to use Renesas RFP (Renesas Flash Programmer) to connect to the device and perform code flash erase or reset the security ID using Renesas Flash Programmer for Devices like RH850 P1x-C where the debug ID is not part of code flash, but in the configuration area. Please try to program and debug the device after that.\nSuitable Products\nRH850"
+      },
+      {
+        "type": "text",
+        "content": "The error shown occurs when there is a mismatch in the security ID. Please use the Security ID used before to program again. MCUs from Renesas factory by default have the authentication ID set to all 0xFFs.  If you have manually changed it before, you may have to use the new value.\n  If you have forgotten the security ID, you may try to use Renesas RFP (Renesas Flash Programmer) to connect to the device and perform code flash erase or reset the security ID using Renesas Flash Programmer for Devices like RH850 P1x-C where the debug ID is not part of code flash, but in the configuration area. Please try to program and debug the device after that."
+      },
+      {
+        "type": "text",
+        "content": "The error shown occurs when there is a mismatch in the security ID. Please use the Security ID used before to program again. MCUs from Renesas factory by default have the authentication ID set to all 0xFFs.  If you have manually changed it before, you may have to use the new value."
+      },
+      {
+        "type": "text",
+        "content": "The error shown occurs when there is a mismatch in the security ID. Please use the Security ID used before to program again. MCUs from Renesas factory by default have the authentication ID set to all 0xFFs.  If you have manually changed it before, you may have to use the new value."
+      },
+      {
+        "type": "text",
+        "content": "If you have forgotten the security ID, you may try to use Renesas RFP (Renesas Flash Programmer) to connect to the device and perform code flash erase or reset the security ID using Renesas Flash Programmer for Devices like RH850 P1x-C where the debug ID is not part of code flash, but in the configuration area. Please try to program and debug the device after that."
+      },
+      {
+        "type": "text",
+        "content": "If you have forgotten the security ID, you may try to use"
+      },
+      {
+        "type": "text",
+        "content": "Renesas RFP (Renesas Flash Programmer) to connect to the device and perform code flash erase or reset the security ID using Renesas Flash Programmer for Devices like RH850 P1x-C where the debug ID is not part of code flash, but in the configuration area. Please try to program and debug the device after that."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://en-support.renesas.com/api/attachments/action/1/fe6ad00a-303d-4aed-b2eb-d8f0496286c4",
+        "alt_text": "A screenshot of a computer errorDescription automatically generated",
+        "width": "386",
+        "height": "200",
+        "local_path": "data/categories/rh850_family/rh850_general/67f32524284fb38b192efcfaebf9a1e0/images/3412fe575648e0769784f9cd4b7c261b.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850"
+    ],
+    "links": []
+  }
+}

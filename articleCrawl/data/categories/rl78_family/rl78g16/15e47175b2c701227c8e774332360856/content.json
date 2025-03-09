@@ -1,0 +1,175 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20919983",
+    "title": "The RL78/G16 position in the RL78 family",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:53:57.469859"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat is the difference between the RL78/G16 and other RL78 MCUs such as RL78/G15?\nAnswer:\nRL78/G16 is “RL78/G15 + capacitive touch sensor and safety functions” with larger memory and pin package lineup. Also, it has pin-compatible with the RL78/G15 and RL78/G12 (20pin).\nFurthermore, as well as RL78/G15, RL78/G16 supports an operating ambient temperature of up to 125°C. Therefore, RL78/G16 is designed to be stable even in high-temperature environments.\nFigure 1: The RL78/G16 position in RL78 Family\nFigure 2: Specification comparison between RL78/G16 and existing products\nFigure 3: RL78/G16 and RL78/G15 Package Lineup\nThe RL78/G16 has the following four major features.\nRL78/G16 is optimized for 8-bit MCU applications as well as G15. Including capacitive touch sensor and safety functions make it suitable for a wide range of applications, including home appliances.\nSmallest-pin package touch MCU, realizing touch functions in a small space.\nApplication notes and sample codes to support the acquisition of functional safety IEC60730 certification, which is mandatory for home appliances.\nEnhanced built-in peripheral functions to reduce overall device cost.\nWide operating ambient temperature range to simplify the thermal design.\nFigure 4: 4 Key Features of RL78/G16 MCU\nSuitable Products\nRL78/G16"
+      },
+      {
+        "type": "text",
+        "content": "What is the difference between the RL78/G16 and other RL78 MCUs such as RL78/G15?"
+      },
+      {
+        "type": "text",
+        "content": "What is the difference between the RL78/G16 and other RL78 MCUs such as RL78/G15?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nRL78/G16 is “RL78/G15 + capacitive touch sensor and safety functions” with larger memory and pin package lineup. Also, it has pin-compatible with the RL78/G15 and RL78/G12 (20pin).\nFurthermore, as well as RL78/G15, RL78/G16 supports an operating ambient temperature of up to 125°C. Therefore, RL78/G16 is designed to be stable even in high-temperature environments.\nFigure 1: The RL78/G16 position in RL78 Family\nFigure 2: Specification comparison between RL78/G16 and existing products\nFigure 3: RL78/G16 and RL78/G15 Package Lineup\nThe RL78/G16 has the following four major features.\nRL78/G16 is optimized for 8-bit MCU applications as well as G15. Including capacitive touch sensor and safety functions make it suitable for a wide range of applications, including home appliances.\nSmallest-pin package touch MCU, realizing touch functions in a small space.\nApplication notes and sample codes to support the acquisition of functional safety IEC60730 certification, which is mandatory for home appliances.\nEnhanced built-in peripheral functions to reduce overall device cost.\nWide operating ambient temperature range to simplify the thermal design.\nFigure 4: 4 Key Features of RL78/G16 MCU\nSuitable Products\nRL78/G16"
+      },
+      {
+        "type": "text",
+        "content": "RL78/G16 is “RL78/G15 + capacitive touch sensor and safety functions” with larger memory and pin package lineup. Also, it has pin-compatible with the RL78/G15 and RL78/G12 (20pin).\nFurthermore, as well as RL78/G15, RL78/G16 supports an operating ambient temperature of up to 125°C. Therefore, RL78/G16 is designed to be stable even in high-temperature environments.\nFigure 1: The RL78/G16 position in RL78 Family\nFigure 2: Specification comparison between RL78/G16 and existing products\nFigure 3: RL78/G16 and RL78/G15 Package Lineup\nThe RL78/G16 has the following four major features.\nRL78/G16 is optimized for 8-bit MCU applications as well as G15. Including capacitive touch sensor and safety functions make it suitable for a wide range of applications, including home appliances.\nSmallest-pin package touch MCU, realizing touch functions in a small space.\nApplication notes and sample codes to support the acquisition of functional safety IEC60730 certification, which is mandatory for home appliances.\nEnhanced built-in peripheral functions to reduce overall device cost.\nWide operating ambient temperature range to simplify the thermal design.\nFigure 4: 4 Key Features of RL78/G16 MCU"
+      },
+      {
+        "type": "text",
+        "content": "RL78/G16 is “RL78/G15 + capacitive touch sensor and safety functions” with larger memory and pin package lineup. Also, it has pin-compatible with the RL78/G15 and RL78/G12 (20pin)."
+      },
+      {
+        "type": "text",
+        "content": "Furthermore, as well as RL78/G15, RL78/G16 supports an operating ambient temperature of up to 125°C. Therefore, RL78/G16 is designed to be stable even in high-temperature environments."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/368997.png",
+          "alt_text": "",
+          "width": "468",
+          "height": "320",
+          "local_path": "data/categories/rl78_family/rl78g16/15e47175b2c701227c8e774332360856/images/54e60126b54074c9030a138b26622f10.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 1: The RL78/G16 position in RL78 Family"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/368997-2.png",
+          "alt_text": "",
+          "width": "902",
+          "height": "645",
+          "local_path": "data/categories/rl78_family/rl78g16/15e47175b2c701227c8e774332360856/images/e1f90bcc8144750bd91e01d8c0288b83.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 2: Specification comparison between RL78/G16 and existing products"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/368997-3.png",
+          "alt_text": "",
+          "width": "898",
+          "height": "204",
+          "local_path": "data/categories/rl78_family/rl78g16/15e47175b2c701227c8e774332360856/images/16f27c8b1230f2183be3d4de01b6e73c.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 3: RL78/G16 and RL78/G15 Package Lineup"
+      },
+      {
+        "type": "text",
+        "content": "The RL78/G16 has the following four major features."
+      },
+      {
+        "type": "text",
+        "content": "RL78/G16 is optimized for 8-bit MCU applications as well as G15. Including capacitive touch sensor and safety functions make it suitable for a wide range of applications, including home appliances."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/368997-4.png",
+          "alt_text": "",
+          "width": "899",
+          "height": "433",
+          "local_path": "data/categories/rl78_family/rl78g16/15e47175b2c701227c8e774332360856/images/6957f4b26b7950b7c5f9e34a0dbdab0b.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure 4: 4 Key Features of RL78/G16 MCU"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRL78/G16"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/368997.png",
+        "alt_text": "",
+        "width": "468",
+        "height": "320",
+        "local_path": "data/categories/rl78_family/rl78g16/15e47175b2c701227c8e774332360856/images/54e60126b54074c9030a138b26622f10.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/368997-2.png",
+        "alt_text": "",
+        "width": "902",
+        "height": "645",
+        "local_path": "data/categories/rl78_family/rl78g16/15e47175b2c701227c8e774332360856/images/e1f90bcc8144750bd91e01d8c0288b83.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/368997-3.png",
+        "alt_text": "",
+        "width": "898",
+        "height": "204",
+        "local_path": "data/categories/rl78_family/rl78g16/15e47175b2c701227c8e774332360856/images/16f27c8b1230f2183be3d4de01b6e73c.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/368997-4.png",
+        "alt_text": "",
+        "width": "899",
+        "height": "433",
+        "local_path": "data/categories/rl78_family/rl78g16/15e47175b2c701227c8e774332360856/images/6957f4b26b7950b7c5f9e34a0dbdab0b.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RL78/G16"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RL78/G16"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20919984"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20919985"
+      }
+    ]
+  }
+}

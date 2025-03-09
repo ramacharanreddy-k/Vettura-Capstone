@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20797532",
+    "title": "RA2 MCUs: How to improve the accuracy of LOCO frequency",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:13:00.159194"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Overview:\nThis article describes how to improve the LOCO (Low-speed On-Chip Oscillator) clock accuracy (±15%) using the HOCO (High-speed On-Chip Oscillator) with ±1% accuracy as a reference clock along with the CAC (Clock Frequency Accuracy Measurement Circuit) peripheral module and the LOCO user trimming control register.\nDescription:\nThis solution uses the following hardware peripherals modules and is able to compensate the LOCO accuracy within around ±4% (Note: this does not mean absolute 4% is guaranteed. Please evaluate it with your actual board).\nLOCO User Trimming Register (LOCOUTCR)\nLOCOUTCR allows the user to change the LOCO frequency. In the case of RA2 MCUs, by adding ±1 to this register, the clock will be changed around ±4% (Note: 4% is not a guaranteed value. Please evaluate it with your actual board).\nClock Frequency Accuracy Measurement Circuit (CAC)\nThe CAC can count a clock source against a reference clock. This can be used to determine if the frequency deviation of the clock source is in an allowable range. The measurement target and reference clocks are selectable, and the division ratio can be set. In this solution, the LOCO is the clock source and the HOCO is the reference clock to determine the LOCO frequency deviation, but since the clock difference between HOCO and LOCO is large, so the following clock source selection will be used.\nTarget clock to be measured: LOCO divided by 32\nReference clock: HOCO divided by 32\nCLKOUT (just for debugging purpose)\nThe CLKOUT of the CGC (Clock Generation Circuit) can be used for debugging purpose to check if this solution is effective in improving the LOCO accuracy.\nFigure.1 Solution block diagram\nSolution flowchart:\nFigure.2 Flow of clock correction using CAC module\nKey points:\nThe LOCO frequency is adjusted by changing the user trimming register is to be adjusted by +1 or -1 depending on number comparison between the CAC counter value and predefined threshold values.\nDemo Project:\nThe attached project is for RA2E1 and it demonstrates the LOCO clock frequency accuracy correction explained above. All processes will be executed sequentially as shown in Figure.3, but the on-board user switch SW1 is to be used to trigger to next step. The running logs can be seen in the SEGGER RTT viewer (Figure.4). Note that, the LOCO frequency should be close to the typical value at room temperature (25°C); hence, the demo project is unlikely to trigger the clock correction. In order to test this demo project, you will need to put the MCU in an enough high (or cold) temperature to cause the frequency deviation on LOCO.\nFigure.3 Demo application flowchart\nNote:\nThe correction target clock can be set in loco_clock_correction.c.\nLEDs indicate the application running state.\nLED1: Blinks when the clock correction is completed.\nLED3: Turns on when an API error occur.\nFigure.4 The example of RTT viewer logs\n  Suitable Products\nRA2 MCUs"
+      },
+      {
+        "type": "text",
+        "content": "This article describes how to improve the LOCO (Low-speed On-Chip Oscillator) clock accuracy (±15%) using the HOCO (High-speed On-Chip Oscillator) with ±1% accuracy as a reference clock along with the CAC (Clock Frequency Accuracy Measurement Circuit) peripheral module and the LOCO user trimming control register.\nDescription:\nThis solution uses the following hardware peripherals modules and is able to compensate the LOCO accuracy within around ±4% (Note: this does not mean absolute 4% is guaranteed. Please evaluate it with your actual board).\nLOCO User Trimming Register (LOCOUTCR)\nLOCOUTCR allows the user to change the LOCO frequency. In the case of RA2 MCUs, by adding ±1 to this register, the clock will be changed around ±4% (Note: 4% is not a guaranteed value. Please evaluate it with your actual board).\nClock Frequency Accuracy Measurement Circuit (CAC)\nThe CAC can count a clock source against a reference clock. This can be used to determine if the frequency deviation of the clock source is in an allowable range. The measurement target and reference clocks are selectable, and the division ratio can be set. In this solution, the LOCO is the clock source and the HOCO is the reference clock to determine the LOCO frequency deviation, but since the clock difference between HOCO and LOCO is large, so the following clock source selection will be used.\nTarget clock to be measured: LOCO divided by 32\nReference clock: HOCO divided by 32\nCLKOUT (just for debugging purpose)\nThe CLKOUT of the CGC (Clock Generation Circuit) can be used for debugging purpose to check if this solution is effective in improving the LOCO accuracy.\nFigure.1 Solution block diagram\nSolution flowchart:\nFigure.2 Flow of clock correction using CAC module\nKey points:\nThe LOCO frequency is adjusted by changing the user trimming register is to be adjusted by +1 or -1 depending on number comparison between the CAC counter value and predefined threshold values.\nDemo Project:\nThe attached project is for RA2E1 and it demonstrates the LOCO clock frequency accuracy correction explained above. All processes will be executed sequentially as shown in Figure.3, but the on-board user switch SW1 is to be used to trigger to next step. The running logs can be seen in the SEGGER RTT viewer (Figure.4). Note that, the LOCO frequency should be close to the typical value at room temperature (25°C); hence, the demo project is unlikely to trigger the clock correction. In order to test this demo project, you will need to put the MCU in an enough high (or cold) temperature to cause the frequency deviation on LOCO.\nFigure.3 Demo application flowchart\nNote:\nThe correction target clock can be set in loco_clock_correction.c.\nLEDs indicate the application running state.\nLED1: Blinks when the clock correction is completed.\nLED3: Turns on when an API error occur.\nFigure.4 The example of RTT viewer logs"
+      },
+      {
+        "type": "text",
+        "content": "This article describes how to improve the LOCO (Low-speed On-Chip Oscillator) clock accuracy (±15%) using the HOCO (High-speed On-Chip Oscillator) with ±1% accuracy as a reference clock along with the CAC (Clock Frequency Accuracy Measurement Circuit) peripheral module and the LOCO user trimming control register."
+      },
+      {
+        "type": "text",
+        "content": "This solution uses the following hardware peripherals modules and is able to compensate the LOCO accuracy within around ±4% (Note: this does not mean absolute 4% is guaranteed. Please evaluate it with your actual board).\nLOCO User Trimming Register (LOCOUTCR)\nLOCOUTCR allows the user to change the LOCO frequency. In the case of RA2 MCUs, by adding ±1 to this register, the clock will be changed around ±4% (Note: 4% is not a guaranteed value. Please evaluate it with your actual board).\nClock Frequency Accuracy Measurement Circuit (CAC)\nThe CAC can count a clock source against a reference clock. This can be used to determine if the frequency deviation of the clock source is in an allowable range. The measurement target and reference clocks are selectable, and the division ratio can be set. In this solution, the LOCO is the clock source and the HOCO is the reference clock to determine the LOCO frequency deviation, but since the clock difference between HOCO and LOCO is large, so the following clock source selection will be used.\nTarget clock to be measured: LOCO divided by 32\nReference clock: HOCO divided by 32\nCLKOUT (just for debugging purpose)\nThe CLKOUT of the CGC (Clock Generation Circuit) can be used for debugging purpose to check if this solution is effective in improving the LOCO accuracy.\nFigure.1 Solution block diagram\nSolution flowchart:\nFigure.2 Flow of clock correction using CAC module\nKey points:\nThe LOCO frequency is adjusted by changing the user trimming register is to be adjusted by +1 or -1 depending on number comparison between the CAC counter value and predefined threshold values.\nDemo Project:\nThe attached project is for RA2E1 and it demonstrates the LOCO clock frequency accuracy correction explained above. All processes will be executed sequentially as shown in Figure.3, but the on-board user switch SW1 is to be used to trigger to next step. The running logs can be seen in the SEGGER RTT viewer (Figure.4). Note that, the LOCO frequency should be close to the typical value at room temperature (25°C); hence, the demo project is unlikely to trigger the clock correction. In order to test this demo project, you will need to put the MCU in an enough high (or cold) temperature to cause the frequency deviation on LOCO.\nFigure.3 Demo application flowchart\nNote:\nThe correction target clock can be set in loco_clock_correction.c.\nLEDs indicate the application running state.\nLED1: Blinks when the clock correction is completed.\nLED3: Turns on when an API error occur.\nFigure.4 The example of RTT viewer logs"
+      },
+      {
+        "type": "text",
+        "content": "This solution uses the following hardware peripherals modules and is able to compensate the LOCO accuracy within around ±4% (Note: this does not mean absolute 4% is guaranteed. Please evaluate it with your actual board)."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/362849-1.png",
+          "alt_text": "",
+          "width": "522",
+          "height": "292",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/7aceec3deee8e79eff81311622276878/images/d0e9633087841b3090316e79fe7ffd50.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure.1 Solution block diagram"
+      },
+      {
+        "type": "text",
+        "content": "Figure.2 Flow of clock correction using CAC module\nKey points:\nThe LOCO frequency is adjusted by changing the user trimming register is to be adjusted by +1 or -1 depending on number comparison between the CAC counter value and predefined threshold values.\nDemo Project:\nThe attached project is for RA2E1 and it demonstrates the LOCO clock frequency accuracy correction explained above. All processes will be executed sequentially as shown in Figure.3, but the on-board user switch SW1 is to be used to trigger to next step. The running logs can be seen in the SEGGER RTT viewer (Figure.4). Note that, the LOCO frequency should be close to the typical value at room temperature (25°C); hence, the demo project is unlikely to trigger the clock correction. In order to test this demo project, you will need to put the MCU in an enough high (or cold) temperature to cause the frequency deviation on LOCO.\nFigure.3 Demo application flowchart\nNote:\nThe correction target clock can be set in loco_clock_correction.c.\nLEDs indicate the application running state.\nLED1: Blinks when the clock correction is completed.\nLED3: Turns on when an API error occur.\nFigure.4 The example of RTT viewer logs"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/362849-2.png",
+          "alt_text": "",
+          "width": "561",
+          "height": "543",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/7aceec3deee8e79eff81311622276878/images/ed2b24bb9d41792ac5d3323855d696e8.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure.2 Flow of clock correction using CAC module"
+      },
+      {
+        "type": "text",
+        "content": "Key points:"
+      },
+      {
+        "type": "text",
+        "content": "The LOCO frequency is adjusted by changing the user trimming register is to be adjusted by +1 or -1 depending on number comparison between the CAC counter value and predefined threshold values."
+      },
+      {
+        "type": "text",
+        "content": "The attached project is for RA2E1 and it demonstrates the LOCO clock frequency accuracy correction explained above. All processes will be executed sequentially as shown in Figure.3, but the on-board user switch SW1 is to be used to trigger to next step. The running logs can be seen in the SEGGER RTT viewer (Figure.4). Note that, the LOCO frequency should be close to the typical value at room temperature (25°C); hence, the demo project is unlikely to trigger the clock correction. In order to test this demo project, you will need to put the MCU in an enough high (or cold) temperature to cause the frequency deviation on LOCO.\nFigure.3 Demo application flowchart\nNote:\nThe correction target clock can be set in loco_clock_correction.c.\nLEDs indicate the application running state.\nLED1: Blinks when the clock correction is completed.\nLED3: Turns on when an API error occur.\nFigure.4 The example of RTT viewer logs"
+      },
+      {
+        "type": "text",
+        "content": "The attached project is for RA2E1 and it demonstrates the LOCO clock frequency accuracy correction explained above. All processes will be executed sequentially as shown in Figure.3, but the on-board user switch SW1 is to be used to trigger to next step. The running logs can be seen in the SEGGER RTT viewer (Figure.4). Note that, the LOCO frequency should be close to the typical value at room temperature (25°C); hence, the demo project is unlikely to trigger the clock correction. In order to test this demo project, you will need to put the MCU in an enough high (or cold) temperature to cause the frequency deviation on LOCO."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/362849-3.png",
+          "alt_text": "",
+          "width": "254",
+          "height": "348",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/7aceec3deee8e79eff81311622276878/images/3eb6c856b1a7aad30a11382338061c7e.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure.3 Demo application flowchart"
+      },
+      {
+        "type": "text",
+        "content": "Note:"
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/362849-4.png",
+          "alt_text": "",
+          "width": "730",
+          "height": "663",
+          "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/7aceec3deee8e79eff81311622276878/images/7f9f15227d30668f9c051b22f623f8d7.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Figure.4 The example of RTT viewer logs"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA2 MCUs"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA2 MCUs"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA2 MCUs"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/362849-1.png",
+        "alt_text": "",
+        "width": "522",
+        "height": "292",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/7aceec3deee8e79eff81311622276878/images/d0e9633087841b3090316e79fe7ffd50.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/362849-2.png",
+        "alt_text": "",
+        "width": "561",
+        "height": "543",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/7aceec3deee8e79eff81311622276878/images/ed2b24bb9d41792ac5d3323855d696e8.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/362849-3.png",
+        "alt_text": "",
+        "width": "254",
+        "height": "348",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/7aceec3deee8e79eff81311622276878/images/3eb6c856b1a7aad30a11382338061c7e.png"
+      },
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/362849-4.png",
+        "alt_text": "",
+        "width": "730",
+        "height": "663",
+        "local_path": "data/categories/ra_family/ra_and_fsp_technical_articles/7aceec3deee8e79eff81311622276878/images/7f9f15227d30668f9c051b22f623f8d7.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA2 MCUs"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA2 MCUs"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20793522"
+      }
+    ]
+  }
+}

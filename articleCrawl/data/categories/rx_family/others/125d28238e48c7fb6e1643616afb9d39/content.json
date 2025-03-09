@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21246426",
+    "title": "How to enable the multiple Interrupt in an RX-family product",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:23:38.921077"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there a recommended method to enable the multiple Interrupt using the Firmware Integration Technology (FIT) of an RX-family product?\nAnswer:\nEnable the nesting of interrupts by executing R_BSP_InterruptsEnable() to set the I flag to 1 (enable an interrupt) in the interrupt function. \nSuitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "Is there a recommended method to enable the multiple Interrupt using the Firmware Integration Technology (FIT) of an RX-family product?"
+      },
+      {
+        "type": "text",
+        "content": "Is there a recommended method to enable the multiple Interrupt using the Firmware Integration Technology (FIT) of an RX-family product?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nEnable the nesting of interrupts by executing R_BSP_InterruptsEnable() to set the I flag to 1 (enable an interrupt) in the interrupt function. \nSuitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "Enable the nesting of interrupts by executing R_BSP_InterruptsEnable() to set the I flag to 1 (enable an interrupt) in the interrupt function."
+      },
+      {
+        "type": "text",
+        "content": "Enable the nesting of interrupts by executing R_BSP_InterruptsEnable() to set the I flag to 1 (enable an interrupt) in the interrupt function."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/19997175"
+      }
+    ]
+  }
+}

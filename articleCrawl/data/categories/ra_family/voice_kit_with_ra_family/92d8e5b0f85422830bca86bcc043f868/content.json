@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20536982",
+    "title": "RA Family: How are signals from analog microphones amplified ?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:41:19.562908"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow are signals from analog microphones amplified ?\nAnswer:\nAnalog microphones pass through Renesas READ2302GSP OPAMP before connecting to analog interface on the microcontroller.\nSuitable Products\nMCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+      },
+      {
+        "type": "text",
+        "content": "How are signals from analog microphones amplified ?"
+      },
+      {
+        "type": "text",
+        "content": "How are signals from analog microphones amplified ?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nAnalog microphones pass through Renesas READ2302GSP OPAMP before connecting to analog interface on the microcontroller.\nSuitable Products\nMCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+      },
+      {
+        "type": "text",
+        "content": "Analog microphones pass through Renesas READ2302GSP OPAMP before connecting to analog interface on the microcontroller."
+      },
+      {
+        "type": "text",
+        "content": "Analog microphones pass through Renesas READ2302GSP OPAMP before connecting to analog interface on the microcontroller."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nMCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "MCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "MCU : RA4E1 or RA6E1\nLDO : RAA214220\nOp-Amp : READ2302G\nQSPI : AT25SF641B"
+    ],
+    "links": [
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20545076"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20545087"
+      }
+    ]
+  }
+}

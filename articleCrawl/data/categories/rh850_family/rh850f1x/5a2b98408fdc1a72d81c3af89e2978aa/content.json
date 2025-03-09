@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20364148",
+    "title": "RH850/F1x: Where can I find dr7f701621_irq.h, dr7f701621_startup.850 and dr7f701621.ld files or how to generate them?",
+    "last_updated": "2022-01-02",
+    "extracted_at": "2025-03-09T00:26:35.466113"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhere can I find dr7f701621_irq.h, dr7f701621_startup.850 and dr7f701621.ld files or how to generate them?\nAnswer:\nplease go to the following location:\nwww.renesas.eu/update\nThere you must select and download the device files:\nDF-RH850F1K-EE_V120_1.zip\nDF-RH850F1K-EE_V120_1.txt\n  Suitable Products\nRH850/F1x"
+      },
+      {
+        "type": "text",
+        "content": "Where can I find dr7f701621_irq.h, dr7f701621_startup.850 and dr7f701621.ld files or how to generate them?"
+      },
+      {
+        "type": "text",
+        "content": "Where can I find dr7f701621_irq.h, dr7f701621_startup.850 and dr7f701621.ld files or how to generate them?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nplease go to the following location:\nwww.renesas.eu/update\nThere you must select and download the device files:\nDF-RH850F1K-EE_V120_1.zip\nDF-RH850F1K-EE_V120_1.txt\n  Suitable Products\nRH850/F1x"
+      },
+      {
+        "type": "text",
+        "content": "please go to the following location:\nwww.renesas.eu/update\nThere you must select and download the device files:\nDF-RH850F1K-EE_V120_1.zip\nDF-RH850F1K-EE_V120_1.txt"
+      },
+      {
+        "type": "text",
+        "content": "please go to the following location:\nwww.renesas.eu/update"
+      },
+      {
+        "type": "text",
+        "content": "There you must select and download the device files:\nDF-RH850F1K-EE_V120_1.zip\nDF-RH850F1K-EE_V120_1.txt"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRH850/F1x"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RH850/F1x"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RH850/F1x"
+    ],
+    "links": [
+      {
+        "text": "www.renesas.eu/update",
+        "url": "http://www.renesas.eu/update?oc=DF-RH850-GHS#packageInfo"
+      }
+    ]
+  }
+}

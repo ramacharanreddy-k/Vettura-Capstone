@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21079881",
+    "title": "RA Family: Quick FSP 4.6.0 Labs: Using RTT for Output",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:12:10.580954"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "This Quick FSP 4.6.0 Lab demonstrates how to use the Segger RTT tool to print output from the target application to a host PC using the RTT Viewer. A set of target application API functions controls communication with RTT running on the host PC. This example project demonstrates the use of the RTT Viewer and a few of the common RTT API functions on the target application."
+      },
+      {
+        "type": "text",
+        "content": "This Quick FSP Lab is best done after completing the Introduction Quick FSP Lab, but if you are even somewhat experienced with e2 studio and FSP you should be able to complete this lab without doing the Introduction lab first."
+      },
+      {
+        "type": "text",
+        "content": "Just follow along with the step by step guide, and using the importable project file for your target kit, attached below to complete the lab. \nThe complete list of all Quick FSP 4.6.0 Labs is available here."
+      }
+    ],
+    "images": [],
+    "tables": [],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [],
+    "links": [
+      {
+        "text": "here.",
+        "url": "https://en-support.renesas.com/knowledgeBase/21074267"
+      }
+    ]
+  }
+}

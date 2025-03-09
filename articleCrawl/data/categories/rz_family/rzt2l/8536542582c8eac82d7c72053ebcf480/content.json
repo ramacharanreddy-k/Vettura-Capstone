@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20853187",
+    "title": "RZ/T2L: What operating systems are supported?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:49:49.939457"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat operating systems are supported?\nAnswer:\nFreeRTOS is supported. \nThe source code can be generated with Flexible Software Package (FSP).\nSuitable Products\nRZ/T2L"
+      },
+      {
+        "type": "text",
+        "content": "What operating systems are supported?"
+      },
+      {
+        "type": "text",
+        "content": "What operating systems are supported?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nFreeRTOS is supported. \nThe source code can be generated with Flexible Software Package (FSP).\nSuitable Products\nRZ/T2L"
+      },
+      {
+        "type": "text",
+        "content": "FreeRTOS is supported. \nThe source code can be generated with Flexible Software Package (FSP)."
+      },
+      {
+        "type": "text",
+        "content": "FreeRTOS is supported. \nThe source code can be generated with Flexible Software Package (FSP)."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/T2L"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/T2L"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/T2L"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20853106"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20855825"
+      }
+    ]
+  }
+}

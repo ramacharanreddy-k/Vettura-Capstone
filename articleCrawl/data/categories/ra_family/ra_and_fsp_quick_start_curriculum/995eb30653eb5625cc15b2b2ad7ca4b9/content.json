@@ -1,0 +1,358 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20522699",
+    "title": "RA and FSP Curriculum: I-003 Introduction to FSP FreeRTOS Lab",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:11:33.337411"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "This introductory curriculum course is a hands-on lab that introduces you to the basics of using FSP for FreeRTOS based development. It covers the key features and their uses giving you the needed background to begin FreeRTOS based projects for your specific application.\nI-003 Introduction to FSP FreeRTOS- an overview presentation covering the key features of FreeRTOS and a hands-on lab using FSP and the EK-RA6M4 or EK-RA4M2 kit. The lab illustrates the FSP implementation of key RTOS elements such as: threads/tasks, priorities,  task handles, task properties, message queues, interrupts and semaphores, queues and interrupts, mutexes and priority inversion, and event groups.  \n  The hands-on lab materials include an introductory presentation, the PDF lab guide, the lab projects (one for each section of the lab) and the associated JLink driver. You will need to have the EK-RA6M4 or EK-RA4M2 kit as well as FSP installed prior to starting the lab. Click on the links below to find the relevant information.\nFlexible Software Package (FSP) | Renesas\nEK-RA4M2 Kit\nEK-RA6M4 Kit\n  You can find all the course material in a single zip file depending on the version of FSP and kit you are interested in:\nFor EK-RA6M4\nFSP 4.5.0\nZip file is located here: \nI-003 Introduction to FSP FreeRTOS FSP (4.5.0) (EK-RA6M4) - Files - RA MCU - Renesas Engineering Community\n  For EK-RA4M2\nFSP 4.5.0\nZip file is located here: \nI-003 Introduction to FSP FreeRTOS Course (4.5.0) - Files - RA MCU - Renesas Community\n  FSP 4.3.0\nZip file is located here: \nI-003 Introduction to FSP FreeRTOS Course (4.3.0) - Files - RA MCU - Renesas Community\n  FSP 4.0.0\nZip file is located here: \nI-003 Introduction to FSP FreeRTOS Course (4.0.0) - Files - RA MCU - Renesas Community\n  FSP 3.6.0\nZip file is located here: \nI-003 Introduction to FSP FreeRTOS Course (3.6.0) - Files - RA MCU - Renesas Community\n    All Introductory RA and FSP courses are listed here.\n  Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "This introductory curriculum course is a hands-on lab that introduces you to the basics of using FSP for FreeRTOS based development. It covers the key features and their uses giving you the needed background to begin FreeRTOS based projects for your specific application.\nI-003 Introduction to FSP FreeRTOS- an overview presentation covering the key features of FreeRTOS and a hands-on lab using FSP and the EK-RA6M4 or EK-RA4M2 kit. The lab illustrates the FSP implementation of key RTOS elements such as: threads/tasks, priorities,  task handles, task properties, message queues, interrupts and semaphores, queues and interrupts, mutexes and priority inversion, and event groups.  \n  The hands-on lab materials include an introductory presentation, the PDF lab guide, the lab projects (one for each section of the lab) and the associated JLink driver. You will need to have the EK-RA6M4 or EK-RA4M2 kit as well as FSP installed prior to starting the lab. Click on the links below to find the relevant information.\nFlexible Software Package (FSP) | Renesas\nEK-RA4M2 Kit\nEK-RA6M4 Kit\n  You can find all the course material in a single zip file depending on the version of FSP and kit you are interested in:\nFor EK-RA6M4\nFSP 4.5.0\nZip file is located here: \nI-003 Introduction to FSP FreeRTOS FSP (4.5.0) (EK-RA6M4) - Files - RA MCU - Renesas Engineering Community\n  For EK-RA4M2\nFSP 4.5.0\nZip file is located here: \nI-003 Introduction to FSP FreeRTOS Course (4.5.0) - Files - RA MCU - Renesas Community\n  FSP 4.3.0\nZip file is located here: \nI-003 Introduction to FSP FreeRTOS Course (4.3.0) - Files - RA MCU - Renesas Community\n  FSP 4.0.0\nZip file is located here: \nI-003 Introduction to FSP FreeRTOS Course (4.0.0) - Files - RA MCU - Renesas Community\n  FSP 3.6.0\nZip file is located here: \nI-003 Introduction to FSP FreeRTOS Course (3.6.0) - Files - RA MCU - Renesas Community\n    All Introductory RA and FSP courses are listed here.\n  Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "This introductory curriculum course is a hands-on lab that introduces you to the basics of using FSP for FreeRTOS based development. It covers the key features and their uses giving you the needed background to begin FreeRTOS based projects for your specific application."
+      },
+      {
+        "type": "text",
+        "content": "I-003 Introduction to FSP FreeRTOS- an overview presentation covering the key features of FreeRTOS and a hands-on lab using FSP and the EK-RA6M4 or EK-RA4M2 kit. The lab illustrates the FSP implementation of key RTOS elements such as: threads/tasks, priorities,  task handles, task properties, message queues, interrupts and semaphores, queues and interrupts, mutexes and priority inversion, and event groups."
+      },
+      {
+        "type": "text",
+        "content": "I-003 Introduction to FSP FreeRTOS- an overview presentation covering the key features of FreeRTOS and a hands-on lab using FSP and the EK-RA6M4 or EK-RA4M2 kit. The lab illustrates the FSP implementation of key RTOS elements such as: threads/tasks, priorities,  task handles, task properties, message queues, interrupts and semaphores, queues and interrupts, mutexes and priority inversion, and event groups."
+      },
+      {
+        "type": "text",
+        "content": "I-003 Introduction to FSP FreeRTOS-"
+      },
+      {
+        "type": "text",
+        "content": "an overview presentation covering the key features of FreeRTOS and a hands-on lab using FSP and the EK-RA6M4 or EK-RA4M2 kit. The lab illustrates the FSP implementation of key RTOS elements such as: threads/tasks, priorities,  task handles, task properties, message queues, interrupts and semaphores, queues and interrupts, mutexes and priority inversion, and event groups."
+      },
+      {
+        "type": "text",
+        "content": "The hands-on lab materials include an introductory presentation, the PDF lab guide, the lab projects (one for each section of the lab) and the associated JLink driver. You will need to have the EK-RA6M4 or EK-RA4M2 kit as well as FSP installed prior to starting the lab. Click on the links below to find the relevant information."
+      },
+      {
+        "type": "text",
+        "content": "The hands-on lab materials include an introductory presentation, the PDF lab guide, the lab projects (one for each section of the lab) and the associated JLink driver. You will need to have the EK-RA6M4 or EK-RA4M2 kit as well as FSP installed prior to starting the lab. Click on the links below to find the relevant information."
+      },
+      {
+        "type": "text",
+        "content": "The hands-on lab materials include an introductory presentation, the PDF lab guide, the lab projects (one for each section of the lab) and the associated JLink driver. You will need to have the EK-RA6M4 or EK-RA4M2 kit as well as FSP installed prior to starting the lab. Click on the links below to find the relevant information."
+      },
+      {
+        "type": "text",
+        "content": "Flexible Software Package (FSP) | Renesas"
+      },
+      {
+        "type": "text",
+        "content": "EK-RA4M2 Kit"
+      },
+      {
+        "type": "text",
+        "content": "EK-RA6M4 Kit"
+      },
+      {
+        "type": "text",
+        "content": "You can find all the course material in a single zip file depending on the version of FSP and kit you are interested in:"
+      },
+      {
+        "type": "text",
+        "content": "You can find all the course material in a single zip file depending on the version of FSP and kit you are interested in:"
+      },
+      {
+        "type": "text",
+        "content": "You can find all the course material in a single zip file depending on the version of FSP and kit you are interested in:"
+      },
+      {
+        "type": "text",
+        "content": "For EK-RA6M4"
+      },
+      {
+        "type": "text",
+        "content": "For EK-RA6M4"
+      },
+      {
+        "type": "text",
+        "content": "For EK-RA6M4"
+      },
+      {
+        "type": "text",
+        "content": "FSP 4.5.0"
+      },
+      {
+        "type": "text",
+        "content": "FSP 4.5.0"
+      },
+      {
+        "type": "text",
+        "content": "FSP 4.5.0"
+      },
+      {
+        "type": "text",
+        "content": "Zip file is located here:"
+      },
+      {
+        "type": "text",
+        "content": "Zip file is located here:"
+      },
+      {
+        "type": "text",
+        "content": "Zip file is located here:"
+      },
+      {
+        "type": "text",
+        "content": "I-003 Introduction to FSP FreeRTOS FSP (4.5.0) (EK-RA6M4) - Files - RA MCU - Renesas Engineering Community"
+      },
+      {
+        "type": "text",
+        "content": "I-003 Introduction to FSP FreeRTOS FSP (4.5.0) (EK-RA6M4) - Files - RA MCU - Renesas Engineering Community"
+      },
+      {
+        "type": "text",
+        "content": "For EK-RA4M2"
+      },
+      {
+        "type": "text",
+        "content": "For EK-RA4M2"
+      },
+      {
+        "type": "text",
+        "content": "For EK-RA4M2"
+      },
+      {
+        "type": "text",
+        "content": "FSP 4.5.0"
+      },
+      {
+        "type": "text",
+        "content": "FSP 4.5.0"
+      },
+      {
+        "type": "text",
+        "content": "FSP 4.5.0"
+      },
+      {
+        "type": "text",
+        "content": "Zip file is located here:"
+      },
+      {
+        "type": "text",
+        "content": "Zip file is located here:"
+      },
+      {
+        "type": "text",
+        "content": "Zip file is located here:"
+      },
+      {
+        "type": "text",
+        "content": "I-003 Introduction to FSP FreeRTOS Course (4.5.0) - Files - RA MCU - Renesas Community"
+      },
+      {
+        "type": "text",
+        "content": "I-003 Introduction to FSP FreeRTOS Course (4.5.0) - Files - RA MCU - Renesas Community"
+      },
+      {
+        "type": "text",
+        "content": "I-003 Introduction to FSP FreeRTOS Course (4.5.0) - Files - RA MCU - Renesas Community"
+      },
+      {
+        "type": "text",
+        "content": "FSP 4.3.0"
+      },
+      {
+        "type": "text",
+        "content": "FSP 4.3.0"
+      },
+      {
+        "type": "text",
+        "content": "FSP 4.3.0"
+      },
+      {
+        "type": "text",
+        "content": "Zip file is located here:"
+      },
+      {
+        "type": "text",
+        "content": "Zip file is located here:"
+      },
+      {
+        "type": "text",
+        "content": "Zip file is located here:"
+      },
+      {
+        "type": "text",
+        "content": "I-003 Introduction to FSP FreeRTOS Course (4.3.0) - Files - RA MCU - Renesas Community"
+      },
+      {
+        "type": "text",
+        "content": "I-003 Introduction to FSP FreeRTOS Course (4.3.0) - Files - RA MCU - Renesas Community"
+      },
+      {
+        "type": "text",
+        "content": "I-003 Introduction to FSP FreeRTOS Course (4.3.0) - Files - RA MCU - Renesas Community"
+      },
+      {
+        "type": "text",
+        "content": "FSP 4.0.0"
+      },
+      {
+        "type": "text",
+        "content": "FSP 4.0.0"
+      },
+      {
+        "type": "text",
+        "content": "FSP 4.0.0"
+      },
+      {
+        "type": "text",
+        "content": "Zip file is located here:"
+      },
+      {
+        "type": "text",
+        "content": "Zip file is located here:"
+      },
+      {
+        "type": "text",
+        "content": "Zip file is located here:"
+      },
+      {
+        "type": "text",
+        "content": "I-003 Introduction to FSP FreeRTOS Course (4.0.0) - Files - RA MCU - Renesas Community"
+      },
+      {
+        "type": "text",
+        "content": "I-003 Introduction to FSP FreeRTOS Course (4.0.0) - Files - RA MCU - Renesas Community"
+      },
+      {
+        "type": "text",
+        "content": "I-003 Introduction to FSP FreeRTOS Course (4.0.0) - Files - RA MCU - Renesas Community"
+      },
+      {
+        "type": "text",
+        "content": "FSP 3.6.0"
+      },
+      {
+        "type": "text",
+        "content": "FSP 3.6.0"
+      },
+      {
+        "type": "text",
+        "content": "FSP 3.6.0"
+      },
+      {
+        "type": "text",
+        "content": "Zip file is located here:"
+      },
+      {
+        "type": "text",
+        "content": "Zip file is located here:"
+      },
+      {
+        "type": "text",
+        "content": "Zip file is located here:"
+      },
+      {
+        "type": "text",
+        "content": "I-003 Introduction to FSP FreeRTOS Course (3.6.0) - Files - RA MCU - Renesas Community"
+      },
+      {
+        "type": "text",
+        "content": "I-003 Introduction to FSP FreeRTOS Course (3.6.0) - Files - RA MCU - Renesas Community"
+      },
+      {
+        "type": "text",
+        "content": "I-003 Introduction to FSP FreeRTOS Course (3.6.0) - Files - RA MCU - Renesas Community"
+      },
+      {
+        "type": "text",
+        "content": "All Introductory RA and FSP courses are listed here."
+      },
+      {
+        "type": "text",
+        "content": "Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA MCU"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA MCU"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA MCU"
+      },
+      {
+        "type": "text",
+        "content": "Source:    NA"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA MCU"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA MCU"
+    ],
+    "links": [
+      {
+        "text": "Flexible Software Package (FSP) | Renesas",
+        "url": "https://www.renesas.com/us/en/software-tool/flexible-software-package-fsp"
+      },
+      {
+        "text": "EK-RA4M2 Kit",
+        "url": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/ra-cortex-m-mcus/ek-ra4m2-evaluation-kit-ra4m2-mcu-group"
+      },
+      {
+        "text": "EK-RA6M4 Kit",
+        "url": "https://www.renesas.com/us/en/products/microcontrollers-microprocessors/ra-cortex-m-mcus/ek-ra6m4-evaluation-kit-ra6m4-mcu-group"
+      },
+      {
+        "text": "I-003 Introduction to FSP FreeRTOS FSP (4.5.0) (EK-RA6M4) - Files - RA MCU - Renesas Engineering Community",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3507"
+      },
+      {
+        "text": "I-003 Introduction to FSP FreeRTOS Course (4.5.0) - Files - RA MCU - Renesas Community",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3506"
+      },
+      {
+        "text": "I-003 Introduction to FSP FreeRTOS Course (4.3.0) - Files - RA MCU - Renesas Community",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3497"
+      },
+      {
+        "text": "I-003 Introduction to FSP FreeRTOS Course (4.0.0) - Files - RA MCU - Renesas Community",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3483"
+      },
+      {
+        "text": "I-003 Introduction to FSP FreeRTOS Course (3.6.0) - Files - RA MCU - Renesas Community",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3480"
+      },
+      {
+        "text": "here",
+        "url": "https://en-support.renesas.com/knowledgeBase/20522329"
+      }
+    ]
+  }
+}

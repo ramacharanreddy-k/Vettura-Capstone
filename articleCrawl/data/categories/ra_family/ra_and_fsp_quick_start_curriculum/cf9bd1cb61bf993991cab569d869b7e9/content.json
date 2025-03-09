@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20749953",
+    "title": "RA and FSP Curriculum: I-005 Introduction to Keil MDK for RA",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:11:40.854937"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "This introductory curriculum course provides the basics needed to develop FSP based projects using IAR and EWARM. \nI-005 Introduction to Keil MDK for RA for FSP 4.3.0- an overview presentation covering the key topics needed to select target devices and boards, create and use projects, include and configure project modules, and debug a simple project. The presentation includes a step-by-step process that shows the student how to install, create a project, compile and debug a design.\n  The course PDF file is attached below.\n  A version for FSP 4.0.0 is also attached below.\n  All Introductory RA and FSP courses are listed here.\n  Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "This introductory curriculum course provides the basics needed to develop FSP based projects using IAR and EWARM. \nI-005 Introduction to Keil MDK for RA for FSP 4.3.0- an overview presentation covering the key topics needed to select target devices and boards, create and use projects, include and configure project modules, and debug a simple project. The presentation includes a step-by-step process that shows the student how to install, create a project, compile and debug a design.\n  The course PDF file is attached below.\n  A version for FSP 4.0.0 is also attached below.\n  All Introductory RA and FSP courses are listed here.\n  Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "This introductory curriculum course provides the basics needed to develop FSP based projects using IAR and EWARM."
+      },
+      {
+        "type": "text",
+        "content": "I-005 Introduction to Keil MDK for RA for FSP 4.3.0- an overview presentation covering the key topics needed to select target devices and boards, create and use projects, include and configure project modules, and debug a simple project. The presentation includes a step-by-step process that shows the student how to install, create a project, compile and debug a design."
+      },
+      {
+        "type": "text",
+        "content": "I-005 Introduction to Keil MDK for RA for FSP 4.3.0- an overview presentation covering the key topics needed to select target devices and boards, create and use projects, include and configure project modules, and debug a simple project. The presentation includes a step-by-step process that shows the student how to install, create a project, compile and debug a design."
+      },
+      {
+        "type": "text",
+        "content": "I-005 Introduction to Keil MDK for RA for FSP 4.3.0-"
+      },
+      {
+        "type": "text",
+        "content": "an overview presentation covering the key topics needed to select target devices and boards, create and use projects, include and configure project modules, and debug a simple project. The presentation includes a step-by-step process that shows the student how to install, create a project, compile and debug a design."
+      },
+      {
+        "type": "text",
+        "content": "The course PDF file is attached below."
+      },
+      {
+        "type": "text",
+        "content": "A version for FSP 4.0.0 is also attached below."
+      },
+      {
+        "type": "text",
+        "content": "All Introductory RA and FSP courses are listed here."
+      },
+      {
+        "type": "text",
+        "content": "Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA MCU"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA MCU"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA MCU"
+      },
+      {
+        "type": "text",
+        "content": "Source:    NA"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA MCU"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA MCU"
+    ],
+    "links": [
+      {
+        "text": "here",
+        "url": "https://en-support.renesas.com/knowledgeBase/20522329"
+      }
+    ]
+  }
+}

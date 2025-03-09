@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20797630",
+    "title": "RA Family: Cannot build FSP Example Project",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:24:53.234858"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCannot build FSP Example Project\nAnswer:\nFSP Example Projects that are provided for each FSP version may contain projects not functional at the time of release. Known Issues of FSP Example Projects are listed on the FSP Example Project releases page (https://github.com/renesas/ra-fsp-examples/releases) on GitHub. Please check the “Known Issues” section first for the FSP Example Project version you are looking for before using it.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Cannot build FSP Example Project"
+      },
+      {
+        "type": "text",
+        "content": "Cannot build FSP Example Project"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nFSP Example Projects that are provided for each FSP version may contain projects not functional at the time of release. Known Issues of FSP Example Projects are listed on the FSP Example Project releases page (https://github.com/renesas/ra-fsp-examples/releases) on GitHub. Please check the “Known Issues” section first for the FSP Example Project version you are looking for before using it.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "FSP Example Projects that are provided for each FSP version may contain projects not functional at the time of release. Known Issues of FSP Example Projects are listed on the FSP Example Project releases page (https://github.com/renesas/ra-fsp-examples/releases) on GitHub. Please check the “Known Issues” section first for the FSP Example Project version you are looking for before using it.\nSuitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "FSP Example Projects that are provided for each FSP version may contain projects not functional at the time of release. Known Issues of FSP Example Projects are listed on the FSP Example Project releases page (https://github.com/renesas/ra-fsp-examples/releases) on GitHub. Please check the “Known Issues” section first for the FSP Example Project version you are looking for before using it."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA and FSP"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA and FSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA and FSP"
+    ],
+    "links": [
+      {
+        "text": "https://github.com/renesas/ra-fsp-examples/releases",
+        "url": "https://github.com/renesas/ra-fsp-examples/releases"
+      },
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20793547"
+      }
+    ]
+  }
+}

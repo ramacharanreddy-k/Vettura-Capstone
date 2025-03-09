@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21250570",
+    "title": "RA Family: Does Renesas provide a design guide for oscillation circuits?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:13:49.330574"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nDoes Renesas provide a design guide for oscillation circuits?\nAnswer:\nYes, we provide it. Please use the Design Guide for Main Clock Circuit and Sub-Clock Circuit (R01AN7202EJ).\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "Does Renesas provide a design guide for oscillation circuits?"
+      },
+      {
+        "type": "text",
+        "content": "Does Renesas provide a design guide for oscillation circuits?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes, we provide it. Please use the Design Guide for Main Clock Circuit and Sub-Clock Circuit (R01AN7202EJ).\nSuitable Products\nRA"
+      },
+      {
+        "type": "text",
+        "content": "Yes, we provide it. Please use the Design Guide for Main Clock Circuit and Sub-Clock Circuit (R01AN7202EJ).\nSuitable Products"
+      },
+      {
+        "type": "text",
+        "content": "Yes, we provide it. Please use the Design Guide for Main Clock Circuit and Sub-Clock Circuit (R01AN7202EJ)."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      },
+      {
+        "type": "text",
+        "content": "RA"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA"
+    ],
+    "links": [
+      {
+        "text": "Design Guide for Main Clock Circuit and Sub-Clock Circuit (R01AN7202EJ)",
+        "url": "https://www.renesas.com/us/en/document/apn/design-guide-main-clock-circuit-and-sub-clock-circuit-rev100"
+      }
+    ]
+  }
+}

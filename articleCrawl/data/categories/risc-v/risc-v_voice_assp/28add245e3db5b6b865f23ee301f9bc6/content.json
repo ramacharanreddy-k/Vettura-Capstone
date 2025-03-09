@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20855743",
+    "title": "Solution and tools: I can’t find the necessary setup in E2Studio to configure a test project for the Voice HMI ASSP",
+    "last_updated": null,
+    "extracted_at": "2025-03-09T00:26:07.244344"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI can’t find the necessary setup in E2Studio to configure a test project for the Voice HMI ASSP\nAnswer:\nThis ASSP is different from the other general-purpose microcontrollers from Renesas, as it is delivered for mass production with a pre-programmed application included. Therefore, there is no development needed on end user side.\nSuitable Products\nRISC-V Voice ASSP"
+      },
+      {
+        "type": "text",
+        "content": "I can’t find the necessary setup in E2Studio to configure a test project for the Voice HMI ASSP"
+      },
+      {
+        "type": "text",
+        "content": "I can’t find the necessary setup in E2Studio to configure a test project for the Voice HMI ASSP"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThis ASSP is different from the other general-purpose microcontrollers from Renesas, as it is delivered for mass production with a pre-programmed application included. Therefore, there is no development needed on end user side.\nSuitable Products\nRISC-V Voice ASSP"
+      },
+      {
+        "type": "text",
+        "content": "This ASSP is different from the other general-purpose microcontrollers from Renesas, as it is delivered for mass production with a pre-programmed application included. Therefore, there is no development needed on end user side."
+      },
+      {
+        "type": "text",
+        "content": "This ASSP is different from the other general-purpose microcontrollers from Renesas, as it is delivered for mass production with a pre-programmed application included. Therefore, there is no development needed on end user side."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRISC-V Voice ASSP"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RISC-V Voice ASSP"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RISC-V Voice ASSP"
+    ],
+    "links": []
+  }
+}

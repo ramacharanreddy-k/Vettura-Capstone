@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21319165",
+    "title": "RA and FSP Curriculum : High Performance with RA8 Arm Cortex-M85 Helium Lab",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:11:20.423929"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "High Performance with RA8 Arm Cortex-M85 Helium Lab for FSP 5.5.0 -  a hands on lab using FSP 5.5.0 and EK-RA8M1. It uses Arm CMSIS DSP Library and calculates the dot product of two vectors. The Helium version of this function is used to emphasize the performance improvement over using the scalar version of this function. It also utilizes the DTCM and Data cache memory together for further performance improvement."
+      },
+      {
+        "type": "text",
+        "content": "All lab materials are available in a single zip file here."
+      },
+      {
+        "type": "text",
+        "content": "High Performance with RA8 Arm Cortex-M85 Helium Lab for FSP 5.4.0 -  a hands on lab using FSP 5.4.0 and EK-RA8M1. It uses Arm CMSIS DSP Library and calculates the dot product of two vectors. The Helium version of this function is used to emphasize the performance improvement over using the scalar version of this function. It also utilizes the DTCM and Data cache memory together for further performance improvement."
+      },
+      {
+        "type": "text",
+        "content": "All lab materials are available in a single zip file here."
+      },
+      {
+        "type": "text",
+        "content": "High Performance with RA8 Arm Cortex-M85 Helium Lab for FSP 5.2.0 -  a hands on lab using FSP 5.2.0 and EK-RA8M1. It uses Arm CMSIS DSP Library and calculates the dot product of two vectors. The Helium version of this function is used to emphasize the performance improvement over using the scalar version of this function. It also utilizes the DTCM and Data cache memory together for further performance improvement."
+      },
+      {
+        "type": "text",
+        "content": "All lab materials are available in a single zip file here."
+      },
+      {
+        "type": "text",
+        "content": "All Courses"
+      },
+      {
+        "type": "text",
+        "content": "All RA and FSP courses are listed here."
+      },
+      {
+        "type": "text",
+        "content": "Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "Tutorial    workshop    how-to    guide  quickstart  getting started  course"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA8M1, RA8D1, RA8T1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA8M1, RA8D1, RA8T1"
+    ],
+    "links": [
+      {
+        "text": "here",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3524"
+      },
+      {
+        "text": "here",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3523"
+      },
+      {
+        "text": "here.",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files/3518"
+      },
+      {
+        "text": "here.",
+        "url": "https://community.renesas.com/mcu-mpu/ra/m/files"
+      }
+    ]
+  }
+}

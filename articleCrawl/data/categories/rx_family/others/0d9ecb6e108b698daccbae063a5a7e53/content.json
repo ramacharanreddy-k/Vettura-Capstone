@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21246438",
+    "title": "How to create a test mode if a USB compliance test is to be run in host mode",
+    "last_updated": "2024-06-03",
+    "extracted_at": "2025-03-09T00:23:31.806294"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nI want to run a USB compliance test in host mode. In this case, how should I create a test mode?\nAnswer:\n“USB Host and Peripheral Interface Driver” application note\nSpecify the “USB_CFG_COMPLIANCE” configuration setting or see applicable source code.\nFor example, you can see sample code for the RZ/A1H:\nhttps://www.renesas.com/document/scd/rza1h-group-usb-host-human-interface-device-class-driver-hhid-rev100-sample-code?r=467676\nThe “USB_CFG_COMPLIANCE” specification will also be helpful for other devices.\nSuitable Products\nRZ family"
+      },
+      {
+        "type": "text",
+        "content": "I want to run a USB compliance test in host mode. In this case, how should I create a test mode?"
+      },
+      {
+        "type": "text",
+        "content": "I want to run a USB compliance test in host mode. In this case, how should I create a test mode?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\n“USB Host and Peripheral Interface Driver” application note\nSpecify the “USB_CFG_COMPLIANCE” configuration setting or see applicable source code.\nFor example, you can see sample code for the RZ/A1H:\nhttps://www.renesas.com/document/scd/rza1h-group-usb-host-human-interface-device-class-driver-hhid-rev100-sample-code?r=467676\nThe “USB_CFG_COMPLIANCE” specification will also be helpful for other devices.\nSuitable Products\nRZ family"
+      },
+      {
+        "type": "text",
+        "content": "“USB Host and Peripheral Interface Driver” application note\nSpecify the “USB_CFG_COMPLIANCE” configuration setting or see applicable source code.\nFor example, you can see sample code for the RZ/A1H:\nhttps://www.renesas.com/document/scd/rza1h-group-usb-host-human-interface-device-class-driver-hhid-rev100-sample-code?r=467676\nThe “USB_CFG_COMPLIANCE” specification will also be helpful for other devices."
+      },
+      {
+        "type": "text",
+        "content": "“USB Host and Peripheral Interface Driver” application note"
+      },
+      {
+        "type": "text",
+        "content": "Specify the “USB_CFG_COMPLIANCE” configuration setting or see applicable source code."
+      },
+      {
+        "type": "text",
+        "content": "For example, you can see sample code for the RZ/A1H:"
+      },
+      {
+        "type": "text",
+        "content": "https://www.renesas.com/document/scd/rza1h-group-usb-host-human-interface-device-class-driver-hhid-rev100-sample-code?r=467676"
+      },
+      {
+        "type": "text",
+        "content": "The “USB_CFG_COMPLIANCE” specification will also be helpful for other devices."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ family"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ family"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ family"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/document/scd/rza1h-group-usb-host-human-interface-device-class-driver-hhid-rev100-sample-code?r=467676",
+        "url": "https://www.renesas.com/document/scd/rza1h-group-usb-host-human-interface-device-class-driver-hhid-rev100-sample-code?r=467676"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20433330"
+      }
+    ]
+  }
+}

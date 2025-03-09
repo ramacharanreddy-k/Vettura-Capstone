@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "// Open\ng_i2c_master.p_api->open(g_i2c_master.p_ctrl, g_i2c_master.p_cfg);\n  // Switch Slave address to 0x55\ng_i2c_master.p_api->slaveAddressSet(g_i2c_master.p_ctrl, 0x55, I2C_MASTER_ADDR_MODE_7BIT);\n  // Call I2C Write or Read to communicate with Device(0x55)\ng_i2c_master.p_api->write(…);\ng_i2c_master.p_api->read(…);\n  // Switch Slave address to 0x44\ng_i2c_master.p_api->slaveAddressSet(g_i2c_master.p_ctrl, 0x44, I2C_MASTER_ADDR_MODE_7BIT);\n  // Call I2C Write or Read to communicate with Device(0x44)\ng_i2c_master.p_api->write(…);\ng_i2c_master.p_api->read(…);"
+    ]
+  ]
+}

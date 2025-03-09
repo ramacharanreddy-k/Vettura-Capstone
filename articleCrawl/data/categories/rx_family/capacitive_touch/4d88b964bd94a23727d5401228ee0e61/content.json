@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18284480",
+    "title": "What Noise Countermeasures Does Renesas CTSU1 Use?",
+    "last_updated": "2023-10-03",
+    "extracted_at": "2025-03-09T00:07:15.306273"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nWhat noise countermeasures does Renesas CTSU1 use?\nAnswer:\nCTSU1 integrates the following noise countermeasures.\nDedicated power supply for touch\nThe Touch IP MCU's built-in regulator ensures stable detection results even when the MCU power supply wavers.\nReduced noise contamination achieved with low impedance input terminal\nThe SCF (Switched Capacitor Filter) is always connected to the power supply or GND, ensuring the input terminal has low impedance and is therefore sufficiency immune to noise.\nNoise leveling achieved through integration of detection results\nBy integrating the detection result for a set period, the variation in detection can be leveled off, reducing the influence of noise.\nCTSU sensor drive pulse phase shift\nThe Touch IP MCU is equipped with a CTSU sensor drive pulse phase shift circuit. Phase shift prevents synchronization of noise wave highs and lows, further reducing noise influence.\nEdge diffusion of CTSU sensor drive pulse\nBy normalizing the edges of the CTSU sensor drive pulses with asynchronous signals, edge frequency can be diffused and noise influence reduced.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "What noise countermeasures does Renesas CTSU1 use?"
+      },
+      {
+        "type": "text",
+        "content": "What noise countermeasures does Renesas CTSU1 use?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nCTSU1 integrates the following noise countermeasures.\nDedicated power supply for touch\nThe Touch IP MCU's built-in regulator ensures stable detection results even when the MCU power supply wavers.\nReduced noise contamination achieved with low impedance input terminal\nThe SCF (Switched Capacitor Filter) is always connected to the power supply or GND, ensuring the input terminal has low impedance and is therefore sufficiency immune to noise.\nNoise leveling achieved through integration of detection results\nBy integrating the detection result for a set period, the variation in detection can be leveled off, reducing the influence of noise.\nCTSU sensor drive pulse phase shift\nThe Touch IP MCU is equipped with a CTSU sensor drive pulse phase shift circuit. Phase shift prevents synchronization of noise wave highs and lows, further reducing noise influence.\nEdge diffusion of CTSU sensor drive pulse\nBy normalizing the edges of the CTSU sensor drive pulses with asynchronous signals, edge frequency can be diffused and noise influence reduced.\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "CTSU1 integrates the following noise countermeasures.\nDedicated power supply for touch\nThe Touch IP MCU's built-in regulator ensures stable detection results even when the MCU power supply wavers.\nReduced noise contamination achieved with low impedance input terminal\nThe SCF (Switched Capacitor Filter) is always connected to the power supply or GND, ensuring the input terminal has low impedance and is therefore sufficiency immune to noise.\nNoise leveling achieved through integration of detection results\nBy integrating the detection result for a set period, the variation in detection can be leveled off, reducing the influence of noise.\nCTSU sensor drive pulse phase shift\nThe Touch IP MCU is equipped with a CTSU sensor drive pulse phase shift circuit. Phase shift prevents synchronization of noise wave highs and lows, further reducing noise influence.\nEdge diffusion of CTSU sensor drive pulse\nBy normalizing the edges of the CTSU sensor drive pulses with asynchronous signals, edge frequency can be diffused and noise influence reduced."
+      },
+      {
+        "type": "text",
+        "content": "CTSU1 integrates the following noise countermeasures."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792878"
+      }
+    ]
+  }
+}

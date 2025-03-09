@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/20655663",
+    "title": "RZ/Five: Can you tell me what clock generator is used with the evaluation board for the RZ/Five?",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:44:33.073578"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan you tell me what clock generator is used with the evaluation board for the RZ/Five?\nAnswer:\n5P35023B-629NLGI of VersaClock3S is used. EXTAL and audio clock and a clock for each of Ethernet PHY and audio DAC incorporated in the evaluation board are provided. \nhttps://www.renesas.com/us/en/products/clocks-timing/clock-generation/programmable-clocks/5p35023-programmable-versaclock-clock-generator\nSuitable Products\nRZ/Five"
+      },
+      {
+        "type": "text",
+        "content": "Can you tell me what clock generator is used with the evaluation board for the RZ/Five?"
+      },
+      {
+        "type": "text",
+        "content": "Can you tell me what clock generator is used with the evaluation board for the RZ/Five?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\n5P35023B-629NLGI of VersaClock3S is used. EXTAL and audio clock and a clock for each of Ethernet PHY and audio DAC incorporated in the evaluation board are provided. \nhttps://www.renesas.com/us/en/products/clocks-timing/clock-generation/programmable-clocks/5p35023-programmable-versaclock-clock-generator\nSuitable Products\nRZ/Five"
+      },
+      {
+        "type": "text",
+        "content": "5P35023B-629NLGI of VersaClock3S is used. EXTAL and audio clock and a clock for each of Ethernet PHY and audio DAC incorporated in the evaluation board are provided. \nhttps://www.renesas.com/us/en/products/clocks-timing/clock-generation/programmable-clocks/5p35023-programmable-versaclock-clock-generator"
+      },
+      {
+        "type": "text",
+        "content": "5P35023B-629NLGI of VersaClock3S is used. EXTAL and audio clock and a clock for each of Ethernet PHY and audio DAC incorporated in the evaluation board are provided. \nhttps://www.renesas.com/us/en/products/clocks-timing/clock-generation/programmable-clocks/5p35023-programmable-versaclock-clock-generator"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/Five"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese Go to Chinese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Japanese"
+      },
+      {
+        "type": "text",
+        "content": "Go to Chinese"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/Five"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/Five"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/us/en/products/clocks-timing/clock-generation/programmable-clocks/5p35023-programmable-versaclock-clock-generator",
+        "url": "https://www.renesas.com/us/en/products/clocks-timing/clock-generation/programmable-clocks/5p35023-programmable-versaclock-clock-generator"
+      },
+      {
+        "text": "Go to Japanese",
+        "url": "https://ja-support.renesas.com/knowledgeBase/20655671"
+      },
+      {
+        "text": "Go to Chinese",
+        "url": "https://zh-support.renesas.com/knowledgeBase/20655677"
+      }
+    ]
+  }
+}

@@ -1,0 +1,299 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21177409",
+    "title": "RA Devices with SCE9: AES encryption performance difference when C-/S-caches are on/off",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:23:39.352193"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nAES encryption performance difference when C-/S-caches are on/off\nAnswer:\nThis article intends to demonstrate how the performance of RA SCE9 Encryption engine operation can be improved when C-Cache and S-Cache are both enabled. In this case study, the AES-CBC mode and key size of 256 bits are used as a base example for doing the performance comparison. A brief operation flow of SCE9 HW AES Encryption operation and the workspace environment setting are listed below. In addition, the operation time measurement uses either toggling the GPIO output level or DWT cycle counter.\nCompiler: GCC10.3.1\nCompiler Optimization Level: O2 (Optimize more)\nSystem Clock configuration: ICLK=200MHz\nPeripheral Clock configuration: PCLKA=100MHz\nBoard: EK-RA6M4\nThe CPU process time for each step is measured as below based on GPIO output level change:\nMessage size is 2048 bytes:\nHW SCE operation S-Cache C-Cache F-Cache Process time\nHW_SCE_Aes256EncryptDecryptInitSub Enable Enable Enable 23.26us\nHW_SCE_Aes256EncryptDecryptUpdateSub 65.37us\nHW_SCE_Aes256EncryptDecryptFinalSub 3.02us\nWhole AE256 CBC Encryption process 89us\nHW_SCE_Aes256EncryptDecryptInitSub Disable Enable Enable 25.8us\nHW_SCE_Aes256EncryptDecryptUpdateSub 66.8us\nHW_SCE_Aes256EncryptDecryptFinalSub 3.3us\nWhole AE256 CBC Encryption process 95.6us\nHW_SCE_Aes256EncryptDecryptInitSub Disable Disable Enable 34.76us\nHW_SCE_Aes256EncryptDecryptUpdateSub 75.62us\nHW_SCE_Aes256EncryptDecryptFinalSub 4.05us\nWhole AE256 CBC Encryption process 114.3us\n  Message size is 1024 bytes:\nHW SCE operation S-Cache C-Cache F-Cache Process time\nHW_SCE_Aes256EncryptDecryptInitSub Enable Enable Enable 23us\nHW_SCE_Aes256EncryptDecryptUpdateSub 34us\nHW_SCE_Aes256EncryptDecryptFinalSub 2.8us\nWhole AE256 CBC Encryption process 60us\nHW_SCE_Aes256EncryptDecryptInitSub Disable Enable Enable 26us\nHW_SCE_Aes256EncryptDecryptUpdateSub 35.3us\nHW_SCE_Aes256EncryptDecryptFinalSub 3.1us\nWhole AE256 CBC Encryption process 62.82us\nHW_SCE_Aes256EncryptDecryptInitSub Disable Disable Enable 35us\nHW_SCE_Aes256EncryptDecryptUpdateSub 39.8us\nHW_SCE_Aes256EncryptDecryptFinalSub 4.3us\nWhole AE256 CBC Encryption process 78.1us\n  Message size is 256 bytes:\nHW SCE operation S-Cache C-Cache F-Cache Process time\nHW_SCE_Aes256EncryptDecryptInitSub Enable Enable Enable 22.85us\nHW_SCE_Aes256EncryptDecryptUpdateSub 10.4us\nHW_SCE_Aes256EncryptDecryptFinalSub 3us\nWhole AE256 CBC Encryption process 36.05us\nHW_SCE_Aes256EncryptDecryptInitSub Disable Enable Enable 25.9us\nHW_SCE_Aes256EncryptDecryptUpdateSub 11.3us\nHW_SCE_Aes256EncryptDecryptFinalSub 3.25us\nWhole AE256 CBC Encryption process 39.84us\nHW_SCE_Aes256EncryptDecryptInitSub Disable Disable Enable 34.6us\nHW_SCE_Aes256EncryptDecryptUpdateSub 13us\nHW_SCE_Aes256EncryptDecryptFinalSub 4.12us\nWhole AE256 CBC Encryption process 51.22us\n  According to the result, we can identify over 20% performance improvement when both C-Cache and S-Cache are enabled, especially the C-Cache influence. In the default RA base project, the FSP generated start up and system initialization enables the flash cache (F-Cache) and system level instruction cache (C-Cache), and user can enable the system level data cache (S-Cache) based on the requirement. For the design consideration of using S-Cache in an application, please refer to the App Note - Guidelines for Using the S Cache on the System Bus\nReference Attachments:\nExample project on EK-RA6M4 for above performance benchmarking test (below)\nSuitable Products\nRA Devices with SCE9"
+      },
+      {
+        "type": "text",
+        "content": "AES encryption performance difference when C-/S-caches are on/off"
+      },
+      {
+        "type": "text",
+        "content": "AES encryption performance difference when C-/S-caches are on/off"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThis article intends to demonstrate how the performance of RA SCE9 Encryption engine operation can be improved when C-Cache and S-Cache are both enabled. In this case study, the AES-CBC mode and key size of 256 bits are used as a base example for doing the performance comparison. A brief operation flow of SCE9 HW AES Encryption operation and the workspace environment setting are listed below. In addition, the operation time measurement uses either toggling the GPIO output level or DWT cycle counter.\nCompiler: GCC10.3.1\nCompiler Optimization Level: O2 (Optimize more)\nSystem Clock configuration: ICLK=200MHz\nPeripheral Clock configuration: PCLKA=100MHz\nBoard: EK-RA6M4\nThe CPU process time for each step is measured as below based on GPIO output level change:\nMessage size is 2048 bytes:\nHW SCE operation S-Cache C-Cache F-Cache Process time\nHW_SCE_Aes256EncryptDecryptInitSub Enable Enable Enable 23.26us\nHW_SCE_Aes256EncryptDecryptUpdateSub 65.37us\nHW_SCE_Aes256EncryptDecryptFinalSub 3.02us\nWhole AE256 CBC Encryption process 89us\nHW_SCE_Aes256EncryptDecryptInitSub Disable Enable Enable 25.8us\nHW_SCE_Aes256EncryptDecryptUpdateSub 66.8us\nHW_SCE_Aes256EncryptDecryptFinalSub 3.3us\nWhole AE256 CBC Encryption process 95.6us\nHW_SCE_Aes256EncryptDecryptInitSub Disable Disable Enable 34.76us\nHW_SCE_Aes256EncryptDecryptUpdateSub 75.62us\nHW_SCE_Aes256EncryptDecryptFinalSub 4.05us\nWhole AE256 CBC Encryption process 114.3us\n  Message size is 1024 bytes:\nHW SCE operation S-Cache C-Cache F-Cache Process time\nHW_SCE_Aes256EncryptDecryptInitSub Enable Enable Enable 23us\nHW_SCE_Aes256EncryptDecryptUpdateSub 34us\nHW_SCE_Aes256EncryptDecryptFinalSub 2.8us\nWhole AE256 CBC Encryption process 60us\nHW_SCE_Aes256EncryptDecryptInitSub Disable Enable Enable 26us\nHW_SCE_Aes256EncryptDecryptUpdateSub 35.3us\nHW_SCE_Aes256EncryptDecryptFinalSub 3.1us\nWhole AE256 CBC Encryption process 62.82us\nHW_SCE_Aes256EncryptDecryptInitSub Disable Disable Enable 35us\nHW_SCE_Aes256EncryptDecryptUpdateSub 39.8us\nHW_SCE_Aes256EncryptDecryptFinalSub 4.3us\nWhole AE256 CBC Encryption process 78.1us\n  Message size is 256 bytes:\nHW SCE operation S-Cache C-Cache F-Cache Process time\nHW_SCE_Aes256EncryptDecryptInitSub Enable Enable Enable 22.85us\nHW_SCE_Aes256EncryptDecryptUpdateSub 10.4us\nHW_SCE_Aes256EncryptDecryptFinalSub 3us\nWhole AE256 CBC Encryption process 36.05us\nHW_SCE_Aes256EncryptDecryptInitSub Disable Enable Enable 25.9us\nHW_SCE_Aes256EncryptDecryptUpdateSub 11.3us\nHW_SCE_Aes256EncryptDecryptFinalSub 3.25us\nWhole AE256 CBC Encryption process 39.84us\nHW_SCE_Aes256EncryptDecryptInitSub Disable Disable Enable 34.6us\nHW_SCE_Aes256EncryptDecryptUpdateSub 13us\nHW_SCE_Aes256EncryptDecryptFinalSub 4.12us\nWhole AE256 CBC Encryption process 51.22us\n  According to the result, we can identify over 20% performance improvement when both C-Cache and S-Cache are enabled, especially the C-Cache influence. In the default RA base project, the FSP generated start up and system initialization enables the flash cache (F-Cache) and system level instruction cache (C-Cache), and user can enable the system level data cache (S-Cache) based on the requirement. For the design consideration of using S-Cache in an application, please refer to the App Note - Guidelines for Using the S Cache on the System Bus\nReference Attachments:\nExample project on EK-RA6M4 for above performance benchmarking test (below)\nSuitable Products\nRA Devices with SCE9"
+      },
+      {
+        "type": "text",
+        "content": "This article intends to demonstrate how the performance of RA SCE9 Encryption engine operation can be improved when C-Cache and S-Cache are both enabled. In this case study, the AES-CBC mode and key size of 256 bits are used as a base example for doing the performance comparison. A brief operation flow of SCE9 HW AES Encryption operation and the workspace environment setting are listed below. In addition, the operation time measurement uses either toggling the GPIO output level or DWT cycle counter.\nCompiler: GCC10.3.1\nCompiler Optimization Level: O2 (Optimize more)\nSystem Clock configuration: ICLK=200MHz\nPeripheral Clock configuration: PCLKA=100MHz\nBoard: EK-RA6M4\nThe CPU process time for each step is measured as below based on GPIO output level change:\nMessage size is 2048 bytes:\nHW SCE operation S-Cache C-Cache F-Cache Process time\nHW_SCE_Aes256EncryptDecryptInitSub Enable Enable Enable 23.26us\nHW_SCE_Aes256EncryptDecryptUpdateSub 65.37us\nHW_SCE_Aes256EncryptDecryptFinalSub 3.02us\nWhole AE256 CBC Encryption process 89us\nHW_SCE_Aes256EncryptDecryptInitSub Disable Enable Enable 25.8us\nHW_SCE_Aes256EncryptDecryptUpdateSub 66.8us\nHW_SCE_Aes256EncryptDecryptFinalSub 3.3us\nWhole AE256 CBC Encryption process 95.6us\nHW_SCE_Aes256EncryptDecryptInitSub Disable Disable Enable 34.76us\nHW_SCE_Aes256EncryptDecryptUpdateSub 75.62us\nHW_SCE_Aes256EncryptDecryptFinalSub 4.05us\nWhole AE256 CBC Encryption process 114.3us\n  Message size is 1024 bytes:\nHW SCE operation S-Cache C-Cache F-Cache Process time\nHW_SCE_Aes256EncryptDecryptInitSub Enable Enable Enable 23us\nHW_SCE_Aes256EncryptDecryptUpdateSub 34us\nHW_SCE_Aes256EncryptDecryptFinalSub 2.8us\nWhole AE256 CBC Encryption process 60us\nHW_SCE_Aes256EncryptDecryptInitSub Disable Enable Enable 26us\nHW_SCE_Aes256EncryptDecryptUpdateSub 35.3us\nHW_SCE_Aes256EncryptDecryptFinalSub 3.1us\nWhole AE256 CBC Encryption process 62.82us\nHW_SCE_Aes256EncryptDecryptInitSub Disable Disable Enable 35us\nHW_SCE_Aes256EncryptDecryptUpdateSub 39.8us\nHW_SCE_Aes256EncryptDecryptFinalSub 4.3us\nWhole AE256 CBC Encryption process 78.1us\n  Message size is 256 bytes:\nHW SCE operation S-Cache C-Cache F-Cache Process time\nHW_SCE_Aes256EncryptDecryptInitSub Enable Enable Enable 22.85us\nHW_SCE_Aes256EncryptDecryptUpdateSub 10.4us\nHW_SCE_Aes256EncryptDecryptFinalSub 3us\nWhole AE256 CBC Encryption process 36.05us\nHW_SCE_Aes256EncryptDecryptInitSub Disable Enable Enable 25.9us\nHW_SCE_Aes256EncryptDecryptUpdateSub 11.3us\nHW_SCE_Aes256EncryptDecryptFinalSub 3.25us\nWhole AE256 CBC Encryption process 39.84us\nHW_SCE_Aes256EncryptDecryptInitSub Disable Disable Enable 34.6us\nHW_SCE_Aes256EncryptDecryptUpdateSub 13us\nHW_SCE_Aes256EncryptDecryptFinalSub 4.12us\nWhole AE256 CBC Encryption process 51.22us\n  According to the result, we can identify over 20% performance improvement when both C-Cache and S-Cache are enabled, especially the C-Cache influence. In the default RA base project, the FSP generated start up and system initialization enables the flash cache (F-Cache) and system level instruction cache (C-Cache), and user can enable the system level data cache (S-Cache) based on the requirement. For the design consideration of using S-Cache in an application, please refer to the App Note - Guidelines for Using the S Cache on the System Bus\nReference Attachments:\nExample project on EK-RA6M4 for above performance benchmarking test (below)"
+      },
+      {
+        "type": "text",
+        "content": "This article intends to demonstrate how the performance of RA SCE9 Encryption engine operation can be improved when C-Cache and S-Cache are both enabled. In this case study, the AES-CBC mode and key size of 256 bits are used as a base example for doing the performance comparison. A brief operation flow of SCE9 HW AES Encryption operation and the workspace environment setting are listed below. In addition, the operation time measurement uses either toggling the GPIO output level or DWT cycle counter."
+      },
+      {
+        "type": "image",
+        "content": {
+          "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380670.png",
+          "alt_text": "",
+          "width": "664",
+          "height": "862",
+          "local_path": "data/categories/ra_family/rafsp_knowledge_base/c0c620d4b540c9d439bcd389811414af/images/55d5633c8b99d64dee61199f13a6b3e1.png"
+        }
+      },
+      {
+        "type": "text",
+        "content": "The CPU process time for each step is measured as below based on GPIO output level change:"
+      },
+      {
+        "type": "text",
+        "content": "According to the result, we can identify over 20% performance improvement when both C-Cache and S-Cache are enabled, especially the C-Cache influence. In the default RA base project, the FSP generated start up and system initialization enables the flash cache (F-Cache) and system level instruction cache (C-Cache), and user can enable the system level data cache (S-Cache) based on the requirement. For the design consideration of using S-Cache in an application, please refer to the App Note - Guidelines for Using the S Cache on the System Bus"
+      },
+      {
+        "type": "text",
+        "content": "Reference Attachments:"
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA Devices with SCE9"
+      }
+    ],
+    "images": [
+      {
+        "original_url": "https://app.na4.teamsupport.com/Wiki/WikiDocs/784358/images/380670.png",
+        "alt_text": "",
+        "width": "664",
+        "height": "862",
+        "local_path": "data/categories/ra_family/rafsp_knowledge_base/c0c620d4b540c9d439bcd389811414af/images/55d5633c8b99d64dee61199f13a6b3e1.png"
+      }
+    ],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "HW SCE operation",
+            "S-Cache",
+            "C-Cache",
+            "F-Cache",
+            "Process time"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptInitSub",
+            "Enable",
+            "Enable",
+            "Enable",
+            "23.26us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptUpdateSub",
+            "65.37us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptFinalSub",
+            "3.02us"
+          ],
+          [
+            "Whole AE256 CBC Encryption process",
+            "89us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptInitSub",
+            "Disable",
+            "Enable",
+            "Enable",
+            "25.8us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptUpdateSub",
+            "66.8us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptFinalSub",
+            "3.3us"
+          ],
+          [
+            "Whole AE256 CBC Encryption process",
+            "95.6us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptInitSub",
+            "Disable",
+            "Disable",
+            "Enable",
+            "34.76us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptUpdateSub",
+            "75.62us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptFinalSub",
+            "4.05us"
+          ],
+          [
+            "Whole AE256 CBC Encryption process",
+            "114.3us"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "HW SCE operation",
+            "S-Cache",
+            "C-Cache",
+            "F-Cache",
+            "Process time"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptInitSub",
+            "Enable",
+            "Enable",
+            "Enable",
+            "23us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptUpdateSub",
+            "34us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptFinalSub",
+            "2.8us"
+          ],
+          [
+            "Whole AE256 CBC Encryption process",
+            "60us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptInitSub",
+            "Disable",
+            "Enable",
+            "Enable",
+            "26us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptUpdateSub",
+            "35.3us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptFinalSub",
+            "3.1us"
+          ],
+          [
+            "Whole AE256 CBC Encryption process",
+            "62.82us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptInitSub",
+            "Disable",
+            "Disable",
+            "Enable",
+            "35us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptUpdateSub",
+            "39.8us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptFinalSub",
+            "4.3us"
+          ],
+          [
+            "Whole AE256 CBC Encryption process",
+            "78.1us"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "HW SCE operation",
+            "S-Cache",
+            "C-Cache",
+            "F-Cache",
+            "Process time"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptInitSub",
+            "Enable",
+            "Enable",
+            "Enable",
+            "22.85us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptUpdateSub",
+            "10.4us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptFinalSub",
+            "3us"
+          ],
+          [
+            "Whole AE256 CBC Encryption process",
+            "36.05us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptInitSub",
+            "Disable",
+            "Enable",
+            "Enable",
+            "25.9us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptUpdateSub",
+            "11.3us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptFinalSub",
+            "3.25us"
+          ],
+          [
+            "Whole AE256 CBC Encryption process",
+            "39.84us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptInitSub",
+            "Disable",
+            "Disable",
+            "Enable",
+            "34.6us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptUpdateSub",
+            "13us"
+          ],
+          [
+            "HW_SCE_Aes256EncryptDecryptFinalSub",
+            "4.12us"
+          ],
+          [
+            "Whole AE256 CBC Encryption process",
+            "51.22us"
+          ]
+        ]
+      },
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA Devices with SCE9"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA Devices with SCE9"
+    ],
+    "links": [
+      {
+        "text": "App Note - Guidelines for Using the S Cache on the System Bus",
+        "url": "https://www.renesas.com/us/en/document/apn/ra-family-guidelines-using-s-cache-system-bus"
+      }
+    ]
+  }
+}

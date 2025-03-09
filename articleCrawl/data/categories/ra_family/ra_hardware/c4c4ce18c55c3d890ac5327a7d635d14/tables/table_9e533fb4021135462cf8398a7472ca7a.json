@@ -1,0 +1,8 @@
+{
+  "headers": [],
+  "rows": [
+    [
+      "In complementary PWM mode, the GTDVD register is invalid and the GTDVU register is used as the dead time value during both up-counting and down-counting. Therefore, we only need to configure Dead Time Count Up (Raw Counts)."
+    ]
+  ]
+}

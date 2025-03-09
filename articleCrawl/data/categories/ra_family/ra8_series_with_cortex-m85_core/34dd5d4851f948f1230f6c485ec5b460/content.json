@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21606622",
+    "title": "TrustZone on RA8 Series MCUs",
+    "last_updated": "2024-05-11",
+    "extracted_at": "2025-03-08T23:29:18.919540"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nHow can developers partition their system into secure and non-secure zones?\nAnswer:\nWith the Cortex-M85 core, the RA8E1 and RA8E2 MCUs offer TrustZone, a hardware enforced separation of MCU resources, that enables isolation and Secure/Non-Secure partitioning of memory and peripherals. Code executing in the Secure world can act on code/data/peripherals that are located in the Non-secure World, but not vice versa.  However, designated Secure Services may be called by code in the Non-secure world. Renesas has applied the TrustZone filters to other busses inside the MCU, preventing Non-secure code from extracting Secure code/data using other bus masters, such as DMA and DTC.  Renesas has also applied those filters to pins and peripherals, protecting the external interfaces from eavesdropping and impersonation. Together with the high performance of the CM85 core, Arm TrustZone enables a more secure and robust high performance system design.\nSuitable Products\nRA8E1, RA8E2, RA8M1, RA8D1, RA8T1"
+      },
+      {
+        "type": "text",
+        "content": "How can developers partition their system into secure and non-secure zones?"
+      },
+      {
+        "type": "text",
+        "content": "How can developers partition their system into secure and non-secure zones?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nWith the Cortex-M85 core, the RA8E1 and RA8E2 MCUs offer TrustZone, a hardware enforced separation of MCU resources, that enables isolation and Secure/Non-Secure partitioning of memory and peripherals. Code executing in the Secure world can act on code/data/peripherals that are located in the Non-secure World, but not vice versa.  However, designated Secure Services may be called by code in the Non-secure world. Renesas has applied the TrustZone filters to other busses inside the MCU, preventing Non-secure code from extracting Secure code/data using other bus masters, such as DMA and DTC.  Renesas has also applied those filters to pins and peripherals, protecting the external interfaces from eavesdropping and impersonation. Together with the high performance of the CM85 core, Arm TrustZone enables a more secure and robust high performance system design.\nSuitable Products\nRA8E1, RA8E2, RA8M1, RA8D1, RA8T1"
+      },
+      {
+        "type": "text",
+        "content": "With the Cortex-M85 core, the RA8E1 and RA8E2 MCUs offer TrustZone, a hardware enforced separation of MCU resources, that enables isolation and Secure/Non-Secure partitioning of memory and peripherals. Code executing in the Secure world can act on code/data/peripherals that are located in the Non-secure World, but not vice versa.  However, designated Secure Services may be called by code in the Non-secure world. Renesas has applied the TrustZone filters to other busses inside the MCU, preventing Non-secure code from extracting Secure code/data using other bus masters, such as DMA and DTC.  Renesas has also applied those filters to pins and peripherals, protecting the external interfaces from eavesdropping and impersonation. Together with the high performance of the CM85 core, Arm TrustZone enables a more secure and robust high performance system design."
+      },
+      {
+        "type": "text",
+        "content": "With the Cortex-M85 core, the RA8E1 and RA8E2 MCUs offer TrustZone, a hardware enforced separation of MCU resources, that enables isolation and Secure/Non-Secure partitioning of memory and peripherals. Code executing in the Secure world can act on code/data/peripherals that are located in the Non-secure World, but not vice versa.  However, designated Secure Services may be called by code in the Non-secure world. Renesas has applied the TrustZone filters to other busses inside the MCU, preventing Non-secure code from extracting Secure code/data using other bus masters, such as DMA and DTC.  Renesas has also applied those filters to pins and peripherals, protecting the external interfaces from eavesdropping and impersonation. Together with the high performance of the CM85 core, Arm TrustZone enables a more secure and robust high performance system design."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRA8E1, RA8E2, RA8M1, RA8D1, RA8T1"
+      },
+      {
+        "type": "text",
+        "content": "日本語 中文"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "中文"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RA8E1, RA8E2, RA8M1, RA8D1, RA8T1"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RA8E1, RA8E2, RA8M1, RA8D1, RA8T1"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21606632"
+      },
+      {
+        "text": "中文",
+        "url": "https://zh-support.renesas.com/knowledgeBase/21606642"
+      }
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/21373859",
+    "title": "RZ/G2L, RZ/G3S: Evaluation board kit and its startup process",
+    "last_updated": null,
+    "extracted_at": "2025-03-08T23:45:13.450194"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nIs there a guide on how to start the Evaluation Board Kit?\nAnswer:\nThe Evaluation Board Kit quick start guide is available below.\nRZ/G2L \nhttps://www.renesas.com/us/en/document/qsg/rzg2l-evaluation-board-kit-quick-start-guide?r=1518686\nRZ/G3S\nhttps://www.renesas.com/us/en/document/gde/rzg3s-evaluation-board-kit-quick-start-guide?r=25458596\nThe quick start guide explains the Evaluation Board Kit contents and the startup process.\nSuitable Products\nRZ/G2L, RZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "Is there a guide on how to start the Evaluation Board Kit?"
+      },
+      {
+        "type": "text",
+        "content": "Is there a guide on how to start the Evaluation Board Kit?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nThe Evaluation Board Kit quick start guide is available below.\nRZ/G2L \nhttps://www.renesas.com/us/en/document/qsg/rzg2l-evaluation-board-kit-quick-start-guide?r=1518686\nRZ/G3S\nhttps://www.renesas.com/us/en/document/gde/rzg3s-evaluation-board-kit-quick-start-guide?r=25458596\nThe quick start guide explains the Evaluation Board Kit contents and the startup process.\nSuitable Products\nRZ/G2L, RZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "The Evaluation Board Kit quick start guide is available below.\nRZ/G2L \nhttps://www.renesas.com/us/en/document/qsg/rzg2l-evaluation-board-kit-quick-start-guide?r=1518686\nRZ/G3S\nhttps://www.renesas.com/us/en/document/gde/rzg3s-evaluation-board-kit-quick-start-guide?r=25458596\nThe quick start guide explains the Evaluation Board Kit contents and the startup process."
+      },
+      {
+        "type": "text",
+        "content": "The Evaluation Board Kit quick start guide is available below."
+      },
+      {
+        "type": "text",
+        "content": "RZ/G2L \nhttps://www.renesas.com/us/en/document/qsg/rzg2l-evaluation-board-kit-quick-start-guide?r=1518686"
+      },
+      {
+        "type": "text",
+        "content": "RZ/G3S\nhttps://www.renesas.com/us/en/document/gde/rzg3s-evaluation-board-kit-quick-start-guide?r=25458596"
+      },
+      {
+        "type": "text",
+        "content": "The quick start guide explains the Evaluation Board Kit contents and the startup process."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRZ/G2L, RZ/G3S"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RZ/G2L, RZ/G3S"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RZ/G2L, RZ/G3S"
+    ],
+    "links": [
+      {
+        "text": "https://www.renesas.com/us/en/document/qsg/rzg2l-evaluation-board-kit-quick-start-guide?r=1518686",
+        "url": "https://www.renesas.com/us/en/document/qsg/rzg2l-evaluation-board-kit-quick-start-guide?r=1518686"
+      },
+      {
+        "text": "https://www.renesas.com/us/en/document/gde/rzg3s-evaluation-board-kit-quick-start-guide?r=25458596",
+        "url": "https://www.renesas.com/us/en/document/gde/rzg3s-evaluation-board-kit-quick-start-guide?r=25458596"
+      },
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/21373862"
+      }
+    ]
+  }
+}

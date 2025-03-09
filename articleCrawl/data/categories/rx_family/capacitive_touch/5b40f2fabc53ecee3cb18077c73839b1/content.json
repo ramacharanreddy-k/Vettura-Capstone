@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "url": "https://en-support.renesas.com/knowledgeBase/18286072",
+    "title": "Is It Possible to Log Measured Values?",
+    "last_updated": "2023-02-03",
+    "extracted_at": "2025-03-09T00:08:42.115725"
+  },
+  "content": {
+    "sections": [
+      {
+        "type": "text",
+        "content": "Question:\nCan I store measured values in a log? Can I output the log file?\nAnswer:\nYes.\nSee \"Recording and Playing Monitoring Logs\" in e2studio \"HELP\".\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Can I store measured values in a log? Can I output the log file?"
+      },
+      {
+        "type": "text",
+        "content": "Can I store measured values in a log? Can I output the log file?"
+      },
+      {
+        "type": "text",
+        "content": "Answer:\nYes.\nSee \"Recording and Playing Monitoring Logs\" in e2studio \"HELP\".\nSuitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "Yes.\nSee \"Recording and Playing Monitoring Logs\" in e2studio \"HELP\"."
+      },
+      {
+        "type": "text",
+        "content": "Yes.\nSee \"Recording and Playing Monitoring Logs\" in e2studio \"HELP\"."
+      },
+      {
+        "type": "text",
+        "content": "Suitable Products\nRX113\nRX130\nRX231, RX230"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      },
+      {
+        "type": "text",
+        "content": "日本語"
+      }
+    ],
+    "images": [],
+    "tables": [
+      {
+        "headers": [],
+        "rows": [
+          [
+            "RX113\nRX130\nRX231, RX230"
+          ]
+        ]
+      }
+    ],
+    "pdfs": [],
+    "downloads": [],
+    "related_products": [
+      "RX113\nRX130\nRX231, RX230"
+    ],
+    "links": [
+      {
+        "text": "日本語",
+        "url": "https://ja-support.renesas.com/knowledgeBase/17792844"
+      }
+    ]
+  }
+}
