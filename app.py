@@ -1,17 +1,16 @@
 import streamlit as st
 import boto3
 import json
-import os
 import re
 import time
-from dotenv import load_dotenv
 import pandas as pd
 from PIL import Image
 import requests
 from io import BytesIO
 
-# Load environment variables
-load_dotenv()
+# Access AWS credentials from Streamlit Secrets
+AWS_ACCESS_KEY_ID = st.secrets["Home_AWS_ACCESS_KEY_ID"]
+AWS_SECRET_ACCESS_KEY = st.secrets["Home_AWS_SECRET_ACCESS_KEY"]
 
 # Configure page
 st.set_page_config(
@@ -109,15 +108,15 @@ def get_bedrock_clients():
     bedrock_runtime = boto3.client(
         'bedrock-runtime',
         region_name=region,
-        aws_access_key_id=os.environ.get('Home_AWS_ACCESS_KEY_ID'),
-        aws_secret_access_key=os.environ.get('Home_AWS_SECRET_ACCESS_KEY')
+        aws_access_key_id=AWS_ACCESS_KEY_ID,
+        aws_secret_access_key=AWS_SECRET_ACCESS_KEY
     )
     
     bedrock_agent = boto3.client(
         'bedrock-agent-runtime',
         region_name=region,
-        aws_access_key_id=os.environ.get('Home_AWS_ACCESS_KEY_ID'),
-        aws_secret_access_key=os.environ.get('Home_AWS_SECRET_ACCESS_KEY')
+        aws_access_key_id=AWS_ACCESS_KEY_ID,
+        aws_secret_access_key=AWS_SECRET_ACCESS_KEY
     )
     
     return bedrock_runtime, bedrock_agent
