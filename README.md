@@ -40,13 +40,21 @@ Below is the architecture diagram of the RAG Chatbot:
 
 ### Usage
 
-1. Run the chatbot:
+1. Run the chatbot locally:
 
    ```bash
    python app.py
    ```
 
 2. Enter your query when prompted and receive the generated response.
+
+### Streamlit App
+
+You can also use the chatbot directly via the Streamlit app:
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ramacharanreddy-k-vettura-capstone-app-3bowkl.streamlit.app/)
+
+Visit the app here: [Vettura-Capstone Streamlit App](https://ramacharanreddy-k-vettura-capstone-app-3bowkl.streamlit.app/)
 
 ## Contributing
 
